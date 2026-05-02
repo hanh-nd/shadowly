@@ -43,6 +43,13 @@ export enum MediaRecorderState {
   Paused = 'paused'
 }
 
+export enum CruisePhase {
+  Idle = 'idle',
+  PlayingOriginal = 'playing_original',
+  Recording = 'recording',
+  PlayingMine = 'playing_mine',
+}
+
 export enum WorkerMessageType {
   Init = 'init',
   Ready = 'ready',

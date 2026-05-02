@@ -4,9 +4,21 @@ interface Props {
   onFileSelect: (file: File) => void;
   speed: number;
   onSpeedChange: (speed: number) => void;
+  autoStopEnabled: boolean;
+  autoCruiseEnabled: boolean;
+  onToggleAutoStop: () => void;
+  onToggleAutoCruise: () => void;
 }
 
-export function Sidebar({ onFileSelect, speed, onSpeedChange }: Props) {
+export function Sidebar({
+  onFileSelect,
+  speed,
+  onSpeedChange,
+  autoStopEnabled,
+  autoCruiseEnabled,
+  onToggleAutoStop,
+  onToggleAutoCruise,
+}: Props) {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   function handleDrop(e: React.DragEvent) {
@@ -34,6 +46,35 @@ export function Sidebar({ onFileSelect, speed, onSpeedChange }: Props) {
       </div>
 
       <div className="mt-auto flex flex-col gap-stack-lg">
+        {/* Auto-Settings Toggles */}
+        <div className="px-2 mb-stack-lg flex flex-col gap-4">
+          <div className="flex items-center justify-between">
+            <span className="font-label-sm text-label-sm text-on-surface-variant">Auto-Stop</span>
+            <label className="relative inline-flex items-center cursor-pointer">
+              <input
+                type="checkbox"
+                checked={autoStopEnabled}
+                onChange={onToggleAutoStop}
+                className="sr-only peer"
+              />
+              <div className="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+            </label>
+          </div>
+          <div className="flex items-center justify-between">
+            <span className="font-label-sm text-label-sm text-on-surface-variant">Auto-Cruise</span>
+            <label className="relative inline-flex items-center cursor-pointer">
+              <input
+                type="checkbox"
+                checked={autoCruiseEnabled}
+                onChange={onToggleAutoCruise}
+                disabled={!autoStopEnabled}
+                className="sr-only peer"
+              />
+              <div className="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+            </label>
+          </div>
+        </div>
+
         {/* Speed slider */}
         <div className="px-2">
           <label className="flex justify-between font-label-sm text-label-sm text-on-surface-variant mb-2">

@@ -1,9 +1,10 @@
-import { useState } from 'react';
-import { ProcessingState, NavigationDirection } from './types';
+import { useState, useCallback } from 'react';
+import { ProcessingState, NavigationDirection, CruisePhase } from './types';
 import type { Segment } from './types';
 import { usePipeline } from './hooks/usePipeline';
 import { useAudioPlayer } from './hooks/useAudioPlayer';
 import { useRecorder } from './hooks/useRecorder';
+import { useAutoCruise } from './hooks/useAutoCruise';
 import { Sidebar } from './components/Sidebar';
 import { TopBar } from './components/TopBar';
 import { ProgressBar } from './components/ProgressBar';
@@ -20,7 +21,50 @@ export function App() {
   const player = useAudioPlayer(audioBuffer, playbackSpeed);
   const recorder = useRecorder();
 
+  const handleStopRecord = useCallback(async () => {
+    const blob = await recorder.stopRecording();
+    const newUrl = URL.createObjectURL(blob);
+    const old = pipeline.segments.find((s) => s.id === activeIndex);
+    if (old?.recordingUrl) URL.revokeObjectURL(old.recordingUrl);
+    pipeline.patchSegment(activeIndex, { recordingUrl: newUrl });
+  }, [recorder, pipeline, activeIndex]);
+
+  const handlePlayMine = useCallback((url: string, onEnded?: () => void) => {
+    const audio = new Audio(url);
+    if (onEnded) audio.onended = onEnded;
+    audio.play();
+  }, []);
+
+  const handleNavigate = useCallback((dir: NavigationDirection) => {
+    player.stop();
+    setActiveIndex((i) => {
+      const delta = dir === NavigationDirection.Prev ? -1 : 1;
+      return Math.max(0, Math.min(pipeline.segments.length - 1, i + delta));
+    });
+  }, [player, pipeline.segments.length]);
+
+  const cruise = useAutoCruise({
+    segments: pipeline.segments,
+    activeIndex: activeIndex,
+    isPlayingOriginal: player.isPlaying,
+    isRecording: recorder.isRecording,
+    micError: recorder.micError,
+    activeSegmentRecordingUrl: pipeline.segments[activeIndex]?.recordingUrl ?? null,
+    onPlayOriginal: useCallback((seg: Segment) => player.play(seg), [player]),
+    onStartRecord: recorder.startRecording,
+    onStopRecord: handleStopRecord,
+    onPlayMine: handlePlayMine,
+    onNavigateNext: useCallback(() => handleNavigate(NavigationDirection.Next), [handleNavigate]),
+  });
+
+  const interruptCruise = useCallback(() => {
+    if (cruise.cruisePhase !== CruisePhase.Idle) {
+      cruise.cancelCruise();
+    }
+  }, [cruise]);
+
   async function handleFileSelect(file: File) {
+    cruise.cancelCruise();
     player.stop();
     setActiveIndex(0);
 
@@ -45,31 +89,33 @@ export function App() {
   }
 
   function handlePlayOriginal(segment: Segment) {
+    if (cruise.autoCruiseEnabled && cruise.cruisePhase === CruisePhase.Idle) {
+      cruise.startCruise();
+    } else {
+      interruptCruise();
+    }
     player.play(segment);
   }
 
-  async function handleStopRecord() {
-    const blob = await recorder.stopRecording();
-    const newUrl = URL.createObjectURL(blob);
-    const old = pipeline.segments.find((s) => s.id === activeIndex);
-    if (old?.recordingUrl) URL.revokeObjectURL(old.recordingUrl);
-    pipeline.patchSegment(activeIndex, { recordingUrl: newUrl });
+  function handleStartRecord() {
+    interruptCruise();
+    recorder.startRecording();
   }
 
-  function handlePlayMine(url: string) {
-    const audio = new Audio(url);
-    audio.play();
+  function handleStopRecordManual() {
+    if (cruise.cruisePhase !== CruisePhase.Idle && cruise.cruisePhase !== CruisePhase.Recording) {
+      cruise.cancelCruise();
+    }
+    handleStopRecord();
   }
 
-  function handleNavigate(dir: NavigationDirection) {
-    player.stop();
-    setActiveIndex((i) => {
-      const delta = dir === NavigationDirection.Prev ? -1 : 1;
-      return Math.max(0, Math.min(pipeline.segments.length - 1, i + delta));
-    });
+  function handleNavigateManual(dir: NavigationDirection) {
+    interruptCruise();
+    handleNavigate(dir);
   }
 
   function handleJump(index: number) {
+    interruptCruise();
     player.stop();
     setActiveIndex(index);
   }
@@ -80,6 +126,10 @@ export function App() {
         onFileSelect={handleFileSelect}
         speed={playbackSpeed}
         onSpeedChange={setPlaybackSpeed}
+        autoStopEnabled={cruise.autoStopEnabled}
+        autoCruiseEnabled={cruise.autoCruiseEnabled}
+        onToggleAutoStop={cruise.toggleAutoStop}
+        onToggleAutoCruise={cruise.toggleAutoCruise}
       />
 
       <main className="flex-1 lg:ml-64 relative min-h-screen">
@@ -101,10 +151,10 @@ export function App() {
             isPlayingOriginal={player.isPlaying}
             isRecording={recorder.isRecording}
             totalDuration={totalDuration}
-            onNavigate={handleNavigate}
+            onNavigate={handleNavigateManual}
             onPlayOriginal={handlePlayOriginal}
-            onStartRecord={recorder.startRecording}
-            onStopRecord={handleStopRecord}
+            onStartRecord={handleStartRecord}
+            onStopRecord={handleStopRecordManual}
             onPlayMine={handlePlayMine}
             onJump={handleJump}
           />
