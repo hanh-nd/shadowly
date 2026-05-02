@@ -2,7 +2,7 @@ import type { Segment } from '../types';
 import { SentenceCardMode } from '../types';
 
 interface Props {
-  segment: Segment;
+  segment?: Segment;
   mode: SentenceCardMode;
   isPlayingOriginal: boolean;
   isPlayingMine: boolean;
@@ -45,15 +45,17 @@ export function SentenceCard({
   if (mode !== SentenceCardMode.Active) {
     return (
       <div
-        className="py-4 px-6 opacity-40 cursor-pointer hover:opacity-60 transition-opacity"
-        onClick={onClick}
+        className={`py-4 px-6 opacity-40 transition-opacity ${segment ? 'cursor-pointer hover:opacity-60' : 'cursor-default'}`}
+        onClick={segment ? onClick : undefined}
       >
-        <p className="font-display-inactive text-display-inactive text-on-surface-variant">
-          {segment.text}
+        <p className="font-display-inactive text-display-inactive text-on-surface-variant truncate">
+          {segment?.text || "\u00A0"}
         </p>
       </div>
     );
   }
+
+  if (!segment) return null;
 
   return (
     <div className="bg-surface-container-lowest p-8 border border-outline-variant border-l-2 border-l-primary rounded-lg relative overflow-hidden">

@@ -155,14 +155,6 @@ export function Sidebar({
           <span className="text-[10px] text-outline mt-1">or click to browse</span>
         </div>
 
-        <button
-          className="w-full py-3 px-4 bg-primary text-on-primary rounded-DEFAULT font-label-sm text-label-sm hover:opacity-90 transition-opacity flex justify-center items-center gap-2"
-          onClick={() => fileInputRef.current?.click()}
-        >
-          <span className="material-symbols-outlined text-[18px]">upload</span>
-          Upload New Audio
-        </button>
-
         <input
           ref={fileInputRef}
           type="file"

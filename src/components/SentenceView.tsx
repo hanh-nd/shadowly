@@ -37,25 +37,23 @@ export function SentenceView({
 
   return (
     <div className="pt-32 px-gutter max-w-container-max-width mx-auto flex flex-col gap-stack-lg pb-16">
-      {prev && (
-        <SentenceCard
-          segment={prev}
-          mode={SentenceCardMode.InactivePrev}
-          isPlayingOriginal={false}
-          isPlayingMine={false}
-          isRecording={false}
-          isFirst={false}
-          isLast={false}
-          totalDuration={totalDuration}
-          onPlayOriginal={() => {}}
-          onStartRecord={() => {}}
-          onStopRecord={() => {}}
-          onPlayMine={() => {}}
-          onClick={() => onJump(activeIndex - 1)}
-          onPrev={() => {}}
-          onNext={() => {}}
-        />
-      )}
+      <SentenceCard
+        segment={prev}
+        mode={SentenceCardMode.InactivePrev}
+        isPlayingOriginal={false}
+        isPlayingMine={false}
+        isRecording={false}
+        isFirst={false}
+        isLast={false}
+        totalDuration={totalDuration}
+        onPlayOriginal={() => {}}
+        onStartRecord={() => {}}
+        onStopRecord={() => {}}
+        onPlayMine={() => {}}
+        onClick={() => onJump(activeIndex - 1)}
+        onPrev={() => {}}
+        onNext={() => {}}
+      />
 
       {active && (
         <SentenceCard
@@ -77,25 +75,23 @@ export function SentenceView({
         />
       )}
 
-      {next && (
-        <SentenceCard
-          segment={next}
-          mode={SentenceCardMode.InactiveNext}
-          isPlayingOriginal={false}
-          isPlayingMine={false}
-          isRecording={false}
-          isFirst={false}
-          isLast={false}
-          totalDuration={totalDuration}
-          onPlayOriginal={() => {}}
-          onStartRecord={() => {}}
-          onStopRecord={() => {}}
-          onPlayMine={() => {}}
-          onClick={() => onJump(activeIndex + 1)}
-          onPrev={() => {}}
-          onNext={() => {}}
-        />
-      )}
+      <SentenceCard
+        segment={next}
+        mode={SentenceCardMode.InactiveNext}
+        isPlayingOriginal={false}
+        isPlayingMine={false}
+        isRecording={false}
+        isFirst={false}
+        isLast={false}
+        totalDuration={totalDuration}
+        onPlayOriginal={() => {}}
+        onStartRecord={() => {}}
+        onStopRecord={() => {}}
+        onPlayMine={() => {}}
+        onClick={() => onJump(activeIndex + 1)}
+        onPrev={() => {}}
+        onNext={() => {}}
+      />
     </div>
   );
 }
