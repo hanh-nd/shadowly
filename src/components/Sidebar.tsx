@@ -6,8 +6,12 @@ interface Props {
   onSpeedChange: (speed: number) => void;
   autoStopEnabled: boolean;
   autoCruiseEnabled: boolean;
+  bufferTime: number;
+  loopCount: number;
   onToggleAutoStop: () => void;
   onToggleAutoCruise: () => void;
+  onBufferTimeChange: (t: number) => void;
+  onLoopCountChange: (n: number) => void;
 }
 
 export function Sidebar({
@@ -16,8 +20,12 @@ export function Sidebar({
   onSpeedChange,
   autoStopEnabled,
   autoCruiseEnabled,
+  bufferTime,
+  loopCount,
   onToggleAutoStop,
   onToggleAutoCruise,
+  onBufferTimeChange,
+  onLoopCountChange,
 }: Props) {
   const fileInputRef = useRef<HTMLInputElement>(null);
 
@@ -48,30 +56,69 @@ export function Sidebar({
       <div className="mt-auto flex flex-col gap-stack-lg">
         {/* Auto-Settings Toggles */}
         <div className="px-2 mb-stack-lg flex flex-col gap-4">
-          <div className="flex items-center justify-between">
-            <span className="font-label-sm text-label-sm text-on-surface-variant">Auto-Stop</span>
-            <label className="relative inline-flex items-center cursor-pointer">
-              <input
-                type="checkbox"
-                checked={autoStopEnabled}
-                onChange={onToggleAutoStop}
-                className="sr-only peer"
-              />
-              <div className="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
-            </label>
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center justify-between">
+              <span className="font-label-sm text-label-sm text-on-surface-variant">Auto-Stop</span>
+              <label className="relative inline-flex items-center cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={autoStopEnabled}
+                  onChange={onToggleAutoStop}
+                  className="sr-only peer"
+                />
+                <div className="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+              </label>
+            </div>
+            {autoStopEnabled && (
+              <div className="mt-1">
+                <div className="flex justify-between font-label-sm text-[10px] text-on-surface-variant mb-1">
+                  <span>Buffer Time</span>
+                  <span className="text-primary font-bold">{bufferTime}s</span>
+                </div>
+                <input
+                  type="range"
+                  min="0"
+                  max="10"
+                  step="1"
+                  value={bufferTime}
+                  onChange={(e) => onBufferTimeChange(Number(e.target.value))}
+                  className="w-full h-1 bg-surface-variant rounded-full appearance-none cursor-pointer accent-primary"
+                />
+              </div>
+            )}
           </div>
-          <div className="flex items-center justify-between">
-            <span className="font-label-sm text-label-sm text-on-surface-variant">Auto-Cruise</span>
-            <label className="relative inline-flex items-center cursor-pointer">
-              <input
-                type="checkbox"
-                checked={autoCruiseEnabled}
-                onChange={onToggleAutoCruise}
-                disabled={!autoStopEnabled}
-                className="sr-only peer"
-              />
-              <div className="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
-            </label>
+
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center justify-between">
+              <span className="font-label-sm text-label-sm text-on-surface-variant">Auto-Cruise</span>
+              <label className="relative inline-flex items-center cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={autoCruiseEnabled}
+                  onChange={onToggleAutoCruise}
+                  disabled={!autoStopEnabled}
+                  className="sr-only peer"
+                />
+                <div className="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+              </label>
+            </div>
+            {autoCruiseEnabled && (
+              <div className="mt-1">
+                <div className="flex justify-between font-label-sm text-[10px] text-on-surface-variant mb-1">
+                  <span>Loop Count</span>
+                  <span className="text-primary font-bold">{loopCount}x</span>
+                </div>
+                <input
+                  type="range"
+                  min="1"
+                  max="10"
+                  step="1"
+                  value={loopCount}
+                  onChange={(e) => onLoopCountChange(Number(e.target.value))}
+                  className="w-full h-1 bg-surface-variant rounded-full appearance-none cursor-pointer accent-primary"
+                />
+              </div>
+            )}
           </div>
         </div>
 

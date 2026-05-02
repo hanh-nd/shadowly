@@ -1,5 +1,4 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { AUTO_STOP_BUFFER_TIME } from '../constants';
 import type { Segment } from '../types';
 import { CruisePhase } from '../types';
 
@@ -21,10 +20,14 @@ export interface UseAutoCruiseReturn {
   autoStopEnabled: boolean;
   autoCruiseEnabled: boolean;
   cruisePhase: CruisePhase;
+  bufferTime: number;
+  loopCount: number;
   toggleAutoStop: () => void;
   toggleAutoCruise: () => void;
   startCruise: () => void;
   cancelCruise: () => void;
+  setBufferTime: (t: number) => void;
+  setLoopCount: (n: number) => void;
 }
 
 export function useAutoCruise({
@@ -43,6 +46,8 @@ export function useAutoCruise({
   const [autoStopEnabled, setAutoStopEnabled] = useState(true);
   const [autoCruiseEnabled, setAutoCruiseEnabled] = useState(true);
   const [cruisePhase, setCruisePhase] = useState(CruisePhase.Idle);
+  const [bufferTime, setBufferTime] = useState(2);
+  const [loopCount, setLoopCount] = useState(3);
 
   const prevIsPlayingRef = useRef(false);
   const prevIsRecordingRef = useRef(false);
@@ -53,10 +58,15 @@ export function useAutoCruise({
   const onStopRecordRef = useRef(onStopRecord);
   const segmentsRef = useRef(segments);
   const activeIndexRef = useRef(activeIndex);
+  const bufferTimeRef = useRef(2);
+  const loopCountRef = useRef(3);
+  const loopIterationRef = useRef(0);
 
   useEffect(() => { onStopRecordRef.current = onStopRecord; }, [onStopRecord]);
   useEffect(() => { segmentsRef.current = segments; }, [segments]);
   useEffect(() => { activeIndexRef.current = activeIndex; }, [activeIndex]);
+  useEffect(() => { bufferTimeRef.current = bufferTime; }, [bufferTime]);
+  useEffect(() => { loopCountRef.current = loopCount; }, [loopCount]);
 
   const cancelCruise = useCallback(() => {
     if (autoStopTimerRef.current) {
@@ -64,6 +74,7 @@ export function useAutoCruise({
       autoStopTimerRef.current = null;
     }
     waitingForUrlRef.current = false;
+    loopIterationRef.current = 0;
     setCruisePhase(CruisePhase.Idle);
   }, []);
 
@@ -87,13 +98,20 @@ export function useAutoCruise({
   }, [cruisePhase, cancelCruise]);
 
   const handlePlayMineEnded = useCallback(() => {
-    const isLast = activeIndexRef.current === segmentsRef.current.length - 1;
-    if (isLast) {
-      cancelCruise();
-    } else {
+    if (loopIterationRef.current + 1 < loopCountRef.current) {
+      loopIterationRef.current++;
       setCruisePhase(CruisePhase.PlayingOriginal);
-      onNavigateNext();
-      onPlayOriginal(segmentsRef.current[activeIndexRef.current + 1]);
+      onPlayOriginal(segmentsRef.current[activeIndexRef.current]);
+    } else {
+      const isLast = activeIndexRef.current === segmentsRef.current.length - 1;
+      if (isLast) {
+        cancelCruise();
+      } else {
+        loopIterationRef.current = 0;
+        setCruisePhase(CruisePhase.PlayingOriginal);
+        onNavigateNext();
+        onPlayOriginal(segmentsRef.current[activeIndexRef.current + 1]);
+      }
     }
   }, [cancelCruise, onNavigateNext, onPlayOriginal]);
 
@@ -109,7 +127,7 @@ export function useAutoCruise({
         autoStopTimerRef.current = setTimeout(() => {
           onStopRecordRef.current();
           autoStopTimerRef.current = null;
-        }, (segDuration + AUTO_STOP_BUFFER_TIME) * 1000);
+        }, (segDuration + bufferTimeRef.current) * 1000);
       }
     } else if (!isRecording && autoStopTimerRef.current) {
       clearTimeout(autoStopTimerRef.current);
@@ -167,9 +185,13 @@ export function useAutoCruise({
     autoStopEnabled,
     autoCruiseEnabled,
     cruisePhase,
+    bufferTime,
+    loopCount,
     toggleAutoStop,
     toggleAutoCruise,
     startCruise,
     cancelCruise,
+    setBufferTime,
+    setLoopCount,
   };
 }

@@ -128,8 +128,12 @@ export function App() {
         onSpeedChange={setPlaybackSpeed}
         autoStopEnabled={cruise.autoStopEnabled}
         autoCruiseEnabled={cruise.autoCruiseEnabled}
+        bufferTime={cruise.bufferTime}
+        loopCount={cruise.loopCount}
         onToggleAutoStop={cruise.toggleAutoStop}
         onToggleAutoCruise={cruise.toggleAutoCruise}
+        onBufferTimeChange={cruise.setBufferTime}
+        onLoopCountChange={cruise.setLoopCount}
       />
 
       <main className="flex-1 lg:ml-64 relative min-h-screen">
