@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { ProcessingState } from './types';
 import type { Segment } from './types';
 import { usePipeline } from './hooks/usePipeline';
 import { useAudioPlayer } from './hooks/useAudioPlayer';
@@ -27,11 +28,9 @@ export function App() {
     try {
       arrayBuffer = await file.arrayBuffer();
     } catch {
-      // Error handling is now primarily in the hook, but we need the buffer for playback
       return;
     }
 
-    // Decode audio for playback
     try {
       const ctx = new AudioContext();
       const decoded = await ctx.decodeAudioData(arrayBuffer.slice(0));
@@ -39,11 +38,9 @@ export function App() {
       setAudioBuffer(decoded);
       setTotalDuration(decoded.duration);
     } catch {
-      // Error handling for playback
       return;
     }
 
-    // Start pipeline processing
     pipeline.process(arrayBuffer);
   }
 
@@ -97,7 +94,7 @@ export function App() {
           onRetry={pipeline.reset}
         />
 
-        {pipeline.status === 'ready' && pipeline.segments.length > 0 && (
+        {(pipeline.status === ProcessingState.Ready || pipeline.status === ProcessingState.Transcribing) && pipeline.segments.length > 0 && (
           <SentenceView
             segments={pipeline.segments}
             activeIndex={activeIndex}
@@ -113,7 +110,7 @@ export function App() {
           />
         )}
 
-        {pipeline.status === 'idle' && (
+        {pipeline.status === ProcessingState.Idle && (
           <div className="flex flex-col items-center justify-center min-h-screen gap-4 px-8 text-center">
             <span className="material-symbols-outlined text-outline text-[64px]">mic_external_on</span>
             <p className="font-headline-md text-headline-md text-on-surface">Ready to practice</p>

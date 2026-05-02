@@ -6,13 +6,23 @@ export interface Segment {
   recordingUrl: string | null;
 }
 
-export type ProcessingState =
-  | 'idle'
-  | 'loading-model'
-  | 'vad-running'
-  | 'transcribing'
-  | 'ready'
-  | 'error';
+export enum ProcessingState {
+  Idle = 'idle',
+  LoadingModel = 'loading-model',
+  VADRunning = 'vad-running',
+  Transcribing = 'transcribing',
+  Ready = 'ready',
+  Error = 'error'
+}
+
+export enum WorkerMessageType {
+  Init = 'init',
+  Ready = 'ready',
+  Progress = 'progress',
+  Error = 'error',
+  Transcribe = 'transcribe',
+  Result = 'result'
+}
 
 export interface TranscribingProgress {
   current: number; // segments transcribed so far

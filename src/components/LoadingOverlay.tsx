@@ -1,4 +1,5 @@
-import type { ProcessingState, TranscribingProgress } from '../types';
+import { ProcessingState } from '../types';
+import type { TranscribingProgress } from '../types';
 
 interface Props {
   state: ProcessingState;
@@ -9,11 +10,11 @@ interface Props {
 }
 
 export function LoadingOverlay({ state, downloadProgress, progress, errorMessage, onRetry }: Props) {
-  if (state === 'idle' || state === 'ready') return null;
+  if (state === ProcessingState.Idle || state === ProcessingState.Ready || state === ProcessingState.Transcribing) return null;
 
   return (
     <div className="fixed inset-0 z-50 bg-background/95 flex flex-col items-center justify-center gap-6 px-8">
-      {state === 'error' ? (
+      {state === ProcessingState.Error ? (
         <>
           <span className="material-symbols-outlined text-error text-[48px]">error_outline</span>
           <p className="text-on-surface font-headline-md text-headline-md text-center">{errorMessage}</p>
@@ -24,7 +25,7 @@ export function LoadingOverlay({ state, downloadProgress, progress, errorMessage
             Try again
           </button>
         </>
-      ) : state === 'loading-model' ? (
+      ) : state === ProcessingState.LoadingModel ? (
         <>
           <span className="material-symbols-outlined text-primary text-[48px] animate-pulse">model_training</span>
           <div className="text-center">
@@ -39,7 +40,7 @@ export function LoadingOverlay({ state, downloadProgress, progress, errorMessage
           </div>
           <p className="text-primary font-bold text-label-sm">{downloadProgress}%</p>
         </>
-      ) : state === 'vad-running' ? (
+      ) : state === ProcessingState.VADRunning ? (
         <>
           <span className="material-symbols-outlined text-primary text-[48px] animate-spin">refresh</span>
           <div className="text-center">

@@ -50,7 +50,7 @@ export function useAudioPlayer(audioBuffer: AudioBuffer | null, speed: number) {
 
   useEffect(() => {
     return () => { stop(); };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+     
   }, []);
 
   return { play, stop, isPlaying };
