@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
-import { CruisePhase } from '../types';
+import { AUTO_STOP_BUFFER_TIME } from '../constants';
 import type { Segment } from '../types';
+import { CruisePhase } from '../types';
 
 export interface UseAutoCruiseParams {
   segments: Segment[];
@@ -39,8 +40,8 @@ export function useAutoCruise({
   onPlayMine,
   onNavigateNext,
 }: UseAutoCruiseParams): UseAutoCruiseReturn {
-  const [autoStopEnabled, setAutoStopEnabled] = useState(false);
-  const [autoCruiseEnabled, setAutoCruiseEnabled] = useState(false);
+  const [autoStopEnabled, setAutoStopEnabled] = useState(true);
+  const [autoCruiseEnabled, setAutoCruiseEnabled] = useState(true);
   const [cruisePhase, setCruisePhase] = useState(CruisePhase.Idle);
 
   const prevIsPlayingRef = useRef(false);
@@ -108,7 +109,7 @@ export function useAutoCruise({
         autoStopTimerRef.current = setTimeout(() => {
           onStopRecordRef.current();
           autoStopTimerRef.current = null;
-        }, (segDuration + 1) * 1000);
+        }, (segDuration + AUTO_STOP_BUFFER_TIME) * 1000);
       }
     } else if (!isRecording && autoStopTimerRef.current) {
       clearTimeout(autoStopTimerRef.current);
