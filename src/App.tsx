@@ -1,201 +1,60 @@
-import { useState, useCallback } from 'react';
-import { ProcessingState, NavigationDirection, CruisePhase } from './types';
-import type { Segment } from './types';
-import { usePipeline } from './hooks/usePipeline';
-import { useAudioPlayer } from './hooks/useAudioPlayer';
-import { useRecorder } from './hooks/useRecorder';
-import { useAutoCruise } from './hooks/useAutoCruise';
+import { ProcessingState } from './types';
 import { Sidebar } from './components/Sidebar';
 import { TopBar } from './components/TopBar';
 import { ProgressBar } from './components/ProgressBar';
 import { LoadingOverlay } from './components/LoadingOverlay';
 import { SentenceView } from './components/SentenceView';
+import { useShadowingManager } from './hooks/useShadowingManager';
 
 export function App() {
-  const [audioBuffer, setAudioBuffer] = useState<AudioBuffer | null>(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [playbackSpeed, setPlaybackSpeed] = useState(1.0);
-  const [totalDuration, setTotalDuration] = useState(0);
-
-  const pipeline = usePipeline();
-  const originalPlayer = useAudioPlayer(audioBuffer, playbackSpeed);
-  const minePlayer = useAudioPlayer(null, 1.0);
-  const recorder = useRecorder();
-
-  const handleStopRecord = useCallback(async () => {
-    const blob = await recorder.stopRecording();
-    const newUrl = URL.createObjectURL(blob);
-    const old = pipeline.segments.find((s) => s.id === activeIndex);
-    if (old?.recordingUrl) URL.revokeObjectURL(old.recordingUrl);
-    pipeline.patchSegment(activeIndex, { recordingUrl: newUrl });
-  }, [recorder, pipeline, activeIndex]);
-
-  const handleNavigate = useCallback((dir: NavigationDirection) => {
-    originalPlayer.stop();
-    minePlayer.stop();
-    setActiveIndex((i) => {
-      const delta = dir === NavigationDirection.Prev ? -1 : 1;
-      return Math.max(0, Math.min(pipeline.segments.length - 1, i + delta));
-    });
-  }, [originalPlayer, minePlayer, pipeline.segments.length]);
-
-  const cruise = useAutoCruise({
-    segments: pipeline.segments,
-    activeIndex: activeIndex,
-    isPlayingOriginal: originalPlayer.isPlaying,
-    isRecording: recorder.isRecording,
-    micError: recorder.micError,
-    activeSegmentRecordingUrl: pipeline.segments[activeIndex]?.recordingUrl ?? null,
-    onPlayOriginal: useCallback((seg: Segment) => {
-      minePlayer.stop();
-      originalPlayer.play(seg);
-    }, [originalPlayer, minePlayer]),
-    onStartRecord: recorder.startRecording,
-    onStopRecord: handleStopRecord,
-    onPlayMine: useCallback((url: string, onEnded: () => void) => {
-      originalPlayer.stop();
-      minePlayer.playUrl(url, onEnded);
-    }, [originalPlayer, minePlayer]),
-    onNavigateNext: useCallback(() => handleNavigate(NavigationDirection.Next), [handleNavigate]),
-  });
-
-  const interruptCruise = useCallback(() => {
-    if (cruise.cruisePhase !== CruisePhase.Idle) {
-      cruise.cancelCruise();
-    }
-  }, [cruise]);
-
-  async function handleFileSelect(file: File) {
-    cruise.cancelCruise();
-    originalPlayer.stop();
-    minePlayer.stop();
-    setActiveIndex(0);
-
-    let arrayBuffer: ArrayBuffer;
-    try {
-      arrayBuffer = await file.arrayBuffer();
-    } catch {
-      return;
-    }
-
-    try {
-      const ctx = new AudioContext();
-      const decoded = await ctx.decodeAudioData(arrayBuffer.slice(0));
-      ctx.close();
-      setAudioBuffer(decoded);
-      setTotalDuration(decoded.duration);
-    } catch {
-      return;
-    }
-
-    pipeline.process(arrayBuffer);
-  }
-
-  function handlePlayOriginal(segment: Segment) {
-    if (originalPlayer.isPlaying) {
-      originalPlayer.stop();
-      interruptCruise();
-      return;
-    }
-
-    if (recorder.isRecording) {
-      handleStopRecordManual();
-      interruptCruise();
-    } else {
-      if (cruise.autoCruiseEnabled && cruise.cruisePhase === CruisePhase.Idle) {
-        cruise.startCruise();
-      } else {
-        interruptCruise();
-      }
-    }
-    minePlayer.stop();
-    originalPlayer.play(segment);
-  }
-
-  function handleStartRecord() {
-    interruptCruise();
-    originalPlayer.stop();
-    minePlayer.stop();
-    recorder.startRecording();
-  }
-
-  const handleStopRecordManual = useCallback(() => {
-    if (cruise.cruisePhase !== CruisePhase.Idle && cruise.cruisePhase !== CruisePhase.Recording) {
-      cruise.cancelCruise();
-    }
-    handleStopRecord();
-  }, [cruise, handleStopRecord]);
-
-  function handlePlayMineManual(url: string) {
-    if (minePlayer.isPlaying) {
-      minePlayer.stop();
-      interruptCruise();
-      return;
-    }
-    
-    interruptCruise();
-    originalPlayer.stop();
-    minePlayer.playUrl(url);
-  }
-
-  function handleNavigateManual(dir: NavigationDirection) {
-    interruptCruise();
-    handleNavigate(dir);
-  }
-
-  function handleJump(index: number) {
-    interruptCruise();
-    originalPlayer.stop();
-    minePlayer.stop();
-    setActiveIndex(index);
-  }
+  const manager = useShadowingManager();
 
   return (
     <div className="bg-background text-on-background min-h-screen flex antialiased">
       <Sidebar
-        onFileSelect={handleFileSelect}
-        speed={playbackSpeed}
-        onSpeedChange={setPlaybackSpeed}
-        autoStopEnabled={cruise.autoStopEnabled}
-        autoCruiseEnabled={cruise.autoCruiseEnabled}
-        bufferTime={cruise.bufferTime}
-        loopCount={cruise.loopCount}
-        onToggleAutoStop={cruise.toggleAutoStop}
-        onToggleAutoCruise={cruise.toggleAutoCruise}
-        onBufferTimeChange={cruise.setBufferTime}
-        onLoopCountChange={cruise.setLoopCount}
+        onFileSelect={manager.upload}
+        speed={manager.playbackSpeed}
+        onSpeedChange={manager.setPlaybackSpeed}
+        autoStopEnabled={manager.automation.autoStopEnabled}
+        autoCruiseEnabled={manager.automation.autoCruiseEnabled}
+        bufferTime={manager.automation.bufferTime}
+        loopCount={manager.automation.loopCount}
+        onToggleAutoStop={manager.automation.toggleAutoStop}
+        onToggleAutoCruise={manager.automation.toggleAutoCruise}
+        onBufferTimeChange={manager.automation.setBufferTime}
+        onLoopCountChange={manager.automation.setLoopCount}
       />
 
       <main className="flex-1 lg:ml-64 relative min-h-screen">
         <TopBar />
-        <ProgressBar activeIndex={activeIndex} total={pipeline.segments.length} />
+        <ProgressBar activeIndex={manager.activeIndex} total={manager.segments.length} />
 
         <LoadingOverlay
-          state={pipeline.status}
-          downloadProgress={pipeline.downloadProgress}
-          progress={pipeline.progress ?? undefined}
-          errorMessage={pipeline.error}
-          onRetry={pipeline.reset}
+          state={manager.status}
+          downloadProgress={manager.downloadProgress}
+          progress={manager.progress ?? undefined}
+          errorMessage={manager.error}
+          onRetry={manager.reset}
         />
 
-        {(pipeline.status === ProcessingState.Ready || pipeline.status === ProcessingState.Transcribing) && pipeline.segments.length > 0 && (
+        {(manager.status === ProcessingState.Ready || manager.status === ProcessingState.Transcribing) && manager.segments.length > 0 && (
           <SentenceView
-            segments={pipeline.segments}
-            activeIndex={activeIndex}
-            isPlayingOriginal={originalPlayer.isPlaying}
-            isPlayingMine={minePlayer.isPlaying}
-            isRecording={recorder.isRecording}
-            totalDuration={totalDuration}
-            onNavigate={handleNavigateManual}
-            onPlayOriginal={handlePlayOriginal}
-            onStartRecord={handleStartRecord}
-            onStopRecord={handleStopRecordManual}
-            onPlayMine={handlePlayMineManual}
-            onJump={handleJump}
+            segments={manager.segments}
+            activeIndex={manager.activeIndex}
+            isPlayingOriginal={manager.isPlayingOriginal}
+            isPlayingMine={manager.isPlayingMine}
+            isRecording={manager.isRecording}
+            totalDuration={manager.totalDuration}
+            onNavigate={manager.navigate}
+            onPlayOriginal={manager.playOriginal}
+            onStartRecord={manager.startRecord}
+            onStopRecord={manager.stopRecord}
+            onPlayMine={manager.playMine}
+            onJump={manager.jump}
           />
         )}
 
-        {pipeline.status === ProcessingState.Idle && (
+        {manager.status === ProcessingState.Idle && (
           <div className="flex flex-col items-center justify-center min-h-screen gap-4 px-8 text-center">
             <span className="material-symbols-outlined text-outline text-[64px]">mic_external_on</span>
             <p className="font-headline-md text-headline-md text-on-surface">Ready to practice</p>
@@ -205,9 +64,9 @@ export function App() {
           </div>
         )}
 
-        {recorder.micError && (
+        {manager.micError && (
           <div className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-error-container text-on-error-container px-4 py-3 rounded-lg font-label-sm text-label-sm shadow-lg z-50">
-            {recorder.micError}
+            {manager.micError}
           </div>
         )}
       </main>

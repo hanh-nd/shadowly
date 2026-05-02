@@ -4,7 +4,7 @@ import type { Segment, TranscribingProgress } from '../types';
 import { engine } from '../lib/TranscriptionEngine';
 
 export interface PipelineHook {
-  process: (arrayBuffer: ArrayBuffer) => Promise<void>;
+  process: (file: File) => Promise<void>;
   reset: () => void;
   segments: Segment[];
   patchSegment: (id: number, patch: Partial<Pick<Segment, 'text' | 'recordingUrl'>>) => void;
@@ -12,6 +12,8 @@ export interface PipelineHook {
   progress: TranscribingProgress | null;
   downloadProgress: number;
   error: string | null;
+  audioBuffer: AudioBuffer | null;
+  totalDuration: number;
 }
 
 export function usePipeline(): PipelineHook {
@@ -20,6 +22,8 @@ export function usePipeline(): PipelineHook {
   const [progress, setProgress] = useState<TranscribingProgress | null>(null);
   const [downloadProgress, setDownloadProgress] = useState(0);
   const [error, setError] = useState<string | null>(null);
+  const [audioBuffer, setAudioBuffer] = useState<AudioBuffer | null>(null);
+  const [totalDuration, setTotalDuration] = useState(0);
 
   const abortControllerRef = useRef<AbortController | null>(null);
 
@@ -29,9 +33,11 @@ export function usePipeline(): PipelineHook {
     setError(null);
     setSegments([]);
     setProgress(null);
+    setAudioBuffer(null);
+    setTotalDuration(0);
   }, []);
 
-  const process = async (arrayBuffer: ArrayBuffer) => {
+  const process = async (file: File) => {
     // Cancel any ongoing run
     abortControllerRef.current?.abort();
     const controller = new AbortController();
@@ -41,19 +47,32 @@ export function usePipeline(): PipelineHook {
     setSegments([]);
     setProgress(null);
     setError(null);
+    setAudioBuffer(null);
+    setTotalDuration(0);
     setStatus(ProcessingState.LoadingModel);
 
     try {
+      const arrayBuffer = await file.arrayBuffer();
+      if (signal.aborted) return;
+
+      const ctx = new AudioContext();
+      const decoded = await ctx.decodeAudioData(arrayBuffer.slice(0));
+      ctx.close();
+      if (signal.aborted) return;
+
+      setAudioBuffer(decoded);
+      setTotalDuration(decoded.duration);
+
       await engine.ensureModels((p) => {
         if (!signal.aborted) setDownloadProgress(p);
       });
       if (signal.aborted) return;
 
-      const float32 = await engine.resampleTo16kHz(arrayBuffer);
+      const resampledAudio = await engine.resampleTo16kHz(arrayBuffer);
       if (signal.aborted) return;
 
       setStatus(ProcessingState.VADRunning);
-      const audioSegments = await engine.getSegments(float32, signal);
+      const audioSegments = await engine.getSegments(resampledAudio, signal);
       if (signal.aborted) return;
 
       if (audioSegments.length === 0) {
@@ -109,5 +128,7 @@ export function usePipeline(): PipelineHook {
     progress,
     downloadProgress,
     error,
+    audioBuffer,
+    totalDuration,
   };
 }
