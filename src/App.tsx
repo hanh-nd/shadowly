@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ProcessingState } from './types';
+import { ProcessingState, NavigationDirection } from './types';
 import type { Segment } from './types';
 import { usePipeline } from './hooks/usePipeline';
 import { useAudioPlayer } from './hooks/useAudioPlayer';
@@ -45,7 +45,6 @@ export function App() {
   }
 
   function handlePlayOriginal(segment: Segment) {
-    player.stop();
     player.play(segment);
   }
 
@@ -62,11 +61,12 @@ export function App() {
     audio.play();
   }
 
-  function handleNavigate(dir: 'prev' | 'next') {
+  function handleNavigate(dir: NavigationDirection) {
     player.stop();
-    setActiveIndex((i) =>
-      dir === 'prev' ? Math.max(0, i - 1) : Math.min(pipeline.segments.length - 1, i + 1)
-    );
+    setActiveIndex((i) => {
+      const delta = dir === NavigationDirection.Prev ? -1 : 1;
+      return Math.max(0, Math.min(pipeline.segments.length - 1, i + delta));
+    });
   }
 
   function handleJump(index: number) {

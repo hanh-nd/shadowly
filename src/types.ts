@@ -15,6 +15,34 @@ export enum ProcessingState {
   Error = 'error'
 }
 
+export enum PlaybackStatus {
+  Idle = 'idle',
+  Playing = 'playing'
+}
+
+export enum NavigationDirection {
+  Prev = 'prev',
+  Next = 'next'
+}
+
+export enum SentenceCardMode {
+  InactivePrev = 'inactive-prev',
+  Active = 'active',
+  InactiveNext = 'inactive-next'
+}
+
+export enum AudioContextStateEnum {
+  Suspended = 'suspended',
+  Running = 'running',
+  Closed = 'closed'
+}
+
+export enum MediaRecorderState {
+  Inactive = 'inactive',
+  Recording = 'recording',
+  Paused = 'paused'
+}
+
 export enum WorkerMessageType {
   Init = 'init',
   Ready = 'ready',

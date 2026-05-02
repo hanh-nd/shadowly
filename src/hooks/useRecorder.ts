@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import { MediaRecorderState } from '../types';
 
 const SUPPORTED_MIME_TYPES = [
   'audio/webm;codecs=opus',
@@ -20,7 +21,7 @@ export function useRecorder() {
   const [micError, setMicError] = useState<string | null>(null);
 
   const cleanup = () => {
-    if (recorderRef.current && recorderRef.current.state !== 'inactive') {
+    if (recorderRef.current && recorderRef.current.state !== MediaRecorderState.Inactive) {
       recorderRef.current.stop();
     }
     if (mediaStreamRef.current) {
@@ -63,7 +64,7 @@ export function useRecorder() {
   function stopRecording(): Promise<Blob> {
     return new Promise((resolve) => {
       const recorder = recorderRef.current;
-      if (!recorder || recorder.state === 'inactive') {
+      if (!recorder || recorder.state === MediaRecorderState.Inactive) {
         cleanup();
         setIsRecording(false);
         resolve(new Blob());

@@ -1,8 +1,9 @@
 import type { Segment } from '../types';
+import { SentenceCardMode } from '../types';
 
 interface Props {
   segment: Segment;
-  mode: 'inactive-prev' | 'active' | 'inactive-next';
+  mode: SentenceCardMode;
   isPlayingOriginal: boolean;
   isRecording: boolean;
   isFirst: boolean;
@@ -39,7 +40,7 @@ export function SentenceCard({
   onPrev,
   onNext,
 }: Props) {
-  if (mode !== 'active') {
+  if (mode !== SentenceCardMode.Active) {
     return (
       <div
         className="py-4 px-6 opacity-40 cursor-pointer hover:opacity-60 transition-opacity"

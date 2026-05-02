@@ -1,4 +1,5 @@
 import type { Segment } from '../types';
+import { NavigationDirection, SentenceCardMode } from '../types';
 import { SentenceCard } from './SentenceCard';
 
 interface Props {
@@ -7,7 +8,7 @@ interface Props {
   isPlayingOriginal: boolean;
   isRecording: boolean;
   totalDuration: number;
-  onNavigate: (dir: 'prev' | 'next') => void;
+  onNavigate: (dir: NavigationDirection) => void;
   onPlayOriginal: (segment: Segment) => void;
   onStartRecord: () => void;
   onStopRecord: () => void;
@@ -37,7 +38,7 @@ export function SentenceView({
       {prev && (
         <SentenceCard
           segment={prev}
-          mode="inactive-prev"
+          mode={SentenceCardMode.InactivePrev}
           isPlayingOriginal={false}
           isRecording={false}
           isFirst={false}
@@ -56,7 +57,7 @@ export function SentenceView({
       {active && (
         <SentenceCard
           segment={active}
-          mode="active"
+          mode={SentenceCardMode.Active}
           isPlayingOriginal={isPlayingOriginal}
           isRecording={isRecording}
           isFirst={activeIndex === 0}
@@ -67,15 +68,15 @@ export function SentenceView({
           onStopRecord={onStopRecord}
           onPlayMine={() => active.recordingUrl && onPlayMine(active.recordingUrl)}
           onClick={() => {}}
-          onPrev={() => onNavigate('prev')}
-          onNext={() => onNavigate('next')}
+          onPrev={() => onNavigate(NavigationDirection.Prev)}
+          onNext={() => onNavigate(NavigationDirection.Next)}
         />
       )}
 
       {next && (
         <SentenceCard
           segment={next}
-          mode="inactive-next"
+          mode={SentenceCardMode.InactiveNext}
           isPlayingOriginal={false}
           isRecording={false}
           isFirst={false}
