@@ -6,6 +6,7 @@ interface Props {
   segments: Segment[];
   activeIndex: number;
   isPlayingOriginal: boolean;
+  isPlayingMine: boolean;
   isRecording: boolean;
   totalDuration: number;
   onNavigate: (dir: NavigationDirection) => void;
@@ -20,6 +21,7 @@ export function SentenceView({
   segments,
   activeIndex,
   isPlayingOriginal,
+  isPlayingMine,
   isRecording,
   totalDuration,
   onNavigate,
@@ -40,6 +42,7 @@ export function SentenceView({
           segment={prev}
           mode={SentenceCardMode.InactivePrev}
           isPlayingOriginal={false}
+          isPlayingMine={false}
           isRecording={false}
           isFirst={false}
           isLast={false}
@@ -59,6 +62,7 @@ export function SentenceView({
           segment={active}
           mode={SentenceCardMode.Active}
           isPlayingOriginal={isPlayingOriginal}
+          isPlayingMine={isPlayingMine}
           isRecording={isRecording}
           isFirst={activeIndex === 0}
           isLast={activeIndex === segments.length - 1}
@@ -78,6 +82,7 @@ export function SentenceView({
           segment={next}
           mode={SentenceCardMode.InactiveNext}
           isPlayingOriginal={false}
+          isPlayingMine={false}
           isRecording={false}
           isFirst={false}
           isLast={false}

@@ -5,6 +5,7 @@ interface Props {
   segment: Segment;
   mode: SentenceCardMode;
   isPlayingOriginal: boolean;
+  isPlayingMine: boolean;
   isRecording: boolean;
   isFirst: boolean;
   isLast: boolean;
@@ -28,6 +29,7 @@ export function SentenceCard({
   segment,
   mode,
   isPlayingOriginal,
+  isPlayingMine,
   isRecording,
   isFirst,
   isLast,
@@ -118,7 +120,9 @@ export function SentenceCard({
           disabled={!segment.recordingUrl}
         >
           <div className="w-16 h-16 rounded-full bg-surface-container flex items-center justify-center text-on-surface border border-outline-variant group-hover:bg-surface-container-high transition-colors">
-            <span className="material-symbols-outlined text-[28px]">headphones</span>
+            <span className={`material-symbols-outlined text-[28px] ${isPlayingMine ? 'fill-icon text-primary' : ''}`}>
+              {isPlayingMine ? 'pause' : 'headphones'}
+            </span>
           </div>
           <span className="font-label-sm text-[12px] text-secondary font-medium">Play Mine</span>
         </button>

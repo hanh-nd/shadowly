@@ -18,7 +18,8 @@ export function App() {
   const [totalDuration, setTotalDuration] = useState(0);
 
   const pipeline = usePipeline();
-  const player = useAudioPlayer(audioBuffer, playbackSpeed);
+  const originalPlayer = useAudioPlayer(audioBuffer, playbackSpeed);
+  const minePlayer = useAudioPlayer(null, 1.0);
   const recorder = useRecorder();
 
   const handleStopRecord = useCallback(async () => {
@@ -29,31 +30,32 @@ export function App() {
     pipeline.patchSegment(activeIndex, { recordingUrl: newUrl });
   }, [recorder, pipeline, activeIndex]);
 
-  const handlePlayMine = useCallback((url: string, onEnded?: () => void) => {
-    const audio = new Audio(url);
-    if (onEnded) audio.onended = onEnded;
-    audio.play();
-  }, []);
-
   const handleNavigate = useCallback((dir: NavigationDirection) => {
-    player.stop();
+    originalPlayer.stop();
+    minePlayer.stop();
     setActiveIndex((i) => {
       const delta = dir === NavigationDirection.Prev ? -1 : 1;
       return Math.max(0, Math.min(pipeline.segments.length - 1, i + delta));
     });
-  }, [player, pipeline.segments.length]);
+  }, [originalPlayer, minePlayer, pipeline.segments.length]);
 
   const cruise = useAutoCruise({
     segments: pipeline.segments,
     activeIndex: activeIndex,
-    isPlayingOriginal: player.isPlaying,
+    isPlayingOriginal: originalPlayer.isPlaying,
     isRecording: recorder.isRecording,
     micError: recorder.micError,
     activeSegmentRecordingUrl: pipeline.segments[activeIndex]?.recordingUrl ?? null,
-    onPlayOriginal: useCallback((seg: Segment) => player.play(seg), [player]),
+    onPlayOriginal: useCallback((seg: Segment) => {
+      minePlayer.stop();
+      originalPlayer.play(seg);
+    }, [originalPlayer, minePlayer]),
     onStartRecord: recorder.startRecording,
     onStopRecord: handleStopRecord,
-    onPlayMine: handlePlayMine,
+    onPlayMine: useCallback((url: string, onEnded: () => void) => {
+      originalPlayer.stop();
+      minePlayer.playUrl(url, onEnded);
+    }, [originalPlayer, minePlayer]),
     onNavigateNext: useCallback(() => handleNavigate(NavigationDirection.Next), [handleNavigate]),
   });
 
@@ -65,7 +67,8 @@ export function App() {
 
   async function handleFileSelect(file: File) {
     cruise.cancelCruise();
-    player.stop();
+    originalPlayer.stop();
+    minePlayer.stop();
     setActiveIndex(0);
 
     let arrayBuffer: ArrayBuffer;
@@ -89,24 +92,50 @@ export function App() {
   }
 
   function handlePlayOriginal(segment: Segment) {
-    if (cruise.autoCruiseEnabled && cruise.cruisePhase === CruisePhase.Idle) {
-      cruise.startCruise();
-    } else {
+    if (originalPlayer.isPlaying) {
+      originalPlayer.stop();
       interruptCruise();
+      return;
     }
-    player.play(segment);
+
+    if (recorder.isRecording) {
+      handleStopRecordManual();
+      interruptCruise();
+    } else {
+      if (cruise.autoCruiseEnabled && cruise.cruisePhase === CruisePhase.Idle) {
+        cruise.startCruise();
+      } else {
+        interruptCruise();
+      }
+    }
+    minePlayer.stop();
+    originalPlayer.play(segment);
   }
 
   function handleStartRecord() {
     interruptCruise();
+    originalPlayer.stop();
+    minePlayer.stop();
     recorder.startRecording();
   }
 
-  function handleStopRecordManual() {
+  const handleStopRecordManual = useCallback(() => {
     if (cruise.cruisePhase !== CruisePhase.Idle && cruise.cruisePhase !== CruisePhase.Recording) {
       cruise.cancelCruise();
     }
     handleStopRecord();
+  }, [cruise, handleStopRecord]);
+
+  function handlePlayMineManual(url: string) {
+    if (minePlayer.isPlaying) {
+      minePlayer.stop();
+      interruptCruise();
+      return;
+    }
+    
+    interruptCruise();
+    originalPlayer.stop();
+    minePlayer.playUrl(url);
   }
 
   function handleNavigateManual(dir: NavigationDirection) {
@@ -116,7 +145,8 @@ export function App() {
 
   function handleJump(index: number) {
     interruptCruise();
-    player.stop();
+    originalPlayer.stop();
+    minePlayer.stop();
     setActiveIndex(index);
   }
 
@@ -152,14 +182,15 @@ export function App() {
           <SentenceView
             segments={pipeline.segments}
             activeIndex={activeIndex}
-            isPlayingOriginal={player.isPlaying}
+            isPlayingOriginal={originalPlayer.isPlaying}
+            isPlayingMine={minePlayer.isPlaying}
             isRecording={recorder.isRecording}
             totalDuration={totalDuration}
             onNavigate={handleNavigateManual}
             onPlayOriginal={handlePlayOriginal}
             onStartRecord={handleStartRecord}
             onStopRecord={handleStopRecordManual}
-            onPlayMine={handlePlayMine}
+            onPlayMine={handlePlayMineManual}
             onJump={handleJump}
           />
         )}
