@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+
 import { MS_PER_SECOND } from '../constants';
 import type { Segment } from '../types';
 import { ShadowingPhase } from '../types';

@@ -1,10 +1,10 @@
-import { ProcessingState } from './types';
+import { LoadingOverlay } from './components/LoadingOverlay';
+import { ProgressBar } from './components/ProgressBar';
+import { SentenceView } from './components/SentenceView';
 import { Sidebar } from './components/Sidebar';
 import { TopBar } from './components/TopBar';
-import { ProgressBar } from './components/ProgressBar';
-import { LoadingOverlay } from './components/LoadingOverlay';
-import { SentenceView } from './components/SentenceView';
 import { useShadowingManager } from './hooks/useShadowingManager';
+import { ProcessingState } from './types';
 
 export function App() {
   const manager = useShadowingManager();

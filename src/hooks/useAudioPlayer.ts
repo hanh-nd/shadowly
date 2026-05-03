@@ -1,6 +1,7 @@
-import { useRef, useState, useEffect, useCallback } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
+
 import type { Segment } from '../types';
-import { PlaybackStatus, AudioContextStateEnum } from '../types';
+import { AudioContextStateEnum, PlaybackStatus } from '../types';
 
 const MIN_SEGMENT_DURATION = 0.1;
 

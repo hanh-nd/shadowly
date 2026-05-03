@@ -1,5 +1,5 @@
 import { TARGET_SAMPLE_RATE } from '../constants';
-import { WorkerMessageType, type WordTimestamp } from '../types';
+import { type WordTimestamp, WorkerMessageType } from '../types';
 
 const WHISPER_MODEL = 'Xenova/whisper-tiny.en';
 const VAD_MODEL = 'v5';

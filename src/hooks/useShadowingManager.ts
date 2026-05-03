@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+
 import type { Segment } from '../types';
 import { NavigationDirection, ShadowingPhase } from '../types';
 import { useAudioPlayer } from './useAudioPlayer';

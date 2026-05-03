@@ -1,5 +1,5 @@
-import { ProcessingState } from '../types';
 import type { TranscribingProgress } from '../types';
+import { ProcessingState } from '../types';
 
 interface Props {
   state: ProcessingState;

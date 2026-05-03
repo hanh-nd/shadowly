@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+
 import { TARGET_SAMPLE_RATE } from '../constants';
 import { MediaRecorderState } from '../types';
 

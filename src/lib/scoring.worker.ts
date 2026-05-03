@@ -6,6 +6,7 @@ import {
   PreTrainedModel,
   type ProgressInfo,
 } from '@huggingface/transformers';
+
 import { TARGET_SAMPLE_RATE as SAMPLE_RATE } from '../constants';
 import { WordScore, type WordTimestamp } from '../types';
 

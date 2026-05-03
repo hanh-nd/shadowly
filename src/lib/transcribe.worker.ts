@@ -3,7 +3,8 @@ import {
   env,
   pipeline,
 } from '@huggingface/transformers';
-import { WorkerMessageType, type WordTimestamp } from '../types';
+
+import { type WordTimestamp, WorkerMessageType } from '../types';
 
 // Skip local model check for faster loading in worker
 env.allowLocalModels = false;

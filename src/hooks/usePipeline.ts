@@ -1,4 +1,5 @@
 import { useCallback, useRef, useState } from 'react';
+
 import { MS_PER_SECOND } from '../constants';
 import { engine } from '../lib/TranscriptionEngine';
 import type { Segment, TranscribingProgress } from '../types';
