@@ -1,9 +1,23 @@
+export interface WordTimestamp {
+  word: string;
+  start: number; // seconds, 0-relative to segment audio
+  end: number;   // seconds, 0-relative to segment audio
+}
+
+export enum WordScore {
+  Good = 'good',
+  Bad = 'bad'
+}
+
 export interface Segment {
   id: number;
   text: string;
   start: number;
   end: number;
   recordingUrl: string | null;
+  wordTimestamps?: WordTimestamp[];
+  wordScores?: (WordScore | null)[] | null;
+  isScoring?: boolean;
 }
 
 export enum ProcessingState {
@@ -43,10 +57,11 @@ export enum MediaRecorderState {
   Paused = 'paused'
 }
 
-export enum CruisePhase {
+export enum ShadowingPhase {
   Idle = 'idle',
   PlayingOriginal = 'playing_original',
   Recording = 'recording',
+  Scoring = 'scoring',
   PlayingMine = 'playing_mine',
 }
 

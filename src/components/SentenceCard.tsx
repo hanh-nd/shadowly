@@ -1,5 +1,5 @@
 import type { Segment } from '../types';
-import { SentenceCardMode } from '../types';
+import { SentenceCardMode, WordScore } from '../types';
 
 interface Props {
   segment?: Segment;
@@ -74,7 +74,18 @@ export function SentenceCard({
 
       {/* Sentence text */}
       <p className="font-display-active text-display-active text-on-background mb-8 relative z-10">
-        {segment.text}
+        {Array.isArray(segment.wordScores) && segment.wordTimestamps && segment.wordTimestamps.length === segment.wordScores.length ? (
+          segment.wordTimestamps.map((wt, i) => (
+            <span
+              key={i}
+              className={segment.wordScores![i] === WordScore.Good ? 'text-green-600' : 'text-red-500'}
+            >
+              {wt.word}{' '}
+            </span>
+          ))
+        ) : (
+          segment.text
+        )}
       </p>
 
       {/* Controls */}
@@ -102,6 +113,9 @@ export function SentenceCard({
           {isRecording && (
             <div className="absolute inset-0 bg-error/20 rounded-full animate-ping opacity-50 scale-110 pointer-events-none" />
           )}
+          {!isRecording && !!segment.isScoring && (
+            <div className="absolute inset-0 bg-primary/10 rounded-full animate-pulse pointer-events-none z-0" />
+          )}
           <div className={`w-20 h-20 rounded-full flex items-center justify-center transition-transform hover:scale-105 relative z-10 ${
             isRecording
               ? 'bg-error text-on-error shadow-[0_0_24px_rgba(186,26,26,0.3)]'
@@ -110,7 +124,7 @@ export function SentenceCard({
             <span className="material-symbols-outlined fill-icon text-[36px]">mic</span>
           </div>
           <span className={`font-label-sm text-[12px] font-bold ${isRecording ? 'text-error' : 'text-secondary'}`}>
-            {isRecording ? 'Recording…' : 'Record'}
+            {isRecording ? 'Recording…' : (segment.isScoring ? 'Scoring…' : 'Record')}
           </span>
         </button>
 

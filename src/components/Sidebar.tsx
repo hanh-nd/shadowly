@@ -6,10 +6,12 @@ interface Props {
   onSpeedChange: (speed: number) => void;
   autoStopEnabled: boolean;
   autoCruiseEnabled: boolean;
+  scoringEnabled: boolean;
   bufferTime: number;
   loopCount: number;
   onToggleAutoStop: () => void;
   onToggleAutoCruise: () => void;
+  onToggleScoring: () => void;
   onBufferTimeChange: (t: number) => void;
   onLoopCountChange: (n: number) => void;
 }
@@ -20,10 +22,12 @@ export function Sidebar({
   onSpeedChange,
   autoStopEnabled,
   autoCruiseEnabled,
+  scoringEnabled,
   bufferTime,
   loopCount,
   onToggleAutoStop,
   onToggleAutoCruise,
+  onToggleScoring,
   onBufferTimeChange,
   onLoopCountChange,
 }: Props) {
@@ -119,6 +123,21 @@ export function Sidebar({
                 />
               </div>
             )}
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center justify-between">
+              <span className="font-label-sm text-label-sm text-on-surface-variant">Scoring</span>
+              <label className="relative inline-flex items-center cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={scoringEnabled}
+                  onChange={onToggleScoring}
+                  className="sr-only peer"
+                />
+                <div className="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+              </label>
+            </div>
           </div>
         </div>
 

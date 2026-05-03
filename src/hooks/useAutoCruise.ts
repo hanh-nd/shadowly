@@ -1,29 +1,33 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import type { Segment } from '../types';
-import { CruisePhase } from '../types';
+import { ShadowingPhase } from '../types';
 
 export interface UseAutoCruiseParams {
   segments: Segment[];
   activeIndex: number;
+  phase: ShadowingPhase;
+  isScoring: boolean;
+  recordingUrl: string | null;
   isPlayingOriginal: boolean;
   isRecording: boolean;
   micError: string | null;
-  activeSegmentRecordingUrl: string | null;
   onPlayOriginal: (segment: Segment) => void;
   onStartRecord: () => void;
   onStopRecord: () => void;
   onPlayMine: (url: string, onEnded: () => void) => void;
   onNavigateNext: () => void;
+  onPhaseChange: (phase: ShadowingPhase) => void;
 }
 
 export interface UseAutoCruiseReturn {
   autoStopEnabled: boolean;
   autoCruiseEnabled: boolean;
-  cruisePhase: CruisePhase;
+  scoringEnabled: boolean;
   bufferTime: number;
   loopCount: number;
   toggleAutoStop: () => void;
   toggleAutoCruise: () => void;
+  toggleScoring: () => void;
   startCruise: () => void;
   cancelCruise: () => void;
   setBufferTime: (t: number) => void;
@@ -33,55 +37,91 @@ export interface UseAutoCruiseReturn {
 export function useAutoCruise({
   segments,
   activeIndex,
+  phase,
+  isScoring,
+  recordingUrl,
   isPlayingOriginal,
   isRecording,
   micError,
-  activeSegmentRecordingUrl,
   onPlayOriginal,
   onStartRecord,
   onStopRecord,
   onPlayMine,
   onNavigateNext,
+  onPhaseChange,
 }: UseAutoCruiseParams): UseAutoCruiseReturn {
   const [autoStopEnabled, setAutoStopEnabled] = useState(true);
   const [autoCruiseEnabled, setAutoCruiseEnabled] = useState(true);
-  const [cruisePhase, setCruisePhase] = useState(CruisePhase.Idle);
+  const [scoringEnabled, setScoringEnabled] = useState(false);
   const [bufferTime, setBufferTime] = useState(2);
   const [loopCount, setLoopCount] = useState(3);
 
-  const prevIsPlayingRef = useRef(false);
-  const prevIsRecordingRef = useRef(false);
   const autoStopTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const waitingForUrlRef = useRef(false);
+  const scoringTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const hasStartedRecordingRef = useRef(false);
 
-  // Use refs for values that shouldn't trigger timer resets
+  // 1. Move basic state refs
   const onStopRecordRef = useRef(onStopRecord);
   const segmentsRef = useRef(segments);
   const activeIndexRef = useRef(activeIndex);
-  const bufferTimeRef = useRef(2);
-  const loopCountRef = useRef(3);
+  const bufferTimeRef = useRef(bufferTime);
+  const loopCountRef = useRef(loopCount);
   const loopIterationRef = useRef(0);
+  const recordingUrlRef = useRef(recordingUrl);
+  const onPlayMineRef = useRef(onPlayMine);
 
-  useEffect(() => { onStopRecordRef.current = onStopRecord; }, [onStopRecord]);
-  useEffect(() => { segmentsRef.current = segments; }, [segments]);
-  useEffect(() => { activeIndexRef.current = activeIndex; }, [activeIndex]);
-  useEffect(() => { bufferTimeRef.current = bufferTime; }, [bufferTime]);
-  useEffect(() => { loopCountRef.current = loopCount; }, [loopCount]);
-
+  // 2. Define cancelCruise (before it's used in handlePlayMineEnded)
   const cancelCruise = useCallback(() => {
     if (autoStopTimerRef.current) {
       clearTimeout(autoStopTimerRef.current);
       autoStopTimerRef.current = null;
     }
-    waitingForUrlRef.current = false;
+    if (scoringTimeoutRef.current) {
+      clearTimeout(scoringTimeoutRef.current);
+      scoringTimeoutRef.current = null;
+    }
+    hasStartedRecordingRef.current = false;
     loopIterationRef.current = 0;
-    setCruisePhase(CruisePhase.Idle);
-  }, []);
+    onPhaseChange(ShadowingPhase.Idle);
+  }, [onPhaseChange]);
+
+  // 3. Define handlePlayMineEnded (before its ref)
+  const handlePlayMineEnded = useCallback(() => {
+    if (loopIterationRef.current + 1 < loopCountRef.current) {
+      loopIterationRef.current++;
+      onPhaseChange(ShadowingPhase.PlayingOriginal);
+      onPlayOriginal(segmentsRef.current[activeIndexRef.current]);
+    } else {
+      const isLast = activeIndexRef.current === segmentsRef.current.length - 1;
+      if (isLast) {
+        cancelCruise();
+      } else {
+        loopIterationRef.current = 0;
+        onPhaseChange(ShadowingPhase.PlayingOriginal);
+        onNavigateNext();
+        onPlayOriginal(segmentsRef.current[activeIndexRef.current + 1]);
+      }
+    }
+  }, [onNavigateNext, onPlayOriginal, cancelCruise, onPhaseChange]);
+
+  // 4. Define remaining refs that depend on above functions
+  const handlePlayMineEndedRef = useRef(handlePlayMineEnded);
+
+  useEffect(() => {
+    onStopRecordRef.current = onStopRecord;
+    segmentsRef.current = segments;
+    activeIndexRef.current = activeIndex;
+    bufferTimeRef.current = bufferTime;
+    loopCountRef.current = loopCount;
+    recordingUrlRef.current = recordingUrl;
+    onPlayMineRef.current = onPlayMine;
+    handlePlayMineEndedRef.current = handlePlayMineEnded;
+  }, [onStopRecord, segments, activeIndex, bufferTime, loopCount, recordingUrl, onPlayMine, handlePlayMineEnded]);
 
   const startCruise = useCallback(() => {
     if (!autoCruiseEnabled) return;
-    setCruisePhase(CruisePhase.PlayingOriginal);
-  }, [autoCruiseEnabled]);
+    onPhaseChange(ShadowingPhase.PlayingOriginal);
+  }, [autoCruiseEnabled, onPhaseChange]);
 
   const toggleAutoStop = useCallback(() => {
     setAutoStopEnabled((prev) => !prev);
@@ -90,35 +130,21 @@ export function useAutoCruise({
   const toggleAutoCruise = useCallback(() => {
     setAutoCruiseEnabled((prev) => {
       const next = !prev;
-      if (!next && cruisePhase !== CruisePhase.Idle) {
+      if (!next && phase !== ShadowingPhase.Idle) {
         cancelCruise();
       }
       return next;
     });
-  }, [cruisePhase, cancelCruise]);
+  }, [phase, cancelCruise]);
 
-  const handlePlayMineEnded = useCallback(() => {
-    if (loopIterationRef.current + 1 < loopCountRef.current) {
-      loopIterationRef.current++;
-      setCruisePhase(CruisePhase.PlayingOriginal);
-      onPlayOriginal(segmentsRef.current[activeIndexRef.current]);
-    } else {
-      const isLast = activeIndexRef.current === segmentsRef.current.length - 1;
-      if (isLast) {
-        cancelCruise();
-      } else {
-        loopIterationRef.current = 0;
-        setCruisePhase(CruisePhase.PlayingOriginal);
-        onNavigateNext();
-        onPlayOriginal(segmentsRef.current[activeIndexRef.current + 1]);
-      }
-    }
-  }, [cancelCruise, onNavigateNext, onPlayOriginal]);
+  const toggleScoring = useCallback(() => {
+    setScoringEnabled((prev) => !prev);
+  }, []);
 
   // Effect A — Auto-stop timer
   useEffect(() => {
-    const isAutoStopping = autoStopEnabled && cruisePhase === CruisePhase.Idle;
-    const isCruiseRecording = cruisePhase === CruisePhase.Recording;
+    const isAutoStopping = autoStopEnabled && phase === ShadowingPhase.Idle;
+    const isCruiseRecording = phase === ShadowingPhase.Recording;
 
     if (isRecording && (isAutoStopping || isCruiseRecording)) {
       if (!autoStopTimerRef.current) {
@@ -135,60 +161,113 @@ export function useAutoCruise({
     }
 
     return () => {
-      if (!isRecording && autoStopTimerRef.current) {
+      if (autoStopTimerRef.current) {
         clearTimeout(autoStopTimerRef.current);
         autoStopTimerRef.current = null;
       }
     };
-  }, [isRecording, autoStopEnabled, cruisePhase]);
+  }, [isRecording, autoStopEnabled, phase]);
 
-  // Effect B — PlayingOriginal → Recording transition
+  // Effect B — Phase Driver: Idle -> PlayingOriginal
   useEffect(() => {
-    if (cruisePhase === CruisePhase.PlayingOriginal && prevIsPlayingRef.current && !isPlayingOriginal) {
-      queueMicrotask(() => {
-        setCruisePhase(CruisePhase.Recording);
-        onStartRecord();
-      });
+    if (phase === ShadowingPhase.PlayingOriginal && !isPlayingOriginal) {
+      onPlayOriginal(segmentsRef.current[activeIndex]);
     }
-    prevIsPlayingRef.current = isPlayingOriginal;
-  }, [isPlayingOriginal, cruisePhase, onStartRecord]);
+  }, [phase, isPlayingOriginal, activeIndex, onPlayOriginal]);
 
-  // Effect C — Recording stops → begin waiting for URL
+  // Effect C — Phase Driver: PlayingOriginal Finished -> Recording
   useEffect(() => {
-    if (cruisePhase === CruisePhase.Recording && prevIsRecordingRef.current && !isRecording) {
-      waitingForUrlRef.current = true;
+    if (phase === ShadowingPhase.PlayingOriginal && !isPlayingOriginal) {
+      hasStartedRecordingRef.current = false; // Reset for new recording session
+      onPhaseChange(ShadowingPhase.Recording);
+      onStartRecord();
     }
-    prevIsRecordingRef.current = isRecording;
-  }, [isRecording, cruisePhase]);
+  }, [phase, isPlayingOriginal, onStartRecord, onPhaseChange]);
 
-  // Effect D — URL arrives → PlayingMine
+  // Effect D — Phase Driver: Recording Finished -> Scoring (or PlayingMine)
   useEffect(() => {
-    if (cruisePhase === CruisePhase.Recording && waitingForUrlRef.current && activeSegmentRecordingUrl) {
-      queueMicrotask(() => {
-        waitingForUrlRef.current = false;
-        setCruisePhase(CruisePhase.PlayingMine);
-        onPlayMine(activeSegmentRecordingUrl, handlePlayMineEnded);
-      });
+    if (phase === ShadowingPhase.Recording && isRecording) {
+      hasStartedRecordingRef.current = true;
     }
-  }, [activeSegmentRecordingUrl, cruisePhase, onPlayMine, handlePlayMineEnded]);
 
-  // Effect E — Mic error guard
-  useEffect(() => {
-    if (micError && cruisePhase !== CruisePhase.Idle) {
-      queueMicrotask(() => {
-        cancelCruise();
-      });
+    if (phase === ShadowingPhase.Recording && hasStartedRecordingRef.current && !isRecording) {
+      if (scoringEnabled) {
+        onPhaseChange(ShadowingPhase.Scoring);
+      } else {
+        onPhaseChange(ShadowingPhase.PlayingMine);
+      }
     }
-  }, [micError, cruisePhase, cancelCruise]);
+  }, [phase, isRecording, scoringEnabled, onPhaseChange]);
+
+  // Effect E — Phase Driver: Scoring Finished & Scored -> PlayingMine
+  useEffect(() => {
+    if (
+      phase === ShadowingPhase.Scoring && 
+      !isScoring && 
+      recordingUrl
+    ) {
+      if (scoringTimeoutRef.current) {
+        clearTimeout(scoringTimeoutRef.current);
+        scoringTimeoutRef.current = null;
+      }
+      onPhaseChange(ShadowingPhase.PlayingMine);
+      onPlayMine(recordingUrl, handlePlayMineEnded);
+      hasStartedRecordingRef.current = false;
+    }
+  }, [phase, isScoring, recordingUrl, onPlayMine, handlePlayMineEnded, onPhaseChange]);
+
+  // Effect E2 — Phase Driver: Bypassed Scoring -> PlayingMine (triggered by recordingUrl)
+  useEffect(() => {
+    if (
+      phase === ShadowingPhase.PlayingMine &&
+      !scoringEnabled &&
+      recordingUrl &&
+      hasStartedRecordingRef.current
+    ) {
+      onPlayMine(recordingUrl, handlePlayMineEnded);
+      hasStartedRecordingRef.current = false;
+    }
+  }, [phase, scoringEnabled, recordingUrl, onPlayMine, handlePlayMineEnded]);
+
+  // Effect F — Scoring timeout
+  useEffect(() => {
+    if (phase === ShadowingPhase.Scoring) {
+      scoringTimeoutRef.current = setTimeout(() => {
+        const url = recordingUrlRef.current;
+        if (url) {
+          onPhaseChange(ShadowingPhase.PlayingMine);
+          onPlayMineRef.current(url, handlePlayMineEndedRef.current);
+        } else {
+          cancelCruise();
+        }
+        scoringTimeoutRef.current = null;
+      }, 2000);
+    }
+
+    return () => {
+      if (scoringTimeoutRef.current) {
+        clearTimeout(scoringTimeoutRef.current);
+        scoringTimeoutRef.current = null;
+      }
+    };
+  }, [phase, cancelCruise, onPhaseChange]);
+
+  // Effect G — Mic error guard
+  useEffect(() => {
+    if (micError && phase !== ShadowingPhase.Idle) {
+      cancelCruise();
+    }
+  }, [micError, phase, cancelCruise]);
 
   return {
     autoStopEnabled,
     autoCruiseEnabled,
-    cruisePhase,
+    scoringEnabled,
     bufferTime,
     loopCount,
     toggleAutoStop,
     toggleAutoCruise,
+    toggleScoring,
     startCruise,
     cancelCruise,
     setBufferTime,

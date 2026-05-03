@@ -17,10 +17,12 @@ export function App() {
         onSpeedChange={manager.setPlaybackSpeed}
         autoStopEnabled={manager.automation.autoStopEnabled}
         autoCruiseEnabled={manager.automation.autoCruiseEnabled}
+        scoringEnabled={manager.automation.scoringEnabled}
         bufferTime={manager.automation.bufferTime}
         loopCount={manager.automation.loopCount}
         onToggleAutoStop={manager.automation.toggleAutoStop}
         onToggleAutoCruise={manager.automation.toggleAutoCruise}
+        onToggleScoring={manager.automation.toggleScoring}
         onBufferTimeChange={manager.automation.setBufferTime}
         onLoopCountChange={manager.automation.setLoopCount}
       />

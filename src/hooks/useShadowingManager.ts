@@ -1,31 +1,54 @@
-import { useState, useCallback } from 'react';
-import { NavigationDirection, CruisePhase } from '../types';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import type { Segment } from '../types';
-import { usePipeline } from './usePipeline';
+import { NavigationDirection, ShadowingPhase } from '../types';
 import { useAudioPlayer } from './useAudioPlayer';
-import { useRecorder } from './useRecorder';
+import type { UseAutoCruiseReturn } from './useAutoCruise';
 import { useAutoCruise } from './useAutoCruise';
+import { usePipeline } from './usePipeline';
+import { usePronunciationScorer } from './usePronunciationScorer';
+import { useRecorder } from './useRecorder';
 
 export function useShadowingManager() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [playbackSpeed, setPlaybackSpeed] = useState(1.0);
+  const [phase, setPhase] = useState<ShadowingPhase>(ShadowingPhase.Idle);
 
   const pipeline = usePipeline();
   const originalPlayer = useAudioPlayer(pipeline.audioBuffer, playbackSpeed);
   const minePlayer = useAudioPlayer(null, 1.0);
   const recorder = useRecorder();
+  const scorer = usePronunciationScorer({ patchSegment: pipeline.patchSegment });
+
+  const currentSegment = pipeline.segments[activeIndex];
+  const cruiseRef = useRef<UseAutoCruiseReturn | null>(null);
 
   const handleStopRecord = useCallback(async () => {
     const blob = await recorder.stopRecording();
     const newUrl = URL.createObjectURL(blob);
-    const currentSegment = pipeline.segments.find((s) => s.id === activeIndex);
     
     if (currentSegment?.recordingUrl) {
       URL.revokeObjectURL(currentSegment.recordingUrl);
     }
     
-    pipeline.patchSegment(activeIndex, { recordingUrl: newUrl });
-  }, [recorder, pipeline, activeIndex]);
+    // Automation settings are handled by the cruise hook
+    const isScoringEnabled = cruiseRef.current?.scoringEnabled ?? true;
+
+    if (isScoringEnabled) {
+      pipeline.patchSegment(activeIndex, { recordingUrl: newUrl, isScoring: true });
+
+      if (pipeline.audioBuffer && currentSegment?.wordTimestamps?.length) {
+        const sr = pipeline.audioBuffer.sampleRate;
+        const startFrame = Math.floor(currentSegment.start * sr);
+        const endFrame = Math.floor(currentSegment.end * sr);
+        const refSlice = pipeline.audioBuffer.getChannelData(0).slice(startFrame, endFrame);
+        scorer.score(activeIndex, currentSegment.wordTimestamps, refSlice, sr, blob);
+      } else {
+        pipeline.patchSegment(activeIndex, { isScoring: false });
+      }
+    } else {
+      pipeline.patchSegment(activeIndex, { recordingUrl: newUrl, isScoring: false });
+    }
+  }, [recorder, pipeline, activeIndex, scorer, currentSegment]);
 
   const handleNavigate = useCallback((dir: NavigationDirection) => {
     originalPlayer.stop();
@@ -36,106 +59,113 @@ export function useShadowingManager() {
     });
   }, [originalPlayer, minePlayer, pipeline.segments.length]);
 
+  const performStartRecord = useCallback(() => {
+    minePlayer.stop();
+    originalPlayer.stop();
+    
+    const segment = pipeline.segments[activeIndex];
+    if (segment?.recordingUrl) {
+      URL.revokeObjectURL(segment.recordingUrl);
+    }
+    
+    scorer.clearScores(activeIndex);
+    pipeline.patchSegment(activeIndex, { 
+      wordScores: null, 
+      isScoring: false, 
+      recordingUrl: null 
+    });
+    recorder.startRecording();
+  }, [minePlayer, originalPlayer, pipeline, activeIndex, scorer, recorder]);
+
   const cruise = useAutoCruise({
     segments: pipeline.segments,
     activeIndex: activeIndex,
+    phase,
+    isScoring: currentSegment?.isScoring ?? false,
+    recordingUrl: currentSegment?.recordingUrl ?? null,
     isPlayingOriginal: originalPlayer.isPlaying,
     isRecording: recorder.isRecording,
     micError: recorder.micError,
-    activeSegmentRecordingUrl: pipeline.segments[activeIndex]?.recordingUrl ?? null,
     onPlayOriginal: useCallback((seg: Segment) => {
       minePlayer.stop();
       originalPlayer.play(seg);
     }, [originalPlayer, minePlayer]),
-    onStartRecord: recorder.startRecording,
+    onStartRecord: performStartRecord,
     onStopRecord: handleStopRecord,
     onPlayMine: useCallback((url: string, onEnded: () => void) => {
       originalPlayer.stop();
       minePlayer.playUrl(url, onEnded);
     }, [originalPlayer, minePlayer]),
     onNavigateNext: useCallback(() => handleNavigate(NavigationDirection.Next), [handleNavigate]),
+    onPhaseChange: setPhase,
   });
 
-  const interruptCruise = useCallback(() => {
-    if (cruise.cruisePhase !== CruisePhase.Idle) {
-      cruise.cancelCruise();
-    }
+  useEffect(() => {
+    cruiseRef.current = cruise;
   }, [cruise]);
 
   const upload = useCallback((file: File) => {
-    interruptCruise();
+    setPhase(ShadowingPhase.Idle);
     originalPlayer.stop();
     minePlayer.stop();
     setActiveIndex(0);
     pipeline.process(file);
-  }, [interruptCruise, originalPlayer, minePlayer, pipeline]);
+  }, [originalPlayer, minePlayer, pipeline]);
 
   const playOriginal = useCallback((segment: Segment) => {
     if (originalPlayer.isPlaying) {
       originalPlayer.stop();
-      interruptCruise();
+      setPhase(ShadowingPhase.Idle);
       return;
     }
 
     if (recorder.isRecording) {
-      if (cruise.cruisePhase === CruisePhase.Recording) {
-        // Normal auto-cruise flow, just stop and proceed
-      } else {
-        cruise.cancelCruise();
-      }
       handleStopRecord();
-      interruptCruise();
-    } else {
-      const isIdle = cruise.cruisePhase === CruisePhase.Idle;
-      if (cruise.autoCruiseEnabled && isIdle) {
-        cruise.startCruise();
-      } else {
-        interruptCruise();
-      }
     }
 
     minePlayer.stop();
     originalPlayer.play(segment);
-  }, [originalPlayer, recorder, handleStopRecord, cruise, minePlayer, interruptCruise]);
+    
+    if (cruise.autoCruiseEnabled && phase === ShadowingPhase.Idle) {
+      setPhase(ShadowingPhase.PlayingOriginal);
+    }
+  }, [originalPlayer, recorder, handleStopRecord, cruise.autoCruiseEnabled, phase, minePlayer]);
 
   const startRecord = useCallback(() => {
-    interruptCruise();
-    originalPlayer.stop();
-    minePlayer.stop();
-    recorder.startRecording();
-  }, [interruptCruise, originalPlayer, minePlayer, recorder]);
+    setPhase(ShadowingPhase.Idle);
+    performStartRecord();
+  }, [performStartRecord]);
 
   const stopRecord = useCallback(() => {
-    const isInterrupted = cruise.cruisePhase !== CruisePhase.Idle && cruise.cruisePhase !== CruisePhase.Recording;
-    if (isInterrupted) {
-      cruise.cancelCruise();
+    if (phase !== ShadowingPhase.Idle && phase !== ShadowingPhase.Recording) {
+      setPhase(ShadowingPhase.Idle);
     }
     handleStopRecord();
-  }, [cruise, handleStopRecord]);
+  }, [phase, handleStopRecord]);
 
   const playMine = useCallback((url: string) => {
     if (minePlayer.isPlaying) {
       minePlayer.stop();
-      interruptCruise();
+      setPhase(ShadowingPhase.Idle);
       return;
     }
     
-    interruptCruise();
+    setPhase(ShadowingPhase.Idle);
     originalPlayer.stop();
     minePlayer.playUrl(url);
-  }, [minePlayer, originalPlayer, interruptCruise]);
+  }, [minePlayer, originalPlayer]);
 
   const navigate = useCallback((dir: NavigationDirection) => {
-    interruptCruise();
+    setPhase(ShadowingPhase.Idle);
     handleNavigate(dir);
-  }, [interruptCruise, handleNavigate]);
+  }, [handleNavigate]);
 
   const jump = useCallback((index: number) => {
-    interruptCruise();
+    setPhase(ShadowingPhase.Idle);
     originalPlayer.stop();
     minePlayer.stop();
     setActiveIndex(index);
-  }, [interruptCruise, originalPlayer, minePlayer]);
+  }, [originalPlayer, minePlayer]);
 
   return {
     // State
@@ -168,13 +198,17 @@ export function useShadowingManager() {
     automation: {
       autoStopEnabled: cruise.autoStopEnabled,
       autoCruiseEnabled: cruise.autoCruiseEnabled,
+      scoringEnabled: cruise.scoringEnabled,
       bufferTime: cruise.bufferTime,
+      cruisePhase: phase,
       loopCount: cruise.loopCount,
-      cruisePhase: cruise.cruisePhase,
-      toggleAutoStop: cruise.toggleAutoStop,
-      toggleAutoCruise: cruise.toggleAutoCruise,
       setBufferTime: cruise.setBufferTime,
       setLoopCount: cruise.setLoopCount,
-    }
+      startCruise: cruise.startCruise,
+      cancelCruise: cruise.cancelCruise,
+      toggleAutoStop: cruise.toggleAutoStop,
+      toggleAutoCruise: cruise.toggleAutoCruise,
+      toggleScoring: cruise.toggleScoring,
+    },
   };
 }

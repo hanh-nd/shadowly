@@ -1,4 +1,4 @@
-import { WorkerMessageType } from '../types';
+import { WorkerMessageType, type WordTimestamp } from '../types';
 
 const WHISPER_MODEL = 'Xenova/whisper-tiny.en';
 const VAD_MODEL = 'v5';
@@ -119,8 +119,8 @@ export class TranscriptionEngine {
     return segments;
   }
 
-  async transcribe(audio: Float32Array, signal?: AbortSignal): Promise<string> {
-    if (signal?.aborted) return '';
+  async transcribe(audio: Float32Array, signal?: AbortSignal): Promise<{ text: string; wordTimestamps: WordTimestamp[] }> {
+    if (signal?.aborted) return { text: '', wordTimestamps: [] };
     if (!this.pipeWorker) throw new Error('Worker not initialized');
 
     return new Promise((resolve, reject) => {
@@ -140,7 +140,7 @@ export class TranscriptionEngine {
 
       signal?.addEventListener('abort', () => {
         this.pipeWorker!.removeEventListener('message', handler);
-        resolve('');
+        resolve({ text: '', wordTimestamps: [] });
       }, { once: true });
     });
   }
