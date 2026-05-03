@@ -117,7 +117,16 @@ export function useAutoCruise({
     recordingUrlRef.current = recordingUrl;
     onPlayMineRef.current = onPlayMine;
     handlePlayMineEndedRef.current = handlePlayMineEnded;
-  }, [onStopRecord, segments, activeIndex, bufferTime, loopCount, recordingUrl, onPlayMine, handlePlayMineEnded]);
+  }, [
+    onStopRecord,
+    segments,
+    activeIndex,
+    bufferTime,
+    loopCount,
+    recordingUrl,
+    onPlayMine,
+    handlePlayMineEnded,
+  ]);
 
   const startCruise = useCallback(() => {
     if (!autoCruiseEnabled) return;
@@ -151,10 +160,13 @@ export function useAutoCruise({
       if (!autoStopTimerRef.current) {
         const seg = segmentsRef.current[activeIndexRef.current];
         const segDuration = seg.end - seg.start;
-        autoStopTimerRef.current = setTimeout(() => {
-          onStopRecordRef.current();
-          autoStopTimerRef.current = null;
-        }, (segDuration + bufferTimeRef.current) * MS_PER_SECOND);
+        autoStopTimerRef.current = setTimeout(
+          () => {
+            onStopRecordRef.current();
+            autoStopTimerRef.current = null;
+          },
+          (segDuration + bufferTimeRef.current) * MS_PER_SECOND,
+        );
       }
     } else if (!isRecording && autoStopTimerRef.current) {
       clearTimeout(autoStopTimerRef.current);
@@ -191,7 +203,11 @@ export function useAutoCruise({
       hasStartedRecordingRef.current = true;
     }
 
-    if (phase === ShadowingPhase.Recording && hasStartedRecordingRef.current && !isRecording) {
+    if (
+      phase === ShadowingPhase.Recording &&
+      hasStartedRecordingRef.current &&
+      !isRecording
+    ) {
       if (scoringEnabled) {
         onPhaseChange(ShadowingPhase.Scoring);
       } else {
@@ -202,11 +218,7 @@ export function useAutoCruise({
 
   // Effect E — Phase Driver: Scoring Finished & Scored -> PlayingMine
   useEffect(() => {
-    if (
-      phase === ShadowingPhase.Scoring && 
-      !isScoring && 
-      recordingUrl
-    ) {
+    if (phase === ShadowingPhase.Scoring && !isScoring && recordingUrl) {
       if (scoringTimeoutRef.current) {
         clearTimeout(scoringTimeoutRef.current);
         scoringTimeoutRef.current = null;
@@ -215,7 +227,14 @@ export function useAutoCruise({
       onPlayMine(recordingUrl, handlePlayMineEnded);
       hasStartedRecordingRef.current = false;
     }
-  }, [phase, isScoring, recordingUrl, onPlayMine, handlePlayMineEnded, onPhaseChange]);
+  }, [
+    phase,
+    isScoring,
+    recordingUrl,
+    onPlayMine,
+    handlePlayMineEnded,
+    onPhaseChange,
+  ]);
 
   // Effect E2 — Phase Driver: Bypassed Scoring -> PlayingMine (triggered by recordingUrl)
   useEffect(() => {

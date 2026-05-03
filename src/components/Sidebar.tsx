@@ -49,11 +49,17 @@ export function Sidebar({
     <aside className="hidden lg:flex flex-col w-64 fixed left-0 top-0 h-full py-8 px-4 bg-slate-50 border-r border-slate-200 z-40">
       <div className="flex items-center gap-3 mb-8 px-2">
         <div className="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden shrink-0">
-          <span className="material-symbols-outlined text-on-primary-container">graphic_eq</span>
+          <span className="material-symbols-outlined text-on-primary-container">
+            graphic_eq
+          </span>
         </div>
         <div>
-          <h2 className="font-label-sm text-label-sm text-on-surface">Session Control</h2>
-          <p className="text-[11px] text-on-surface-variant font-medium">Minimalist Tutor Mode</p>
+          <h2 className="font-label-sm text-label-sm text-on-surface">
+            Session Control
+          </h2>
+          <p className="text-[11px] text-on-surface-variant font-medium">
+            Minimalist Tutor Mode
+          </p>
         </div>
       </div>
 
@@ -62,7 +68,9 @@ export function Sidebar({
         <div className="px-2 mb-stack-lg flex flex-col gap-4">
           <div className="flex flex-col gap-2">
             <div className="flex items-center justify-between">
-              <span className="font-label-sm text-label-sm text-on-surface-variant">Auto-Stop</span>
+              <span className="font-label-sm text-label-sm text-on-surface-variant">
+                Auto-Stop
+              </span>
               <label className="relative inline-flex items-center cursor-pointer">
                 <input
                   type="checkbox"
@@ -94,7 +102,9 @@ export function Sidebar({
 
           <div className="flex flex-col gap-2">
             <div className="flex items-center justify-between">
-              <span className="font-label-sm text-label-sm text-on-surface-variant">Auto-Cruise</span>
+              <span className="font-label-sm text-label-sm text-on-surface-variant">
+                Auto-Cruise
+              </span>
               <label className="relative inline-flex items-center cursor-pointer">
                 <input
                   type="checkbox"
@@ -127,7 +137,9 @@ export function Sidebar({
 
           <div className="flex flex-col gap-2">
             <div className="flex items-center justify-between">
-              <span className="font-label-sm text-label-sm text-on-surface-variant">Scoring (Experimental)</span>
+              <span className="font-label-sm text-label-sm text-on-surface-variant">
+                Scoring (Experimental)
+              </span>
               <label className="relative inline-flex items-center cursor-pointer">
                 <input
                   type="checkbox"
@@ -169,9 +181,15 @@ export function Sidebar({
           onDragOver={(e) => e.preventDefault()}
           onDrop={handleDrop}
         >
-          <span className="material-symbols-outlined text-outline group-hover:text-primary transition-colors mb-2">cloud_upload</span>
-          <span className="font-label-sm text-label-sm text-on-surface-variant">Drag audio here</span>
-          <span className="text-[10px] text-outline mt-1">or click to browse</span>
+          <span className="material-symbols-outlined text-outline group-hover:text-primary transition-colors mb-2">
+            cloud_upload
+          </span>
+          <span className="font-label-sm text-label-sm text-on-surface-variant">
+            Drag audio here
+          </span>
+          <span className="text-[10px] text-outline mt-1">
+            or click to browse
+          </span>
         </div>
 
         <input

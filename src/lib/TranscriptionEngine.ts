@@ -3,10 +3,14 @@ import { WorkerMessageType, type WordTimestamp } from '../types';
 
 const WHISPER_MODEL = 'Xenova/whisper-tiny.en';
 const VAD_MODEL = 'v5';
-const ORT_WASM_BASE = 'https://cdn.jsdelivr.net/npm/onnxruntime-web@1.25.1/dist/';
+const ORT_WASM_BASE =
+  'https://cdn.jsdelivr.net/npm/onnxruntime-web@1.25.1/dist/';
 
 interface VADInstance {
-  run: (audio: Float32Array, sr: number) => AsyncIterable<{ audio: Float32Array; start: number; end: number }>;
+  run: (
+    audio: Float32Array,
+    sr: number,
+  ) => AsyncIterable<{ audio: Float32Array; start: number; end: number }>;
 }
 
 // Access global vad from script tag
@@ -19,7 +23,9 @@ interface GlobalVAD {
       positiveSpeechThreshold: number;
       model: string;
       onnxWASMBasePath: string;
-      ortConfig: (ort: { env: { wasm: { simd: boolean; proxy: boolean } } }) => void;
+      ortConfig: (ort: {
+        env: { wasm: { simd: boolean; proxy: boolean } };
+      }) => void;
     }) => Promise<VADInstance>;
   };
 }
@@ -39,11 +45,14 @@ export class TranscriptionEngine {
 
   async ensureModels(onDownloadProgress?: (p: number) => void) {
     this.onDownloadProgress = onDownloadProgress;
-    
+
     if (!this.pipeWorker) {
-      this.pipeWorker = new Worker(new URL('./transcribe.worker.ts', import.meta.url), {
-        type: 'module'
-      });
+      this.pipeWorker = new Worker(
+        new URL('./transcribe.worker.ts', import.meta.url),
+        {
+          type: 'module',
+        },
+      );
 
       this.workerReady = new Promise((resolve, reject) => {
         this.pipeWorker!.onmessage = (e) => {
@@ -61,12 +70,13 @@ export class TranscriptionEngine {
           }
         };
 
-        this.pipeWorker!.onerror = () => reject(new Error('Worker script error'));
+        this.pipeWorker!.onerror = () =>
+          reject(new Error('Worker script error'));
       });
 
-      this.pipeWorker.postMessage({ 
-        type: WorkerMessageType.Init, 
-        model: WHISPER_MODEL 
+      this.pipeWorker.postMessage({
+        type: WorkerMessageType.Init,
+        model: WHISPER_MODEL,
       });
     }
 
@@ -81,7 +91,9 @@ export class TranscriptionEngine {
         positiveSpeechThreshold: 0.6,
         model: VAD_MODEL,
         onnxWASMBasePath: ORT_WASM_BASE,
-        ortConfig: (ort: { env: { wasm: { simd: boolean; proxy: boolean } } }) => {
+        ortConfig: (ort: {
+          env: { wasm: { simd: boolean; proxy: boolean } };
+        }) => {
           ort.env.wasm.simd = true;
           ort.env.wasm.proxy = false;
         },
@@ -91,23 +103,32 @@ export class TranscriptionEngine {
     await this.workerReady;
   }
 
-  async getSegments(audio: Float32Array, signal?: AbortSignal): Promise<AudioSegment[]> {
+  async getSegments(
+    audio: Float32Array,
+    signal?: AbortSignal,
+  ): Promise<AudioSegment[]> {
     if (!this.vadInstance) throw new Error('VAD not initialized');
     const segments: AudioSegment[] = [];
-    for await (const segment of this.vadInstance.run(audio, TARGET_SAMPLE_RATE)) {
+    for await (const segment of this.vadInstance.run(
+      audio,
+      TARGET_SAMPLE_RATE,
+    )) {
       if (signal?.aborted) break;
       segments.push(segment);
     }
     return segments;
   }
 
-  async transcribe(audio: Float32Array, signal?: AbortSignal): Promise<{ text: string; wordTimestamps: WordTimestamp[] }> {
+  async transcribe(
+    audio: Float32Array,
+    signal?: AbortSignal,
+  ): Promise<{ text: string; wordTimestamps: WordTimestamp[] }> {
     if (signal?.aborted) return { text: '', wordTimestamps: [] };
     if (!this.pipeWorker) throw new Error('Worker not initialized');
 
     return new Promise((resolve, reject) => {
       const id = crypto.randomUUID();
-      
+
       const handler = (e: MessageEvent) => {
         const { type, payload, id: messageId } = e.data;
         if (messageId !== id) return;
@@ -118,12 +139,20 @@ export class TranscriptionEngine {
       };
 
       this.pipeWorker!.addEventListener('message', handler);
-      this.pipeWorker!.postMessage({ type: WorkerMessageType.Transcribe, audio, id });
+      this.pipeWorker!.postMessage({
+        type: WorkerMessageType.Transcribe,
+        audio,
+        id,
+      });
 
-      signal?.addEventListener('abort', () => {
-        this.pipeWorker!.removeEventListener('message', handler);
-        resolve({ text: '', wordTimestamps: [] });
-      }, { once: true });
+      signal?.addEventListener(
+        'abort',
+        () => {
+          this.pipeWorker!.removeEventListener('message', handler);
+          resolve({ text: '', wordTimestamps: [] });
+        },
+        { once: true },
+      );
     });
   }
 }

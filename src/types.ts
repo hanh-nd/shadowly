@@ -1,13 +1,13 @@
 export interface WordTimestamp {
   word: string;
   start: number; // seconds, 0-relative to segment audio
-  end: number;   // seconds, 0-relative to segment audio
+  end: number; // seconds, 0-relative to segment audio
 }
 
 export enum WordScore {
   Good = 'good',
   Neutral = 'neutral',
-  Bad = 'bad'
+  Bad = 'bad',
 }
 
 export interface Segment {
@@ -27,35 +27,35 @@ export enum ProcessingState {
   VADRunning = 'vad-running',
   Transcribing = 'transcribing',
   Ready = 'ready',
-  Error = 'error'
+  Error = 'error',
 }
 
 export enum PlaybackStatus {
   Idle = 'idle',
-  Playing = 'playing'
+  Playing = 'playing',
 }
 
 export enum NavigationDirection {
   Prev = 'prev',
-  Next = 'next'
+  Next = 'next',
 }
 
 export enum SentenceCardMode {
   InactivePrev = 'inactive-prev',
   Active = 'active',
-  InactiveNext = 'inactive-next'
+  InactiveNext = 'inactive-next',
 }
 
 export enum AudioContextStateEnum {
   Suspended = 'suspended',
   Running = 'running',
-  Closed = 'closed'
+  Closed = 'closed',
 }
 
 export enum MediaRecorderState {
   Inactive = 'inactive',
   Recording = 'recording',
-  Paused = 'paused'
+  Paused = 'paused',
 }
 
 export enum ShadowingPhase {
@@ -72,12 +72,12 @@ export enum WorkerMessageType {
   Progress = 'progress',
   Error = 'error',
   Transcribe = 'transcribe',
-  Result = 'result'
+  Result = 'result',
 }
 
 export interface TranscribingProgress {
   current: number; // segments transcribed so far
-  total: number;   // total VAD chunks detected so far (grows during processing)
+  total: number; // total VAD chunks detected so far (grows during processing)
 }
 
 export interface AppState {

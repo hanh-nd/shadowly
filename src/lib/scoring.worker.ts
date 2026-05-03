@@ -5,37 +5,37 @@ import {
   FeatureExtractor,
   PreTrainedModel,
   type ProgressInfo,
-} from "@huggingface/transformers";
-import { TARGET_SAMPLE_RATE as SAMPLE_RATE } from "../constants";
-import { WordScore, type WordTimestamp } from "../types";
+} from '@huggingface/transformers';
+import { TARGET_SAMPLE_RATE as SAMPLE_RATE } from '../constants';
+import { WordScore, type WordTimestamp } from '../types';
 
 // --- INJECT EXPORTS/REQUIRE POLYFILL ---
 // Polyfill for String.prototype.replaceAll (required by some environments)
-if (typeof String.prototype.replaceAll !== "function") {
+if (typeof String.prototype.replaceAll !== 'function') {
   String.prototype.replaceAll = function (
     search: string | RegExp,
     replacement: ((substring: string, ...args: unknown[]) => string) | string,
   ) {
-    if (typeof replacement === "string") {
+    if (typeof replacement === 'string') {
       if (search instanceof RegExp) return this.replace(search, replacement);
       return this.replace(
-        new RegExp(search.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g"),
+        new RegExp(search.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'),
         replacement,
       );
     } else {
       if (search instanceof RegExp) return this.replace(search, replacement);
       return this.replace(
-        new RegExp(search.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g"),
+        new RegExp(search.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'),
         replacement,
       );
     }
   };
 }
 // Fixes Vite/Webpack bundling errors for vad-web and onnxruntime-web
-if (typeof self.exports === "undefined") {
+if (typeof self.exports === 'undefined') {
   self.exports = {};
 }
-if (typeof self.require === "undefined") {
+if (typeof self.require === 'undefined') {
   self.require = function () {
     return {};
   } as unknown as NodeJS.Require;
@@ -45,7 +45,7 @@ if (typeof self.require === "undefined") {
 env.allowLocalModels = false;
 
 interface ScoringWorkerRequest {
-  type: "score";
+  type: 'score';
   segmentId: number;
   refAudio: Float32Array;
   userAudio: Float32Array;
@@ -54,11 +54,11 @@ interface ScoringWorkerRequest {
 }
 
 interface ScoringWorkerModelProgress {
-  type: "modelProgress";
+  type: 'modelProgress';
   progress: number;
 }
 
-const WAV2VEC2_MODEL = "Xenova/hubert-base-ls960";
+const WAV2VEC2_MODEL = 'Xenova/hubert-base-ls960';
 const HOP_STEP = 0.02; // seconds per output frame
 
 let model: PreTrainedModel | null = null;
@@ -73,7 +73,7 @@ async function ensureWav2Vec2Pipeline(): Promise<void> {
       const info = p as { progress: number };
       if (!info.progress) return;
       const msg: ScoringWorkerModelProgress = {
-        type: "modelProgress",
+        type: 'modelProgress',
         progress: info.progress,
       };
       self.postMessage(msg);
@@ -81,8 +81,8 @@ async function ensureWav2Vec2Pipeline(): Promise<void> {
 
     [model, featureExtractor] = await Promise.all([
       AutoModel.from_pretrained(WAV2VEC2_MODEL, {
-        dtype: "q8", // fp32 required for high-frequency consonant resolution
-        device: "wasm",
+        dtype: 'q8', // fp32 required for high-frequency consonant resolution
+        device: 'wasm',
         progress_callback,
       }),
       AutoFeatureExtractor.from_pretrained(WAV2VEC2_MODEL, {
@@ -90,7 +90,7 @@ async function ensureWav2Vec2Pipeline(): Promise<void> {
       }),
     ]);
   } catch (err) {
-    console.error("Worker | Failed to initialize Wav2Vec2 components:", err);
+    console.error('Worker | Failed to initialize Wav2Vec2 components:', err);
     throw err;
   }
 }
@@ -130,7 +130,7 @@ function cosineDistance(v1: Float32Array, v2: Float32Array): number {
 
 async function getEmbeddings(audio: Float32Array): Promise<Float32Array[]> {
   if (!model || !featureExtractor)
-    throw new Error("Model or feature extractor not initialized");
+    throw new Error('Model or feature extractor not initialized');
 
   try {
     // 1. Preprocess audio using the feature extractor
@@ -146,7 +146,7 @@ async function getEmbeddings(audio: Float32Array): Promise<Float32Array[]> {
         output.hidden_states[output.hidden_states.length - 1]);
 
     if (!lastHiddenState) {
-      throw new Error("Model output missing hidden states");
+      throw new Error('Model output missing hidden states');
     }
 
     const dims = lastHiddenState.dims;
@@ -160,7 +160,7 @@ async function getEmbeddings(audio: Float32Array): Promise<Float32Array[]> {
     }
     return embeddings;
   } catch (err) {
-    console.error("Worker | Error in getEmbeddings:", err);
+    console.error('Worker | Error in getEmbeddings:', err);
     throw err;
   }
 }
@@ -247,7 +247,7 @@ class SimpleDTW {
 self.onmessage = async (e: MessageEvent<ScoringWorkerRequest>) => {
   const { type, segmentId, refAudio, userAudio, wordTimestamps, generation } =
     e.data;
-  if (type !== "score") return;
+  if (type !== 'score') return;
 
   try {
     inFlight = { segmentId, generation };
@@ -258,7 +258,7 @@ self.onmessage = async (e: MessageEvent<ScoringWorkerRequest>) => {
     let userEmb = await getEmbeddings(userAudio);
 
     if (refEmb.length === 0 || userEmb.length === 0) {
-      throw new Error("Could not extract embeddings");
+      throw new Error('Could not extract embeddings');
     }
 
     // Fix the latent space narrow cone
@@ -271,7 +271,7 @@ self.onmessage = async (e: MessageEvent<ScoringWorkerRequest>) => {
 
     try {
       // Layer A: Neural VAD
-      const vadModule = await import("@ricky0123/vad-web");
+      const vadModule = await import('@ricky0123/vad-web');
       const nrtVAD = await vadModule.NonRealTimeVAD.new({
         positiveSpeechThreshold: 0.5,
         minSpeechMs: 90,
@@ -292,12 +292,12 @@ self.onmessage = async (e: MessageEvent<ScoringWorkerRequest>) => {
       }
 
       if (lastSpeechFrame === 0) {
-        throw new Error("VAD found no speech.");
+        throw new Error('VAD found no speech.');
       }
 
       lastSpeechFrame = Math.min(refEmb.length - 1, lastSpeechFrame + 2); // 40ms trailing consonant safety
     } catch (vadErr) {
-      console.warn("Worker | Neural VAD skipped. Using Math VAD.", vadErr);
+      console.warn('Worker | Neural VAD skipped. Using Math VAD.', vadErr);
 
       // Layer B: Math VAD Fallback
       isSpeechFrame.fill(true);
@@ -343,10 +343,10 @@ self.onmessage = async (e: MessageEvent<ScoringWorkerRequest>) => {
 
     if (path.length === 0) {
       console.warn(
-        "Worker | DTW path blocked by band or empty. Returning Good for all words.",
+        'Worker | DTW path blocked by band or empty. Returning Good for all words.',
       );
       self.postMessage({
-        type: "result",
+        type: 'result',
         segmentId,
         wordScores: wordTimestamps.map(() => WordScore.Good),
         generation,
@@ -469,11 +469,11 @@ self.onmessage = async (e: MessageEvent<ScoringWorkerRequest>) => {
       }
     }
 
-    self.postMessage({ type: "result", segmentId, wordScores, generation });
+    self.postMessage({ type: 'result', segmentId, wordScores, generation });
   } catch (err) {
-    console.error("Worker | Scoring error:", err);
+    console.error('Worker | Scoring error:', err);
     self.postMessage({
-      type: "error",
+      type: 'error',
       segmentId: inFlight?.segmentId ?? segmentId,
       generation: inFlight?.generation ?? generation,
       error: err instanceof Error ? err.toString() : String(err),

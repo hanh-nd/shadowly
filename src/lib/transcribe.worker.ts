@@ -2,8 +2,8 @@ import {
   AutomaticSpeechRecognitionPipeline,
   env,
   pipeline,
-} from "@huggingface/transformers";
-import { WorkerMessageType, type WordTimestamp } from "../types";
+} from '@huggingface/transformers';
+import { WorkerMessageType, type WordTimestamp } from '../types';
 
 // Skip local model check for faster loading in worker
 env.allowLocalModels = false;
@@ -16,11 +16,11 @@ self.onmessage = async (e) => {
   try {
     switch (type) {
       case WorkerMessageType.Init: {
-        pipe = await pipeline("automatic-speech-recognition", model, {
-          device: "wasm",
-          dtype: "q8",
+        pipe = await pipeline('automatic-speech-recognition', model, {
+          device: 'wasm',
+          dtype: 'q8',
           session_options: {
-            graphOptimizationLevel: "basic",
+            graphOptimizationLevel: 'basic',
           },
           progress_callback: (p) => {
             const info = p as { progress: number }; // @huggingface/transformers types are not working properly
@@ -38,10 +38,10 @@ self.onmessage = async (e) => {
 
       case WorkerMessageType.Transcribe: {
         if (!pipe) {
-          throw new Error("Pipeline not initialized");
+          throw new Error('Pipeline not initialized');
         }
         const output = await pipe(audio, {
-          return_timestamps: "word",
+          return_timestamps: 'word',
           chunk_length_s: 30,
           stride_length_s: 5,
         });
@@ -49,7 +49,7 @@ self.onmessage = async (e) => {
         const outputArray = Array.isArray(output) ? output : [output];
         const text = outputArray
           .map((item) => item.text)
-          .join(" ")
+          .join(' ')
           .trim();
         const chunks = outputArray.flatMap((item) => item.chunks);
         const wordTimestamps: WordTimestamp[] = (chunks || [])
@@ -77,7 +77,7 @@ self.onmessage = async (e) => {
   } catch (err) {
     self.postMessage({
       type: WorkerMessageType.Error,
-      payload: err instanceof Error ? err.message : "Unknown error",
+      payload: err instanceof Error ? err.message : 'Unknown error',
       id,
     });
   }

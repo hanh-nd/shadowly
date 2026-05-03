@@ -11,7 +11,10 @@ const SUPPORTED_MIME_TYPES = [
 
 // Get the best supported MIME type for the current browser
 const getSupportedMimeType = () => {
-  return SUPPORTED_MIME_TYPES.find((type) => MediaRecorder.isTypeSupported(type)) || '';
+  return (
+    SUPPORTED_MIME_TYPES.find((type) => MediaRecorder.isTypeSupported(type)) ||
+    ''
+  );
 };
 
 export function useRecorder() {
@@ -22,7 +25,10 @@ export function useRecorder() {
   const [micError, setMicError] = useState<string | null>(null);
 
   const cleanup = () => {
-    if (recorderRef.current && recorderRef.current.state !== MediaRecorderState.Inactive) {
+    if (
+      recorderRef.current &&
+      recorderRef.current.state !== MediaRecorderState.Inactive
+    ) {
       recorderRef.current.stop();
     }
     if (mediaStreamRef.current) {
@@ -63,9 +69,10 @@ export function useRecorder() {
       setIsRecording(true);
     } catch (err) {
       console.error('Failed to start recording:', err);
-      const message = err instanceof Error && err.name === 'NotAllowedError'
-        ? 'Mic blocked — check browser permissions'
-        : 'Could not access microphone. Please ensure it is connected.';
+      const message =
+        err instanceof Error && err.name === 'NotAllowedError'
+          ? 'Mic blocked — check browser permissions'
+          : 'Could not access microphone. Please ensure it is connected.';
       setMicError(message);
     }
   }
@@ -83,7 +90,7 @@ export function useRecorder() {
       recorder.onstop = () => {
         const mimeType = recorder.mimeType || getSupportedMimeType();
         const blob = new Blob(chunksRef.current, { type: mimeType });
-        
+
         cleanup();
         setIsRecording(false);
         resolve(blob);

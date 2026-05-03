@@ -29,7 +29,10 @@ export function App() {
 
       <main className="flex-1 lg:ml-64 relative min-h-screen">
         <TopBar />
-        <ProgressBar activeIndex={manager.activeIndex} total={manager.segments.length} />
+        <ProgressBar
+          activeIndex={manager.activeIndex}
+          total={manager.segments.length}
+        />
 
         <LoadingOverlay
           state={manager.status}
@@ -39,27 +42,33 @@ export function App() {
           onRetry={manager.reset}
         />
 
-        {(manager.status === ProcessingState.Ready || manager.status === ProcessingState.Transcribing) && manager.segments.length > 0 && (
-          <SentenceView
-            segments={manager.segments}
-            activeIndex={manager.activeIndex}
-            isPlayingOriginal={manager.isPlayingOriginal}
-            isPlayingMine={manager.isPlayingMine}
-            isRecording={manager.isRecording}
-            totalDuration={manager.totalDuration}
-            onNavigate={manager.navigate}
-            onPlayOriginal={manager.playOriginal}
-            onStartRecord={manager.startRecord}
-            onStopRecord={manager.stopRecord}
-            onPlayMine={manager.playMine}
-            onJump={manager.jump}
-          />
-        )}
+        {(manager.status === ProcessingState.Ready ||
+          manager.status === ProcessingState.Transcribing) &&
+          manager.segments.length > 0 && (
+            <SentenceView
+              segments={manager.segments}
+              activeIndex={manager.activeIndex}
+              isPlayingOriginal={manager.isPlayingOriginal}
+              isPlayingMine={manager.isPlayingMine}
+              isRecording={manager.isRecording}
+              totalDuration={manager.totalDuration}
+              onNavigate={manager.navigate}
+              onPlayOriginal={manager.playOriginal}
+              onStartRecord={manager.startRecord}
+              onStopRecord={manager.stopRecord}
+              onPlayMine={manager.playMine}
+              onJump={manager.jump}
+            />
+          )}
 
         {manager.status === ProcessingState.Idle && (
           <div className="flex flex-col items-center justify-center min-h-screen gap-4 px-8 text-center">
-            <span className="material-symbols-outlined text-outline text-[64px]">mic_external_on</span>
-            <p className="font-headline-md text-headline-md text-on-surface">Ready to practice</p>
+            <span className="material-symbols-outlined text-outline text-[64px]">
+              mic_external_on
+            </span>
+            <p className="font-headline-md text-headline-md text-on-surface">
+              Ready to practice
+            </p>
             <p className="text-on-surface-variant text-body-md max-w-sm">
               Upload an audio file from the sidebar to get started.
             </p>

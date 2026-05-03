@@ -8,11 +8,14 @@ const MIN_SEGMENT_DURATION = 0.1;
  * A reusable hook for audio playback.
  * Supports playing segments from an AudioBuffer or playing from a URL.
  */
-export function useAudioPlayer(audioBuffer: AudioBuffer | null, speed: number = 1.0) {
+export function useAudioPlayer(
+  audioBuffer: AudioBuffer | null,
+  speed: number = 1.0,
+) {
   const audioContextRef = useRef<AudioContext | null>(null);
   const currentSourceRef = useRef<AudioBufferSourceNode | null>(null);
   const currentAudioRef = useRef<HTMLAudioElement | null>(null);
-  
+
   const [status, setStatus] = useState<PlaybackStatus>(PlaybackStatus.Idle);
 
   const getContext = useCallback((): AudioContext => {
@@ -47,69 +50,80 @@ export function useAudioPlayer(audioBuffer: AudioBuffer | null, speed: number = 
   /**
    * Play a segment from the provided AudioBuffer.
    */
-  const play = useCallback(async (segment: Segment) => {
-    if (!audioBuffer) {
-      console.warn('useAudioPlayer: No audioBuffer provided for segment playback.');
-      return;
-    }
-    
-    stop();
-
-    try {
-      const ctx = getContext();
-      
-      if (ctx.state === AudioContextStateEnum.Suspended) {
-        await ctx.resume();
+  const play = useCallback(
+    async (segment: Segment) => {
+      if (!audioBuffer) {
+        console.warn(
+          'useAudioPlayer: No audioBuffer provided for segment playback.',
+        );
+        return;
       }
 
-      const source = ctx.createBufferSource();
-      source.buffer = audioBuffer;
-      source.playbackRate.value = speed;
-      source.connect(ctx.destination);
-
-      const duration = Math.max(segment.end - segment.start, MIN_SEGMENT_DURATION);
-      
-      source.onended = () => {
-        if (currentSourceRef.current === source) {
-          setStatus(PlaybackStatus.Idle);
-          currentSourceRef.current = null;
-        }
-      };
-
-      currentSourceRef.current = source;
-      source.start(0, segment.start, duration);
-      setStatus(PlaybackStatus.Playing);
-    } catch (err) {
-      console.error('Playback failed:', err);
       stop();
-    }
-  }, [audioBuffer, speed, stop, getContext]);
+
+      try {
+        const ctx = getContext();
+
+        if (ctx.state === AudioContextStateEnum.Suspended) {
+          await ctx.resume();
+        }
+
+        const source = ctx.createBufferSource();
+        source.buffer = audioBuffer;
+        source.playbackRate.value = speed;
+        source.connect(ctx.destination);
+
+        const duration = Math.max(
+          segment.end - segment.start,
+          MIN_SEGMENT_DURATION,
+        );
+
+        source.onended = () => {
+          if (currentSourceRef.current === source) {
+            setStatus(PlaybackStatus.Idle);
+            currentSourceRef.current = null;
+          }
+        };
+
+        currentSourceRef.current = source;
+        source.start(0, segment.start, duration);
+        setStatus(PlaybackStatus.Playing);
+      } catch (err) {
+        console.error('Playback failed:', err);
+        stop();
+      }
+    },
+    [audioBuffer, speed, stop, getContext],
+  );
 
   /**
    * Play audio from a URL.
    */
-  const playUrl = useCallback(async (url: string, onEnded?: () => void) => {
-    stop();
-
-    try {
-      const audio = new Audio(url);
-      currentAudioRef.current = audio;
-      
-      audio.onended = () => {
-        if (currentAudioRef.current === audio) {
-          setStatus(PlaybackStatus.Idle);
-          currentAudioRef.current = null;
-          onEnded?.();
-        }
-      };
-
-      await audio.play();
-      setStatus(PlaybackStatus.Playing);
-    } catch (err) {
-      console.error('URL playback failed:', err);
+  const playUrl = useCallback(
+    async (url: string, onEnded?: () => void) => {
       stop();
-    }
-  }, [stop]);
+
+      try {
+        const audio = new Audio(url);
+        currentAudioRef.current = audio;
+
+        audio.onended = () => {
+          if (currentAudioRef.current === audio) {
+            setStatus(PlaybackStatus.Idle);
+            currentAudioRef.current = null;
+            onEnded?.();
+          }
+        };
+
+        await audio.play();
+        setStatus(PlaybackStatus.Playing);
+      } catch (err) {
+        console.error('URL playback failed:', err);
+        stop();
+      }
+    },
+    [stop],
+  );
 
   // Cleanup on unmount
   useEffect(() => {
@@ -122,11 +136,11 @@ export function useAudioPlayer(audioBuffer: AudioBuffer | null, speed: number = 
     };
   }, [stop]);
 
-  return { 
-    play, 
+  return {
+    play,
     playUrl,
-    stop, 
+    stop,
     status,
-    isPlaying: status === PlaybackStatus.Playing
+    isPlaying: status === PlaybackStatus.Playing,
   };
 }

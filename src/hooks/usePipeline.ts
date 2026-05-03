@@ -9,7 +9,15 @@ export interface PipelineHook {
   process: (file: File) => Promise<void>;
   reset: () => void;
   segments: Segment[];
-  patchSegment: (id: number, patch: Partial<Pick<Segment, 'text' | 'recordingUrl' | 'isScoring' | 'wordScores' | 'wordTimestamps'>>) => void;
+  patchSegment: (
+    id: number,
+    patch: Partial<
+      Pick<
+        Segment,
+        'text' | 'recordingUrl' | 'isScoring' | 'wordScores' | 'wordTimestamps'
+      >
+    >,
+  ) => void;
   status: ProcessingState;
   progress: TranscribingProgress | null;
   downloadProgress: number;
@@ -99,11 +107,14 @@ export function usePipeline(): PipelineHook {
       for (let i = 0; i < audioSegments.length; i++) {
         if (signal.aborted) return;
 
-        const { text, wordTimestamps } = await engine.transcribe(audioSegments[i].audio, signal);
+        const { text, wordTimestamps } = await engine.transcribe(
+          audioSegments[i].audio,
+          signal,
+        );
         if (signal.aborted) return;
 
         setSegments((prev) =>
-          prev.map((s) => (s.id === i ? { ...s, text, wordTimestamps } : s))
+          prev.map((s) => (s.id === i ? { ...s, text, wordTimestamps } : s)),
         );
         setProgress((prev) => (prev ? { ...prev, current: i + 1 } : null));
       }
@@ -117,9 +128,26 @@ export function usePipeline(): PipelineHook {
     }
   };
 
-  const patchSegment = useCallback((id: number, patch: Partial<Pick<Segment, 'text' | 'recordingUrl' | 'isScoring' | 'wordScores' | 'wordTimestamps'>>) => {
-    setSegments((prev) => prev.map((s) => (s.id === id ? { ...s, ...patch } : s)));
-  }, []);
+  const patchSegment = useCallback(
+    (
+      id: number,
+      patch: Partial<
+        Pick<
+          Segment,
+          | 'text'
+          | 'recordingUrl'
+          | 'isScoring'
+          | 'wordScores'
+          | 'wordTimestamps'
+        >
+      >,
+    ) => {
+      setSegments((prev) =>
+        prev.map((s) => (s.id === id ? { ...s, ...patch } : s)),
+      );
+    },
+    [],
+  );
 
   return {
     process,

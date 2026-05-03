@@ -68,7 +68,9 @@ export function SentenceView({
           onPlayOriginal={() => onPlayOriginal(active)}
           onStartRecord={onStartRecord}
           onStopRecord={onStopRecord}
-          onPlayMine={() => active.recordingUrl && onPlayMine(active.recordingUrl)}
+          onPlayMine={() =>
+            active.recordingUrl && onPlayMine(active.recordingUrl)
+          }
           onClick={() => {}}
           onPrev={() => onNavigate(NavigationDirection.Prev)}
           onNext={() => onNavigate(NavigationDirection.Next)}
