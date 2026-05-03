@@ -7,6 +7,7 @@ import {
 import { TARGET_SAMPLE_RATE as SAMPLE_RATE } from "../constants";
 import { WordScore, type WordTimestamp } from "../types";
 
+// --- INJECT EXPORTS/REQUIRE POLYFILL ---
 // Polyfill for String.prototype.replaceAll (required by some environments)
 if (typeof String.prototype.replaceAll !== "function") {
   String.prototype.replaceAll = function (search, replacement) {
@@ -17,11 +18,19 @@ if (typeof String.prototype.replaceAll !== "function") {
     );
   };
 }
+// Fixes Vite/Webpack bundling errors for vad-web and onnxruntime-web
+if (typeof self.exports === "undefined") {
+  self.exports = {};
+}
+if (typeof self.require === "undefined") {
+  self.require = function () {
+    return {};
+  } as unknown as NodeJS.Require;
+}
+// -------------------------------
 
-// Skip local model check for faster loading in worker
 env.allowLocalModels = false;
 
-// Scoring worker message types
 interface ScoringWorkerRequest {
   type: "score";
   segmentId: number;
@@ -71,6 +80,25 @@ async function ensureWav2Vec2Pipeline(): Promise<void> {
     console.error("Worker | Failed to initialize Wav2Vec2 components:", err);
     throw err;
   }
+}
+
+// Zero-centers embeddings to fix Neural Anisotropy (the "narrow cone" problem)
+function centerEmbeddings(embeddings: Float32Array[]): Float32Array[] {
+  if (embeddings.length === 0) return embeddings;
+  const hiddenSize = embeddings[0].length;
+  const centered: Float32Array[] = [];
+
+  for (let i = 0; i < embeddings.length; i++) {
+    const frame = embeddings[i];
+    let mean = 0;
+    for (let d = 0; d < hiddenSize; d++) mean += frame[d];
+    mean /= hiddenSize;
+
+    const centeredFrame = new Float32Array(hiddenSize);
+    for (let d = 0; d < hiddenSize; d++) centeredFrame[d] = frame[d] - mean;
+    centered.push(centeredFrame);
+  }
+  return centered;
 }
 
 function cosineDistance(v1: Float32Array, v2: Float32Array): number {
@@ -141,28 +169,21 @@ class SimpleDTW {
 
     const dtw = Array.from({ length: n }, () => new Array(m).fill(Infinity));
 
-    // This severely punishes the algorithm for stretching or compressing time.
-    // If you drop a syllable, it forces a failure rather than stretching the survivor.
-    const STEP_PENALTY = 1.5;
+    // Flat Additive Tax: Prevents the DTW from cheating by stretching time infinitely
+    const WARP_TAX = 0.05;
 
-    // Subsequence DTW: Allow unconstrained start on the user axis
-    for (let j = 0; j < m; j++) {
-      dtw[0][j] = this.distFn(s1[0], s2[j]);
-    }
-
-    // Strict accumulation on the reference axis
-    for (let i = 1; i < n; i++) {
-      dtw[i][0] = dtw[i - 1][0] + this.distFn(s1[i], s2[0]) * STEP_PENALTY;
-    }
+    for (let j = 0; j < m; j++) dtw[0][j] = this.distFn(s1[0], s2[j]);
+    for (let i = 1; i < n; i++)
+      dtw[i][0] = dtw[i - 1][0] + this.distFn(s1[i], s2[0]) + WARP_TAX;
 
     for (let i = 1; i < n; i++) {
       for (let j = 1; j < m; j++) {
         const cost = this.distFn(s1[i], s2[j]);
-        const match = dtw[i - 1][j - 1] + cost;
-        const insertion = dtw[i - 1][j] + cost * STEP_PENALTY;
-        const deletion = dtw[i][j - 1] + cost * STEP_PENALTY;
-
-        dtw[i][j] = Math.min(match, insertion, deletion);
+        dtw[i][j] = Math.min(
+          dtw[i - 1][j - 1] + cost, // Match
+          dtw[i - 1][j] + cost + WARP_TAX, // Insertion
+          dtw[i][j - 1] + cost + WARP_TAX, // Deletion
+        );
       }
     }
     return dtw;
@@ -220,48 +241,87 @@ self.onmessage = async (e: MessageEvent<ScoringWorkerRequest>) => {
 
     await ensureWav2Vec2Pipeline();
 
-    const refEmb = await getEmbeddings(refAudio);
-    const userEmb = await getEmbeddings(userAudio);
+    let refEmb = await getEmbeddings(refAudio);
+    let userEmb = await getEmbeddings(userAudio);
 
     if (refEmb.length === 0 || userEmb.length === 0) {
       throw new Error("Could not extract embeddings");
     }
 
-    // --- 1. SMART MICRO-VAD PRECOMPUTATION ---
-    const frameEnergies: number[] = [];
-    const samplesPerFrame = Math.floor(HOP_STEP * SAMPLE_RATE);
+    // Fix the latent space narrow cone
+    refEmb = centerEmbeddings(refEmb);
+    userEmb = centerEmbeddings(userEmb);
 
-    for (let i = 0; i < refEmb.length; i++) {
-      const start = i * samplesPerFrame;
-      const end = Math.min(start + samplesPerFrame, refAudio.length);
-      let sumSquares = 0;
-      for (let j = start; j < end; j++) {
-        sumSquares += refAudio[j] * refAudio[j];
+    // --- 1. DUAL-LAYER VAD ARCHITECTURE ---
+    const isSpeechFrame = new Array(refEmb.length).fill(false);
+    let lastSpeechFrame = 0;
+
+    try {
+      // Layer A: Neural VAD
+      const vadModule = await import("@ricky0123/vad-web");
+      const nrtVAD = await vadModule.NonRealTimeVAD.new({
+        positiveSpeechThreshold: 0.5,
+        minSpeechMs: 90,
+      });
+
+      for await (const segment of nrtVAD.run(refAudio, SAMPLE_RATE)) {
+        const startFrame = Math.max(
+          0,
+          Math.floor(segment.start / SAMPLE_RATE / HOP_STEP),
+        );
+        const endFrame = Math.min(
+          refEmb.length - 1,
+          Math.ceil(segment.end / SAMPLE_RATE / HOP_STEP),
+        );
+
+        for (let f = startFrame; f <= endFrame; f++) isSpeechFrame[f] = true;
+        if (endFrame > lastSpeechFrame) lastSpeechFrame = endFrame;
       }
-      frameEnergies.push(Math.sqrt(sumSquares / Math.max(1, end - start)));
-    }
 
-    // Dynamic Noise Floor: Find the 10th percentile of volume (the baseline room static)
-    const NOISE_FLOOR_PERCENTILE = 0.1;
-    const MIN_NOISE_FLOOR = 0.001;
-    const sortedEnergies = [...frameEnergies].sort((a, b) => a - b);
-    const noiseFloor =
-      sortedEnergies[Math.floor(sortedEnergies.length * NOISE_FLOOR_PERCENTILE)] || MIN_NOISE_FLOOR;
+      if (lastSpeechFrame === 0) {
+        throw new Error("VAD found no speech.");
+      }
+
+      lastSpeechFrame = Math.min(refEmb.length - 1, lastSpeechFrame + 2); // 40ms trailing consonant safety
+    } catch (vadErr) {
+      console.warn("Worker | Neural VAD skipped. Using Math VAD.", vadErr);
+
+      // Layer B: Math VAD Fallback
+      isSpeechFrame.fill(true);
+      const frameEnergies: number[] = [];
+      const samplesPerFrame = Math.floor(HOP_STEP * SAMPLE_RATE);
+
+      for (let i = 0; i < refEmb.length; i++) {
+        const start = i * samplesPerFrame;
+        const end = Math.min(start + samplesPerFrame, refAudio.length);
+        let sumSquares = 0;
+        for (let j = start; j < end; j++) {
+          sumSquares += refAudio[j] * refAudio[j];
+        }
+        frameEnergies.push(Math.sqrt(sumSquares / Math.max(1, end - start)));
+      }
+
+      // Dynamic Noise Floor: Find the 10th percentile of volume (the baseline room static)
+      const NOISE_FLOOR_PERCENTILE = 0.1;
+      const MIN_NOISE_FLOOR = 0.001;
+      const sortedEnergies = [...frameEnergies].sort((a, b) => a - b);
+      const noiseFloor =
+        sortedEnergies[Math.floor(sortedEnergies.length * NOISE_FLOOR_PERCENTILE)] || MIN_NOISE_FLOOR;
 
     // Threshold is explicitly 3x the room static.
     // This perfectly captures quiet consonants without capturing room hiss.
-    const SILENCE_THRESHOLD = noiseFloor * 3.0;
+      const SILENCE_THRESHOLD = noiseFloor * 3.0;
 
-    // Calculate absolute final frame of acoustic speech
-    let lastSpeechFrame = refEmb.length - 1;
-    for (let i = refEmb.length - 1; i >= 0; i--) {
-      if (frameEnergies[i] > SILENCE_THRESHOLD) {
-        // Add a tiny 2-frame (40ms) buffer to safely capture the very tail of the final plosive
-        lastSpeechFrame = Math.min(refEmb.length - 1, i + 2);
-        break;
+      lastSpeechFrame = refEmb.length - 1;
+      for (let i = refEmb.length - 1; i >= 0; i--) {
+        if (frameEnergies[i] > SILENCE_THRESHOLD) {
+          // Add a tiny 2-frame (40ms) buffer to safely capture the very tail of the final plosive
+          lastSpeechFrame = Math.min(refEmb.length - 1, i + 2);
+          break;
+        }
       }
     }
-    // ------------------------------------
+    // --------------------------------------------------
 
     const dtw = new SimpleDTW(refEmb, userEmb, cosineDistance);
     const path = dtw.getPath();
@@ -279,19 +339,16 @@ self.onmessage = async (e: MessageEvent<ScoringWorkerRequest>) => {
       return;
     }
 
-    const wordScores: WordScore[] = [];
     const pathCosts: Map<number, number[]> = new Map();
-
     for (let i = 0; i < path.length; i++) {
       const [rIdx, uIdx] = path[i];
-      const dist = cosineDistance(refEmb[rIdx], userEmb[uIdx]);
       if (!pathCosts.has(rIdx)) pathCosts.set(rIdx, []);
-      pathCosts.get(rIdx)!.push(dist);
+      pathCosts.get(rIdx)!.push(cosineDistance(refEmb[rIdx], userEmb[uIdx]));
     }
 
     const PADDING_SECONDS = 0.1;
     const paddingFrames = Math.ceil(PADDING_SECONDS / HOP_STEP);
-    const wordInfos: { avgCost: number; hasCoverage: boolean; word: string }[] =
+    const wordInfos: { cost: number; hasCoverage: boolean; word: string }[] =
       [];
 
     for (let wIdx = 0; wIdx < wordTimestamps.length; wIdx++) {
@@ -302,7 +359,6 @@ self.onmessage = async (e: MessageEvent<ScoringWorkerRequest>) => {
         0,
         Math.floor(wt.start / HOP_STEP) - paddingFrames,
       );
-
       const endFrame = isLastWord
         ? Math.max(startFrame, lastSpeechFrame) // Clean terminal truncation
         : Math.min(
@@ -310,35 +366,65 @@ self.onmessage = async (e: MessageEvent<ScoringWorkerRequest>) => {
             Math.ceil(wt.end / HOP_STEP) + paddingFrames,
           );
 
-      let totalCost = 0,
-        count = 0;
+      const frameCosts: number[] = [];
+      let hasValidFrames = false;
 
       for (let f = startFrame; f <= endFrame; f++) {
-        // NO HOLE-PUNCHING. We evaluate every continuous frame inside the boundaries
-        // to ensure vowels and quiet consonants are all graded together.
-        const costs = pathCosts.get(f);
-        if (costs) {
-          for (const c of costs) {
-            totalCost += c;
-            count++;
+        if (isSpeechFrame[f]) {
+          const costs = pathCosts.get(f);
+          if (costs) {
+            hasValidFrames = true;
+            for (const c of costs) frameCosts.push(c);
           }
         }
       }
 
-      if (count > 0) {
+      // Fallback if Whisper mapped to pure silence
+      if (!hasValidFrames) {
+        for (let f = startFrame; f <= endFrame; f++) {
+          const costs = pathCosts.get(f);
+          if (costs) {
+            for (const c of costs) frameCosts.push(c);
+          }
+        }
+      }
+
+      if (frameCosts.length > 0) {
+        // --- SLIDING WINDOW PEAK PENALTY ---
+        // Prevents good consonants from hiding a totally failed vowel
+        let maxWindowCost = 0;
+        const WINDOW_SIZE = 3; // 60ms chunks
+
+        if (frameCosts.length >= WINDOW_SIZE) {
+          for (let i = 0; i <= frameCosts.length - WINDOW_SIZE; i++) {
+            let windowSum = 0;
+            for (let j = 0; j < WINDOW_SIZE; j++)
+              windowSum += frameCosts[i + j];
+            if (windowSum / WINDOW_SIZE > maxWindowCost)
+              maxWindowCost = windowSum / WINDOW_SIZE;
+          }
+        } else {
+          // If the word is insanely short, just average it
+          let sum = 0;
+          for (const c of frameCosts) sum += c;
+          maxWindowCost = sum / frameCosts.length;
+        }
+
         wordInfos.push({
-          avgCost: totalCost / count,
+          cost: maxWindowCost,
           hasCoverage: true,
           word: wt.word,
         });
       } else {
-        wordInfos.push({ avgCost: 1.0, hasCoverage: false, word: wt.word });
+        wordInfos.push({ cost: 1.0, hasCoverage: false, word: wt.word });
       }
     }
 
-    const PERFECT_DIST = 0.4;
-    const FAIL_DIST = 0.75;
+    // Calibrated for Centered Vectors with Peak Penalty Scoring
+    const PERFECT_DIST = 0.45;
+    const FAIL_DIST = 0.85;
 
+    const wordScores: WordScore[] = [];
     for (const info of wordInfos) {
       if (!info.hasCoverage) {
         wordScores.push(WordScore.Bad);
@@ -348,7 +434,7 @@ self.onmessage = async (e: MessageEvent<ScoringWorkerRequest>) => {
       // Linear map bounded to 0-100 percentage scale
       const MAX_SCORE_PERCENTAGE = 100;
       let scorePercentage =
-        MAX_SCORE_PERCENTAGE * (1 - (info.avgCost - PERFECT_DIST) / (FAIL_DIST - PERFECT_DIST));
+        MAX_SCORE_PERCENTAGE * (1 - (info.cost - PERFECT_DIST) / (FAIL_DIST - PERFECT_DIST));
       scorePercentage = Math.max(0, Math.min(MAX_SCORE_PERCENTAGE, scorePercentage));
       const finalScore = Math.round(scorePercentage);
 
