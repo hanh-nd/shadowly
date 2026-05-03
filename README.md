@@ -1,6 +1,8 @@
 # Shadowly
 
-Shadowly is a web-based application designed for language learning through "shadowing" (repeating after native audio). It leverages local machine learning models running entirely within your browser to transcribe audio and provide real-time pronunciation scoring, ensuring maximum privacy and low latency.
+**Shadowly** is a web-based application designed for language learning through "shadowing" (repeating after native audio). It leverages local machine learning models running entirely within your browser to transcribe audio and provide real-time pronunciation scoring, ensuring maximum privacy and low latency.
+
+Check out [Live Demo](https://shadowly.netlify.app).
 
 ## Features
 
