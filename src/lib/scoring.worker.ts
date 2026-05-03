@@ -2,6 +2,8 @@ import {
   AutoFeatureExtractor,
   AutoModel,
   env,
+  FeatureExtractor,
+  PreTrainedModel,
   type ProgressInfo,
 } from "@huggingface/transformers";
 import { TARGET_SAMPLE_RATE as SAMPLE_RATE } from "../constants";
@@ -10,12 +12,23 @@ import { WordScore, type WordTimestamp } from "../types";
 // --- INJECT EXPORTS/REQUIRE POLYFILL ---
 // Polyfill for String.prototype.replaceAll (required by some environments)
 if (typeof String.prototype.replaceAll !== "function") {
-  String.prototype.replaceAll = function (search, replacement) {
-    if (search instanceof RegExp) return this.replace(search, replacement);
-    return this.replace(
-      new RegExp(search.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g"),
-      replacement,
-    );
+  String.prototype.replaceAll = function (
+    search: string | RegExp,
+    replacement: ((substring: string, ...args: unknown[]) => string) | string,
+  ) {
+    if (typeof replacement === "string") {
+      if (search instanceof RegExp) return this.replace(search, replacement);
+      return this.replace(
+        new RegExp(search.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g"),
+        replacement,
+      );
+    } else {
+      if (search instanceof RegExp) return this.replace(search, replacement);
+      return this.replace(
+        new RegExp(search.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g"),
+        replacement,
+      );
+    }
   };
 }
 // Fixes Vite/Webpack bundling errors for vad-web and onnxruntime-web
@@ -48,8 +61,8 @@ interface ScoringWorkerModelProgress {
 const WAV2VEC2_MODEL = "Xenova/hubert-base-ls960";
 const HOP_STEP = 0.02; // seconds per output frame
 
-let model = null;
-let featureExtractor = null;
+let model: PreTrainedModel | null = null;
+let featureExtractor: FeatureExtractor | null = null;
 let inFlight: { segmentId: number; generation: number } | null = null;
 
 async function ensureWav2Vec2Pipeline(): Promise<void> {
@@ -306,10 +319,12 @@ self.onmessage = async (e: MessageEvent<ScoringWorkerRequest>) => {
       const MIN_NOISE_FLOOR = 0.001;
       const sortedEnergies = [...frameEnergies].sort((a, b) => a - b);
       const noiseFloor =
-        sortedEnergies[Math.floor(sortedEnergies.length * NOISE_FLOOR_PERCENTILE)] || MIN_NOISE_FLOOR;
+        sortedEnergies[
+          Math.floor(sortedEnergies.length * NOISE_FLOOR_PERCENTILE)
+        ] || MIN_NOISE_FLOOR;
 
-    // Threshold is explicitly 3x the room static.
-    // This perfectly captures quiet consonants without capturing room hiss.
+      // Threshold is explicitly 3x the room static.
+      // This perfectly captures quiet consonants without capturing room hiss.
       const SILENCE_THRESHOLD = noiseFloor * 3.0;
 
       lastSpeechFrame = refEmb.length - 1;
@@ -434,8 +449,12 @@ self.onmessage = async (e: MessageEvent<ScoringWorkerRequest>) => {
       // Linear map bounded to 0-100 percentage scale
       const MAX_SCORE_PERCENTAGE = 100;
       let scorePercentage =
-        MAX_SCORE_PERCENTAGE * (1 - (info.cost - PERFECT_DIST) / (FAIL_DIST - PERFECT_DIST));
-      scorePercentage = Math.max(0, Math.min(MAX_SCORE_PERCENTAGE, scorePercentage));
+        MAX_SCORE_PERCENTAGE *
+        (1 - (info.cost - PERFECT_DIST) / (FAIL_DIST - PERFECT_DIST));
+      scorePercentage = Math.max(
+        0,
+        Math.min(MAX_SCORE_PERCENTAGE, scorePercentage),
+      );
       const finalScore = Math.round(scorePercentage);
 
       const SCORE_THRESHOLD_GOOD = 80;

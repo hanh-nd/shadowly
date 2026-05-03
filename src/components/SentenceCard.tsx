@@ -26,7 +26,7 @@ function formatTime(seconds: number): string {
   return `${m}:${s.toString().padStart(2, '0')}`;
 }
 
-function getScoreColor(score?: WordScore): string {
+function getScoreColor(score: WordScore | null): string {
   switch (score) {
     case WordScore.Good: return 'text-green-600';
     case WordScore.Neutral: return 'text-yellow-600';
