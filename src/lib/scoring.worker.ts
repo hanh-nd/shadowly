@@ -4,6 +4,7 @@ import {
   env,
   type ProgressInfo,
 } from "@huggingface/transformers";
+import { TARGET_SAMPLE_RATE as SAMPLE_RATE } from "../constants";
 import { WordScore, type WordTimestamp } from "../types";
 
 // Polyfill for String.prototype.replaceAll (required by some environments)
@@ -37,7 +38,6 @@ interface ScoringWorkerModelProgress {
 
 const WAV2VEC2_MODEL = "Xenova/hubert-base-ls960";
 const HOP_STEP = 0.02; // seconds per output frame
-const SAMPLE_RATE = 16000; // Expected sample rate for extraction
 
 let model = null;
 let featureExtractor = null;
@@ -242,9 +242,11 @@ self.onmessage = async (e: MessageEvent<ScoringWorkerRequest>) => {
     }
 
     // Dynamic Noise Floor: Find the 10th percentile of volume (the baseline room static)
+    const NOISE_FLOOR_PERCENTILE = 0.1;
+    const MIN_NOISE_FLOOR = 0.001;
     const sortedEnergies = [...frameEnergies].sort((a, b) => a - b);
     const noiseFloor =
-      sortedEnergies[Math.floor(sortedEnergies.length * 0.1)] || 0.001;
+      sortedEnergies[Math.floor(sortedEnergies.length * NOISE_FLOOR_PERCENTILE)] || MIN_NOISE_FLOOR;
 
     // Threshold is explicitly 3x the room static.
     // This perfectly captures quiet consonants without capturing room hiss.
@@ -344,15 +346,18 @@ self.onmessage = async (e: MessageEvent<ScoringWorkerRequest>) => {
       }
 
       // Linear map bounded to 0-100 percentage scale
+      const MAX_SCORE_PERCENTAGE = 100;
       let scorePercentage =
-        100 * (1 - (info.avgCost - PERFECT_DIST) / (FAIL_DIST - PERFECT_DIST));
-      scorePercentage = Math.max(0, Math.min(100, scorePercentage));
+        MAX_SCORE_PERCENTAGE * (1 - (info.avgCost - PERFECT_DIST) / (FAIL_DIST - PERFECT_DIST));
+      scorePercentage = Math.max(0, Math.min(MAX_SCORE_PERCENTAGE, scorePercentage));
       const finalScore = Math.round(scorePercentage);
 
+      const SCORE_THRESHOLD_GOOD = 80;
+      const SCORE_THRESHOLD_NEUTRAL = 50;
       // Map to Enum for UI consumption
-      if (finalScore >= 80) {
+      if (finalScore >= SCORE_THRESHOLD_GOOD) {
         wordScores.push(WordScore.Good);
-      } else if (finalScore >= 50) {
+      } else if (finalScore >= SCORE_THRESHOLD_NEUTRAL) {
         wordScores.push(WordScore.Neutral);
       } else {
         wordScores.push(WordScore.Bad);
@@ -366,7 +371,7 @@ self.onmessage = async (e: MessageEvent<ScoringWorkerRequest>) => {
       type: "error",
       segmentId: inFlight?.segmentId ?? segmentId,
       generation: inFlight?.generation ?? generation,
-      error: err.toString(),
+      error: err instanceof Error ? err.toString() : String(err),
     });
   } finally {
     inFlight = null;

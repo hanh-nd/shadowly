@@ -1,3 +1,4 @@
+import { SECONDS_PER_MINUTE } from '../constants';
 import type { Segment } from '../types';
 import { SentenceCardMode, WordScore } from '../types';
 
@@ -20,8 +21,8 @@ interface Props {
 }
 
 function formatTime(seconds: number): string {
-  const m = Math.floor(seconds / 60);
-  const s = Math.floor(seconds % 60);
+  const m = Math.floor(seconds / SECONDS_PER_MINUTE);
+  const s = Math.floor(seconds % SECONDS_PER_MINUTE);
   return `${m}:${s.toString().padStart(2, '0')}`;
 }
 

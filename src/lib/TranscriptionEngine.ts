@@ -1,3 +1,4 @@
+import { TARGET_SAMPLE_RATE } from '../constants';
 import { WorkerMessageType, type WordTimestamp } from '../types';
 
 const WHISPER_MODEL = 'Xenova/whisper-tiny.en';
@@ -93,7 +94,7 @@ export class TranscriptionEngine {
   async getSegments(audio: Float32Array, signal?: AbortSignal): Promise<AudioSegment[]> {
     if (!this.vadInstance) throw new Error('VAD not initialized');
     const segments: AudioSegment[] = [];
-    for await (const segment of this.vadInstance.run(audio, 16000)) {
+    for await (const segment of this.vadInstance.run(audio, TARGET_SAMPLE_RATE)) {
       if (signal?.aborted) break;
       segments.push(segment);
     }

@@ -81,7 +81,8 @@ export function usePronunciationScorer(params: {
     refSampleRate: number,
     blob: Blob
   ) => {
-    if (wordTimestamps.length === 0 || blob.size < 4096) {
+    const MIN_AUDIO_BLOB_SIZE = 4096;
+    if (wordTimestamps.length === 0 || blob.size < MIN_AUDIO_BLOB_SIZE) {
       patchSegment(segmentId, { isScoring: false });
       return;
     }

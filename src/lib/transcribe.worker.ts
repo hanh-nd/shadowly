@@ -61,9 +61,9 @@ self.onmessage = async (e) => {
               chunk.timestamp[1] !== null,
           )
           .map((chunk) => ({
-            word: chunk.text.trim(),
-            start: chunk.timestamp[0]!,
-            end: chunk.timestamp[1]!,
+            word: chunk!.text.trim(),
+            start: chunk!.timestamp[0]!,
+            end: chunk!.timestamp[1]!,
           }));
 
         self.postMessage({

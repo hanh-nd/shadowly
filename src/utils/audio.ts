@@ -1,3 +1,5 @@
+import { TARGET_SAMPLE_RATE } from '../constants';
+
 export async function decodeAndResampleTo16kHz(
   data: ArrayBuffer | Blob
 ): Promise<Float32Array> {
@@ -7,12 +9,12 @@ export async function decodeAndResampleTo16kHz(
   const decoded = await audioCtx.decodeAudioData(arrayBuffer.slice(0));
   audioCtx.close();
 
-  if (decoded.sampleRate === 16000 && decoded.numberOfChannels === 1) {
+  if (decoded.sampleRate === TARGET_SAMPLE_RATE && decoded.numberOfChannels === 1) {
     return decoded.getChannelData(0).slice(0); // clone for safety
   }
 
-  const targetLength = Math.round(decoded.duration * 16000);
-  const offlineCtx = new OfflineAudioContext(1, targetLength, 16000);
+  const targetLength = Math.round(decoded.duration * TARGET_SAMPLE_RATE);
+  const offlineCtx = new OfflineAudioContext(1, targetLength, TARGET_SAMPLE_RATE);
   const source = offlineCtx.createBufferSource();
   source.buffer = decoded;
   source.connect(offlineCtx.destination);
@@ -26,12 +28,12 @@ export async function resampleFloat32ArrayTo16kHz(
   audioData: Float32Array,
   fromRate: number,
 ): Promise<Float32Array> {
-  if (fromRate === 16000) return audioData.slice(0); // Clone for safe transfer
+  if (fromRate === TARGET_SAMPLE_RATE) return audioData.slice(0); // Clone for safe transfer
 
   const offlineCtx = new OfflineAudioContext(
     1,
-    Math.ceil(audioData.length * (16000 / fromRate)),
-    16000,
+    Math.ceil(audioData.length * (TARGET_SAMPLE_RATE / fromRate)),
+    TARGET_SAMPLE_RATE,
   );
   const buffer = offlineCtx.createBuffer(1, audioData.length, fromRate);
   buffer.copyToChannel(audioData as Float32Array<ArrayBuffer>, 0);

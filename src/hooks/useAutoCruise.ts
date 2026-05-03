@@ -1,4 +1,5 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
+import { MS_PER_SECOND } from '../constants';
 import type { Segment } from '../types';
 import { ShadowingPhase } from '../types';
 
@@ -153,7 +154,7 @@ export function useAutoCruise({
         autoStopTimerRef.current = setTimeout(() => {
           onStopRecordRef.current();
           autoStopTimerRef.current = null;
-        }, (segDuration + bufferTimeRef.current) * 1000);
+        }, (segDuration + bufferTimeRef.current) * MS_PER_SECOND);
       }
     } else if (!isRecording && autoStopTimerRef.current) {
       clearTimeout(autoStopTimerRef.current);

@@ -1,7 +1,8 @@
-import { useRef, useState, useCallback } from 'react';
-import { ProcessingState } from '../types';
-import type { Segment, TranscribingProgress } from '../types';
+import { useCallback, useRef, useState } from 'react';
+import { MS_PER_SECOND } from '../constants';
 import { engine } from '../lib/TranscriptionEngine';
+import type { Segment, TranscribingProgress } from '../types';
+import { ProcessingState } from '../types';
 import { decodeAndResampleTo16kHz } from '../utils';
 
 export interface PipelineHook {
@@ -86,8 +87,8 @@ export function usePipeline(): PipelineHook {
       const initialSegments: Segment[] = audioSegments.map((s, i) => ({
         id: i,
         text: '(transcribing...)',
-        start: s.start / 1000,
-        end: s.end / 1000,
+        start: s.start / MS_PER_SECOND,
+        end: s.end / MS_PER_SECOND,
         recordingUrl: null,
       }));
       setSegments(initialSegments);
