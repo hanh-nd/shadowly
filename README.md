@@ -16,7 +16,7 @@ Check out [Live Demo](https://shadowly.netlify.app).
 
 - **Frontend**: React 19, TypeScript, Vite, Tailwind CSS
 - **Machine Learning**: `@huggingface/transformers` (Transformers.js)
-- **Audio Processing**: `@ricky0123/vad-web` for Voice Activity Detection, `essentia.js` for audio analysis
+- **Audio Processing**: `@ricky0123/vad-web` for Voice Activity Detection
 
 ## Getting Started
 
