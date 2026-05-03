@@ -1,199 +1,207 @@
-/* eslint-disable */
-import Essentia from 'essentia.js/dist/essentia.js-core.es.js';
-import { EssentiaWASM } from 'essentia.js/dist/essentia-wasm.es.js';
-import { WordScore, type WordTimestamp } from '../types';
+import {
+  AutoFeatureExtractor,
+  AutoModel,
+  env,
+  type ProgressInfo,
+} from "@huggingface/transformers";
+import { WordScore, type WordTimestamp } from "../types";
+
+// Polyfill for String.prototype.replaceAll (required by some environments)
+if (typeof String.prototype.replaceAll !== "function") {
+  String.prototype.replaceAll = function (search, replacement) {
+    if (search instanceof RegExp) return this.replace(search, replacement);
+    return this.replace(
+      new RegExp(search.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "g"),
+      replacement,
+    );
+  };
+}
+
+// Skip local model check for faster loading in worker
+env.allowLocalModels = false;
 
 // Scoring worker message types
 interface ScoringWorkerRequest {
-  type: 'score';
+  type: "score";
   segmentId: number;
   refAudio: Float32Array;
-  refSampleRate: number;
   userAudio: Float32Array;
-  userSampleRate: number;
   wordTimestamps: WordTimestamp[];
   generation: number;
 }
 
-interface EssentiaInstance {
-  arrayToVector: (audio: Float32Array) => any;
-  vectorToArray: (vector: any) => Float32Array;
-  deleteVector: (vector: any) => void;
-  FrameGenerator: (audio: any, size: number, hop: number) => {
-    size: () => number;
-    get: (i: number) => any;
-  };
-  Windowing: (frame: any, normalized?: boolean, size?: number, type?: string, zeroPadding?: number, zeroPhase?: boolean) => { frame: any };
-  Spectrum: (frame: any, size?: number) => { spectrum: any };
-  MFCC: (spectrum: any, dctType?: number, highFrequencyBound?: number, inputSize?: number, liftering?: number, logType?: string, lowFrequencyBound?: number, normalize?: string, numberBands?: number, numberCoefficients?: number, sampleRate?: number) => { mfcc: any; bands: any };
+interface ScoringWorkerModelProgress {
+  type: "modelProgress";
+  progress: number;
 }
 
-let essentia: EssentiaInstance | null = null;
+const WAV2VEC2_MODEL = "Xenova/hubert-base-ls960";
+const HOP_STEP = 0.02; // seconds per output frame
+const SAMPLE_RATE = 16000; // Expected sample rate for extraction
+
+let model = null;
+let featureExtractor = null;
 let inFlight: { segmentId: number; generation: number } | null = null;
 
-async function ensureEssentia() {
-  if (!essentia) {
-    try {
-      let wasmModule;
-      if (typeof EssentiaWASM === 'function') {
-        wasmModule = await (EssentiaWASM as any)();
-      } else {
-        wasmModule = EssentiaWASM;
-      }
-      essentia = new (Essentia as any)(wasmModule) as EssentiaInstance;
-    } catch (err) {
-      console.error('Worker | Failed to initialize Essentia:', err);
-      throw err;
-    }
-  }
-}
+async function ensureWav2Vec2Pipeline(): Promise<void> {
+  if (model && featureExtractor) return;
 
-// Portable resample using linear interpolation
-function resample(audio: Float32Array, fromRate: number, toRate: number): Float32Array {
-  if (fromRate === toRate) return audio;
-  const ratio = fromRate / toRate;
-  const newLength = Math.round(audio.length / ratio);
-  const result = new Float32Array(newLength);
-  for (let i = 0; i < newLength; i++) {
-    const pos = i * ratio;
-    const index = Math.floor(pos);
-    const fraction = pos - index;
-    if (index + 1 < audio.length) {
-      result[i] = audio[index] * (1 - fraction) + audio[index + 1] * fraction;
-    } else {
-      result[i] = audio[index];
-    }
-  }
-  return result;
-}
-
-function normalizeMFCCs(mfccs: number[][]): number[][] {
-  if (mfccs.length === 0) return mfccs;
-  const numCoeffs = mfccs[0].length;
-  const means = new Float32Array(numCoeffs);
-  const stds = new Float32Array(numCoeffs);
-
-  // Mean
-  for (const m of mfccs) {
-    for (let i = 0; i < numCoeffs; i++) means[i] += m[i];
-  }
-  for (let i = 0; i < numCoeffs; i++) means[i] /= mfccs.length;
-
-  // Std
-  for (const m of mfccs) {
-    for (let i = 0; i < numCoeffs; i++) {
-      const diff = m[i] - means[i];
-      stds[i] += diff * diff;
-    }
-  }
-  for (let i = 0; i < numCoeffs; i++) stds[i] = Math.sqrt(stds[i] / mfccs.length) + 1e-6;
-
-  // Normalize
-  return mfccs.map(m => m.map((val, i) => (val - means[i]) / stds[i]));
-}
-
-function getMFCC(audio: Float32Array) {
-  if (!essentia) throw new Error('Essentia not initialized');
-  
-  const frameSize = 512;
-  const hopSize = 256;
-  const sampleRate = 16000;
-  const mfccCoeffs = 13;
-  const spectrumSize = (frameSize / 2) + 1;
-
-  let frames;
   try {
-    frames = essentia.FrameGenerator(audio, frameSize, hopSize);
-  } catch (err) {
-    const vec = essentia.arrayToVector(audio);
-    frames = essentia.FrameGenerator(vec, frameSize, hopSize);
-  }
+    const progress_callback = (p: ProgressInfo) => {
+      const info = p as { progress: number };
+      if (!info.progress) return;
+      const msg: ScoringWorkerModelProgress = {
+        type: "modelProgress",
+        progress: info.progress,
+      };
+      self.postMessage(msg);
+    };
 
-  const numFrames = frames.size();
-  const mfccs: number[][] = [];
-  
-  for (let i = 0; i < numFrames; i++) {
-    const frame = frames.get(i);
-    if (!frame) continue;
-    
-    try {
-      const winRes = essentia.Windowing(frame, true, frameSize, 'hann', 0, true);
-      const specRes = essentia.Spectrum(winRes.frame, frameSize);
-      
-      const mfccRes = essentia.MFCC(
-        specRes.spectrum, 
-        2,
-        8000,
-        spectrumSize,
-        0,
-        'dbamp',
-        0,
-        'unit_sum',
-        40,
-        mfccCoeffs,
-        sampleRate
-      );
-      
-      const mfccArray = essentia.vectorToArray(mfccRes.mfcc);
-      mfccs.push(Array.from(mfccArray));
-      
-      if (winRes.frame && winRes.frame.delete) winRes.frame.delete();
-      if (specRes.spectrum && specRes.spectrum.delete) specRes.spectrum.delete();
-      if (mfccRes.mfcc && mfccRes.mfcc.delete) mfccRes.mfcc.delete();
-      if (mfccRes.bands && mfccRes.bands.delete) mfccRes.bands.delete();
-      if (frame && frame.delete) frame.delete();
-    } catch (err) {
-      break; 
-    }
+    [model, featureExtractor] = await Promise.all([
+      AutoModel.from_pretrained(WAV2VEC2_MODEL, {
+        dtype: "q8", // fp32 required for high-frequency consonant resolution
+        device: "wasm",
+        progress_callback,
+      }),
+      AutoFeatureExtractor.from_pretrained(WAV2VEC2_MODEL, {
+        progress_callback,
+      }),
+    ]);
+  } catch (err) {
+    console.error("Worker | Failed to initialize Wav2Vec2 components:", err);
+    throw err;
   }
-  
-  if (frames && (frames as any).delete) (frames as any).delete();
-  return normalizeMFCCs(mfccs);
 }
 
-function euclideanDistance(v1: number[], v2: number[]): number {
-  let sum = 0;
+function cosineDistance(v1: Float32Array, v2: Float32Array): number {
+  let dot = 0;
+  let mag1 = 0;
+  let mag2 = 0;
   for (let i = 0; i < v1.length; i++) {
-    const diff = v1[i] - v2[i];
-    sum += diff * diff;
+    dot += v1[i] * v2[i];
+    mag1 += v1[i] * v1[i];
+    mag2 += v2[i] * v2[i];
   }
-  return Math.sqrt(sum);
+  const mag = Math.sqrt(mag1) * Math.sqrt(mag2);
+  if (mag === 0) return 1.0;
+  return 1.0 - dot / mag;
+}
+
+async function getEmbeddings(audio: Float32Array): Promise<Float32Array[]> {
+  if (!model || !featureExtractor)
+    throw new Error("Model or feature extractor not initialized");
+
+  try {
+    // 1. Preprocess audio using the feature extractor
+    const inputs = await featureExtractor(audio);
+
+    // 2. Run the model with the preprocessed inputs
+    const output = await model(inputs);
+
+    // 3. Extract the last hidden state (the embeddings)
+    const lastHiddenState =
+      output.last_hidden_state ||
+      (output.hidden_states &&
+        output.hidden_states[output.hidden_states.length - 1]);
+
+    if (!lastHiddenState) {
+      throw new Error("Model output missing hidden states");
+    }
+
+    const dims = lastHiddenState.dims;
+    const numFrames = dims.length === 3 ? dims[1] : dims[0];
+    const hiddenSize = dims[dims.length - 1]; // Should be 768
+    const data = lastHiddenState.data as Float32Array;
+
+    const embeddings: Float32Array[] = [];
+    for (let i = 0; i < numFrames; i++) {
+      embeddings.push(data.slice(i * hiddenSize, (i + 1) * hiddenSize));
+    }
+    return embeddings;
+  } catch (err) {
+    console.error("Worker | Error in getEmbeddings:", err);
+    throw err;
+  }
 }
 
 class SimpleDTW {
-  private matrix: number[][];
-  constructor(private s1: number[][], private s2: number[][], private distFn: (v1: number[], v2: number[]) => number) {
+  public matrix: number[][];
+  constructor(
+    private s1: Float32Array[], // Reference
+    private s2: Float32Array[], // User
+    private distFn: (v1: Float32Array, v2: Float32Array) => number,
+  ) {
     this.matrix = this.compute(s1, s2);
   }
-  private compute(s1: number[][], s2: number[][]): number[][] {
+
+  private compute(s1: Float32Array[], s2: Float32Array[]): number[][] {
     const n = s1.length;
     const m = s2.length;
     if (n === 0 || m === 0) return [];
-    const dtw = Array.from({ length: n }, () => Array(m).fill(Infinity));
-    dtw[0][0] = this.distFn(s1[0], s2[0]);
-    for (let i = 1; i < n; i++) dtw[i][0] = dtw[i - 1][0] + this.distFn(s1[i], s2[0]);
-    for (let j = 1; j < m; j++) dtw[0][j] = dtw[0][j - 1] + this.distFn(s1[0], s2[j]);
+
+    const dtw = Array.from({ length: n }, () => new Array(m).fill(Infinity));
+
+    // This severely punishes the algorithm for stretching or compressing time.
+    // If you drop a syllable, it forces a failure rather than stretching the survivor.
+    const STEP_PENALTY = 1.5;
+
+    // Subsequence DTW: Allow unconstrained start on the user axis
+    for (let j = 0; j < m; j++) {
+      dtw[0][j] = this.distFn(s1[0], s2[j]);
+    }
+
+    // Strict accumulation on the reference axis
+    for (let i = 1; i < n; i++) {
+      dtw[i][0] = dtw[i - 1][0] + this.distFn(s1[i], s2[0]) * STEP_PENALTY;
+    }
+
     for (let i = 1; i < n; i++) {
       for (let j = 1; j < m; j++) {
         const cost = this.distFn(s1[i], s2[j]);
-        dtw[i][j] = cost + Math.min(dtw[i - 1][j], dtw[i][j - 1], dtw[i - 1][j - 1]);
+        const match = dtw[i - 1][j - 1] + cost;
+        const insertion = dtw[i - 1][j] + cost * STEP_PENALTY;
+        const deletion = dtw[i][j - 1] + cost * STEP_PENALTY;
+
+        dtw[i][j] = Math.min(match, insertion, deletion);
       }
     }
     return dtw;
   }
+
   getPath(): [number, number][] {
     const n = this.s1.length;
     const m = this.s2.length;
     if (n === 0 || m === 0) return [];
-    let i = n - 1, j = m - 1;
+
+    // Subsequence DTW: Find the lowest cost endpoint on the user axis
+    let minCost = Infinity;
+    let endJ = m - 1;
+    for (let j = 0; j < m; j++) {
+      if (this.matrix[n - 1][j] < minCost) {
+        minCost = this.matrix[n - 1][j];
+        endJ = j;
+      }
+    }
+
+    let i = n - 1;
+    let j = endJ;
     const path: [number, number][] = [[i, j]];
-    while (i > 0 || j > 0) {
-      if (i === 0) j--;
-      else if (j === 0) i--;
-      else {
-        const min = Math.min(this.matrix[i - 1][j], this.matrix[i][j - 1], this.matrix[i - 1][j - 1]);
-        if (min === this.matrix[i - 1][j - 1]) { i--; j--; }
-        else if (min === this.matrix[i - 1][j]) i--;
+
+    // Trace back strictly to the start of the reference audio
+    while (i > 0) {
+      if (j === 0) {
+        i--;
+      } else {
+        const diag = this.matrix[i - 1][j - 1];
+        const up = this.matrix[i - 1][j]; // insertion
+        const left = this.matrix[i][j - 1]; // deletion
+
+        const min = Math.min(diag, up, left);
+
+        if (min === diag) {
+          i--;
+          j--;
+        } else if (min === up) i--;
         else j--;
       }
       path.push([i, j]);
@@ -203,43 +211,109 @@ class SimpleDTW {
 }
 
 self.onmessage = async (e: MessageEvent<ScoringWorkerRequest>) => {
-  const { type, segmentId, refAudio, refSampleRate, userAudio, userSampleRate, wordTimestamps, generation } = e.data;
-  if (type !== 'score') return;
+  const { type, segmentId, refAudio, userAudio, wordTimestamps, generation } =
+    e.data;
+  if (type !== "score") return;
 
   try {
     inFlight = { segmentId, generation };
-    await ensureEssentia();
-    
-    const ref16 = resample(refAudio, refSampleRate, 16000);
-    const user16 = resample(userAudio, userSampleRate, 16000);
 
-    const refMFCC = getMFCC(ref16);
-    const userMFCC = getMFCC(user16);
+    await ensureWav2Vec2Pipeline();
 
-    if (refMFCC.length === 0 || userMFCC.length === 0) throw new Error('Could not extract MFCC features');
+    const refEmb = await getEmbeddings(refAudio);
+    const userEmb = await getEmbeddings(userAudio);
 
-    const dtw = new SimpleDTW(refMFCC, userMFCC, euclideanDistance);
+    if (refEmb.length === 0 || userEmb.length === 0) {
+      throw new Error("Could not extract embeddings");
+    }
+
+    // --- 1. SMART MICRO-VAD PRECOMPUTATION ---
+    const frameEnergies: number[] = [];
+    const samplesPerFrame = Math.floor(HOP_STEP * SAMPLE_RATE);
+
+    for (let i = 0; i < refEmb.length; i++) {
+      const start = i * samplesPerFrame;
+      const end = Math.min(start + samplesPerFrame, refAudio.length);
+      let sumSquares = 0;
+      for (let j = start; j < end; j++) {
+        sumSquares += refAudio[j] * refAudio[j];
+      }
+      frameEnergies.push(Math.sqrt(sumSquares / Math.max(1, end - start)));
+    }
+
+    // Dynamic Noise Floor: Find the 10th percentile of volume (the baseline room static)
+    const sortedEnergies = [...frameEnergies].sort((a, b) => a - b);
+    const noiseFloor =
+      sortedEnergies[Math.floor(sortedEnergies.length * 0.1)] || 0.001;
+
+    // Threshold is explicitly 3x the room static.
+    // This perfectly captures quiet consonants without capturing room hiss.
+    const SILENCE_THRESHOLD = noiseFloor * 3.0;
+
+    // Calculate absolute final frame of acoustic speech
+    let lastSpeechFrame = refEmb.length - 1;
+    for (let i = refEmb.length - 1; i >= 0; i--) {
+      if (frameEnergies[i] > SILENCE_THRESHOLD) {
+        // Add a tiny 2-frame (40ms) buffer to safely capture the very tail of the final plosive
+        lastSpeechFrame = Math.min(refEmb.length - 1, i + 2);
+        break;
+      }
+    }
+    // ------------------------------------
+
+    const dtw = new SimpleDTW(refEmb, userEmb, cosineDistance);
     const path = dtw.getPath();
 
-    const hopStep = 256 / 16000;
+    if (path.length === 0) {
+      console.warn(
+        "Worker | DTW path blocked by band or empty. Returning Good for all words.",
+      );
+      self.postMessage({
+        type: "result",
+        segmentId,
+        wordScores: wordTimestamps.map(() => WordScore.Good),
+        generation,
+      });
+      return;
+    }
+
     const wordScores: WordScore[] = [];
     const pathCosts: Map<number, number[]> = new Map();
-    
+
     for (let i = 0; i < path.length; i++) {
       const [rIdx, uIdx] = path[i];
-      const dist = euclideanDistance(refMFCC[rIdx], userMFCC[uIdx]);
+      const dist = cosineDistance(refEmb[rIdx], userEmb[uIdx]);
       if (!pathCosts.has(rIdx)) pathCosts.set(rIdx, []);
       pathCosts.get(rIdx)!.push(dist);
     }
-    
-    const allWordAvgCosts: number[] = [];
-    const wordInfos: { avgCost: number; hasCoverage: boolean }[] = [];
-    
-    for (const wt of wordTimestamps) {
-      const startFrame = Math.floor(wt.start / hopStep);
-      const endFrame = Math.ceil(wt.end / hopStep);
-      let totalCost = 0, count = 0;
+
+    const PADDING_SECONDS = 0.1;
+    const paddingFrames = Math.ceil(PADDING_SECONDS / HOP_STEP);
+    const wordInfos: { avgCost: number; hasCoverage: boolean; word: string }[] =
+      [];
+
+    for (let wIdx = 0; wIdx < wordTimestamps.length; wIdx++) {
+      const wt = wordTimestamps[wIdx];
+      const isLastWord = wIdx === wordTimestamps.length - 1;
+
+      const startFrame = Math.max(
+        0,
+        Math.floor(wt.start / HOP_STEP) - paddingFrames,
+      );
+
+      const endFrame = isLastWord
+        ? Math.max(startFrame, lastSpeechFrame) // Clean terminal truncation
+        : Math.min(
+            refEmb.length - 1,
+            Math.ceil(wt.end / HOP_STEP) + paddingFrames,
+          );
+
+      let totalCost = 0,
+        count = 0;
+
       for (let f = startFrame; f <= endFrame; f++) {
+        // NO HOLE-PUNCHING. We evaluate every continuous frame inside the boundaries
+        // to ensure vowels and quiet consonants are all graded together.
         const costs = pathCosts.get(f);
         if (costs) {
           for (const c of costs) {
@@ -248,41 +322,53 @@ self.onmessage = async (e: MessageEvent<ScoringWorkerRequest>) => {
           }
         }
       }
+
       if (count > 0) {
-        const avg = totalCost / count;
-        wordInfos.push({ avgCost: avg, hasCoverage: true });
-        allWordAvgCosts.push(avg);
+        wordInfos.push({
+          avgCost: totalCost / count,
+          hasCoverage: true,
+          word: wt.word,
+        });
       } else {
-        wordInfos.push({ avgCost: 0, hasCoverage: false });
+        wordInfos.push({ avgCost: 1.0, hasCoverage: false, word: wt.word });
       }
     }
-    
-    allWordAvgCosts.sort((a, b) => a - b);
-    const medianCost = allWordAvgCosts.length > 0 ? allWordAvgCosts[Math.floor(allWordAvgCosts.length / 2)] : 1.0;
-    
-    // Normalized distance threshold. After Z-score normalization, 
-    // a distance of 3-4 is quite significant.
-    const ABSOLUTE_BAD_THRESHOLD = 4;
-    const adaptiveThreshold = Math.min(medianCost * 1.5, ABSOLUTE_BAD_THRESHOLD);
 
-    console.log(`Worker | seg: ${segmentId}, median: ${medianCost.toFixed(2)}, threshold: ${adaptiveThreshold.toFixed(2)}`);
+    const PERFECT_DIST = 0.4;
+    const FAIL_DIST = 0.75;
 
     for (const info of wordInfos) {
-      console.log(`Worker | word cost: ${info.avgCost.toFixed(2)} vs ${adaptiveThreshold.toFixed(2)}`);
-      const isGood = !info.hasCoverage || info.avgCost <= adaptiveThreshold;
-      wordScores.push(isGood ? WordScore.Good : WordScore.Bad);
+      if (!info.hasCoverage) {
+        wordScores.push(WordScore.Bad);
+        continue;
+      }
+
+      // Linear map bounded to 0-100 percentage scale
+      let scorePercentage =
+        100 * (1 - (info.avgCost - PERFECT_DIST) / (FAIL_DIST - PERFECT_DIST));
+      scorePercentage = Math.max(0, Math.min(100, scorePercentage));
+      const finalScore = Math.round(scorePercentage);
+
+      // Map to Enum for UI consumption
+      if (finalScore >= 80) {
+        wordScores.push(WordScore.Good);
+      } else if (finalScore >= 50) {
+        wordScores.push(WordScore.Neutral);
+      } else {
+        wordScores.push(WordScore.Bad);
+      }
     }
-    
-    self.postMessage({ type: 'result', segmentId, wordScores, generation });
-    inFlight = null;
-  } catch (err: any) {
-    console.error('Worker | Scoring error:', err);
+
+    self.postMessage({ type: "result", segmentId, wordScores, generation });
+  } catch (err) {
+    console.error("Worker | Scoring error:", err);
     self.postMessage({
-      type: 'error',
+      type: "error",
       segmentId: inFlight?.segmentId ?? segmentId,
       generation: inFlight?.generation ?? generation,
-      error: err.toString()
+      error: err.toString(),
     });
+  } finally {
     inFlight = null;
   }
 };

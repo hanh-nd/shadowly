@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useRef } from 'react';
 import type { WordTimestamp } from '../types';
 import { WordScore } from '../types';
+import { decodeAndResampleTo16kHz, resampleFloat32ArrayTo16kHz } from '../utils';
 import type { PipelineHook } from './usePipeline';
 
 interface ScoringWorkerResponse {
@@ -14,6 +15,11 @@ interface ScoringWorkerError {
   type: 'error';
   segmentId: number;
   generation: number;
+}
+
+interface ScoringWorkerModelProgress {
+  type: 'modelProgress';
+  progress: number;
 }
 
 export function usePronunciationScorer(params: {
@@ -31,8 +37,14 @@ export function usePronunciationScorer(params: {
       type: 'module'
     });
 
-    worker.onmessage = (e: MessageEvent<ScoringWorkerResponse | ScoringWorkerError>) => {
+    worker.onmessage = (e: MessageEvent<ScoringWorkerResponse | ScoringWorkerError | ScoringWorkerModelProgress>) => {
       const msg = e.data;
+      
+      if (msg.type === 'modelProgress') {
+        // Model downloading — segment stays isScoring:true, no action needed
+        return;
+      }
+
       const currentGen = generationRef.current.get(msg.segmentId);
 
       if (msg.generation !== currentGen) {
@@ -80,12 +92,8 @@ export function usePronunciationScorer(params: {
     // Fire-and-forget
     (async () => {
       try {
-        const audioCtx = new AudioContext();
-        const arrayBuffer = await blob.arrayBuffer();
-        const audioBuffer = await audioCtx.decodeAudioData(arrayBuffer);
-        audioCtx.close();
-        
-        const userAudio = audioBuffer.getChannelData(0).slice(0); // Copy to allow transferring
+        const userAudio = await decodeAndResampleTo16kHz(blob);
+        const refAudio = await resampleFloat32ArrayTo16kHz(refSlice, refSampleRate);
 
         // Stale check
         if (generationRef.current.get(segmentId) !== currentGen) return;
@@ -96,13 +104,11 @@ export function usePronunciationScorer(params: {
         worker.postMessage({
           type: 'score',
           segmentId,
-          refAudio: refSlice,
-          refSampleRate,
+          refAudio,
           userAudio,
-          userSampleRate: audioBuffer.sampleRate,
           wordTimestamps,
           generation: currentGen
-        }, [refSlice.buffer, userAudio.buffer]);
+        }, [refAudio.buffer, userAudio.buffer]);
 
       } catch (err) {
         console.error('Failed to prepare scoring:', err);

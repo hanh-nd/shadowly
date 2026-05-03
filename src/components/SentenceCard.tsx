@@ -25,6 +25,14 @@ function formatTime(seconds: number): string {
   return `${m}:${s.toString().padStart(2, '0')}`;
 }
 
+function getScoreColor(score?: WordScore): string {
+  switch (score) {
+    case WordScore.Good: return 'text-green-600';
+    case WordScore.Neutral: return 'text-yellow-600';
+    default: return 'text-red-500';
+  }
+}
+
 export function SentenceCard({
   segment,
   mode,
@@ -78,7 +86,7 @@ export function SentenceCard({
           segment.wordTimestamps.map((wt, i) => (
             <span
               key={i}
-              className={segment.wordScores![i] === WordScore.Good ? 'text-green-600' : 'text-red-500'}
+              className={getScoreColor(segment.wordScores![i])}
             >
               {wt.word}{' '}
             </span>

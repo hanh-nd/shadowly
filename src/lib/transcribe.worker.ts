@@ -55,7 +55,10 @@ self.onmessage = async (e) => {
         const wordTimestamps: WordTimestamp[] = (chunks || [])
           .filter(
             (chunk) =>
-              chunk.timestamp[0] !== null && chunk.timestamp[1] !== null,
+              chunk &&
+              chunk.timestamp &&
+              chunk.timestamp[0] !== null &&
+              chunk.timestamp[1] !== null,
           )
           .map((chunk) => ({
             word: chunk.text.trim(),

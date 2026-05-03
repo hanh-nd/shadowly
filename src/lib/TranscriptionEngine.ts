@@ -90,25 +90,6 @@ export class TranscriptionEngine {
     await this.workerReady;
   }
 
-  async resampleTo16kHz(arrayBuffer: ArrayBuffer): Promise<Float32Array> {
-    const audioCtx = new AudioContext();
-    const decoded = await audioCtx.decodeAudioData(arrayBuffer.slice(0));
-    audioCtx.close();
-
-    if (decoded.sampleRate === 16000 && decoded.numberOfChannels === 1) {
-      return decoded.getChannelData(0);
-    }
-
-    const targetLength = Math.round(decoded.duration * 16000);
-    const offlineCtx = new OfflineAudioContext(1, targetLength, 16000);
-    const source = offlineCtx.createBufferSource();
-    source.buffer = decoded;
-    source.connect(offlineCtx.destination);
-    source.start();
-    const rendered = await offlineCtx.startRendering();
-    return rendered.getChannelData(0);
-  }
-
   async getSegments(audio: Float32Array, signal?: AbortSignal): Promise<AudioSegment[]> {
     if (!this.vadInstance) throw new Error('VAD not initialized');
     const segments: AudioSegment[] = [];

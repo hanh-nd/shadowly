@@ -2,6 +2,7 @@ import { useRef, useState, useCallback } from 'react';
 import { ProcessingState } from '../types';
 import type { Segment, TranscribingProgress } from '../types';
 import { engine } from '../lib/TranscriptionEngine';
+import { decodeAndResampleTo16kHz } from '../utils';
 
 export interface PipelineHook {
   process: (file: File) => Promise<void>;
@@ -68,7 +69,7 @@ export function usePipeline(): PipelineHook {
       });
       if (signal.aborted) return;
 
-      const resampledAudio = await engine.resampleTo16kHz(arrayBuffer);
+      const resampledAudio = await decodeAndResampleTo16kHz(arrayBuffer);
       if (signal.aborted) return;
 
       setStatus(ProcessingState.VADRunning);

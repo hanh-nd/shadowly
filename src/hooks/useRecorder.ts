@@ -38,7 +38,15 @@ export function useRecorder() {
     setMicError(null);
     try {
       // Always get a fresh stream to ensure mic indicator turns off when stopped
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      const stream = await navigator.mediaDevices.getUserMedia({
+        audio: {
+          echoCancellation: false,
+          noiseSuppression: false,
+          autoGainControl: false,
+          channelCount: 1,
+          sampleRate: 16000, // Request native 16k from hardware if supported
+        },
+      });
       mediaStreamRef.current = stream;
       chunksRef.current = [];
 

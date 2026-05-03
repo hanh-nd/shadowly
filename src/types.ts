@@ -6,6 +6,7 @@ export interface WordTimestamp {
 
 export enum WordScore {
   Good = 'good',
+  Neutral = 'neutral',
   Bad = 'bad'
 }
 
