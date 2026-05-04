@@ -40,6 +40,7 @@ export function SentenceView({
   return (
     <div className="pt-32 px-gutter max-w-container-max-width mx-auto flex flex-col gap-stack-lg pb-16">
       <SentenceCard
+        key={prev?.id ?? 'prev-empty'}
         segment={prev}
         mode={SentenceCardMode.InactivePrev}
         isPlayingOriginal={false}
@@ -60,6 +61,7 @@ export function SentenceView({
 
       {active && (
         <SentenceCard
+          key={active.id}
           segment={active}
           mode={SentenceCardMode.Active}
           isPlayingOriginal={isPlayingOriginal}
@@ -82,6 +84,7 @@ export function SentenceView({
       )}
 
       <SentenceCard
+        key={next?.id ?? 'next-empty'}
         segment={next}
         mode={SentenceCardMode.InactiveNext}
         isPlayingOriginal={false}

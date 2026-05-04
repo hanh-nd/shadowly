@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 import { SECONDS_PER_MINUTE } from '../constants';
 import type { Segment } from '../types';
 import { SentenceCardMode, WordScore } from '../types';
@@ -56,6 +58,8 @@ export function SentenceCard({
   onPrev,
   onNext,
 }: Props) {
+  const [isUnmasked, setIsUnmasked] = useState(false);
+
   if (mode !== SentenceCardMode.Active) {
     const text = segment?.text;
     const displayText = maskModeEnabled && text ? '(masked)' : text || '\u00A0';
@@ -91,7 +95,8 @@ export function SentenceCard({
 
       {/* Sentence text */}
       <p
-        className={`font-display-active text-display-active text-on-background mb-8 relative z-10 ${maskModeEnabled ? 'blur-md' : ''}`}
+        className={`font-display-active text-display-active text-on-background mb-8 relative z-10 transition-all ${maskModeEnabled ? 'cursor-pointer hover:opacity-80' : ''} ${maskModeEnabled && !isUnmasked ? 'blur-md' : ''}`}
+        onClick={() => maskModeEnabled && setIsUnmasked(!isUnmasked)}
       >
         {Array.isArray(segment.wordScores) &&
         segment.wordTimestamps &&
