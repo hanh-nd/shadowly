@@ -160,7 +160,7 @@ export function Sidebar({
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <span className="font-label-sm text-label-sm text-on-surface-variant">
-                  Mask Mode
+                  Mask
                 </span>
               </div>
               <label className="relative inline-flex items-center cursor-pointer">
