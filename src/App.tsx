@@ -13,16 +13,18 @@ export function App() {
     <div className="bg-background text-on-background min-h-screen flex antialiased">
       <Sidebar
         onFileSelect={manager.upload}
-        speed={manager.playbackSpeed}
-        onSpeedChange={manager.setPlaybackSpeed}
+        speed={manager.settings.playbackSpeed}
+        onSpeedChange={manager.settings.setPlaybackSpeed}
         autoStopEnabled={manager.automation.autoStopEnabled}
         autoCruiseEnabled={manager.automation.autoCruiseEnabled}
         scoringEnabled={manager.automation.scoringEnabled}
+        maskModeEnabled={manager.settings.maskMode}
         bufferTime={manager.automation.bufferTime}
         loopCount={manager.automation.loopCount}
         onToggleAutoStop={manager.automation.toggleAutoStop}
         onToggleAutoCruise={manager.automation.toggleAutoCruise}
         onToggleScoring={manager.automation.toggleScoring}
+        onToggleMaskMode={manager.settings.toggleMaskMode}
         onBufferTimeChange={manager.automation.setBufferTime}
         onLoopCountChange={manager.automation.setLoopCount}
       />
@@ -51,6 +53,7 @@ export function App() {
               isPlayingOriginal={manager.isPlayingOriginal}
               isPlayingMine={manager.isPlayingMine}
               isRecording={manager.isRecording}
+              maskModeEnabled={manager.settings.maskMode}
               totalDuration={manager.totalDuration}
               onNavigate={manager.navigate}
               onPlayOriginal={manager.playOriginal}

@@ -8,6 +8,7 @@ interface Props {
   isPlayingOriginal: boolean;
   isPlayingMine: boolean;
   isRecording: boolean;
+  maskModeEnabled: boolean;
   totalDuration: number;
   onNavigate: (dir: NavigationDirection) => void;
   onPlayOriginal: (segment: Segment) => void;
@@ -23,6 +24,7 @@ export function SentenceView({
   isPlayingOriginal,
   isPlayingMine,
   isRecording,
+  maskModeEnabled,
   totalDuration,
   onNavigate,
   onPlayOriginal,
@@ -43,6 +45,7 @@ export function SentenceView({
         isPlayingOriginal={false}
         isPlayingMine={false}
         isRecording={false}
+        maskModeEnabled={maskModeEnabled}
         isFirst={false}
         isLast={false}
         totalDuration={totalDuration}
@@ -62,6 +65,7 @@ export function SentenceView({
           isPlayingOriginal={isPlayingOriginal}
           isPlayingMine={isPlayingMine}
           isRecording={isRecording}
+          maskModeEnabled={maskModeEnabled}
           isFirst={activeIndex === 0}
           isLast={activeIndex === segments.length - 1}
           totalDuration={totalDuration}
@@ -83,6 +87,7 @@ export function SentenceView({
         isPlayingOriginal={false}
         isPlayingMine={false}
         isRecording={false}
+        maskModeEnabled={maskModeEnabled}
         isFirst={false}
         isLast={false}
         totalDuration={totalDuration}

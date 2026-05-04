@@ -6,16 +6,21 @@ import { useAudioPlayer } from './useAudioPlayer';
 import type { UseAutoCruiseReturn } from './useAutoCruise';
 import { useAutoCruise } from './useAutoCruise';
 import { usePipeline } from './usePipeline';
+import { usePracticeSettings } from './usePracticeSettings';
 import { usePronunciationScorer } from './usePronunciationScorer';
 import { useRecorder } from './useRecorder';
 
 export function useShadowingManager() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [playbackSpeed, setPlaybackSpeed] = useState(1.0);
   const [phase, setPhase] = useState<ShadowingPhase>(ShadowingPhase.Idle);
 
+  const settings = usePracticeSettings();
+
   const pipeline = usePipeline();
-  const originalPlayer = useAudioPlayer(pipeline.audioBuffer, playbackSpeed);
+  const originalPlayer = useAudioPlayer(
+    pipeline.audioBuffer,
+    settings.playbackSpeed,
+  );
   const minePlayer = useAudioPlayer(null, 1.0);
   const recorder = useRecorder();
   const scorer = usePronunciationScorer({
@@ -228,7 +233,6 @@ export function useShadowingManager() {
     error: pipeline.error,
     audioBuffer: pipeline.audioBuffer,
     totalDuration: pipeline.totalDuration,
-    playbackSpeed,
     isPlayingOriginal: originalPlayer.isPlaying,
     isPlayingMine: minePlayer.isPlaying,
     isRecording: recorder.isRecording,
@@ -237,13 +241,20 @@ export function useShadowingManager() {
     // Actions
     upload,
     reset: pipeline.reset,
-    setPlaybackSpeed,
     playOriginal,
     startRecord,
     stopRecord,
     playMine,
     navigate,
     jump,
+
+    // Settings
+    settings: {
+      maskMode: settings.maskMode,
+      playbackSpeed: settings.playbackSpeed,
+      toggleMaskMode: settings.toggleMaskMode,
+      setPlaybackSpeed: settings.setPlaybackSpeed,
+    },
 
     // Automation (Auto-Cruise)
     automation: {

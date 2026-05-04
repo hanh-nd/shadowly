@@ -7,11 +7,13 @@ interface Props {
   autoStopEnabled: boolean;
   autoCruiseEnabled: boolean;
   scoringEnabled: boolean;
+  maskModeEnabled: boolean;
   bufferTime: number;
   loopCount: number;
   onToggleAutoStop: () => void;
   onToggleAutoCruise: () => void;
   onToggleScoring: () => void;
+  onToggleMaskMode: () => void;
   onBufferTimeChange: (t: number) => void;
   onLoopCountChange: (n: number) => void;
 }
@@ -23,11 +25,13 @@ export function Sidebar({
   autoStopEnabled,
   autoCruiseEnabled,
   scoringEnabled,
+  maskModeEnabled,
   bufferTime,
   loopCount,
   onToggleAutoStop,
   onToggleAutoCruise,
   onToggleScoring,
+  onToggleMaskMode,
   onBufferTimeChange,
   onLoopCountChange,
 }: Props) {
@@ -145,6 +149,25 @@ export function Sidebar({
                   type="checkbox"
                   checked={scoringEnabled}
                   onChange={onToggleScoring}
+                  className="sr-only peer"
+                />
+                <div className="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>
+              </label>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-2">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <span className="font-label-sm text-label-sm text-on-surface-variant">
+                  Mask Mode
+                </span>
+              </div>
+              <label className="relative inline-flex items-center cursor-pointer">
+                <input
+                  type="checkbox"
+                  checked={maskModeEnabled}
+                  onChange={onToggleMaskMode}
                   className="sr-only peer"
                 />
                 <div className="w-9 h-5 bg-surface-variant peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-primary"></div>

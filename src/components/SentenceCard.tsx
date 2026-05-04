@@ -8,6 +8,7 @@ interface Props {
   isPlayingOriginal: boolean;
   isPlayingMine: boolean;
   isRecording: boolean;
+  maskModeEnabled: boolean;
   isFirst: boolean;
   isLast: boolean;
   totalDuration: number;
@@ -43,6 +44,7 @@ export function SentenceCard({
   isPlayingOriginal,
   isPlayingMine,
   isRecording,
+  maskModeEnabled,
   isFirst,
   isLast,
   totalDuration,
@@ -55,13 +57,14 @@ export function SentenceCard({
   onNext,
 }: Props) {
   if (mode !== SentenceCardMode.Active) {
+    const text = maskModeEnabled ? '(masked)' : segment?.text || '\u00A0';
     return (
       <div
         className={`py-4 px-6 opacity-40 transition-opacity ${segment ? 'cursor-pointer hover:opacity-60' : 'cursor-default'}`}
         onClick={segment ? onClick : undefined}
       >
         <p className="font-display-inactive text-display-inactive text-on-surface-variant truncate">
-          {segment?.text || '\u00A0'}
+          {text}
         </p>
       </div>
     );
@@ -85,7 +88,9 @@ export function SentenceCard({
       </div>
 
       {/* Sentence text */}
-      <p className="font-display-active text-display-active text-on-background mb-8 relative z-10">
+      <p
+        className={`font-display-active text-display-active text-on-background mb-8 relative z-10 ${maskModeEnabled ? 'blur-md' : ''}`}
+      >
         {Array.isArray(segment.wordScores) &&
         segment.wordTimestamps &&
         segment.wordTimestamps.length === segment.wordScores.length
