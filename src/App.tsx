@@ -1,5 +1,4 @@
 import { LoadingOverlay } from './components/LoadingOverlay';
-import { ProgressBar } from './components/ProgressBar';
 import { SentenceView } from './components/SentenceView';
 import { Sidebar } from './components/Sidebar';
 import { TopBar } from './components/TopBar';
@@ -30,8 +29,8 @@ export function App() {
       />
 
       <main className="flex-1 lg:ml-64 relative min-h-screen">
-        <TopBar />
-        <ProgressBar
+        <TopBar
+          filename={manager.filename}
           activeIndex={manager.activeIndex}
           total={manager.segments.length}
         />

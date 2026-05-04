@@ -233,6 +233,7 @@ export function useShadowingManager() {
     error: pipeline.error,
     audioBuffer: pipeline.audioBuffer,
     totalDuration: pipeline.totalDuration,
+    filename: pipeline.filename,
     isPlayingOriginal: originalPlayer.isPlaying,
     isPlayingMine: minePlayer.isPlaying,
     isRecording: recorder.isRecording,

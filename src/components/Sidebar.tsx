@@ -59,10 +59,10 @@ export function Sidebar({
         </div>
         <div>
           <h2 className="font-label-sm text-label-sm text-on-surface">
-            Session Control
+            Shadowly
           </h2>
           <p className="text-[11px] text-on-surface-variant font-medium">
-            Minimalist Tutor Mode
+            Audio Shadowing Assistant
           </p>
         </div>
       </div>

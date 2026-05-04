@@ -25,6 +25,7 @@ export interface PipelineHook {
   error: string | null;
   audioBuffer: AudioBuffer | null;
   totalDuration: number;
+  filename: string | null;
 }
 
 export function usePipeline(): PipelineHook {
@@ -35,6 +36,7 @@ export function usePipeline(): PipelineHook {
   const [error, setError] = useState<string | null>(null);
   const [audioBuffer, setAudioBuffer] = useState<AudioBuffer | null>(null);
   const [totalDuration, setTotalDuration] = useState(0);
+  const [filename, setFilename] = useState<string | null>(null);
 
   const abortControllerRef = useRef<AbortController | null>(null);
 
@@ -46,6 +48,7 @@ export function usePipeline(): PipelineHook {
     setProgress(null);
     setAudioBuffer(null);
     setTotalDuration(0);
+    setFilename(null);
   }, []);
 
   const process = async (file: File) => {
@@ -60,6 +63,7 @@ export function usePipeline(): PipelineHook {
     setError(null);
     setAudioBuffer(null);
     setTotalDuration(0);
+    setFilename(file.name);
     setStatus(ProcessingState.LoadingModel);
 
     try {
@@ -161,5 +165,6 @@ export function usePipeline(): PipelineHook {
     error,
     audioBuffer,
     totalDuration,
+    filename,
   };
 }

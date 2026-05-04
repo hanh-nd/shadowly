@@ -9,7 +9,7 @@ Check out [Live Demo](https://shadowly.netlify.app).
 - **Audio Shadowing**: Practice pronunciation by repeating after native speaker audio segments.
 - **In-Browser ML**: All machine learning models run locally in your browser using WebAssembly. No audio is ever sent to a remote server.
 - **Real-time Transcription**: Transcribes spoken audio on the fly.
-- **Pronunciation Scoring**: Evaluates your pronunciation on a word-by-word basis using Dynamic Time Warping (DTW) and deep learning audio embeddings (`Xenova/hubert-base-ls960`).
+- **Pronunciation Scoring**: Evaluates your pronunciation on a word-by-word basis.
 - **Voice Activity Detection (VAD)**: Smartly detects when you start and stop speaking.
 
 ## Tech Stack
