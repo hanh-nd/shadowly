@@ -57,14 +57,16 @@ export function SentenceCard({
   onNext,
 }: Props) {
   if (mode !== SentenceCardMode.Active) {
-    const text = maskModeEnabled ? '(masked)' : segment?.text || '\u00A0';
+    const text = segment?.text;
+    const displayText = maskModeEnabled && text ? '(masked)' : text || '\u00A0';
+
     return (
       <div
         className={`py-4 px-6 opacity-40 transition-opacity ${segment ? 'cursor-pointer hover:opacity-60' : 'cursor-default'}`}
         onClick={segment ? onClick : undefined}
       >
         <p className="font-display-inactive text-display-inactive text-on-surface-variant truncate">
-          {text}
+          {displayText}
         </p>
       </div>
     );
