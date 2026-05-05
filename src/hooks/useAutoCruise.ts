@@ -1,10 +1,15 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 
 import { MS_PER_SECOND } from '../constants';
 import type { Segment } from '../types';
 import { ShadowingPhase } from '../types';
 
 export interface UseAutoCruiseParams {
+  autoStopEnabled: boolean;
+  autoCruiseEnabled: boolean;
+  scoringEnabled: boolean;
+  bufferTime: number;
+  loopCount: number;
   segments: Segment[];
   activeIndex: number;
   phase: ShadowingPhase;
@@ -22,21 +27,16 @@ export interface UseAutoCruiseParams {
 }
 
 export interface UseAutoCruiseReturn {
-  autoStopEnabled: boolean;
-  autoCruiseEnabled: boolean;
-  scoringEnabled: boolean;
-  bufferTime: number;
-  loopCount: number;
-  toggleAutoStop: () => void;
-  toggleAutoCruise: () => void;
-  toggleScoring: () => void;
   startCruise: () => void;
   cancelCruise: () => void;
-  setBufferTime: (t: number) => void;
-  setLoopCount: (n: number) => void;
 }
 
 export function useAutoCruise({
+  autoStopEnabled,
+  autoCruiseEnabled,
+  scoringEnabled,
+  bufferTime,
+  loopCount,
   segments,
   activeIndex,
   phase,
@@ -52,12 +52,6 @@ export function useAutoCruise({
   onNavigateNext,
   onPhaseChange,
 }: UseAutoCruiseParams): UseAutoCruiseReturn {
-  const [autoStopEnabled, setAutoStopEnabled] = useState(true);
-  const [autoCruiseEnabled, setAutoCruiseEnabled] = useState(true);
-  const [scoringEnabled, setScoringEnabled] = useState(false);
-  const [bufferTime, setBufferTime] = useState(2);
-  const [loopCount, setLoopCount] = useState(3);
-
   const autoStopTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const scoringTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const hasStartedRecordingRef = useRef(false);
@@ -134,23 +128,12 @@ export function useAutoCruise({
     onPhaseChange(ShadowingPhase.PlayingOriginal);
   }, [autoCruiseEnabled, onPhaseChange]);
 
-  const toggleAutoStop = useCallback(() => {
-    setAutoStopEnabled((prev) => !prev);
-  }, []);
-
-  const toggleAutoCruise = useCallback(() => {
-    setAutoCruiseEnabled((prev) => {
-      const next = !prev;
-      if (!next && phase !== ShadowingPhase.Idle) {
-        cancelCruise();
-      }
-      return next;
-    });
-  }, [phase, cancelCruise]);
-
-  const toggleScoring = useCallback(() => {
-    setScoringEnabled((prev) => !prev);
-  }, []);
+  // Cancel cruise when autoCruise is disabled while a session is active
+  useEffect(() => {
+    if (!autoCruiseEnabled && phase !== ShadowingPhase.Idle) {
+      cancelCruise();
+    }
+  }, [autoCruiseEnabled, phase, cancelCruise]);
 
   // Effect A — Auto-stop timer
   useEffect(() => {
@@ -280,18 +263,5 @@ export function useAutoCruise({
     }
   }, [micError, phase, cancelCruise]);
 
-  return {
-    autoStopEnabled,
-    autoCruiseEnabled,
-    scoringEnabled,
-    bufferTime,
-    loopCount,
-    toggleAutoStop,
-    toggleAutoCruise,
-    toggleScoring,
-    startCruise,
-    cancelCruise,
-    setBufferTime,
-    setLoopCount,
-  };
+  return { startCruise, cancelCruise };
 }

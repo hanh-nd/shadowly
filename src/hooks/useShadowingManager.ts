@@ -1,9 +1,8 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 
 import type { Segment } from '../types';
 import { NavigationDirection, ShadowingPhase } from '../types';
 import { useAudioPlayer } from './useAudioPlayer';
-import type { UseAutoCruiseReturn } from './useAutoCruise';
 import { useAutoCruise } from './useAutoCruise';
 import { usePipeline } from './usePipeline';
 import { usePracticeSettings } from './usePracticeSettings';
@@ -28,7 +27,6 @@ export function useShadowingManager() {
   });
 
   const currentSegment = pipeline.segments[activeIndex];
-  const cruiseRef = useRef<UseAutoCruiseReturn | null>(null);
 
   const handleStopRecord = useCallback(async () => {
     const blob = await recorder.stopRecording();
@@ -38,10 +36,7 @@ export function useShadowingManager() {
       URL.revokeObjectURL(currentSegment.recordingUrl);
     }
 
-    // Automation settings are handled by the cruise hook
-    const isScoringEnabled = cruiseRef.current?.scoringEnabled ?? true;
-
-    if (isScoringEnabled) {
+    if (settings.scoringEnabled) {
       pipeline.patchSegment(activeIndex, {
         recordingUrl: newUrl,
         isScoring: true,
@@ -58,7 +53,14 @@ export function useShadowingManager() {
         isScoring: false,
       });
     }
-  }, [recorder, pipeline, activeIndex, scorer, currentSegment]);
+  }, [
+    recorder,
+    pipeline,
+    activeIndex,
+    scorer,
+    currentSegment,
+    settings.scoringEnabled,
+  ]);
 
   const handleNavigate = useCallback(
     (dir: NavigationDirection) => {
@@ -91,6 +93,11 @@ export function useShadowingManager() {
   }, [minePlayer, originalPlayer, pipeline, activeIndex, scorer, recorder]);
 
   const cruise = useAutoCruise({
+    autoStopEnabled: settings.autoStopEnabled,
+    autoCruiseEnabled: settings.autoCruiseEnabled,
+    scoringEnabled: settings.scoringEnabled,
+    bufferTime: settings.bufferTime,
+    loopCount: settings.loopCount,
     segments: pipeline.segments,
     activeIndex: activeIndex,
     phase,
@@ -123,11 +130,7 @@ export function useShadowingManager() {
   });
 
   useEffect(() => {
-    cruiseRef.current = cruise;
-  }, [cruise]);
-
-  useEffect(() => {
-    if (!cruise.scoringEnabled) return;
+    if (!settings.scoringEnabled) return;
     const segment = pipeline.segments[activeIndex];
     if (!segment || !pipeline.audioBuffer) return;
     const sr = pipeline.audioBuffer.sampleRate;
@@ -138,7 +141,8 @@ export function useShadowingManager() {
       .slice(startFrame, endFrame);
     scorer.precompute(activeIndex, segment.text, refSlice, sr);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [activeIndex, cruise.scoringEnabled]);
+  }, [activeIndex, settings.scoringEnabled]);
+
   const upload = useCallback(
     (file: File) => {
       setPhase(ShadowingPhase.Idle);
@@ -165,7 +169,7 @@ export function useShadowingManager() {
       minePlayer.stop();
       originalPlayer.play(segment);
 
-      if (cruise.autoCruiseEnabled && phase === ShadowingPhase.Idle) {
+      if (settings.autoCruiseEnabled && phase === ShadowingPhase.Idle) {
         setPhase(ShadowingPhase.PlayingOriginal);
       }
     },
@@ -173,7 +177,7 @@ export function useShadowingManager() {
       originalPlayer,
       recorder,
       handleStopRecord,
-      cruise.autoCruiseEnabled,
+      settings.autoCruiseEnabled,
       phase,
       minePlayer,
     ],
@@ -254,25 +258,25 @@ export function useShadowingManager() {
     settings: {
       maskMode: settings.maskMode,
       playbackSpeed: settings.playbackSpeed,
+      autoStopEnabled: settings.autoStopEnabled,
+      autoCruiseEnabled: settings.autoCruiseEnabled,
+      scoringEnabled: settings.scoringEnabled,
+      bufferTime: settings.bufferTime,
+      loopCount: settings.loopCount,
       toggleMaskMode: settings.toggleMaskMode,
       setPlaybackSpeed: settings.setPlaybackSpeed,
+      toggleAutoStop: settings.toggleAutoStop,
+      toggleAutoCruise: settings.toggleAutoCruise,
+      toggleScoring: settings.toggleScoring,
+      setBufferTime: settings.setBufferTime,
+      setLoopCount: settings.setLoopCount,
     },
 
     // Automation (Auto-Cruise)
     automation: {
-      autoStopEnabled: cruise.autoStopEnabled,
-      autoCruiseEnabled: cruise.autoCruiseEnabled,
-      scoringEnabled: cruise.scoringEnabled,
-      bufferTime: cruise.bufferTime,
       cruisePhase: phase,
-      loopCount: cruise.loopCount,
-      setBufferTime: cruise.setBufferTime,
-      setLoopCount: cruise.setLoopCount,
       startCruise: cruise.startCruise,
       cancelCruise: cruise.cancelCruise,
-      toggleAutoStop: cruise.toggleAutoStop,
-      toggleAutoCruise: cruise.toggleAutoCruise,
-      toggleScoring: cruise.toggleScoring,
     },
   };
 }

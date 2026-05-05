@@ -14,18 +14,18 @@ export function App() {
         onFileSelect={manager.upload}
         speed={manager.settings.playbackSpeed}
         onSpeedChange={manager.settings.setPlaybackSpeed}
-        autoStopEnabled={manager.automation.autoStopEnabled}
-        autoCruiseEnabled={manager.automation.autoCruiseEnabled}
-        scoringEnabled={manager.automation.scoringEnabled}
+        autoStopEnabled={manager.settings.autoStopEnabled}
+        autoCruiseEnabled={manager.settings.autoCruiseEnabled}
+        scoringEnabled={manager.settings.scoringEnabled}
         maskModeEnabled={manager.settings.maskMode}
-        bufferTime={manager.automation.bufferTime}
-        loopCount={manager.automation.loopCount}
-        onToggleAutoStop={manager.automation.toggleAutoStop}
-        onToggleAutoCruise={manager.automation.toggleAutoCruise}
-        onToggleScoring={manager.automation.toggleScoring}
+        bufferTime={manager.settings.bufferTime}
+        loopCount={manager.settings.loopCount}
+        onToggleAutoStop={manager.settings.toggleAutoStop}
+        onToggleAutoCruise={manager.settings.toggleAutoCruise}
+        onToggleScoring={manager.settings.toggleScoring}
         onToggleMaskMode={manager.settings.toggleMaskMode}
-        onBufferTimeChange={manager.automation.setBufferTime}
-        onLoopCountChange={manager.automation.setLoopCount}
+        onBufferTimeChange={manager.settings.setBufferTime}
+        onLoopCountChange={manager.settings.setLoopCount}
       />
 
       <main className="flex-1 lg:ml-64 relative min-h-screen">
