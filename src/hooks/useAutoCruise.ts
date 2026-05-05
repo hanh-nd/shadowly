@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef } from 'react';
 
-import { MS_PER_SECOND } from '../constants';
+import { MS_PER_SECOND, PHASE_TIMEOUT } from '../constants';
 import type { Segment } from '../types';
 import { ShadowingPhase } from '../types';
 
@@ -245,7 +245,7 @@ export function useAutoCruise({
           cancelCruise();
         }
         scoringTimeoutRef.current = null;
-      }, 2000);
+      }, PHASE_TIMEOUT);
     }
 
     return () => {
