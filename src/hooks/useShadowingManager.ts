@@ -47,20 +47,8 @@ export function useShadowingManager() {
         isScoring: true,
       });
 
-      if (pipeline.audioBuffer && currentSegment?.wordTimestamps?.length) {
-        const sr = pipeline.audioBuffer.sampleRate;
-        const startFrame = Math.floor(currentSegment.start * sr);
-        const endFrame = Math.floor(currentSegment.end * sr);
-        const refSlice = pipeline.audioBuffer
-          .getChannelData(0)
-          .slice(startFrame, endFrame);
-        scorer.score(
-          activeIndex,
-          currentSegment.wordTimestamps,
-          refSlice,
-          sr,
-          blob,
-        );
+      if (pipeline.audioBuffer && currentSegment) {
+        scorer.score(activeIndex, blob);
       } else {
         pipeline.patchSegment(activeIndex, { isScoring: false });
       }
@@ -138,6 +126,19 @@ export function useShadowingManager() {
     cruiseRef.current = cruise;
   }, [cruise]);
 
+  useEffect(() => {
+    if (!cruise.scoringEnabled) return;
+    const segment = pipeline.segments[activeIndex];
+    if (!segment || !pipeline.audioBuffer) return;
+    const sr = pipeline.audioBuffer.sampleRate;
+    const startFrame = Math.floor(segment.start * sr);
+    const endFrame = Math.floor(segment.end * sr);
+    const refSlice = pipeline.audioBuffer
+      .getChannelData(0)
+      .slice(startFrame, endFrame);
+    scorer.precompute(activeIndex, segment.text, refSlice, sr);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [activeIndex, cruise.scoringEnabled]);
   const upload = useCallback(
     (file: File) => {
       setPhase(ShadowingPhase.Idle);

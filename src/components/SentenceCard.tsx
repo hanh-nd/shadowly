@@ -98,12 +98,10 @@ export function SentenceCard({
         className={`font-display-active text-display-active text-on-background mb-8 relative z-10 transition-all ${maskModeEnabled ? 'cursor-pointer hover:opacity-80' : ''} ${maskModeEnabled && !isUnmasked ? 'blur-md' : ''}`}
         onClick={() => maskModeEnabled && setIsUnmasked(!isUnmasked)}
       >
-        {Array.isArray(segment.wordScores) &&
-        segment.wordTimestamps &&
-        segment.wordTimestamps.length === segment.wordScores.length
-          ? segment.wordTimestamps.map((wt, i) => (
+        {Array.isArray(segment.wordScores)
+          ? segment.text.split(' ').map((word, i) => (
               <span key={i} className={getScoreColor(segment.wordScores![i])}>
-                {wt.word}{' '}
+                {word}{' '}
               </span>
             ))
           : segment.text}

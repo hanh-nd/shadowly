@@ -15,7 +15,12 @@ export interface PipelineHook {
     patch: Partial<
       Pick<
         Segment,
-        'text' | 'recordingUrl' | 'isScoring' | 'wordScores' | 'wordTimestamps'
+        | 'text'
+        | 'recordingUrl'
+        | 'isScoring'
+        | 'wordScores'
+        | 'wordTimestamps'
+        | 'chunks'
       >
     >,
   ) => void;
@@ -144,6 +149,7 @@ export function usePipeline(): PipelineHook {
           | 'isScoring'
           | 'wordScores'
           | 'wordTimestamps'
+          | 'chunks'
         >
       >,
     ) => {

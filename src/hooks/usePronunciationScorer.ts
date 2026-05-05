@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useRef } from 'react';
 
-import type { WordTimestamp } from '../types';
-import { WordScore } from '../types';
+import { type IpaChunk, WordScore } from '../types';
 import {
   decodeAndResampleTo16kHz,
   resampleFloat32ArrayTo16kHz,
@@ -11,20 +10,34 @@ import type { PipelineHook } from './usePipeline';
 interface ScoringWorkerResponse {
   type: 'result';
   segmentId: number;
-  wordScores: WordScore[];
+  wordScores: (WordScore | null)[];
   generation: number;
+}
+
+interface ScoringWorkerPrecomputeResult {
+  type: 'precomputeResult';
+  segmentId: number;
+  generation: number;
+  chunks: IpaChunk[];
 }
 
 interface ScoringWorkerError {
   type: 'error';
   segmentId: number;
   generation: number;
+  error?: string;
 }
 
 interface ScoringWorkerModelProgress {
   type: 'modelProgress';
   progress: number;
 }
+
+type ScoringWorkerIncoming =
+  | ScoringWorkerResponse
+  | ScoringWorkerPrecomputeResult
+  | ScoringWorkerError
+  | ScoringWorkerModelProgress;
 
 export function usePronunciationScorer(params: {
   patchSegment: PipelineHook['patchSegment'];
@@ -46,15 +59,10 @@ export function usePronunciationScorer(params: {
       },
     );
 
-    worker.onmessage = (
-      e: MessageEvent<
-        ScoringWorkerResponse | ScoringWorkerError | ScoringWorkerModelProgress
-      >,
-    ) => {
+    worker.onmessage = (e: MessageEvent<ScoringWorkerIncoming>) => {
       const msg = e.data;
 
       if (msg.type === 'modelProgress') {
-        // Model downloading — segment stays isScoring:true, no action needed
         return;
       }
 
@@ -64,12 +72,18 @@ export function usePronunciationScorer(params: {
         return; // Stale result
       }
 
+      if (msg.type === 'precomputeResult') {
+        patchSegment(msg.segmentId, { chunks: msg.chunks });
+        return;
+      }
+
       if (msg.type === 'result') {
         patchSegment(msg.segmentId, {
           wordScores: msg.wordScores,
           isScoring: false,
         });
       } else if (msg.type === 'error') {
+        console.error(`Worker error for segment ${msg.segmentId}:`, msg.error);
         patchSegment(msg.segmentId, { isScoring: false });
       }
 
@@ -93,31 +107,58 @@ export function usePronunciationScorer(params: {
     return worker;
   }, [patchSegment]);
 
-  const score = useCallback(
+  const precompute = useCallback(
     (
       segmentId: number,
-      wordTimestamps: WordTimestamp[],
+      refText: string,
       refSlice: Float32Array,
       refSampleRate: number,
-      blob: Blob,
     ) => {
+      const currentGen = (generationRef.current.get(segmentId) ?? 0) + 1;
+      generationRef.current.set(segmentId, currentGen);
+
+      (async () => {
+        try {
+          const refAudio = await resampleFloat32ArrayTo16kHz(
+            refSlice,
+            refSampleRate,
+          );
+
+          if (generationRef.current.get(segmentId) !== currentGen) return;
+
+          const worker = initWorker();
+          worker.postMessage(
+            {
+              type: 'precompute',
+              segmentId,
+              generation: currentGen,
+              refText,
+              refAudio,
+            },
+            [refAudio.buffer],
+          );
+        } catch (err) {
+          console.error('Failed to precompute scoring:', err);
+        }
+      })();
+    },
+    [initWorker],
+  );
+
+  const score = useCallback(
+    (segmentId: number, blob: Blob) => {
       const MIN_AUDIO_BLOB_SIZE = 4096;
-      if (wordTimestamps.length === 0 || blob.size < MIN_AUDIO_BLOB_SIZE) {
+      if (blob.size < MIN_AUDIO_BLOB_SIZE) {
         patchSegment(segmentId, { isScoring: false });
         return;
       }
 
-      const currentGen = (generationRef.current.get(segmentId) ?? 0) + 1;
-      generationRef.current.set(segmentId, currentGen);
+      const currentGen = generationRef.current.get(segmentId) ?? 0;
 
       // Fire-and-forget
       (async () => {
         try {
           const userAudio = await decodeAndResampleTo16kHz(blob);
-          const refAudio = await resampleFloat32ArrayTo16kHz(
-            refSlice,
-            refSampleRate,
-          );
 
           // Stale check
           if (generationRef.current.get(segmentId) !== currentGen) return;
@@ -129,12 +170,10 @@ export function usePronunciationScorer(params: {
             {
               type: 'score',
               segmentId,
-              refAudio,
-              userAudio,
-              wordTimestamps,
               generation: currentGen,
+              userAudio,
             },
-            [refAudio.buffer, userAudio.buffer],
+            [userAudio.buffer],
           );
         } catch (err) {
           console.error('Failed to prepare scoring:', err);
@@ -157,5 +196,5 @@ export function usePronunciationScorer(params: {
     };
   }, []);
 
-  return { score, clearScores };
+  return { precompute, score, clearScores };
 }

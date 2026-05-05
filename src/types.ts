@@ -19,6 +19,25 @@ export interface Segment {
   wordTimestamps?: WordTimestamp[];
   wordScores?: (WordScore | null)[] | null;
   isScoring?: boolean;
+  chunks?: IpaChunk[];
+}
+
+export interface NormalizationResult {
+  normalizedWords: string[];
+  sourceIndices: number[];
+}
+
+export interface IpaChunk {
+  sourceIndices: number[]; // indices into original text.split(' ')
+  words: string[]; // original text words at those indices
+  dictionaryIpa: string; // G2P output, eSpeak NG notation
+  nativeAcousticIpa: string; // acoustic model output, may span word boundaries
+}
+
+export interface PrecomputeResult {
+  segmentId: number;
+  chunks: IpaChunk[];
+  nativeAcousticIpa: string;
 }
 
 export enum ProcessingState {
