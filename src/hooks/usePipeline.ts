@@ -1,6 +1,10 @@
 import { useCallback, useRef, useState } from 'react';
 
-import { MS_PER_SECOND, TRANSCRIBING_TEXT } from '../constants';
+import {
+  MS_PER_SECOND,
+  TARGET_SAMPLE_RATE,
+  TRANSCRIBING_TEXT,
+} from '../constants';
 import { engine } from '../lib/TranscriptionEngine';
 import type { Segment, TranscribingProgress } from '../types';
 import { ProcessingState } from '../types';
@@ -97,13 +101,19 @@ export function usePipeline(): PipelineHook {
       }
 
       // Phase 1: Show all segments immediately
-      const initialSegments: Segment[] = audioSegments.map((s, i) => ({
-        id: i,
-        text: TRANSCRIBING_TEXT,
-        start: s.start / MS_PER_SECOND,
-        end: s.end / MS_PER_SECOND,
-        recordingUrl: null,
-      }));
+      const initialSegments: Segment[] = audioSegments.map((s, i) => {
+        const endSec = s.end / MS_PER_SECOND;
+        const durationSec = s.audio.length / TARGET_SAMPLE_RATE;
+        const startSec = Math.max(0, endSec - durationSec);
+
+        return {
+          id: i,
+          text: TRANSCRIBING_TEXT,
+          start: startSec,
+          end: endSec,
+          recordingUrl: null,
+        };
+      });
       setSegments(initialSegments);
       setProgress({ current: 0, total: audioSegments.length });
 
