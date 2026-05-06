@@ -9,13 +9,15 @@ Check out [Live Demo](https://shadowly.netlify.app).
 - **Audio Shadowing**: Practice pronunciation by repeating after native speaker audio segments.
 - **In-Browser ML**: All machine learning models run locally in your browser using WebAssembly. No audio is ever sent to a remote server.
 - **Real-time Transcription**: Transcribes spoken audio on the fly.
-- **Pronunciation Scoring**: Evaluates your pronunciation on a word-by-word basis.
+- **Pronunciation Scoring**: Evaluates your pronunciation on a word-by-word basis using a phoneme-level alignment algorithm.
 - **Voice Activity Detection (VAD)**: Smartly detects when you start and stop speaking.
+- **Auto-Cruise**: Hands-free practice loop that automatically advances through segments as you speak.
 
 ## Tech Stack
 
 - **Frontend**: React 19, TypeScript, Vite, Tailwind CSS
-- **Machine Learning**: `@huggingface/transformers` (Transformers.js)
+- **Machine Learning**: `@huggingface/transformers` (Transformers.js), Whisper for transcription, wav2vec2-alignment for acoustic phoneme recognition
+- **G2P (Grapheme-to-Phoneme)**: `espeak-ng` compiled to WebAssembly
 - **Audio Processing**: `@ricky0123/vad-web` for Voice Activity Detection
 
 ## Getting Started
@@ -62,8 +64,11 @@ This will compile the TypeScript code and bundle the application into the `dist`
 
 1. **Audio Input**: The application captures audio from your microphone using the Web Audio API.
 2. **VAD**: Voice Activity Detection monitors the stream to automatically start and stop recording when you speak.
-3. **Processing**: The recorded audio is decoded and resampled to 16kHz via Web Workers to prevent blocking the main UI thread.
-4. **Scoring**: A `scoring.worker` computes audio embeddings and uses DTW (Dynamic Time Warping) to compare your pronunciation against the reference audio segment.
+3. **Transcription**: Whisper models running via Transformers.js transcribe the audio locally.
+4. **Scoring**: The `scoring.worker` uses a three-pillar IPA architecture:
+   - **G2P**: Converts reference text into expected IPA phonemes using `espeak-ng` WASM.
+   - **CTC**: Extracts spoken IPA phonemes from user audio using a quantized `wav2vec2-alignment` ONNX model.
+   - **Alignment**: Employs the Needleman-Wunsch algorithm to globally align the expected and spoken phoneme sequences, producing accurate word-level scores without speaker-identity bias.
 5. **Feedback**: You receive immediate visual feedback on your pronunciation accuracy for each word.
 
 ## License
