@@ -27,9 +27,6 @@ export function LoadingOverlay({
           <p className="text-on-surface font-headline-md text-headline-md">
             Loading models…
           </p>
-          <p className="text-on-surface-variant text-body-md mt-1">
-            This only happens once — cached forever after.
-          </p>
         </div>
         <div className="flex flex-col gap-4 w-64 mt-4">
           {activeLoads.map((task) => (

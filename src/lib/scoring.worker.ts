@@ -180,31 +180,27 @@ self.onmessage = async (e: MessageEvent) => {
 
   try {
     if (type === ScoringWorkerMessageType.LoadModels) {
-      await scoringEngine.ensureModels((p) =>
+      await scoringEngine.ensureModels((p, label) =>
         self.postMessage({
           type: ScoringWorkerMessageType.ModelProgress,
           progress: p,
+          label,
         }),
       );
       self.postMessage({ type: ScoringWorkerMessageType.ModelsReady });
     } else if (type === ScoringWorkerMessageType.Precompute) {
       const { refText, refAudio } = e.data;
 
-      await scoringEngine.ensureModels((p) =>
-        self.postMessage({
-          type: ScoringWorkerMessageType.ModelProgress,
-          progress: p,
-        }),
-      );
+      await scoringEngine.ensureModels();
 
       const vocab = scoringEngine.getVocab();
       const { normalizedWords, sourceIndices } = normalize(refText);
 
-      const dictTokensPerWord = await Promise.all(
-        normalizedWords.map((w) =>
-          scoringEngine.g2pWord(w).then((ipa) => tokenize(ipa, vocab)),
-        ),
-      );
+      const dictTokensPerWord: string[][] = [];
+      const ipas = await scoringEngine.g2pWords(normalizedWords);
+      for (let i = 0; i < normalizedWords.length; i++) {
+        dictTokensPerWord.push(tokenize(ipas[i], vocab));
+      }
 
       const nativeIpaStr = await scoringEngine.inferIpa(refAudio);
       console.debug(

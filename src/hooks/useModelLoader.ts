@@ -72,7 +72,7 @@ export function useModelLoader(options: { scoringEnabled: boolean }) {
     );
 
     const handleMessage = (e: MessageEvent) => {
-      const { type } = e.data;
+      const { type, progress, label } = e.data;
       if (type === ScoringWorkerMessageType.ModelProgress) {
         if (isMounted) {
           setTasks((prev) =>
@@ -81,7 +81,8 @@ export function useModelLoader(options: { scoringEnabled: boolean }) {
                   ...prev,
                   [ModelId.Scoring]: {
                     ...prev[ModelId.Scoring],
-                    progress: e.data.progress,
+                    progress,
+                    label: label || prev[ModelId.Scoring].label,
                   },
                 }
               : prev,

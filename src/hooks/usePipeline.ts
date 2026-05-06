@@ -1,6 +1,6 @@
 import { useCallback, useRef, useState } from 'react';
 
-import { MS_PER_SECOND } from '../constants';
+import { MS_PER_SECOND, TRANSCRIBING_TEXT } from '../constants';
 import { engine } from '../lib/TranscriptionEngine';
 import type { Segment, TranscribingProgress } from '../types';
 import { ProcessingState } from '../types';
@@ -99,7 +99,7 @@ export function usePipeline(): PipelineHook {
       // Phase 1: Show all segments immediately
       const initialSegments: Segment[] = audioSegments.map((s, i) => ({
         id: i,
-        text: '(transcribing...)',
+        text: TRANSCRIBING_TEXT,
         start: s.start / MS_PER_SECOND,
         end: s.end / MS_PER_SECOND,
         recordingUrl: null,
