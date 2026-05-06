@@ -19,7 +19,7 @@ export function LoadingOverlay({
 }: Props) {
   if (activeLoads.length > 0) {
     return (
-      <div className="fixed inset-0 z-50 bg-background/95 flex flex-col items-center justify-center gap-6 px-8">
+      <div className="fixed inset-0 z-[200] bg-background/95 flex flex-col items-center justify-center gap-6 px-8">
         <span className="material-symbols-outlined text-primary text-[48px] animate-pulse">
           model_training
         </span>

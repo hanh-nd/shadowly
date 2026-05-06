@@ -1,17 +1,26 @@
+import { useState } from 'react';
+
 import { LoadingOverlay } from './components/LoadingOverlay';
 import { SentenceView } from './components/SentenceView';
 import { Sidebar } from './components/Sidebar';
 import { TopBar } from './components/TopBar';
+import { UploadZone } from './components/UploadZone';
 import { useShadowingManager } from './hooks/useShadowingManager';
 import { ProcessingState } from './types';
 
 export function App() {
   const manager = useShadowingManager();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   return (
-    <div className="bg-background text-on-background min-h-screen flex antialiased">
+    <div className="bg-background text-on-background min-h-screen flex w-full antialiased overflow-x-hidden">
       <Sidebar
-        onFileSelect={manager.upload}
+        isOpen={isSidebarOpen}
+        onClose={() => setIsSidebarOpen(false)}
+        onFileSelect={(file) => {
+          manager.upload(file);
+          setIsSidebarOpen(false);
+        }}
         speed={manager.settings.playbackSpeed}
         onSpeedChange={manager.settings.setPlaybackSpeed}
         autoStopEnabled={manager.settings.autoStopEnabled}
@@ -33,6 +42,7 @@ export function App() {
           filename={manager.filename}
           activeIndex={manager.activeIndex}
           total={manager.segments.length}
+          onMenuClick={() => setIsSidebarOpen(true)}
         />
 
         <LoadingOverlay
@@ -71,14 +81,20 @@ export function App() {
             <p className="font-headline-md text-headline-md text-on-surface">
               Ready to practice
             </p>
-            <p className="text-on-surface-variant text-body-md max-w-sm">
-              Upload an audio file from the sidebar to get started.
-            </p>
+            <div className="flex flex-col gap-4 items-center">
+              <p className="text-on-surface-variant text-body-md max-w-sm">
+                Upload an audio file to get started with shadowing.
+              </p>
+              <UploadZone
+                onFileSelect={manager.upload}
+                className="w-full max-w-xs"
+              />
+            </div>
           </div>
         )}
 
         {manager.micError && (
-          <div className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-error-container text-on-error-container px-4 py-3 rounded-lg font-label-sm text-label-sm shadow-lg z-50">
+          <div className="fixed bottom-6 left-1/2 -translate-x-1/2 bg-error-container text-on-error-container px-4 py-3 rounded-lg font-label-sm text-label-sm shadow-lg z-[300]">
             {manager.micError}
           </div>
         )}

@@ -38,7 +38,7 @@ export function SentenceView({
   const next = segments[activeIndex + 1];
 
   return (
-    <div className="pt-32 px-gutter max-w-container-max-width mx-auto flex flex-col gap-stack-lg pb-16">
+    <div className="pt-24 sm:pt-32 px-4 sm:px-gutter max-w-container-max-width mx-auto flex flex-col gap-stack-lg pb-16">
       <SentenceCard
         key={prev?.id ?? 'prev-empty'}
         segment={prev}
