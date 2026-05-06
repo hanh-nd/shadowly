@@ -45,6 +45,7 @@ env.allowLocalModels = false;
 
 // Force SIMD and disable proxy for ONNX Runtime Web
 if (env.backends?.onnx?.wasm) {
+  env.backends.onnx.wasm.numThreads = 1;
   env.backends.onnx.wasm.simd = true;
   env.backends.onnx.wasm.proxy = false;
 }
