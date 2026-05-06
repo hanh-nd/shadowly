@@ -40,6 +40,7 @@ if (typeof self.require === 'undefined') {
 }
 // -------------------------------
 
+env.useBrowserCache = true;
 env.allowLocalModels = false;
 
 const WAV2VEC2_MODEL = 'onnx-community/wav2vec2-lv-60-espeak-cv-ft-ONNX';

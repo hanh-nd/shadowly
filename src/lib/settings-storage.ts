@@ -1,3 +1,5 @@
+import { StorageKey } from '../types';
+
 export interface PracticeSettings {
   maskMode: boolean;
   playbackSpeed: number;
@@ -13,12 +15,10 @@ export interface SettingsStorage {
   save(settings: PracticeSettings): void;
 }
 
-const STORAGE_KEY = 'shadowly:practice-settings';
-
 export const localStorageSettingsStorage: SettingsStorage = {
   load(): Partial<PracticeSettings> {
     try {
-      const raw = localStorage.getItem(STORAGE_KEY);
+      const raw = localStorage.getItem(StorageKey.Settings);
       return raw ? (JSON.parse(raw) as Partial<PracticeSettings>) : {};
     } catch {
       return {};
@@ -26,7 +26,7 @@ export const localStorageSettingsStorage: SettingsStorage = {
   },
   save(settings: PracticeSettings): void {
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(settings));
+      localStorage.setItem(StorageKey.Settings, JSON.stringify(settings));
     } catch {
       // quota exceeded or access restriction — silently ignore
     }

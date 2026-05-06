@@ -1,101 +1,104 @@
 import { useCallback, useEffect, useRef } from 'react';
 
-import { type IpaChunk, WordScore } from '../types';
+import { type IpaChunk, ScoringWorkerMessageType, WordScore } from '../types';
 import {
   decodeAndResampleTo16kHz,
   resampleFloat32ArrayTo16kHz,
 } from '../utils';
+import type { ModelLoaderHook } from './useModelLoader';
 import type { PipelineHook } from './usePipeline';
 
-interface ScoringWorkerResponse {
-  type: 'result';
+interface ScoringWorkerBase {
   segmentId: number;
-  wordScores: (WordScore | null)[];
   generation: number;
 }
 
-interface ScoringWorkerPrecomputeResult {
-  type: 'precomputeResult';
-  segmentId: number;
-  generation: number;
+interface ScoringWorkerResponse extends ScoringWorkerBase {
+  type: ScoringWorkerMessageType.Result;
+  wordScores: (WordScore | null)[];
+}
+
+interface ScoringWorkerPrecomputeResult extends ScoringWorkerBase {
+  type: ScoringWorkerMessageType.PrecomputeResult;
   chunks: IpaChunk[];
 }
 
-interface ScoringWorkerError {
-  type: 'error';
-  segmentId: number;
-  generation: number;
+interface ScoringWorkerError extends ScoringWorkerBase {
+  type: ScoringWorkerMessageType.Error;
   error?: string;
 }
 
-interface ScoringWorkerModelProgress {
-  type: 'modelProgress';
-  progress: number;
+interface ScoringWorkerLifecycle {
+  type:
+    | ScoringWorkerMessageType.ModelProgress
+    | ScoringWorkerMessageType.ModelsReady
+    | ScoringWorkerMessageType.ModelsLoadError;
 }
 
 type ScoringWorkerIncoming =
   | ScoringWorkerResponse
   | ScoringWorkerPrecomputeResult
   | ScoringWorkerError
-  | ScoringWorkerModelProgress;
+  | ScoringWorkerLifecycle;
 
 export function usePronunciationScorer(params: {
   patchSegment: PipelineHook['patchSegment'];
+  modelLoader: ModelLoaderHook;
 }) {
-  const { patchSegment } = params;
-  const workerRef = useRef<Worker | null>(null);
+  const { patchSegment, modelLoader } = params;
   const generationRef = useRef<Map<number, number>>(new Map());
   const inFlightRef = useRef<{ segmentId: number; generation: number } | null>(
     null,
   );
 
-  const initWorker = useCallback(() => {
-    if (workerRef.current) return workerRef.current;
+  useEffect(() => {
+    const worker = modelLoader.scoringWorker;
+    if (!worker) return;
 
-    const worker = new Worker(
-      new URL('../lib/scoring.worker.ts', import.meta.url),
-      {
-        type: 'module',
-      },
-    );
-
-    worker.onmessage = (e: MessageEvent<ScoringWorkerIncoming>) => {
+    const handler = (e: MessageEvent<ScoringWorkerIncoming>) => {
       const msg = e.data;
 
-      if (msg.type === 'modelProgress') {
+      // Lifecycle messages are handled by useModelLoader; scorer ignores them
+      if (
+        msg.type === ScoringWorkerMessageType.ModelProgress ||
+        msg.type === ScoringWorkerMessageType.ModelsReady ||
+        msg.type === ScoringWorkerMessageType.ModelsLoadError
+      ) {
         return;
       }
 
-      const currentGen = generationRef.current.get(msg.segmentId);
+      // msg is now narrowed to ScoringWorkerResponse | ScoringWorkerPrecomputeResult | ScoringWorkerError
+      const scoringMsg = msg as ScoringWorkerBase;
+      const currentGen = generationRef.current.get(scoringMsg.segmentId);
 
-      if (msg.generation !== currentGen) {
+      if (scoringMsg.generation !== currentGen) {
         return; // Stale result
       }
 
-      if (msg.type === 'precomputeResult') {
+      if (msg.type === ScoringWorkerMessageType.PrecomputeResult) {
         patchSegment(msg.segmentId, { chunks: msg.chunks });
         return;
       }
 
-      if (msg.type === 'result') {
+      if (msg.type === ScoringWorkerMessageType.Result) {
         patchSegment(msg.segmentId, {
           wordScores: msg.wordScores,
           isScoring: false,
         });
-      } else if (msg.type === 'error') {
+      } else if (msg.type === ScoringWorkerMessageType.Error) {
         console.error(`Worker error for segment ${msg.segmentId}:`, msg.error);
         patchSegment(msg.segmentId, { isScoring: false });
       }
 
       if (
-        inFlightRef.current?.segmentId === msg.segmentId &&
-        inFlightRef.current?.generation === msg.generation
+        inFlightRef.current?.segmentId === scoringMsg.segmentId &&
+        inFlightRef.current?.generation === scoringMsg.generation
       ) {
         inFlightRef.current = null;
       }
     };
 
-    worker.onerror = (e) => {
+    const errorHandler = (e: ErrorEvent) => {
       console.error('Scoring worker error:', e);
       if (inFlightRef.current) {
         patchSegment(inFlightRef.current.segmentId, { isScoring: false });
@@ -103,9 +106,14 @@ export function usePronunciationScorer(params: {
       }
     };
 
-    workerRef.current = worker;
-    return worker;
-  }, [patchSegment]);
+    worker.addEventListener('message', handler);
+    worker.addEventListener('error', errorHandler);
+
+    return () => {
+      worker.removeEventListener('message', handler);
+      worker.removeEventListener('error', errorHandler);
+    };
+  }, [modelLoader.scoringWorker, patchSegment]);
 
   const precompute = useCallback(
     (
@@ -126,23 +134,24 @@ export function usePronunciationScorer(params: {
 
           if (generationRef.current.get(segmentId) !== currentGen) return;
 
-          const worker = initWorker();
-          worker.postMessage(
-            {
-              type: 'precompute',
-              segmentId,
-              generation: currentGen,
-              refText,
-              refAudio,
-            },
-            [refAudio.buffer],
-          );
+          if (modelLoader.scoringWorker) {
+            modelLoader.scoringWorker.postMessage(
+              {
+                type: ScoringWorkerMessageType.Precompute,
+                segmentId,
+                generation: currentGen,
+                refText,
+                refAudio,
+              },
+              [refAudio.buffer],
+            );
+          }
         } catch (err) {
           console.error('Failed to precompute scoring:', err);
         }
       })();
     },
-    [initWorker],
+    [modelLoader.scoringWorker],
   );
 
   const score = useCallback(
@@ -163,25 +172,25 @@ export function usePronunciationScorer(params: {
           // Stale check
           if (generationRef.current.get(segmentId) !== currentGen) return;
 
-          const worker = initWorker();
-          inFlightRef.current = { segmentId, generation: currentGen };
-
-          worker.postMessage(
-            {
-              type: 'score',
-              segmentId,
-              generation: currentGen,
-              userAudio,
-            },
-            [userAudio.buffer],
-          );
+          if (modelLoader.scoringWorker) {
+            inFlightRef.current = { segmentId, generation: currentGen };
+            modelLoader.scoringWorker.postMessage(
+              {
+                type: ScoringWorkerMessageType.Score,
+                segmentId,
+                generation: currentGen,
+                userAudio,
+              },
+              [userAudio.buffer],
+            );
+          }
         } catch (err) {
           console.error('Failed to prepare scoring:', err);
           patchSegment(segmentId, { isScoring: false });
         }
       })();
     },
-    [patchSegment, initWorker],
+    [patchSegment, modelLoader.scoringWorker],
   );
 
   const clearScores = useCallback((segmentId: number) => {
@@ -189,12 +198,9 @@ export function usePronunciationScorer(params: {
     generationRef.current.set(segmentId, nextGen);
   }, []);
 
-  useEffect(() => {
-    return () => {
-      workerRef.current?.terminate();
-      workerRef.current = null;
-    };
-  }, []);
-
-  return { precompute, score, clearScores };
+  return {
+    precompute,
+    score,
+    clearScores,
+  };
 }

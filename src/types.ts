@@ -1,3 +1,24 @@
+export enum ModelId {
+  Transcription = 'transcription',
+  Scoring = 'scoring',
+}
+
+export enum StorageKey {
+  Settings = 'shadowly:practice-settings',
+}
+
+export enum ScoringWorkerMessageType {
+  LoadModels = 'loadModels',
+  ModelProgress = 'modelProgress',
+  ModelsReady = 'modelsReady',
+  ModelsLoadError = 'modelsLoadError',
+  Precompute = 'precompute',
+  PrecomputeResult = 'precomputeResult',
+  Score = 'score',
+  Result = 'result',
+  Error = 'error',
+}
+
 export interface WordTimestamp {
   word: string;
   start: number; // seconds, 0-relative to segment audio
@@ -42,7 +63,6 @@ export interface PrecomputeResult {
 
 export enum ProcessingState {
   Idle = 'idle',
-  LoadingModel = 'loading-model',
   VADRunning = 'vad-running',
   Transcribing = 'transcribing',
   Ready = 'ready',
@@ -105,6 +125,5 @@ export interface AppState {
   activeIndex: number;
   playbackSpeed: number;
   processingState: ProcessingState;
-  downloadProgress: number;
   errorMessage: string | null;
 }

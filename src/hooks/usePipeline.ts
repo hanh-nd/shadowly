@@ -26,7 +26,6 @@ export interface PipelineHook {
   ) => void;
   status: ProcessingState;
   progress: TranscribingProgress | null;
-  downloadProgress: number;
   error: string | null;
   audioBuffer: AudioBuffer | null;
   totalDuration: number;
@@ -37,7 +36,6 @@ export function usePipeline(): PipelineHook {
   const [segments, setSegments] = useState<Segment[]>([]);
   const [status, setStatus] = useState<ProcessingState>(ProcessingState.Idle);
   const [progress, setProgress] = useState<TranscribingProgress | null>(null);
-  const [downloadProgress, setDownloadProgress] = useState(0);
   const [error, setError] = useState<string | null>(null);
   const [audioBuffer, setAudioBuffer] = useState<AudioBuffer | null>(null);
   const [totalDuration, setTotalDuration] = useState(0);
@@ -69,7 +67,6 @@ export function usePipeline(): PipelineHook {
     setAudioBuffer(null);
     setTotalDuration(0);
     setFilename(file.name);
-    setStatus(ProcessingState.LoadingModel);
 
     try {
       const arrayBuffer = await file.arrayBuffer();
@@ -83,9 +80,7 @@ export function usePipeline(): PipelineHook {
       setAudioBuffer(decoded);
       setTotalDuration(decoded.duration);
 
-      await engine.ensureModels((p) => {
-        if (!signal.aborted) setDownloadProgress(p);
-      });
+      await engine.ensureModels();
       if (signal.aborted) return;
 
       const resampledAudio = await decodeAndResampleTo16kHz(arrayBuffer);
@@ -167,7 +162,6 @@ export function usePipeline(): PipelineHook {
     patchSegment,
     status,
     progress,
-    downloadProgress,
     error,
     audioBuffer,
     totalDuration,

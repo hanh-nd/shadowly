@@ -4,6 +4,7 @@ import type { Segment } from '../types';
 import { NavigationDirection, ShadowingPhase } from '../types';
 import { useAudioPlayer } from './useAudioPlayer';
 import { useAutoCruise } from './useAutoCruise';
+import { useModelLoader } from './useModelLoader';
 import { usePipeline } from './usePipeline';
 import { usePracticeSettings } from './usePracticeSettings';
 import { usePronunciationScorer } from './usePronunciationScorer';
@@ -14,6 +15,9 @@ export function useShadowingManager() {
   const [phase, setPhase] = useState<ShadowingPhase>(ShadowingPhase.Idle);
 
   const settings = usePracticeSettings();
+  const modelLoader = useModelLoader({
+    scoringEnabled: settings.scoringEnabled,
+  });
 
   const pipeline = usePipeline();
   const originalPlayer = useAudioPlayer(
@@ -24,6 +28,7 @@ export function useShadowingManager() {
   const recorder = useRecorder();
   const scorer = usePronunciationScorer({
     patchSegment: pipeline.patchSegment,
+    modelLoader,
   });
 
   const currentSegment = pipeline.segments[activeIndex];
@@ -143,6 +148,13 @@ export function useShadowingManager() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [activeIndex, settings.scoringEnabled]);
 
+  const pipelineReset = pipeline.reset;
+  const { clearLoadError } = modelLoader;
+  const reset = useCallback(() => {
+    pipelineReset();
+    clearLoadError();
+  }, [pipelineReset, clearLoadError]);
+
   const upload = useCallback(
     (file: File) => {
       setPhase(ShadowingPhase.Idle);
@@ -234,8 +246,7 @@ export function useShadowingManager() {
     segments: pipeline.segments,
     status: pipeline.status,
     progress: pipeline.progress,
-    downloadProgress: pipeline.downloadProgress,
-    error: pipeline.error,
+    error: pipeline.error ?? modelLoader.loadError,
     audioBuffer: pipeline.audioBuffer,
     totalDuration: pipeline.totalDuration,
     filename: pipeline.filename,
@@ -243,10 +254,11 @@ export function useShadowingManager() {
     isPlayingMine: minePlayer.isPlaying,
     isRecording: recorder.isRecording,
     micError: recorder.micError,
+    activeLoads: modelLoader.activeLoads,
 
     // Actions
     upload,
-    reset: pipeline.reset,
+    reset,
     playOriginal,
     startRecord,
     stopRecord,

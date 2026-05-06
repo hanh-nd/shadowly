@@ -37,10 +37,10 @@ export function App() {
 
         <LoadingOverlay
           state={manager.status}
-          downloadProgress={manager.downloadProgress}
           progress={manager.progress ?? undefined}
           errorMessage={manager.error}
           onRetry={manager.reset}
+          activeLoads={manager.activeLoads}
         />
 
         {(manager.status === ProcessingState.Ready ||

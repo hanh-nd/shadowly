@@ -1,12 +1,8 @@
-import { env } from '@huggingface/transformers';
-
-import { type IpaChunk, WordScore } from '../types';
+import { type IpaChunk, ScoringWorkerMessageType, WordScore } from '../types';
 import { tokenize } from './ipa-tokenizer';
 import { alignPhonemes } from './needleman-wunsch';
 import { scoringEngine } from './ScoringEngine';
 import { normalize } from './text-normalizer';
-
-env.allowLocalModels = false;
 
 interface PrecomputeCache {
   chunks: IpaChunk[];
@@ -183,11 +179,22 @@ self.onmessage = async (e: MessageEvent) => {
   const { type, segmentId, generation } = e.data;
 
   try {
-    if (type === 'precompute') {
+    if (type === ScoringWorkerMessageType.LoadModels) {
+      await scoringEngine.ensureModels((p) =>
+        self.postMessage({
+          type: ScoringWorkerMessageType.ModelProgress,
+          progress: p,
+        }),
+      );
+      self.postMessage({ type: ScoringWorkerMessageType.ModelsReady });
+    } else if (type === ScoringWorkerMessageType.Precompute) {
       const { refText, refAudio } = e.data;
 
       await scoringEngine.ensureModels((p) =>
-        self.postMessage({ type: 'modelProgress', progress: p }),
+        self.postMessage({
+          type: ScoringWorkerMessageType.ModelProgress,
+          progress: p,
+        }),
       );
 
       const vocab = scoringEngine.getVocab();
@@ -221,18 +228,18 @@ self.onmessage = async (e: MessageEvent) => {
       });
 
       self.postMessage({
-        type: 'precomputeResult',
+        type: ScoringWorkerMessageType.PrecomputeResult,
         segmentId,
         generation,
         chunks,
       });
-    } else if (type === 'score') {
+    } else if (type === ScoringWorkerMessageType.Score) {
       const { userAudio } = e.data;
       const cache = precomputeCache.get(segmentId);
 
       if (!cache) {
         self.postMessage({
-          type: 'result',
+          type: ScoringWorkerMessageType.Result,
           segmentId,
           generation,
           wordScores: new Array(0).fill(WordScore.Neutral),
@@ -251,18 +258,25 @@ self.onmessage = async (e: MessageEvent) => {
       const wordScores = scoreChunks(cache, userTokens, originalWordCount);
 
       self.postMessage({
-        type: 'result',
+        type: ScoringWorkerMessageType.Result,
         segmentId,
         wordScores,
         generation,
       });
     }
   } catch (err: unknown) {
-    self.postMessage({
-      type: 'error',
-      segmentId,
-      generation,
-      error: (err as Error).toString(),
-    });
+    if (type === ScoringWorkerMessageType.LoadModels) {
+      self.postMessage({
+        type: ScoringWorkerMessageType.ModelsLoadError,
+        error: (err as Error).toString(),
+      });
+    } else {
+      self.postMessage({
+        type: ScoringWorkerMessageType.Error,
+        segmentId,
+        generation,
+        error: (err as Error).toString(),
+      });
+    }
   }
 };
