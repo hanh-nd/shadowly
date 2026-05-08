@@ -1,3 +1,5 @@
+import './worker-polyfills';
+
 import { type IpaChunk, ScoringWorkerMessageType, WordScore } from '../types';
 import { tokenize } from './ipa-tokenizer';
 import { alignPhonemes } from './needleman-wunsch';

@@ -7,39 +7,6 @@ import {
 } from '@huggingface/transformers';
 import ESpeakNg from 'espeak-ng';
 
-// --- INJECT EXPORTS/REQUIRE POLYFILL ---
-// Polyfill for String.prototype.replaceAll (required by some environments)
-if (typeof String.prototype.replaceAll !== 'function') {
-  String.prototype.replaceAll = function (
-    search: string | RegExp,
-    replacement: ((substring: string, ...args: unknown[]) => string) | string,
-  ) {
-    if (typeof replacement === 'string') {
-      if (search instanceof RegExp) return this.replace(search, replacement);
-      return this.replace(
-        new RegExp(search.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'),
-        replacement,
-      );
-    } else {
-      if (search instanceof RegExp) return this.replace(search, replacement);
-      return this.replace(
-        new RegExp(search.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g'),
-        replacement,
-      );
-    }
-  };
-}
-// Fixes Vite/Webpack bundling errors for vad-web and onnxruntime-web
-if (typeof self.exports === 'undefined') {
-  self.exports = {};
-}
-if (typeof self.require === 'undefined') {
-  self.require = function () {
-    return {};
-  } as unknown as NodeJS.Require;
-}
-// -------------------------------
-
 env.useBrowserCache = true;
 env.allowLocalModels = false;
 

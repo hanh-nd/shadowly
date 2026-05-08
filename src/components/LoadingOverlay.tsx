@@ -1,4 +1,4 @@
-import type { ModelLoadTask } from '../hooks/useModelLoader';
+import type { ModelLoadTask } from '../types';
 import type { TranscribingProgress } from '../types';
 import { ProcessingState } from '../types';
 

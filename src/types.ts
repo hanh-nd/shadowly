@@ -105,6 +105,12 @@ export enum ShadowingPhase {
   PlayingMine = 'playing_mine',
 }
 
+export interface ModelLoadTask {
+  id: string;
+  label: string;
+  progress: number;
+}
+
 export enum WorkerMessageType {
   Init = 'init',
   Ready = 'ready',
@@ -112,6 +118,9 @@ export enum WorkerMessageType {
   Error = 'error',
   Transcribe = 'transcribe',
   Result = 'result',
+  RunVAD = 'runVad',
+  SegmentFound = 'segmentFound',
+  VadDone = 'vadDone',
 }
 
 export interface TranscribingProgress {

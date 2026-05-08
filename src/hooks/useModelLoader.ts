@@ -1,13 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 
-import { engine } from '../lib/TranscriptionEngine';
+import type { ModelLoadTask } from '../types';
 import { ModelId, ScoringWorkerMessageType } from '../types';
-
-export interface ModelLoadTask {
-  id: string;
-  label: string;
-  progress: number;
-}
 
 export function useModelLoader(options: { scoringEnabled: boolean }) {
   const [tasks, setTasks] = useState<Record<string, ModelLoadTask>>({});
@@ -22,44 +16,6 @@ export function useModelLoader(options: { scoringEnabled: boolean }) {
     });
 
   const clearLoadError = useCallback(() => setLoadError(null), []);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    engine
-      .ensureModels((p) => {
-        if (isMounted) {
-          setTasks((prev) => ({
-            ...prev,
-            [ModelId.Transcription]: {
-              id: ModelId.Transcription,
-              label: 'Downloading transcription model…',
-              progress: p,
-            },
-          }));
-        }
-      })
-      .then(
-        () => {
-          if (isMounted) removeTask(ModelId.Transcription);
-        },
-        (err: unknown) => {
-          console.error('Failed to load transcription models:', err);
-          if (isMounted) {
-            setLoadError(
-              err instanceof Error
-                ? err.message
-                : 'Failed to load transcription model.',
-            );
-            removeTask(ModelId.Transcription);
-          }
-        },
-      );
-
-    return () => {
-      isMounted = false;
-    };
-  }, []);
 
   useEffect(() => {
     if (!options.scoringEnabled) return;

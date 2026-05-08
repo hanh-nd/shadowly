@@ -5,9 +5,9 @@ import {
   TARGET_SAMPLE_RATE,
   TRANSCRIBING_TEXT,
 } from '../constants';
-import { engine } from '../lib/TranscriptionEngine';
-import type { Segment, TranscribingProgress } from '../types';
-import { ProcessingState } from '../types';
+import { transcriptionClient } from '../lib/TranscriptionClient';
+import type { ModelLoadTask, Segment, TranscribingProgress } from '../types';
+import { ModelId, ProcessingState } from '../types';
 import { decodeAndResampleTo16kHz } from '../utils';
 
 export interface PipelineHook {
@@ -30,6 +30,7 @@ export interface PipelineHook {
   ) => void;
   status: ProcessingState;
   progress: TranscribingProgress | null;
+  modelLoadTask: ModelLoadTask | null;
   error: string | null;
   audioBuffer: AudioBuffer | null;
   totalDuration: number;
@@ -40,6 +41,9 @@ export function usePipeline(): PipelineHook {
   const [segments, setSegments] = useState<Segment[]>([]);
   const [status, setStatus] = useState<ProcessingState>(ProcessingState.Idle);
   const [progress, setProgress] = useState<TranscribingProgress | null>(null);
+  const [modelLoadTask, setModelLoadTask] = useState<ModelLoadTask | null>(
+    null,
+  );
   const [error, setError] = useState<string | null>(null);
   const [audioBuffer, setAudioBuffer] = useState<AudioBuffer | null>(null);
   const [totalDuration, setTotalDuration] = useState(0);
@@ -53,6 +57,7 @@ export function usePipeline(): PipelineHook {
     setError(null);
     setSegments([]);
     setProgress(null);
+    setModelLoadTask(null);
     setAudioBuffer(null);
     setTotalDuration(0);
     setFilename(null);
@@ -71,6 +76,7 @@ export function usePipeline(): PipelineHook {
     setAudioBuffer(null);
     setTotalDuration(0);
     setFilename(file.name);
+    setModelLoadTask(null);
 
     try {
       const arrayBuffer = await file.arrayBuffer();
@@ -84,14 +90,24 @@ export function usePipeline(): PipelineHook {
       setAudioBuffer(decoded);
       setTotalDuration(decoded.duration);
 
-      await engine.ensureModels();
+      await transcriptionClient.ensureModels((p) =>
+        setModelLoadTask({
+          id: ModelId.Transcription,
+          label: 'Downloading transcription model…',
+          progress: p,
+        }),
+      );
+      setModelLoadTask(null);
       if (signal.aborted) return;
 
       const resampledAudio = await decodeAndResampleTo16kHz(arrayBuffer);
       if (signal.aborted) return;
 
       setStatus(ProcessingState.VADRunning);
-      const audioSegments = await engine.getSegments(resampledAudio, signal);
+      const audioSegments = await transcriptionClient.getSegments(
+        resampledAudio,
+        signal,
+      );
       if (signal.aborted) return;
 
       if (audioSegments.length === 0) {
@@ -103,7 +119,7 @@ export function usePipeline(): PipelineHook {
       // Phase 1: Show all segments immediately
       const initialSegments: Segment[] = audioSegments.map((s, i) => {
         const endSec = s.end / MS_PER_SECOND;
-        const durationSec = s.audio.length / TARGET_SAMPLE_RATE;
+        const durationSec = s.audioLength / TARGET_SAMPLE_RATE;
         const startSec = Math.max(0, endSec - durationSec);
 
         return {
@@ -122,8 +138,8 @@ export function usePipeline(): PipelineHook {
       for (let i = 0; i < audioSegments.length; i++) {
         if (signal.aborted) return;
 
-        const { text, wordTimestamps } = await engine.transcribe(
-          audioSegments[i].audio,
+        const { text, wordTimestamps } = await transcriptionClient.transcribe(
+          audioSegments[i].id,
           signal,
         );
         if (signal.aborted) return;
@@ -172,6 +188,7 @@ export function usePipeline(): PipelineHook {
     patchSegment,
     status,
     progress,
+    modelLoadTask,
     error,
     audioBuffer,
     totalDuration,

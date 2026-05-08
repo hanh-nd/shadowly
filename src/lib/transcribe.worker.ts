@@ -1,75 +1,59 @@
-import {
-  AutomaticSpeechRecognitionPipeline,
-  env,
-  pipeline,
-} from '@huggingface/transformers';
+import './worker-polyfills';
 
-import { type WordTimestamp, WorkerMessageType } from '../types';
+import { WorkerMessageType } from '../types';
+import { TranscriptionEngine } from './TranscriptionEngine';
 
-// Skip local model check for faster loading in worker
-env.allowLocalModels = false;
-
-let pipe: Awaited<AutomaticSpeechRecognitionPipeline> | null = null;
+const transcriptionEngine = new TranscriptionEngine();
+const segmentsMap = new Map<string, Float32Array>();
 
 self.onmessage = async (e) => {
-  const { type, audio, model, id } = e.data;
+  const { type, audio, model, id, segmentId } = e.data;
 
   try {
     switch (type) {
       case WorkerMessageType.Init: {
-        pipe = await pipeline('automatic-speech-recognition', model, {
-          device: 'wasm',
-          dtype: 'q8',
-          session_options: {
-            graphOptimizationLevel: 'basic',
-          },
-          progress_callback: (p) => {
-            const info = p as { progress: number }; // @huggingface/transformers types are not working properly
-            if (!info.progress) return;
-            self.postMessage({
-              type: WorkerMessageType.Progress,
-              payload: info.progress,
-              id,
-            });
-          },
+        await transcriptionEngine.init(model, (progress) => {
+          self.postMessage({
+            type: WorkerMessageType.Progress,
+            payload: progress,
+            id,
+          });
         });
         self.postMessage({ type: WorkerMessageType.Ready, id });
         break;
       }
 
-      case WorkerMessageType.Transcribe: {
-        if (!pipe) {
-          throw new Error('Pipeline not initialized');
-        }
-        const output = await pipe(audio, {
-          return_timestamps: 'word',
-          chunk_length_s: 30,
-          stride_length_s: 5,
-        });
+      case WorkerMessageType.RunVAD: {
+        segmentsMap.clear();
 
-        const outputArray = Array.isArray(output) ? output : [output];
-        const text = outputArray
-          .map((item) => item.text)
-          .join(' ')
-          .trim();
-        const chunks = outputArray.flatMap((item) => item.chunks);
-        const wordTimestamps: WordTimestamp[] = (chunks || [])
-          .filter(
-            (chunk) =>
-              chunk &&
-              chunk.timestamp &&
-              chunk.timestamp[0] !== null &&
-              chunk.timestamp[1] !== null,
-          )
-          .map((chunk) => ({
-            word: chunk!.text.trim(),
-            start: chunk!.timestamp[0]!,
-            end: chunk!.timestamp[1]!,
-          }));
+        for await (const segment of transcriptionEngine.runVAD(audio)) {
+          segmentsMap.set(segment.id, segment.audio);
+
+          self.postMessage({
+            type: WorkerMessageType.SegmentFound,
+            segmentId: segment.id,
+            start: segment.start,
+            end: segment.end,
+            audioLength: segment.audio.length,
+            id,
+          });
+        }
+
+        self.postMessage({ type: WorkerMessageType.VadDone, id });
+        break;
+      }
+
+      case WorkerMessageType.Transcribe: {
+        const segmentAudio = segmentsMap.get(segmentId);
+        if (!segmentAudio) {
+          throw new Error('Segment audio not found');
+        }
+
+        const result = await transcriptionEngine.transcribe(segmentAudio);
 
         self.postMessage({
           type: WorkerMessageType.Result,
-          payload: { text, wordTimestamps },
+          payload: result,
           id,
         });
         break;
@@ -78,7 +62,7 @@ self.onmessage = async (e) => {
   } catch (err) {
     self.postMessage({
       type: WorkerMessageType.Error,
-      payload: err instanceof Error ? err.message : 'Unknown error',
+      payload: err instanceof Error ? err.message : String(err),
       id,
     });
   }

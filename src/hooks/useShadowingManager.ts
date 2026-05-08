@@ -14,13 +14,11 @@ import { useRecorder } from './useRecorder';
 export function useShadowingManager() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [phase, setPhase] = useState<ShadowingPhase>(ShadowingPhase.Idle);
-
+  const pipeline = usePipeline();
   const settings = usePracticeSettings();
   const modelLoader = useModelLoader({
     scoringEnabled: settings.scoringEnabled,
   });
-
-  const pipeline = usePipeline();
   const originalPlayer = useAudioPlayer(
     pipeline.audioBuffer,
     settings.playbackSpeed,
@@ -263,7 +261,10 @@ export function useShadowingManager() {
     isPlayingMine: minePlayer.isPlaying,
     isRecording: recorder.isRecording,
     micError: recorder.micError,
-    activeLoads: modelLoader.activeLoads,
+    activeLoads: [
+      ...(pipeline.modelLoadTask ? [pipeline.modelLoadTask] : []),
+      ...modelLoader.activeLoads,
+    ],
 
     // Actions
     upload,
