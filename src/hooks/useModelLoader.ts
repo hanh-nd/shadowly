@@ -1,11 +1,11 @@
 import { useCallback, useEffect, useState } from 'react';
 
+import { scoringClient } from '../lib/ScoringClient';
 import type { ModelLoadTask } from '../types';
-import { ModelId, ScoringWorkerMessageType } from '../types';
+import { ModelId } from '../types';
 
 export function useModelLoader(options: { scoringEnabled: boolean }) {
   const [tasks, setTasks] = useState<Record<string, ModelLoadTask>>({});
-  const [scoringWorker, setScoringWorker] = useState<Worker | null>(null);
   const [loadError, setLoadError] = useState<string | null>(null);
 
   const removeTask = (id: string) =>
@@ -22,14 +22,18 @@ export function useModelLoader(options: { scoringEnabled: boolean }) {
 
     let isMounted = true;
 
-    const worker = new Worker(
-      new URL('../lib/scoring.worker.ts', import.meta.url),
-      { type: 'module' },
-    );
+    // eslint-disable-next-line react-hooks/set-state-in-effect
+    setTasks((prev) => ({
+      ...prev,
+      [ModelId.Scoring]: {
+        id: ModelId.Scoring,
+        label: 'Loading scoring model…',
+        progress: 0,
+      },
+    }));
 
-    const handleMessage = (e: MessageEvent) => {
-      const { type, progress, label } = e.data;
-      if (type === ScoringWorkerMessageType.ModelProgress) {
+    scoringClient
+      .ensureModels((progress, label) => {
         if (isMounted) {
           setTasks((prev) =>
             prev[ModelId.Scoring]
@@ -44,50 +48,25 @@ export function useModelLoader(options: { scoringEnabled: boolean }) {
               : prev,
           );
         }
-      } else if (
-        type === ScoringWorkerMessageType.ModelsReady ||
-        type === ScoringWorkerMessageType.ModelsLoadError
-      ) {
-        if (type === ScoringWorkerMessageType.ModelsLoadError) {
-          console.error('Scoring model failed to load:', e.data.error);
-          if (isMounted) setLoadError('Failed to load scoring model.');
-        }
+      })
+      .then(() => {
         if (isMounted) removeTask(ModelId.Scoring);
-        worker.removeEventListener('message', handleMessage);
-      }
-    };
-
-    // Attach listener before setScoringWorker to avoid races
-    worker.addEventListener('message', handleMessage);
-    worker.postMessage({ type: ScoringWorkerMessageType.LoadModels });
-
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setTasks((prev) => ({
-      ...prev,
-      [ModelId.Scoring]: {
-        id: ModelId.Scoring,
-        label: 'Loading scoring model…',
-        progress: 0,
-      },
-    }));
-    setScoringWorker(worker);
+      })
+      .catch((err) => {
+        console.error('Scoring model failed to load:', err);
+        if (isMounted) setLoadError('Failed to load scoring model.');
+        if (isMounted) removeTask(ModelId.Scoring);
+      });
 
     return () => {
       isMounted = false;
-      worker.removeEventListener('message', handleMessage);
-      worker.terminate();
-      setScoringWorker(null);
-      setTasks((prev) => {
-        const next = { ...prev };
-        delete next[ModelId.Scoring];
-        return next;
-      });
+      removeTask(ModelId.Scoring);
     };
   }, [options.scoringEnabled]);
 
   const activeLoads = Object.values(tasks);
 
-  return { activeLoads, scoringWorker, loadError, clearLoadError };
+  return { activeLoads, loadError, clearLoadError };
 }
 
 export type ModelLoaderHook = ReturnType<typeof useModelLoader>;

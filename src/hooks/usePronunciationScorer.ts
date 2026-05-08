@@ -1,119 +1,17 @@
-import { useCallback, useEffect, useRef } from 'react';
+import { useCallback, useRef } from 'react';
 
-import { type IpaChunk, ScoringWorkerMessageType, WordScore } from '../types';
+import { scoringClient } from '../lib/ScoringClient';
 import {
   decodeAndResampleTo16kHz,
   resampleFloat32ArrayTo16kHz,
 } from '../utils';
-import type { ModelLoaderHook } from './useModelLoader';
 import type { PipelineHook } from './usePipeline';
-
-interface ScoringWorkerBase {
-  segmentId: number;
-  generation: number;
-}
-
-interface ScoringWorkerResponse extends ScoringWorkerBase {
-  type: ScoringWorkerMessageType.Result;
-  wordScores: (WordScore | null)[];
-}
-
-interface ScoringWorkerPrecomputeResult extends ScoringWorkerBase {
-  type: ScoringWorkerMessageType.PrecomputeResult;
-  chunks: IpaChunk[];
-}
-
-interface ScoringWorkerError extends ScoringWorkerBase {
-  type: ScoringWorkerMessageType.Error;
-  error?: string;
-}
-
-interface ScoringWorkerLifecycle {
-  type:
-    | ScoringWorkerMessageType.ModelProgress
-    | ScoringWorkerMessageType.ModelsReady
-    | ScoringWorkerMessageType.ModelsLoadError;
-}
-
-type ScoringWorkerIncoming =
-  | ScoringWorkerResponse
-  | ScoringWorkerPrecomputeResult
-  | ScoringWorkerError
-  | ScoringWorkerLifecycle;
 
 export function usePronunciationScorer(params: {
   patchSegment: PipelineHook['patchSegment'];
-  modelLoader: ModelLoaderHook;
 }) {
-  const { patchSegment, modelLoader } = params;
+  const { patchSegment } = params;
   const generationRef = useRef<Map<number, number>>(new Map());
-  const inFlightRef = useRef<{ segmentId: number; generation: number } | null>(
-    null,
-  );
-
-  useEffect(() => {
-    const worker = modelLoader.scoringWorker;
-    if (!worker) return;
-
-    const handler = (e: MessageEvent<ScoringWorkerIncoming>) => {
-      const msg = e.data;
-
-      // Lifecycle messages are handled by useModelLoader; scorer ignores them
-      if (
-        msg.type === ScoringWorkerMessageType.ModelProgress ||
-        msg.type === ScoringWorkerMessageType.ModelsReady ||
-        msg.type === ScoringWorkerMessageType.ModelsLoadError
-      ) {
-        return;
-      }
-
-      // msg is now narrowed to ScoringWorkerResponse | ScoringWorkerPrecomputeResult | ScoringWorkerError
-      const scoringMsg = msg as ScoringWorkerBase;
-      const currentGen = generationRef.current.get(scoringMsg.segmentId);
-
-      if (scoringMsg.generation !== currentGen) {
-        return; // Stale result
-      }
-
-      if (msg.type === ScoringWorkerMessageType.PrecomputeResult) {
-        patchSegment(msg.segmentId, { chunks: msg.chunks });
-        return;
-      }
-
-      if (msg.type === ScoringWorkerMessageType.Result) {
-        patchSegment(msg.segmentId, {
-          wordScores: msg.wordScores,
-          isScoring: false,
-        });
-      } else if (msg.type === ScoringWorkerMessageType.Error) {
-        console.error(`Worker error for segment ${msg.segmentId}:`, msg.error);
-        patchSegment(msg.segmentId, { isScoring: false });
-      }
-
-      if (
-        inFlightRef.current?.segmentId === scoringMsg.segmentId &&
-        inFlightRef.current?.generation === scoringMsg.generation
-      ) {
-        inFlightRef.current = null;
-      }
-    };
-
-    const errorHandler = (e: ErrorEvent) => {
-      console.error('Scoring worker error:', e);
-      if (inFlightRef.current) {
-        patchSegment(inFlightRef.current.segmentId, { isScoring: false });
-        inFlightRef.current = null;
-      }
-    };
-
-    worker.addEventListener('message', handler);
-    worker.addEventListener('error', errorHandler);
-
-    return () => {
-      worker.removeEventListener('message', handler);
-      worker.removeEventListener('error', errorHandler);
-    };
-  }, [modelLoader.scoringWorker, patchSegment]);
 
   const precompute = useCallback(
     (
@@ -134,24 +32,21 @@ export function usePronunciationScorer(params: {
 
           if (generationRef.current.get(segmentId) !== currentGen) return;
 
-          if (modelLoader.scoringWorker) {
-            modelLoader.scoringWorker.postMessage(
-              {
-                type: ScoringWorkerMessageType.Precompute,
-                segmentId,
-                generation: currentGen,
-                refText,
-                refAudio,
-              },
-              [refAudio.buffer],
-            );
+          const { chunks } = await scoringClient.precompute(
+            segmentId,
+            refText,
+            refAudio,
+          );
+
+          if (generationRef.current.get(segmentId) === currentGen) {
+            patchSegment(segmentId, { chunks });
           }
         } catch (err) {
           console.error('Failed to precompute scoring:', err);
         }
       })();
     },
-    [modelLoader.scoringWorker],
+    [patchSegment],
   );
 
   const score = useCallback(
@@ -169,28 +64,28 @@ export function usePronunciationScorer(params: {
         try {
           const userAudio = await decodeAndResampleTo16kHz(blob);
 
-          // Stale check
           if (generationRef.current.get(segmentId) !== currentGen) return;
 
-          if (modelLoader.scoringWorker) {
-            inFlightRef.current = { segmentId, generation: currentGen };
-            modelLoader.scoringWorker.postMessage(
-              {
-                type: ScoringWorkerMessageType.Score,
-                segmentId,
-                generation: currentGen,
-                userAudio,
-              },
-              [userAudio.buffer],
-            );
+          const { wordScores } = await scoringClient.score(
+            segmentId,
+            userAudio,
+          );
+
+          if (generationRef.current.get(segmentId) === currentGen) {
+            patchSegment(segmentId, {
+              wordScores,
+              isScoring: false,
+            });
           }
         } catch (err) {
-          console.error('Failed to prepare scoring:', err);
-          patchSegment(segmentId, { isScoring: false });
+          console.error('Failed to prepare or score audio:', err);
+          if (generationRef.current.get(segmentId) === currentGen) {
+            patchSegment(segmentId, { isScoring: false });
+          }
         }
       })();
     },
-    [patchSegment, modelLoader.scoringWorker],
+    [patchSegment],
   );
 
   const clearScores = useCallback((segmentId: number) => {

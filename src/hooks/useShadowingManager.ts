@@ -27,7 +27,6 @@ export function useShadowingManager() {
   const recorder = useRecorder();
   const scorer = usePronunciationScorer({
     patchSegment: pipeline.patchSegment,
-    modelLoader,
   });
 
   const currentSegment = pipeline.segments[activeIndex];

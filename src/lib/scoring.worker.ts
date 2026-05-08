@@ -178,7 +178,7 @@ function scoreChunks(
 }
 
 self.onmessage = async (e: MessageEvent) => {
-  const { type, segmentId, generation } = e.data;
+  const { type, segmentId, id } = e.data;
 
   try {
     if (type === ScoringWorkerMessageType.LoadModels) {
@@ -228,7 +228,7 @@ self.onmessage = async (e: MessageEvent) => {
       self.postMessage({
         type: ScoringWorkerMessageType.PrecomputeResult,
         segmentId,
-        generation,
+        id,
         chunks,
       });
     } else if (type === ScoringWorkerMessageType.Score) {
@@ -239,7 +239,7 @@ self.onmessage = async (e: MessageEvent) => {
         self.postMessage({
           type: ScoringWorkerMessageType.Result,
           segmentId,
-          generation,
+          id,
           wordScores: new Array(0).fill(WordScore.Neutral),
         });
         return;
@@ -259,7 +259,7 @@ self.onmessage = async (e: MessageEvent) => {
         type: ScoringWorkerMessageType.Result,
         segmentId,
         wordScores,
-        generation,
+        id,
       });
     }
   } catch (err: unknown) {
@@ -272,7 +272,7 @@ self.onmessage = async (e: MessageEvent) => {
       self.postMessage({
         type: ScoringWorkerMessageType.Error,
         segmentId,
-        generation,
+        id,
         error: (err as Error).toString(),
       });
     }
