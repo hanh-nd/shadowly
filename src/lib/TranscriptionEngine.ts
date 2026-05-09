@@ -59,12 +59,13 @@ export class TranscriptionEngine {
 
   async transcribe(
     audio: Float32Array,
+    signal?: AbortSignal,
   ): Promise<{ text: string; wordTimestamps: WordTimestamp[] }> {
     if (!this.isReady) {
       throw new Error('Engine not initialized');
     }
 
-    const output = await InferenceClient.transcribe(audio);
+    const output = await InferenceClient.transcribe(audio, signal);
 
     return {
       text: output.text,

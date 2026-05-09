@@ -7,3 +7,4 @@ soundfile
 accelerate
 python-dotenv
 python-multipart
+phonemizer

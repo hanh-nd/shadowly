@@ -18,20 +18,31 @@ export class InferenceClient {
   /**
    * High-level transcription method. Handles audio encoding and typed response.
    */
-  static async transcribe(audio: Float32Array): Promise<TranscribeResponse> {
-    return this.infer<TranscribeResponse>(InferenceEndpoint.Transcribe, audio);
+  static async transcribe(
+    audio: Float32Array,
+    signal?: AbortSignal,
+  ): Promise<TranscribeResponse> {
+    return this.infer<TranscribeResponse>(
+      InferenceEndpoint.Transcribe,
+      audio,
+      signal,
+    );
   }
 
   /**
    * High-level scoring method. Handles audio encoding and typed response.
    */
-  static async score(audio: Float32Array): Promise<ScoreResponse> {
-    return this.infer<ScoreResponse>(InferenceEndpoint.Score, audio);
+  static async score(
+    audio: Float32Array,
+    signal?: AbortSignal,
+  ): Promise<ScoreResponse> {
+    return this.infer<ScoreResponse>(InferenceEndpoint.Score, audio, signal);
   }
 
   private static async infer<T>(
     endpoint: InferenceEndpoint,
     audio: Float32Array,
+    signal?: AbortSignal,
   ): Promise<T> {
     if (!this.BASE_URL || !this.AUTH_KEY || !this.AUTH_SECRET) {
       throw new Error(
@@ -55,6 +66,7 @@ export class InferenceClient {
           'X-Shadowly-Secret': this.AUTH_SECRET,
         },
         body: formData,
+        signal,
       });
 
       if (!response.ok) {
@@ -72,6 +84,10 @@ export class InferenceClient {
 
       return await response.json();
     } catch (error) {
+      if (error instanceof Error && error.name === 'AbortError') {
+        throw error;
+      }
+
       if (error instanceof Error) {
         // If it's already our normalized error, rethrow
         if (error.message.startsWith('Inference API error')) throw error;

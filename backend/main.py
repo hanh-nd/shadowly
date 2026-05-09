@@ -1,5 +1,16 @@
 import io
 import os
+import platform
+
+# Fix for macOS Homebrew espeak-ng path
+if platform.system() == "Darwin":
+    # Try to find libespeak-ng in common Homebrew locations
+    brew_lib = "/opt/homebrew/lib/libespeak-ng.dylib"
+    if os.path.exists(brew_lib):
+        os.environ["PHONEMIZER_ESPEAK_LIBRARY"] = brew_lib
+    elif os.path.exists("/usr/local/lib/libespeak-ng.dylib"):
+        os.environ["PHONEMIZER_ESPEAK_LIBRARY"] = "/usr/local/lib/libespeak-ng.dylib"
+
 from fastapi import FastAPI, UploadFile, File, HTTPException, Request, Depends
 from fastapi.middleware.cors import CORSMiddleware
 import torch
@@ -83,6 +94,8 @@ async def transcribe(audio_file: UploadFile = File(...), _ = Depends(verify_head
             "wordTimestamps": word_timestamps
         }
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         raise HTTPException(status_code=400, detail=str(e))
 
 @app.post("/score")
@@ -100,6 +113,8 @@ async def score(audio_file: UploadFile = File(...), _ = Depends(verify_headers))
             "text": text
         }
     except Exception as e:
+        import traceback
+        traceback.print_exc()
         raise HTTPException(status_code=400, detail=str(e))
 
 if __name__ == "__main__":

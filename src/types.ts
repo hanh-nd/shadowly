@@ -116,6 +116,8 @@ export enum WorkerMessageType {
   Progress = 'progress',
   Error = 'error',
   Transcribe = 'transcribe',
+  TranscribeBatch = 'transcribeBatch',
+  Abort = 'abort',
   Result = 'result',
   RunVAD = 'runVad',
   SegmentFound = 'segmentFound',

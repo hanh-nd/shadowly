@@ -101,14 +101,11 @@ export class TranscriptionClient {
       };
 
       this.pipeWorker!.addEventListener('message', handler);
-      this.pipeWorker!.postMessage(
-        {
-          type: WorkerMessageType.RunVAD,
-          audio,
-          id,
-        },
-        [audio.buffer],
-      );
+      this.pipeWorker!.postMessage({
+        type: WorkerMessageType.RunVAD,
+        audio,
+        id,
+      });
 
       signal?.addEventListener(
         'abort',
@@ -154,6 +151,58 @@ export class TranscriptionClient {
       signal?.addEventListener(
         'abort',
         () => {
+          this.pipeWorker!.postMessage({
+            type: WorkerMessageType.Abort,
+            id,
+          });
+          cleanup();
+          resolve({ text: '', wordTimestamps: [] });
+        },
+        { once: true },
+      );
+    });
+  }
+
+  async transcribeBatch(
+    audio: Float32Array,
+    signal?: AbortSignal,
+  ): Promise<{ text: string; wordTimestamps: WordTimestamp[] }> {
+    if (signal?.aborted) return { text: '', wordTimestamps: [] };
+    if (!this.pipeWorker) throw new Error('Worker not initialized');
+
+    return new Promise((resolve, reject) => {
+      const id = crypto.randomUUID();
+
+      const cleanup = () => {
+        this.pipeWorker!.removeEventListener('message', handler);
+      };
+
+      const handler = (e: MessageEvent) => {
+        const { type, payload, id: messageId } = e.data;
+        if (messageId !== id) return;
+
+        cleanup();
+        if (type === WorkerMessageType.Result) resolve(payload);
+        else if (type === WorkerMessageType.Error) reject(new Error(payload));
+      };
+
+      this.pipeWorker!.addEventListener('message', handler);
+      this.pipeWorker!.postMessage(
+        {
+          type: WorkerMessageType.TranscribeBatch,
+          audio,
+          id,
+        },
+        [audio.buffer],
+      );
+
+      signal?.addEventListener(
+        'abort',
+        () => {
+          this.pipeWorker!.postMessage({
+            type: WorkerMessageType.Abort,
+            id,
+          });
           cleanup();
           resolve({ text: '', wordTimestamps: [] });
         },

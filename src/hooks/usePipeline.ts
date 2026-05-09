@@ -9,6 +9,7 @@ import { transcriptionClient } from '../lib/TranscriptionClient';
 import type { ModelLoadTask, Segment, TranscribingProgress } from '../types';
 import { ModelId, ProcessingState } from '../types';
 import { decodeAndResampleTo16kHz } from '../utils';
+import { mapWordsToSegments } from '../utils/transcription-mapping';
 
 export interface PipelineHook {
   process: (file: File) => Promise<void>;
@@ -87,6 +88,10 @@ export function usePipeline(): PipelineHook {
       ctx.close();
       if (signal.aborted) return;
 
+      if (decoded.duration > 300) {
+        throw new Error('Audio exceeds 5-minute limit.');
+      }
+
       setAudioBuffer(decoded);
       setTotalDuration(decoded.duration);
 
@@ -131,24 +136,18 @@ export function usePipeline(): PipelineHook {
         };
       });
       setSegments(initialSegments);
-      setProgress({ current: 0, total: audioSegments.length });
 
-      // Phase 2: Transcribe segments one by one
+      // Phase 2: Batch Transcription
       setStatus(ProcessingState.Transcribing);
-      for (let i = 0; i < audioSegments.length; i++) {
-        if (signal.aborted) return;
+      setProgress({ current: 0, total: 1 });
+      const { wordTimestamps } = await transcriptionClient.transcribeBatch(
+        resampledAudio,
+        signal,
+      );
+      if (signal.aborted) return;
 
-        const { text, wordTimestamps } = await transcriptionClient.transcribe(
-          audioSegments[i].id,
-          signal,
-        );
-        if (signal.aborted) return;
-
-        setSegments((prev) =>
-          prev.map((s) => (s.id === i ? { ...s, text, wordTimestamps } : s)),
-        );
-        setProgress((prev) => (prev ? { ...prev, current: i + 1 } : null));
-      }
+      setSegments((prev) => mapWordsToSegments(wordTimestamps, prev));
+      setProgress({ current: 1, total: 1 });
 
       setStatus(ProcessingState.Ready);
     } catch (err) {

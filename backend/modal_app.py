@@ -30,7 +30,7 @@ app = modal.App(APP_NAME, image=image)
 # --- Modal Entrypoint ---
 @app.function(
     gpu="A10G", 
-    scaledown_window=300, 
+    scaledown_window=30, 
     enable_memory_snapshot=True, 
     image=image,
     secrets=[modal.Secret.from_name(SECRET_NAME)]
