@@ -13,6 +13,10 @@ const app = new Hono<{ Bindings: Env }>();
 
 app.use("*", cors());
 
+app.get("/health", (c) => {
+  return c.json({ status: "ok" });
+});
+
 interface GroqWord {
   word: string;
   start: number;
