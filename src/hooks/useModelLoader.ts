@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 
 import { scoringClient } from '../lib/ScoringClient';
+import { transcriptionClient } from '../lib/TranscriptionClient';
 import type { ModelLoadTask } from '../types';
 import { ModelId } from '../types';
 
@@ -18,31 +19,28 @@ export function useModelLoader(options: { scoringEnabled: boolean }) {
   const clearLoadError = useCallback(() => setLoadError(null), []);
 
   useEffect(() => {
-    if (!options.scoringEnabled) return;
-
     let isMounted = true;
 
     // eslint-disable-next-line react-hooks/set-state-in-effect
     setTasks((prev) => ({
       ...prev,
-      [ModelId.Scoring]: {
-        id: ModelId.Scoring,
-        label: 'Loading scoring model…',
+      [ModelId.Transcription]: {
+        id: ModelId.Transcription,
+        label: 'Initializing VAD…',
         progress: 0,
       },
     }));
 
-    scoringClient
-      .ensureModels((progress, label) => {
+    transcriptionClient
+      .ensureModels((progress) => {
         if (isMounted) {
           setTasks((prev) =>
-            prev[ModelId.Scoring]
+            prev[ModelId.Transcription]
               ? {
                   ...prev,
-                  [ModelId.Scoring]: {
-                    ...prev[ModelId.Scoring],
+                  [ModelId.Transcription]: {
+                    ...prev[ModelId.Transcription],
                     progress,
-                    label: label || prev[ModelId.Scoring].label,
                   },
                 }
               : prev,
@@ -50,16 +48,54 @@ export function useModelLoader(options: { scoringEnabled: boolean }) {
         }
       })
       .then(() => {
-        if (isMounted) removeTask(ModelId.Scoring);
+        if (isMounted) removeTask(ModelId.Transcription);
       })
       .catch((err) => {
-        console.error('Scoring model failed to load:', err);
-        if (isMounted) setLoadError('Failed to load scoring model.');
-        if (isMounted) removeTask(ModelId.Scoring);
+        console.error('Transcription model failed to load:', err);
+        if (isMounted) setLoadError('Failed to initialize VAD.');
+        if (isMounted) removeTask(ModelId.Transcription);
       });
+
+    if (options.scoringEnabled) {
+      setTasks((prev) => ({
+        ...prev,
+        [ModelId.Scoring]: {
+          id: ModelId.Scoring,
+          label: 'Initializing Scoring (G2P)…',
+          progress: 0,
+        },
+      }));
+
+      scoringClient
+        .ensureModels((progress, label) => {
+          if (isMounted) {
+            setTasks((prev) =>
+              prev[ModelId.Scoring]
+                ? {
+                    ...prev,
+                    [ModelId.Scoring]: {
+                      ...prev[ModelId.Scoring],
+                      progress,
+                      label: label || prev[ModelId.Scoring].label,
+                    },
+                  }
+                : prev,
+            );
+          }
+        })
+        .then(() => {
+          if (isMounted) removeTask(ModelId.Scoring);
+        })
+        .catch((err) => {
+          console.error('Scoring model failed to load:', err);
+          if (isMounted) setLoadError('Failed to initialize Scoring.');
+          if (isMounted) removeTask(ModelId.Scoring);
+        });
+    }
 
     return () => {
       isMounted = false;
+      removeTask(ModelId.Transcription);
       removeTask(ModelId.Scoring);
     };
   }, [options.scoringEnabled]);

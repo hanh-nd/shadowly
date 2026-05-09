@@ -1,7 +1,5 @@
 import { type WordTimestamp, WorkerMessageType } from '../types';
 
-const WHISPER_MODEL = 'Xenova/whisper-tiny.en';
-
 export interface AudioSegment {
   id: string;
   start: number;
@@ -55,7 +53,6 @@ export class TranscriptionClient {
 
       this.pipeWorker.postMessage({
         type: WorkerMessageType.Init,
-        model: WHISPER_MODEL,
       });
     }
 

@@ -3,6 +3,11 @@ export enum ModelId {
   Scoring = 'scoring',
 }
 
+export enum InferenceEndpoint {
+  Transcribe = 'transcribe',
+  Score = 'score',
+}
+
 export enum StorageKey {
   Settings = 'shadowly:practice-settings',
 }
@@ -53,12 +58,6 @@ export interface IpaChunk {
   words: string[]; // original text words at those indices
   dictionaryIpa: string; // G2P output, eSpeak NG notation
   nativeAcousticIpa: string; // acoustic model output, may span word boundaries
-}
-
-export interface PrecomputeResult {
-  segmentId: number;
-  chunks: IpaChunk[];
-  nativeAcousticIpa: string;
 }
 
 export enum ProcessingState {

@@ -1,14 +1,7 @@
-import {
-  AutomaticSpeechRecognitionPipeline,
-  env,
-  pipeline,
-} from '@huggingface/transformers';
 import { NonRealTimeVAD } from '@ricky0123/vad-web';
 
 import { type WordTimestamp } from '../types';
-
-env.allowLocalModels = false;
-env.useBrowserCache = true;
+import { InferenceClient } from './InferenceClient';
 
 const ORT_WASM_BASE =
   'https://cdn.jsdelivr.net/npm/onnxruntime-web@1.25.1/dist/';
@@ -23,13 +16,11 @@ interface VADInstance {
 }
 
 export class TranscriptionEngine {
-  private pipe: Awaited<AutomaticSpeechRecognitionPipeline> | null = null;
   private vadInstance: VADInstance | null = null;
+  private isReady = false;
 
-  async init(
-    model: string,
-    onProgress: (progress: number) => void,
-  ): Promise<void> {
+  async init(onProgress: (progress: number) => void): Promise<void> {
+    onProgress(10);
     this.vadInstance = await NonRealTimeVAD.new({
       preSpeechPadMs: 200,
       redemptionMs: 400,
@@ -42,20 +33,8 @@ export class TranscriptionEngine {
         ort.env.wasm.wasmPaths = ORT_WASM_BASE;
       },
     });
-
-    env.allowLocalModels = false;
-    this.pipe = await pipeline('automatic-speech-recognition', model, {
-      device: 'wasm',
-      dtype: 'q8',
-      session_options: {
-        graphOptimizationLevel: 'basic',
-      },
-      progress_callback: (p) => {
-        const info = p as { progress: number };
-        if (!info.progress) return;
-        onProgress(info.progress);
-      },
-    });
+    onProgress(100);
+    this.isReady = true;
   }
 
   async *runVAD(audio: Float32Array): AsyncGenerator<{
@@ -81,36 +60,15 @@ export class TranscriptionEngine {
   async transcribe(
     audio: Float32Array,
   ): Promise<{ text: string; wordTimestamps: WordTimestamp[] }> {
-    if (!this.pipe) {
-      throw new Error('Pipeline not initialized');
+    if (!this.isReady) {
+      throw new Error('Engine not initialized');
     }
 
-    const output = await this.pipe(audio, {
-      return_timestamps: 'word',
-      chunk_length_s: 30,
-      stride_length_s: 5,
-    });
+    const output = await InferenceClient.transcribe(audio);
 
-    const outputArray = Array.isArray(output) ? output : [output];
-    const text = outputArray
-      .map((item) => item.text)
-      .join(' ')
-      .trim();
-    const chunks = outputArray.flatMap((item) => item.chunks);
-    const wordTimestamps: WordTimestamp[] = (chunks || [])
-      .filter(
-        (chunk) =>
-          chunk &&
-          chunk.timestamp &&
-          chunk.timestamp[0] !== null &&
-          chunk.timestamp[1] !== null,
-      )
-      .map((chunk) => ({
-        word: chunk!.text.trim(),
-        start: chunk!.timestamp[0]!,
-        end: chunk!.timestamp[1]!,
-      }));
-
-    return { text, wordTimestamps };
+    return {
+      text: output.text,
+      wordTimestamps: output.wordTimestamps,
+    };
   }
 }

@@ -7,12 +7,12 @@ const transcriptionEngine = new TranscriptionEngine();
 const segmentsMap = new Map<string, Float32Array>();
 
 self.onmessage = async (e) => {
-  const { type, audio, model, id, segmentId } = e.data;
+  const { type, audio, id, segmentId } = e.data;
 
   try {
     switch (type) {
       case WorkerMessageType.Init: {
-        await transcriptionEngine.init(model, (progress) => {
+        await transcriptionEngine.init((progress) => {
           self.postMessage({
             type: WorkerMessageType.Progress,
             payload: progress,

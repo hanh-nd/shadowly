@@ -1,0 +1,9 @@
+fastapi[standard]
+uvicorn
+torch
+transformers
+librosa
+soundfile
+accelerate
+python-dotenv
+python-multipart

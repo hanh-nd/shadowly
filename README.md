@@ -1,75 +1,103 @@
 # Shadowly
 
-**Shadowly** is a web-based application designed for language learning through "shadowing" (repeating after native audio). It leverages local machine learning models running entirely within your browser to transcribe audio and provide real-time pronunciation scoring, ensuring maximum privacy and low latency.
-
-Check out [Live Demo](https://shadowly.netlify.app).
+**Shadowly** is a web-based application designed for language learning through "shadowing" (repeating after native audio). It leverages an AI-powered inference API to provide fast, mobile-friendly transcription and pronunciation scoring.
 
 ## Features
 
 - **Audio Shadowing**: Practice pronunciation by repeating after native speaker audio segments.
-- **In-Browser ML**: All machine learning models run locally in your browser using WebAssembly. No audio is ever sent to a remote server.
-- **Real-time Transcription**: Transcribes spoken audio on the fly.
-- **Pronunciation Scoring**: Evaluates your pronunciation on a word-by-word basis using a phoneme-level alignment algorithm.
-- **Voice Activity Detection (VAD)**: Smartly detects when you start and stop speaking.
+- **Hybrid Cloud/Local ML**: 
+  - **Cloud**: High-performance Whisper and Wav2Vec2 models run on an inference server (FastAPI) for high accuracy and mobile support.
+  - **Local**: Voice Activity Detection (VAD) and G2P run in the browser for low-latency feedback.
+- **Real-time Transcription**: Transcribes native segments with word-level timestamps.
+- **Pronunciation Scoring**: Evaluates your pronunciation on a word-by-word basis using phonetic alignment.
 - **Auto-Cruise**: Hands-free practice loop that automatically advances through segments as you speak.
 
 ## Tech Stack
 
-- **Frontend**: React 19, TypeScript, Vite, Tailwind CSS
-- **Machine Learning**: `@huggingface/transformers` (Transformers.js), Whisper for transcription, wav2vec2-alignment for acoustic phoneme recognition
-- **G2P (Grapheme-to-Phoneme)**: `espeak-ng` compiled to WebAssembly
-- **Audio Processing**: `@ricky0123/vad-web` for Voice Activity Detection
+- **Frontend**: React 19, TypeScript, Vite, Vanilla CSS
+- **Backend (Inference API)**: Python, FastAPI, Whisper-v3-turbo, Wav2Vec2 (Phonetic)
+- **G2P**: `espeak-ng` compiled to WebAssembly (Local)
+- **VAD**: `@ricky0123/vad-web` (Local)
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js (v18 or higher recommended)
-- `npm` or `yarn`
+- Node.js (v18 or higher)
+- Python 3.10+ (for backend)
 
 ### Installation
 
-1. Clone the repository:
+1. **Clone and Install Frontend**:
    ```bash
    git clone <repository-url>
    cd shadowly
+   npm install
    ```
 
-2. Install dependencies:
+2. **Setup Backend**:
    ```bash
-   yarn install
-   # or npm install
+   python -m venv venv
+   source venv/bin/activate
+   pip install -r backend/requirements.txt # Create this file or install manually: fastapi, uvicorn, torch, transformers, librosa, soundfile, accelerate, python-dotenv
    ```
 
-3. Start the development server:
+3. **Environment Variables**:
+   Create a `.env.local` file in the root:
+   ```env
+   VITE_INFERENCE_BASE_URL=http://localhost:8000
+   VITE_INFERENCE_KEY=your_secure_key
+   VITE_INFERENCE_SECRET=your_secure_secret
+   ```
+
+### Development
+
+1. **Start Backend**:
    ```bash
-   yarn dev
-   # or npm run dev
+   source venv/bin/activate
+   python backend/main.py
    ```
 
-4. Open your browser and navigate to `http://localhost:5173`.
+2. **Start Frontend**:
+   ```bash
+   npm run dev
+   ```
 
-### Build for Production
+## Deployment
 
-To build the application for production:
+### Backend (Standard Container)
+The backend is a standard FastAPI app. You can containerize it and deploy it to any provider (AWS SageMaker, Lambda, GCP Cloud Run, or specialized GPU hosts).
 
+### Optional: Deploy to Modal.com
+If you prefer using Modal, a wrapper is provided. 
+
+1. **Setup Production Secrets**:
+   Go to the [Modal Secrets Dashboard](https://modal.com/secrets) and create a secret named `shadowly-secrets` with:
+   - `INFERENCE_KEY`: your_secure_key
+   - `INFERENCE_SECRET`: your_secure_secret
+
+2. **Deploy**:
+   ```bash
+   modal deploy backend/modal_app.py
+   ```
+   This will use your named secrets and enable GPU memory snapshots for sub-second cold starts.
+
+### Frontend
+Build the static site:
 ```bash
-yarn build
-# or npm run build
+npm run build
 ```
-
-This will compile the TypeScript code and bundle the application into the `dist` folder.
+Deploy the `dist` folder to any static hosting provider.
 
 ## How it Works
 
-1. **Audio Input**: The application captures audio from your microphone using the Web Audio API.
-2. **VAD**: Voice Activity Detection monitors the stream to automatically start and stop recording when you speak.
-3. **Transcription**: Whisper models running via Transformers.js transcribe the audio locally.
-4. **Scoring**: The `scoring.worker` uses a three-pillar IPA architecture:
-   - **G2P**: Converts reference text into expected IPA phonemes using `espeak-ng` WASM.
-   - **CTC**: Extracts spoken IPA phonemes from user audio using a quantized `wav2vec2-alignment` ONNX model.
-   - **Alignment**: Employs the Needleman-Wunsch algorithm to globally align the expected and spoken phoneme sequences, producing accurate word-level scores without speaker-identity bias.
-5. **Feedback**: You receive immediate visual feedback on your pronunciation accuracy for each word.
+1. **Audio Input**: Captured locally via microphone.
+2. **VAD (Local)**: Detects speech boundaries in the browser.
+3. **Transcription (Cloud)**: Native segments are sent to the inference API for high-accuracy word timestamps.
+4. **Scoring (Hybrid)**:
+   - **G2P (Local)**: Converts text to expected IPA.
+   - **CTC (Cloud)**: Extracts spoken IPA from user audio via the inference API.
+   - **Alignment (Local)**: Aligns sequences to produce word-level scores.
 
 ## License
 
