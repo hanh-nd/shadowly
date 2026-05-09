@@ -1,0 +1,12 @@
+[build]
+  base = "/"
+  publish = "apps/frontend/dist"
+  command = "npm run build:frontend"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
