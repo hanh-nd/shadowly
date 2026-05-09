@@ -16,15 +16,11 @@ from fastapi.middleware.cors import CORSMiddleware
 import torch
 import librosa
 from transformers import pipeline
-from dotenv import load_dotenv
-
-# Load environment variables from .env.local if present (development)
-load_dotenv(".env.local")
 
 # Strictly use INFERENCE_KEY and INFERENCE_SECRET
 # These are provided by Modal Secrets in production
 def get_auth_config():
-    return os.environ.get("INFERENCE_KEY"), os.environ.get("INFERENCE_SECRET")
+    return os.environ.get("INFERENCE_KEY", "INFERENCE_KEY"), os.environ.get("INFERENCE_SECRET", "INFERENCE_SECRET")
 
 app = FastAPI(title="Shadowly Inference API")
 

@@ -11,9 +11,7 @@ export interface ScoreResponse {
 }
 
 export class InferenceClient {
-  private static BASE_URL = import.meta.env.VITE_INFERENCE_BASE_URL;
-  private static AUTH_KEY = import.meta.env.VITE_INFERENCE_KEY;
-  private static AUTH_SECRET = import.meta.env.VITE_INFERENCE_SECRET;
+  private static BASE_URL = import.meta.env.VITE_GATEWAY_URL;
 
   /**
    * High-level transcription method. Handles audio encoding and typed response.
@@ -44,9 +42,9 @@ export class InferenceClient {
     audio: Float32Array,
     signal?: AbortSignal,
   ): Promise<T> {
-    if (!this.BASE_URL || !this.AUTH_KEY || !this.AUTH_SECRET) {
+    if (!this.BASE_URL) {
       throw new Error(
-        'Inference configuration missing. Ensure VITE_INFERENCE_BASE_URL, VITE_INFERENCE_KEY, and VITE_INFERENCE_SECRET are set.',
+        'Inference configuration missing. Ensure VITE_GATEWAY_URL is set.',
       );
     }
 
@@ -61,10 +59,6 @@ export class InferenceClient {
     try {
       const response = await fetch(`${this.BASE_URL}/${endpoint}`, {
         method: 'POST',
-        headers: {
-          'X-Shadowly-Key': this.AUTH_KEY,
-          'X-Shadowly-Secret': this.AUTH_SECRET,
-        },
         body: formData,
         signal,
       });

@@ -5,6 +5,6 @@ transformers
 librosa
 soundfile
 accelerate
-python-dotenv
 python-multipart
 phonemizer
+modal

@@ -1,38 +1,31 @@
 {
-  "name": "shadowly",
+  "name": "shadowly-monorepo",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "workspaces": [
+    "apps/*"
+  ],
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "lint": "eslint .",
-    "preview": "vite preview",
-    "prepare": "husky"
-  },
-  "dependencies": {
-    "@ricky0123/vad-web": "^0.0.30",
-    "espeak-ng": "^1.0.2",
-    "react": "^19.2.5",
-    "react-dom": "^19.2.5"
+    "dev:frontend": "npm run dev -w apps/frontend",
+    "dev:gateway": "npm run dev -w apps/gateway",
+    "build": "npm run build -w apps/frontend && npm run build -w apps/gateway",
+    "build:frontend": "npm run build -w apps/frontend",
+    "build:gateway": "npm run build -w apps/gateway",
+    "lint": "npm run lint -w apps/frontend && npm run lint -w apps/gateway",
+    "lint:frontend": "npm run lint -w apps/frontend",
+    "lint:gateway": "npm run lint -w apps/gateway",
+    "typecheck": "npm run typecheck -w apps/frontend"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
-    "@types/node": "^24.12.3",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.1",
-    "eslint": "^10.2.1",
+    "eslint": "^10.3.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.5",
-    "eslint-plugin-react-hooks": "^7.1.1",
-    "eslint-plugin-react-refresh": "^0.5.2",
     "eslint-plugin-simple-import-sort": "^13.0.0",
-    "globals": "^17.5.0",
+    "globals": "^17.6.0",
     "husky": "^9.1.7",
-    "prettier": "^3.8.3",
-    "typescript": "~6.0.2",
-    "typescript-eslint": "^8.58.2",
-    "vite": "^8.0.10"
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.2"
   }
 }

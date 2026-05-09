@@ -1,23 +1,31 @@
 # Shadowly
 
-**Shadowly** is a web-based application designed for language learning through "shadowing" (repeating after native audio). It leverages an AI-powered inference API to provide fast, mobile-friendly transcription and pronunciation scoring.
+**Shadowly** is a web-based application designed for language learning through "shadowing" (repeating after native audio). It leverages an AI-powered inference architecture to provide fast, mobile-friendly transcription and pronunciation scoring.
 
 ## Features
 
 - **Audio Shadowing**: Practice pronunciation by repeating after native speaker audio segments.
 - **Hybrid Cloud/Local ML**: 
-  - **Cloud**: High-performance Whisper and Wav2Vec2 models run on an inference server (FastAPI) for high accuracy and mobile support.
+  - **Cloud (Groq)**: Ultra-fast Whisper-v3-turbo via Groq LPU for real-time transcription.
+  - **Cloud (Modal)**: High-performance Wav2Vec2 models for pronunciation scoring.
   - **Local**: Voice Activity Detection (VAD) and G2P run in the browser for low-latency feedback.
-- **Real-time Transcription**: Transcribes native segments with word-level timestamps.
-- **Pronunciation Scoring**: Evaluates your pronunciation on a word-by-word basis using phonetic alignment.
+- **Secure Gateway**: A Cloudflare Worker acts as a secure Backend-for-Frontend (BFF), orchestrating requests to Groq and Modal without exposing keys to the client.
 - **Auto-Cruise**: Hands-free practice loop that automatically advances through segments as you speak.
 
 ## Tech Stack
 
 - **Frontend**: React 19, TypeScript, Vite, Vanilla CSS
-- **Backend (Inference API)**: Python, FastAPI, Whisper-v3-turbo, Wav2Vec2 (Phonetic)
+- **Gateway**: Cloudflare Workers (Hono)
+- **Backend (Inference API)**: Python, FastAPI, Wav2Vec2 (Phonetic)
 - **G2P**: `espeak-ng` compiled to WebAssembly (Local)
 - **VAD**: `@ricky0123/vad-web` (Local)
+
+## Project Structure
+
+This project is organized as a monorepo:
+- `apps/frontend`: React client application.
+- `apps/gateway`: Cloudflare Worker API gateway.
+- `apps/backend`: Python/FastAPI scoring engine (Modal.com).
 
 ## Getting Started
 
@@ -25,79 +33,79 @@
 
 - Node.js (v18 or higher)
 - Python 3.10+ (for backend)
+- [Wrangler](https://developers.cloudflare.com/workers/wrangler/install-and-update/) (for gateway)
 
 ### Installation
 
-1. **Clone and Install Frontend**:
+1. **Clone and Install Dependencies**:
    ```bash
    git clone <repository-url>
    cd shadowly
    npm install
    ```
 
-2. **Setup Backend**:
+2. **Setup Backend (Scoring Engine)**:
    ```bash
+   cd apps/backend
    python -m venv venv
    source venv/bin/activate
-   pip install -r backend/requirements.txt # Create this file or install manually: fastapi, uvicorn, torch, transformers, librosa, soundfile, accelerate, python-dotenv
+   pip install -r requirements.txt
    ```
 
-3. **Environment Variables**:
-   Create a `.env.local` file in the root:
+### Environment Variables
+
+1. **Frontend (`apps/frontend/.env.local`)**:
    ```env
-   VITE_INFERENCE_BASE_URL=http://localhost:8000
-   VITE_INFERENCE_KEY=your_secure_key
-   VITE_INFERENCE_SECRET=your_secure_secret
+   VITE_GATEWAY_URL=http://localhost:8787
    ```
 
-### Development
+2. **Gateway (`apps/gateway/.dev.vars`)**:
+   ```env
+   GROQ_API_KEY=your_groq_api_key
+   INFERENCE_KEY=your_modal_key
+   INFERENCE_SECRET=your_modal_secret
+   MODAL_URL=https://your-modal-app-url.modal.run
+   ```
 
-1. **Start Backend**:
+### Development (Running Locally)
+
+You need to run all three services for the full experience:
+
+1. **Start Backend (Scoring)**:
    ```bash
+   cd apps/backend
    source venv/bin/activate
-   python backend/main.py
+   python main.py
    ```
 
-2. **Start Frontend**:
+2. **Start Gateway (Proxy)**:
    ```bash
-   npm run dev
+   npm run dev:gateway
+   ```
+
+3. **Start Frontend (UI)**:
+   ```bash
+   npm run dev:frontend
    ```
 
 ## Deployment
 
-### Backend (Standard Container)
-The backend is a standard FastAPI app. You can containerize it and deploy it to any provider (AWS SageMaker, Lambda, GCP Cloud Run, or specialized GPU hosts).
+### Gateway (Cloudflare Workers)
+```bash
+npm run build:gateway
+```
 
-### Optional: Deploy to Modal.com
-If you prefer using Modal, a wrapper is provided. 
-
-1. **Setup Production Secrets**:
-   Go to the [Modal Secrets Dashboard](https://modal.com/secrets) and create a secret named `shadowly-secrets` with:
-   - `INFERENCE_KEY`: your_secure_key
-   - `INFERENCE_SECRET`: your_secure_secret
-
-2. **Deploy**:
-   ```bash
-   modal deploy backend/modal_app.py
-   ```
-   This will use your named secrets and enable GPU memory snapshots for sub-second cold starts.
+### Backend (Modal.com)
+```bash
+cd apps/backend
+modal deploy modal_app.py
+```
 
 ### Frontend
-Build the static site:
 ```bash
-npm run build
+npm run build:frontend
 ```
-Deploy the `dist` folder to any static hosting provider.
-
-## How it Works
-
-1. **Audio Input**: Captured locally via microphone.
-2. **VAD (Local)**: Detects speech boundaries in the browser.
-3. **Transcription (Cloud)**: Native segments are sent to the inference API for high-accuracy word timestamps.
-4. **Scoring (Hybrid)**:
-   - **G2P (Local)**: Converts text to expected IPA.
-   - **CTC (Cloud)**: Extracts spoken IPA from user audio via the inference API.
-   - **Alignment (Local)**: Aligns sequences to produce word-level scores.
+Deploy the `apps/frontend/dist` folder to any static hosting provider.
 
 ## License
 
