@@ -1,3 +1,4 @@
+import { AudioPlayerSection } from './AudioPlayerSection';
 import { SettingToggle } from './SettingToggle';
 import { UploadZone } from './UploadZone';
 
@@ -22,6 +23,13 @@ interface Props {
   onToggleMaskMode: () => void;
   onBufferTimeChange: (t: number) => void;
   onLoopCountChange: (n: number) => void;
+  // Playback section props
+  filename?: string | null;
+  currentTime?: number;
+  duration?: number;
+  isPlaying?: boolean;
+  onTogglePlay?: () => void;
+  onSeekTo?: (time: number) => void;
 }
 
 export function Sidebar({
@@ -45,6 +53,12 @@ export function Sidebar({
   onToggleMaskMode,
   onBufferTimeChange,
   onLoopCountChange,
+  filename,
+  currentTime = 0,
+  duration = 0,
+  isPlaying = false,
+  onTogglePlay,
+  onSeekTo,
 }: Props) {
   return (
     <>
@@ -189,6 +203,19 @@ export function Sidebar({
               </div>
             </div>
           </div>
+
+          {duration > 0 && (
+            <div className="border-t border-surface-variant pt-6">
+              <AudioPlayerSection
+                filename={filename}
+                currentTime={currentTime}
+                duration={duration}
+                isPlaying={isPlaying}
+                onTogglePlay={onTogglePlay!}
+                onSeekTo={onSeekTo!}
+              />
+            </div>
+          )}
 
           <UploadZone onFileSelect={onFileSelect} />
         </div>

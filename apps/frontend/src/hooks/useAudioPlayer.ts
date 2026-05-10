@@ -15,8 +15,13 @@ export function useAudioPlayer(
 ) {
   const audioContextRef = useRef<AudioContext | null>(null);
   const currentSourceRef = useRef<AudioBufferSourceNode | null>(null);
+  const startTimeRef = useRef<number>(0);
+  const startOffsetRef = useRef<number>(0);
 
   const [status, setStatus] = useState<PlaybackStatus>(PlaybackStatus.Idle);
+  const [currentTime, setCurrentTime] = useState(0);
+
+  const duration = audioBuffer?.duration ?? 0;
 
   const getRunningContext = useCallback(async (): Promise<AudioContext> => {
     let ctx = audioContextRef.current;
@@ -44,6 +49,76 @@ export function useAudioPlayer(
     setStatus(PlaybackStatus.Idle);
   }, []);
 
+  const startPlayback = useCallback(
+    async (
+      buffer: AudioBuffer,
+      offset: number,
+      playbackDuration?: number,
+      onEnded?: () => void,
+    ) => {
+      stop();
+
+      try {
+        const ctx = await getRunningContext();
+        const source = ctx.createBufferSource();
+        source.buffer = buffer;
+        source.playbackRate.value = speed;
+        source.connect(ctx.destination);
+
+        source.onended = () => {
+          if (currentSourceRef.current === source) {
+            setStatus(PlaybackStatus.Idle);
+            currentSourceRef.current = null;
+            onEnded?.();
+          }
+        };
+
+        currentSourceRef.current = source;
+        startTimeRef.current = ctx.currentTime;
+        startOffsetRef.current = offset;
+        setCurrentTime(offset);
+
+        if (playbackDuration !== undefined) {
+          source.start(0, offset, playbackDuration);
+        } else {
+          source.start(0, offset);
+        }
+
+        setStatus(PlaybackStatus.Playing);
+      } catch (err) {
+        console.error('Playback failed:', err);
+        stop();
+      }
+    },
+    [speed, stop, getRunningContext],
+  );
+
+  useEffect(() => {
+    let frameId: number;
+
+    const update = () => {
+      if (status !== PlaybackStatus.Playing || !audioContextRef.current) return;
+
+      const ctx = audioContextRef.current;
+      const elapsed = (ctx.currentTime - startTimeRef.current) * speed;
+      const current = startOffsetRef.current + elapsed;
+      setCurrentTime(Math.min(current, duration));
+      frameId = requestAnimationFrame(update);
+    };
+
+    if (status === PlaybackStatus.Playing) {
+      frameId = requestAnimationFrame(update);
+    }
+
+    return () => cancelAnimationFrame(frameId);
+  }, [status, speed, duration]);
+
+  useEffect(() => {
+    if (currentSourceRef.current) {
+      currentSourceRef.current.playbackRate.value = speed;
+    }
+  }, [speed]);
+
   /**
    * Play a segment from the provided AudioBuffer.
    */
@@ -56,37 +131,25 @@ export function useAudioPlayer(
         return;
       }
 
-      stop();
+      const segmentDuration = Math.max(
+        segment.end - segment.start,
+        MIN_SEGMENT_DURATION,
+      );
 
-      try {
-        const ctx = await getRunningContext();
-
-        const source = ctx.createBufferSource();
-        source.buffer = audioBuffer;
-        source.playbackRate.value = speed;
-        source.connect(ctx.destination);
-
-        const duration = Math.max(
-          segment.end - segment.start,
-          MIN_SEGMENT_DURATION,
-        );
-
-        source.onended = () => {
-          if (currentSourceRef.current === source) {
-            setStatus(PlaybackStatus.Idle);
-            currentSourceRef.current = null;
-          }
-        };
-
-        currentSourceRef.current = source;
-        source.start(0, segment.start, duration);
-        setStatus(PlaybackStatus.Playing);
-      } catch (err) {
-        console.error('Playback failed:', err);
-        stop();
-      }
+      await startPlayback(audioBuffer, segment.start, segmentDuration);
     },
-    [audioBuffer, speed, stop, getRunningContext],
+    [audioBuffer, startPlayback],
+  );
+
+  /**
+   * Play the whole buffer from a given offset.
+   */
+  const playFrom = useCallback(
+    async (offset: number) => {
+      if (!audioBuffer) return;
+      await startPlayback(audioBuffer, offset);
+    },
+    [audioBuffer, startPlayback],
   );
 
   /**
@@ -94,37 +157,20 @@ export function useAudioPlayer(
    */
   const playUrl = useCallback(
     async (url: string, onEnded?: () => void) => {
-      stop();
-
       try {
         const ctx = await getRunningContext();
-
         const response = await fetch(url);
         const arrayBuffer = await response.arrayBuffer();
         const decodedBuffer = await ctx.decodeAudioData(arrayBuffer);
 
-        const source = ctx.createBufferSource();
-        source.buffer = decodedBuffer;
-        source.connect(ctx.destination);
-
-        source.onended = () => {
-          if (currentSourceRef.current === source) {
-            setStatus(PlaybackStatus.Idle);
-            currentSourceRef.current = null;
-            onEnded?.();
-          }
-        };
-
-        currentSourceRef.current = source;
-        source.start(0);
-        setStatus(PlaybackStatus.Playing);
+        await startPlayback(decodedBuffer, 0, undefined, onEnded);
       } catch (err) {
         console.error('URL playback failed:', err);
         stop();
         onEnded?.();
       }
     },
-    [stop, getRunningContext],
+    [stop, getRunningContext, startPlayback],
   );
 
   // Cleanup on unmount
@@ -138,11 +184,33 @@ export function useAudioPlayer(
     };
   }, [stop]);
 
+  /**
+   * Seek to a specific time.
+   * If playing, restarts playback from the new offset.
+   * If stopped, just updates the current time.
+   */
+  const seek = useCallback(
+    async (time: number) => {
+      const clamped = Math.max(0, Math.min(duration, time));
+      if (status === PlaybackStatus.Playing && audioBuffer) {
+        await startPlayback(audioBuffer, clamped);
+      } else {
+        setCurrentTime(clamped);
+      }
+    },
+    [status, audioBuffer, duration, startPlayback],
+  );
+
   return {
     play,
+    playFrom,
     playUrl,
     stop,
+    seek,
     status,
+    currentTime,
+    setCurrentTime,
+    duration,
     isPlaying: status === PlaybackStatus.Playing,
   };
 }

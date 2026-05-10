@@ -274,12 +274,22 @@ export function useShadowingManager() {
       ...(pipeline.modelLoadTask ? [pipeline.modelLoadTask] : []),
       ...modelLoader.activeLoads,
     ],
+    currentTime: originalPlayer.currentTime,
+    duration: originalPlayer.duration,
 
     // Actions
     upload,
     loadUrl,
     reset,
     playOriginal,
+    playFullAudio: useCallback(() => {
+      if (originalPlayer.isPlaying) {
+        originalPlayer.stop();
+      } else {
+        originalPlayer.playFrom(originalPlayer.currentTime);
+      }
+    }, [originalPlayer]),
+    seekTo: originalPlayer.seek,
     startRecord,
     stopRecord,
     playMine,

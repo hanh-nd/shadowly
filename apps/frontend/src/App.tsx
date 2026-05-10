@@ -57,6 +57,12 @@ export function App() {
         onToggleMaskMode={manager.settings.toggleMaskMode}
         onBufferTimeChange={manager.settings.setBufferTime}
         onLoopCountChange={manager.settings.setLoopCount}
+        filename={manager.filename}
+        currentTime={manager.currentTime}
+        duration={manager.duration}
+        isPlaying={manager.isPlayingOriginal}
+        onTogglePlay={manager.playFullAudio}
+        onSeekTo={manager.seekTo}
       />
 
       <main className="flex-1 lg:ml-64 relative min-h-screen min-w-0">
