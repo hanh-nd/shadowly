@@ -1,13 +1,21 @@
 import { useCallback, useRef, useState } from 'react';
 
 import { transcriptionClient } from '../lib/TranscriptionClient';
-import type { ModelLoadTask, Segment, TranscribingProgress } from '../types';
+import type {
+  ModelLoadTask,
+  Segment,
+  TranscribingProgress,
+  WordTimestamp,
+} from '../types';
 import { ModelId, ProcessingState } from '../types';
 import { resampleAudioBufferTo16kHz } from '../utils';
 import { groupWordsIntoSegments } from '../utils/transcription-mapping';
 
 export interface PipelineHook {
-  process: (file: File) => Promise<void>;
+  process: (
+    input: File | string,
+    cachedData?: WordTimestamp[],
+  ) => Promise<void>;
   reset: () => void;
   segments: Segment[];
   patchSegment: (
@@ -59,7 +67,10 @@ export function usePipeline(): PipelineHook {
     setFilename(null);
   }, []);
 
-  const process = async (file: File) => {
+  const process = async (
+    input: File | string,
+    cachedData?: WordTimestamp[],
+  ) => {
     // Cancel any ongoing run
     abortControllerRef.current?.abort();
     const controller = new AbortController();
@@ -71,11 +82,27 @@ export function usePipeline(): PipelineHook {
     setError(null);
     setAudioBuffer(null);
     setTotalDuration(0);
-    setFilename(file.name);
+
+    const targetName =
+      typeof input === 'string'
+        ? input.split('/').pop() || 'Remote Audio'
+        : input.name;
+    setFilename(targetName);
     setModelLoadTask(null);
 
     try {
-      const arrayBuffer = await file.arrayBuffer();
+      let arrayBuffer: ArrayBuffer;
+
+      if (typeof input === 'string') {
+        setStatus(ProcessingState.Fetching);
+        const response = await fetch(input, { signal });
+        if (!response.ok)
+          throw new Error(`Failed to fetch audio: ${response.statusText}`);
+        arrayBuffer = await response.arrayBuffer();
+      } else {
+        arrayBuffer = await input.arrayBuffer();
+      }
+
       if (signal.aborted) return;
 
       const ctx = new AudioContext();
@@ -90,26 +117,50 @@ export function usePipeline(): PipelineHook {
       setAudioBuffer(decoded);
       setTotalDuration(decoded.duration);
 
-      await transcriptionClient.ensureModels((p) =>
-        setModelLoadTask({
-          id: ModelId.Transcription,
-          label: 'Downloading transcription model…',
-          progress: p,
-        }),
-      );
-      setModelLoadTask(null);
-      if (signal.aborted) return;
+      let wordTimestamps: WordTimestamp[] = cachedData || [];
 
-      const resampledAudio = await resampleAudioBufferTo16kHz(decoded);
-      if (signal.aborted) return;
+      if (wordTimestamps.length === 0 && typeof input === 'string') {
+        try {
+          const jsonUrl = input.substring(0, input.lastIndexOf('.')) + '.json';
+          const jsonRes = await fetch(jsonUrl, { signal });
+          if (jsonRes.ok) {
+            const data = await jsonRes.json();
+            if (data && Array.isArray(data.wordTimestamps)) {
+              wordTimestamps = data.wordTimestamps;
+            }
+          }
+        } catch (e) {
+          console.warn(
+            'Failed to load sidecar transcription, falling back to engine',
+            e,
+          );
+        }
+      }
 
-      // Batch Transcription
-      setStatus(ProcessingState.Transcribing);
-      setProgress({ current: 0, total: 1 });
-      const { wordTimestamps } = await transcriptionClient.transcribeBatch(
-        resampledAudio,
-        signal,
-      );
+      if (wordTimestamps.length === 0) {
+        await transcriptionClient.ensureModels((p) =>
+          setModelLoadTask({
+            id: ModelId.Transcription,
+            label: 'Downloading transcription model…',
+            progress: p,
+          }),
+        );
+        setModelLoadTask(null);
+        if (signal.aborted) return;
+
+        const resampledAudio = await resampleAudioBufferTo16kHz(decoded);
+        if (signal.aborted) return;
+
+        // Batch Transcription
+        setStatus(ProcessingState.Transcribing);
+        setProgress({ current: 0, total: 1 });
+        const result = await transcriptionClient.transcribeBatch(
+          resampledAudio,
+          signal,
+        );
+        wordTimestamps = result.wordTimestamps;
+      }
+
       if (signal.aborted) return;
 
       const derivedSegments = groupWordsIntoSegments(wordTimestamps);
@@ -125,7 +176,7 @@ export function usePipeline(): PipelineHook {
       setStatus(ProcessingState.Ready);
     } catch (err) {
       if (signal.aborted) return;
-      const msg = err instanceof Error ? err.message : 'Transcription failed.';
+      const msg = err instanceof Error ? err.message : 'Processing failed.';
       setError(msg);
       setStatus(ProcessingState.Error);
     }

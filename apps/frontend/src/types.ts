@@ -30,6 +30,22 @@ export interface WordTimestamp {
   end: number; // seconds, 0-relative to segment audio
 }
 
+export interface LibraryItem {
+  id: string;
+  name: string;
+  url: string;
+  tags: string[];
+  duration: string; // formatted string like "04:15"
+  text?: string;
+  wordTimestamps?: WordTimestamp[];
+}
+
+export enum AppView {
+  Idle = 'idle',
+  Library = 'library',
+  Practice = 'practice',
+}
+
 export enum WordScore {
   Good = 'good',
   Neutral = 'neutral',
@@ -62,6 +78,7 @@ export interface IpaChunk {
 
 export enum ProcessingState {
   Idle = 'idle',
+  Fetching = 'fetching',
   Transcribing = 'transcribing',
   Ready = 'ready',
   Error = 'error',

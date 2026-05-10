@@ -1,16 +1,26 @@
 import { useState } from 'react';
 
+import { AudioLibrary } from './components/AudioLibrary';
 import { LoadingOverlay } from './components/LoadingOverlay';
 import { SentenceView } from './components/SentenceView';
 import { Sidebar } from './components/Sidebar';
 import { TopBar } from './components/TopBar';
 import { UploadZone } from './components/UploadZone';
 import { useShadowingManager } from './hooks/useShadowingManager';
-import { ProcessingState } from './types';
+import { AppView } from './types';
 
 export function App() {
   const manager = useShadowingManager();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+
+  const [mode, setMode] = useState<AppView>(AppView.Idle);
+
+  const isLibraryRequested = mode === AppView.Library;
+
+  const view =
+    mode === AppView.Idle && manager.segments.length > 0
+      ? AppView.Practice
+      : mode;
 
   return (
     <div className="bg-background text-on-background min-h-screen flex w-full antialiased overflow-x-hidden">
@@ -19,6 +29,18 @@ export function App() {
         onClose={() => setIsSidebarOpen(false)}
         onFileSelect={(file) => {
           manager.upload(file);
+          setIsSidebarOpen(false);
+          setMode(AppView.Idle); // Return to auto-follow mode
+        }}
+        onOpenLibrary={() => {
+          manager.reset();
+          setMode(AppView.Library);
+          setIsSidebarOpen(false);
+        }}
+        isLibraryActive={isLibraryRequested}
+        onLogoClick={() => {
+          manager.reset();
+          setMode(AppView.Idle);
           setIsSidebarOpen(false);
         }}
         speed={manager.settings.playbackSpeed}
@@ -37,7 +59,7 @@ export function App() {
         onLoopCountChange={manager.settings.setLoopCount}
       />
 
-      <main className="flex-1 lg:ml-64 relative min-h-screen">
+      <main className="flex-1 lg:ml-64 relative min-h-screen min-w-0">
         <TopBar
           filename={manager.filename}
           activeIndex={manager.activeIndex}
@@ -52,27 +74,37 @@ export function App() {
           activeLoads={manager.activeLoads}
         />
 
-        {(manager.status === ProcessingState.Ready ||
-          manager.status === ProcessingState.Transcribing) &&
-          manager.segments.length > 0 && (
-            <SentenceView
-              segments={manager.segments}
-              activeIndex={manager.activeIndex}
-              isPlayingOriginal={manager.isPlayingOriginal}
-              isPlayingMine={manager.isPlayingMine}
-              isRecording={manager.isRecording}
-              maskModeEnabled={manager.settings.maskMode}
-              totalDuration={manager.totalDuration}
-              onNavigate={manager.navigate}
-              onPlayOriginal={manager.playOriginal}
-              onStartRecord={manager.startRecord}
-              onStopRecord={manager.stopRecord}
-              onPlayMine={manager.playMine}
-              onJump={manager.jump}
+        {view === AppView.Library && (
+          <div className="pt-32 pb-24 px-4 lg:px-8 w-full max-w-4xl mx-auto min-h-screen">
+            <AudioLibrary
+              onFileSelect={(item) => {
+                manager.loadUrl(item.url, item.wordTimestamps);
+                setMode(AppView.Idle); // Return to auto-follow mode
+              }}
+              onBack={() => setMode(AppView.Idle)}
             />
-          )}
+          </div>
+        )}
 
-        {manager.status === ProcessingState.Idle && (
+        {view === AppView.Practice && manager.segments.length > 0 && (
+          <SentenceView
+            segments={manager.segments}
+            activeIndex={manager.activeIndex}
+            isPlayingOriginal={manager.isPlayingOriginal}
+            isPlayingMine={manager.isPlayingMine}
+            isRecording={manager.isRecording}
+            maskModeEnabled={manager.settings.maskMode}
+            totalDuration={manager.totalDuration}
+            onNavigate={manager.navigate}
+            onPlayOriginal={manager.playOriginal}
+            onStartRecord={manager.startRecord}
+            onStopRecord={manager.stopRecord}
+            onPlayMine={manager.playMine}
+            onJump={manager.jump}
+          />
+        )}
+
+        {view === AppView.Idle && (
           <div className="flex flex-col items-center justify-center min-h-screen gap-4 px-8 text-center">
             <span className="material-symbols-outlined text-outline text-[64px]">
               mic_external_on

@@ -71,17 +71,21 @@ export function LoadingOverlay({
   if (state === ProcessingState.Idle || state === ProcessingState.Ready)
     return null;
 
+  const isFetching = state === ProcessingState.Fetching;
+
   return (
     <div className="fixed inset-0 z-50 bg-background/95 flex flex-col items-center justify-center gap-6 px-8">
       <span className="material-symbols-outlined text-primary text-[48px] animate-spin">
-        refresh
+        {isFetching ? 'downloading' : 'refresh'}
       </span>
       <div className="text-center">
         <p className="text-on-surface font-headline-md text-headline-md">
-          Transcribing audio…
+          {isFetching ? 'Fetching audio…' : 'Transcribing audio…'}
         </p>
         <p className="text-on-surface-variant text-body-md mt-1">
-          Analyzing speech and detecting sentences.
+          {isFetching
+            ? 'Downloading remote asset to your browser.'
+            : 'Analyzing speech and detecting sentences.'}
         </p>
       </div>
     </div>
