@@ -15,19 +15,22 @@ export function useAudioPlayer(
 ) {
   const audioContextRef = useRef<AudioContext | null>(null);
   const currentSourceRef = useRef<AudioBufferSourceNode | null>(null);
-  const currentAudioRef = useRef<HTMLAudioElement | null>(null);
 
   const [status, setStatus] = useState<PlaybackStatus>(PlaybackStatus.Idle);
 
-  const getContext = useCallback((): AudioContext => {
-    if (!audioContextRef.current) {
-      audioContextRef.current = new AudioContext();
+  const getRunningContext = useCallback(async (): Promise<AudioContext> => {
+    let ctx = audioContextRef.current;
+    if (!ctx || ctx.state === AudioContextStateEnum.Closed) {
+      ctx = new AudioContext();
+      audioContextRef.current = ctx;
     }
-    return audioContextRef.current;
+    if (ctx.state !== AudioContextStateEnum.Running) {
+      await ctx.resume();
+    }
+    return ctx;
   }, []);
 
   const stop = useCallback(() => {
-    // Stop AudioBufferSourceNode (Web Audio API)
     if (currentSourceRef.current) {
       try {
         currentSourceRef.current.stop();
@@ -36,13 +39,6 @@ export function useAudioPlayer(
       }
       currentSourceRef.current.disconnect();
       currentSourceRef.current = null;
-    }
-
-    // Stop HTMLAudioElement (HTML5 Audio)
-    if (currentAudioRef.current) {
-      currentAudioRef.current.pause();
-      currentAudioRef.current.currentTime = 0;
-      currentAudioRef.current = null;
     }
 
     setStatus(PlaybackStatus.Idle);
@@ -63,11 +59,7 @@ export function useAudioPlayer(
       stop();
 
       try {
-        const ctx = getContext();
-
-        if (ctx.state === AudioContextStateEnum.Suspended) {
-          await ctx.resume();
-        }
+        const ctx = await getRunningContext();
 
         const source = ctx.createBufferSource();
         source.buffer = audioBuffer;
@@ -94,7 +86,7 @@ export function useAudioPlayer(
         stop();
       }
     },
-    [audioBuffer, speed, stop, getContext],
+    [audioBuffer, speed, stop, getRunningContext],
   );
 
   /**
@@ -105,25 +97,34 @@ export function useAudioPlayer(
       stop();
 
       try {
-        const audio = new Audio(url);
-        currentAudioRef.current = audio;
+        const ctx = await getRunningContext();
 
-        audio.onended = () => {
-          if (currentAudioRef.current === audio) {
+        const response = await fetch(url);
+        const arrayBuffer = await response.arrayBuffer();
+        const decodedBuffer = await ctx.decodeAudioData(arrayBuffer);
+
+        const source = ctx.createBufferSource();
+        source.buffer = decodedBuffer;
+        source.connect(ctx.destination);
+
+        source.onended = () => {
+          if (currentSourceRef.current === source) {
             setStatus(PlaybackStatus.Idle);
-            currentAudioRef.current = null;
+            currentSourceRef.current = null;
             onEnded?.();
           }
         };
 
-        await audio.play();
+        currentSourceRef.current = source;
+        source.start(0);
         setStatus(PlaybackStatus.Playing);
       } catch (err) {
         console.error('URL playback failed:', err);
         stop();
+        onEnded?.();
       }
     },
-    [stop],
+    [stop, getRunningContext],
   );
 
   // Cleanup on unmount

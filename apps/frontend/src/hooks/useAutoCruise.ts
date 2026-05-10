@@ -81,7 +81,6 @@ export function useAutoCruise({
     onPhaseChange(ShadowingPhase.Idle);
   }, [onPhaseChange]);
 
-  // 3. Define handlePlayMineEnded (before its ref)
   const handlePlayMineEnded = useCallback(() => {
     if (loopIterationRef.current + 1 < loopCountRef.current) {
       loopIterationRef.current++;
@@ -165,16 +164,26 @@ export function useAutoCruise({
     };
   }, [isRecording, autoStopEnabled, phase]);
 
+  // Track when playing actually starts to avoid race condition
+  const hasStartedPlayingRef = useRef(false);
+
   // Effect B — Phase Driver: Idle -> PlayingOriginal
   useEffect(() => {
-    if (phase === ShadowingPhase.PlayingOriginal && !isPlayingOriginal) {
-      onPlayOriginal(segmentsRef.current[activeIndex]);
+    if (phase === ShadowingPhase.PlayingOriginal && isPlayingOriginal) {
+      hasStartedPlayingRef.current = true;
+    } else if (phase !== ShadowingPhase.PlayingOriginal) {
+      hasStartedPlayingRef.current = false;
     }
-  }, [phase, isPlayingOriginal, activeIndex, onPlayOriginal]);
+  }, [phase, isPlayingOriginal]);
 
   // Effect C — Phase Driver: PlayingOriginal Finished -> Recording
   useEffect(() => {
-    if (phase === ShadowingPhase.PlayingOriginal && !isPlayingOriginal) {
+    if (
+      phase === ShadowingPhase.PlayingOriginal &&
+      hasStartedPlayingRef.current &&
+      !isPlayingOriginal
+    ) {
+      hasStartedPlayingRef.current = false; // Reset
       hasStartedRecordingRef.current = false; // Reset for new recording session
       onPhaseChange(ShadowingPhase.Recording);
       onStartRecord();
