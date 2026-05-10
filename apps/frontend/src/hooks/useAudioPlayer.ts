@@ -20,6 +20,12 @@ export function useAudioPlayer(
 
   const [status, setStatus] = useState<PlaybackStatus>(PlaybackStatus.Idle);
   const [currentTime, setCurrentTime] = useState(0);
+  const [prevBuffer, setPrevBuffer] = useState<AudioBuffer | null>(audioBuffer);
+
+  if (audioBuffer !== prevBuffer) {
+    setPrevBuffer(audioBuffer);
+    setCurrentTime(0);
+  }
 
   const duration = audioBuffer?.duration ?? 0;
 
