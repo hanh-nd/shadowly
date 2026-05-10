@@ -1,35 +1,107 @@
+import { split } from 'sentence-splitter';
+
+import { SILENCE_THRESHOLD } from '../constants';
 import type { Segment, WordTimestamp } from '../types';
 
 /**
- * Maps word timestamps from a full audio transcription to individual VAD segments.
- *
- * @param words - Word timestamps relative to the beginning of the full audio.
- * @param segments - VAD segments with absolute start/end times.
- * @returns Updated segments with assigned words and relative timestamps.
+ * Groups word timestamps into logical segments using sentence-splitter AST
+ * and fallback silence gap detection.
  */
-export function mapWordsToSegments(
-  words: WordTimestamp[],
-  segments: Segment[],
-): Segment[] {
-  return segments.map((segment) => {
-    const segmentWords = words
-      .filter((word) => {
-        const midpoint = (word.start + word.end) / 2;
-        return midpoint >= segment.start && midpoint <= segment.end;
-      })
-      .map((word) => ({
-        ...word,
-        start: Math.max(0, word.start - segment.start),
-        end: word.end - segment.start,
-      }));
+export function groupWordsIntoSegments(words: WordTimestamp[]): Segment[] {
+  if (words.length === 0) return [];
 
-    return {
-      ...segment,
-      wordTimestamps: segmentWords,
-      text: segmentWords
-        .map((w) => w.word)
-        .join(' ')
-        .trim(),
-    };
+  // 1. Normalize words and build the joined string with offset tracking
+  const normalizedWords = words.map((w) => ({
+    ...w,
+    word: w.word.trim(),
+  }));
+
+  let currentPos = 0;
+  const wordsWithOffsets = normalizedWords.map((w) => {
+    const start = currentPos;
+    const end = start + w.word.length;
+    currentPos = end + 1; // +1 for the space
+    return { ...w, stringRange: [start, end] as [number, number] };
   });
+
+  const joinedText = wordsWithOffsets.map((w) => w.word).join(' ');
+
+  // 2. Split by sentence-splitter
+  const nodes = split(joinedText);
+  const sentenceNodes = nodes.filter((n) => n.type === 'Sentence');
+
+  // 3. Map words back to sentences via offsets
+  const segments: Segment[] = [];
+  let globalSegmentId = 0;
+
+  for (const node of sentenceNodes) {
+    const [nodeStart, nodeEnd] = node.range;
+    const wordsInSentence = wordsWithOffsets.filter(
+      (w) => w.stringRange[0] >= nodeStart && w.stringRange[1] <= nodeEnd,
+    );
+
+    if (wordsInSentence.length === 0) continue;
+
+    // 4. Sub-split on silence gaps within the sentence
+    let currentSubGroup: typeof wordsInSentence = [];
+    for (let i = 0; i < wordsInSentence.length; i++) {
+      const word = wordsInSentence[i];
+      currentSubGroup.push(word);
+
+      const isLastInSentence = i === wordsInSentence.length - 1;
+      if (isLastInSentence) {
+        segments.push(finalizeSegment(globalSegmentId++, currentSubGroup));
+        break;
+      }
+
+      const nextWord = wordsInSentence[i + 1];
+      const gap = nextWord.start - word.end;
+
+      if (gap > SILENCE_THRESHOLD) {
+        segments.push(finalizeSegment(globalSegmentId++, currentSubGroup));
+        currentSubGroup = [];
+      }
+    }
+  }
+
+  // Fallback: If no sentence nodes found (rare), use pure silence split
+  if (segments.length === 0 && words.length > 0) {
+    let currentGroup: typeof wordsWithOffsets = [];
+    for (let i = 0; i < wordsWithOffsets.length; i++) {
+      const word = wordsWithOffsets[i];
+      currentGroup.push(word);
+
+      const isLast = i === wordsWithOffsets.length - 1;
+      const gap = isLast ? 0 : wordsWithOffsets[i + 1].start - word.end;
+
+      if (isLast || gap > SILENCE_THRESHOLD) {
+        segments.push(finalizeSegment(globalSegmentId++, currentGroup));
+        currentGroup = [];
+      }
+    }
+  }
+
+  return segments;
+}
+
+function finalizeSegment(id: number, words: WordTimestamp[]): Segment {
+  const start = words[0].start;
+  const end = words[words.length - 1].end;
+  const text = words
+    .map((w) => w.word)
+    .join(' ')
+    .trim();
+
+  return {
+    id,
+    text,
+    start,
+    end,
+    recordingUrl: null,
+    wordTimestamps: words.map((w) => ({
+      ...w,
+      start: w.start - start,
+      end: w.end - start,
+    })),
+  };
 }

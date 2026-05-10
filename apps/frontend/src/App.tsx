@@ -47,7 +47,6 @@ export function App() {
 
         <LoadingOverlay
           state={manager.status}
-          progress={manager.progress ?? undefined}
           errorMessage={manager.error}
           onRetry={manager.reset}
           activeLoads={manager.activeLoads}

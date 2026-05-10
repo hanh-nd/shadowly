@@ -26,7 +26,7 @@ export function useModelLoader(options: { scoringEnabled: boolean }) {
       ...prev,
       [ModelId.Transcription]: {
         id: ModelId.Transcription,
-        label: 'Initializing VAD…',
+        label: 'Initializing Transcription…',
         progress: 0,
       },
     }));
@@ -52,7 +52,7 @@ export function useModelLoader(options: { scoringEnabled: boolean }) {
       })
       .catch((err) => {
         console.error('Transcription model failed to load:', err);
-        if (isMounted) setLoadError('Failed to initialize VAD.');
+        if (isMounted) setLoadError('Failed to initialize Transcription.');
         if (isMounted) removeTask(ModelId.Transcription);
       });
 

@@ -7,7 +7,7 @@ export async function decodeAndResampleTo16kHz(
 
   const audioCtx = new AudioContext();
   const decoded = await audioCtx.decodeAudioData(arrayBuffer.slice(0));
-  audioCtx.close();
+  await audioCtx.close();
 
   if (
     decoded.sampleRate === TARGET_SAMPLE_RATE &&
@@ -28,7 +28,32 @@ export async function decodeAndResampleTo16kHz(
   source.start();
 
   const rendered = await offlineCtx.startRendering();
-  return rendered.getChannelData(0);
+  return rendered.getChannelData(0).slice(0);
+}
+
+export async function resampleAudioBufferTo16kHz(
+  audioBuffer: AudioBuffer,
+): Promise<Float32Array> {
+  if (
+    audioBuffer.sampleRate === TARGET_SAMPLE_RATE &&
+    audioBuffer.numberOfChannels === 1
+  ) {
+    return audioBuffer.getChannelData(0).slice(0);
+  }
+
+  const targetLength = Math.round(audioBuffer.duration * TARGET_SAMPLE_RATE);
+  const offlineCtx = new OfflineAudioContext(
+    1,
+    targetLength,
+    TARGET_SAMPLE_RATE,
+  );
+  const source = offlineCtx.createBufferSource();
+  source.buffer = audioBuffer;
+  source.connect(offlineCtx.destination);
+  source.start();
+
+  const rendered = await offlineCtx.startRendering();
+  return rendered.getChannelData(0).slice(0);
 }
 
 export async function resampleFloat32ArrayTo16kHz(

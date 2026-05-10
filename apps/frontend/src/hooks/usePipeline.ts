@@ -1,15 +1,10 @@
 import { useCallback, useRef, useState } from 'react';
 
-import {
-  MS_PER_SECOND,
-  TARGET_SAMPLE_RATE,
-  TRANSCRIBING_TEXT,
-} from '../constants';
 import { transcriptionClient } from '../lib/TranscriptionClient';
 import type { ModelLoadTask, Segment, TranscribingProgress } from '../types';
 import { ModelId, ProcessingState } from '../types';
-import { decodeAndResampleTo16kHz } from '../utils';
-import { mapWordsToSegments } from '../utils/transcription-mapping';
+import { resampleAudioBufferTo16kHz } from '../utils';
+import { groupWordsIntoSegments } from '../utils/transcription-mapping';
 
 export interface PipelineHook {
   process: (file: File) => Promise<void>;
@@ -84,8 +79,8 @@ export function usePipeline(): PipelineHook {
       if (signal.aborted) return;
 
       const ctx = new AudioContext();
-      const decoded = await ctx.decodeAudioData(arrayBuffer.slice(0));
-      ctx.close();
+      const decoded = await ctx.decodeAudioData(arrayBuffer);
+      await ctx.close();
       if (signal.aborted) return;
 
       if (decoded.duration > 300) {
@@ -105,39 +100,10 @@ export function usePipeline(): PipelineHook {
       setModelLoadTask(null);
       if (signal.aborted) return;
 
-      const resampledAudio = await decodeAndResampleTo16kHz(arrayBuffer);
+      const resampledAudio = await resampleAudioBufferTo16kHz(decoded);
       if (signal.aborted) return;
 
-      setStatus(ProcessingState.VADRunning);
-      const audioSegments = await transcriptionClient.getSegments(
-        resampledAudio,
-        signal,
-      );
-      if (signal.aborted) return;
-
-      if (audioSegments.length === 0) {
-        setError('No speech detected.');
-        setStatus(ProcessingState.Error);
-        return;
-      }
-
-      // Phase 1: Show all segments immediately
-      const initialSegments: Segment[] = audioSegments.map((s, i) => {
-        const endSec = s.end / MS_PER_SECOND;
-        const durationSec = s.audioLength / TARGET_SAMPLE_RATE;
-        const startSec = Math.max(0, endSec - durationSec);
-
-        return {
-          id: i,
-          text: TRANSCRIBING_TEXT,
-          start: startSec,
-          end: endSec,
-          recordingUrl: null,
-        };
-      });
-      setSegments(initialSegments);
-
-      // Phase 2: Batch Transcription
+      // Batch Transcription
       setStatus(ProcessingState.Transcribing);
       setProgress({ current: 0, total: 1 });
       const { wordTimestamps } = await transcriptionClient.transcribeBatch(
@@ -146,7 +112,14 @@ export function usePipeline(): PipelineHook {
       );
       if (signal.aborted) return;
 
-      setSegments((prev) => mapWordsToSegments(wordTimestamps, prev));
+      const derivedSegments = groupWordsIntoSegments(wordTimestamps);
+      if (derivedSegments.length === 0) {
+        setError('No speech detected.');
+        setStatus(ProcessingState.Error);
+        return;
+      }
+
+      setSegments(derivedSegments);
       setProgress({ current: 1, total: 1 });
 
       setStatus(ProcessingState.Ready);

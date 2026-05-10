@@ -1,10 +1,8 @@
 import type { ModelLoadTask } from '../types';
-import type { TranscribingProgress } from '../types';
 import { ProcessingState } from '../types';
 
 interface Props {
   state: ProcessingState;
-  progress?: TranscribingProgress;
   errorMessage: string | null;
   onRetry: () => void;
   activeLoads: ModelLoadTask[];
@@ -12,7 +10,6 @@ interface Props {
 
 export function LoadingOverlay({
   state,
-  progress,
   errorMessage,
   onRetry,
   activeLoads,
@@ -71,44 +68,22 @@ export function LoadingOverlay({
     );
   }
 
-  if (
-    state === ProcessingState.Idle ||
-    state === ProcessingState.Ready ||
-    state === ProcessingState.Transcribing
-  )
+  if (state === ProcessingState.Idle || state === ProcessingState.Ready)
     return null;
 
   return (
     <div className="fixed inset-0 z-50 bg-background/95 flex flex-col items-center justify-center gap-6 px-8">
-      {state === ProcessingState.VADRunning ? (
-        <>
-          <span className="material-symbols-outlined text-primary text-[48px] animate-spin">
-            refresh
-          </span>
-          <div className="text-center">
-            <p className="text-on-surface font-headline-md text-headline-md">
-              Detecting speech boundaries…
-            </p>
-            <p className="text-on-surface-variant text-body-md mt-1">
-              Finding silence between sentences.
-            </p>
-          </div>
-        </>
-      ) : (
-        <>
-          <span className="material-symbols-outlined text-primary text-[48px] animate-spin">
-            refresh
-          </span>
-          <div className="text-center">
-            <p className="text-on-surface font-headline-md text-headline-md">
-              Transcribing audio…
-            </p>
-            <p className="text-on-surface-variant text-body-md mt-1">
-              Transcribing segment {progress?.current ?? '…'}…
-            </p>
-          </div>
-        </>
-      )}
+      <span className="material-symbols-outlined text-primary text-[48px] animate-spin">
+        refresh
+      </span>
+      <div className="text-center">
+        <p className="text-on-surface font-headline-md text-headline-md">
+          Transcribing audio…
+        </p>
+        <p className="text-on-surface-variant text-body-md mt-1">
+          Analyzing speech and detecting sentences.
+        </p>
+      </div>
     </div>
   );
 }

@@ -4,11 +4,10 @@ import { WorkerMessageType } from '../types';
 import { TranscriptionEngine } from './TranscriptionEngine';
 
 const transcriptionEngine = new TranscriptionEngine();
-const segmentsMap = new Map<string, Float32Array>();
 const controllers = new Map<string, AbortController>();
 
 self.onmessage = async (e) => {
-  const { type, audio, id, segmentId } = e.data;
+  const { type, audio, id } = e.data;
 
   try {
     switch (type) {
@@ -29,51 +28,6 @@ self.onmessage = async (e) => {
           });
         });
         self.postMessage({ type: WorkerMessageType.Ready, id });
-        break;
-      }
-
-      case WorkerMessageType.RunVAD: {
-        segmentsMap.clear();
-
-        for await (const segment of transcriptionEngine.runVAD(audio)) {
-          segmentsMap.set(segment.id, segment.audio);
-
-          self.postMessage({
-            type: WorkerMessageType.SegmentFound,
-            segmentId: segment.id,
-            start: segment.start,
-            end: segment.end,
-            audioLength: segment.audio.length,
-            id,
-          });
-        }
-
-        self.postMessage({ type: WorkerMessageType.VadDone, id });
-        break;
-      }
-
-      case WorkerMessageType.Transcribe: {
-        const segmentAudio = segmentsMap.get(segmentId);
-        if (!segmentAudio) {
-          throw new Error('Segment audio not found');
-        }
-
-        const controller = new AbortController();
-        controllers.set(id, controller);
-        try {
-          const result = await transcriptionEngine.transcribe(
-            segmentAudio,
-            controller.signal,
-          );
-
-          self.postMessage({
-            type: WorkerMessageType.Result,
-            payload: result,
-            id,
-          });
-        } finally {
-          controllers.delete(id);
-        }
         break;
       }
 

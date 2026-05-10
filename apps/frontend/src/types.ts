@@ -62,7 +62,6 @@ export interface IpaChunk {
 
 export enum ProcessingState {
   Idle = 'idle',
-  VADRunning = 'vad-running',
   Transcribing = 'transcribing',
   Ready = 'ready',
   Error = 'error',
@@ -119,9 +118,6 @@ export enum WorkerMessageType {
   TranscribeBatch = 'transcribeBatch',
   Abort = 'abort',
   Result = 'result',
-  RunVAD = 'runVad',
-  SegmentFound = 'segmentFound',
-  VadDone = 'vadDone',
 }
 
 export interface TranscribingProgress {

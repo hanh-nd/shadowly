@@ -6,19 +6,21 @@
 
 - **Audio Shadowing**: Practice pronunciation by repeating after native speaker audio segments.
 - **Hybrid Cloud/Local ML**: 
-  - **Cloud (Groq)**: Ultra-fast Whisper-v3-turbo via Groq LPU for real-time transcription.
+  - **Cloud (Groq)**: Ultra-fast Whisper-v3-turbo via Groq LPU for high-precision batch transcription.
   - **Cloud (Modal)**: High-performance Wav2Vec2 models for pronunciation scoring.
-  - **Local**: Voice Activity Detection (VAD) and G2P run in the browser for low-latency feedback.
+  - **Local (G2P)**: `espeak-ng` compiled to WebAssembly for low-latency phonetic analysis.
+- **Robust Segmentation**: Hybrid logic using `sentence-splitter` AST parsing and silence detection to perfectly segment audio by grammatical sentences and natural pauses.
+- **Memory Optimized**: Streamlined single-pass remote transcription pipeline that handles 5-minute audio files with minimal memory footprint (<1GB vs 8GB previously).
 - **Secure Gateway**: A Cloudflare Worker acts as a secure Backend-for-Frontend (BFF), orchestrating requests to Groq and Modal without exposing keys to the client.
 - **Auto-Cruise**: Hands-free practice loop that automatically advances through segments as you speak.
 
 ## Tech Stack
 
-- **Frontend**: React 19, TypeScript, Vite, Vanilla CSS
+- **Frontend**: React 19, TypeScript, Vite, Vitest, Vanilla CSS
 - **Gateway**: Cloudflare Workers (Hono)
 - **Backend (Inference API)**: Python, FastAPI, Wav2Vec2 (Phonetic)
 - **G2P**: `espeak-ng` compiled to WebAssembly (Local)
-- **VAD**: `@ricky0123/vad-web` (Local)
+- **Segmentation**: `sentence-splitter` AST parsing (Local)
 
 ## Project Structure
 
