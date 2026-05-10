@@ -1,0 +1,2505 @@
+{
+  "text": " Conversation 6. Looking for a new apartment. Good morning. How can I help you? I'd like to rent an apartment in this neighborhood and wonder if you can help me. You need to talk to Shirley. She's our go-to agent for apartment rentals. Here, I'll take you to her office. Hello, I'm Shirley. Have a seat and tell me what kind of apartment you're looking for. Is it just for you? Well, that depends on what's available. I'd really rather live alone, but if I don't see anything that works, I could share a bigger place with a friend of mine. Okay. First, tell me what you have in mind. The most important thing is the location. I want to be in the city, preferably in this neighborhood, so I can walk to the university and to the metro station. I don't have a car. Okay. Then you don't mind if there's no parking space. Exactly. But I want a secure building. I also want it to have a living room, a dining room, one bedroom, and, of course, a modern kitchen and bathroom. I don't really need all the bells and whistles, but I would like to have a balcony. And what is your budget? I mean, what monthly rent are you thinking about, including utilities? I hoping to find something for about a month Look I can tell you right now there are no decent apartments in this area under a month and none of them have dining rooms or balconies There are modern secure buildings that are actually near the metro, but they're at least six miles outside of the city. There's no way I'm going to live way out there. Do you think you could find a two-bedroom place closer in for, say, $1,400 a month? Something I could share with my friend? Let me do a little research this morning and see what I can find. I'm not going to tell you that it's impossible, but I can't promise anything either. Give me a couple of hours to see what's out there. If I find anything worthwhile, we can go have a look this afternoon. In the meantime, I need you to fill out this form so I have your contact information. As a matter of fact, both you and your friend will have to fill out an application in order to be approved as tenants. I'm assuming you want a one-year lease. Is that right? Oh, one more thing. You don't have a pet, do you? Yes, I'm willing to sign a one-year lease. And no, I don't have a pet. And I'll make sure my friend gets rid of his dog. He can leave it with his family. They have a place in the country. I'd better go give him a heads up right now. Good. Be sure both of you bring your financial and credit information with you. Right. We'll see you at noon then. Thank you very much. See you later.",
+  "wordTimestamps": [
+    {
+      "word": "Conversation",
+      "start": 0.84,
+      "end": 1.24
+    },
+    {
+      "word": "6.",
+      "start": 1.24,
+      "end": 1.92
+    },
+    {
+      "word": "Looking",
+      "start": 1.92,
+      "end": 2.56
+    },
+    {
+      "word": "for",
+      "start": 2.56,
+      "end": 2.94
+    },
+    {
+      "word": "a",
+      "start": 2.94,
+      "end": 3.08
+    },
+    {
+      "word": "new",
+      "start": 3.08,
+      "end": 3.2
+    },
+    {
+      "word": "apartment.",
+      "start": 3.2,
+      "end": 3.96
+    },
+    {
+      "word": "Good",
+      "start": 5.52,
+      "end": 5.68
+    },
+    {
+      "word": "morning.",
+      "start": 5.68,
+      "end": 6.46
+    },
+    {
+      "word": "How",
+      "start": 6.46,
+      "end": 6.84
+    },
+    {
+      "word": "can",
+      "start": 6.84,
+      "end": 7.04
+    },
+    {
+      "word": "I",
+      "start": 7.04,
+      "end": 7.18
+    },
+    {
+      "word": "help",
+      "start": 7.18,
+      "end": 7.44
+    },
+    {
+      "word": "you?",
+      "start": 7.44,
+      "end": 7.74
+    },
+    {
+      "word": "I'd",
+      "start": 8.5,
+      "end": 8.68
+    },
+    {
+      "word": "like",
+      "start": 8.68,
+      "end": 8.8
+    },
+    {
+      "word": "to",
+      "start": 8.8,
+      "end": 8.96
+    },
+    {
+      "word": "rent",
+      "start": 8.96,
+      "end": 9.16
+    },
+    {
+      "word": "an",
+      "start": 9.16,
+      "end": 9.32
+    },
+    {
+      "word": "apartment",
+      "start": 9.32,
+      "end": 9.66
+    },
+    {
+      "word": "in",
+      "start": 9.66,
+      "end": 9.98
+    },
+    {
+      "word": "this",
+      "start": 9.98,
+      "end": 10.16
+    },
+    {
+      "word": "neighborhood",
+      "start": 10.16,
+      "end": 10.5
+    },
+    {
+      "word": "and",
+      "start": 10.5,
+      "end": 11.02
+    },
+    {
+      "word": "wonder",
+      "start": 11.02,
+      "end": 11.34
+    },
+    {
+      "word": "if",
+      "start": 11.34,
+      "end": 11.58
+    },
+    {
+      "word": "you",
+      "start": 11.58,
+      "end": 11.7
+    },
+    {
+      "word": "can",
+      "start": 11.7,
+      "end": 11.82
+    },
+    {
+      "word": "help",
+      "start": 11.82,
+      "end": 12
+    },
+    {
+      "word": "me.",
+      "start": 12,
+      "end": 12.24
+    },
+    {
+      "word": "You",
+      "start": 13,
+      "end": 13.18
+    },
+    {
+      "word": "need",
+      "start": 13.18,
+      "end": 13.42
+    },
+    {
+      "word": "to",
+      "start": 13.42,
+      "end": 13.58
+    },
+    {
+      "word": "talk",
+      "start": 13.58,
+      "end": 13.82
+    },
+    {
+      "word": "to",
+      "start": 13.82,
+      "end": 14.04
+    },
+    {
+      "word": "Shirley.",
+      "start": 14.04,
+      "end": 14.36
+    },
+    {
+      "word": "She's",
+      "start": 14.36,
+      "end": 15.34
+    },
+    {
+      "word": "our",
+      "start": 15.34,
+      "end": 15.46
+    },
+    {
+      "word": "go-to",
+      "start": 15.46,
+      "end": 16.04
+    },
+    {
+      "word": "agent",
+      "start": 16.04,
+      "end": 16.54
+    },
+    {
+      "word": "for",
+      "start": 16.54,
+      "end": 16.98
+    },
+    {
+      "word": "apartment",
+      "start": 16.98,
+      "end": 17.42
+    },
+    {
+      "word": "rentals.",
+      "start": 17.42,
+      "end": 18.16
+    },
+    {
+      "word": "Here,",
+      "start": 18.86,
+      "end": 19.26
+    },
+    {
+      "word": "I'll",
+      "start": 19.26,
+      "end": 19.68
+    },
+    {
+      "word": "take",
+      "start": 19.68,
+      "end": 19.9
+    },
+    {
+      "word": "you",
+      "start": 19.9,
+      "end": 20.04
+    },
+    {
+      "word": "to",
+      "start": 20.04,
+      "end": 20.22
+    },
+    {
+      "word": "her",
+      "start": 20.22,
+      "end": 20.36
+    },
+    {
+      "word": "office.",
+      "start": 20.36,
+      "end": 20.74
+    },
+    {
+      "word": "Hello,",
+      "start": 22.18,
+      "end": 22.76
+    },
+    {
+      "word": "I'm",
+      "start": 22.76,
+      "end": 23.3
+    },
+    {
+      "word": "Shirley.",
+      "start": 23.3,
+      "end": 23.72
+    },
+    {
+      "word": "Have",
+      "start": 23.72,
+      "end": 24.56
+    },
+    {
+      "word": "a",
+      "start": 24.56,
+      "end": 24.72
+    },
+    {
+      "word": "seat",
+      "start": 24.72,
+      "end": 24.98
+    },
+    {
+      "word": "and",
+      "start": 24.98,
+      "end": 25.22
+    },
+    {
+      "word": "tell",
+      "start": 25.22,
+      "end": 25.4
+    },
+    {
+      "word": "me",
+      "start": 25.4,
+      "end": 25.52
+    },
+    {
+      "word": "what",
+      "start": 25.52,
+      "end": 25.7
+    },
+    {
+      "word": "kind",
+      "start": 25.7,
+      "end": 25.9
+    },
+    {
+      "word": "of",
+      "start": 25.9,
+      "end": 26.04
+    },
+    {
+      "word": "apartment",
+      "start": 26.04,
+      "end": 26.38
+    },
+    {
+      "word": "you're",
+      "start": 26.38,
+      "end": 26.72
+    },
+    {
+      "word": "looking",
+      "start": 26.72,
+      "end": 26.9
+    },
+    {
+      "word": "for.",
+      "start": 26.9,
+      "end": 27.32
+    },
+    {
+      "word": "Is",
+      "start": 27.78,
+      "end": 28
+    },
+    {
+      "word": "it",
+      "start": 28,
+      "end": 28.08
+    },
+    {
+      "word": "just",
+      "start": 28.08,
+      "end": 28.32
+    },
+    {
+      "word": "for",
+      "start": 28.32,
+      "end": 28.52
+    },
+    {
+      "word": "you?",
+      "start": 28.52,
+      "end": 28.74
+    },
+    {
+      "word": "Well,",
+      "start": 29.48,
+      "end": 29.96
+    },
+    {
+      "word": "that",
+      "start": 29.96,
+      "end": 30.3
+    },
+    {
+      "word": "depends",
+      "start": 30.3,
+      "end": 30.62
+    },
+    {
+      "word": "on",
+      "start": 30.62,
+      "end": 30.96
+    },
+    {
+      "word": "what's",
+      "start": 30.96,
+      "end": 31.22
+    },
+    {
+      "word": "available.",
+      "start": 31.22,
+      "end": 31.94
+    },
+    {
+      "word": "I'd",
+      "start": 32.28,
+      "end": 32.6
+    },
+    {
+      "word": "really",
+      "start": 32.6,
+      "end": 32.8
+    },
+    {
+      "word": "rather",
+      "start": 32.8,
+      "end": 33.1
+    },
+    {
+      "word": "live",
+      "start": 33.1,
+      "end": 33.34
+    },
+    {
+      "word": "alone,",
+      "start": 33.34,
+      "end": 33.98
+    },
+    {
+      "word": "but",
+      "start": 33.98,
+      "end": 34.06
+    },
+    {
+      "word": "if",
+      "start": 34.06,
+      "end": 34.2
+    },
+    {
+      "word": "I",
+      "start": 34.2,
+      "end": 34.34
+    },
+    {
+      "word": "don't",
+      "start": 34.34,
+      "end": 34.5
+    },
+    {
+      "word": "see",
+      "start": 34.5,
+      "end": 34.72
+    },
+    {
+      "word": "anything",
+      "start": 34.72,
+      "end": 34.98
+    },
+    {
+      "word": "that",
+      "start": 34.98,
+      "end": 35.26
+    },
+    {
+      "word": "works,",
+      "start": 35.26,
+      "end": 35.82
+    },
+    {
+      "word": "I",
+      "start": 36.04,
+      "end": 36.18
+    },
+    {
+      "word": "could",
+      "start": 36.18,
+      "end": 36.34
+    },
+    {
+      "word": "share",
+      "start": 36.34,
+      "end": 36.62
+    },
+    {
+      "word": "a",
+      "start": 36.62,
+      "end": 36.82
+    },
+    {
+      "word": "bigger",
+      "start": 36.82,
+      "end": 37.04
+    },
+    {
+      "word": "place",
+      "start": 37.04,
+      "end": 37.4
+    },
+    {
+      "word": "with",
+      "start": 37.4,
+      "end": 37.62
+    },
+    {
+      "word": "a",
+      "start": 37.62,
+      "end": 37.74
+    },
+    {
+      "word": "friend",
+      "start": 37.74,
+      "end": 37.96
+    },
+    {
+      "word": "of",
+      "start": 37.96,
+      "end": 38.16
+    },
+    {
+      "word": "mine.",
+      "start": 38.16,
+      "end": 38.38
+    },
+    {
+      "word": "Okay.",
+      "start": 39.26,
+      "end": 39.48
+    },
+    {
+      "word": "First,",
+      "start": 39.48,
+      "end": 40.62
+    },
+    {
+      "word": "tell",
+      "start": 40.62,
+      "end": 41.28
+    },
+    {
+      "word": "me",
+      "start": 41.28,
+      "end": 41.46
+    },
+    {
+      "word": "what",
+      "start": 41.46,
+      "end": 41.64
+    },
+    {
+      "word": "you",
+      "start": 41.64,
+      "end": 41.78
+    },
+    {
+      "word": "have",
+      "start": 41.78,
+      "end": 42.02
+    },
+    {
+      "word": "in",
+      "start": 42.02,
+      "end": 42.2
+    },
+    {
+      "word": "mind.",
+      "start": 42.2,
+      "end": 42.54
+    },
+    {
+      "word": "The",
+      "start": 43.4,
+      "end": 43.54
+    },
+    {
+      "word": "most",
+      "start": 43.54,
+      "end": 43.78
+    },
+    {
+      "word": "important",
+      "start": 43.78,
+      "end": 44.26
+    },
+    {
+      "word": "thing",
+      "start": 44.26,
+      "end": 44.54
+    },
+    {
+      "word": "is",
+      "start": 44.54,
+      "end": 44.74
+    },
+    {
+      "word": "the",
+      "start": 44.74,
+      "end": 44.9
+    },
+    {
+      "word": "location.",
+      "start": 44.9,
+      "end": 45.38
+    },
+    {
+      "word": "I",
+      "start": 46.2,
+      "end": 46.42
+    },
+    {
+      "word": "want",
+      "start": 46.42,
+      "end": 46.62
+    },
+    {
+      "word": "to",
+      "start": 46.62,
+      "end": 46.74
+    },
+    {
+      "word": "be",
+      "start": 46.74,
+      "end": 46.86
+    },
+    {
+      "word": "in",
+      "start": 46.86,
+      "end": 47
+    },
+    {
+      "word": "the",
+      "start": 47,
+      "end": 47.1
+    },
+    {
+      "word": "city,",
+      "start": 47.1,
+      "end": 47.8
+    },
+    {
+      "word": "preferably",
+      "start": 47.8,
+      "end": 48.24
+    },
+    {
+      "word": "in",
+      "start": 48.24,
+      "end": 48.62
+    },
+    {
+      "word": "this",
+      "start": 48.62,
+      "end": 48.82
+    },
+    {
+      "word": "neighborhood,",
+      "start": 48.82,
+      "end": 49.26
+    },
+    {
+      "word": "so",
+      "start": 49.66,
+      "end": 49.76
+    },
+    {
+      "word": "I",
+      "start": 49.76,
+      "end": 49.9
+    },
+    {
+      "word": "can",
+      "start": 49.9,
+      "end": 50.06
+    },
+    {
+      "word": "walk",
+      "start": 50.06,
+      "end": 50.3
+    },
+    {
+      "word": "to",
+      "start": 50.3,
+      "end": 50.48
+    },
+    {
+      "word": "the",
+      "start": 50.48,
+      "end": 50.6
+    },
+    {
+      "word": "university",
+      "start": 50.6,
+      "end": 51.16
+    },
+    {
+      "word": "and",
+      "start": 51.16,
+      "end": 51.54
+    },
+    {
+      "word": "to",
+      "start": 51.54,
+      "end": 51.64
+    },
+    {
+      "word": "the",
+      "start": 51.64,
+      "end": 51.76
+    },
+    {
+      "word": "metro",
+      "start": 51.76,
+      "end": 52.04
+    },
+    {
+      "word": "station.",
+      "start": 52.04,
+      "end": 52.54
+    },
+    {
+      "word": "I",
+      "start": 53.2,
+      "end": 53.36
+    },
+    {
+      "word": "don't",
+      "start": 53.36,
+      "end": 53.54
+    },
+    {
+      "word": "have",
+      "start": 53.54,
+      "end": 53.7
+    },
+    {
+      "word": "a",
+      "start": 53.7,
+      "end": 53.84
+    },
+    {
+      "word": "car.",
+      "start": 53.84,
+      "end": 54.04
+    },
+    {
+      "word": "Okay.",
+      "start": 55.02,
+      "end": 55.18
+    },
+    {
+      "word": "Then",
+      "start": 55.18,
+      "end": 56.02
+    },
+    {
+      "word": "you",
+      "start": 56.02,
+      "end": 56.16
+    },
+    {
+      "word": "don't",
+      "start": 56.16,
+      "end": 56.34
+    },
+    {
+      "word": "mind",
+      "start": 56.34,
+      "end": 56.62
+    },
+    {
+      "word": "if",
+      "start": 56.62,
+      "end": 56.8
+    },
+    {
+      "word": "there's",
+      "start": 56.8,
+      "end": 57
+    },
+    {
+      "word": "no",
+      "start": 57,
+      "end": 57.16
+    },
+    {
+      "word": "parking",
+      "start": 57.16,
+      "end": 57.44
+    },
+    {
+      "word": "space.",
+      "start": 57.44,
+      "end": 58.02
+    },
+    {
+      "word": "Exactly.",
+      "start": 58.44,
+      "end": 59.22
+    },
+    {
+      "word": "But",
+      "start": 59.22,
+      "end": 59.64
+    },
+    {
+      "word": "I",
+      "start": 59.64,
+      "end": 59.78
+    },
+    {
+      "word": "want",
+      "start": 59.78,
+      "end": 59.98
+    },
+    {
+      "word": "a",
+      "start": 59.98,
+      "end": 60.1
+    },
+    {
+      "word": "secure",
+      "start": 60.1,
+      "end": 60.46
+    },
+    {
+      "word": "building.",
+      "start": 60.46,
+      "end": 61.3
+    },
+    {
+      "word": "I",
+      "start": 61.86,
+      "end": 62.04
+    },
+    {
+      "word": "also",
+      "start": 62.04,
+      "end": 62.3
+    },
+    {
+      "word": "want",
+      "start": 62.3,
+      "end": 62.58
+    },
+    {
+      "word": "it",
+      "start": 62.58,
+      "end": 62.64
+    },
+    {
+      "word": "to",
+      "start": 62.64,
+      "end": 62.78
+    },
+    {
+      "word": "have",
+      "start": 62.78,
+      "end": 62.92
+    },
+    {
+      "word": "a",
+      "start": 62.92,
+      "end": 63.04
+    },
+    {
+      "word": "living",
+      "start": 63.04,
+      "end": 63.24
+    },
+    {
+      "word": "room,",
+      "start": 63.24,
+      "end": 63.9
+    },
+    {
+      "word": "a",
+      "start": 63.9,
+      "end": 64.02
+    },
+    {
+      "word": "dining",
+      "start": 64.02,
+      "end": 64.26
+    },
+    {
+      "word": "room,",
+      "start": 64.26,
+      "end": 64.94
+    },
+    {
+      "word": "one",
+      "start": 64.94,
+      "end": 65.22
+    },
+    {
+      "word": "bedroom,",
+      "start": 65.22,
+      "end": 65.64
+    },
+    {
+      "word": "and,",
+      "start": 65.64,
+      "end": 66.46
+    },
+    {
+      "word": "of",
+      "start": 66.46,
+      "end": 66.54
+    },
+    {
+      "word": "course,",
+      "start": 66.54,
+      "end": 66.8
+    },
+    {
+      "word": "a",
+      "start": 66.8,
+      "end": 67.34
+    },
+    {
+      "word": "modern",
+      "start": 67.34,
+      "end": 67.64
+    },
+    {
+      "word": "kitchen",
+      "start": 67.64,
+      "end": 68.02
+    },
+    {
+      "word": "and",
+      "start": 68.02,
+      "end": 68.26
+    },
+    {
+      "word": "bathroom.",
+      "start": 68.26,
+      "end": 68.6
+    },
+    {
+      "word": "I",
+      "start": 69.42,
+      "end": 69.6
+    },
+    {
+      "word": "don't",
+      "start": 69.6,
+      "end": 69.74
+    },
+    {
+      "word": "really",
+      "start": 69.74,
+      "end": 70.02
+    },
+    {
+      "word": "need",
+      "start": 70.02,
+      "end": 70.28
+    },
+    {
+      "word": "all",
+      "start": 70.28,
+      "end": 70.4
+    },
+    {
+      "word": "the",
+      "start": 70.4,
+      "end": 70.54
+    },
+    {
+      "word": "bells",
+      "start": 70.54,
+      "end": 70.76
+    },
+    {
+      "word": "and",
+      "start": 70.76,
+      "end": 70.96
+    },
+    {
+      "word": "whistles,",
+      "start": 70.96,
+      "end": 71.58
+    },
+    {
+      "word": "but",
+      "start": 71.58,
+      "end": 71.7
+    },
+    {
+      "word": "I",
+      "start": 71.7,
+      "end": 71.86
+    },
+    {
+      "word": "would",
+      "start": 71.86,
+      "end": 72.12
+    },
+    {
+      "word": "like",
+      "start": 72.12,
+      "end": 72.26
+    },
+    {
+      "word": "to",
+      "start": 72.26,
+      "end": 72.44
+    },
+    {
+      "word": "have",
+      "start": 72.44,
+      "end": 72.56
+    },
+    {
+      "word": "a",
+      "start": 72.56,
+      "end": 72.7
+    },
+    {
+      "word": "balcony.",
+      "start": 72.7,
+      "end": 73.02
+    },
+    {
+      "word": "And",
+      "start": 74.06,
+      "end": 74.24
+    },
+    {
+      "word": "what",
+      "start": 74.24,
+      "end": 74.48
+    },
+    {
+      "word": "is",
+      "start": 74.48,
+      "end": 74.68
+    },
+    {
+      "word": "your",
+      "start": 74.68,
+      "end": 74.82
+    },
+    {
+      "word": "budget?",
+      "start": 74.82,
+      "end": 75.18
+    },
+    {
+      "word": "I",
+      "start": 75.18,
+      "end": 75.92
+    },
+    {
+      "word": "mean,",
+      "start": 75.92,
+      "end": 76.32
+    },
+    {
+      "word": "what",
+      "start": 76.32,
+      "end": 76.88
+    },
+    {
+      "word": "monthly",
+      "start": 76.88,
+      "end": 77.28
+    },
+    {
+      "word": "rent",
+      "start": 77.28,
+      "end": 77.64
+    },
+    {
+      "word": "are",
+      "start": 77.64,
+      "end": 77.84
+    },
+    {
+      "word": "you",
+      "start": 77.84,
+      "end": 77.92
+    },
+    {
+      "word": "thinking",
+      "start": 77.92,
+      "end": 78.18
+    },
+    {
+      "word": "about,",
+      "start": 78.18,
+      "end": 78.58
+    },
+    {
+      "word": "including",
+      "start": 78.58,
+      "end": 79.26
+    },
+    {
+      "word": "utilities?",
+      "start": 79.26,
+      "end": 79.82
+    },
+    {
+      "word": "I'm",
+      "start": 80.8,
+      "end": 81.02
+    },
+    {
+      "word": "hoping",
+      "start": 81.02,
+      "end": 81.18
+    },
+    {
+      "word": "to",
+      "start": 81.18,
+      "end": 81.38
+    },
+    {
+      "word": "find",
+      "start": 81.38,
+      "end": 81.58
+    },
+    {
+      "word": "something",
+      "start": 81.58,
+      "end": 81.96
+    },
+    {
+      "word": "for",
+      "start": 81.96,
+      "end": 82.22
+    },
+    {
+      "word": "about $700",
+      "start": 82.22,
+      "end": 83
+    },
+    {
+      "word": "a",
+      "start": 83,
+      "end": 83.54
+    },
+    {
+      "word": "month.",
+      "start": 83.54,
+      "end": 83.78
+    },
+    {
+      "word": "Look,",
+      "start": 84.82,
+      "end": 85.22
+    },
+    {
+      "word": "I",
+      "start": 85.22,
+      "end": 85.46
+    },
+    {
+      "word": "can",
+      "start": 85.46,
+      "end": 85.64
+    },
+    {
+      "word": "tell",
+      "start": 85.64,
+      "end": 85.86
+    },
+    {
+      "word": "you",
+      "start": 85.86,
+      "end": 86.02
+    },
+    {
+      "word": "right",
+      "start": 86.02,
+      "end": 86.28
+    },
+    {
+      "word": "now",
+      "start": 86.28,
+      "end": 86.56
+    },
+    {
+      "word": "there",
+      "start": 86.56,
+      "end": 86.82
+    },
+    {
+      "word": "are",
+      "start": 86.82,
+      "end": 86.92
+    },
+    {
+      "word": "no",
+      "start": 86.92,
+      "end": 87.14
+    },
+    {
+      "word": "decent",
+      "start": 87.14,
+      "end": 87.54
+    },
+    {
+      "word": "apartments",
+      "start": 87.54,
+      "end": 88
+    },
+    {
+      "word": "in",
+      "start": 87.93435,
+      "end": 88.374344
+    },
+    {
+      "word": "this",
+      "start": 88.374344,
+      "end": 88.53435
+    },
+    {
+      "word": "area",
+      "start": 88.53435,
+      "end": 88.874344
+    },
+    {
+      "word": "under $1,200",
+      "start": 88.874344,
+      "end": 89.75435
+    },
+    {
+      "word": "a",
+      "start": 89.43435,
+      "end": 90.47435
+    },
+    {
+      "word": "month,",
+      "start": 90.47435,
+      "end": 90.914345
+    },
+    {
+      "word": "and",
+      "start": 90.914345,
+      "end": 91.49435
+    },
+    {
+      "word": "none",
+      "start": 91.49435,
+      "end": 91.75435
+    },
+    {
+      "word": "of",
+      "start": 91.75435,
+      "end": 91.89435
+    },
+    {
+      "word": "them",
+      "start": 91.89435,
+      "end": 92.03435
+    },
+    {
+      "word": "have",
+      "start": 92.03435,
+      "end": 92.25435
+    },
+    {
+      "word": "dining",
+      "start": 92.25435,
+      "end": 92.594345
+    },
+    {
+      "word": "rooms",
+      "start": 92.594345,
+      "end": 92.89435
+    },
+    {
+      "word": "or",
+      "start": 92.89435,
+      "end": 93.07435
+    },
+    {
+      "word": "balconies.",
+      "start": 93.07435,
+      "end": 93.71435
+    },
+    {
+      "word": "There",
+      "start": 93.71435,
+      "end": 94.67435
+    },
+    {
+      "word": "are",
+      "start": 94.67435,
+      "end": 94.954346
+    },
+    {
+      "word": "modern",
+      "start": 94.954346,
+      "end": 95.47435
+    },
+    {
+      "word": "secure",
+      "start": 95.47435,
+      "end": 95.85435
+    },
+    {
+      "word": "buildings",
+      "start": 95.85435,
+      "end": 96.274345
+    },
+    {
+      "word": "that",
+      "start": 96.274345,
+      "end": 96.65434
+    },
+    {
+      "word": "are",
+      "start": 96.17435,
+      "end": 96.81435
+    },
+    {
+      "word": "actually",
+      "start": 96.81435,
+      "end": 97.234344
+    },
+    {
+      "word": "near",
+      "start": 97.234344,
+      "end": 97.554344
+    },
+    {
+      "word": "the",
+      "start": 97.554344,
+      "end": 97.734344
+    },
+    {
+      "word": "metro,",
+      "start": 97.734344,
+      "end": 98.39435
+    },
+    {
+      "word": "but",
+      "start": 98.39435,
+      "end": 98.734344
+    },
+    {
+      "word": "they're",
+      "start": 98.734344,
+      "end": 98.89435
+    },
+    {
+      "word": "at",
+      "start": 98.89435,
+      "end": 99.03435
+    },
+    {
+      "word": "least",
+      "start": 99.03435,
+      "end": 99.234344
+    },
+    {
+      "word": "six",
+      "start": 99.234344,
+      "end": 99.51434
+    },
+    {
+      "word": "miles",
+      "start": 99.51434,
+      "end": 99.914345
+    },
+    {
+      "word": "outside",
+      "start": 99.914345,
+      "end": 100.31435
+    },
+    {
+      "word": "of",
+      "start": 100.31435,
+      "end": 100.554344
+    },
+    {
+      "word": "the",
+      "start": 100.554344,
+      "end": 100.65434
+    },
+    {
+      "word": "city.",
+      "start": 100.65434,
+      "end": 100.914345
+    },
+    {
+      "word": "There's",
+      "start": 100.914345,
+      "end": 102.11435
+    },
+    {
+      "word": "no",
+      "start": 102.11435,
+      "end": 102.33435
+    },
+    {
+      "word": "way",
+      "start": 102.33435,
+      "end": 102.61435
+    },
+    {
+      "word": "I'm",
+      "start": 102.61435,
+      "end": 102.85435
+    },
+    {
+      "word": "going",
+      "start": 102.35435,
+      "end": 103.03435
+    },
+    {
+      "word": "to",
+      "start": 103.03435,
+      "end": 103.17435
+    },
+    {
+      "word": "live",
+      "start": 103.17435,
+      "end": 103.33435
+    },
+    {
+      "word": "way",
+      "start": 103.33435,
+      "end": 103.53435
+    },
+    {
+      "word": "out",
+      "start": 103.53435,
+      "end": 103.71435
+    },
+    {
+      "word": "there.",
+      "start": 103.71435,
+      "end": 104.25435
+    },
+    {
+      "word": "Do",
+      "start": 104.25435,
+      "end": 104.75435
+    },
+    {
+      "word": "you",
+      "start": 104.75435,
+      "end": 104.914345
+    },
+    {
+      "word": "think",
+      "start": 104.914345,
+      "end": 105.054344
+    },
+    {
+      "word": "you",
+      "start": 105.054344,
+      "end": 105.21435
+    },
+    {
+      "word": "could",
+      "start": 105.21435,
+      "end": 105.35435
+    },
+    {
+      "word": "find",
+      "start": 105.35435,
+      "end": 105.61435
+    },
+    {
+      "word": "a",
+      "start": 105.61435,
+      "end": 105.79434
+    },
+    {
+      "word": "two-bedroom",
+      "start": 105.79434,
+      "end": 106.39435
+    },
+    {
+      "word": "place",
+      "start": 106.39435,
+      "end": 106.774345
+    },
+    {
+      "word": "closer",
+      "start": 106.774345,
+      "end": 107.17435
+    },
+    {
+      "word": "in",
+      "start": 107.17435,
+      "end": 107.554344
+    },
+    {
+      "word": "for,",
+      "start": 107.554344,
+      "end": 108.134346
+    },
+    {
+      "word": "say,",
+      "start": 108.134346,
+      "end": 108.414345
+    },
+    {
+      "word": "$1,400",
+      "start": 108.69434,
+      "end": 109.134346
+    },
+    {
+      "word": "a",
+      "start": 109.134346,
+      "end": 109.81435
+    },
+    {
+      "word": "month?",
+      "start": 109.81435,
+      "end": 110.21435
+    },
+    {
+      "word": "Something",
+      "start": 110.57435,
+      "end": 110.81435
+    },
+    {
+      "word": "I",
+      "start": 110.81435,
+      "end": 111.054344
+    },
+    {
+      "word": "could",
+      "start": 111.054344,
+      "end": 111.21435
+    },
+    {
+      "word": "share",
+      "start": 111.21435,
+      "end": 111.414345
+    },
+    {
+      "word": "with",
+      "start": 111.414345,
+      "end": 111.634346
+    },
+    {
+      "word": "my",
+      "start": 111.634346,
+      "end": 111.79434
+    },
+    {
+      "word": "friend?",
+      "start": 111.79434,
+      "end": 112.07435
+    },
+    {
+      "word": "Let",
+      "start": 113.29434,
+      "end": 113.43434
+    },
+    {
+      "word": "me",
+      "start": 113.43434,
+      "end": 113.634346
+    },
+    {
+      "word": "do",
+      "start": 113.634346,
+      "end": 113.914345
+    },
+    {
+      "word": "a",
+      "start": 113.914345,
+      "end": 114.134346
+    },
+    {
+      "word": "little",
+      "start": 114.134346,
+      "end": 114.33435
+    },
+    {
+      "word": "research",
+      "start": 114.33435,
+      "end": 114.774345
+    },
+    {
+      "word": "this",
+      "start": 114.774345,
+      "end": 115.15434
+    },
+    {
+      "word": "morning",
+      "start": 115.15434,
+      "end": 115.414345
+    },
+    {
+      "word": "and",
+      "start": 114.97435,
+      "end": 115.69435
+    },
+    {
+      "word": "see",
+      "start": 115.69435,
+      "end": 115.914345
+    },
+    {
+      "word": "what",
+      "start": 115.914345,
+      "end": 116.094345
+    },
+    {
+      "word": "I",
+      "start": 116.094345,
+      "end": 116.234344
+    },
+    {
+      "word": "can",
+      "start": 116.234344,
+      "end": 116.414345
+    },
+    {
+      "word": "find.",
+      "start": 116.414345,
+      "end": 117.11435
+    },
+    {
+      "word": "I'm",
+      "start": 117.65434,
+      "end": 117.83435
+    },
+    {
+      "word": "not",
+      "start": 117.83435,
+      "end": 117.97435
+    },
+    {
+      "word": "going",
+      "start": 117.97435,
+      "end": 118.134346
+    },
+    {
+      "word": "to",
+      "start": 118.134346,
+      "end": 118.29434
+    },
+    {
+      "word": "tell",
+      "start": 118.29434,
+      "end": 118.49435
+    },
+    {
+      "word": "you",
+      "start": 118.49435,
+      "end": 118.634346
+    },
+    {
+      "word": "that",
+      "start": 118.634346,
+      "end": 118.79434
+    },
+    {
+      "word": "it's",
+      "start": 118.79434,
+      "end": 118.99435
+    },
+    {
+      "word": "impossible,",
+      "start": 118.99435,
+      "end": 119.67435
+    },
+    {
+      "word": "but",
+      "start": 120.274345,
+      "end": 120.39435
+    },
+    {
+      "word": "I",
+      "start": 120.39435,
+      "end": 120.49435
+    },
+    {
+      "word": "can't",
+      "start": 120.49435,
+      "end": 120.81435
+    },
+    {
+      "word": "promise",
+      "start": 120.81435,
+      "end": 121.21435
+    },
+    {
+      "word": "anything",
+      "start": 121.21435,
+      "end": 121.65434
+    },
+    {
+      "word": "either.",
+      "start": 121.65434,
+      "end": 122.11435
+    },
+    {
+      "word": "Give",
+      "start": 123.17435,
+      "end": 123.33435
+    },
+    {
+      "word": "me",
+      "start": 123.33435,
+      "end": 123.454346
+    },
+    {
+      "word": "a",
+      "start": 123.454346,
+      "end": 123.594345
+    },
+    {
+      "word": "couple",
+      "start": 123.594345,
+      "end": 123.774345
+    },
+    {
+      "word": "of",
+      "start": 123.774345,
+      "end": 123.93434
+    },
+    {
+      "word": "hours",
+      "start": 123.93434,
+      "end": 124.25435
+    },
+    {
+      "word": "to",
+      "start": 124.25435,
+      "end": 124.51434
+    },
+    {
+      "word": "see",
+      "start": 124.51434,
+      "end": 124.734344
+    },
+    {
+      "word": "what's",
+      "start": 124.734344,
+      "end": 125.03435
+    },
+    {
+      "word": "out",
+      "start": 125.03435,
+      "end": 125.17435
+    },
+    {
+      "word": "there.",
+      "start": 125.17435,
+      "end": 125.414345
+    },
+    {
+      "word": "If",
+      "start": 125.47435,
+      "end": 125.65434
+    },
+    {
+      "word": "I",
+      "start": 125.65434,
+      "end": 125.75435
+    },
+    {
+      "word": "find",
+      "start": 125.75435,
+      "end": 126.15434
+    },
+    {
+      "word": "anything",
+      "start": 126.15434,
+      "end": 126.49435
+    },
+    {
+      "word": "worthwhile,",
+      "start": 126.49435,
+      "end": 127.594345
+    },
+    {
+      "word": "we",
+      "start": 127.554344,
+      "end": 127.67435
+    },
+    {
+      "word": "can",
+      "start": 127.67435,
+      "end": 127.83435
+    },
+    {
+      "word": "go",
+      "start": 127.83435,
+      "end": 127.954346
+    },
+    {
+      "word": "have",
+      "start": 127.954346,
+      "end": 128.15434
+    },
+    {
+      "word": "a",
+      "start": 128.15434,
+      "end": 128.27435
+    },
+    {
+      "word": "look",
+      "start": 128.27435,
+      "end": 128.41434
+    },
+    {
+      "word": "this",
+      "start": 128.41434,
+      "end": 128.65434
+    },
+    {
+      "word": "afternoon.",
+      "start": 128.65434,
+      "end": 129.07434
+    },
+    {
+      "word": "In",
+      "start": 130.01434,
+      "end": 130.13434
+    },
+    {
+      "word": "the",
+      "start": 130.13434,
+      "end": 130.23434
+    },
+    {
+      "word": "meantime,",
+      "start": 130.23434,
+      "end": 130.97435
+    },
+    {
+      "word": "I",
+      "start": 130.11435,
+      "end": 131.33435
+    },
+    {
+      "word": "need",
+      "start": 131.33435,
+      "end": 131.57434
+    },
+    {
+      "word": "you",
+      "start": 131.57434,
+      "end": 131.67435
+    },
+    {
+      "word": "to",
+      "start": 131.67435,
+      "end": 131.83435
+    },
+    {
+      "word": "fill",
+      "start": 131.83435,
+      "end": 131.99435
+    },
+    {
+      "word": "out",
+      "start": 131.99435,
+      "end": 132.09435
+    },
+    {
+      "word": "this",
+      "start": 132.09435,
+      "end": 132.31435
+    },
+    {
+      "word": "form",
+      "start": 132.31435,
+      "end": 132.63434
+    },
+    {
+      "word": "so",
+      "start": 132.19435,
+      "end": 132.89435
+    },
+    {
+      "word": "I",
+      "start": 132.89435,
+      "end": 133.01434
+    },
+    {
+      "word": "have",
+      "start": 133.01434,
+      "end": 133.19435
+    },
+    {
+      "word": "your",
+      "start": 133.19435,
+      "end": 133.31435
+    },
+    {
+      "word": "contact",
+      "start": 133.31435,
+      "end": 133.77435
+    },
+    {
+      "word": "information.",
+      "start": 133.77435,
+      "end": 134.47435
+    },
+    {
+      "word": "As",
+      "start": 135.41434,
+      "end": 135.61435
+    },
+    {
+      "word": "a",
+      "start": 135.61435,
+      "end": 135.71436
+    },
+    {
+      "word": "matter",
+      "start": 135.71436,
+      "end": 135.93434
+    },
+    {
+      "word": "of",
+      "start": 135.93434,
+      "end": 136.11435
+    },
+    {
+      "word": "fact,",
+      "start": 136.11435,
+      "end": 136.57434
+    },
+    {
+      "word": "both",
+      "start": 136.81435,
+      "end": 136.89435
+    },
+    {
+      "word": "you",
+      "start": 136.89435,
+      "end": 137.13434
+    },
+    {
+      "word": "and",
+      "start": 137.13434,
+      "end": 137.43434
+    },
+    {
+      "word": "your",
+      "start": 137.43434,
+      "end": 137.63434
+    },
+    {
+      "word": "friend",
+      "start": 137.63434,
+      "end": 137.89435
+    },
+    {
+      "word": "will",
+      "start": 137.89435,
+      "end": 138.13434
+    },
+    {
+      "word": "have",
+      "start": 138.13434,
+      "end": 138.29434
+    },
+    {
+      "word": "to",
+      "start": 138.29434,
+      "end": 138.43434
+    },
+    {
+      "word": "fill",
+      "start": 138.43434,
+      "end": 138.69435
+    },
+    {
+      "word": "out",
+      "start": 138.69435,
+      "end": 138.89435
+    },
+    {
+      "word": "an",
+      "start": 138.89435,
+      "end": 139.01434
+    },
+    {
+      "word": "application",
+      "start": 139.01434,
+      "end": 139.41434
+    },
+    {
+      "word": "in",
+      "start": 139.41434,
+      "end": 139.87434
+    },
+    {
+      "word": "order",
+      "start": 139.87434,
+      "end": 140.13434
+    },
+    {
+      "word": "to",
+      "start": 140.13434,
+      "end": 140.33435
+    },
+    {
+      "word": "be",
+      "start": 140.33435,
+      "end": 140.45435
+    },
+    {
+      "word": "approved",
+      "start": 140.45435,
+      "end": 140.77435
+    },
+    {
+      "word": "as",
+      "start": 140.77435,
+      "end": 141.07434
+    },
+    {
+      "word": "tenants.",
+      "start": 141.07434,
+      "end": 141.81435
+    },
+    {
+      "word": "I'm",
+      "start": 142.45435,
+      "end": 142.59435
+    },
+    {
+      "word": "assuming",
+      "start": 142.59435,
+      "end": 142.89435
+    },
+    {
+      "word": "you",
+      "start": 142.89435,
+      "end": 143.11435
+    },
+    {
+      "word": "want",
+      "start": 143.11435,
+      "end": 143.25435
+    },
+    {
+      "word": "a",
+      "start": 143.25435,
+      "end": 143.37434
+    },
+    {
+      "word": "one-year",
+      "start": 143.37434,
+      "end": 143.69435
+    },
+    {
+      "word": "lease.",
+      "start": 143.69435,
+      "end": 144.09435
+    },
+    {
+      "word": "Is",
+      "start": 144.09435,
+      "end": 144.81435
+    },
+    {
+      "word": "that",
+      "start": 144.81435,
+      "end": 144.97435
+    },
+    {
+      "word": "right?",
+      "start": 144.97435,
+      "end": 145.23434
+    },
+    {
+      "word": "Oh,",
+      "start": 145.23434,
+      "end": 146.57434
+    },
+    {
+      "word": "one",
+      "start": 146.57434,
+      "end": 147.01434
+    },
+    {
+      "word": "more",
+      "start": 147.01434,
+      "end": 147.17435
+    },
+    {
+      "word": "thing.",
+      "start": 147.17435,
+      "end": 147.73434
+    },
+    {
+      "word": "You",
+      "start": 147.73434,
+      "end": 148.21436
+    },
+    {
+      "word": "don't",
+      "start": 148.21436,
+      "end": 148.41434
+    },
+    {
+      "word": "have",
+      "start": 148.41434,
+      "end": 148.55435
+    },
+    {
+      "word": "a",
+      "start": 148.55435,
+      "end": 148.65434
+    },
+    {
+      "word": "pet,",
+      "start": 148.65434,
+      "end": 149.23434
+    },
+    {
+      "word": "do",
+      "start": 149.19434,
+      "end": 149.31435
+    },
+    {
+      "word": "you?",
+      "start": 149.31435,
+      "end": 149.55435
+    },
+    {
+      "word": "Yes,",
+      "start": 149.55435,
+      "end": 150.49435
+    },
+    {
+      "word": "I'm",
+      "start": 150.49435,
+      "end": 151.17435
+    },
+    {
+      "word": "willing",
+      "start": 151.17435,
+      "end": 151.37434
+    },
+    {
+      "word": "to",
+      "start": 151.37434,
+      "end": 151.57434
+    },
+    {
+      "word": "sign",
+      "start": 151.57434,
+      "end": 151.83435
+    },
+    {
+      "word": "a",
+      "start": 151.83435,
+      "end": 152.03435
+    },
+    {
+      "word": "one-year",
+      "start": 152.03435,
+      "end": 152.33435
+    },
+    {
+      "word": "lease.",
+      "start": 152.33435,
+      "end": 152.75435
+    },
+    {
+      "word": "And",
+      "start": 152.75435,
+      "end": 153.27435
+    },
+    {
+      "word": "no,",
+      "start": 153.27435,
+      "end": 153.59435
+    },
+    {
+      "word": "I",
+      "start": 153.59435,
+      "end": 154.03435
+    },
+    {
+      "word": "don't",
+      "start": 154.03435,
+      "end": 154.23434
+    },
+    {
+      "word": "have",
+      "start": 154.23434,
+      "end": 154.41434
+    },
+    {
+      "word": "a",
+      "start": 154.41434,
+      "end": 154.51434
+    },
+    {
+      "word": "pet.",
+      "start": 154.51434,
+      "end": 154.95435
+    },
+    {
+      "word": "And",
+      "start": 154.95435,
+      "end": 155.47433
+    },
+    {
+      "word": "I'll",
+      "start": 155.47433,
+      "end": 155.57434
+    },
+    {
+      "word": "make",
+      "start": 155.57434,
+      "end": 155.83435
+    },
+    {
+      "word": "sure",
+      "start": 155.83435,
+      "end": 155.99435
+    },
+    {
+      "word": "my",
+      "start": 155.99435,
+      "end": 156.21436
+    },
+    {
+      "word": "friend",
+      "start": 155.75435,
+      "end": 156.49435
+    },
+    {
+      "word": "gets",
+      "start": 156.49435,
+      "end": 156.75435
+    },
+    {
+      "word": "rid",
+      "start": 156.75435,
+      "end": 156.93436
+    },
+    {
+      "word": "of",
+      "start": 156.93436,
+      "end": 157.07434
+    },
+    {
+      "word": "his",
+      "start": 157.07434,
+      "end": 157.21436
+    },
+    {
+      "word": "dog.",
+      "start": 157.21436,
+      "end": 157.77435
+    },
+    {
+      "word": "He",
+      "start": 157.77435,
+      "end": 158.17435
+    },
+    {
+      "word": "can",
+      "start": 158.17435,
+      "end": 158.33435
+    },
+    {
+      "word": "leave",
+      "start": 158.33435,
+      "end": 158.49435
+    },
+    {
+      "word": "it",
+      "start": 158.49435,
+      "end": 158.59435
+    },
+    {
+      "word": "with",
+      "start": 158.59435,
+      "end": 158.75435
+    },
+    {
+      "word": "his",
+      "start": 158.75435,
+      "end": 158.89435
+    },
+    {
+      "word": "family.",
+      "start": 158.89435,
+      "end": 159.61435
+    },
+    {
+      "word": "They",
+      "start": 159.61435,
+      "end": 159.83435
+    },
+    {
+      "word": "have",
+      "start": 159.83435,
+      "end": 160.01434
+    },
+    {
+      "word": "a",
+      "start": 160.01434,
+      "end": 160.11435
+    },
+    {
+      "word": "place",
+      "start": 160.11435,
+      "end": 160.39435
+    },
+    {
+      "word": "in",
+      "start": 160.39435,
+      "end": 160.51434
+    },
+    {
+      "word": "the",
+      "start": 160.51434,
+      "end": 160.59435
+    },
+    {
+      "word": "country.",
+      "start": 160.59435,
+      "end": 160.91434
+    },
+    {
+      "word": "I'd",
+      "start": 161.65434,
+      "end": 161.87434
+    },
+    {
+      "word": "better",
+      "start": 161.87434,
+      "end": 161.99435
+    },
+    {
+      "word": "go",
+      "start": 161.99435,
+      "end": 162.15434
+    },
+    {
+      "word": "give",
+      "start": 162.15434,
+      "end": 162.39435
+    },
+    {
+      "word": "him",
+      "start": 162.39435,
+      "end": 162.47433
+    },
+    {
+      "word": "a",
+      "start": 162.47433,
+      "end": 162.57434
+    },
+    {
+      "word": "heads",
+      "start": 162.57434,
+      "end": 162.77435
+    },
+    {
+      "word": "up",
+      "start": 162.77435,
+      "end": 162.95435
+    },
+    {
+      "word": "right",
+      "start": 162.95435,
+      "end": 163.21436
+    },
+    {
+      "word": "now.",
+      "start": 163.21436,
+      "end": 163.55435
+    },
+    {
+      "word": "Good.",
+      "start": 164.31435,
+      "end": 165.09435
+    },
+    {
+      "word": "Be",
+      "start": 165.29434,
+      "end": 165.49435
+    },
+    {
+      "word": "sure",
+      "start": 165.49435,
+      "end": 165.77435
+    },
+    {
+      "word": "both",
+      "start": 165.77435,
+      "end": 166.11435
+    },
+    {
+      "word": "of",
+      "start": 166.11435,
+      "end": 166.31435
+    },
+    {
+      "word": "you",
+      "start": 166.31435,
+      "end": 166.43436
+    },
+    {
+      "word": "bring",
+      "start": 166.43436,
+      "end": 166.67435
+    },
+    {
+      "word": "your",
+      "start": 166.67435,
+      "end": 166.81435
+    },
+    {
+      "word": "financial",
+      "start": 166.81435,
+      "end": 167.25435
+    },
+    {
+      "word": "and",
+      "start": 167.25435,
+      "end": 167.77435
+    },
+    {
+      "word": "credit",
+      "start": 167.77435,
+      "end": 168.05435
+    },
+    {
+      "word": "information",
+      "start": 168.05435,
+      "end": 168.59435
+    },
+    {
+      "word": "with",
+      "start": 168.59435,
+      "end": 169.01434
+    },
+    {
+      "word": "you.",
+      "start": 169.01434,
+      "end": 169.37434
+    },
+    {
+      "word": "Right.",
+      "start": 169.73434,
+      "end": 170.31435
+    },
+    {
+      "word": "We'll",
+      "start": 170.45435,
+      "end": 170.63434
+    },
+    {
+      "word": "see",
+      "start": 170.63434,
+      "end": 170.81435
+    },
+    {
+      "word": "you",
+      "start": 170.81435,
+      "end": 170.91434
+    },
+    {
+      "word": "at",
+      "start": 170.91434,
+      "end": 171.09435
+    },
+    {
+      "word": "noon",
+      "start": 171.09435,
+      "end": 171.25435
+    },
+    {
+      "word": "then.",
+      "start": 171.25435,
+      "end": 171.71436
+    },
+    {
+      "word": "Thank",
+      "start": 171.95435,
+      "end": 172.13434
+    },
+    {
+      "word": "you",
+      "start": 172.13434,
+      "end": 172.23434
+    },
+    {
+      "word": "very",
+      "start": 172.23434,
+      "end": 172.43436
+    },
+    {
+      "word": "much.",
+      "start": 172.43436,
+      "end": 172.71436
+    },
+    {
+      "word": "See",
+      "start": 173.19434,
+      "end": 173.37434
+    },
+    {
+      "word": "you",
+      "start": 173.37434,
+      "end": 173.53435
+    },
+    {
+      "word": "later.",
+      "start": 173.53435,
+      "end": 173.77435
+    }
+  ]
+}

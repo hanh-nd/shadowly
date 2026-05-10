@@ -1,0 +1,815 @@
+{
+  "text": " Exercise 4-3. Rule 1. Top of the staircase. When a T is at the top of a staircase in a stressed position, it should be a clear, popped sound. 1. In the beginning of a word, T is T. Ted took 10 tomatoes. 2. With a stressed T and STTS, TRCT, and LT, and sometimes NT combinations, T is T. He was content with the contract. Three. T replaces D in the past tense after an unvoiced consonant sound. F, C, P, S, CH, SH. Except T. T. Laughed. Picked. Hoped. Raced. Watched. Washed. Unearthed. D. Halved. Rigged Nabbed Raised Judged Garaged Smoothed Exceptions Wicked Naked Crooked Etc. Read the following sentences out loud. Make sure the underlined stressed T's are sharp and clear. 1. It took Tim ten times to try the telephone. 2. Stop touching Ted's toes. 3. Turn towards Stella and study her contract together. 4. Control your tears. 5. It's Tommy's turn to tell the teacher the truth.",
+  "wordTimestamps": [
+    {
+      "word": "Exercise",
+      "start": 0.42,
+      "end": 0.9
+    },
+    {
+      "word": "4-3.",
+      "start": 0.9,
+      "end": 1.96
+    },
+    {
+      "word": "Rule",
+      "start": 1.96,
+      "end": 2.64
+    },
+    {
+      "word": "1.",
+      "start": 2.64,
+      "end": 3.66
+    },
+    {
+      "word": "Top",
+      "start": 3.66,
+      "end": 3.76
+    },
+    {
+      "word": "of",
+      "start": 3.76,
+      "end": 3.98
+    },
+    {
+      "word": "the",
+      "start": 3.98,
+      "end": 4.06
+    },
+    {
+      "word": "staircase.",
+      "start": 4.06,
+      "end": 5.86
+    },
+    {
+      "word": "When",
+      "start": 5.86,
+      "end": 5.9
+    },
+    {
+      "word": "a",
+      "start": 5.9,
+      "end": 6.1
+    },
+    {
+      "word": "T",
+      "start": 6.1,
+      "end": 6.2
+    },
+    {
+      "word": "is",
+      "start": 6.2,
+      "end": 6.42
+    },
+    {
+      "word": "at",
+      "start": 6.42,
+      "end": 6.56
+    },
+    {
+      "word": "the",
+      "start": 6.56,
+      "end": 6.66
+    },
+    {
+      "word": "top",
+      "start": 6.66,
+      "end": 6.8
+    },
+    {
+      "word": "of",
+      "start": 6.8,
+      "end": 6.98
+    },
+    {
+      "word": "a",
+      "start": 6.98,
+      "end": 7.08
+    },
+    {
+      "word": "staircase",
+      "start": 7.08,
+      "end": 7.38
+    },
+    {
+      "word": "in",
+      "start": 7.38,
+      "end": 7.86
+    },
+    {
+      "word": "a",
+      "start": 7.86,
+      "end": 7.98
+    },
+    {
+      "word": "stressed",
+      "start": 7.98,
+      "end": 8.26
+    },
+    {
+      "word": "position,",
+      "start": 8.26,
+      "end": 8.78
+    },
+    {
+      "word": "it",
+      "start": 8.78,
+      "end": 9.28
+    },
+    {
+      "word": "should",
+      "start": 9.28,
+      "end": 9.48
+    },
+    {
+      "word": "be",
+      "start": 9.48,
+      "end": 9.64
+    },
+    {
+      "word": "a",
+      "start": 9.64,
+      "end": 9.74
+    },
+    {
+      "word": "clear,",
+      "start": 9.74,
+      "end": 10.16
+    },
+    {
+      "word": "popped",
+      "start": 10.16,
+      "end": 10.78
+    },
+    {
+      "word": "sound.",
+      "start": 10.78,
+      "end": 11.44
+    },
+    {
+      "word": "1.",
+      "start": 12.68,
+      "end": 13.16
+    },
+    {
+      "word": "In",
+      "start": 13.16,
+      "end": 13.66
+    },
+    {
+      "word": "the",
+      "start": 13.66,
+      "end": 13.74
+    },
+    {
+      "word": "beginning",
+      "start": 13.74,
+      "end": 13.94
+    },
+    {
+      "word": "of",
+      "start": 13.94,
+      "end": 14.12
+    },
+    {
+      "word": "a",
+      "start": 14.12,
+      "end": 14.24
+    },
+    {
+      "word": "word,",
+      "start": 14.24,
+      "end": 14.86
+    },
+    {
+      "word": "T",
+      "start": 14.86,
+      "end": 14.96
+    },
+    {
+      "word": "is",
+      "start": 14.96,
+      "end": 15.24
+    },
+    {
+      "word": "T.",
+      "start": 15.24,
+      "end": 15.5
+    },
+    {
+      "word": "Ted",
+      "start": 15.5,
+      "end": 16.52
+    },
+    {
+      "word": "took",
+      "start": 16.52,
+      "end": 16.92
+    },
+    {
+      "word": "10",
+      "start": 16.92,
+      "end": 17.3
+    },
+    {
+      "word": "tomatoes.",
+      "start": 17.3,
+      "end": 18.2
+    },
+    {
+      "word": "2.",
+      "start": 20.26,
+      "end": 20.74
+    },
+    {
+      "word": "With",
+      "start": 20.74,
+      "end": 21.38
+    },
+    {
+      "word": "a",
+      "start": 21.38,
+      "end": 21.56
+    },
+    {
+      "word": "stressed",
+      "start": 21.56,
+      "end": 21.9
+    },
+    {
+      "word": "T",
+      "start": 21.9,
+      "end": 22.3
+    },
+    {
+      "word": "and",
+      "start": 22.3,
+      "end": 22.9
+    },
+    {
+      "word": "STTS,",
+      "start": 22.9,
+      "end": 24.6
+    },
+    {
+      "word": "TRCT,",
+      "start": 24.6,
+      "end": 25.42
+    },
+    {
+      "word": "and",
+      "start": 25.42,
+      "end": 25.48
+    },
+    {
+      "word": "LT,",
+      "start": 25.48,
+      "end": 25.9
+    },
+    {
+      "word": "and",
+      "start": 25.9,
+      "end": 26
+    },
+    {
+      "word": "sometimes",
+      "start": 26,
+      "end": 26.36
+    },
+    {
+      "word": "NT",
+      "start": 26.36,
+      "end": 26.78
+    },
+    {
+      "word": "combinations,",
+      "start": 26.78,
+      "end": 27.96
+    },
+    {
+      "word": "T",
+      "start": 27.96,
+      "end": 28.24
+    },
+    {
+      "word": "is",
+      "start": 28.24,
+      "end": 28.48
+    },
+    {
+      "word": "T.",
+      "start": 28.48,
+      "end": 28.72
+    },
+    {
+      "word": "He",
+      "start": 29.92,
+      "end": 29.98
+    },
+    {
+      "word": "was",
+      "start": 29.98,
+      "end": 30.22
+    },
+    {
+      "word": "content",
+      "start": 30.22,
+      "end": 30.64
+    },
+    {
+      "word": "with",
+      "start": 30.64,
+      "end": 31.2
+    },
+    {
+      "word": "the",
+      "start": 31.2,
+      "end": 31.36
+    },
+    {
+      "word": "contract.",
+      "start": 31.36,
+      "end": 32.3
+    },
+    {
+      "word": "Three.",
+      "start": 33.98,
+      "end": 34.16
+    },
+    {
+      "word": "T",
+      "start": 34.98,
+      "end": 35.1
+    },
+    {
+      "word": "replaces",
+      "start": 35.1,
+      "end": 35.76
+    },
+    {
+      "word": "D",
+      "start": 35.76,
+      "end": 36.04
+    },
+    {
+      "word": "in",
+      "start": 36.04,
+      "end": 36.22
+    },
+    {
+      "word": "the",
+      "start": 36.22,
+      "end": 36.32
+    },
+    {
+      "word": "past",
+      "start": 36.32,
+      "end": 36.7
+    },
+    {
+      "word": "tense",
+      "start": 36.7,
+      "end": 37
+    },
+    {
+      "word": "after",
+      "start": 37,
+      "end": 37.54
+    },
+    {
+      "word": "an",
+      "start": 37.54,
+      "end": 37.74
+    },
+    {
+      "word": "unvoiced",
+      "start": 37.74,
+      "end": 38.1
+    },
+    {
+      "word": "consonant",
+      "start": 38.1,
+      "end": 38.56
+    },
+    {
+      "word": "sound.",
+      "start": 38.56,
+      "end": 39.14
+    },
+    {
+      "word": "F,",
+      "start": 39.52,
+      "end": 39.82
+    },
+    {
+      "word": "C,",
+      "start": 39.82,
+      "end": 40.34
+    },
+    {
+      "word": "P,",
+      "start": 40.34,
+      "end": 40.82
+    },
+    {
+      "word": "S,",
+      "start": 40.82,
+      "end": 41.1
+    },
+    {
+      "word": "CH,",
+      "start": 41.1,
+      "end": 41.6
+    },
+    {
+      "word": "SH.",
+      "start": 41.6,
+      "end": 42.24
+    },
+    {
+      "word": "Except",
+      "start": 42.62,
+      "end": 42.92
+    },
+    {
+      "word": "T.",
+      "start": 42.92,
+      "end": 43.44
+    },
+    {
+      "word": "T.",
+      "start": 44.52,
+      "end": 45.08
+    },
+    {
+      "word": "Laughed.",
+      "start": 45.38,
+      "end": 46.5
+    },
+    {
+      "word": "Picked.",
+      "start": 46.84,
+      "end": 47.8
+    },
+    {
+      "word": "Hoped.",
+      "start": 48.44,
+      "end": 49.48
+    },
+    {
+      "word": "Raced.",
+      "start": 49.88,
+      "end": 50.92
+    },
+    {
+      "word": "Watched.",
+      "start": 51.48,
+      "end": 52.28
+    },
+    {
+      "word": "Washed.",
+      "start": 53.12,
+      "end": 54.14
+    },
+    {
+      "word": "Unearthed.",
+      "start": 54.74,
+      "end": 55.4
+    },
+    {
+      "word": "D.",
+      "start": 56.44,
+      "end": 56.68
+    },
+    {
+      "word": "Halved.",
+      "start": 57.26,
+      "end": 58.5
+    },
+    {
+      "word": "Rigged",
+      "start": 58.72,
+      "end": 59.32
+    },
+    {
+      "word": "Nabbed",
+      "start": 60.02,
+      "end": 60.88
+    },
+    {
+      "word": "Raised",
+      "start": 61.54,
+      "end": 62.38
+    },
+    {
+      "word": "Judged",
+      "start": 63.14,
+      "end": 63.8
+    },
+    {
+      "word": "Garaged",
+      "start": 64.56,
+      "end": 65.5
+    },
+    {
+      "word": "Smoothed",
+      "start": 66.22,
+      "end": 67.24
+    },
+    {
+      "word": "Exceptions",
+      "start": 68.14,
+      "end": 68.92
+    },
+    {
+      "word": "Wicked",
+      "start": 69.42,
+      "end": 69.74
+    },
+    {
+      "word": "Naked",
+      "start": 70.58,
+      "end": 70.88
+    },
+    {
+      "word": "Crooked",
+      "start": 71.74,
+      "end": 72.12
+    },
+    {
+      "word": "Etc.",
+      "start": 72.72,
+      "end": 73.18
+    },
+    {
+      "word": "Read",
+      "start": 74.5,
+      "end": 74.72
+    },
+    {
+      "word": "the",
+      "start": 74.72,
+      "end": 74.9
+    },
+    {
+      "word": "following",
+      "start": 74.9,
+      "end": 75.28
+    },
+    {
+      "word": "sentences",
+      "start": 75.28,
+      "end": 75.88
+    },
+    {
+      "word": "out",
+      "start": 75.88,
+      "end": 76.24
+    },
+    {
+      "word": "loud.",
+      "start": 76.24,
+      "end": 76.62
+    },
+    {
+      "word": "Make",
+      "start": 76.82,
+      "end": 77.1
+    },
+    {
+      "word": "sure",
+      "start": 77.1,
+      "end": 77.24
+    },
+    {
+      "word": "the",
+      "start": 77.24,
+      "end": 77.46
+    },
+    {
+      "word": "underlined",
+      "start": 77.46,
+      "end": 78.04
+    },
+    {
+      "word": "stressed",
+      "start": 78.04,
+      "end": 78.88
+    },
+    {
+      "word": "T's",
+      "start": 78.88,
+      "end": 79.58
+    },
+    {
+      "word": "are",
+      "start": 79.58,
+      "end": 79.9
+    },
+    {
+      "word": "sharp",
+      "start": 79.9,
+      "end": 80.24
+    },
+    {
+      "word": "and",
+      "start": 80.24,
+      "end": 80.46
+    },
+    {
+      "word": "clear.",
+      "start": 80.46,
+      "end": 80.8
+    },
+    {
+      "word": "1.",
+      "start": 81.84,
+      "end": 82.62
+    },
+    {
+      "word": "It",
+      "start": 83.16,
+      "end": 83.32
+    },
+    {
+      "word": "took",
+      "start": 83.32,
+      "end": 83.58
+    },
+    {
+      "word": "Tim",
+      "start": 83.58,
+      "end": 83.96
+    },
+    {
+      "word": "ten",
+      "start": 83.96,
+      "end": 84.3
+    },
+    {
+      "word": "times",
+      "start": 84.3,
+      "end": 84.82
+    },
+    {
+      "word": "to",
+      "start": 84.82,
+      "end": 85.08
+    },
+    {
+      "word": "try",
+      "start": 85.08,
+      "end": 85.28
+    },
+    {
+      "word": "the",
+      "start": 85.28,
+      "end": 85.46
+    },
+    {
+      "word": "telephone.",
+      "start": 85.46,
+      "end": 85.92
+    },
+    {
+      "word": "2.",
+      "start": 88.42,
+      "end": 89.04
+    },
+    {
+      "word": "Stop",
+      "start": 89.04,
+      "end": 89.58
+    },
+    {
+      "word": "touching",
+      "start": 89.58,
+      "end": 90.06
+    },
+    {
+      "word": "Ted's",
+      "start": 90.06,
+      "end": 90.6
+    },
+    {
+      "word": "toes.",
+      "start": 90.6,
+      "end": 91.4
+    },
+    {
+      "word": "3.",
+      "start": 93.26,
+      "end": 93.98
+    },
+    {
+      "word": "Turn",
+      "start": 93.98,
+      "end": 94.34
+    },
+    {
+      "word": "towards",
+      "start": 94.34,
+      "end": 94.78
+    },
+    {
+      "word": "Stella",
+      "start": 94.78,
+      "end": 95.22
+    },
+    {
+      "word": "and",
+      "start": 95.22,
+      "end": 95.64
+    },
+    {
+      "word": "study",
+      "start": 95.64,
+      "end": 96.16
+    },
+    {
+      "word": "her",
+      "start": 96.16,
+      "end": 96.36
+    },
+    {
+      "word": "contract",
+      "start": 96.36,
+      "end": 96.88
+    },
+    {
+      "word": "together.",
+      "start": 96.88,
+      "end": 97.5
+    },
+    {
+      "word": "4.",
+      "start": 100.58,
+      "end": 101.46
+    },
+    {
+      "word": "Control",
+      "start": 101.46,
+      "end": 101.84
+    },
+    {
+      "word": "your",
+      "start": 101.84,
+      "end": 102.18
+    },
+    {
+      "word": "tears.",
+      "start": 102.18,
+      "end": 103.18
+    },
+    {
+      "word": "5.",
+      "start": 105.68,
+      "end": 106.62
+    },
+    {
+      "word": "It's",
+      "start": 106.62,
+      "end": 106.8
+    },
+    {
+      "word": "Tommy's",
+      "start": 106.8,
+      "end": 107.32
+    },
+    {
+      "word": "turn",
+      "start": 107.32,
+      "end": 107.62
+    },
+    {
+      "word": "to",
+      "start": 107.62,
+      "end": 107.92
+    },
+    {
+      "word": "tell",
+      "start": 107.92,
+      "end": 108.12
+    },
+    {
+      "word": "the",
+      "start": 108.12,
+      "end": 108.32
+    },
+    {
+      "word": "teacher",
+      "start": 108.32,
+      "end": 108.6
+    },
+    {
+      "word": "the",
+      "start": 108.6,
+      "end": 108.84
+    },
+    {
+      "word": "truth.",
+      "start": 108.84,
+      "end": 109.8
+    }
+  ]
+}

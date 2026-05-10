@@ -1,0 +1,670 @@
+{
+  "text": " Exercise 132, two-word stress. Repeat the following pairs. A light bulb, a light bulb. Blue pants, blue jeans. A cold fish, a goldfish. A gray hound, a gray hound. An old key, an in key. a white house, the white house, a nice watch, a wrist watch, a sticky web, a spider web, a clean cup, a coffee cup, a sharp knife, a steak knife, a baby alligator, a baby bottle, a shiny tack, thumbtacks, a wire brush, a hairbrush, a new ball, a football, A toy gun, a machine gun, a silk bow, a band-aid, a bright star, a firecracker, Mary Jones, a mailbox, Bob Smith, a spray can, foreign affairs, a wine glass, down payment, a footprint, New York, a strawberry, Social Security, a fig leaf, City Hall, an ice cream,",
+  "wordTimestamps": [
+    {
+      "word": "Exercise",
+      "start": 0.4,
+      "end": 0.88
+    },
+    {
+      "word": "132,",
+      "start": 0.88,
+      "end": 2.08
+    },
+    {
+      "word": "two-word",
+      "start": 2.08,
+      "end": 2.9
+    },
+    {
+      "word": "stress.",
+      "start": 2.9,
+      "end": 3.68
+    },
+    {
+      "word": "Repeat",
+      "start": 4.32,
+      "end": 4.52
+    },
+    {
+      "word": "the",
+      "start": 4.52,
+      "end": 4.76
+    },
+    {
+      "word": "following",
+      "start": 4.76,
+      "end": 5.14
+    },
+    {
+      "word": "pairs.",
+      "start": 5.14,
+      "end": 5.6
+    },
+    {
+      "word": "A",
+      "start": 6.92,
+      "end": 7.04
+    },
+    {
+      "word": "light",
+      "start": 7.04,
+      "end": 7.26
+    },
+    {
+      "word": "bulb,",
+      "start": 7.26,
+      "end": 8.26
+    },
+    {
+      "word": "a",
+      "start": 8.26,
+      "end": 9.02
+    },
+    {
+      "word": "light",
+      "start": 9.02,
+      "end": 9.18
+    },
+    {
+      "word": "bulb.",
+      "start": 9.18,
+      "end": 9.6
+    },
+    {
+      "word": "Blue",
+      "start": 11.1,
+      "end": 11.36
+    },
+    {
+      "word": "pants,",
+      "start": 11.36,
+      "end": 12.66
+    },
+    {
+      "word": "blue",
+      "start": 12.66,
+      "end": 13.28
+    },
+    {
+      "word": "jeans.",
+      "start": 13.28,
+      "end": 14.18
+    },
+    {
+      "word": "A",
+      "start": 15,
+      "end": 15.12
+    },
+    {
+      "word": "cold",
+      "start": 15.12,
+      "end": 15.46
+    },
+    {
+      "word": "fish,",
+      "start": 15.46,
+      "end": 16.6
+    },
+    {
+      "word": "a",
+      "start": 16.6,
+      "end": 17.28
+    },
+    {
+      "word": "goldfish.",
+      "start": 17.28,
+      "end": 18
+    },
+    {
+      "word": "A",
+      "start": 19.34,
+      "end": 19.52
+    },
+    {
+      "word": "gray",
+      "start": 19.52,
+      "end": 19.76
+    },
+    {
+      "word": "hound,",
+      "start": 19.76,
+      "end": 20.44
+    },
+    {
+      "word": "a",
+      "start": 20.44,
+      "end": 21.78
+    },
+    {
+      "word": "gray",
+      "start": 21.78,
+      "end": 21.92
+    },
+    {
+      "word": "hound.",
+      "start": 21.92,
+      "end": 22.34
+    },
+    {
+      "word": "An",
+      "start": 23.62,
+      "end": 23.84
+    },
+    {
+      "word": "old",
+      "start": 23.84,
+      "end": 24.16
+    },
+    {
+      "word": "key,",
+      "start": 24.16,
+      "end": 25.2
+    },
+    {
+      "word": "an",
+      "start": 25.2,
+      "end": 25.86
+    },
+    {
+      "word": "in",
+      "start": 25.86,
+      "end": 26
+    },
+    {
+      "word": "key.",
+      "start": 26,
+      "end": 26.38
+    },
+    {
+      "word": "a",
+      "start": 27.94,
+      "end": 28.02
+    },
+    {
+      "word": "white",
+      "start": 28.02,
+      "end": 28.24
+    },
+    {
+      "word": "house,",
+      "start": 28.24,
+      "end": 29.32
+    },
+    {
+      "word": "the",
+      "start": 29.32,
+      "end": 30.18
+    },
+    {
+      "word": "white",
+      "start": 30.18,
+      "end": 30.34
+    },
+    {
+      "word": "house,",
+      "start": 30.34,
+      "end": 30.8
+    },
+    {
+      "word": "a",
+      "start": 30.8,
+      "end": 32.3
+    },
+    {
+      "word": "nice",
+      "start": 32.3,
+      "end": 32.56
+    },
+    {
+      "word": "watch,",
+      "start": 32.56,
+      "end": 34.12
+    },
+    {
+      "word": "a",
+      "start": 34.12,
+      "end": 34.6
+    },
+    {
+      "word": "wrist",
+      "start": 34.6,
+      "end": 34.76
+    },
+    {
+      "word": "watch,",
+      "start": 34.76,
+      "end": 35.8
+    },
+    {
+      "word": "a",
+      "start": 35.8,
+      "end": 36.44
+    },
+    {
+      "word": "sticky",
+      "start": 36.44,
+      "end": 36.74
+    },
+    {
+      "word": "web,",
+      "start": 36.74,
+      "end": 37.74
+    },
+    {
+      "word": "a",
+      "start": 37.74,
+      "end": 38.5
+    },
+    {
+      "word": "spider",
+      "start": 38.5,
+      "end": 38.86
+    },
+    {
+      "word": "web,",
+      "start": 38.86,
+      "end": 39.5
+    },
+    {
+      "word": "a",
+      "start": 40.56,
+      "end": 40.7
+    },
+    {
+      "word": "clean",
+      "start": 40.7,
+      "end": 41.02
+    },
+    {
+      "word": "cup,",
+      "start": 41.02,
+      "end": 42.14
+    },
+    {
+      "word": "a",
+      "start": 42.14,
+      "end": 42.9
+    },
+    {
+      "word": "coffee",
+      "start": 42.9,
+      "end": 43.18
+    },
+    {
+      "word": "cup,",
+      "start": 43.18,
+      "end": 44.2
+    },
+    {
+      "word": "a",
+      "start": 44.2,
+      "end": 45.14
+    },
+    {
+      "word": "sharp",
+      "start": 45.14,
+      "end": 45.46
+    },
+    {
+      "word": "knife,",
+      "start": 45.46,
+      "end": 46.8
+    },
+    {
+      "word": "a",
+      "start": 46.8,
+      "end": 47.4
+    },
+    {
+      "word": "steak",
+      "start": 47.4,
+      "end": 47.68
+    },
+    {
+      "word": "knife,",
+      "start": 47.68,
+      "end": 48.76
+    },
+    {
+      "word": "a",
+      "start": 48.76,
+      "end": 49.78
+    },
+    {
+      "word": "baby",
+      "start": 49.78,
+      "end": 50.04
+    },
+    {
+      "word": "alligator,",
+      "start": 50.04,
+      "end": 51.94
+    },
+    {
+      "word": "a",
+      "start": 51.94,
+      "end": 52.38
+    },
+    {
+      "word": "baby",
+      "start": 52.38,
+      "end": 52.62
+    },
+    {
+      "word": "bottle,",
+      "start": 52.62,
+      "end": 53.06
+    },
+    {
+      "word": "a",
+      "start": 54.68,
+      "end": 54.7
+    },
+    {
+      "word": "shiny",
+      "start": 54.7,
+      "end": 55.04
+    },
+    {
+      "word": "tack,",
+      "start": 55.04,
+      "end": 56.34
+    },
+    {
+      "word": "thumbtacks,",
+      "start": 56.34,
+      "end": 58.34
+    },
+    {
+      "word": "a",
+      "start": 58.34,
+      "end": 59.16
+    },
+    {
+      "word": "wire",
+      "start": 59.16,
+      "end": 59.42
+    },
+    {
+      "word": "brush,",
+      "start": 59.42,
+      "end": 61.12
+    },
+    {
+      "word": "a",
+      "start": 61.12,
+      "end": 61.3
+    },
+    {
+      "word": "hairbrush,",
+      "start": 61.3,
+      "end": 62.6
+    },
+    {
+      "word": "a",
+      "start": 62.6,
+      "end": 63.36
+    },
+    {
+      "word": "new",
+      "start": 63.36,
+      "end": 63.52
+    },
+    {
+      "word": "ball,",
+      "start": 63.52,
+      "end": 64.48
+    },
+    {
+      "word": "a",
+      "start": 64.48,
+      "end": 65.1
+    },
+    {
+      "word": "football,",
+      "start": 65.1,
+      "end": 65.88
+    },
+    {
+      "word": "A",
+      "start": 68.12,
+      "end": 68.14
+    },
+    {
+      "word": "toy",
+      "start": 68.14,
+      "end": 68.42
+    },
+    {
+      "word": "gun,",
+      "start": 68.42,
+      "end": 69.54
+    },
+    {
+      "word": "a",
+      "start": 69.54,
+      "end": 70.14
+    },
+    {
+      "word": "machine",
+      "start": 70.14,
+      "end": 70.44
+    },
+    {
+      "word": "gun,",
+      "start": 70.44,
+      "end": 71.52
+    },
+    {
+      "word": "a",
+      "start": 71.52,
+      "end": 72.34
+    },
+    {
+      "word": "silk",
+      "start": 72.34,
+      "end": 72.62
+    },
+    {
+      "word": "bow,",
+      "start": 72.62,
+      "end": 74.08
+    },
+    {
+      "word": "a",
+      "start": 74.08,
+      "end": 74.48
+    },
+    {
+      "word": "band-aid,",
+      "start": 74.48,
+      "end": 75.8
+    },
+    {
+      "word": "a",
+      "start": 75.8,
+      "end": 76.48
+    },
+    {
+      "word": "bright",
+      "start": 76.48,
+      "end": 76.72
+    },
+    {
+      "word": "star,",
+      "start": 76.72,
+      "end": 77.98
+    },
+    {
+      "word": "a",
+      "start": 77.98,
+      "end": 78.62
+    },
+    {
+      "word": "firecracker,",
+      "start": 78.62,
+      "end": 80.56
+    },
+    {
+      "word": "Mary",
+      "start": 80.56,
+      "end": 80.86
+    },
+    {
+      "word": "Jones,",
+      "start": 80.86,
+      "end": 81.84
+    },
+    {
+      "word": "a",
+      "start": 81.84,
+      "end": 82.62
+    },
+    {
+      "word": "mailbox,",
+      "start": 82.62,
+      "end": 83.52
+    },
+    {
+      "word": "Bob",
+      "start": 84.48,
+      "end": 84.6
+    },
+    {
+      "word": "Smith,",
+      "start": 84.6,
+      "end": 86.34
+    },
+    {
+      "word": "a",
+      "start": 86.34,
+      "end": 86.42
+    },
+    {
+      "word": "spray",
+      "start": 86.42,
+      "end": 86.72
+    },
+    {
+      "word": "can,",
+      "start": 86.72,
+      "end": 87.92
+    },
+    {
+      "word": "foreign",
+      "start": 87.92,
+      "end": 88.52
+    },
+    {
+      "word": "affairs,",
+      "start": 88.52,
+      "end": 89.86
+    },
+    {
+      "word": "a",
+      "start": 89.86,
+      "end": 90.36
+    },
+    {
+      "word": "wine",
+      "start": 90.36,
+      "end": 90.62
+    },
+    {
+      "word": "glass,",
+      "start": 90.62,
+      "end": 91.86
+    },
+    {
+      "word": "down",
+      "start": 91.86,
+      "end": 92.62
+    },
+    {
+      "word": "payment,",
+      "start": 92.62,
+      "end": 93.94
+    },
+    {
+      "word": "a",
+      "start": 93.94,
+      "end": 94.68
+    },
+    {
+      "word": "footprint,",
+      "start": 94.68,
+      "end": 95.66
+    },
+    {
+      "word": "New",
+      "start": 96.44,
+      "end": 96.66
+    },
+    {
+      "word": "York,",
+      "start": 96.66,
+      "end": 97.6
+    },
+    {
+      "word": "a",
+      "start": 97.6,
+      "end": 98.34
+    },
+    {
+      "word": "strawberry,",
+      "start": 98.34,
+      "end": 99.86
+    },
+    {
+      "word": "Social",
+      "start": 99.86,
+      "end": 100.54
+    },
+    {
+      "word": "Security,",
+      "start": 100.54,
+      "end": 102
+    },
+    {
+      "word": "a",
+      "start": 102,
+      "end": 102.56
+    },
+    {
+      "word": "fig",
+      "start": 102.56,
+      "end": 102.74
+    },
+    {
+      "word": "leaf,",
+      "start": 102.74,
+      "end": 104.28
+    },
+    {
+      "word": "City",
+      "start": 104.28,
+      "end": 104.64
+    },
+    {
+      "word": "Hall,",
+      "start": 104.64,
+      "end": 106.36
+    },
+    {
+      "word": "an",
+      "start": 106.36,
+      "end": 106.5
+    },
+    {
+      "word": "ice",
+      "start": 106.5,
+      "end": 106.76
+    },
+    {
+      "word": "cream,",
+      "start": 106.76,
+      "end": 107.56
+    }
+  ]
+}

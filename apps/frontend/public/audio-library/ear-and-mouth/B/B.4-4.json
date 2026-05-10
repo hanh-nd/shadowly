@@ -1,0 +1,695 @@
+{
+  "text": " Exercise 4-4, Rule 2, Middle of the Staircase. An unstressed T in the middle of a staircase between two vowel sounds should be pronounced as a soft D. Betty bought a bit of better butter. Pat ought to sit on a lap. Read the following sentences out loud. Make sure that the underlined unstressed T's sound like a soft D. 1. What a good idea. 2. Put it in a bottle. 3. Write it in a letter. 4. Set it on the metal gutter. 5. Put all the data in the computer. 6. Insert a quarter in the meter. 7. Get a better water heater. 8. Let her put a sweater on. 9. Betty's at a meeting. 10. It's getting hotter and hotter. 11. Patty ought to write a better letter. 12. Frida had a little metal bottle.",
+  "wordTimestamps": [
+    {
+      "word": "Exercise",
+      "start": 0.42,
+      "end": 0.84
+    },
+    {
+      "word": "4-4,",
+      "start": 0.84,
+      "end": 2.12
+    },
+    {
+      "word": "Rule",
+      "start": 2.12,
+      "end": 2.22
+    },
+    {
+      "word": "2,",
+      "start": 2.22,
+      "end": 2.76
+    },
+    {
+      "word": "Middle",
+      "start": 2.76,
+      "end": 2.98
+    },
+    {
+      "word": "of",
+      "start": 2.98,
+      "end": 3.18
+    },
+    {
+      "word": "the",
+      "start": 3.18,
+      "end": 3.26
+    },
+    {
+      "word": "Staircase.",
+      "start": 3.26,
+      "end": 3.9
+    },
+    {
+      "word": "An",
+      "start": 4.9,
+      "end": 5.04
+    },
+    {
+      "word": "unstressed",
+      "start": 5.04,
+      "end": 5.64
+    },
+    {
+      "word": "T",
+      "start": 5.64,
+      "end": 5.86
+    },
+    {
+      "word": "in",
+      "start": 5.86,
+      "end": 6.24
+    },
+    {
+      "word": "the",
+      "start": 6.24,
+      "end": 6.36
+    },
+    {
+      "word": "middle",
+      "start": 6.36,
+      "end": 6.48
+    },
+    {
+      "word": "of",
+      "start": 6.48,
+      "end": 6.64
+    },
+    {
+      "word": "a",
+      "start": 6.64,
+      "end": 6.7
+    },
+    {
+      "word": "staircase",
+      "start": 6.7,
+      "end": 7
+    },
+    {
+      "word": "between",
+      "start": 7,
+      "end": 7.46
+    },
+    {
+      "word": "two",
+      "start": 7.46,
+      "end": 7.8
+    },
+    {
+      "word": "vowel",
+      "start": 7.8,
+      "end": 8.1
+    },
+    {
+      "word": "sounds",
+      "start": 8.1,
+      "end": 8.44
+    },
+    {
+      "word": "should",
+      "start": 8.44,
+      "end": 8.68
+    },
+    {
+      "word": "be",
+      "start": 8.68,
+      "end": 8.84
+    },
+    {
+      "word": "pronounced",
+      "start": 8.84,
+      "end": 9.14
+    },
+    {
+      "word": "as",
+      "start": 9.14,
+      "end": 9.5
+    },
+    {
+      "word": "a",
+      "start": 9.5,
+      "end": 9.6
+    },
+    {
+      "word": "soft",
+      "start": 9.6,
+      "end": 9.92
+    },
+    {
+      "word": "D.",
+      "start": 9.92,
+      "end": 10.22
+    },
+    {
+      "word": "Betty",
+      "start": 11.22,
+      "end": 11.44
+    },
+    {
+      "word": "bought",
+      "start": 11.44,
+      "end": 11.68
+    },
+    {
+      "word": "a",
+      "start": 11.68,
+      "end": 11.84
+    },
+    {
+      "word": "bit",
+      "start": 11.84,
+      "end": 11.96
+    },
+    {
+      "word": "of",
+      "start": 11.96,
+      "end": 12.06
+    },
+    {
+      "word": "better",
+      "start": 12.06,
+      "end": 12.3
+    },
+    {
+      "word": "butter.",
+      "start": 12.3,
+      "end": 12.6
+    },
+    {
+      "word": "Pat",
+      "start": 14.4,
+      "end": 14.66
+    },
+    {
+      "word": "ought",
+      "start": 14.66,
+      "end": 14.82
+    },
+    {
+      "word": "to",
+      "start": 14.82,
+      "end": 14.88
+    },
+    {
+      "word": "sit",
+      "start": 14.88,
+      "end": 15.14
+    },
+    {
+      "word": "on",
+      "start": 15.14,
+      "end": 15.32
+    },
+    {
+      "word": "a",
+      "start": 15.32,
+      "end": 15.44
+    },
+    {
+      "word": "lap.",
+      "start": 15.44,
+      "end": 15.88
+    },
+    {
+      "word": "Read",
+      "start": 18.18,
+      "end": 18.34
+    },
+    {
+      "word": "the",
+      "start": 18.34,
+      "end": 18.5
+    },
+    {
+      "word": "following",
+      "start": 18.5,
+      "end": 18.82
+    },
+    {
+      "word": "sentences",
+      "start": 18.82,
+      "end": 19.38
+    },
+    {
+      "word": "out",
+      "start": 19.38,
+      "end": 19.72
+    },
+    {
+      "word": "loud.",
+      "start": 19.72,
+      "end": 19.96
+    },
+    {
+      "word": "Make",
+      "start": 20.5,
+      "end": 20.74
+    },
+    {
+      "word": "sure",
+      "start": 20.74,
+      "end": 20.96
+    },
+    {
+      "word": "that",
+      "start": 20.96,
+      "end": 21.2
+    },
+    {
+      "word": "the",
+      "start": 21.2,
+      "end": 21.32
+    },
+    {
+      "word": "underlined",
+      "start": 21.32,
+      "end": 21.98
+    },
+    {
+      "word": "unstressed",
+      "start": 21.98,
+      "end": 22.7
+    },
+    {
+      "word": "T's",
+      "start": 22.7,
+      "end": 23.1
+    },
+    {
+      "word": "sound",
+      "start": 23.1,
+      "end": 23.32
+    },
+    {
+      "word": "like",
+      "start": 23.32,
+      "end": 23.5
+    },
+    {
+      "word": "a",
+      "start": 23.5,
+      "end": 23.64
+    },
+    {
+      "word": "soft",
+      "start": 23.64,
+      "end": 23.94
+    },
+    {
+      "word": "D.",
+      "start": 23.94,
+      "end": 24.24
+    },
+    {
+      "word": "1.",
+      "start": 25.34,
+      "end": 25.52
+    },
+    {
+      "word": "What",
+      "start": 25.52,
+      "end": 26.52
+    },
+    {
+      "word": "a",
+      "start": 26.52,
+      "end": 26.66
+    },
+    {
+      "word": "good",
+      "start": 26.66,
+      "end": 26.8
+    },
+    {
+      "word": "idea.",
+      "start": 26.8,
+      "end": 27.26
+    },
+    {
+      "word": "2.",
+      "start": 29.1,
+      "end": 29.96
+    },
+    {
+      "word": "Put",
+      "start": 29.96,
+      "end": 30.02
+    },
+    {
+      "word": "it",
+      "start": 30.02,
+      "end": 30.2
+    },
+    {
+      "word": "in",
+      "start": 30.2,
+      "end": 30.32
+    },
+    {
+      "word": "a",
+      "start": 30.32,
+      "end": 30.4
+    },
+    {
+      "word": "bottle.",
+      "start": 30.4,
+      "end": 30.84
+    },
+    {
+      "word": "3.",
+      "start": 32.74,
+      "end": 33.76
+    },
+    {
+      "word": "Write",
+      "start": 33.76,
+      "end": 34.02
+    },
+    {
+      "word": "it",
+      "start": 34.02,
+      "end": 34.18
+    },
+    {
+      "word": "in",
+      "start": 34.18,
+      "end": 34.32
+    },
+    {
+      "word": "a",
+      "start": 34.32,
+      "end": 34.44
+    },
+    {
+      "word": "letter.",
+      "start": 34.44,
+      "end": 35.1
+    },
+    {
+      "word": "4.",
+      "start": 36.72,
+      "end": 37.28
+    },
+    {
+      "word": "Set",
+      "start": 37.28,
+      "end": 37.74
+    },
+    {
+      "word": "it",
+      "start": 37.74,
+      "end": 37.92
+    },
+    {
+      "word": "on",
+      "start": 37.92,
+      "end": 38.08
+    },
+    {
+      "word": "the",
+      "start": 38.08,
+      "end": 38.2
+    },
+    {
+      "word": "metal",
+      "start": 38.2,
+      "end": 38.44
+    },
+    {
+      "word": "gutter.",
+      "start": 38.44,
+      "end": 38.96
+    },
+    {
+      "word": "5.",
+      "start": 40.86,
+      "end": 41.78
+    },
+    {
+      "word": "Put",
+      "start": 41.78,
+      "end": 41.9
+    },
+    {
+      "word": "all",
+      "start": 41.9,
+      "end": 42.08
+    },
+    {
+      "word": "the",
+      "start": 42.08,
+      "end": 42.22
+    },
+    {
+      "word": "data",
+      "start": 42.22,
+      "end": 42.5
+    },
+    {
+      "word": "in",
+      "start": 42.5,
+      "end": 42.7
+    },
+    {
+      "word": "the",
+      "start": 42.7,
+      "end": 42.82
+    },
+    {
+      "word": "computer.",
+      "start": 42.82,
+      "end": 43.32
+    },
+    {
+      "word": "6.",
+      "start": 45.5,
+      "end": 46.28
+    },
+    {
+      "word": "Insert",
+      "start": 46.28,
+      "end": 46.62
+    },
+    {
+      "word": "a",
+      "start": 46.62,
+      "end": 46.86
+    },
+    {
+      "word": "quarter",
+      "start": 46.86,
+      "end": 47.08
+    },
+    {
+      "word": "in",
+      "start": 47.08,
+      "end": 47.34
+    },
+    {
+      "word": "the",
+      "start": 47.34,
+      "end": 47.44
+    },
+    {
+      "word": "meter.",
+      "start": 47.44,
+      "end": 47.76
+    },
+    {
+      "word": "7.",
+      "start": 49.92,
+      "end": 50.72
+    },
+    {
+      "word": "Get",
+      "start": 50.72,
+      "end": 50.9
+    },
+    {
+      "word": "a",
+      "start": 50.9,
+      "end": 51.02
+    },
+    {
+      "word": "better",
+      "start": 51.02,
+      "end": 51.2
+    },
+    {
+      "word": "water",
+      "start": 51.2,
+      "end": 51.52
+    },
+    {
+      "word": "heater.",
+      "start": 51.52,
+      "end": 51.98
+    },
+    {
+      "word": "8.",
+      "start": 53.86,
+      "end": 54.5
+    },
+    {
+      "word": "Let",
+      "start": 54.5,
+      "end": 54.84
+    },
+    {
+      "word": "her",
+      "start": 54.84,
+      "end": 54.88
+    },
+    {
+      "word": "put",
+      "start": 54.88,
+      "end": 55.08
+    },
+    {
+      "word": "a",
+      "start": 55.08,
+      "end": 55.24
+    },
+    {
+      "word": "sweater",
+      "start": 55.24,
+      "end": 55.52
+    },
+    {
+      "word": "on.",
+      "start": 55.52,
+      "end": 55.92
+    },
+    {
+      "word": "9.",
+      "start": 57.66,
+      "end": 58.2
+    },
+    {
+      "word": "Betty's",
+      "start": 58.2,
+      "end": 58.78
+    },
+    {
+      "word": "at",
+      "start": 58.78,
+      "end": 58.92
+    },
+    {
+      "word": "a",
+      "start": 58.92,
+      "end": 59.02
+    },
+    {
+      "word": "meeting.",
+      "start": 59.02,
+      "end": 59.28
+    },
+    {
+      "word": "10.",
+      "start": 61.24,
+      "end": 61.82
+    },
+    {
+      "word": "It's",
+      "start": 61.82,
+      "end": 62.34
+    },
+    {
+      "word": "getting",
+      "start": 62.34,
+      "end": 62.54
+    },
+    {
+      "word": "hotter",
+      "start": 62.54,
+      "end": 62.94
+    },
+    {
+      "word": "and",
+      "start": 62.94,
+      "end": 63.16
+    },
+    {
+      "word": "hotter.",
+      "start": 63.16,
+      "end": 63.62
+    },
+    {
+      "word": "11.",
+      "start": 65.44,
+      "end": 66.24
+    },
+    {
+      "word": "Patty",
+      "start": 66.24,
+      "end": 66.56
+    },
+    {
+      "word": "ought",
+      "start": 66.56,
+      "end": 66.82
+    },
+    {
+      "word": "to",
+      "start": 66.82,
+      "end": 66.88
+    },
+    {
+      "word": "write",
+      "start": 66.88,
+      "end": 67.08
+    },
+    {
+      "word": "a",
+      "start": 67.08,
+      "end": 67.22
+    },
+    {
+      "word": "better",
+      "start": 67.22,
+      "end": 67.4
+    },
+    {
+      "word": "letter.",
+      "start": 67.4,
+      "end": 67.8
+    },
+    {
+      "word": "12.",
+      "start": 69.68,
+      "end": 70.64
+    },
+    {
+      "word": "Frida",
+      "start": 70.64,
+      "end": 70.96
+    },
+    {
+      "word": "had",
+      "start": 70.96,
+      "end": 71.22
+    },
+    {
+      "word": "a",
+      "start": 71.22,
+      "end": 71.36
+    },
+    {
+      "word": "little",
+      "start": 71.36,
+      "end": 71.5
+    },
+    {
+      "word": "metal",
+      "start": 71.5,
+      "end": 71.82
+    },
+    {
+      "word": "bottle.",
+      "start": 71.82,
+      "end": 72.76
+    }
+  ]
+}

@@ -1,0 +1,390 @@
+{
+  "text": " Exercise 4-5. Rule 3. Bottom of the staircase. T at the bottom of a staircase is in the held position. 1. She hit the hot hut with her hat. 2. We went to that net site to get what we needed. 3. Pat was quite right, wasn't she? 4. What? Put my hat back. 5. Hot, late, fat, goat, hit, put, not, hurt, what, set, paint, wait, sit, dirt, note, fit, lot, light, suit, point, incident, tight.",
+  "wordTimestamps": [
+    {
+      "word": "Exercise",
+      "start": 0.44,
+      "end": 0.92
+    },
+    {
+      "word": "4-5.",
+      "start": 0.92,
+      "end": 2.08
+    },
+    {
+      "word": "Rule",
+      "start": 2.08,
+      "end": 2.64
+    },
+    {
+      "word": "3.",
+      "start": 2.64,
+      "end": 3.44
+    },
+    {
+      "word": "Bottom",
+      "start": 3.44,
+      "end": 3.78
+    },
+    {
+      "word": "of",
+      "start": 3.78,
+      "end": 4.04
+    },
+    {
+      "word": "the",
+      "start": 4.04,
+      "end": 4.14
+    },
+    {
+      "word": "staircase.",
+      "start": 4.14,
+      "end": 5.28
+    },
+    {
+      "word": "T",
+      "start": 5.66,
+      "end": 5.82
+    },
+    {
+      "word": "at",
+      "start": 5.82,
+      "end": 5.96
+    },
+    {
+      "word": "the",
+      "start": 5.96,
+      "end": 6.08
+    },
+    {
+      "word": "bottom",
+      "start": 6.08,
+      "end": 6.3
+    },
+    {
+      "word": "of",
+      "start": 6.3,
+      "end": 6.52
+    },
+    {
+      "word": "a",
+      "start": 6.52,
+      "end": 6.6
+    },
+    {
+      "word": "staircase",
+      "start": 6.6,
+      "end": 6.88
+    },
+    {
+      "word": "is",
+      "start": 6.88,
+      "end": 7.3
+    },
+    {
+      "word": "in",
+      "start": 7.3,
+      "end": 7.44
+    },
+    {
+      "word": "the",
+      "start": 7.44,
+      "end": 7.56
+    },
+    {
+      "word": "held",
+      "start": 7.56,
+      "end": 7.84
+    },
+    {
+      "word": "position.",
+      "start": 7.84,
+      "end": 8.5
+    },
+    {
+      "word": "1.",
+      "start": 9.58,
+      "end": 10.32
+    },
+    {
+      "word": "She",
+      "start": 10.32,
+      "end": 11.16
+    },
+    {
+      "word": "hit",
+      "start": 11.16,
+      "end": 11.38
+    },
+    {
+      "word": "the",
+      "start": 11.38,
+      "end": 11.56
+    },
+    {
+      "word": "hot",
+      "start": 11.56,
+      "end": 11.82
+    },
+    {
+      "word": "hut",
+      "start": 11.82,
+      "end": 12.1
+    },
+    {
+      "word": "with",
+      "start": 12.1,
+      "end": 12.44
+    },
+    {
+      "word": "her",
+      "start": 12.44,
+      "end": 12.6
+    },
+    {
+      "word": "hat.",
+      "start": 12.6,
+      "end": 12.9
+    },
+    {
+      "word": "2.",
+      "start": 15.3,
+      "end": 15.8
+    },
+    {
+      "word": "We",
+      "start": 15.8,
+      "end": 16.32
+    },
+    {
+      "word": "went",
+      "start": 16.32,
+      "end": 16.54
+    },
+    {
+      "word": "to",
+      "start": 16.54,
+      "end": 16.76
+    },
+    {
+      "word": "that",
+      "start": 16.76,
+      "end": 16.96
+    },
+    {
+      "word": "net",
+      "start": 16.96,
+      "end": 17.26
+    },
+    {
+      "word": "site",
+      "start": 17.26,
+      "end": 17.6
+    },
+    {
+      "word": "to",
+      "start": 17.6,
+      "end": 17.86
+    },
+    {
+      "word": "get",
+      "start": 17.86,
+      "end": 18
+    },
+    {
+      "word": "what",
+      "start": 18,
+      "end": 18.22
+    },
+    {
+      "word": "we",
+      "start": 18.22,
+      "end": 18.38
+    },
+    {
+      "word": "needed.",
+      "start": 18.38,
+      "end": 18.78
+    },
+    {
+      "word": "3.",
+      "start": 22.4,
+      "end": 23.14
+    },
+    {
+      "word": "Pat",
+      "start": 23.14,
+      "end": 23.58
+    },
+    {
+      "word": "was",
+      "start": 23.58,
+      "end": 23.82
+    },
+    {
+      "word": "quite",
+      "start": 23.82,
+      "end": 24.08
+    },
+    {
+      "word": "right,",
+      "start": 24.08,
+      "end": 24.76
+    },
+    {
+      "word": "wasn't",
+      "start": 24.76,
+      "end": 24.88
+    },
+    {
+      "word": "she?",
+      "start": 24.88,
+      "end": 25.24
+    },
+    {
+      "word": "4.",
+      "start": 27.14,
+      "end": 27.96
+    },
+    {
+      "word": "What?",
+      "start": 27.96,
+      "end": 28.28
+    },
+    {
+      "word": "Put",
+      "start": 28.28,
+      "end": 28.98
+    },
+    {
+      "word": "my",
+      "start": 28.98,
+      "end": 29.18
+    },
+    {
+      "word": "hat",
+      "start": 29.18,
+      "end": 29.38
+    },
+    {
+      "word": "back.",
+      "start": 29.38,
+      "end": 29.78
+    },
+    {
+      "word": "5.",
+      "start": 31.58,
+      "end": 32.8
+    },
+    {
+      "word": "Hot,",
+      "start": 32.8,
+      "end": 33.82
+    },
+    {
+      "word": "late,",
+      "start": 33.82,
+      "end": 35.48
+    },
+    {
+      "word": "fat,",
+      "start": 35.48,
+      "end": 37.1
+    },
+    {
+      "word": "goat,",
+      "start": 37.1,
+      "end": 38.64
+    },
+    {
+      "word": "hit,",
+      "start": 38.64,
+      "end": 39.94
+    },
+    {
+      "word": "put,",
+      "start": 39.94,
+      "end": 41.38
+    },
+    {
+      "word": "not,",
+      "start": 41.38,
+      "end": 42
+    },
+    {
+      "word": "hurt,",
+      "start": 42,
+      "end": 44.2
+    },
+    {
+      "word": "what,",
+      "start": 44.2,
+      "end": 45.3
+    },
+    {
+      "word": "set,",
+      "start": 45.3,
+      "end": 46.88
+    },
+    {
+      "word": "paint,",
+      "start": 46.88,
+      "end": 48.36
+    },
+    {
+      "word": "wait,",
+      "start": 48.36,
+      "end": 49.4
+    },
+    {
+      "word": "sit,",
+      "start": 49.4,
+      "end": 50.82
+    },
+    {
+      "word": "dirt,",
+      "start": 50.82,
+      "end": 52.44
+    },
+    {
+      "word": "note,",
+      "start": 52.44,
+      "end": 52.9
+    },
+    {
+      "word": "fit,",
+      "start": 52.9,
+      "end": 55.1
+    },
+    {
+      "word": "lot,",
+      "start": 55.1,
+      "end": 56.52
+    },
+    {
+      "word": "light,",
+      "start": 56.52,
+      "end": 57.94
+    },
+    {
+      "word": "suit,",
+      "start": 57.94,
+      "end": 58.7
+    },
+    {
+      "word": "point,",
+      "start": 59.86,
+      "end": 61.54
+    },
+    {
+      "word": "incident,",
+      "start": 61.54,
+      "end": 62.88
+    },
+    {
+      "word": "tight.",
+      "start": 62.88,
+      "end": 63.74
+    }
+  ]
+}

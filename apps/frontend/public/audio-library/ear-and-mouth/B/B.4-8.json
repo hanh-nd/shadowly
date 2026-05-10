@@ -1,0 +1,580 @@
+{
+  "text": " Exercise 4.8. Rule 5. The silent T. Read the following sentences out loud. Make sure that the underlined T's are silent. 1. He had a great interview. 2. Try to enter the information. 3. Turn the printer on. 4. Finish the printing. 5. She's at the International Center. 6. It's 20 degrees in Toronto. 7. I don't understand it. 8. She invented it in Santa Monica. 9. He can't even do it. 10. They don't even want it. 11. They won't ever try. 12. What's the point of it? 13. She's the intercontinental representative. 14. Hasn't he? 15. Isn't he? 16. Aren't I? 17. Won't he? 18. Doesn't he? 19. Wouldn't it? 20. Didn't I?",
+  "wordTimestamps": [
+    {
+      "word": "Exercise",
+      "start": 0.44,
+      "end": 0.9
+    },
+    {
+      "word": "4.8.",
+      "start": 0.9,
+      "end": 1.74
+    },
+    {
+      "word": "Rule",
+      "start": 1.74,
+      "end": 2.22
+    },
+    {
+      "word": "5.",
+      "start": 2.22,
+      "end": 2.84
+    },
+    {
+      "word": "The",
+      "start": 2.84,
+      "end": 3.38
+    },
+    {
+      "word": "silent",
+      "start": 3.38,
+      "end": 3.74
+    },
+    {
+      "word": "T.",
+      "start": 3.74,
+      "end": 4.08
+    },
+    {
+      "word": "Read",
+      "start": 5.52,
+      "end": 5.7
+    },
+    {
+      "word": "the",
+      "start": 5.7,
+      "end": 5.86
+    },
+    {
+      "word": "following",
+      "start": 5.86,
+      "end": 6.14
+    },
+    {
+      "word": "sentences",
+      "start": 6.14,
+      "end": 6.66
+    },
+    {
+      "word": "out",
+      "start": 6.66,
+      "end": 6.98
+    },
+    {
+      "word": "loud.",
+      "start": 6.98,
+      "end": 7.2
+    },
+    {
+      "word": "Make",
+      "start": 7.2,
+      "end": 7.72
+    },
+    {
+      "word": "sure",
+      "start": 7.72,
+      "end": 7.94
+    },
+    {
+      "word": "that",
+      "start": 7.94,
+      "end": 8.16
+    },
+    {
+      "word": "the",
+      "start": 8.16,
+      "end": 8.26
+    },
+    {
+      "word": "underlined",
+      "start": 8.26,
+      "end": 8.7
+    },
+    {
+      "word": "T's",
+      "start": 8.7,
+      "end": 9.02
+    },
+    {
+      "word": "are",
+      "start": 9.02,
+      "end": 9.16
+    },
+    {
+      "word": "silent.",
+      "start": 9.16,
+      "end": 9.62
+    },
+    {
+      "word": "1.",
+      "start": 10.88,
+      "end": 11.46
+    },
+    {
+      "word": "He",
+      "start": 11.46,
+      "end": 11.86
+    },
+    {
+      "word": "had",
+      "start": 11.86,
+      "end": 11.98
+    },
+    {
+      "word": "a",
+      "start": 11.98,
+      "end": 12.1
+    },
+    {
+      "word": "great",
+      "start": 12.1,
+      "end": 12.24
+    },
+    {
+      "word": "interview.",
+      "start": 12.24,
+      "end": 12.68
+    },
+    {
+      "word": "2.",
+      "start": 14.32,
+      "end": 14.84
+    },
+    {
+      "word": "Try",
+      "start": 14.84,
+      "end": 15.36
+    },
+    {
+      "word": "to",
+      "start": 15.36,
+      "end": 15.54
+    },
+    {
+      "word": "enter",
+      "start": 15.54,
+      "end": 15.7
+    },
+    {
+      "word": "the",
+      "start": 15.7,
+      "end": 15.9
+    },
+    {
+      "word": "information.",
+      "start": 15.9,
+      "end": 16.88
+    },
+    {
+      "word": "3.",
+      "start": 18.44,
+      "end": 18.88
+    },
+    {
+      "word": "Turn",
+      "start": 18.88,
+      "end": 19.14
+    },
+    {
+      "word": "the",
+      "start": 19.14,
+      "end": 19.28
+    },
+    {
+      "word": "printer",
+      "start": 19.28,
+      "end": 19.48
+    },
+    {
+      "word": "on.",
+      "start": 19.48,
+      "end": 19.94
+    },
+    {
+      "word": "4.",
+      "start": 21.4,
+      "end": 21.88
+    },
+    {
+      "word": "Finish",
+      "start": 21.88,
+      "end": 22.26
+    },
+    {
+      "word": "the",
+      "start": 22.26,
+      "end": 22.46
+    },
+    {
+      "word": "printing.",
+      "start": 22.46,
+      "end": 23.02
+    },
+    {
+      "word": "5.",
+      "start": 24.58,
+      "end": 25.28
+    },
+    {
+      "word": "She's",
+      "start": 25.28,
+      "end": 25.84
+    },
+    {
+      "word": "at",
+      "start": 25.84,
+      "end": 25.96
+    },
+    {
+      "word": "the",
+      "start": 25.96,
+      "end": 26.06
+    },
+    {
+      "word": "International",
+      "start": 26.06,
+      "end": 26.3
+    },
+    {
+      "word": "Center.",
+      "start": 26.3,
+      "end": 27
+    },
+    {
+      "word": "6.",
+      "start": 29.04,
+      "end": 29.54
+    },
+    {
+      "word": "It's",
+      "start": 29.54,
+      "end": 29.96
+    },
+    {
+      "word": "20",
+      "start": 29.96,
+      "end": 30.22
+    },
+    {
+      "word": "degrees",
+      "start": 30.22,
+      "end": 30.58
+    },
+    {
+      "word": "in",
+      "start": 30.58,
+      "end": 30.86
+    },
+    {
+      "word": "Toronto.",
+      "start": 30.86,
+      "end": 31.5
+    },
+    {
+      "word": "7.",
+      "start": 33.54,
+      "end": 34.1
+    },
+    {
+      "word": "I",
+      "start": 34.1,
+      "end": 34.34
+    },
+    {
+      "word": "don't",
+      "start": 34.34,
+      "end": 34.48
+    },
+    {
+      "word": "understand",
+      "start": 34.48,
+      "end": 34.92
+    },
+    {
+      "word": "it.",
+      "start": 34.92,
+      "end": 35.52
+    },
+    {
+      "word": "8.",
+      "start": 37.2,
+      "end": 37.7
+    },
+    {
+      "word": "She",
+      "start": 37.7,
+      "end": 38.02
+    },
+    {
+      "word": "invented",
+      "start": 38.02,
+      "end": 38.4
+    },
+    {
+      "word": "it",
+      "start": 38.4,
+      "end": 38.62
+    },
+    {
+      "word": "in",
+      "start": 38.62,
+      "end": 38.8
+    },
+    {
+      "word": "Santa",
+      "start": 38.8,
+      "end": 39.12
+    },
+    {
+      "word": "Monica.",
+      "start": 39.12,
+      "end": 39.9
+    },
+    {
+      "word": "9.",
+      "start": 41.66,
+      "end": 42.26
+    },
+    {
+      "word": "He",
+      "start": 42.26,
+      "end": 42.48
+    },
+    {
+      "word": "can't",
+      "start": 42.48,
+      "end": 42.76
+    },
+    {
+      "word": "even",
+      "start": 42.76,
+      "end": 42.92
+    },
+    {
+      "word": "do",
+      "start": 42.92,
+      "end": 43.18
+    },
+    {
+      "word": "it.",
+      "start": 43.18,
+      "end": 43.6
+    },
+    {
+      "word": "10.",
+      "start": 45.06,
+      "end": 45.64
+    },
+    {
+      "word": "They",
+      "start": 45.64,
+      "end": 46.36
+    },
+    {
+      "word": "don't",
+      "start": 46.36,
+      "end": 46.54
+    },
+    {
+      "word": "even",
+      "start": 46.54,
+      "end": 46.72
+    },
+    {
+      "word": "want",
+      "start": 46.72,
+      "end": 47.08
+    },
+    {
+      "word": "it.",
+      "start": 47.08,
+      "end": 47.4
+    },
+    {
+      "word": "11.",
+      "start": 49.34,
+      "end": 50.02
+    },
+    {
+      "word": "They",
+      "start": 50.02,
+      "end": 50.42
+    },
+    {
+      "word": "won't",
+      "start": 50.42,
+      "end": 50.62
+    },
+    {
+      "word": "ever",
+      "start": 50.62,
+      "end": 50.82
+    },
+    {
+      "word": "try.",
+      "start": 50.82,
+      "end": 51.44
+    },
+    {
+      "word": "12.",
+      "start": 53.2,
+      "end": 53.84
+    },
+    {
+      "word": "What's",
+      "start": 53.84,
+      "end": 54.3
+    },
+    {
+      "word": "the",
+      "start": 54.3,
+      "end": 54.44
+    },
+    {
+      "word": "point",
+      "start": 54.44,
+      "end": 54.64
+    },
+    {
+      "word": "of",
+      "start": 54.64,
+      "end": 54.84
+    },
+    {
+      "word": "it?",
+      "start": 54.84,
+      "end": 55.06
+    },
+    {
+      "word": "13.",
+      "start": 56.68,
+      "end": 57.94
+    },
+    {
+      "word": "She's",
+      "start": 57.94,
+      "end": 58.08
+    },
+    {
+      "word": "the",
+      "start": 58.08,
+      "end": 58.22
+    },
+    {
+      "word": "intercontinental",
+      "start": 58.22,
+      "end": 58.9
+    },
+    {
+      "word": "representative.",
+      "start": 58.9,
+      "end": 60.12
+    },
+    {
+      "word": "14.",
+      "start": 62.06,
+      "end": 63.12
+    },
+    {
+      "word": "Hasn't",
+      "start": 63.12,
+      "end": 63.38
+    },
+    {
+      "word": "he?",
+      "start": 63.38,
+      "end": 63.72
+    },
+    {
+      "word": "15.",
+      "start": 63.12,
+      "end": 65.6
+    },
+    {
+      "word": "Isn't",
+      "start": 65.6,
+      "end": 65.94
+    },
+    {
+      "word": "he?",
+      "start": 65.94,
+      "end": 66.22
+    },
+    {
+      "word": "16.",
+      "start": 65.62,
+      "end": 68.12
+    },
+    {
+      "word": "Aren't",
+      "start": 68.12,
+      "end": 68.56
+    },
+    {
+      "word": "I?",
+      "start": 68.56,
+      "end": 69
+    },
+    {
+      "word": "17.",
+      "start": 68.32,
+      "end": 71.18
+    },
+    {
+      "word": "Won't",
+      "start": 71.18,
+      "end": 71.36
+    },
+    {
+      "word": "he?",
+      "start": 71.36,
+      "end": 71.72
+    },
+    {
+      "word": "18.",
+      "start": 71.02,
+      "end": 73.5
+    },
+    {
+      "word": "Doesn't",
+      "start": 73.5,
+      "end": 73.88
+    },
+    {
+      "word": "he?",
+      "start": 73.88,
+      "end": 74.52
+    },
+    {
+      "word": "19.",
+      "start": 73.54,
+      "end": 76.14
+    },
+    {
+      "word": "Wouldn't",
+      "start": 76.14,
+      "end": 76.42
+    },
+    {
+      "word": "it?",
+      "start": 76.42,
+      "end": 76.78
+    },
+    {
+      "word": "20.",
+      "start": 76.24,
+      "end": 78.88
+    },
+    {
+      "word": "Didn't",
+      "start": 78.88,
+      "end": 79.08
+    },
+    {
+      "word": "I?",
+      "start": 79.08,
+      "end": 79.66
+    }
+  ]
+}

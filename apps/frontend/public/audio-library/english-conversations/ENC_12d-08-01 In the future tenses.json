@@ -1,0 +1,745 @@
+{
+  "text": " Conversation 12D. In Future Tenses. I said hi to Jeremy and asked him what he and the other guys were doing that night. I told him that I had been at kind of a loose end ever since I broke up with Sydney. He told me to join them and said that they were going to hang out downtown, probably go to several places. He asked me if I was up for that. I said that I definitely was and asked him where I should meet them. Then I told him that it would be even better if he could give me a ride. He said he would be glad to And told me that he would pick me up at my place at 9.30 He asked me if that would be okay I said that it would be perfect And that I would look out for him",
+  "wordTimestamps": [
+    {
+      "word": "Conversation",
+      "start": 0.56,
+      "end": 1.16
+    },
+    {
+      "word": "12D.",
+      "start": 1.16,
+      "end": 1.98
+    },
+    {
+      "word": "In",
+      "start": 1.98,
+      "end": 2.78
+    },
+    {
+      "word": "Future",
+      "start": 2.78,
+      "end": 3.14
+    },
+    {
+      "word": "Tenses.",
+      "start": 3.14,
+      "end": 4.02
+    },
+    {
+      "word": "I",
+      "start": 30.26,
+      "end": 30.38
+    },
+    {
+      "word": "said",
+      "start": 30.38,
+      "end": 30.62
+    },
+    {
+      "word": "hi",
+      "start": 30.62,
+      "end": 30.78
+    },
+    {
+      "word": "to",
+      "start": 30.78,
+      "end": 30.96
+    },
+    {
+      "word": "Jeremy",
+      "start": 30.96,
+      "end": 31.28
+    },
+    {
+      "word": "and",
+      "start": 31.28,
+      "end": 31.6
+    },
+    {
+      "word": "asked",
+      "start": 31.6,
+      "end": 31.9
+    },
+    {
+      "word": "him",
+      "start": 31.9,
+      "end": 32.06
+    },
+    {
+      "word": "what",
+      "start": 32.06,
+      "end": 32.2
+    },
+    {
+      "word": "he",
+      "start": 32.2,
+      "end": 32.38
+    },
+    {
+      "word": "and",
+      "start": 32.38,
+      "end": 32.52
+    },
+    {
+      "word": "the",
+      "start": 32.52,
+      "end": 32.6
+    },
+    {
+      "word": "other",
+      "start": 32.6,
+      "end": 32.86
+    },
+    {
+      "word": "guys",
+      "start": 32.86,
+      "end": 33.1
+    },
+    {
+      "word": "were",
+      "start": 33.1,
+      "end": 33.3
+    },
+    {
+      "word": "doing",
+      "start": 33.3,
+      "end": 33.52
+    },
+    {
+      "word": "that",
+      "start": 33.52,
+      "end": 33.84
+    },
+    {
+      "word": "night.",
+      "start": 33.84,
+      "end": 34.34
+    },
+    {
+      "word": "I",
+      "start": 34.96,
+      "end": 35.1
+    },
+    {
+      "word": "told",
+      "start": 35.1,
+      "end": 35.3
+    },
+    {
+      "word": "him",
+      "start": 35.3,
+      "end": 35.44
+    },
+    {
+      "word": "that",
+      "start": 35.44,
+      "end": 35.6
+    },
+    {
+      "word": "I",
+      "start": 35.6,
+      "end": 35.76
+    },
+    {
+      "word": "had",
+      "start": 35.76,
+      "end": 35.9
+    },
+    {
+      "word": "been",
+      "start": 35.9,
+      "end": 36.04
+    },
+    {
+      "word": "at",
+      "start": 36.04,
+      "end": 36.18
+    },
+    {
+      "word": "kind",
+      "start": 36.18,
+      "end": 36.36
+    },
+    {
+      "word": "of",
+      "start": 36.36,
+      "end": 36.48
+    },
+    {
+      "word": "a",
+      "start": 36.48,
+      "end": 36.58
+    },
+    {
+      "word": "loose",
+      "start": 36.58,
+      "end": 36.74
+    },
+    {
+      "word": "end",
+      "start": 36.74,
+      "end": 37.08
+    },
+    {
+      "word": "ever",
+      "start": 37.08,
+      "end": 37.4
+    },
+    {
+      "word": "since",
+      "start": 37.4,
+      "end": 37.54
+    },
+    {
+      "word": "I",
+      "start": 37.54,
+      "end": 37.72
+    },
+    {
+      "word": "broke",
+      "start": 37.72,
+      "end": 37.9
+    },
+    {
+      "word": "up",
+      "start": 37.9,
+      "end": 38.08
+    },
+    {
+      "word": "with",
+      "start": 38.08,
+      "end": 38.22
+    },
+    {
+      "word": "Sydney.",
+      "start": 38.22,
+      "end": 38.52
+    },
+    {
+      "word": "He",
+      "start": 39.18,
+      "end": 39.34
+    },
+    {
+      "word": "told",
+      "start": 39.34,
+      "end": 39.56
+    },
+    {
+      "word": "me",
+      "start": 39.56,
+      "end": 39.66
+    },
+    {
+      "word": "to",
+      "start": 39.66,
+      "end": 39.8
+    },
+    {
+      "word": "join",
+      "start": 39.8,
+      "end": 40.08
+    },
+    {
+      "word": "them",
+      "start": 40.08,
+      "end": 40.34
+    },
+    {
+      "word": "and",
+      "start": 40.34,
+      "end": 40.6
+    },
+    {
+      "word": "said",
+      "start": 40.6,
+      "end": 40.84
+    },
+    {
+      "word": "that",
+      "start": 40.84,
+      "end": 41
+    },
+    {
+      "word": "they",
+      "start": 41,
+      "end": 41.12
+    },
+    {
+      "word": "were",
+      "start": 41.12,
+      "end": 41.24
+    },
+    {
+      "word": "going",
+      "start": 41.24,
+      "end": 41.46
+    },
+    {
+      "word": "to",
+      "start": 41.46,
+      "end": 41.62
+    },
+    {
+      "word": "hang",
+      "start": 41.62,
+      "end": 41.82
+    },
+    {
+      "word": "out",
+      "start": 41.82,
+      "end": 41.98
+    },
+    {
+      "word": "downtown,",
+      "start": 41.98,
+      "end": 43.02
+    },
+    {
+      "word": "probably",
+      "start": 43.14,
+      "end": 43.5
+    },
+    {
+      "word": "go",
+      "start": 43.5,
+      "end": 43.78
+    },
+    {
+      "word": "to",
+      "start": 43.78,
+      "end": 43.94
+    },
+    {
+      "word": "several",
+      "start": 43.94,
+      "end": 44.2
+    },
+    {
+      "word": "places.",
+      "start": 44.2,
+      "end": 44.62
+    },
+    {
+      "word": "He",
+      "start": 45.4,
+      "end": 45.56
+    },
+    {
+      "word": "asked",
+      "start": 45.56,
+      "end": 45.82
+    },
+    {
+      "word": "me",
+      "start": 45.82,
+      "end": 45.92
+    },
+    {
+      "word": "if",
+      "start": 45.92,
+      "end": 46.1
+    },
+    {
+      "word": "I",
+      "start": 46.1,
+      "end": 46.22
+    },
+    {
+      "word": "was",
+      "start": 46.22,
+      "end": 46.38
+    },
+    {
+      "word": "up",
+      "start": 46.38,
+      "end": 46.52
+    },
+    {
+      "word": "for",
+      "start": 46.52,
+      "end": 46.66
+    },
+    {
+      "word": "that.",
+      "start": 46.66,
+      "end": 46.84
+    },
+    {
+      "word": "I",
+      "start": 47.58,
+      "end": 47.8
+    },
+    {
+      "word": "said",
+      "start": 47.8,
+      "end": 48
+    },
+    {
+      "word": "that",
+      "start": 48,
+      "end": 48.14
+    },
+    {
+      "word": "I",
+      "start": 48.14,
+      "end": 48.24
+    },
+    {
+      "word": "definitely",
+      "start": 48.24,
+      "end": 48.72
+    },
+    {
+      "word": "was",
+      "start": 48.72,
+      "end": 49.3
+    },
+    {
+      "word": "and",
+      "start": 49.3,
+      "end": 49.62
+    },
+    {
+      "word": "asked",
+      "start": 49.62,
+      "end": 49.94
+    },
+    {
+      "word": "him",
+      "start": 49.94,
+      "end": 50.08
+    },
+    {
+      "word": "where",
+      "start": 50.08,
+      "end": 50.22
+    },
+    {
+      "word": "I",
+      "start": 50.22,
+      "end": 50.36
+    },
+    {
+      "word": "should",
+      "start": 50.36,
+      "end": 50.54
+    },
+    {
+      "word": "meet",
+      "start": 50.54,
+      "end": 50.74
+    },
+    {
+      "word": "them.",
+      "start": 50.74,
+      "end": 51.02
+    },
+    {
+      "word": "Then",
+      "start": 51.52,
+      "end": 51.7
+    },
+    {
+      "word": "I",
+      "start": 51.7,
+      "end": 51.8
+    },
+    {
+      "word": "told",
+      "start": 51.8,
+      "end": 52.08
+    },
+    {
+      "word": "him",
+      "start": 52.08,
+      "end": 52.24
+    },
+    {
+      "word": "that",
+      "start": 52.24,
+      "end": 52.4
+    },
+    {
+      "word": "it",
+      "start": 52.4,
+      "end": 52.52
+    },
+    {
+      "word": "would",
+      "start": 52.52,
+      "end": 52.64
+    },
+    {
+      "word": "be",
+      "start": 52.64,
+      "end": 52.74
+    },
+    {
+      "word": "even",
+      "start": 52.74,
+      "end": 52.94
+    },
+    {
+      "word": "better",
+      "start": 52.94,
+      "end": 53.34
+    },
+    {
+      "word": "if",
+      "start": 53.34,
+      "end": 53.7
+    },
+    {
+      "word": "he",
+      "start": 53.7,
+      "end": 53.8
+    },
+    {
+      "word": "could",
+      "start": 53.8,
+      "end": 53.94
+    },
+    {
+      "word": "give",
+      "start": 53.94,
+      "end": 54.1
+    },
+    {
+      "word": "me",
+      "start": 54.1,
+      "end": 54.22
+    },
+    {
+      "word": "a",
+      "start": 54.22,
+      "end": 54.36
+    },
+    {
+      "word": "ride.",
+      "start": 54.36,
+      "end": 54.8
+    },
+    {
+      "word": "He",
+      "start": 55.44,
+      "end": 55.52
+    },
+    {
+      "word": "said",
+      "start": 55.52,
+      "end": 55.74
+    },
+    {
+      "word": "he",
+      "start": 55.74,
+      "end": 55.88
+    },
+    {
+      "word": "would",
+      "start": 55.88,
+      "end": 56.04
+    },
+    {
+      "word": "be",
+      "start": 56.04,
+      "end": 56.16
+    },
+    {
+      "word": "glad",
+      "start": 56.16,
+      "end": 56.44
+    },
+    {
+      "word": "to",
+      "start": 56.44,
+      "end": 56.72
+    },
+    {
+      "word": "And",
+      "start": 56.3,
+      "end": 57.08
+    },
+    {
+      "word": "told",
+      "start": 57.08,
+      "end": 57.32
+    },
+    {
+      "word": "me",
+      "start": 57.32,
+      "end": 57.46
+    },
+    {
+      "word": "that",
+      "start": 57.46,
+      "end": 57.66
+    },
+    {
+      "word": "he",
+      "start": 57.66,
+      "end": 57.76
+    },
+    {
+      "word": "would",
+      "start": 57.76,
+      "end": 57.92
+    },
+    {
+      "word": "pick",
+      "start": 57.92,
+      "end": 58.12
+    },
+    {
+      "word": "me",
+      "start": 58.12,
+      "end": 58.26
+    },
+    {
+      "word": "up",
+      "start": 58.26,
+      "end": 58.44
+    },
+    {
+      "word": "at",
+      "start": 58.44,
+      "end": 58.58
+    },
+    {
+      "word": "my",
+      "start": 58.58,
+      "end": 58.76
+    },
+    {
+      "word": "place",
+      "start": 58.76,
+      "end": 59.06
+    },
+    {
+      "word": "at",
+      "start": 59.06,
+      "end": 59.32
+    },
+    {
+      "word": "9.30",
+      "start": 59.32,
+      "end": 59.94
+    },
+    {
+      "word": "He",
+      "start": 60.56,
+      "end": 60.74
+    },
+    {
+      "word": "asked",
+      "start": 60.74,
+      "end": 61
+    },
+    {
+      "word": "me",
+      "start": 61,
+      "end": 61.12
+    },
+    {
+      "word": "if",
+      "start": 61.12,
+      "end": 61.24
+    },
+    {
+      "word": "that",
+      "start": 61.24,
+      "end": 61.42
+    },
+    {
+      "word": "would",
+      "start": 61.42,
+      "end": 61.56
+    },
+    {
+      "word": "be",
+      "start": 61.56,
+      "end": 61.68
+    },
+    {
+      "word": "okay",
+      "start": 61.68,
+      "end": 61.92
+    },
+    {
+      "word": "I",
+      "start": 62.7,
+      "end": 62.92
+    },
+    {
+      "word": "said",
+      "start": 62.92,
+      "end": 63.22
+    },
+    {
+      "word": "that",
+      "start": 63.22,
+      "end": 63.46
+    },
+    {
+      "word": "it",
+      "start": 63.46,
+      "end": 63.6
+    },
+    {
+      "word": "would",
+      "start": 63.6,
+      "end": 63.72
+    },
+    {
+      "word": "be",
+      "start": 63.72,
+      "end": 63.84
+    },
+    {
+      "word": "perfect",
+      "start": 63.84,
+      "end": 64.24
+    },
+    {
+      "word": "And",
+      "start": 63.78,
+      "end": 64.7
+    },
+    {
+      "word": "that",
+      "start": 64.7,
+      "end": 64.82
+    },
+    {
+      "word": "I",
+      "start": 64.82,
+      "end": 64.98
+    },
+    {
+      "word": "would",
+      "start": 64.98,
+      "end": 65.12
+    },
+    {
+      "word": "look",
+      "start": 65.12,
+      "end": 65.3
+    },
+    {
+      "word": "out",
+      "start": 65.3,
+      "end": 65.48
+    },
+    {
+      "word": "for",
+      "start": 65.48,
+      "end": 65.66
+    },
+    {
+      "word": "him",
+      "start": 65.66,
+      "end": 65.82
+    }
+  ]
+}

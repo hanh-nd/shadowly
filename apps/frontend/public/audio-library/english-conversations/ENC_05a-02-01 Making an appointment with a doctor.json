@@ -1,0 +1,1335 @@
+{
+  "text": " Conversation 5A, Making an Appointment with a Doctor Doctors Manning and Sharp, how can I help you? Hello, my name is Lisa Peterson. I'd like to make an appointment to see Dr. Sharp, hopefully sometime next week. And what is it you want to see him about? I need a complete physical for a new job I'm about to take. Do you have a form that has to be filled out? Yes, I do. And it looks like I'll need a pretty thorough exam. Can you fax it to me? That way I'll know how much time to allot for your appointment. Sure. Can you give me your fax number? It's 202-739-5906. Good. I'll fax it to you right away. Will you call me back when you get it? Right. Later. Hello, Lisa. This is Dr. Sharp's office. I see you're going to need an hour-long appointment, and Dr. Sharp won't be able to do that for at least another month. I could give you an appointment with Dr. Manning next Thursday, though, at 1 p.m. Would you like to take that? Um, yes, that sounds fine. Is there anything I should do to prepare for the exam? Yes. I know this will be difficult, but you mustn't eat or drink anything after midnight the night before. I wish I could give you an appointment earlier in the day, but we don't have any other openings. Okay, but if there is a cancellation earlier in the day, please let me know. I'd much rather come in early in the morning. Of course. Thanks very much. Goodbye.",
+  "wordTimestamps": [
+    {
+      "word": "Conversation",
+      "start": 0.44,
+      "end": 1.22
+    },
+    {
+      "word": "5A,",
+      "start": 1.22,
+      "end": 2.54
+    },
+    {
+      "word": "Making",
+      "start": 2.54,
+      "end": 2.94
+    },
+    {
+      "word": "an",
+      "start": 2.94,
+      "end": 3.18
+    },
+    {
+      "word": "Appointment",
+      "start": 3.18,
+      "end": 3.68
+    },
+    {
+      "word": "with",
+      "start": 3.68,
+      "end": 3.96
+    },
+    {
+      "word": "a",
+      "start": 3.96,
+      "end": 4.08
+    },
+    {
+      "word": "Doctor",
+      "start": 4.08,
+      "end": 4.34
+    },
+    {
+      "word": "Doctors",
+      "start": 6.3,
+      "end": 6.66
+    },
+    {
+      "word": "Manning",
+      "start": 6.66,
+      "end": 7.12
+    },
+    {
+      "word": "and",
+      "start": 7.12,
+      "end": 7.32
+    },
+    {
+      "word": "Sharp,",
+      "start": 7.32,
+      "end": 7.94
+    },
+    {
+      "word": "how",
+      "start": 7.94,
+      "end": 8.1
+    },
+    {
+      "word": "can",
+      "start": 8.1,
+      "end": 8.26
+    },
+    {
+      "word": "I",
+      "start": 8.26,
+      "end": 8.36
+    },
+    {
+      "word": "help",
+      "start": 8.36,
+      "end": 8.62
+    },
+    {
+      "word": "you?",
+      "start": 8.62,
+      "end": 9.02
+    },
+    {
+      "word": "Hello,",
+      "start": 9.44,
+      "end": 10.12
+    },
+    {
+      "word": "my",
+      "start": 10.12,
+      "end": 10.56
+    },
+    {
+      "word": "name",
+      "start": 10.56,
+      "end": 10.8
+    },
+    {
+      "word": "is",
+      "start": 10.8,
+      "end": 11.08
+    },
+    {
+      "word": "Lisa",
+      "start": 11.08,
+      "end": 11.54
+    },
+    {
+      "word": "Peterson.",
+      "start": 11.54,
+      "end": 12.1
+    },
+    {
+      "word": "I'd",
+      "start": 12.82,
+      "end": 13.08
+    },
+    {
+      "word": "like",
+      "start": 13.08,
+      "end": 13.32
+    },
+    {
+      "word": "to",
+      "start": 13.32,
+      "end": 13.48
+    },
+    {
+      "word": "make",
+      "start": 13.48,
+      "end": 13.7
+    },
+    {
+      "word": "an",
+      "start": 13.7,
+      "end": 13.84
+    },
+    {
+      "word": "appointment",
+      "start": 13.84,
+      "end": 14.26
+    },
+    {
+      "word": "to",
+      "start": 14.26,
+      "end": 14.74
+    },
+    {
+      "word": "see",
+      "start": 14.74,
+      "end": 14.94
+    },
+    {
+      "word": "Dr.",
+      "start": 14.94,
+      "end": 15.6
+    },
+    {
+      "word": "Sharp,",
+      "start": 15.6,
+      "end": 16.26
+    },
+    {
+      "word": "hopefully",
+      "start": 16.26,
+      "end": 16.62
+    },
+    {
+      "word": "sometime",
+      "start": 16.62,
+      "end": 17.2
+    },
+    {
+      "word": "next",
+      "start": 17.2,
+      "end": 17.7
+    },
+    {
+      "word": "week.",
+      "start": 17.7,
+      "end": 18.36
+    },
+    {
+      "word": "And",
+      "start": 18.32,
+      "end": 18.58
+    },
+    {
+      "word": "what",
+      "start": 18.58,
+      "end": 18.92
+    },
+    {
+      "word": "is",
+      "start": 18.92,
+      "end": 19.18
+    },
+    {
+      "word": "it",
+      "start": 19.18,
+      "end": 19.3
+    },
+    {
+      "word": "you",
+      "start": 19.3,
+      "end": 19.42
+    },
+    {
+      "word": "want",
+      "start": 19.42,
+      "end": 19.6
+    },
+    {
+      "word": "to",
+      "start": 19.6,
+      "end": 19.74
+    },
+    {
+      "word": "see",
+      "start": 19.74,
+      "end": 19.92
+    },
+    {
+      "word": "him",
+      "start": 19.92,
+      "end": 20.12
+    },
+    {
+      "word": "about?",
+      "start": 20.12,
+      "end": 20.34
+    },
+    {
+      "word": "I",
+      "start": 20.88,
+      "end": 21.08
+    },
+    {
+      "word": "need",
+      "start": 21.08,
+      "end": 21.32
+    },
+    {
+      "word": "a",
+      "start": 21.32,
+      "end": 21.5
+    },
+    {
+      "word": "complete",
+      "start": 21.5,
+      "end": 21.98
+    },
+    {
+      "word": "physical",
+      "start": 21.98,
+      "end": 22.44
+    },
+    {
+      "word": "for",
+      "start": 22.44,
+      "end": 23
+    },
+    {
+      "word": "a",
+      "start": 23,
+      "end": 23.18
+    },
+    {
+      "word": "new",
+      "start": 23.18,
+      "end": 23.32
+    },
+    {
+      "word": "job",
+      "start": 23.32,
+      "end": 23.72
+    },
+    {
+      "word": "I'm",
+      "start": 23.72,
+      "end": 23.96
+    },
+    {
+      "word": "about",
+      "start": 23.96,
+      "end": 24.2
+    },
+    {
+      "word": "to",
+      "start": 24.2,
+      "end": 24.44
+    },
+    {
+      "word": "take.",
+      "start": 24.44,
+      "end": 24.98
+    },
+    {
+      "word": "Do",
+      "start": 25.42,
+      "end": 25.64
+    },
+    {
+      "word": "you",
+      "start": 25.64,
+      "end": 25.82
+    },
+    {
+      "word": "have",
+      "start": 25.82,
+      "end": 26.2
+    },
+    {
+      "word": "a",
+      "start": 26.2,
+      "end": 26.34
+    },
+    {
+      "word": "form",
+      "start": 26.34,
+      "end": 26.72
+    },
+    {
+      "word": "that",
+      "start": 26.72,
+      "end": 27.04
+    },
+    {
+      "word": "has",
+      "start": 27.04,
+      "end": 27.24
+    },
+    {
+      "word": "to",
+      "start": 27.24,
+      "end": 27.38
+    },
+    {
+      "word": "be",
+      "start": 27.38,
+      "end": 27.5
+    },
+    {
+      "word": "filled",
+      "start": 27.5,
+      "end": 27.76
+    },
+    {
+      "word": "out?",
+      "start": 27.76,
+      "end": 28.1
+    },
+    {
+      "word": "Yes,",
+      "start": 28.6,
+      "end": 29.14
+    },
+    {
+      "word": "I",
+      "start": 29.14,
+      "end": 29.24
+    },
+    {
+      "word": "do.",
+      "start": 29.24,
+      "end": 29.84
+    },
+    {
+      "word": "And",
+      "start": 29.84,
+      "end": 30.52
+    },
+    {
+      "word": "it",
+      "start": 30.52,
+      "end": 30.76
+    },
+    {
+      "word": "looks",
+      "start": 30.76,
+      "end": 31.18
+    },
+    {
+      "word": "like",
+      "start": 31.18,
+      "end": 31.52
+    },
+    {
+      "word": "I'll",
+      "start": 31.52,
+      "end": 31.74
+    },
+    {
+      "word": "need",
+      "start": 31.74,
+      "end": 31.92
+    },
+    {
+      "word": "a",
+      "start": 31.92,
+      "end": 32.08
+    },
+    {
+      "word": "pretty",
+      "start": 32.08,
+      "end": 32.54
+    },
+    {
+      "word": "thorough",
+      "start": 32.54,
+      "end": 33.02
+    },
+    {
+      "word": "exam.",
+      "start": 33.02,
+      "end": 33.96
+    },
+    {
+      "word": "Can",
+      "start": 34.24,
+      "end": 34.42
+    },
+    {
+      "word": "you",
+      "start": 34.42,
+      "end": 34.6
+    },
+    {
+      "word": "fax",
+      "start": 34.6,
+      "end": 34.96
+    },
+    {
+      "word": "it",
+      "start": 34.96,
+      "end": 35.24
+    },
+    {
+      "word": "to",
+      "start": 35.24,
+      "end": 35.52
+    },
+    {
+      "word": "me?",
+      "start": 35.52,
+      "end": 35.74
+    },
+    {
+      "word": "That",
+      "start": 35.74,
+      "end": 36.02
+    },
+    {
+      "word": "way",
+      "start": 36.02,
+      "end": 36.2
+    },
+    {
+      "word": "I'll",
+      "start": 36.2,
+      "end": 36.38
+    },
+    {
+      "word": "know",
+      "start": 36.38,
+      "end": 36.54
+    },
+    {
+      "word": "how",
+      "start": 36.54,
+      "end": 36.76
+    },
+    {
+      "word": "much",
+      "start": 36.76,
+      "end": 36.94
+    },
+    {
+      "word": "time",
+      "start": 36.94,
+      "end": 37.32
+    },
+    {
+      "word": "to",
+      "start": 37.32,
+      "end": 37.52
+    },
+    {
+      "word": "allot",
+      "start": 37.52,
+      "end": 37.98
+    },
+    {
+      "word": "for",
+      "start": 37.98,
+      "end": 38.24
+    },
+    {
+      "word": "your",
+      "start": 38.24,
+      "end": 38.4
+    },
+    {
+      "word": "appointment.",
+      "start": 38.4,
+      "end": 38.86
+    },
+    {
+      "word": "Sure.",
+      "start": 39.42,
+      "end": 39.96
+    },
+    {
+      "word": "Can",
+      "start": 39.96,
+      "end": 40.44
+    },
+    {
+      "word": "you",
+      "start": 40.44,
+      "end": 40.68
+    },
+    {
+      "word": "give",
+      "start": 40.68,
+      "end": 40.92
+    },
+    {
+      "word": "me",
+      "start": 40.92,
+      "end": 41.1
+    },
+    {
+      "word": "your",
+      "start": 41.1,
+      "end": 41.34
+    },
+    {
+      "word": "fax",
+      "start": 41.34,
+      "end": 41.72
+    },
+    {
+      "word": "number?",
+      "start": 41.72,
+      "end": 42.06
+    },
+    {
+      "word": "It's",
+      "start": 42.68,
+      "end": 42.94
+    },
+    {
+      "word": "202-739-5906.",
+      "start": 42.94,
+      "end": 48.66
+    },
+    {
+      "word": "Good.",
+      "start": 48.86,
+      "end": 49.24
+    },
+    {
+      "word": "I'll",
+      "start": 49.24,
+      "end": 49.82
+    },
+    {
+      "word": "fax",
+      "start": 49.82,
+      "end": 50.18
+    },
+    {
+      "word": "it",
+      "start": 50.18,
+      "end": 50.38
+    },
+    {
+      "word": "to",
+      "start": 50.38,
+      "end": 50.54
+    },
+    {
+      "word": "you",
+      "start": 50.54,
+      "end": 50.66
+    },
+    {
+      "word": "right",
+      "start": 50.66,
+      "end": 51.02
+    },
+    {
+      "word": "away.",
+      "start": 51.02,
+      "end": 51.38
+    },
+    {
+      "word": "Will",
+      "start": 51.38,
+      "end": 52.16
+    },
+    {
+      "word": "you",
+      "start": 52.16,
+      "end": 52.34
+    },
+    {
+      "word": "call",
+      "start": 52.34,
+      "end": 52.62
+    },
+    {
+      "word": "me",
+      "start": 52.62,
+      "end": 52.78
+    },
+    {
+      "word": "back",
+      "start": 52.78,
+      "end": 53.1
+    },
+    {
+      "word": "when",
+      "start": 53.1,
+      "end": 53.32
+    },
+    {
+      "word": "you",
+      "start": 53.32,
+      "end": 53.44
+    },
+    {
+      "word": "get",
+      "start": 53.44,
+      "end": 53.6
+    },
+    {
+      "word": "it?",
+      "start": 53.6,
+      "end": 53.86
+    },
+    {
+      "word": "Right.",
+      "start": 54.5,
+      "end": 54.82
+    },
+    {
+      "word": "Later.",
+      "start": 56.38,
+      "end": 56.68
+    },
+    {
+      "word": "Hello,",
+      "start": 58.08,
+      "end": 58.64
+    },
+    {
+      "word": "Lisa.",
+      "start": 58.64,
+      "end": 59.24
+    },
+    {
+      "word": "This",
+      "start": 59.24,
+      "end": 59.64
+    },
+    {
+      "word": "is",
+      "start": 59.64,
+      "end": 59.82
+    },
+    {
+      "word": "Dr.",
+      "start": 59.82,
+      "end": 60.28
+    },
+    {
+      "word": "Sharp's",
+      "start": 60.28,
+      "end": 60.72
+    },
+    {
+      "word": "office.",
+      "start": 60.72,
+      "end": 61.42
+    },
+    {
+      "word": "I",
+      "start": 61.74,
+      "end": 61.98
+    },
+    {
+      "word": "see",
+      "start": 61.98,
+      "end": 62.28
+    },
+    {
+      "word": "you're",
+      "start": 62.28,
+      "end": 62.5
+    },
+    {
+      "word": "going",
+      "start": 62.5,
+      "end": 62.68
+    },
+    {
+      "word": "to",
+      "start": 62.68,
+      "end": 62.84
+    },
+    {
+      "word": "need",
+      "start": 62.84,
+      "end": 63.08
+    },
+    {
+      "word": "an",
+      "start": 63.08,
+      "end": 63.24
+    },
+    {
+      "word": "hour-long",
+      "start": 63.24,
+      "end": 64
+    },
+    {
+      "word": "appointment,",
+      "start": 64,
+      "end": 64.7
+    },
+    {
+      "word": "and",
+      "start": 65.3,
+      "end": 65.56
+    },
+    {
+      "word": "Dr.",
+      "start": 65.56,
+      "end": 66.12
+    },
+    {
+      "word": "Sharp",
+      "start": 66.12,
+      "end": 66.4
+    },
+    {
+      "word": "won't",
+      "start": 66.4,
+      "end": 66.7
+    },
+    {
+      "word": "be",
+      "start": 66.7,
+      "end": 66.88
+    },
+    {
+      "word": "able",
+      "start": 66.88,
+      "end": 67.06
+    },
+    {
+      "word": "to",
+      "start": 67.06,
+      "end": 67.22
+    },
+    {
+      "word": "do",
+      "start": 67.22,
+      "end": 67.52
+    },
+    {
+      "word": "that",
+      "start": 67.52,
+      "end": 67.84
+    },
+    {
+      "word": "for",
+      "start": 67.84,
+      "end": 68.1
+    },
+    {
+      "word": "at",
+      "start": 68.1,
+      "end": 68.32
+    },
+    {
+      "word": "least",
+      "start": 68.32,
+      "end": 68.5
+    },
+    {
+      "word": "another",
+      "start": 68.5,
+      "end": 68.9
+    },
+    {
+      "word": "month.",
+      "start": 68.9,
+      "end": 69.5
+    },
+    {
+      "word": "I",
+      "start": 70.46,
+      "end": 70.66
+    },
+    {
+      "word": "could",
+      "start": 70.66,
+      "end": 70.82
+    },
+    {
+      "word": "give",
+      "start": 70.82,
+      "end": 71.02
+    },
+    {
+      "word": "you",
+      "start": 71.02,
+      "end": 71.12
+    },
+    {
+      "word": "an",
+      "start": 71.12,
+      "end": 71.3
+    },
+    {
+      "word": "appointment",
+      "start": 71.3,
+      "end": 71.68
+    },
+    {
+      "word": "with",
+      "start": 71.68,
+      "end": 72.04
+    },
+    {
+      "word": "Dr.",
+      "start": 72.04,
+      "end": 72.52
+    },
+    {
+      "word": "Manning",
+      "start": 72.52,
+      "end": 72.98
+    },
+    {
+      "word": "next",
+      "start": 72.98,
+      "end": 73.38
+    },
+    {
+      "word": "Thursday,",
+      "start": 73.38,
+      "end": 74.16
+    },
+    {
+      "word": "though,",
+      "start": 74.16,
+      "end": 74.64
+    },
+    {
+      "word": "at",
+      "start": 74.64,
+      "end": 74.86
+    },
+    {
+      "word": "1",
+      "start": 74.86,
+      "end": 75.32
+    },
+    {
+      "word": "p.m.",
+      "start": 75.32,
+      "end": 75.78
+    },
+    {
+      "word": "Would",
+      "start": 76.42,
+      "end": 76.72
+    },
+    {
+      "word": "you",
+      "start": 76.72,
+      "end": 76.8
+    },
+    {
+      "word": "like",
+      "start": 76.8,
+      "end": 77.02
+    },
+    {
+      "word": "to",
+      "start": 77.02,
+      "end": 77.16
+    },
+    {
+      "word": "take",
+      "start": 77.16,
+      "end": 77.38
+    },
+    {
+      "word": "that?",
+      "start": 77.38,
+      "end": 77.68
+    },
+    {
+      "word": "Um,",
+      "start": 78.44,
+      "end": 79.12
+    },
+    {
+      "word": "yes,",
+      "start": 79.12,
+      "end": 80.02
+    },
+    {
+      "word": "that",
+      "start": 80.02,
+      "end": 80.38
+    },
+    {
+      "word": "sounds",
+      "start": 80.38,
+      "end": 80.84
+    },
+    {
+      "word": "fine.",
+      "start": 80.84,
+      "end": 81.28
+    },
+    {
+      "word": "Is",
+      "start": 81.82,
+      "end": 82.04
+    },
+    {
+      "word": "there",
+      "start": 82.04,
+      "end": 82.24
+    },
+    {
+      "word": "anything",
+      "start": 82.24,
+      "end": 82.74
+    },
+    {
+      "word": "I",
+      "start": 82.74,
+      "end": 83.14
+    },
+    {
+      "word": "should",
+      "start": 83.14,
+      "end": 83.38
+    },
+    {
+      "word": "do",
+      "start": 83.38,
+      "end": 83.68
+    },
+    {
+      "word": "to",
+      "start": 83.68,
+      "end": 83.9
+    },
+    {
+      "word": "prepare",
+      "start": 83.9,
+      "end": 84.26
+    },
+    {
+      "word": "for",
+      "start": 84.26,
+      "end": 84.6
+    },
+    {
+      "word": "the",
+      "start": 84.6,
+      "end": 84.74
+    },
+    {
+      "word": "exam?",
+      "start": 84.74,
+      "end": 85
+    },
+    {
+      "word": "Yes.",
+      "start": 86.24,
+      "end": 86.94
+    },
+    {
+      "word": "I",
+      "start": 86.94,
+      "end": 87.44
+    },
+    {
+      "word": "know",
+      "start": 87.44,
+      "end": 87.82
+    },
+    {
+      "word": "this",
+      "start": 87.82,
+      "end": 88.1
+    },
+    {
+      "word": "will",
+      "start": 88.1,
+      "end": 88.36
+    },
+    {
+      "word": "be",
+      "start": 88.36,
+      "end": 88.56
+    },
+    {
+      "word": "difficult,",
+      "start": 88.56,
+      "end": 89.5
+    },
+    {
+      "word": "but",
+      "start": 89.5,
+      "end": 89.92
+    },
+    {
+      "word": "you",
+      "start": 89.92,
+      "end": 90.18
+    },
+    {
+      "word": "mustn't",
+      "start": 90.18,
+      "end": 90.62
+    },
+    {
+      "word": "eat",
+      "start": 90.62,
+      "end": 90.9
+    },
+    {
+      "word": "or",
+      "start": 90.9,
+      "end": 91.24
+    },
+    {
+      "word": "drink",
+      "start": 91.24,
+      "end": 91.68
+    },
+    {
+      "word": "anything",
+      "start": 91.68,
+      "end": 92.26
+    },
+    {
+      "word": "after",
+      "start": 92.26,
+      "end": 92.82
+    },
+    {
+      "word": "midnight",
+      "start": 92.82,
+      "end": 93.32
+    },
+    {
+      "word": "the",
+      "start": 93.32,
+      "end": 93.82
+    },
+    {
+      "word": "night",
+      "start": 93.82,
+      "end": 94.02
+    },
+    {
+      "word": "before.",
+      "start": 94.02,
+      "end": 94.4
+    },
+    {
+      "word": "I",
+      "start": 95.46,
+      "end": 95.62
+    },
+    {
+      "word": "wish",
+      "start": 95.62,
+      "end": 95.86
+    },
+    {
+      "word": "I",
+      "start": 95.86,
+      "end": 96.02
+    },
+    {
+      "word": "could",
+      "start": 96.02,
+      "end": 96.1
+    },
+    {
+      "word": "give",
+      "start": 96.1,
+      "end": 96.32
+    },
+    {
+      "word": "you",
+      "start": 96.32,
+      "end": 96.4
+    },
+    {
+      "word": "an",
+      "start": 96.4,
+      "end": 96.56
+    },
+    {
+      "word": "appointment",
+      "start": 96.56,
+      "end": 96.98
+    },
+    {
+      "word": "earlier",
+      "start": 96.98,
+      "end": 97.6
+    },
+    {
+      "word": "in",
+      "start": 97.6,
+      "end": 97.94
+    },
+    {
+      "word": "the",
+      "start": 97.94,
+      "end": 98.02
+    },
+    {
+      "word": "day,",
+      "start": 98.02,
+      "end": 98.5
+    },
+    {
+      "word": "but",
+      "start": 98.5,
+      "end": 99.14
+    },
+    {
+      "word": "we",
+      "start": 99.14,
+      "end": 100.02
+    },
+    {
+      "word": "don't",
+      "start": 100.02,
+      "end": 100.38
+    },
+    {
+      "word": "have",
+      "start": 100.38,
+      "end": 100.66
+    },
+    {
+      "word": "any",
+      "start": 100.66,
+      "end": 100.88
+    },
+    {
+      "word": "other",
+      "start": 100.88,
+      "end": 101.16
+    },
+    {
+      "word": "openings.",
+      "start": 101.16,
+      "end": 101.66
+    },
+    {
+      "word": "Okay,",
+      "start": 102.88,
+      "end": 103.4
+    },
+    {
+      "word": "but",
+      "start": 103.4,
+      "end": 103.9
+    },
+    {
+      "word": "if",
+      "start": 103.9,
+      "end": 104.06
+    },
+    {
+      "word": "there",
+      "start": 104.06,
+      "end": 104.24
+    },
+    {
+      "word": "is",
+      "start": 104.24,
+      "end": 104.56
+    },
+    {
+      "word": "a",
+      "start": 104.56,
+      "end": 104.68
+    },
+    {
+      "word": "cancellation",
+      "start": 104.68,
+      "end": 105.2
+    },
+    {
+      "word": "earlier",
+      "start": 105.2,
+      "end": 106.02
+    },
+    {
+      "word": "in",
+      "start": 106.02,
+      "end": 106.38
+    },
+    {
+      "word": "the",
+      "start": 106.38,
+      "end": 106.48
+    },
+    {
+      "word": "day,",
+      "start": 106.48,
+      "end": 107.18
+    },
+    {
+      "word": "please",
+      "start": 107.18,
+      "end": 107.48
+    },
+    {
+      "word": "let",
+      "start": 107.48,
+      "end": 107.74
+    },
+    {
+      "word": "me",
+      "start": 107.74,
+      "end": 107.88
+    },
+    {
+      "word": "know.",
+      "start": 107.88,
+      "end": 108.14
+    },
+    {
+      "word": "I'd",
+      "start": 108.72,
+      "end": 108.94
+    },
+    {
+      "word": "much",
+      "start": 108.94,
+      "end": 109.26
+    },
+    {
+      "word": "rather",
+      "start": 109.26,
+      "end": 109.64
+    },
+    {
+      "word": "come",
+      "start": 109.64,
+      "end": 110
+    },
+    {
+      "word": "in",
+      "start": 110,
+      "end": 110.24
+    },
+    {
+      "word": "early",
+      "start": 110.24,
+      "end": 110.68
+    },
+    {
+      "word": "in",
+      "start": 110.68,
+      "end": 110.92
+    },
+    {
+      "word": "the",
+      "start": 110.92,
+      "end": 111.02
+    },
+    {
+      "word": "morning.",
+      "start": 111.02,
+      "end": 111.36
+    },
+    {
+      "word": "Of",
+      "start": 111.96,
+      "end": 112.24
+    },
+    {
+      "word": "course.",
+      "start": 112.24,
+      "end": 112.78
+    },
+    {
+      "word": "Thanks",
+      "start": 113.68,
+      "end": 113.86
+    },
+    {
+      "word": "very",
+      "start": 113.86,
+      "end": 114.2
+    },
+    {
+      "word": "much.",
+      "start": 114.2,
+      "end": 114.74
+    },
+    {
+      "word": "Goodbye.",
+      "start": 114.74,
+      "end": 115.26
+    }
+  ]
+}

@@ -1,0 +1,460 @@
+{
+  "text": " Exercise 126. Two types of descriptive phrases. Repeat. 1. It's a short nail. It's really short. 2. It's a chocolate cake. It's dark chocolate. 3. It's a hot bath. It's too hot. 4. It's a hard drive. It's extremely hard. 5. It's the back door. It's far back. 6. There are four cards. There are only four. 7. It's a small spot. It's laughably small. 8. It's a good book. It's amazingly good. Pause the CD and write your own adjective noun and adverb adjective sentences, carrying over from Exercise 125.",
+  "wordTimestamps": [
+    {
+      "word": "Exercise",
+      "start": 0.4,
+      "end": 0.84
+    },
+    {
+      "word": "126.",
+      "start": 0.84,
+      "end": 1.86
+    },
+    {
+      "word": "Two",
+      "start": 1.86,
+      "end": 2.94
+    },
+    {
+      "word": "types",
+      "start": 2.94,
+      "end": 3.28
+    },
+    {
+      "word": "of",
+      "start": 3.28,
+      "end": 3.5
+    },
+    {
+      "word": "descriptive",
+      "start": 3.5,
+      "end": 3.84
+    },
+    {
+      "word": "phrases.",
+      "start": 3.84,
+      "end": 4.42
+    },
+    {
+      "word": "Repeat.",
+      "start": 4.42,
+      "end": 6.66
+    },
+    {
+      "word": "1.",
+      "start": 7.66,
+      "end": 8.16
+    },
+    {
+      "word": "It's",
+      "start": 8.16,
+      "end": 8.74
+    },
+    {
+      "word": "a",
+      "start": 8.74,
+      "end": 8.8
+    },
+    {
+      "word": "short",
+      "start": 8.8,
+      "end": 9.06
+    },
+    {
+      "word": "nail.",
+      "start": 9.06,
+      "end": 9.38
+    },
+    {
+      "word": "It's",
+      "start": 9.38,
+      "end": 10.98
+    },
+    {
+      "word": "really",
+      "start": 10.98,
+      "end": 11.18
+    },
+    {
+      "word": "short.",
+      "start": 11.18,
+      "end": 11.6
+    },
+    {
+      "word": "2.",
+      "start": 13.28,
+      "end": 13.82
+    },
+    {
+      "word": "It's",
+      "start": 13.82,
+      "end": 14.34
+    },
+    {
+      "word": "a",
+      "start": 14.34,
+      "end": 14.48
+    },
+    {
+      "word": "chocolate",
+      "start": 14.48,
+      "end": 14.76
+    },
+    {
+      "word": "cake.",
+      "start": 14.76,
+      "end": 15.34
+    },
+    {
+      "word": "It's",
+      "start": 15.34,
+      "end": 16.78
+    },
+    {
+      "word": "dark",
+      "start": 16.78,
+      "end": 16.96
+    },
+    {
+      "word": "chocolate.",
+      "start": 16.96,
+      "end": 17.44
+    },
+    {
+      "word": "3.",
+      "start": 19.32,
+      "end": 19.94
+    },
+    {
+      "word": "It's",
+      "start": 19.94,
+      "end": 20.28
+    },
+    {
+      "word": "a",
+      "start": 20.28,
+      "end": 20.4
+    },
+    {
+      "word": "hot",
+      "start": 20.4,
+      "end": 20.56
+    },
+    {
+      "word": "bath.",
+      "start": 20.56,
+      "end": 21.2
+    },
+    {
+      "word": "It's",
+      "start": 21.2,
+      "end": 22.82
+    },
+    {
+      "word": "too",
+      "start": 22.82,
+      "end": 22.94
+    },
+    {
+      "word": "hot.",
+      "start": 22.94,
+      "end": 23.36
+    },
+    {
+      "word": "4.",
+      "start": 25.16,
+      "end": 25.7
+    },
+    {
+      "word": "It's",
+      "start": 25.7,
+      "end": 25.9
+    },
+    {
+      "word": "a",
+      "start": 25.9,
+      "end": 26
+    },
+    {
+      "word": "hard",
+      "start": 26,
+      "end": 26.24
+    },
+    {
+      "word": "drive.",
+      "start": 26.24,
+      "end": 26.92
+    },
+    {
+      "word": "It's",
+      "start": 26.92,
+      "end": 28.28
+    },
+    {
+      "word": "extremely",
+      "start": 28.28,
+      "end": 28.64
+    },
+    {
+      "word": "hard.",
+      "start": 28.64,
+      "end": 29.7
+    },
+    {
+      "word": "5.",
+      "start": 30.96,
+      "end": 32.22
+    },
+    {
+      "word": "It's",
+      "start": 32.22,
+      "end": 32.32
+    },
+    {
+      "word": "the",
+      "start": 32.32,
+      "end": 32.46
+    },
+    {
+      "word": "back",
+      "start": 32.46,
+      "end": 32.68
+    },
+    {
+      "word": "door.",
+      "start": 32.68,
+      "end": 33.1
+    },
+    {
+      "word": "It's",
+      "start": 33.1,
+      "end": 34.46
+    },
+    {
+      "word": "far",
+      "start": 34.46,
+      "end": 34.68
+    },
+    {
+      "word": "back.",
+      "start": 34.68,
+      "end": 35.38
+    },
+    {
+      "word": "6.",
+      "start": 36.48,
+      "end": 37.16
+    },
+    {
+      "word": "There",
+      "start": 37.16,
+      "end": 37.68
+    },
+    {
+      "word": "are",
+      "start": 37.68,
+      "end": 37.82
+    },
+    {
+      "word": "four",
+      "start": 37.82,
+      "end": 38.02
+    },
+    {
+      "word": "cards.",
+      "start": 38.02,
+      "end": 38.86
+    },
+    {
+      "word": "There",
+      "start": 38.86,
+      "end": 40.08
+    },
+    {
+      "word": "are",
+      "start": 40.08,
+      "end": 40.2
+    },
+    {
+      "word": "only",
+      "start": 40.2,
+      "end": 40.4
+    },
+    {
+      "word": "four.",
+      "start": 40.4,
+      "end": 41.14
+    },
+    {
+      "word": "7.",
+      "start": 42.36,
+      "end": 43.22
+    },
+    {
+      "word": "It's",
+      "start": 43.22,
+      "end": 43.4
+    },
+    {
+      "word": "a",
+      "start": 43.4,
+      "end": 43.46
+    },
+    {
+      "word": "small",
+      "start": 43.46,
+      "end": 43.72
+    },
+    {
+      "word": "spot.",
+      "start": 43.72,
+      "end": 44.16
+    },
+    {
+      "word": "It's",
+      "start": 44.16,
+      "end": 45.64
+    },
+    {
+      "word": "laughably",
+      "start": 45.64,
+      "end": 46.12
+    },
+    {
+      "word": "small.",
+      "start": 46.12,
+      "end": 46.84
+    },
+    {
+      "word": "8.",
+      "start": 48.22,
+      "end": 48.7
+    },
+    {
+      "word": "It's",
+      "start": 48.7,
+      "end": 49.18
+    },
+    {
+      "word": "a",
+      "start": 49.18,
+      "end": 49.28
+    },
+    {
+      "word": "good",
+      "start": 49.28,
+      "end": 49.42
+    },
+    {
+      "word": "book.",
+      "start": 49.42,
+      "end": 49.96
+    },
+    {
+      "word": "It's",
+      "start": 49.96,
+      "end": 51.72
+    },
+    {
+      "word": "amazingly",
+      "start": 51.72,
+      "end": 52.06
+    },
+    {
+      "word": "good.",
+      "start": 52.06,
+      "end": 52.7
+    },
+    {
+      "word": "Pause",
+      "start": 54.22,
+      "end": 54.36
+    },
+    {
+      "word": "the",
+      "start": 54.36,
+      "end": 54.62
+    },
+    {
+      "word": "CD",
+      "start": 54.62,
+      "end": 54.88
+    },
+    {
+      "word": "and",
+      "start": 54.88,
+      "end": 55.14
+    },
+    {
+      "word": "write",
+      "start": 55.14,
+      "end": 55.32
+    },
+    {
+      "word": "your",
+      "start": 55.32,
+      "end": 55.46
+    },
+    {
+      "word": "own",
+      "start": 55.46,
+      "end": 55.62
+    },
+    {
+      "word": "adjective",
+      "start": 55.62,
+      "end": 56.1
+    },
+    {
+      "word": "noun",
+      "start": 56.1,
+      "end": 56.52
+    },
+    {
+      "word": "and",
+      "start": 56.52,
+      "end": 56.86
+    },
+    {
+      "word": "adverb",
+      "start": 56.86,
+      "end": 57.32
+    },
+    {
+      "word": "adjective",
+      "start": 57.32,
+      "end": 57.68
+    },
+    {
+      "word": "sentences,",
+      "start": 57.68,
+      "end": 58.56
+    },
+    {
+      "word": "carrying",
+      "start": 58.56,
+      "end": 59.08
+    },
+    {
+      "word": "over",
+      "start": 58.8,
+      "end": 59.38
+    },
+    {
+      "word": "from",
+      "start": 59.38,
+      "end": 59.66
+    },
+    {
+      "word": "Exercise",
+      "start": 59.66,
+      "end": 60.02
+    },
+    {
+      "word": "125.",
+      "start": 60.02,
+      "end": 61.3
+    }
+  ]
+}

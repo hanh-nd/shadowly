@@ -1,0 +1,1815 @@
+{
+  "text": " Conversation 11. A Traffic Accident. Hey buddy, what happened to you? Don't tell me you broke your leg. No, it's not that drastic. I just twisted my ankle. Still, it hurts a lot, and walking with these crutches is a pain in the neck. So when did it happen? It was the night of the basketball championship, and the worst thing is that we lost the game, and all hopes of winning our title back. What a bummer. Sit down here for a minute and tell me all about it. Well, it all happened last Thursday. It was pouring down rain and also freezing. I was in a hurry to get to the gym early to chill out a bit before the game. I was all stressed out about the game when I left home, but I got in the car and started to drive toward the gym. All of a sudden, my phone rang. It was my girlfriend. She was all excited about the game and wanted to wish me good luck. I started to get pumped up and ready for the game. My girlfriend and I kept on talking when I suddenly realized that the cars in front of me were stopped and I was going a little fast. I slammed on the brakes, but it was too late. The street was wet and I hit the car that was stopped in front of me. That hard braking caused me to twist my ankle. I could hardly get out of the car to talk to the other driver because my ankle hurt so much. To tell you the truth, I was so freaked out I didn't know what to do. I was thinking about the game, my girlfriend, my teammates. It never occurred to me that I wouldn't be able to play that night. Finally, a cop came and made me sign some papers. Then an ambulance took me to the hospital. They took some x-rays to see if my ankle was broken or not. Thank goodness it wasn't broken, but the upshot was that I wasn't going to play basketball that night, and now I'm stuck with these crutches.",
+  "wordTimestamps": [
+    {
+      "word": "Conversation",
+      "start": 0.52,
+      "end": 1.2
+    },
+    {
+      "word": "11.",
+      "start": 1.2,
+      "end": 1.56
+    },
+    {
+      "word": "A",
+      "start": 1.56,
+      "end": 2.4
+    },
+    {
+      "word": "Traffic",
+      "start": 2.4,
+      "end": 2.68
+    },
+    {
+      "word": "Accident.",
+      "start": 2.68,
+      "end": 3.46
+    },
+    {
+      "word": "Hey",
+      "start": 5.18,
+      "end": 5.34
+    },
+    {
+      "word": "buddy,",
+      "start": 5.34,
+      "end": 5.64
+    },
+    {
+      "word": "what",
+      "start": 5.64,
+      "end": 6.08
+    },
+    {
+      "word": "happened",
+      "start": 6.08,
+      "end": 6.34
+    },
+    {
+      "word": "to",
+      "start": 6.34,
+      "end": 6.48
+    },
+    {
+      "word": "you?",
+      "start": 6.48,
+      "end": 6.92
+    },
+    {
+      "word": "Don't",
+      "start": 6.92,
+      "end": 7.54
+    },
+    {
+      "word": "tell",
+      "start": 7.54,
+      "end": 7.7
+    },
+    {
+      "word": "me",
+      "start": 7.7,
+      "end": 7.82
+    },
+    {
+      "word": "you",
+      "start": 7.82,
+      "end": 7.98
+    },
+    {
+      "word": "broke",
+      "start": 7.98,
+      "end": 8.16
+    },
+    {
+      "word": "your",
+      "start": 8.16,
+      "end": 8.34
+    },
+    {
+      "word": "leg.",
+      "start": 8.34,
+      "end": 8.88
+    },
+    {
+      "word": "No,",
+      "start": 9.4,
+      "end": 9.88
+    },
+    {
+      "word": "it's",
+      "start": 9.88,
+      "end": 10.08
+    },
+    {
+      "word": "not",
+      "start": 10.08,
+      "end": 10.24
+    },
+    {
+      "word": "that",
+      "start": 10.24,
+      "end": 10.44
+    },
+    {
+      "word": "drastic.",
+      "start": 10.44,
+      "end": 11
+    },
+    {
+      "word": "I",
+      "start": 11,
+      "end": 11.6
+    },
+    {
+      "word": "just",
+      "start": 11.6,
+      "end": 11.8
+    },
+    {
+      "word": "twisted",
+      "start": 11.8,
+      "end": 12.12
+    },
+    {
+      "word": "my",
+      "start": 12.12,
+      "end": 12.36
+    },
+    {
+      "word": "ankle.",
+      "start": 12.36,
+      "end": 13.06
+    },
+    {
+      "word": "Still,",
+      "start": 13.42,
+      "end": 13.92
+    },
+    {
+      "word": "it",
+      "start": 13.92,
+      "end": 14.06
+    },
+    {
+      "word": "hurts",
+      "start": 14.06,
+      "end": 14.3
+    },
+    {
+      "word": "a",
+      "start": 14.3,
+      "end": 14.48
+    },
+    {
+      "word": "lot,",
+      "start": 14.48,
+      "end": 15.02
+    },
+    {
+      "word": "and",
+      "start": 15.02,
+      "end": 15.26
+    },
+    {
+      "word": "walking",
+      "start": 15.26,
+      "end": 15.7
+    },
+    {
+      "word": "with",
+      "start": 15.7,
+      "end": 15.94
+    },
+    {
+      "word": "these",
+      "start": 15.94,
+      "end": 16.1
+    },
+    {
+      "word": "crutches",
+      "start": 16.1,
+      "end": 16.48
+    },
+    {
+      "word": "is",
+      "start": 16.48,
+      "end": 16.78
+    },
+    {
+      "word": "a",
+      "start": 16.78,
+      "end": 16.9
+    },
+    {
+      "word": "pain",
+      "start": 16.9,
+      "end": 17.04
+    },
+    {
+      "word": "in",
+      "start": 17.04,
+      "end": 17.22
+    },
+    {
+      "word": "the",
+      "start": 17.22,
+      "end": 17.28
+    },
+    {
+      "word": "neck.",
+      "start": 17.28,
+      "end": 17.7
+    },
+    {
+      "word": "So",
+      "start": 17.94,
+      "end": 18.14
+    },
+    {
+      "word": "when",
+      "start": 18.14,
+      "end": 18.32
+    },
+    {
+      "word": "did",
+      "start": 18.32,
+      "end": 18.46
+    },
+    {
+      "word": "it",
+      "start": 18.46,
+      "end": 18.56
+    },
+    {
+      "word": "happen?",
+      "start": 18.56,
+      "end": 19.34
+    },
+    {
+      "word": "It",
+      "start": 19.74,
+      "end": 19.92
+    },
+    {
+      "word": "was",
+      "start": 19.92,
+      "end": 20.06
+    },
+    {
+      "word": "the",
+      "start": 20.06,
+      "end": 20.22
+    },
+    {
+      "word": "night",
+      "start": 20.22,
+      "end": 20.36
+    },
+    {
+      "word": "of",
+      "start": 20.36,
+      "end": 20.52
+    },
+    {
+      "word": "the",
+      "start": 20.52,
+      "end": 20.6
+    },
+    {
+      "word": "basketball",
+      "start": 20.6,
+      "end": 21.04
+    },
+    {
+      "word": "championship,",
+      "start": 21.04,
+      "end": 21.58
+    },
+    {
+      "word": "and",
+      "start": 22.26,
+      "end": 22.42
+    },
+    {
+      "word": "the",
+      "start": 22.42,
+      "end": 22.54
+    },
+    {
+      "word": "worst",
+      "start": 22.54,
+      "end": 22.74
+    },
+    {
+      "word": "thing",
+      "start": 22.74,
+      "end": 23
+    },
+    {
+      "word": "is",
+      "start": 23,
+      "end": 23.26
+    },
+    {
+      "word": "that",
+      "start": 23.26,
+      "end": 23.44
+    },
+    {
+      "word": "we",
+      "start": 23.44,
+      "end": 23.58
+    },
+    {
+      "word": "lost",
+      "start": 23.58,
+      "end": 23.82
+    },
+    {
+      "word": "the",
+      "start": 23.82,
+      "end": 24
+    },
+    {
+      "word": "game,",
+      "start": 24,
+      "end": 24.54
+    },
+    {
+      "word": "and",
+      "start": 24.54,
+      "end": 24.64
+    },
+    {
+      "word": "all",
+      "start": 24.64,
+      "end": 24.92
+    },
+    {
+      "word": "hopes",
+      "start": 24.92,
+      "end": 25.24
+    },
+    {
+      "word": "of",
+      "start": 25.24,
+      "end": 25.46
+    },
+    {
+      "word": "winning",
+      "start": 25.46,
+      "end": 25.62
+    },
+    {
+      "word": "our",
+      "start": 25.62,
+      "end": 25.82
+    },
+    {
+      "word": "title",
+      "start": 25.82,
+      "end": 26.08
+    },
+    {
+      "word": "back.",
+      "start": 26.08,
+      "end": 26.6
+    },
+    {
+      "word": "What",
+      "start": 26.86,
+      "end": 26.94
+    },
+    {
+      "word": "a",
+      "start": 26.94,
+      "end": 27.14
+    },
+    {
+      "word": "bummer.",
+      "start": 27.14,
+      "end": 27.8
+    },
+    {
+      "word": "Sit",
+      "start": 27.8,
+      "end": 28.3
+    },
+    {
+      "word": "down",
+      "start": 28.3,
+      "end": 28.52
+    },
+    {
+      "word": "here",
+      "start": 28.52,
+      "end": 28.66
+    },
+    {
+      "word": "for",
+      "start": 28.66,
+      "end": 28.84
+    },
+    {
+      "word": "a",
+      "start": 28.84,
+      "end": 28.96
+    },
+    {
+      "word": "minute",
+      "start": 28.96,
+      "end": 29.14
+    },
+    {
+      "word": "and",
+      "start": 29.14,
+      "end": 29.4
+    },
+    {
+      "word": "tell",
+      "start": 29.4,
+      "end": 29.62
+    },
+    {
+      "word": "me",
+      "start": 29.62,
+      "end": 29.76
+    },
+    {
+      "word": "all",
+      "start": 29.76,
+      "end": 29.98
+    },
+    {
+      "word": "about",
+      "start": 29.98,
+      "end": 30.2
+    },
+    {
+      "word": "it.",
+      "start": 30.2,
+      "end": 30.62
+    },
+    {
+      "word": "Well,",
+      "start": 31.04,
+      "end": 31.42
+    },
+    {
+      "word": "it",
+      "start": 31.42,
+      "end": 31.9
+    },
+    {
+      "word": "all",
+      "start": 31.9,
+      "end": 32.04
+    },
+    {
+      "word": "happened",
+      "start": 32.04,
+      "end": 32.38
+    },
+    {
+      "word": "last",
+      "start": 32.38,
+      "end": 32.74
+    },
+    {
+      "word": "Thursday.",
+      "start": 32.74,
+      "end": 33.52
+    },
+    {
+      "word": "It",
+      "start": 33.52,
+      "end": 33.86
+    },
+    {
+      "word": "was",
+      "start": 33.86,
+      "end": 34.04
+    },
+    {
+      "word": "pouring",
+      "start": 34.04,
+      "end": 34.46
+    },
+    {
+      "word": "down",
+      "start": 34.46,
+      "end": 34.78
+    },
+    {
+      "word": "rain",
+      "start": 34.78,
+      "end": 35.08
+    },
+    {
+      "word": "and",
+      "start": 35.08,
+      "end": 35.46
+    },
+    {
+      "word": "also",
+      "start": 35.46,
+      "end": 35.92
+    },
+    {
+      "word": "freezing.",
+      "start": 35.92,
+      "end": 36.78
+    },
+    {
+      "word": "I",
+      "start": 36.78,
+      "end": 37.32
+    },
+    {
+      "word": "was",
+      "start": 37.32,
+      "end": 37.5
+    },
+    {
+      "word": "in",
+      "start": 37.5,
+      "end": 37.62
+    },
+    {
+      "word": "a",
+      "start": 37.62,
+      "end": 37.7
+    },
+    {
+      "word": "hurry",
+      "start": 37.7,
+      "end": 37.92
+    },
+    {
+      "word": "to",
+      "start": 37.92,
+      "end": 38.18
+    },
+    {
+      "word": "get",
+      "start": 38.18,
+      "end": 38.3
+    },
+    {
+      "word": "to",
+      "start": 38.3,
+      "end": 38.44
+    },
+    {
+      "word": "the",
+      "start": 38.44,
+      "end": 38.56
+    },
+    {
+      "word": "gym",
+      "start": 38.56,
+      "end": 38.72
+    },
+    {
+      "word": "early",
+      "start": 38.72,
+      "end": 39.08
+    },
+    {
+      "word": "to",
+      "start": 39.08,
+      "end": 39.3
+    },
+    {
+      "word": "chill",
+      "start": 39.3,
+      "end": 39.52
+    },
+    {
+      "word": "out",
+      "start": 39.52,
+      "end": 39.74
+    },
+    {
+      "word": "a",
+      "start": 39.74,
+      "end": 39.88
+    },
+    {
+      "word": "bit",
+      "start": 39.88,
+      "end": 39.96
+    },
+    {
+      "word": "before",
+      "start": 39.96,
+      "end": 40.24
+    },
+    {
+      "word": "the",
+      "start": 40.24,
+      "end": 40.44
+    },
+    {
+      "word": "game.",
+      "start": 40.44,
+      "end": 40.88
+    },
+    {
+      "word": "I",
+      "start": 41.26,
+      "end": 41.42
+    },
+    {
+      "word": "was",
+      "start": 41.42,
+      "end": 41.58
+    },
+    {
+      "word": "all",
+      "start": 41.58,
+      "end": 41.7
+    },
+    {
+      "word": "stressed",
+      "start": 41.7,
+      "end": 42.06
+    },
+    {
+      "word": "out",
+      "start": 42.06,
+      "end": 42.42
+    },
+    {
+      "word": "about",
+      "start": 42.42,
+      "end": 42.62
+    },
+    {
+      "word": "the",
+      "start": 42.62,
+      "end": 42.76
+    },
+    {
+      "word": "game",
+      "start": 42.76,
+      "end": 43
+    },
+    {
+      "word": "when",
+      "start": 43,
+      "end": 43.18
+    },
+    {
+      "word": "I",
+      "start": 43.18,
+      "end": 43.28
+    },
+    {
+      "word": "left",
+      "start": 43.28,
+      "end": 43.44
+    },
+    {
+      "word": "home,",
+      "start": 43.44,
+      "end": 43.94
+    },
+    {
+      "word": "but",
+      "start": 43.94,
+      "end": 44.36
+    },
+    {
+      "word": "I",
+      "start": 44.36,
+      "end": 44.46
+    },
+    {
+      "word": "got",
+      "start": 44.46,
+      "end": 44.62
+    },
+    {
+      "word": "in",
+      "start": 44.62,
+      "end": 44.72
+    },
+    {
+      "word": "the",
+      "start": 44.72,
+      "end": 44.82
+    },
+    {
+      "word": "car",
+      "start": 44.82,
+      "end": 45.12
+    },
+    {
+      "word": "and",
+      "start": 45.12,
+      "end": 45.4
+    },
+    {
+      "word": "started",
+      "start": 45.4,
+      "end": 45.72
+    },
+    {
+      "word": "to",
+      "start": 45.72,
+      "end": 45.9
+    },
+    {
+      "word": "drive",
+      "start": 45.9,
+      "end": 46.24
+    },
+    {
+      "word": "toward",
+      "start": 46.24,
+      "end": 46.56
+    },
+    {
+      "word": "the",
+      "start": 46.56,
+      "end": 46.74
+    },
+    {
+      "word": "gym.",
+      "start": 46.74,
+      "end": 47.06
+    },
+    {
+      "word": "All",
+      "start": 47.98,
+      "end": 48.12
+    },
+    {
+      "word": "of",
+      "start": 48.12,
+      "end": 48.26
+    },
+    {
+      "word": "a",
+      "start": 48.26,
+      "end": 48.36
+    },
+    {
+      "word": "sudden,",
+      "start": 48.36,
+      "end": 48.7
+    },
+    {
+      "word": "my",
+      "start": 48.7,
+      "end": 48.84
+    },
+    {
+      "word": "phone",
+      "start": 48.84,
+      "end": 49.06
+    },
+    {
+      "word": "rang.",
+      "start": 49.06,
+      "end": 49.54
+    },
+    {
+      "word": "It",
+      "start": 49.54,
+      "end": 49.9
+    },
+    {
+      "word": "was",
+      "start": 49.9,
+      "end": 50
+    },
+    {
+      "word": "my",
+      "start": 50,
+      "end": 50.12
+    },
+    {
+      "word": "girlfriend.",
+      "start": 50.12,
+      "end": 50.36
+    },
+    {
+      "word": "She",
+      "start": 50.36,
+      "end": 51.2
+    },
+    {
+      "word": "was",
+      "start": 51.2,
+      "end": 51.38
+    },
+    {
+      "word": "all",
+      "start": 51.38,
+      "end": 51.54
+    },
+    {
+      "word": "excited",
+      "start": 51.54,
+      "end": 51.82
+    },
+    {
+      "word": "about",
+      "start": 51.82,
+      "end": 52.1
+    },
+    {
+      "word": "the",
+      "start": 52.1,
+      "end": 52.28
+    },
+    {
+      "word": "game",
+      "start": 52.28,
+      "end": 52.58
+    },
+    {
+      "word": "and",
+      "start": 52.58,
+      "end": 52.92
+    },
+    {
+      "word": "wanted",
+      "start": 52.92,
+      "end": 53.22
+    },
+    {
+      "word": "to",
+      "start": 53.22,
+      "end": 53.46
+    },
+    {
+      "word": "wish",
+      "start": 53.46,
+      "end": 53.6
+    },
+    {
+      "word": "me",
+      "start": 53.6,
+      "end": 53.72
+    },
+    {
+      "word": "good",
+      "start": 53.72,
+      "end": 53.92
+    },
+    {
+      "word": "luck.",
+      "start": 53.92,
+      "end": 54.22
+    },
+    {
+      "word": "I",
+      "start": 54.62,
+      "end": 54.86
+    },
+    {
+      "word": "started",
+      "start": 54.86,
+      "end": 55.16
+    },
+    {
+      "word": "to",
+      "start": 55.16,
+      "end": 55.3
+    },
+    {
+      "word": "get",
+      "start": 55.3,
+      "end": 55.38
+    },
+    {
+      "word": "pumped",
+      "start": 55.38,
+      "end": 55.68
+    },
+    {
+      "word": "up",
+      "start": 55.68,
+      "end": 55.96
+    },
+    {
+      "word": "and",
+      "start": 55.96,
+      "end": 56.44
+    },
+    {
+      "word": "ready",
+      "start": 56.44,
+      "end": 56.68
+    },
+    {
+      "word": "for",
+      "start": 56.68,
+      "end": 56.86
+    },
+    {
+      "word": "the",
+      "start": 56.86,
+      "end": 56.96
+    },
+    {
+      "word": "game.",
+      "start": 56.96,
+      "end": 57.42
+    },
+    {
+      "word": "My",
+      "start": 58,
+      "end": 58.16
+    },
+    {
+      "word": "girlfriend",
+      "start": 58.16,
+      "end": 58.48
+    },
+    {
+      "word": "and",
+      "start": 58.48,
+      "end": 58.74
+    },
+    {
+      "word": "I",
+      "start": 58.74,
+      "end": 58.84
+    },
+    {
+      "word": "kept",
+      "start": 58.84,
+      "end": 59.16
+    },
+    {
+      "word": "on",
+      "start": 59.16,
+      "end": 59.38
+    },
+    {
+      "word": "talking",
+      "start": 59.38,
+      "end": 59.8
+    },
+    {
+      "word": "when",
+      "start": 59.8,
+      "end": 60.1
+    },
+    {
+      "word": "I",
+      "start": 60.1,
+      "end": 60.2
+    },
+    {
+      "word": "suddenly",
+      "start": 60.2,
+      "end": 60.56
+    },
+    {
+      "word": "realized",
+      "start": 60.56,
+      "end": 61.04
+    },
+    {
+      "word": "that",
+      "start": 61.04,
+      "end": 61.38
+    },
+    {
+      "word": "the",
+      "start": 61.38,
+      "end": 61.52
+    },
+    {
+      "word": "cars",
+      "start": 61.52,
+      "end": 61.74
+    },
+    {
+      "word": "in",
+      "start": 61.74,
+      "end": 61.92
+    },
+    {
+      "word": "front",
+      "start": 61.92,
+      "end": 62.12
+    },
+    {
+      "word": "of",
+      "start": 62.12,
+      "end": 62.26
+    },
+    {
+      "word": "me",
+      "start": 62.26,
+      "end": 62.36
+    },
+    {
+      "word": "were",
+      "start": 62.36,
+      "end": 62.52
+    },
+    {
+      "word": "stopped",
+      "start": 62.52,
+      "end": 62.84
+    },
+    {
+      "word": "and",
+      "start": 62.44,
+      "end": 63.48
+    },
+    {
+      "word": "I",
+      "start": 63.48,
+      "end": 63.6
+    },
+    {
+      "word": "was",
+      "start": 63.6,
+      "end": 63.74
+    },
+    {
+      "word": "going",
+      "start": 63.74,
+      "end": 63.92
+    },
+    {
+      "word": "a",
+      "start": 63.92,
+      "end": 64.1
+    },
+    {
+      "word": "little",
+      "start": 64.1,
+      "end": 64.18
+    },
+    {
+      "word": "fast.",
+      "start": 64.18,
+      "end": 64.68
+    },
+    {
+      "word": "I",
+      "start": 65.3,
+      "end": 65.46
+    },
+    {
+      "word": "slammed",
+      "start": 65.46,
+      "end": 65.74
+    },
+    {
+      "word": "on",
+      "start": 65.74,
+      "end": 65.9
+    },
+    {
+      "word": "the",
+      "start": 65.9,
+      "end": 66.02
+    },
+    {
+      "word": "brakes,",
+      "start": 66.02,
+      "end": 66.32
+    },
+    {
+      "word": "but",
+      "start": 66.32,
+      "end": 66.84
+    },
+    {
+      "word": "it",
+      "start": 66.84,
+      "end": 66.9
+    },
+    {
+      "word": "was",
+      "start": 66.9,
+      "end": 67.02
+    },
+    {
+      "word": "too",
+      "start": 67.02,
+      "end": 67.16
+    },
+    {
+      "word": "late.",
+      "start": 67.16,
+      "end": 67.38
+    },
+    {
+      "word": "The",
+      "start": 68.04,
+      "end": 68.24
+    },
+    {
+      "word": "street",
+      "start": 68.24,
+      "end": 68.4
+    },
+    {
+      "word": "was",
+      "start": 68.4,
+      "end": 68.64
+    },
+    {
+      "word": "wet",
+      "start": 68.64,
+      "end": 68.88
+    },
+    {
+      "word": "and",
+      "start": 68.88,
+      "end": 69.36
+    },
+    {
+      "word": "I",
+      "start": 69.36,
+      "end": 69.56
+    },
+    {
+      "word": "hit",
+      "start": 69.56,
+      "end": 69.78
+    },
+    {
+      "word": "the",
+      "start": 69.78,
+      "end": 69.92
+    },
+    {
+      "word": "car",
+      "start": 69.92,
+      "end": 70.14
+    },
+    {
+      "word": "that",
+      "start": 70.14,
+      "end": 70.28
+    },
+    {
+      "word": "was",
+      "start": 70.28,
+      "end": 70.4
+    },
+    {
+      "word": "stopped",
+      "start": 70.4,
+      "end": 70.7
+    },
+    {
+      "word": "in",
+      "start": 70.7,
+      "end": 70.92
+    },
+    {
+      "word": "front",
+      "start": 70.92,
+      "end": 71.08
+    },
+    {
+      "word": "of",
+      "start": 71.08,
+      "end": 71.2
+    },
+    {
+      "word": "me.",
+      "start": 71.2,
+      "end": 71.36
+    },
+    {
+      "word": "That",
+      "start": 72.04,
+      "end": 72.3
+    },
+    {
+      "word": "hard",
+      "start": 72.3,
+      "end": 72.58
+    },
+    {
+      "word": "braking",
+      "start": 72.58,
+      "end": 72.96
+    },
+    {
+      "word": "caused",
+      "start": 72.96,
+      "end": 73.46
+    },
+    {
+      "word": "me",
+      "start": 73.46,
+      "end": 73.54
+    },
+    {
+      "word": "to",
+      "start": 73.54,
+      "end": 73.66
+    },
+    {
+      "word": "twist",
+      "start": 73.66,
+      "end": 73.86
+    },
+    {
+      "word": "my",
+      "start": 73.86,
+      "end": 74.04
+    },
+    {
+      "word": "ankle.",
+      "start": 74.04,
+      "end": 74.34
+    },
+    {
+      "word": "I",
+      "start": 74.94,
+      "end": 75.06
+    },
+    {
+      "word": "could",
+      "start": 75.06,
+      "end": 75.18
+    },
+    {
+      "word": "hardly",
+      "start": 75.18,
+      "end": 75.4
+    },
+    {
+      "word": "get",
+      "start": 75.4,
+      "end": 75.62
+    },
+    {
+      "word": "out",
+      "start": 75.62,
+      "end": 75.8
+    },
+    {
+      "word": "of",
+      "start": 75.8,
+      "end": 75.88
+    },
+    {
+      "word": "the",
+      "start": 75.88,
+      "end": 75.98
+    },
+    {
+      "word": "car",
+      "start": 75.98,
+      "end": 76.24
+    },
+    {
+      "word": "to",
+      "start": 76.24,
+      "end": 76.42
+    },
+    {
+      "word": "talk",
+      "start": 76.42,
+      "end": 76.62
+    },
+    {
+      "word": "to",
+      "start": 76.62,
+      "end": 76.78
+    },
+    {
+      "word": "the",
+      "start": 76.78,
+      "end": 76.88
+    },
+    {
+      "word": "other",
+      "start": 76.88,
+      "end": 77.04
+    },
+    {
+      "word": "driver",
+      "start": 77.04,
+      "end": 77.4
+    },
+    {
+      "word": "because",
+      "start": 77.4,
+      "end": 77.78
+    },
+    {
+      "word": "my",
+      "start": 77.78,
+      "end": 78
+    },
+    {
+      "word": "ankle",
+      "start": 78,
+      "end": 78.24
+    },
+    {
+      "word": "hurt",
+      "start": 78.24,
+      "end": 78.44
+    },
+    {
+      "word": "so",
+      "start": 78.44,
+      "end": 78.64
+    },
+    {
+      "word": "much.",
+      "start": 78.64,
+      "end": 79.06
+    },
+    {
+      "word": "To",
+      "start": 79.64,
+      "end": 79.84
+    },
+    {
+      "word": "tell",
+      "start": 79.84,
+      "end": 79.98
+    },
+    {
+      "word": "you",
+      "start": 79.98,
+      "end": 80.08
+    },
+    {
+      "word": "the",
+      "start": 80.08,
+      "end": 80.22
+    },
+    {
+      "word": "truth,",
+      "start": 80.22,
+      "end": 80.72
+    },
+    {
+      "word": "I",
+      "start": 80.72,
+      "end": 81.2
+    },
+    {
+      "word": "was",
+      "start": 81.2,
+      "end": 81.34
+    },
+    {
+      "word": "so",
+      "start": 81.34,
+      "end": 81.5
+    },
+    {
+      "word": "freaked",
+      "start": 81.5,
+      "end": 81.76
+    },
+    {
+      "word": "out",
+      "start": 81.76,
+      "end": 82.04
+    },
+    {
+      "word": "I",
+      "start": 82.04,
+      "end": 82.16
+    },
+    {
+      "word": "didn't",
+      "start": 82.16,
+      "end": 82.38
+    },
+    {
+      "word": "know",
+      "start": 82.38,
+      "end": 82.46
+    },
+    {
+      "word": "what",
+      "start": 82.46,
+      "end": 82.58
+    },
+    {
+      "word": "to",
+      "start": 82.58,
+      "end": 82.68
+    },
+    {
+      "word": "do.",
+      "start": 82.68,
+      "end": 82.9
+    },
+    {
+      "word": "I",
+      "start": 83.54,
+      "end": 83.72
+    },
+    {
+      "word": "was",
+      "start": 83.72,
+      "end": 83.88
+    },
+    {
+      "word": "thinking",
+      "start": 83.88,
+      "end": 84.08
+    },
+    {
+      "word": "about",
+      "start": 84.08,
+      "end": 84.34
+    },
+    {
+      "word": "the",
+      "start": 84.34,
+      "end": 84.48
+    },
+    {
+      "word": "game,",
+      "start": 84.48,
+      "end": 85
+    },
+    {
+      "word": "my",
+      "start": 85,
+      "end": 85.1
+    },
+    {
+      "word": "girlfriend,",
+      "start": 85.1,
+      "end": 85.96
+    },
+    {
+      "word": "my",
+      "start": 85.96,
+      "end": 86.08
+    },
+    {
+      "word": "teammates.",
+      "start": 86.08,
+      "end": 86.52
+    },
+    {
+      "word": "It",
+      "start": 87.26,
+      "end": 87.44
+    },
+    {
+      "word": "never",
+      "start": 87.44,
+      "end": 87.7
+    },
+    {
+      "word": "occurred",
+      "start": 87.7,
+      "end": 88.08
+    },
+    {
+      "word": "to",
+      "start": 88.08,
+      "end": 88.26
+    },
+    {
+      "word": "me",
+      "start": 88.26,
+      "end": 88.4
+    },
+    {
+      "word": "that",
+      "start": 88.4,
+      "end": 88.6
+    },
+    {
+      "word": "I",
+      "start": 88.6,
+      "end": 88.72
+    },
+    {
+      "word": "wouldn't",
+      "start": 88.72,
+      "end": 88.92
+    },
+    {
+      "word": "be",
+      "start": 88.92,
+      "end": 89.08
+    },
+    {
+      "word": "able",
+      "start": 89.08,
+      "end": 89.26
+    },
+    {
+      "word": "to",
+      "start": 89.26,
+      "end": 89.38
+    },
+    {
+      "word": "play",
+      "start": 89.38,
+      "end": 89.6
+    },
+    {
+      "word": "that",
+      "start": 89.6,
+      "end": 89.82
+    },
+    {
+      "word": "night.",
+      "start": 89.82,
+      "end": 90.08
+    },
+    {
+      "word": "Finally,",
+      "start": 90.88,
+      "end": 91.2
+    },
+    {
+      "word": "a",
+      "start": 91.2,
+      "end": 91.52
+    },
+    {
+      "word": "cop",
+      "start": 91.52,
+      "end": 91.76
+    },
+    {
+      "word": "came",
+      "start": 91.76,
+      "end": 92.08
+    },
+    {
+      "word": "and",
+      "start": 92.08,
+      "end": 92.48
+    },
+    {
+      "word": "made",
+      "start": 92.48,
+      "end": 92.68
+    },
+    {
+      "word": "me",
+      "start": 92.68,
+      "end": 92.8
+    },
+    {
+      "word": "sign",
+      "start": 92.8,
+      "end": 93.04
+    },
+    {
+      "word": "some",
+      "start": 93.04,
+      "end": 93.2
+    },
+    {
+      "word": "papers.",
+      "start": 93.2,
+      "end": 93.54
+    },
+    {
+      "word": "Then",
+      "start": 94.4,
+      "end": 94.68
+    },
+    {
+      "word": "an",
+      "start": 94.68,
+      "end": 94.9
+    },
+    {
+      "word": "ambulance",
+      "start": 94.9,
+      "end": 95.24
+    },
+    {
+      "word": "took",
+      "start": 95.24,
+      "end": 95.66
+    },
+    {
+      "word": "me",
+      "start": 95.66,
+      "end": 95.76
+    },
+    {
+      "word": "to",
+      "start": 95.76,
+      "end": 95.88
+    },
+    {
+      "word": "the",
+      "start": 95.88,
+      "end": 95.96
+    },
+    {
+      "word": "hospital.",
+      "start": 95.96,
+      "end": 96.32
+    },
+    {
+      "word": "They",
+      "start": 97.02,
+      "end": 97.18
+    },
+    {
+      "word": "took",
+      "start": 97.18,
+      "end": 97.34
+    },
+    {
+      "word": "some",
+      "start": 97.34,
+      "end": 97.56
+    },
+    {
+      "word": "x-rays",
+      "start": 97.56,
+      "end": 97.88
+    },
+    {
+      "word": "to",
+      "start": 97.88,
+      "end": 98.1
+    },
+    {
+      "word": "see",
+      "start": 98.1,
+      "end": 98.26
+    },
+    {
+      "word": "if",
+      "start": 98.26,
+      "end": 98.38
+    },
+    {
+      "word": "my",
+      "start": 98.38,
+      "end": 98.52
+    },
+    {
+      "word": "ankle",
+      "start": 98.52,
+      "end": 98.72
+    },
+    {
+      "word": "was",
+      "start": 98.72,
+      "end": 98.88
+    },
+    {
+      "word": "broken",
+      "start": 98.88,
+      "end": 99.16
+    },
+    {
+      "word": "or",
+      "start": 99.16,
+      "end": 99.4
+    },
+    {
+      "word": "not.",
+      "start": 99.4,
+      "end": 99.62
+    },
+    {
+      "word": "Thank",
+      "start": 100.4,
+      "end": 100.58
+    },
+    {
+      "word": "goodness",
+      "start": 100.58,
+      "end": 100.8
+    },
+    {
+      "word": "it",
+      "start": 100.8,
+      "end": 101.02
+    },
+    {
+      "word": "wasn't",
+      "start": 101.02,
+      "end": 101.26
+    },
+    {
+      "word": "broken,",
+      "start": 101.26,
+      "end": 101.66
+    },
+    {
+      "word": "but",
+      "start": 102.14,
+      "end": 102.26
+    },
+    {
+      "word": "the",
+      "start": 102.26,
+      "end": 102.42
+    },
+    {
+      "word": "upshot",
+      "start": 102.42,
+      "end": 102.78
+    },
+    {
+      "word": "was",
+      "start": 102.78,
+      "end": 103.18
+    },
+    {
+      "word": "that",
+      "start": 103.18,
+      "end": 103.5
+    },
+    {
+      "word": "I",
+      "start": 103.5,
+      "end": 103.62
+    },
+    {
+      "word": "wasn't",
+      "start": 103.62,
+      "end": 103.88
+    },
+    {
+      "word": "going",
+      "start": 103.88,
+      "end": 104.02
+    },
+    {
+      "word": "to",
+      "start": 104.02,
+      "end": 104.14
+    },
+    {
+      "word": "play",
+      "start": 104.14,
+      "end": 104.28
+    },
+    {
+      "word": "basketball",
+      "start": 104.28,
+      "end": 104.7
+    },
+    {
+      "word": "that",
+      "start": 104.7,
+      "end": 105.02
+    },
+    {
+      "word": "night,",
+      "start": 105.02,
+      "end": 105.32
+    },
+    {
+      "word": "and",
+      "start": 105.72,
+      "end": 105.9
+    },
+    {
+      "word": "now",
+      "start": 105.9,
+      "end": 106.06
+    },
+    {
+      "word": "I'm",
+      "start": 106.06,
+      "end": 106.22
+    },
+    {
+      "word": "stuck",
+      "start": 106.22,
+      "end": 106.58
+    },
+    {
+      "word": "with",
+      "start": 106.58,
+      "end": 106.88
+    },
+    {
+      "word": "these",
+      "start": 106.88,
+      "end": 107.08
+    },
+    {
+      "word": "crutches.",
+      "start": 107.08,
+      "end": 107.44
+    }
+  ]
+}

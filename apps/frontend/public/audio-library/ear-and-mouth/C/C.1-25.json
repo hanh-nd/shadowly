@@ -1,0 +1,455 @@
+{
+  "text": " Exercise 125, sentence stress with descriptive phrases. Repeat the following phrases. 1. It's short. It's a short nail. 2. It's chocolate. It's a chocolate cake. 3. It's good. It's a good plan. 4. It's guarded. It's a guarded gate. 5. It's wide. It's a wide river. 6. There are four. There are four cards. 7. It was small. It was a small spot. 8. It's the best. It's the best book. Pause the CD and write your own adjective and noun adjective sentences. Use the same words from exercise 124.",
+  "wordTimestamps": [
+    {
+      "word": "Exercise",
+      "start": 0.38,
+      "end": 0.82
+    },
+    {
+      "word": "125,",
+      "start": 0.82,
+      "end": 2.28
+    },
+    {
+      "word": "sentence",
+      "start": 2.28,
+      "end": 2.74
+    },
+    {
+      "word": "stress",
+      "start": 2.74,
+      "end": 3.1
+    },
+    {
+      "word": "with",
+      "start": 3.1,
+      "end": 3.36
+    },
+    {
+      "word": "descriptive",
+      "start": 3.36,
+      "end": 3.82
+    },
+    {
+      "word": "phrases.",
+      "start": 3.82,
+      "end": 4.92
+    },
+    {
+      "word": "Repeat",
+      "start": 5.76,
+      "end": 5.94
+    },
+    {
+      "word": "the",
+      "start": 5.94,
+      "end": 6.16
+    },
+    {
+      "word": "following",
+      "start": 6.16,
+      "end": 6.48
+    },
+    {
+      "word": "phrases.",
+      "start": 6.48,
+      "end": 7.42
+    },
+    {
+      "word": "1.",
+      "start": 8.18,
+      "end": 8.54
+    },
+    {
+      "word": "It's",
+      "start": 8.54,
+      "end": 9.28
+    },
+    {
+      "word": "short.",
+      "start": 9.28,
+      "end": 9.6
+    },
+    {
+      "word": "It's",
+      "start": 9.6,
+      "end": 11.5
+    },
+    {
+      "word": "a",
+      "start": 11.5,
+      "end": 11.56
+    },
+    {
+      "word": "short",
+      "start": 11.56,
+      "end": 11.8
+    },
+    {
+      "word": "nail.",
+      "start": 11.8,
+      "end": 12.18
+    },
+    {
+      "word": "2.",
+      "start": 13.78,
+      "end": 14.28
+    },
+    {
+      "word": "It's",
+      "start": 14.28,
+      "end": 15.06
+    },
+    {
+      "word": "chocolate.",
+      "start": 15.06,
+      "end": 15.48
+    },
+    {
+      "word": "It's",
+      "start": 15.48,
+      "end": 17.12
+    },
+    {
+      "word": "a",
+      "start": 17.12,
+      "end": 17.22
+    },
+    {
+      "word": "chocolate",
+      "start": 17.22,
+      "end": 17.48
+    },
+    {
+      "word": "cake.",
+      "start": 17.48,
+      "end": 18.06
+    },
+    {
+      "word": "3.",
+      "start": 19.6,
+      "end": 20.1
+    },
+    {
+      "word": "It's",
+      "start": 20.1,
+      "end": 20.56
+    },
+    {
+      "word": "good.",
+      "start": 20.56,
+      "end": 20.84
+    },
+    {
+      "word": "It's",
+      "start": 20.84,
+      "end": 22.74
+    },
+    {
+      "word": "a",
+      "start": 22.74,
+      "end": 22.82
+    },
+    {
+      "word": "good",
+      "start": 22.82,
+      "end": 22.92
+    },
+    {
+      "word": "plan.",
+      "start": 22.92,
+      "end": 23.34
+    },
+    {
+      "word": "4.",
+      "start": 25.1,
+      "end": 25.76
+    },
+    {
+      "word": "It's",
+      "start": 25.76,
+      "end": 26.54
+    },
+    {
+      "word": "guarded.",
+      "start": 26.54,
+      "end": 26.96
+    },
+    {
+      "word": "It's",
+      "start": 26.96,
+      "end": 28.88
+    },
+    {
+      "word": "a",
+      "start": 28.88,
+      "end": 28.94
+    },
+    {
+      "word": "guarded",
+      "start": 28.94,
+      "end": 29.22
+    },
+    {
+      "word": "gate.",
+      "start": 29.22,
+      "end": 29.96
+    },
+    {
+      "word": "5.",
+      "start": 31.08,
+      "end": 31.82
+    },
+    {
+      "word": "It's",
+      "start": 31.82,
+      "end": 32.5
+    },
+    {
+      "word": "wide.",
+      "start": 32.5,
+      "end": 32.96
+    },
+    {
+      "word": "It's",
+      "start": 32.96,
+      "end": 34.92
+    },
+    {
+      "word": "a",
+      "start": 34.92,
+      "end": 34.98
+    },
+    {
+      "word": "wide",
+      "start": 34.98,
+      "end": 35.26
+    },
+    {
+      "word": "river.",
+      "start": 35.26,
+      "end": 35.72
+    },
+    {
+      "word": "6.",
+      "start": 37.34,
+      "end": 38.08
+    },
+    {
+      "word": "There",
+      "start": 38.08,
+      "end": 38.52
+    },
+    {
+      "word": "are",
+      "start": 38.52,
+      "end": 38.64
+    },
+    {
+      "word": "four.",
+      "start": 38.64,
+      "end": 39.12
+    },
+    {
+      "word": "There",
+      "start": 39.12,
+      "end": 40.94
+    },
+    {
+      "word": "are",
+      "start": 40.94,
+      "end": 41.12
+    },
+    {
+      "word": "four",
+      "start": 41.12,
+      "end": 41.38
+    },
+    {
+      "word": "cards.",
+      "start": 41.38,
+      "end": 42.26
+    },
+    {
+      "word": "7.",
+      "start": 43.8,
+      "end": 44.54
+    },
+    {
+      "word": "It",
+      "start": 44.54,
+      "end": 45.08
+    },
+    {
+      "word": "was",
+      "start": 45.08,
+      "end": 45.28
+    },
+    {
+      "word": "small.",
+      "start": 45.28,
+      "end": 45.58
+    },
+    {
+      "word": "It",
+      "start": 45.58,
+      "end": 47.4
+    },
+    {
+      "word": "was",
+      "start": 47.4,
+      "end": 47.6
+    },
+    {
+      "word": "a",
+      "start": 47.6,
+      "end": 47.7
+    },
+    {
+      "word": "small",
+      "start": 47.7,
+      "end": 47.98
+    },
+    {
+      "word": "spot.",
+      "start": 47.98,
+      "end": 48.6
+    },
+    {
+      "word": "8.",
+      "start": 50.6,
+      "end": 51.2
+    },
+    {
+      "word": "It's",
+      "start": 51.2,
+      "end": 51.66
+    },
+    {
+      "word": "the",
+      "start": 51.66,
+      "end": 51.8
+    },
+    {
+      "word": "best.",
+      "start": 51.8,
+      "end": 52.24
+    },
+    {
+      "word": "It's",
+      "start": 52.24,
+      "end": 53.86
+    },
+    {
+      "word": "the",
+      "start": 53.86,
+      "end": 53.98
+    },
+    {
+      "word": "best",
+      "start": 53.98,
+      "end": 54.22
+    },
+    {
+      "word": "book.",
+      "start": 54.22,
+      "end": 54.7
+    },
+    {
+      "word": "Pause",
+      "start": 56.86,
+      "end": 57.06
+    },
+    {
+      "word": "the",
+      "start": 57.06,
+      "end": 57.34
+    },
+    {
+      "word": "CD",
+      "start": 57.34,
+      "end": 57.62
+    },
+    {
+      "word": "and",
+      "start": 57.62,
+      "end": 58.08
+    },
+    {
+      "word": "write",
+      "start": 58.08,
+      "end": 58.3
+    },
+    {
+      "word": "your",
+      "start": 58.3,
+      "end": 58.42
+    },
+    {
+      "word": "own",
+      "start": 58.42,
+      "end": 58.6
+    },
+    {
+      "word": "adjective",
+      "start": 58.6,
+      "end": 59.04
+    },
+    {
+      "word": "and",
+      "start": 59.04,
+      "end": 59.56
+    },
+    {
+      "word": "noun",
+      "start": 59.56,
+      "end": 59.8
+    },
+    {
+      "word": "adjective",
+      "start": 59.8,
+      "end": 60.14
+    },
+    {
+      "word": "sentences.",
+      "start": 60.14,
+      "end": 60.78
+    },
+    {
+      "word": "Use",
+      "start": 61.5,
+      "end": 61.7
+    },
+    {
+      "word": "the",
+      "start": 61.7,
+      "end": 61.86
+    },
+    {
+      "word": "same",
+      "start": 61.86,
+      "end": 62.04
+    },
+    {
+      "word": "words",
+      "start": 62.04,
+      "end": 62.42
+    },
+    {
+      "word": "from",
+      "start": 62.42,
+      "end": 62.66
+    },
+    {
+      "word": "exercise",
+      "start": 62.66,
+      "end": 62.96
+    },
+    {
+      "word": "124.",
+      "start": 62.96,
+      "end": 64.22
+    }
+  ]
+}

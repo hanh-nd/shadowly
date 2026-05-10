@@ -1,0 +1,295 @@
+{
+  "text": " Conversation 9A, Scheduled Events What time does the movie start? It starts at 7.30 and ends at 9.45. Good. We can go on the bus and get back home before it's too dark. Is there a bus stop near your house? Yes. It stops on the corner every 15 minutes. Perfect. I'm looking forward to seeing this movie.",
+  "wordTimestamps": [
+    {
+      "word": "Conversation",
+      "start": 0.68,
+      "end": 1.3
+    },
+    {
+      "word": "9A,",
+      "start": 1.3,
+      "end": 2.8
+    },
+    {
+      "word": "Scheduled",
+      "start": 2.8,
+      "end": 3.06
+    },
+    {
+      "word": "Events",
+      "start": 3.06,
+      "end": 3.34
+    },
+    {
+      "word": "What",
+      "start": 5.28,
+      "end": 5.5
+    },
+    {
+      "word": "time",
+      "start": 5.5,
+      "end": 5.76
+    },
+    {
+      "word": "does",
+      "start": 5.76,
+      "end": 5.96
+    },
+    {
+      "word": "the",
+      "start": 5.96,
+      "end": 6.14
+    },
+    {
+      "word": "movie",
+      "start": 6.14,
+      "end": 6.4
+    },
+    {
+      "word": "start?",
+      "start": 6.4,
+      "end": 7.02
+    },
+    {
+      "word": "It",
+      "start": 7.46,
+      "end": 7.56
+    },
+    {
+      "word": "starts",
+      "start": 7.56,
+      "end": 7.92
+    },
+    {
+      "word": "at",
+      "start": 7.92,
+      "end": 8.14
+    },
+    {
+      "word": "7.30",
+      "start": 8.14,
+      "end": 8.7
+    },
+    {
+      "word": "and",
+      "start": 8.7,
+      "end": 9.36
+    },
+    {
+      "word": "ends",
+      "start": 9.36,
+      "end": 9.74
+    },
+    {
+      "word": "at",
+      "start": 9.74,
+      "end": 9.96
+    },
+    {
+      "word": "9.45.",
+      "start": 9.96,
+      "end": 10.52
+    },
+    {
+      "word": "Good.",
+      "start": 11.52,
+      "end": 11.72
+    },
+    {
+      "word": "We",
+      "start": 11.72,
+      "end": 12.38
+    },
+    {
+      "word": "can",
+      "start": 12.38,
+      "end": 12.54
+    },
+    {
+      "word": "go",
+      "start": 12.54,
+      "end": 12.72
+    },
+    {
+      "word": "on",
+      "start": 12.72,
+      "end": 12.88
+    },
+    {
+      "word": "the",
+      "start": 12.88,
+      "end": 12.98
+    },
+    {
+      "word": "bus",
+      "start": 12.98,
+      "end": 13.32
+    },
+    {
+      "word": "and",
+      "start": 13.32,
+      "end": 13.72
+    },
+    {
+      "word": "get",
+      "start": 13.72,
+      "end": 13.88
+    },
+    {
+      "word": "back",
+      "start": 13.88,
+      "end": 14.1
+    },
+    {
+      "word": "home",
+      "start": 14.1,
+      "end": 14.36
+    },
+    {
+      "word": "before",
+      "start": 14.36,
+      "end": 14.62
+    },
+    {
+      "word": "it's",
+      "start": 14.62,
+      "end": 14.84
+    },
+    {
+      "word": "too",
+      "start": 14.84,
+      "end": 15.06
+    },
+    {
+      "word": "dark.",
+      "start": 15.06,
+      "end": 15.36
+    },
+    {
+      "word": "Is",
+      "start": 16.06,
+      "end": 16.24
+    },
+    {
+      "word": "there",
+      "start": 16.24,
+      "end": 16.36
+    },
+    {
+      "word": "a",
+      "start": 16.36,
+      "end": 16.52
+    },
+    {
+      "word": "bus",
+      "start": 16.52,
+      "end": 16.72
+    },
+    {
+      "word": "stop",
+      "start": 16.72,
+      "end": 17
+    },
+    {
+      "word": "near",
+      "start": 17,
+      "end": 17.22
+    },
+    {
+      "word": "your",
+      "start": 17.22,
+      "end": 17.4
+    },
+    {
+      "word": "house?",
+      "start": 17.4,
+      "end": 17.68
+    },
+    {
+      "word": "Yes.",
+      "start": 18.38,
+      "end": 18.66
+    },
+    {
+      "word": "It",
+      "start": 18.66,
+      "end": 19.04
+    },
+    {
+      "word": "stops",
+      "start": 19.04,
+      "end": 19.42
+    },
+    {
+      "word": "on",
+      "start": 19.42,
+      "end": 19.62
+    },
+    {
+      "word": "the",
+      "start": 19.62,
+      "end": 19.7
+    },
+    {
+      "word": "corner",
+      "start": 19.7,
+      "end": 19.98
+    },
+    {
+      "word": "every",
+      "start": 19.98,
+      "end": 20.54
+    },
+    {
+      "word": "15",
+      "start": 20.54,
+      "end": 21.02
+    },
+    {
+      "word": "minutes.",
+      "start": 21.02,
+      "end": 21.42
+    },
+    {
+      "word": "Perfect.",
+      "start": 22.24,
+      "end": 22.52
+    },
+    {
+      "word": "I'm",
+      "start": 22.52,
+      "end": 23.38
+    },
+    {
+      "word": "looking",
+      "start": 23.38,
+      "end": 23.56
+    },
+    {
+      "word": "forward",
+      "start": 23.56,
+      "end": 23.96
+    },
+    {
+      "word": "to",
+      "start": 23.96,
+      "end": 24.18
+    },
+    {
+      "word": "seeing",
+      "start": 24.18,
+      "end": 24.4
+    },
+    {
+      "word": "this",
+      "start": 24.4,
+      "end": 24.62
+    },
+    {
+      "word": "movie.",
+      "start": 24.62,
+      "end": 24.94
+    }
+  ]
+}

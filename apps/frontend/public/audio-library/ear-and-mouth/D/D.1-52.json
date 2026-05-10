@@ -1,0 +1,160 @@
+{
+  "text": " Exercise 152, reducing articles. The man, a girl. The apple, an orange. The best, a banana. The egg, an opening. The last one, a computer. The easy way, an interview. A",
+  "wordTimestamps": [
+    {
+      "word": "Exercise",
+      "start": 0.56,
+      "end": 1.06
+    },
+    {
+      "word": "152,",
+      "start": 1.06,
+      "end": 2.18
+    },
+    {
+      "word": "reducing",
+      "start": 2.18,
+      "end": 2.72
+    },
+    {
+      "word": "articles.",
+      "start": 2.72,
+      "end": 3.44
+    },
+    {
+      "word": "The",
+      "start": 3.44,
+      "end": 4.94
+    },
+    {
+      "word": "man,",
+      "start": 4.94,
+      "end": 5.5
+    },
+    {
+      "word": "a",
+      "start": 5.5,
+      "end": 6.48
+    },
+    {
+      "word": "girl.",
+      "start": 6.48,
+      "end": 7.28
+    },
+    {
+      "word": "The",
+      "start": 7.28,
+      "end": 7.96
+    },
+    {
+      "word": "apple,",
+      "start": 7.96,
+      "end": 8.8
+    },
+    {
+      "word": "an",
+      "start": 8.8,
+      "end": 9.3
+    },
+    {
+      "word": "orange.",
+      "start": 9.3,
+      "end": 10.08
+    },
+    {
+      "word": "The",
+      "start": 10.08,
+      "end": 10.86
+    },
+    {
+      "word": "best,",
+      "start": 10.86,
+      "end": 11.56
+    },
+    {
+      "word": "a",
+      "start": 11.56,
+      "end": 11.96
+    },
+    {
+      "word": "banana.",
+      "start": 11.06,
+      "end": 12.8
+    },
+    {
+      "word": "The",
+      "start": 12.8,
+      "end": 13.36
+    },
+    {
+      "word": "egg,",
+      "start": 13.36,
+      "end": 14.46
+    },
+    {
+      "word": "an",
+      "start": 14.46,
+      "end": 14.56
+    },
+    {
+      "word": "opening.",
+      "start": 14.56,
+      "end": 15.36
+    },
+    {
+      "word": "The",
+      "start": 15.36,
+      "end": 16.08
+    },
+    {
+      "word": "last",
+      "start": 16.08,
+      "end": 16.44
+    },
+    {
+      "word": "one,",
+      "start": 16.44,
+      "end": 17
+    },
+    {
+      "word": "a",
+      "start": 17,
+      "end": 17.52
+    },
+    {
+      "word": "computer.",
+      "start": 17.52,
+      "end": 18.46
+    },
+    {
+      "word": "The",
+      "start": 18.46,
+      "end": 19.12
+    },
+    {
+      "word": "easy",
+      "start": 19.12,
+      "end": 19.54
+    },
+    {
+      "word": "way,",
+      "start": 19.54,
+      "end": 20.14
+    },
+    {
+      "word": "an",
+      "start": 20.14,
+      "end": 20.66
+    },
+    {
+      "word": "interview.",
+      "start": 20.66,
+      "end": 21.52
+    },
+    {
+      "word": "A",
+      "start": 21.52,
+      "end": 23.56
+    }
+  ]
+}

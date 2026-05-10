@@ -1,0 +1,705 @@
+{
+  "text": " Exercise 127, Descriptive Phrase Story, The Ugly Duckling. The following well-known story has been rewritten to contain only descriptions. Stress the second word of each phrase. Repeat after me. There's a mother duck. She lays three eggs. Soon there are three baby birds. Two of the birds are very beautiful. One of them is quite ugly. The beautiful ducklings make fun of their ugly brother. The poor thing is very unhappy. As the three birds grow older, the ugly duckling begins to change. His gray feathers turn snowy white. His gangly neck becomes beautifully smooth. In early spring, the ugly duckling is swimming in a small pond in the backyard of the old farm. He sees his shimmering reflection in the clear water. What a great surprise! He's no longer an ugly duckling. He has grown into a lovely swan.",
+  "wordTimestamps": [
+    {
+      "word": "Exercise",
+      "start": 0.4,
+      "end": 0.76
+    },
+    {
+      "word": "127,",
+      "start": 0.76,
+      "end": 2.38
+    },
+    {
+      "word": "Descriptive",
+      "start": 2.38,
+      "end": 3.04
+    },
+    {
+      "word": "Phrase",
+      "start": 3.04,
+      "end": 3.4
+    },
+    {
+      "word": "Story,",
+      "start": 3.4,
+      "end": 4.48
+    },
+    {
+      "word": "The",
+      "start": 4.48,
+      "end": 4.58
+    },
+    {
+      "word": "Ugly",
+      "start": 4.58,
+      "end": 4.86
+    },
+    {
+      "word": "Duckling.",
+      "start": 4.86,
+      "end": 5.4
+    },
+    {
+      "word": "The",
+      "start": 6.24,
+      "end": 6.38
+    },
+    {
+      "word": "following",
+      "start": 6.38,
+      "end": 6.76
+    },
+    {
+      "word": "well-known",
+      "start": 6.76,
+      "end": 7.22
+    },
+    {
+      "word": "story",
+      "start": 7.22,
+      "end": 7.66
+    },
+    {
+      "word": "has",
+      "start": 7.66,
+      "end": 7.88
+    },
+    {
+      "word": "been",
+      "start": 7.88,
+      "end": 7.98
+    },
+    {
+      "word": "rewritten",
+      "start": 7.98,
+      "end": 8.4
+    },
+    {
+      "word": "to",
+      "start": 8.4,
+      "end": 8.64
+    },
+    {
+      "word": "contain",
+      "start": 8.64,
+      "end": 8.96
+    },
+    {
+      "word": "only",
+      "start": 8.96,
+      "end": 9.36
+    },
+    {
+      "word": "descriptions.",
+      "start": 9.36,
+      "end": 9.9
+    },
+    {
+      "word": "Stress",
+      "start": 10.84,
+      "end": 11.04
+    },
+    {
+      "word": "the",
+      "start": 11.04,
+      "end": 11.32
+    },
+    {
+      "word": "second",
+      "start": 11.32,
+      "end": 11.6
+    },
+    {
+      "word": "word",
+      "start": 11.6,
+      "end": 11.98
+    },
+    {
+      "word": "of",
+      "start": 11.98,
+      "end": 12.22
+    },
+    {
+      "word": "each",
+      "start": 12.22,
+      "end": 12.4
+    },
+    {
+      "word": "phrase.",
+      "start": 12.4,
+      "end": 12.74
+    },
+    {
+      "word": "Repeat",
+      "start": 15.16,
+      "end": 15.38
+    },
+    {
+      "word": "after",
+      "start": 15.38,
+      "end": 15.72
+    },
+    {
+      "word": "me.",
+      "start": 15.72,
+      "end": 15.98
+    },
+    {
+      "word": "There's",
+      "start": 16.96,
+      "end": 17.2
+    },
+    {
+      "word": "a",
+      "start": 17.2,
+      "end": 17.28
+    },
+    {
+      "word": "mother",
+      "start": 17.28,
+      "end": 17.48
+    },
+    {
+      "word": "duck.",
+      "start": 17.48,
+      "end": 17.82
+    },
+    {
+      "word": "She",
+      "start": 19.4,
+      "end": 19.58
+    },
+    {
+      "word": "lays",
+      "start": 19.58,
+      "end": 19.84
+    },
+    {
+      "word": "three",
+      "start": 19.84,
+      "end": 20.1
+    },
+    {
+      "word": "eggs.",
+      "start": 20.1,
+      "end": 20.66
+    },
+    {
+      "word": "Soon",
+      "start": 22.12,
+      "end": 22.42
+    },
+    {
+      "word": "there",
+      "start": 22.42,
+      "end": 22.66
+    },
+    {
+      "word": "are",
+      "start": 22.66,
+      "end": 22.76
+    },
+    {
+      "word": "three",
+      "start": 22.76,
+      "end": 22.98
+    },
+    {
+      "word": "baby",
+      "start": 22.98,
+      "end": 23.28
+    },
+    {
+      "word": "birds.",
+      "start": 23.28,
+      "end": 23.68
+    },
+    {
+      "word": "Two",
+      "start": 25.86,
+      "end": 26.02
+    },
+    {
+      "word": "of",
+      "start": 26.02,
+      "end": 26.18
+    },
+    {
+      "word": "the",
+      "start": 26.18,
+      "end": 26.26
+    },
+    {
+      "word": "birds",
+      "start": 26.26,
+      "end": 26.48
+    },
+    {
+      "word": "are",
+      "start": 26.48,
+      "end": 26.68
+    },
+    {
+      "word": "very",
+      "start": 26.68,
+      "end": 26.88
+    },
+    {
+      "word": "beautiful.",
+      "start": 26.88,
+      "end": 27.4
+    },
+    {
+      "word": "One",
+      "start": 29.8,
+      "end": 29.9
+    },
+    {
+      "word": "of",
+      "start": 29.9,
+      "end": 30.1
+    },
+    {
+      "word": "them",
+      "start": 30.1,
+      "end": 30.22
+    },
+    {
+      "word": "is",
+      "start": 30.22,
+      "end": 30.38
+    },
+    {
+      "word": "quite",
+      "start": 30.38,
+      "end": 30.62
+    },
+    {
+      "word": "ugly.",
+      "start": 30.62,
+      "end": 31.54
+    },
+    {
+      "word": "The",
+      "start": 32.86,
+      "end": 33.02
+    },
+    {
+      "word": "beautiful",
+      "start": 33.02,
+      "end": 33.34
+    },
+    {
+      "word": "ducklings",
+      "start": 33.34,
+      "end": 33.9
+    },
+    {
+      "word": "make",
+      "start": 33.9,
+      "end": 34.22
+    },
+    {
+      "word": "fun",
+      "start": 34.22,
+      "end": 34.44
+    },
+    {
+      "word": "of",
+      "start": 34.44,
+      "end": 34.6
+    },
+    {
+      "word": "their",
+      "start": 34.6,
+      "end": 34.74
+    },
+    {
+      "word": "ugly",
+      "start": 34.74,
+      "end": 34.96
+    },
+    {
+      "word": "brother.",
+      "start": 34.96,
+      "end": 35.42
+    },
+    {
+      "word": "The",
+      "start": 37.76,
+      "end": 37.98
+    },
+    {
+      "word": "poor",
+      "start": 37.98,
+      "end": 38.2
+    },
+    {
+      "word": "thing",
+      "start": 38.2,
+      "end": 38.52
+    },
+    {
+      "word": "is",
+      "start": 38.52,
+      "end": 38.76
+    },
+    {
+      "word": "very",
+      "start": 38.76,
+      "end": 38.98
+    },
+    {
+      "word": "unhappy.",
+      "start": 38.98,
+      "end": 40.1
+    },
+    {
+      "word": "As",
+      "start": 41.72,
+      "end": 41.94
+    },
+    {
+      "word": "the",
+      "start": 41.94,
+      "end": 42.08
+    },
+    {
+      "word": "three",
+      "start": 42.08,
+      "end": 42.26
+    },
+    {
+      "word": "birds",
+      "start": 42.26,
+      "end": 42.68
+    },
+    {
+      "word": "grow",
+      "start": 42.68,
+      "end": 42.96
+    },
+    {
+      "word": "older,",
+      "start": 42.96,
+      "end": 43.4
+    },
+    {
+      "word": "the",
+      "start": 45.1,
+      "end": 45.34
+    },
+    {
+      "word": "ugly",
+      "start": 45.34,
+      "end": 45.62
+    },
+    {
+      "word": "duckling",
+      "start": 45.62,
+      "end": 46.08
+    },
+    {
+      "word": "begins",
+      "start": 46.08,
+      "end": 46.46
+    },
+    {
+      "word": "to",
+      "start": 46.46,
+      "end": 46.68
+    },
+    {
+      "word": "change.",
+      "start": 46.68,
+      "end": 47.5
+    },
+    {
+      "word": "His",
+      "start": 49.34,
+      "end": 49.58
+    },
+    {
+      "word": "gray",
+      "start": 49.58,
+      "end": 49.82
+    },
+    {
+      "word": "feathers",
+      "start": 49.82,
+      "end": 50.26
+    },
+    {
+      "word": "turn",
+      "start": 50.26,
+      "end": 50.7
+    },
+    {
+      "word": "snowy",
+      "start": 50.7,
+      "end": 51.22
+    },
+    {
+      "word": "white.",
+      "start": 51.22,
+      "end": 51.56
+    },
+    {
+      "word": "His",
+      "start": 53.94,
+      "end": 54.2
+    },
+    {
+      "word": "gangly",
+      "start": 54.2,
+      "end": 54.6
+    },
+    {
+      "word": "neck",
+      "start": 54.6,
+      "end": 54.94
+    },
+    {
+      "word": "becomes",
+      "start": 54.94,
+      "end": 55.34
+    },
+    {
+      "word": "beautifully",
+      "start": 55.34,
+      "end": 55.82
+    },
+    {
+      "word": "smooth.",
+      "start": 55.82,
+      "end": 56.94
+    },
+    {
+      "word": "In",
+      "start": 59.12,
+      "end": 59.24
+    },
+    {
+      "word": "early",
+      "start": 59.24,
+      "end": 59.54
+    },
+    {
+      "word": "spring,",
+      "start": 59.54,
+      "end": 61.94
+    },
+    {
+      "word": "the",
+      "start": 61.94,
+      "end": 61.96
+    },
+    {
+      "word": "ugly",
+      "start": 61.96,
+      "end": 62.22
+    },
+    {
+      "word": "duckling",
+      "start": 62.22,
+      "end": 62.72
+    },
+    {
+      "word": "is",
+      "start": 62.72,
+      "end": 62.9
+    },
+    {
+      "word": "swimming",
+      "start": 62.9,
+      "end": 63.22
+    },
+    {
+      "word": "in",
+      "start": 63.22,
+      "end": 63.46
+    },
+    {
+      "word": "a",
+      "start": 63.46,
+      "end": 63.54
+    },
+    {
+      "word": "small",
+      "start": 63.54,
+      "end": 63.86
+    },
+    {
+      "word": "pond",
+      "start": 63.86,
+      "end": 64.48
+    },
+    {
+      "word": "in",
+      "start": 64.48,
+      "end": 66.62
+    },
+    {
+      "word": "the",
+      "start": 66.62,
+      "end": 66.74
+    },
+    {
+      "word": "backyard",
+      "start": 66.74,
+      "end": 67.2
+    },
+    {
+      "word": "of",
+      "start": 67.2,
+      "end": 67.62
+    },
+    {
+      "word": "the",
+      "start": 67.62,
+      "end": 67.74
+    },
+    {
+      "word": "old",
+      "start": 67.74,
+      "end": 67.96
+    },
+    {
+      "word": "farm.",
+      "start": 67.96,
+      "end": 68.54
+    },
+    {
+      "word": "He",
+      "start": 70.52,
+      "end": 70.7
+    },
+    {
+      "word": "sees",
+      "start": 70.7,
+      "end": 71.04
+    },
+    {
+      "word": "his",
+      "start": 71.04,
+      "end": 71.22
+    },
+    {
+      "word": "shimmering",
+      "start": 71.22,
+      "end": 71.66
+    },
+    {
+      "word": "reflection",
+      "start": 71.66,
+      "end": 72.16
+    },
+    {
+      "word": "in",
+      "start": 72.16,
+      "end": 72.64
+    },
+    {
+      "word": "the",
+      "start": 72.64,
+      "end": 72.78
+    },
+    {
+      "word": "clear",
+      "start": 72.78,
+      "end": 73
+    },
+    {
+      "word": "water.",
+      "start": 73,
+      "end": 73.48
+    },
+    {
+      "word": "What",
+      "start": 75.24,
+      "end": 75.48
+    },
+    {
+      "word": "a",
+      "start": 75.48,
+      "end": 75.6
+    },
+    {
+      "word": "great",
+      "start": 75.6,
+      "end": 75.8
+    },
+    {
+      "word": "surprise!",
+      "start": 75.8,
+      "end": 76.16
+    },
+    {
+      "word": "He's",
+      "start": 77.84,
+      "end": 78.1
+    },
+    {
+      "word": "no",
+      "start": 78.1,
+      "end": 78.24
+    },
+    {
+      "word": "longer",
+      "start": 78.24,
+      "end": 78.58
+    },
+    {
+      "word": "an",
+      "start": 78.58,
+      "end": 78.8
+    },
+    {
+      "word": "ugly",
+      "start": 78.8,
+      "end": 79.06
+    },
+    {
+      "word": "duckling.",
+      "start": 79.06,
+      "end": 79.5
+    },
+    {
+      "word": "He",
+      "start": 80.74,
+      "end": 80.94
+    },
+    {
+      "word": "has",
+      "start": 80.94,
+      "end": 81.1
+    },
+    {
+      "word": "grown",
+      "start": 81.1,
+      "end": 81.26
+    },
+    {
+      "word": "into",
+      "start": 81.26,
+      "end": 81.6
+    },
+    {
+      "word": "a",
+      "start": 81.6,
+      "end": 81.82
+    },
+    {
+      "word": "lovely",
+      "start": 81.82,
+      "end": 82.14
+    },
+    {
+      "word": "swan.",
+      "start": 82.14,
+      "end": 83.14
+    }
+  ]
+}

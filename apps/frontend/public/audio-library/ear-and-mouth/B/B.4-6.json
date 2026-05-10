@@ -1,0 +1,750 @@
+{
+  "text": " Exercise 4.6, Rule 4. Held T before N. The held T is, strictly speaking, not really a T at all. 1. He's forgotten the carton of satin mittens. 2. She's certain that he has written it. 3. The cotton curtain is not in the fountain. 4. The hikers went in the mountains 5. Martin has gotten a kitten 6. Students study Latin in Britain 7. Whitney has a patent on those sentences 8. He has not forgotten what was written about the mutant on the mountain 9. It's not certain that it was gotten from the fountain. 10. You need to put an orange cotton curtain on that window. 11. We like that certain satin better than the carton of cotton curtains. 12. The Intercontinental Hotel is in Seattle. 13. The frightened witness had forgotten the important written message. 14. The child wasn't beaten because he'd bitten the button.",
+  "wordTimestamps": [
+    {
+      "word": "Exercise",
+      "start": 0.4,
+      "end": 0.84
+    },
+    {
+      "word": "4.6,",
+      "start": 0.84,
+      "end": 2.16
+    },
+    {
+      "word": "Rule",
+      "start": 2.16,
+      "end": 2.22
+    },
+    {
+      "word": "4.",
+      "start": 2.22,
+      "end": 2.72
+    },
+    {
+      "word": "Held",
+      "start": 2.72,
+      "end": 3.76
+    },
+    {
+      "word": "T",
+      "start": 3.76,
+      "end": 3.98
+    },
+    {
+      "word": "before",
+      "start": 3.98,
+      "end": 4.42
+    },
+    {
+      "word": "N.",
+      "start": 4.42,
+      "end": 4.96
+    },
+    {
+      "word": "The",
+      "start": 4.96,
+      "end": 6.44
+    },
+    {
+      "word": "held",
+      "start": 6.44,
+      "end": 6.8
+    },
+    {
+      "word": "T",
+      "start": 6.8,
+      "end": 7.14
+    },
+    {
+      "word": "is,",
+      "start": 7.14,
+      "end": 7.82
+    },
+    {
+      "word": "strictly",
+      "start": 7.82,
+      "end": 8.32
+    },
+    {
+      "word": "speaking,",
+      "start": 8.32,
+      "end": 8.9
+    },
+    {
+      "word": "not",
+      "start": 8.9,
+      "end": 9.56
+    },
+    {
+      "word": "really",
+      "start": 9.56,
+      "end": 9.88
+    },
+    {
+      "word": "a",
+      "start": 9.88,
+      "end": 10.08
+    },
+    {
+      "word": "T",
+      "start": 10.08,
+      "end": 10.2
+    },
+    {
+      "word": "at",
+      "start": 10.2,
+      "end": 10.4
+    },
+    {
+      "word": "all.",
+      "start": 10.4,
+      "end": 10.78
+    },
+    {
+      "word": "1.",
+      "start": 11.38,
+      "end": 12.54
+    },
+    {
+      "word": "He's",
+      "start": 12.54,
+      "end": 12.78
+    },
+    {
+      "word": "forgotten",
+      "start": 12.78,
+      "end": 13.28
+    },
+    {
+      "word": "the",
+      "start": 13.28,
+      "end": 13.94
+    },
+    {
+      "word": "carton",
+      "start": 13.94,
+      "end": 14.44
+    },
+    {
+      "word": "of",
+      "start": 14.44,
+      "end": 14.6
+    },
+    {
+      "word": "satin",
+      "start": 14.6,
+      "end": 15.06
+    },
+    {
+      "word": "mittens.",
+      "start": 15.06,
+      "end": 15.74
+    },
+    {
+      "word": "2.",
+      "start": 18.38,
+      "end": 19.02
+    },
+    {
+      "word": "She's",
+      "start": 19.02,
+      "end": 19.78
+    },
+    {
+      "word": "certain",
+      "start": 19.78,
+      "end": 20.1
+    },
+    {
+      "word": "that",
+      "start": 20.1,
+      "end": 20.46
+    },
+    {
+      "word": "he",
+      "start": 20.46,
+      "end": 20.58
+    },
+    {
+      "word": "has",
+      "start": 20.58,
+      "end": 20.76
+    },
+    {
+      "word": "written",
+      "start": 20.76,
+      "end": 21.02
+    },
+    {
+      "word": "it.",
+      "start": 21.02,
+      "end": 21.34
+    },
+    {
+      "word": "3.",
+      "start": 23.52,
+      "end": 24.12
+    },
+    {
+      "word": "The",
+      "start": 24.12,
+      "end": 24.62
+    },
+    {
+      "word": "cotton",
+      "start": 24.62,
+      "end": 25
+    },
+    {
+      "word": "curtain",
+      "start": 25,
+      "end": 25.48
+    },
+    {
+      "word": "is",
+      "start": 25.48,
+      "end": 25.74
+    },
+    {
+      "word": "not",
+      "start": 25.74,
+      "end": 25.92
+    },
+    {
+      "word": "in",
+      "start": 25.92,
+      "end": 26.12
+    },
+    {
+      "word": "the",
+      "start": 26.12,
+      "end": 26.22
+    },
+    {
+      "word": "fountain.",
+      "start": 26.22,
+      "end": 26.58
+    },
+    {
+      "word": "4.",
+      "start": 29.28,
+      "end": 29.92
+    },
+    {
+      "word": "The",
+      "start": 29.92,
+      "end": 30.3
+    },
+    {
+      "word": "hikers",
+      "start": 30.3,
+      "end": 30.68
+    },
+    {
+      "word": "went",
+      "start": 30.68,
+      "end": 30.94
+    },
+    {
+      "word": "in",
+      "start": 30.94,
+      "end": 31.1
+    },
+    {
+      "word": "the",
+      "start": 31.1,
+      "end": 31.2
+    },
+    {
+      "word": "mountains",
+      "start": 31.2,
+      "end": 31.52
+    },
+    {
+      "word": "5.",
+      "start": 33.82,
+      "end": 34.82
+    },
+    {
+      "word": "Martin",
+      "start": 34.82,
+      "end": 35.14
+    },
+    {
+      "word": "has",
+      "start": 35.14,
+      "end": 35.4
+    },
+    {
+      "word": "gotten",
+      "start": 35.4,
+      "end": 35.66
+    },
+    {
+      "word": "a",
+      "start": 35.66,
+      "end": 35.86
+    },
+    {
+      "word": "kitten",
+      "start": 35.86,
+      "end": 36.08
+    },
+    {
+      "word": "6.",
+      "start": 38.58,
+      "end": 39.74
+    },
+    {
+      "word": "Students",
+      "start": 39.74,
+      "end": 40.2
+    },
+    {
+      "word": "study",
+      "start": 40.2,
+      "end": 40.6
+    },
+    {
+      "word": "Latin",
+      "start": 40.6,
+      "end": 40.8
+    },
+    {
+      "word": "in",
+      "start": 40.8,
+      "end": 41.22
+    },
+    {
+      "word": "Britain",
+      "start": 41.22,
+      "end": 41.48
+    },
+    {
+      "word": "7.",
+      "start": 44.22,
+      "end": 45.12
+    },
+    {
+      "word": "Whitney",
+      "start": 45.12,
+      "end": 45.46
+    },
+    {
+      "word": "has",
+      "start": 45.46,
+      "end": 45.82
+    },
+    {
+      "word": "a",
+      "start": 45.82,
+      "end": 45.96
+    },
+    {
+      "word": "patent",
+      "start": 45.96,
+      "end": 46.3
+    },
+    {
+      "word": "on",
+      "start": 46.3,
+      "end": 46.52
+    },
+    {
+      "word": "those",
+      "start": 46.52,
+      "end": 46.72
+    },
+    {
+      "word": "sentences",
+      "start": 46.72,
+      "end": 47.18
+    },
+    {
+      "word": "8.",
+      "start": 49.94,
+      "end": 50.58
+    },
+    {
+      "word": "He",
+      "start": 50.58,
+      "end": 50.86
+    },
+    {
+      "word": "has",
+      "start": 50.86,
+      "end": 51.04
+    },
+    {
+      "word": "not",
+      "start": 51.04,
+      "end": 51.22
+    },
+    {
+      "word": "forgotten",
+      "start": 51.22,
+      "end": 51.66
+    },
+    {
+      "word": "what",
+      "start": 51.66,
+      "end": 52.2
+    },
+    {
+      "word": "was",
+      "start": 52.2,
+      "end": 52.4
+    },
+    {
+      "word": "written",
+      "start": 52.4,
+      "end": 52.66
+    },
+    {
+      "word": "about",
+      "start": 52.66,
+      "end": 53
+    },
+    {
+      "word": "the",
+      "start": 53,
+      "end": 53.22
+    },
+    {
+      "word": "mutant",
+      "start": 53.22,
+      "end": 53.52
+    },
+    {
+      "word": "on",
+      "start": 53.52,
+      "end": 53.8
+    },
+    {
+      "word": "the",
+      "start": 53.8,
+      "end": 53.9
+    },
+    {
+      "word": "mountain",
+      "start": 53.9,
+      "end": 54.24
+    },
+    {
+      "word": "9.",
+      "start": 57.76,
+      "end": 58.3
+    },
+    {
+      "word": "It's",
+      "start": 58.3,
+      "end": 58.86
+    },
+    {
+      "word": "not",
+      "start": 58.86,
+      "end": 59.02
+    },
+    {
+      "word": "certain",
+      "start": 59.02,
+      "end": 59.4
+    },
+    {
+      "word": "that",
+      "start": 59.4,
+      "end": 59.66
+    },
+    {
+      "word": "it",
+      "start": 59.66,
+      "end": 59.74
+    },
+    {
+      "word": "was",
+      "start": 59.74,
+      "end": 59.86
+    },
+    {
+      "word": "gotten",
+      "start": 59.86,
+      "end": 60.16
+    },
+    {
+      "word": "from",
+      "start": 60.16,
+      "end": 60.4
+    },
+    {
+      "word": "the",
+      "start": 60.4,
+      "end": 60.56
+    },
+    {
+      "word": "fountain.",
+      "start": 60.56,
+      "end": 60.92
+    },
+    {
+      "word": "10.",
+      "start": 63.28,
+      "end": 63.9
+    },
+    {
+      "word": "You",
+      "start": 63.9,
+      "end": 64.38
+    },
+    {
+      "word": "need",
+      "start": 64.38,
+      "end": 64.52
+    },
+    {
+      "word": "to",
+      "start": 64.52,
+      "end": 64.64
+    },
+    {
+      "word": "put",
+      "start": 64.64,
+      "end": 64.8
+    },
+    {
+      "word": "an",
+      "start": 64.8,
+      "end": 64.98
+    },
+    {
+      "word": "orange",
+      "start": 64.98,
+      "end": 65.18
+    },
+    {
+      "word": "cotton",
+      "start": 65.18,
+      "end": 65.54
+    },
+    {
+      "word": "curtain",
+      "start": 65.54,
+      "end": 65.92
+    },
+    {
+      "word": "on",
+      "start": 65.92,
+      "end": 66.18
+    },
+    {
+      "word": "that",
+      "start": 66.18,
+      "end": 66.36
+    },
+    {
+      "word": "window.",
+      "start": 66.36,
+      "end": 66.7
+    },
+    {
+      "word": "11.",
+      "start": 69.66,
+      "end": 70.4
+    },
+    {
+      "word": "We",
+      "start": 70.4,
+      "end": 70.78
+    },
+    {
+      "word": "like",
+      "start": 70.78,
+      "end": 71.02
+    },
+    {
+      "word": "that",
+      "start": 71.02,
+      "end": 71.2
+    },
+    {
+      "word": "certain",
+      "start": 71.2,
+      "end": 71.56
+    },
+    {
+      "word": "satin",
+      "start": 71.56,
+      "end": 72.06
+    },
+    {
+      "word": "better",
+      "start": 72.06,
+      "end": 72.36
+    },
+    {
+      "word": "than",
+      "start": 72.36,
+      "end": 72.52
+    },
+    {
+      "word": "the",
+      "start": 72.52,
+      "end": 72.66
+    },
+    {
+      "word": "carton",
+      "start": 72.66,
+      "end": 73
+    },
+    {
+      "word": "of",
+      "start": 73,
+      "end": 73.12
+    },
+    {
+      "word": "cotton",
+      "start": 73.12,
+      "end": 73.4
+    },
+    {
+      "word": "curtains.",
+      "start": 73.4,
+      "end": 73.88
+    },
+    {
+      "word": "12.",
+      "start": 77.06,
+      "end": 77.88
+    },
+    {
+      "word": "The",
+      "start": 77.88,
+      "end": 78.22
+    },
+    {
+      "word": "Intercontinental",
+      "start": 78.22,
+      "end": 78.9
+    },
+    {
+      "word": "Hotel",
+      "start": 78.9,
+      "end": 79.22
+    },
+    {
+      "word": "is",
+      "start": 79.22,
+      "end": 79.64
+    },
+    {
+      "word": "in",
+      "start": 79.64,
+      "end": 79.76
+    },
+    {
+      "word": "Seattle.",
+      "start": 79.76,
+      "end": 80.4
+    },
+    {
+      "word": "13.",
+      "start": 82.98,
+      "end": 83.68
+    },
+    {
+      "word": "The",
+      "start": 83.68,
+      "end": 84.12
+    },
+    {
+      "word": "frightened",
+      "start": 84.12,
+      "end": 84.46
+    },
+    {
+      "word": "witness",
+      "start": 84.46,
+      "end": 84.88
+    },
+    {
+      "word": "had",
+      "start": 84.88,
+      "end": 85.16
+    },
+    {
+      "word": "forgotten",
+      "start": 85.16,
+      "end": 85.54
+    },
+    {
+      "word": "the",
+      "start": 85.54,
+      "end": 85.82
+    },
+    {
+      "word": "important",
+      "start": 85.82,
+      "end": 86.2
+    },
+    {
+      "word": "written",
+      "start": 86.2,
+      "end": 86.5
+    },
+    {
+      "word": "message.",
+      "start": 86.5,
+      "end": 87.5
+    },
+    {
+      "word": "14.",
+      "start": 89.58,
+      "end": 90.4
+    },
+    {
+      "word": "The",
+      "start": 90.4,
+      "end": 90.8
+    },
+    {
+      "word": "child",
+      "start": 90.8,
+      "end": 91.08
+    },
+    {
+      "word": "wasn't",
+      "start": 91.08,
+      "end": 91.48
+    },
+    {
+      "word": "beaten",
+      "start": 91.48,
+      "end": 91.82
+    },
+    {
+      "word": "because",
+      "start": 91.82,
+      "end": 92.18
+    },
+    {
+      "word": "he'd",
+      "start": 92.18,
+      "end": 92.44
+    },
+    {
+      "word": "bitten",
+      "start": 92.44,
+      "end": 92.6
+    },
+    {
+      "word": "the",
+      "start": 92.6,
+      "end": 92.8
+    },
+    {
+      "word": "button.",
+      "start": 92.8,
+      "end": 93.3
+    }
+  ]
+}

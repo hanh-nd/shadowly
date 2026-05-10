@@ -1,0 +1,735 @@
+{
+  "text": " Exercise 146, Regular Transition of Nouns and Verbs. In the list below, change the stress from the first syllable for nouns to the second syllable for verbs. This is a regular, consistent change. Intonation is so powerful that you'll notice that when the stress changes, the pronunciation of the vowels do too. repeat. fault a desert to desert a discharge to discharge an envelope to envelop an incline to incline an influence to influence an insert to insert an insult to insult an object to object, perfect to perfect, a permit to permit, a present to present, produce to produce, progress to progress, a project to project, a pronoun to pronounce, A protest to protest. A rebel to rebel. A recall to recall. A record to record. A reject to reject. Research to research. A subject to subject. A survey to survey. a suspect to suspect",
+  "wordTimestamps": [
+    {
+      "word": "Exercise",
+      "start": 0.58,
+      "end": 1.06
+    },
+    {
+      "word": "146,",
+      "start": 1.06,
+      "end": 2.26
+    },
+    {
+      "word": "Regular",
+      "start": 2.26,
+      "end": 2.94
+    },
+    {
+      "word": "Transition",
+      "start": 2.94,
+      "end": 3.56
+    },
+    {
+      "word": "of",
+      "start": 3.56,
+      "end": 3.78
+    },
+    {
+      "word": "Nouns",
+      "start": 3.78,
+      "end": 4.1
+    },
+    {
+      "word": "and",
+      "start": 4.1,
+      "end": 4.22
+    },
+    {
+      "word": "Verbs.",
+      "start": 4.22,
+      "end": 4.84
+    },
+    {
+      "word": "In",
+      "start": 5.44,
+      "end": 5.7
+    },
+    {
+      "word": "the",
+      "start": 5.7,
+      "end": 5.82
+    },
+    {
+      "word": "list",
+      "start": 5.82,
+      "end": 6.06
+    },
+    {
+      "word": "below,",
+      "start": 6.06,
+      "end": 6.64
+    },
+    {
+      "word": "change",
+      "start": 6.64,
+      "end": 7
+    },
+    {
+      "word": "the",
+      "start": 7,
+      "end": 7.18
+    },
+    {
+      "word": "stress",
+      "start": 7.18,
+      "end": 7.5
+    },
+    {
+      "word": "from",
+      "start": 7.5,
+      "end": 7.76
+    },
+    {
+      "word": "the",
+      "start": 7.76,
+      "end": 7.92
+    },
+    {
+      "word": "first",
+      "start": 7.92,
+      "end": 8.1
+    },
+    {
+      "word": "syllable",
+      "start": 8.1,
+      "end": 8.48
+    },
+    {
+      "word": "for",
+      "start": 8.48,
+      "end": 8.74
+    },
+    {
+      "word": "nouns",
+      "start": 8.74,
+      "end": 9.02
+    },
+    {
+      "word": "to",
+      "start": 9.02,
+      "end": 9.38
+    },
+    {
+      "word": "the",
+      "start": 9.38,
+      "end": 9.46
+    },
+    {
+      "word": "second",
+      "start": 9.46,
+      "end": 9.74
+    },
+    {
+      "word": "syllable",
+      "start": 9.32,
+      "end": 10.12
+    },
+    {
+      "word": "for",
+      "start": 10.12,
+      "end": 10.38
+    },
+    {
+      "word": "verbs.",
+      "start": 10.38,
+      "end": 10.92
+    },
+    {
+      "word": "This",
+      "start": 11.22,
+      "end": 11.78
+    },
+    {
+      "word": "is",
+      "start": 11.78,
+      "end": 11.88
+    },
+    {
+      "word": "a",
+      "start": 11.88,
+      "end": 12.02
+    },
+    {
+      "word": "regular,",
+      "start": 12.02,
+      "end": 12.42
+    },
+    {
+      "word": "consistent",
+      "start": 12.42,
+      "end": 12.98
+    },
+    {
+      "word": "change.",
+      "start": 12.98,
+      "end": 13.84
+    },
+    {
+      "word": "Intonation",
+      "start": 14.24,
+      "end": 14.82
+    },
+    {
+      "word": "is",
+      "start": 14.82,
+      "end": 15.04
+    },
+    {
+      "word": "so",
+      "start": 15.04,
+      "end": 15.18
+    },
+    {
+      "word": "powerful",
+      "start": 15.18,
+      "end": 15.72
+    },
+    {
+      "word": "that",
+      "start": 15.72,
+      "end": 16.04
+    },
+    {
+      "word": "you'll",
+      "start": 16.04,
+      "end": 16.16
+    },
+    {
+      "word": "notice",
+      "start": 16.16,
+      "end": 16.44
+    },
+    {
+      "word": "that",
+      "start": 16.44,
+      "end": 16.68
+    },
+    {
+      "word": "when",
+      "start": 16.68,
+      "end": 16.78
+    },
+    {
+      "word": "the",
+      "start": 16.78,
+      "end": 16.9
+    },
+    {
+      "word": "stress",
+      "start": 16.9,
+      "end": 17.2
+    },
+    {
+      "word": "changes,",
+      "start": 17.2,
+      "end": 18.06
+    },
+    {
+      "word": "the",
+      "start": 18.06,
+      "end": 18.34
+    },
+    {
+      "word": "pronunciation",
+      "start": 18.34,
+      "end": 18.7
+    },
+    {
+      "word": "of",
+      "start": 18.5,
+      "end": 19.1
+    },
+    {
+      "word": "the",
+      "start": 19.1,
+      "end": 19.2
+    },
+    {
+      "word": "vowels",
+      "start": 19.2,
+      "end": 19.52
+    },
+    {
+      "word": "do",
+      "start": 19.52,
+      "end": 19.74
+    },
+    {
+      "word": "too.",
+      "start": 19.74,
+      "end": 20.26
+    },
+    {
+      "word": "repeat.",
+      "start": 21.28,
+      "end": 21.8
+    },
+    {
+      "word": "fault",
+      "start": 51.28,
+      "end": 51.7
+    },
+    {
+      "word": "a",
+      "start": 51.7,
+      "end": 52.8
+    },
+    {
+      "word": "desert",
+      "start": 52.8,
+      "end": 53.26
+    },
+    {
+      "word": "to",
+      "start": 53.26,
+      "end": 54.22
+    },
+    {
+      "word": "desert",
+      "start": 54.22,
+      "end": 54.68
+    },
+    {
+      "word": "a",
+      "start": 54.68,
+      "end": 55.8
+    },
+    {
+      "word": "discharge",
+      "start": 55.8,
+      "end": 56.38
+    },
+    {
+      "word": "to",
+      "start": 56.38,
+      "end": 57.28
+    },
+    {
+      "word": "discharge",
+      "start": 57.28,
+      "end": 57.86
+    },
+    {
+      "word": "an",
+      "start": 57.86,
+      "end": 59.08
+    },
+    {
+      "word": "envelope",
+      "start": 59.08,
+      "end": 59.58
+    },
+    {
+      "word": "to",
+      "start": 59.58,
+      "end": 60.58
+    },
+    {
+      "word": "envelop",
+      "start": 60.58,
+      "end": 60.98
+    },
+    {
+      "word": "an",
+      "start": 60.98,
+      "end": 62.22
+    },
+    {
+      "word": "incline",
+      "start": 62.06,
+      "end": 62.92
+    },
+    {
+      "word": "to",
+      "start": 62.92,
+      "end": 63.7
+    },
+    {
+      "word": "incline",
+      "start": 63.7,
+      "end": 64.42
+    },
+    {
+      "word": "an",
+      "start": 64.42,
+      "end": 65.42
+    },
+    {
+      "word": "influence",
+      "start": 65.42,
+      "end": 66.18
+    },
+    {
+      "word": "to",
+      "start": 65.83069,
+      "end": 66.85069
+    },
+    {
+      "word": "influence,",
+      "start": 66.85069,
+      "end": 67.35069
+    },
+    {
+      "word": "an",
+      "start": 67.35069,
+      "end": 69.25069
+    },
+    {
+      "word": "insert",
+      "start": 69.25069,
+      "end": 69.670685
+    },
+    {
+      "word": "to",
+      "start": 69.670685,
+      "end": 70.87069
+    },
+    {
+      "word": "insert,",
+      "start": 70.87069,
+      "end": 71.33069
+    },
+    {
+      "word": "an",
+      "start": 71.33069,
+      "end": 72.81069
+    },
+    {
+      "word": "insult",
+      "start": 72.81069,
+      "end": 73.29069
+    },
+    {
+      "word": "to",
+      "start": 73.29069,
+      "end": 74.37069
+    },
+    {
+      "word": "insult,",
+      "start": 74.37069,
+      "end": 75.41069
+    },
+    {
+      "word": "an",
+      "start": 76.05069,
+      "end": 76.15069
+    },
+    {
+      "word": "object",
+      "start": 76.15069,
+      "end": 76.61069
+    },
+    {
+      "word": "to",
+      "start": 76.61069,
+      "end": 78.01069
+    },
+    {
+      "word": "object,",
+      "start": 78.01069,
+      "end": 78.97069
+    },
+    {
+      "word": "perfect",
+      "start": 78.97069,
+      "end": 80.19069
+    },
+    {
+      "word": "to",
+      "start": 80.19069,
+      "end": 81.25069
+    },
+    {
+      "word": "perfect,",
+      "start": 81.25069,
+      "end": 81.61069
+    },
+    {
+      "word": "a",
+      "start": 81.61069,
+      "end": 83.05069
+    },
+    {
+      "word": "permit",
+      "start": 83.05069,
+      "end": 83.51069
+    },
+    {
+      "word": "to",
+      "start": 83.51069,
+      "end": 84.71069
+    },
+    {
+      "word": "permit,",
+      "start": 84.71069,
+      "end": 85.05069
+    },
+    {
+      "word": "a",
+      "start": 85.05069,
+      "end": 86.310684
+    },
+    {
+      "word": "present",
+      "start": 86.310684,
+      "end": 86.79069
+    },
+    {
+      "word": "to",
+      "start": 86.79069,
+      "end": 87.75069
+    },
+    {
+      "word": "present,",
+      "start": 87.75069,
+      "end": 88.79069
+    },
+    {
+      "word": "produce",
+      "start": 89.45069,
+      "end": 89.77069
+    },
+    {
+      "word": "to",
+      "start": 89.77069,
+      "end": 90.85069
+    },
+    {
+      "word": "produce,",
+      "start": 90.85069,
+      "end": 92.05069
+    },
+    {
+      "word": "progress",
+      "start": 92.05069,
+      "end": 92.97069
+    },
+    {
+      "word": "to",
+      "start": 92.97069,
+      "end": 94.15069
+    },
+    {
+      "word": "progress,",
+      "start": 94.15069,
+      "end": 94.83069
+    },
+    {
+      "word": "a",
+      "start": 94.83069,
+      "end": 95.85069
+    },
+    {
+      "word": "project",
+      "start": 95.85069,
+      "end": 96.37069
+    },
+    {
+      "word": "to",
+      "start": 96.37069,
+      "end": 97.69069
+    },
+    {
+      "word": "project,",
+      "start": 97.69069,
+      "end": 98.05069
+    },
+    {
+      "word": "a",
+      "start": 98.05069,
+      "end": 99.37069
+    },
+    {
+      "word": "pronoun",
+      "start": 99.37069,
+      "end": 99.810684
+    },
+    {
+      "word": "to",
+      "start": 99.810684,
+      "end": 100.95068
+    },
+    {
+      "word": "pronounce,",
+      "start": 100.95068,
+      "end": 101.97069
+    },
+    {
+      "word": "A",
+      "start": 102.73069,
+      "end": 102.79069
+    },
+    {
+      "word": "protest",
+      "start": 102.79069,
+      "end": 103.27069
+    },
+    {
+      "word": "to",
+      "start": 103.27069,
+      "end": 104.41069
+    },
+    {
+      "word": "protest.",
+      "start": 104.41069,
+      "end": 104.85069
+    },
+    {
+      "word": "A",
+      "start": 106.15069,
+      "end": 106.310684
+    },
+    {
+      "word": "rebel",
+      "start": 106.310684,
+      "end": 106.670685
+    },
+    {
+      "word": "to",
+      "start": 106.670685,
+      "end": 107.75069
+    },
+    {
+      "word": "rebel.",
+      "start": 107.75069,
+      "end": 108.05069
+    },
+    {
+      "word": "A",
+      "start": 109.41069,
+      "end": 109.59069
+    },
+    {
+      "word": "recall",
+      "start": 109.59069,
+      "end": 110.01069
+    },
+    {
+      "word": "to",
+      "start": 110.01069,
+      "end": 111.170685
+    },
+    {
+      "word": "recall.",
+      "start": 111.170685,
+      "end": 112.37069
+    },
+    {
+      "word": "A",
+      "start": 112.97069,
+      "end": 113.15069
+    },
+    {
+      "word": "record",
+      "start": 113.15069,
+      "end": 113.49069
+    },
+    {
+      "word": "to",
+      "start": 113.49069,
+      "end": 114.61069
+    },
+    {
+      "word": "record.",
+      "start": 114.61069,
+      "end": 115.69069
+    },
+    {
+      "word": "A",
+      "start": 116.43069,
+      "end": 116.570694
+    },
+    {
+      "word": "reject",
+      "start": 116.570694,
+      "end": 116.95068
+    },
+    {
+      "word": "to",
+      "start": 116.95068,
+      "end": 118.11069
+    },
+    {
+      "word": "reject.",
+      "start": 118.11069,
+      "end": 119.29069
+    },
+    {
+      "word": "Research",
+      "start": 119.83069,
+      "end": 120.19069
+    },
+    {
+      "word": "to",
+      "start": 120.19069,
+      "end": 121.41069
+    },
+    {
+      "word": "research.",
+      "start": 121.41069,
+      "end": 122.63069
+    },
+    {
+      "word": "A",
+      "start": 123.09069,
+      "end": 123.23069
+    },
+    {
+      "word": "subject",
+      "start": 123.23069,
+      "end": 123.63069
+    },
+    {
+      "word": "to",
+      "start": 123.63069,
+      "end": 124.79069
+    },
+    {
+      "word": "subject.",
+      "start": 124.79069,
+      "end": 125.69069
+    },
+    {
+      "word": "A",
+      "start": 126.31069,
+      "end": 126.49069
+    },
+    {
+      "word": "survey",
+      "start": 126.49069,
+      "end": 126.91069
+    },
+    {
+      "word": "to",
+      "start": 126.91069,
+      "end": 127.91069
+    },
+    {
+      "word": "survey.",
+      "start": 127.91069,
+      "end": 129.01068
+    },
+    {
+      "word": "a",
+      "start": 129.47069,
+      "end": 129.55069
+    },
+    {
+      "word": "suspect",
+      "start": 129.55069,
+      "end": 130.01068
+    },
+    {
+      "word": "to",
+      "start": 129.79068,
+      "end": 131.19069
+    },
+    {
+      "word": "suspect",
+      "start": 131.19069,
+      "end": 131.57068
+    }
+  ]
+}

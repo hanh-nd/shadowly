@@ -1,0 +1,780 @@
+{
+  "text": " Exercise 141, Supporting Words. For this next part of the intonation of grammatical elements, each sentence has a few extra words to help you get the meaning. Keep the same strong intonation that you used before and add the new stress where you see the bold face. Use your rubber band. 1. The dogs eat the bones every day. 2. The dogs ate the bones last week. 3. The dogs are eating the bones right now. 4. The dogs will eat the bones if they're here. 5. The dogs would eat the bones if they were here. 6. The dogs would have eaten the bones if they'd been here. 7. The dogs that have eaten the bones are sick. 8. The dogs have eaten the bones every day. 9. The dogs had eaten the bones by the time we got there. 10. The dogs will have eaten the bones by the time we get there.",
+  "wordTimestamps": [
+    {
+      "word": "Exercise",
+      "start": 0.78,
+      "end": 1.3
+    },
+    {
+      "word": "141,",
+      "start": 1.3,
+      "end": 2.72
+    },
+    {
+      "word": "Supporting",
+      "start": 2.72,
+      "end": 3.08
+    },
+    {
+      "word": "Words.",
+      "start": 3.08,
+      "end": 3.64
+    },
+    {
+      "word": "For",
+      "start": 4.06,
+      "end": 4.54
+    },
+    {
+      "word": "this",
+      "start": 4.54,
+      "end": 4.72
+    },
+    {
+      "word": "next",
+      "start": 4.72,
+      "end": 4.94
+    },
+    {
+      "word": "part",
+      "start": 4.94,
+      "end": 5.2
+    },
+    {
+      "word": "of",
+      "start": 5.2,
+      "end": 5.34
+    },
+    {
+      "word": "the",
+      "start": 5.34,
+      "end": 5.44
+    },
+    {
+      "word": "intonation",
+      "start": 5.44,
+      "end": 5.9
+    },
+    {
+      "word": "of",
+      "start": 5.9,
+      "end": 6.1
+    },
+    {
+      "word": "grammatical",
+      "start": 6.1,
+      "end": 6.56
+    },
+    {
+      "word": "elements,",
+      "start": 6.56,
+      "end": 7.26
+    },
+    {
+      "word": "each",
+      "start": 7.26,
+      "end": 7.8
+    },
+    {
+      "word": "sentence",
+      "start": 7.8,
+      "end": 8.16
+    },
+    {
+      "word": "has",
+      "start": 8.16,
+      "end": 8.4
+    },
+    {
+      "word": "a",
+      "start": 8.4,
+      "end": 8.56
+    },
+    {
+      "word": "few",
+      "start": 8.56,
+      "end": 8.68
+    },
+    {
+      "word": "extra",
+      "start": 8.68,
+      "end": 9.06
+    },
+    {
+      "word": "words",
+      "start": 9.06,
+      "end": 9.42
+    },
+    {
+      "word": "to",
+      "start": 8.94,
+      "end": 9.64
+    },
+    {
+      "word": "help",
+      "start": 9.64,
+      "end": 9.82
+    },
+    {
+      "word": "you",
+      "start": 9.82,
+      "end": 10.1
+    },
+    {
+      "word": "get",
+      "start": 10.1,
+      "end": 10.22
+    },
+    {
+      "word": "the",
+      "start": 10.22,
+      "end": 10.42
+    },
+    {
+      "word": "meaning.",
+      "start": 10.42,
+      "end": 10.9
+    },
+    {
+      "word": "Keep",
+      "start": 11.36,
+      "end": 11.68
+    },
+    {
+      "word": "the",
+      "start": 11.68,
+      "end": 11.82
+    },
+    {
+      "word": "same",
+      "start": 11.82,
+      "end": 12.14
+    },
+    {
+      "word": "strong",
+      "start": 12.14,
+      "end": 12.48
+    },
+    {
+      "word": "intonation",
+      "start": 12.48,
+      "end": 13.1
+    },
+    {
+      "word": "that",
+      "start": 13.1,
+      "end": 13.32
+    },
+    {
+      "word": "you",
+      "start": 13.32,
+      "end": 13.48
+    },
+    {
+      "word": "used",
+      "start": 13.48,
+      "end": 13.62
+    },
+    {
+      "word": "before",
+      "start": 13.62,
+      "end": 14.2
+    },
+    {
+      "word": "and",
+      "start": 14.2,
+      "end": 14.88
+    },
+    {
+      "word": "add",
+      "start": 14.88,
+      "end": 15.18
+    },
+    {
+      "word": "the",
+      "start": 15.18,
+      "end": 15.34
+    },
+    {
+      "word": "new",
+      "start": 15.34,
+      "end": 15.46
+    },
+    {
+      "word": "stress",
+      "start": 15.46,
+      "end": 15.78
+    },
+    {
+      "word": "where",
+      "start": 15.78,
+      "end": 16.04
+    },
+    {
+      "word": "you",
+      "start": 16.04,
+      "end": 16.22
+    },
+    {
+      "word": "see",
+      "start": 16.22,
+      "end": 16.36
+    },
+    {
+      "word": "the",
+      "start": 15.82,
+      "end": 16.52
+    },
+    {
+      "word": "bold",
+      "start": 16.52,
+      "end": 16.74
+    },
+    {
+      "word": "face.",
+      "start": 16.74,
+      "end": 17.42
+    },
+    {
+      "word": "Use",
+      "start": 17.72,
+      "end": 18.12
+    },
+    {
+      "word": "your",
+      "start": 18.12,
+      "end": 18.22
+    },
+    {
+      "word": "rubber",
+      "start": 18.22,
+      "end": 18.44
+    },
+    {
+      "word": "band.",
+      "start": 18.44,
+      "end": 19
+    },
+    {
+      "word": "1.",
+      "start": 20.14,
+      "end": 20.7
+    },
+    {
+      "word": "The",
+      "start": 20.58,
+      "end": 21.18
+    },
+    {
+      "word": "dogs",
+      "start": 21.18,
+      "end": 21.46
+    },
+    {
+      "word": "eat",
+      "start": 21.46,
+      "end": 21.68
+    },
+    {
+      "word": "the",
+      "start": 21.68,
+      "end": 21.82
+    },
+    {
+      "word": "bones",
+      "start": 21.82,
+      "end": 22.24
+    },
+    {
+      "word": "every",
+      "start": 22.24,
+      "end": 22.58
+    },
+    {
+      "word": "day.",
+      "start": 22.58,
+      "end": 23.18
+    },
+    {
+      "word": "2.",
+      "start": 23.74,
+      "end": 25.68
+    },
+    {
+      "word": "The",
+      "start": 25.96,
+      "end": 26.08
+    },
+    {
+      "word": "dogs",
+      "start": 26.08,
+      "end": 26.32
+    },
+    {
+      "word": "ate",
+      "start": 26.32,
+      "end": 26.52
+    },
+    {
+      "word": "the",
+      "start": 26.52,
+      "end": 26.7
+    },
+    {
+      "word": "bones",
+      "start": 26.7,
+      "end": 27.04
+    },
+    {
+      "word": "last",
+      "start": 27.04,
+      "end": 27.34
+    },
+    {
+      "word": "week.",
+      "start": 27.34,
+      "end": 27.86
+    },
+    {
+      "word": "3.",
+      "start": 30.24,
+      "end": 30.42
+    },
+    {
+      "word": "The",
+      "start": 30.42,
+      "end": 31.52
+    },
+    {
+      "word": "dogs",
+      "start": 31.52,
+      "end": 31.86
+    },
+    {
+      "word": "are",
+      "start": 31.86,
+      "end": 32.02
+    },
+    {
+      "word": "eating",
+      "start": 32.02,
+      "end": 32.14
+    },
+    {
+      "word": "the",
+      "start": 32.14,
+      "end": 32.32
+    },
+    {
+      "word": "bones",
+      "start": 32.32,
+      "end": 32.62
+    },
+    {
+      "word": "right",
+      "start": 32.62,
+      "end": 32.92
+    },
+    {
+      "word": "now.",
+      "start": 32.92,
+      "end": 33.32
+    },
+    {
+      "word": "4.",
+      "start": 35.82,
+      "end": 36.38
+    },
+    {
+      "word": "The",
+      "start": 36.38,
+      "end": 36.84
+    },
+    {
+      "word": "dogs",
+      "start": 36.84,
+      "end": 37.14
+    },
+    {
+      "word": "will",
+      "start": 37.14,
+      "end": 37.26
+    },
+    {
+      "word": "eat",
+      "start": 37.26,
+      "end": 37.38
+    },
+    {
+      "word": "the",
+      "start": 37.38,
+      "end": 37.52
+    },
+    {
+      "word": "bones",
+      "start": 37.52,
+      "end": 37.76
+    },
+    {
+      "word": "if",
+      "start": 37.76,
+      "end": 38.04
+    },
+    {
+      "word": "they're",
+      "start": 38.04,
+      "end": 38.2
+    },
+    {
+      "word": "here.",
+      "start": 38.2,
+      "end": 38.5
+    },
+    {
+      "word": "5.",
+      "start": 40.76,
+      "end": 41.4
+    },
+    {
+      "word": "The",
+      "start": 41.4,
+      "end": 41.74
+    },
+    {
+      "word": "dogs",
+      "start": 41.74,
+      "end": 42
+    },
+    {
+      "word": "would",
+      "start": 42,
+      "end": 42.14
+    },
+    {
+      "word": "eat",
+      "start": 42.14,
+      "end": 42.22
+    },
+    {
+      "word": "the",
+      "start": 42.22,
+      "end": 42.36
+    },
+    {
+      "word": "bones",
+      "start": 42.36,
+      "end": 42.6
+    },
+    {
+      "word": "if",
+      "start": 42.6,
+      "end": 42.84
+    },
+    {
+      "word": "they",
+      "start": 42.84,
+      "end": 42.98
+    },
+    {
+      "word": "were",
+      "start": 42.98,
+      "end": 43.1
+    },
+    {
+      "word": "here.",
+      "start": 43.1,
+      "end": 43.4
+    },
+    {
+      "word": "6.",
+      "start": 45.62,
+      "end": 46.06
+    },
+    {
+      "word": "The",
+      "start": 46.06,
+      "end": 46.5
+    },
+    {
+      "word": "dogs",
+      "start": 46.5,
+      "end": 46.74
+    },
+    {
+      "word": "would",
+      "start": 46.74,
+      "end": 46.86
+    },
+    {
+      "word": "have",
+      "start": 46.86,
+      "end": 46.94
+    },
+    {
+      "word": "eaten",
+      "start": 46.94,
+      "end": 47.06
+    },
+    {
+      "word": "the",
+      "start": 47.06,
+      "end": 47.24
+    },
+    {
+      "word": "bones",
+      "start": 47.24,
+      "end": 47.46
+    },
+    {
+      "word": "if",
+      "start": 47.46,
+      "end": 47.7
+    },
+    {
+      "word": "they'd",
+      "start": 47.7,
+      "end": 47.9
+    },
+    {
+      "word": "been",
+      "start": 47.9,
+      "end": 48.04
+    },
+    {
+      "word": "here.",
+      "start": 48.04,
+      "end": 48.38
+    },
+    {
+      "word": "7.",
+      "start": 50.68,
+      "end": 51.22
+    },
+    {
+      "word": "The",
+      "start": 51.22,
+      "end": 51.62
+    },
+    {
+      "word": "dogs",
+      "start": 51.62,
+      "end": 51.84
+    },
+    {
+      "word": "that",
+      "start": 51.84,
+      "end": 51.98
+    },
+    {
+      "word": "have",
+      "start": 51.98,
+      "end": 52.04
+    },
+    {
+      "word": "eaten",
+      "start": 52.04,
+      "end": 52.18
+    },
+    {
+      "word": "the",
+      "start": 52.18,
+      "end": 52.38
+    },
+    {
+      "word": "bones",
+      "start": 52.38,
+      "end": 52.6
+    },
+    {
+      "word": "are",
+      "start": 52.6,
+      "end": 52.82
+    },
+    {
+      "word": "sick.",
+      "start": 52.82,
+      "end": 53.44
+    },
+    {
+      "word": "8.",
+      "start": 56.02,
+      "end": 56.58
+    },
+    {
+      "word": "The",
+      "start": 56.58,
+      "end": 57
+    },
+    {
+      "word": "dogs",
+      "start": 57,
+      "end": 57.2
+    },
+    {
+      "word": "have",
+      "start": 57.2,
+      "end": 57.38
+    },
+    {
+      "word": "eaten",
+      "start": 57.38,
+      "end": 57.52
+    },
+    {
+      "word": "the",
+      "start": 57.52,
+      "end": 57.64
+    },
+    {
+      "word": "bones",
+      "start": 57.64,
+      "end": 57.94
+    },
+    {
+      "word": "every",
+      "start": 57.94,
+      "end": 58.22
+    },
+    {
+      "word": "day.",
+      "start": 58.22,
+      "end": 58.78
+    },
+    {
+      "word": "9.",
+      "start": 60.76,
+      "end": 61.42
+    },
+    {
+      "word": "The",
+      "start": 61.42,
+      "end": 62.22
+    },
+    {
+      "word": "dogs",
+      "start": 62.22,
+      "end": 62.46
+    },
+    {
+      "word": "had",
+      "start": 62.46,
+      "end": 62.66
+    },
+    {
+      "word": "eaten",
+      "start": 62.66,
+      "end": 62.74
+    },
+    {
+      "word": "the",
+      "start": 62.74,
+      "end": 62.92
+    },
+    {
+      "word": "bones",
+      "start": 62.92,
+      "end": 63.16
+    },
+    {
+      "word": "by",
+      "start": 63.16,
+      "end": 63.4
+    },
+    {
+      "word": "the",
+      "start": 63.4,
+      "end": 63.54
+    },
+    {
+      "word": "time",
+      "start": 63.54,
+      "end": 63.72
+    },
+    {
+      "word": "we",
+      "start": 63.72,
+      "end": 63.9
+    },
+    {
+      "word": "got",
+      "start": 63.9,
+      "end": 64.1
+    },
+    {
+      "word": "there.",
+      "start": 64.1,
+      "end": 64.52
+    },
+    {
+      "word": "10.",
+      "start": 66.3,
+      "end": 66.86
+    },
+    {
+      "word": "The",
+      "start": 66.86,
+      "end": 67.34
+    },
+    {
+      "word": "dogs",
+      "start": 67.34,
+      "end": 67.58
+    },
+    {
+      "word": "will",
+      "start": 67.58,
+      "end": 67.7
+    },
+    {
+      "word": "have",
+      "start": 67.7,
+      "end": 67.86
+    },
+    {
+      "word": "eaten",
+      "start": 67.86,
+      "end": 67.94
+    },
+    {
+      "word": "the",
+      "start": 67.94,
+      "end": 68.14
+    },
+    {
+      "word": "bones",
+      "start": 68.14,
+      "end": 68.36
+    },
+    {
+      "word": "by",
+      "start": 68.36,
+      "end": 68.58
+    },
+    {
+      "word": "the",
+      "start": 68.58,
+      "end": 68.74
+    },
+    {
+      "word": "time",
+      "start": 68.74,
+      "end": 68.9
+    },
+    {
+      "word": "we",
+      "start": 68.9,
+      "end": 69.12
+    },
+    {
+      "word": "get",
+      "start": 69.12,
+      "end": 69.26
+    },
+    {
+      "word": "there.",
+      "start": 69.26,
+      "end": 69.6
+    }
+  ]
+}

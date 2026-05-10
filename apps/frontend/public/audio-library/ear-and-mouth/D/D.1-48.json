@@ -1,0 +1,980 @@
+{
+  "text": " Exercise 148, regular transition of adjectives and verbs. Mark the intonation or indicate the long vowel on the italicized word, depending which part of speech it is. Pause the CD and mark the proper syllable. See answer key beginning on page 193. Repeat. 1. You need to insert a paragraph here on this newspaper insert. 2. How can you object to this object? 3. I'd like to present you with this present. 4. Would you care to elaborate on his elaborate explanation? 5. The manufacturer couldn't recall if there'd been a recall. 6. The religious convert wanted to convert the world. 7. The political rebels wanted to rebel against the world. 8. The mogul wanted to record a new record for his latest artist. 9. If you perfect your intonation, your accent will be perfect. 10. Due to the drought, the fields didn't produce much produce this year. 11. Unfortunately, City Hall wouldn't permit them to get a permit. 12. Have you heard that your associate is known to associate with gangsters? 13. How much do you estimate that the estimate will be? 14. The facilitator wanted to separate the general topic into separate categories.",
+  "wordTimestamps": [
+    {
+      "word": "Exercise",
+      "start": 0.62,
+      "end": 1.14
+    },
+    {
+      "word": "148,",
+      "start": 1.14,
+      "end": 2.24
+    },
+    {
+      "word": "regular",
+      "start": 2.24,
+      "end": 2.94
+    },
+    {
+      "word": "transition",
+      "start": 2.94,
+      "end": 3.58
+    },
+    {
+      "word": "of",
+      "start": 3.58,
+      "end": 3.76
+    },
+    {
+      "word": "adjectives",
+      "start": 3.76,
+      "end": 4.36
+    },
+    {
+      "word": "and",
+      "start": 4.36,
+      "end": 4.56
+    },
+    {
+      "word": "verbs.",
+      "start": 4.56,
+      "end": 5.24
+    },
+    {
+      "word": "Mark",
+      "start": 6.16,
+      "end": 6.46
+    },
+    {
+      "word": "the",
+      "start": 6.46,
+      "end": 6.62
+    },
+    {
+      "word": "intonation",
+      "start": 6.62,
+      "end": 7.28
+    },
+    {
+      "word": "or",
+      "start": 7.28,
+      "end": 7.56
+    },
+    {
+      "word": "indicate",
+      "start": 7.56,
+      "end": 7.96
+    },
+    {
+      "word": "the",
+      "start": 7.96,
+      "end": 8.16
+    },
+    {
+      "word": "long",
+      "start": 8.16,
+      "end": 8.38
+    },
+    {
+      "word": "vowel",
+      "start": 8.38,
+      "end": 8.76
+    },
+    {
+      "word": "on",
+      "start": 8.76,
+      "end": 8.94
+    },
+    {
+      "word": "the",
+      "start": 8.94,
+      "end": 9.06
+    },
+    {
+      "word": "italicized",
+      "start": 9.06,
+      "end": 9.72
+    },
+    {
+      "word": "word,",
+      "start": 9.72,
+      "end": 10.3
+    },
+    {
+      "word": "depending",
+      "start": 10.3,
+      "end": 10.86
+    },
+    {
+      "word": "which",
+      "start": 10.86,
+      "end": 11.08
+    },
+    {
+      "word": "part",
+      "start": 11.08,
+      "end": 11.36
+    },
+    {
+      "word": "of",
+      "start": 10.86,
+      "end": 11.5
+    },
+    {
+      "word": "speech",
+      "start": 11.5,
+      "end": 11.74
+    },
+    {
+      "word": "it",
+      "start": 11.74,
+      "end": 11.94
+    },
+    {
+      "word": "is.",
+      "start": 11.94,
+      "end": 12.34
+    },
+    {
+      "word": "Pause",
+      "start": 12.9,
+      "end": 13.28
+    },
+    {
+      "word": "the",
+      "start": 13.28,
+      "end": 13.44
+    },
+    {
+      "word": "CD",
+      "start": 13.44,
+      "end": 13.64
+    },
+    {
+      "word": "and",
+      "start": 13.64,
+      "end": 13.9
+    },
+    {
+      "word": "mark",
+      "start": 13.9,
+      "end": 14.08
+    },
+    {
+      "word": "the",
+      "start": 14.08,
+      "end": 14.24
+    },
+    {
+      "word": "proper",
+      "start": 14.24,
+      "end": 14.58
+    },
+    {
+      "word": "syllable.",
+      "start": 14.58,
+      "end": 15.16
+    },
+    {
+      "word": "See",
+      "start": 15.86,
+      "end": 16.22
+    },
+    {
+      "word": "answer",
+      "start": 16.22,
+      "end": 16.46
+    },
+    {
+      "word": "key",
+      "start": 16.46,
+      "end": 16.72
+    },
+    {
+      "word": "beginning",
+      "start": 16.72,
+      "end": 17.08
+    },
+    {
+      "word": "on",
+      "start": 17.08,
+      "end": 17.32
+    },
+    {
+      "word": "page",
+      "start": 17.32,
+      "end": 17.56
+    },
+    {
+      "word": "193.",
+      "start": 17.56,
+      "end": 18.6
+    },
+    {
+      "word": "Repeat.",
+      "start": 19.24,
+      "end": 19.9
+    },
+    {
+      "word": "1.",
+      "start": 20.64,
+      "end": 21.8
+    },
+    {
+      "word": "You",
+      "start": 22.26,
+      "end": 22.82
+    },
+    {
+      "word": "need",
+      "start": 22.82,
+      "end": 23
+    },
+    {
+      "word": "to",
+      "start": 23,
+      "end": 23.16
+    },
+    {
+      "word": "insert",
+      "start": 23.16,
+      "end": 23.7
+    },
+    {
+      "word": "a",
+      "start": 23.7,
+      "end": 24
+    },
+    {
+      "word": "paragraph",
+      "start": 24,
+      "end": 24.5
+    },
+    {
+      "word": "here",
+      "start": 24.5,
+      "end": 24.98
+    },
+    {
+      "word": "on",
+      "start": 24.98,
+      "end": 25.36
+    },
+    {
+      "word": "this",
+      "start": 25.36,
+      "end": 25.52
+    },
+    {
+      "word": "newspaper",
+      "start": 25.52,
+      "end": 26
+    },
+    {
+      "word": "insert.",
+      "start": 26,
+      "end": 27.56
+    },
+    {
+      "word": "2.",
+      "start": 28.76,
+      "end": 29.98
+    },
+    {
+      "word": "How",
+      "start": 29.98,
+      "end": 30.08
+    },
+    {
+      "word": "can",
+      "start": 30.08,
+      "end": 30.24
+    },
+    {
+      "word": "you",
+      "start": 30.24,
+      "end": 30.38
+    },
+    {
+      "word": "object",
+      "start": 30.38,
+      "end": 30.72
+    },
+    {
+      "word": "to",
+      "start": 30.72,
+      "end": 31.26
+    },
+    {
+      "word": "this",
+      "start": 31.26,
+      "end": 31.44
+    },
+    {
+      "word": "object?",
+      "start": 31.44,
+      "end": 31.9
+    },
+    {
+      "word": "3.",
+      "start": 34.36,
+      "end": 34.94
+    },
+    {
+      "word": "I'd",
+      "start": 34.94,
+      "end": 35.42
+    },
+    {
+      "word": "like",
+      "start": 35.42,
+      "end": 35.52
+    },
+    {
+      "word": "to",
+      "start": 35.52,
+      "end": 35.7
+    },
+    {
+      "word": "present",
+      "start": 35.7,
+      "end": 36
+    },
+    {
+      "word": "you",
+      "start": 36,
+      "end": 36.42
+    },
+    {
+      "word": "with",
+      "start": 36.42,
+      "end": 36.88
+    },
+    {
+      "word": "this",
+      "start": 36.88,
+      "end": 37.12
+    },
+    {
+      "word": "present.",
+      "start": 37.12,
+      "end": 37.48
+    },
+    {
+      "word": "4.",
+      "start": 39.84,
+      "end": 40.5
+    },
+    {
+      "word": "Would",
+      "start": 40.5,
+      "end": 40.98
+    },
+    {
+      "word": "you",
+      "start": 40.98,
+      "end": 41.08
+    },
+    {
+      "word": "care",
+      "start": 41.08,
+      "end": 41.3
+    },
+    {
+      "word": "to",
+      "start": 41.3,
+      "end": 41.5
+    },
+    {
+      "word": "elaborate",
+      "start": 41.5,
+      "end": 41.94
+    },
+    {
+      "word": "on",
+      "start": 41.94,
+      "end": 42.58
+    },
+    {
+      "word": "his",
+      "start": 42.58,
+      "end": 42.76
+    },
+    {
+      "word": "elaborate",
+      "start": 42.76,
+      "end": 43.2
+    },
+    {
+      "word": "explanation?",
+      "start": 43.2,
+      "end": 43.78
+    },
+    {
+      "word": "5.",
+      "start": 46.4,
+      "end": 47.42
+    },
+    {
+      "word": "The",
+      "start": 47.42,
+      "end": 48.02
+    },
+    {
+      "word": "manufacturer",
+      "start": 48.02,
+      "end": 48.42
+    },
+    {
+      "word": "couldn't",
+      "start": 48.42,
+      "end": 49.04
+    },
+    {
+      "word": "recall",
+      "start": 49.04,
+      "end": 49.44
+    },
+    {
+      "word": "if",
+      "start": 49.44,
+      "end": 49.98
+    },
+    {
+      "word": "there'd",
+      "start": 49.98,
+      "end": 50.14
+    },
+    {
+      "word": "been",
+      "start": 50.14,
+      "end": 50.28
+    },
+    {
+      "word": "a",
+      "start": 50.28,
+      "end": 50.42
+    },
+    {
+      "word": "recall.",
+      "start": 50.42,
+      "end": 50.78
+    },
+    {
+      "word": "6.",
+      "start": 53.04,
+      "end": 53.64
+    },
+    {
+      "word": "The",
+      "start": 53.64,
+      "end": 54.08
+    },
+    {
+      "word": "religious",
+      "start": 54.08,
+      "end": 54.38
+    },
+    {
+      "word": "convert",
+      "start": 54.38,
+      "end": 54.92
+    },
+    {
+      "word": "wanted",
+      "start": 54.92,
+      "end": 55.4
+    },
+    {
+      "word": "to",
+      "start": 55.4,
+      "end": 55.58
+    },
+    {
+      "word": "convert",
+      "start": 55.58,
+      "end": 55.9
+    },
+    {
+      "word": "the",
+      "start": 55.9,
+      "end": 56.26
+    },
+    {
+      "word": "world.",
+      "start": 56.26,
+      "end": 56.62
+    },
+    {
+      "word": "7.",
+      "start": 58.32,
+      "end": 58.86
+    },
+    {
+      "word": "The",
+      "start": 58.86,
+      "end": 59.46
+    },
+    {
+      "word": "political",
+      "start": 59.46,
+      "end": 59.82
+    },
+    {
+      "word": "rebels",
+      "start": 59.82,
+      "end": 60.3
+    },
+    {
+      "word": "wanted",
+      "start": 60.3,
+      "end": 60.92
+    },
+    {
+      "word": "to",
+      "start": 60.92,
+      "end": 61.12
+    },
+    {
+      "word": "rebel",
+      "start": 61.12,
+      "end": 61.34
+    },
+    {
+      "word": "against",
+      "start": 61.34,
+      "end": 61.82
+    },
+    {
+      "word": "the",
+      "start": 61.82,
+      "end": 62.08
+    },
+    {
+      "word": "world.",
+      "start": 62.08,
+      "end": 62.44
+    },
+    {
+      "word": "8.",
+      "start": 64.02,
+      "end": 64.54
+    },
+    {
+      "word": "The",
+      "start": 64.54,
+      "end": 65.06
+    },
+    {
+      "word": "mogul",
+      "start": 65.06,
+      "end": 65.48
+    },
+    {
+      "word": "wanted",
+      "start": 65.48,
+      "end": 65.82
+    },
+    {
+      "word": "to",
+      "start": 65.82,
+      "end": 65.98
+    },
+    {
+      "word": "record",
+      "start": 65.98,
+      "end": 66.32
+    },
+    {
+      "word": "a",
+      "start": 66.32,
+      "end": 66.6
+    },
+    {
+      "word": "new",
+      "start": 66.6,
+      "end": 66.7
+    },
+    {
+      "word": "record",
+      "start": 66.7,
+      "end": 67.1
+    },
+    {
+      "word": "for",
+      "start": 67.1,
+      "end": 67.78
+    },
+    {
+      "word": "his",
+      "start": 67.78,
+      "end": 67.92
+    },
+    {
+      "word": "latest",
+      "start": 67.92,
+      "end": 68.2
+    },
+    {
+      "word": "artist.",
+      "start": 68.2,
+      "end": 69
+    },
+    {
+      "word": "9.",
+      "start": 70.38,
+      "end": 70.96
+    },
+    {
+      "word": "If",
+      "start": 70.96,
+      "end": 71.46
+    },
+    {
+      "word": "you",
+      "start": 71.46,
+      "end": 71.58
+    },
+    {
+      "word": "perfect",
+      "start": 71.58,
+      "end": 72
+    },
+    {
+      "word": "your",
+      "start": 72,
+      "end": 72.34
+    },
+    {
+      "word": "intonation,",
+      "start": 72.34,
+      "end": 72.98
+    },
+    {
+      "word": "your",
+      "start": 72.98,
+      "end": 73.6
+    },
+    {
+      "word": "accent",
+      "start": 73.6,
+      "end": 74
+    },
+    {
+      "word": "will",
+      "start": 74,
+      "end": 74.22
+    },
+    {
+      "word": "be",
+      "start": 74.22,
+      "end": 74.34
+    },
+    {
+      "word": "perfect.",
+      "start": 74.34,
+      "end": 74.72
+    },
+    {
+      "word": "10.",
+      "start": 76.44,
+      "end": 77.42
+    },
+    {
+      "word": "Due",
+      "start": 77.42,
+      "end": 77.6
+    },
+    {
+      "word": "to",
+      "start": 77.6,
+      "end": 77.78
+    },
+    {
+      "word": "the",
+      "start": 77.78,
+      "end": 77.92
+    },
+    {
+      "word": "drought,",
+      "start": 77.92,
+      "end": 78.84
+    },
+    {
+      "word": "the",
+      "start": 78.84,
+      "end": 78.98
+    },
+    {
+      "word": "fields",
+      "start": 78.98,
+      "end": 79.26
+    },
+    {
+      "word": "didn't",
+      "start": 79.26,
+      "end": 79.56
+    },
+    {
+      "word": "produce",
+      "start": 79.56,
+      "end": 80.04
+    },
+    {
+      "word": "much",
+      "start": 80.04,
+      "end": 80.38
+    },
+    {
+      "word": "produce",
+      "start": 80.38,
+      "end": 80.86
+    },
+    {
+      "word": "this",
+      "start": 80.86,
+      "end": 81.3
+    },
+    {
+      "word": "year.",
+      "start": 81.3,
+      "end": 81.66
+    },
+    {
+      "word": "11.",
+      "start": 83,
+      "end": 84.08
+    },
+    {
+      "word": "Unfortunately,",
+      "start": 84.08,
+      "end": 84.7
+    },
+    {
+      "word": "City",
+      "start": 84.7,
+      "end": 85.36
+    },
+    {
+      "word": "Hall",
+      "start": 85.36,
+      "end": 85.68
+    },
+    {
+      "word": "wouldn't",
+      "start": 85.68,
+      "end": 86.04
+    },
+    {
+      "word": "permit",
+      "start": 86.04,
+      "end": 86.4
+    },
+    {
+      "word": "them",
+      "start": 86.4,
+      "end": 86.74
+    },
+    {
+      "word": "to",
+      "start": 86.74,
+      "end": 87
+    },
+    {
+      "word": "get",
+      "start": 87,
+      "end": 87.12
+    },
+    {
+      "word": "a",
+      "start": 87.12,
+      "end": 87.24
+    },
+    {
+      "word": "permit.",
+      "start": 87.24,
+      "end": 87.86
+    },
+    {
+      "word": "12.",
+      "start": 89.18,
+      "end": 90.18
+    },
+    {
+      "word": "Have",
+      "start": 90.18,
+      "end": 90.26
+    },
+    {
+      "word": "you",
+      "start": 90.26,
+      "end": 90.4
+    },
+    {
+      "word": "heard",
+      "start": 90.4,
+      "end": 90.6
+    },
+    {
+      "word": "that",
+      "start": 90.6,
+      "end": 90.76
+    },
+    {
+      "word": "your",
+      "start": 90.76,
+      "end": 90.92
+    },
+    {
+      "word": "associate",
+      "start": 90.92,
+      "end": 91.28
+    },
+    {
+      "word": "is",
+      "start": 91.28,
+      "end": 91.82
+    },
+    {
+      "word": "known",
+      "start": 91.82,
+      "end": 91.98
+    },
+    {
+      "word": "to",
+      "start": 91.98,
+      "end": 92.16
+    },
+    {
+      "word": "associate",
+      "start": 92.16,
+      "end": 92.58
+    },
+    {
+      "word": "with",
+      "start": 92.58,
+      "end": 93.04
+    },
+    {
+      "word": "gangsters?",
+      "start": 93.04,
+      "end": 93.64
+    },
+    {
+      "word": "13.",
+      "start": 95,
+      "end": 96.1
+    },
+    {
+      "word": "How",
+      "start": 96.1,
+      "end": 96.28
+    },
+    {
+      "word": "much",
+      "start": 96.28,
+      "end": 96.48
+    },
+    {
+      "word": "do",
+      "start": 96.48,
+      "end": 96.66
+    },
+    {
+      "word": "you",
+      "start": 96.66,
+      "end": 96.74
+    },
+    {
+      "word": "estimate",
+      "start": 96.74,
+      "end": 97.18
+    },
+    {
+      "word": "that",
+      "start": 97.18,
+      "end": 97.52
+    },
+    {
+      "word": "the",
+      "start": 97.52,
+      "end": 97.64
+    },
+    {
+      "word": "estimate",
+      "start": 97.64,
+      "end": 97.98
+    },
+    {
+      "word": "will",
+      "start": 97.98,
+      "end": 98.18
+    },
+    {
+      "word": "be?",
+      "start": 98.18,
+      "end": 98.58
+    },
+    {
+      "word": "14.",
+      "start": 99.82,
+      "end": 100.84
+    },
+    {
+      "word": "The",
+      "start": 100.84,
+      "end": 101.06
+    },
+    {
+      "word": "facilitator",
+      "start": 101.06,
+      "end": 101.82
+    },
+    {
+      "word": "wanted",
+      "start": 101.82,
+      "end": 102.12
+    },
+    {
+      "word": "to",
+      "start": 102.12,
+      "end": 102.34
+    },
+    {
+      "word": "separate",
+      "start": 102.34,
+      "end": 102.66
+    },
+    {
+      "word": "the",
+      "start": 102.66,
+      "end": 103
+    },
+    {
+      "word": "general",
+      "start": 103,
+      "end": 103.24
+    },
+    {
+      "word": "topic",
+      "start": 103.24,
+      "end": 103.66
+    },
+    {
+      "word": "into",
+      "start": 103.66,
+      "end": 103.94
+    },
+    {
+      "word": "separate",
+      "start": 103.94,
+      "end": 104.3
+    },
+    {
+      "word": "categories.",
+      "start": 104.3,
+      "end": 105.26
+    }
+  ]
+}

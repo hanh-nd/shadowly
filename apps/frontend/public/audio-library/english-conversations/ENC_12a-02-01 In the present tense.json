@@ -1,0 +1,540 @@
+{
+  "text": " Conversation 12A, in the present tense. told him that I heard he had a new job. I asked him how it was going. He told me that it was going pretty well so far. He said that he had a lot to learn, but that the people were nice and that there wasn't too much pressure. Then I asked him what he did. He answered that basically he was learning the ropes of management and studying the history of the company so that he knew how everything worked. Then I told him that that was great and that I hoped it worked out for him. Thank you.",
+  "wordTimestamps": [
+    {
+      "word": "Conversation",
+      "start": 0.74,
+      "end": 1.18
+    },
+    {
+      "word": "12A,",
+      "start": 1.18,
+      "end": 2.32
+    },
+    {
+      "word": "in",
+      "start": 2.32,
+      "end": 2.88
+    },
+    {
+      "word": "the",
+      "start": 2.88,
+      "end": 3
+    },
+    {
+      "word": "present",
+      "start": 3,
+      "end": 3.34
+    },
+    {
+      "word": "tense.",
+      "start": 3.34,
+      "end": 3.96
+    },
+    {
+      "word": "told",
+      "start": 30,
+      "end": 30.12
+    },
+    {
+      "word": "him",
+      "start": 30.12,
+      "end": 30.24
+    },
+    {
+      "word": "that",
+      "start": 30.24,
+      "end": 30.42
+    },
+    {
+      "word": "I",
+      "start": 30.42,
+      "end": 30.52
+    },
+    {
+      "word": "heard",
+      "start": 30.52,
+      "end": 30.68
+    },
+    {
+      "word": "he",
+      "start": 30.68,
+      "end": 30.82
+    },
+    {
+      "word": "had",
+      "start": 30.82,
+      "end": 30.94
+    },
+    {
+      "word": "a",
+      "start": 30.94,
+      "end": 31.06
+    },
+    {
+      "word": "new",
+      "start": 31.06,
+      "end": 31.2
+    },
+    {
+      "word": "job.",
+      "start": 31.2,
+      "end": 31.9
+    },
+    {
+      "word": "I",
+      "start": 32.28,
+      "end": 32.42
+    },
+    {
+      "word": "asked",
+      "start": 32.42,
+      "end": 32.7
+    },
+    {
+      "word": "him",
+      "start": 32.7,
+      "end": 32.82
+    },
+    {
+      "word": "how",
+      "start": 32.82,
+      "end": 32.98
+    },
+    {
+      "word": "it",
+      "start": 32.98,
+      "end": 33.12
+    },
+    {
+      "word": "was",
+      "start": 33.12,
+      "end": 33.28
+    },
+    {
+      "word": "going.",
+      "start": 33.28,
+      "end": 33.88
+    },
+    {
+      "word": "He",
+      "start": 34.36,
+      "end": 34.54
+    },
+    {
+      "word": "told",
+      "start": 34.54,
+      "end": 34.78
+    },
+    {
+      "word": "me",
+      "start": 34.78,
+      "end": 34.98
+    },
+    {
+      "word": "that",
+      "start": 34.98,
+      "end": 35.22
+    },
+    {
+      "word": "it",
+      "start": 35.22,
+      "end": 35.3
+    },
+    {
+      "word": "was",
+      "start": 35.3,
+      "end": 35.46
+    },
+    {
+      "word": "going",
+      "start": 35.46,
+      "end": 35.64
+    },
+    {
+      "word": "pretty",
+      "start": 35.64,
+      "end": 36
+    },
+    {
+      "word": "well",
+      "start": 36,
+      "end": 36.26
+    },
+    {
+      "word": "so",
+      "start": 36.26,
+      "end": 36.5
+    },
+    {
+      "word": "far.",
+      "start": 36.5,
+      "end": 36.8
+    },
+    {
+      "word": "He",
+      "start": 37.8,
+      "end": 37.92
+    },
+    {
+      "word": "said",
+      "start": 37.92,
+      "end": 38.14
+    },
+    {
+      "word": "that",
+      "start": 38.14,
+      "end": 38.3
+    },
+    {
+      "word": "he",
+      "start": 38.3,
+      "end": 38.4
+    },
+    {
+      "word": "had",
+      "start": 38.4,
+      "end": 38.58
+    },
+    {
+      "word": "a",
+      "start": 38.58,
+      "end": 38.72
+    },
+    {
+      "word": "lot",
+      "start": 38.72,
+      "end": 38.84
+    },
+    {
+      "word": "to",
+      "start": 38.84,
+      "end": 39.04
+    },
+    {
+      "word": "learn,",
+      "start": 39.04,
+      "end": 39.7
+    },
+    {
+      "word": "but",
+      "start": 39.6,
+      "end": 39.82
+    },
+    {
+      "word": "that",
+      "start": 39.82,
+      "end": 40.04
+    },
+    {
+      "word": "the",
+      "start": 40.04,
+      "end": 40.24
+    },
+    {
+      "word": "people",
+      "start": 40.24,
+      "end": 40.54
+    },
+    {
+      "word": "were",
+      "start": 40.54,
+      "end": 40.72
+    },
+    {
+      "word": "nice",
+      "start": 40.72,
+      "end": 41.14
+    },
+    {
+      "word": "and",
+      "start": 40.72,
+      "end": 41.6
+    },
+    {
+      "word": "that",
+      "start": 41.6,
+      "end": 41.78
+    },
+    {
+      "word": "there",
+      "start": 41.78,
+      "end": 41.92
+    },
+    {
+      "word": "wasn't",
+      "start": 41.92,
+      "end": 42.18
+    },
+    {
+      "word": "too",
+      "start": 42.18,
+      "end": 42.42
+    },
+    {
+      "word": "much",
+      "start": 42.42,
+      "end": 42.54
+    },
+    {
+      "word": "pressure.",
+      "start": 42.54,
+      "end": 42.96
+    },
+    {
+      "word": "Then",
+      "start": 43.78,
+      "end": 44
+    },
+    {
+      "word": "I",
+      "start": 44,
+      "end": 44.1
+    },
+    {
+      "word": "asked",
+      "start": 44.1,
+      "end": 44.38
+    },
+    {
+      "word": "him",
+      "start": 44.38,
+      "end": 44.5
+    },
+    {
+      "word": "what",
+      "start": 44.5,
+      "end": 44.64
+    },
+    {
+      "word": "he",
+      "start": 44.64,
+      "end": 44.72
+    },
+    {
+      "word": "did.",
+      "start": 44.72,
+      "end": 45.02
+    },
+    {
+      "word": "He",
+      "start": 45.82,
+      "end": 45.98
+    },
+    {
+      "word": "answered",
+      "start": 45.98,
+      "end": 46.3
+    },
+    {
+      "word": "that",
+      "start": 46.3,
+      "end": 46.56
+    },
+    {
+      "word": "basically",
+      "start": 46.56,
+      "end": 47.04
+    },
+    {
+      "word": "he",
+      "start": 46.68,
+      "end": 47.56
+    },
+    {
+      "word": "was",
+      "start": 47.56,
+      "end": 47.72
+    },
+    {
+      "word": "learning",
+      "start": 47.72,
+      "end": 47.96
+    },
+    {
+      "word": "the",
+      "start": 47.96,
+      "end": 48.16
+    },
+    {
+      "word": "ropes",
+      "start": 48.16,
+      "end": 48.4
+    },
+    {
+      "word": "of",
+      "start": 48.4,
+      "end": 48.62
+    },
+    {
+      "word": "management",
+      "start": 48.62,
+      "end": 49.06
+    },
+    {
+      "word": "and",
+      "start": 48.64,
+      "end": 49.66
+    },
+    {
+      "word": "studying",
+      "start": 49.66,
+      "end": 50.08
+    },
+    {
+      "word": "the",
+      "start": 50.08,
+      "end": 50.28
+    },
+    {
+      "word": "history",
+      "start": 50.28,
+      "end": 50.6
+    },
+    {
+      "word": "of",
+      "start": 50.6,
+      "end": 50.82
+    },
+    {
+      "word": "the",
+      "start": 50.82,
+      "end": 50.92
+    },
+    {
+      "word": "company",
+      "start": 50.92,
+      "end": 51.3
+    },
+    {
+      "word": "so",
+      "start": 50.9,
+      "end": 51.7
+    },
+    {
+      "word": "that",
+      "start": 51.7,
+      "end": 51.86
+    },
+    {
+      "word": "he",
+      "start": 51.86,
+      "end": 51.98
+    },
+    {
+      "word": "knew",
+      "start": 51.98,
+      "end": 52.14
+    },
+    {
+      "word": "how",
+      "start": 52.14,
+      "end": 52.3
+    },
+    {
+      "word": "everything",
+      "start": 52.3,
+      "end": 52.62
+    },
+    {
+      "word": "worked.",
+      "start": 52.62,
+      "end": 53.18
+    },
+    {
+      "word": "Then",
+      "start": 54.02,
+      "end": 54.22
+    },
+    {
+      "word": "I",
+      "start": 54.22,
+      "end": 54.32
+    },
+    {
+      "word": "told",
+      "start": 54.32,
+      "end": 54.58
+    },
+    {
+      "word": "him",
+      "start": 54.58,
+      "end": 54.74
+    },
+    {
+      "word": "that",
+      "start": 54.74,
+      "end": 54.92
+    },
+    {
+      "word": "that",
+      "start": 54.92,
+      "end": 55.14
+    },
+    {
+      "word": "was",
+      "start": 55.14,
+      "end": 55.32
+    },
+    {
+      "word": "great",
+      "start": 55.32,
+      "end": 55.7
+    },
+    {
+      "word": "and",
+      "start": 55.34,
+      "end": 56.16
+    },
+    {
+      "word": "that",
+      "start": 56.16,
+      "end": 56.34
+    },
+    {
+      "word": "I",
+      "start": 56.34,
+      "end": 56.48
+    },
+    {
+      "word": "hoped",
+      "start": 56.48,
+      "end": 56.72
+    },
+    {
+      "word": "it",
+      "start": 56.72,
+      "end": 56.84
+    },
+    {
+      "word": "worked",
+      "start": 56.84,
+      "end": 57.02
+    },
+    {
+      "word": "out",
+      "start": 57.02,
+      "end": 57.22
+    },
+    {
+      "word": "for",
+      "start": 57.22,
+      "end": 57.42
+    },
+    {
+      "word": "him.",
+      "start": 57.42,
+      "end": 57.7
+    },
+    {
+      "word": "Thank",
+      "start": 60,
+      "end": 60.38
+    },
+    {
+      "word": "you.",
+      "start": 60.38,
+      "end": 60.4
+    }
+  ]
+}

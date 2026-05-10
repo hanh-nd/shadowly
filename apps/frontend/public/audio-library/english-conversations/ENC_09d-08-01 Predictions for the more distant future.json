@@ -1,0 +1,615 @@
+{
+  "text": " Conversation 9D. Predictions for the more distant future. What will the world be like 50 years from now? Just think, people will be living on Mars. I'll bet cars will be replaced by little helicopters, so you'll be able to fly ahead in traffic. There won't be any more wars. Women will make more money than men. No way. Women will stay home and the men will do all the work. There will be a better form of government. People will have forgotten how to talk and will only communicate electronically. There won't be any disease and people will live to be 150 years old. That will be horrible. It will be so crowded. That's why people will be living on Mars.",
+  "wordTimestamps": [
+    {
+      "word": "Conversation",
+      "start": 0.58,
+      "end": 1.3
+    },
+    {
+      "word": "9D.",
+      "start": 1.3,
+      "end": 2.24
+    },
+    {
+      "word": "Predictions",
+      "start": 2.24,
+      "end": 3.14
+    },
+    {
+      "word": "for",
+      "start": 3.14,
+      "end": 3.58
+    },
+    {
+      "word": "the",
+      "start": 3.58,
+      "end": 3.68
+    },
+    {
+      "word": "more",
+      "start": 3.68,
+      "end": 3.84
+    },
+    {
+      "word": "distant",
+      "start": 3.84,
+      "end": 4.26
+    },
+    {
+      "word": "future.",
+      "start": 4.26,
+      "end": 4.98
+    },
+    {
+      "word": "What",
+      "start": 6.68,
+      "end": 6.88
+    },
+    {
+      "word": "will",
+      "start": 6.88,
+      "end": 7.14
+    },
+    {
+      "word": "the",
+      "start": 7.14,
+      "end": 7.32
+    },
+    {
+      "word": "world",
+      "start": 7.32,
+      "end": 7.72
+    },
+    {
+      "word": "be",
+      "start": 7.72,
+      "end": 8
+    },
+    {
+      "word": "like",
+      "start": 8,
+      "end": 8.48
+    },
+    {
+      "word": "50",
+      "start": 8.48,
+      "end": 9.18
+    },
+    {
+      "word": "years",
+      "start": 9.18,
+      "end": 9.68
+    },
+    {
+      "word": "from",
+      "start": 9.68,
+      "end": 9.94
+    },
+    {
+      "word": "now?",
+      "start": 9.94,
+      "end": 10.34
+    },
+    {
+      "word": "Just",
+      "start": 11.06,
+      "end": 11.38
+    },
+    {
+      "word": "think,",
+      "start": 11.38,
+      "end": 12.2
+    },
+    {
+      "word": "people",
+      "start": 12.2,
+      "end": 12.56
+    },
+    {
+      "word": "will",
+      "start": 12.56,
+      "end": 12.78
+    },
+    {
+      "word": "be",
+      "start": 12.78,
+      "end": 12.9
+    },
+    {
+      "word": "living",
+      "start": 12.9,
+      "end": 13.2
+    },
+    {
+      "word": "on",
+      "start": 13.2,
+      "end": 13.5
+    },
+    {
+      "word": "Mars.",
+      "start": 13.5,
+      "end": 13.94
+    },
+    {
+      "word": "I'll",
+      "start": 14.88,
+      "end": 15.1
+    },
+    {
+      "word": "bet",
+      "start": 15.1,
+      "end": 15.24
+    },
+    {
+      "word": "cars",
+      "start": 15.24,
+      "end": 15.86
+    },
+    {
+      "word": "will",
+      "start": 15.86,
+      "end": 16.1
+    },
+    {
+      "word": "be",
+      "start": 16.1,
+      "end": 16.18
+    },
+    {
+      "word": "replaced",
+      "start": 16.18,
+      "end": 16.6
+    },
+    {
+      "word": "by",
+      "start": 16.6,
+      "end": 16.96
+    },
+    {
+      "word": "little",
+      "start": 16.96,
+      "end": 17.34
+    },
+    {
+      "word": "helicopters,",
+      "start": 17.34,
+      "end": 18.44
+    },
+    {
+      "word": "so",
+      "start": 18.44,
+      "end": 18.84
+    },
+    {
+      "word": "you'll",
+      "start": 18.84,
+      "end": 19.12
+    },
+    {
+      "word": "be",
+      "start": 19.12,
+      "end": 19.18
+    },
+    {
+      "word": "able",
+      "start": 19.18,
+      "end": 19.4
+    },
+    {
+      "word": "to",
+      "start": 19.4,
+      "end": 19.62
+    },
+    {
+      "word": "fly",
+      "start": 19.62,
+      "end": 19.98
+    },
+    {
+      "word": "ahead",
+      "start": 19.98,
+      "end": 20.6
+    },
+    {
+      "word": "in",
+      "start": 20.6,
+      "end": 20.84
+    },
+    {
+      "word": "traffic.",
+      "start": 20.84,
+      "end": 21.32
+    },
+    {
+      "word": "There",
+      "start": 22.16,
+      "end": 22.42
+    },
+    {
+      "word": "won't",
+      "start": 22.42,
+      "end": 22.74
+    },
+    {
+      "word": "be",
+      "start": 22.74,
+      "end": 22.96
+    },
+    {
+      "word": "any",
+      "start": 22.96,
+      "end": 23.44
+    },
+    {
+      "word": "more",
+      "start": 23.44,
+      "end": 23.8
+    },
+    {
+      "word": "wars.",
+      "start": 23.8,
+      "end": 24.42
+    },
+    {
+      "word": "Women",
+      "start": 25.4,
+      "end": 25.7
+    },
+    {
+      "word": "will",
+      "start": 25.7,
+      "end": 25.94
+    },
+    {
+      "word": "make",
+      "start": 25.94,
+      "end": 26.14
+    },
+    {
+      "word": "more",
+      "start": 26.14,
+      "end": 26.5
+    },
+    {
+      "word": "money",
+      "start": 26.5,
+      "end": 26.82
+    },
+    {
+      "word": "than",
+      "start": 26.82,
+      "end": 27
+    },
+    {
+      "word": "men.",
+      "start": 27,
+      "end": 27.5
+    },
+    {
+      "word": "No",
+      "start": 28.1,
+      "end": 28.28
+    },
+    {
+      "word": "way.",
+      "start": 28.28,
+      "end": 28.86
+    },
+    {
+      "word": "Women",
+      "start": 28.86,
+      "end": 29.36
+    },
+    {
+      "word": "will",
+      "start": 29.36,
+      "end": 29.7
+    },
+    {
+      "word": "stay",
+      "start": 29.7,
+      "end": 30.02
+    },
+    {
+      "word": "home",
+      "start": 30.02,
+      "end": 30.4
+    },
+    {
+      "word": "and",
+      "start": 30.4,
+      "end": 30.8
+    },
+    {
+      "word": "the",
+      "start": 30.8,
+      "end": 30.94
+    },
+    {
+      "word": "men",
+      "start": 30.94,
+      "end": 31.26
+    },
+    {
+      "word": "will",
+      "start": 31.26,
+      "end": 31.52
+    },
+    {
+      "word": "do",
+      "start": 31.52,
+      "end": 31.74
+    },
+    {
+      "word": "all",
+      "start": 31.74,
+      "end": 32.22
+    },
+    {
+      "word": "the",
+      "start": 32.22,
+      "end": 32.62
+    },
+    {
+      "word": "work.",
+      "start": 32.62,
+      "end": 33.08
+    },
+    {
+      "word": "There",
+      "start": 33.72,
+      "end": 33.9
+    },
+    {
+      "word": "will",
+      "start": 33.9,
+      "end": 34.02
+    },
+    {
+      "word": "be",
+      "start": 34.02,
+      "end": 34.12
+    },
+    {
+      "word": "a",
+      "start": 34.12,
+      "end": 34.24
+    },
+    {
+      "word": "better",
+      "start": 34.24,
+      "end": 34.46
+    },
+    {
+      "word": "form",
+      "start": 34.46,
+      "end": 34.84
+    },
+    {
+      "word": "of",
+      "start": 34.84,
+      "end": 35
+    },
+    {
+      "word": "government.",
+      "start": 35,
+      "end": 35.46
+    },
+    {
+      "word": "People",
+      "start": 36.28,
+      "end": 36.58
+    },
+    {
+      "word": "will",
+      "start": 36.58,
+      "end": 36.86
+    },
+    {
+      "word": "have",
+      "start": 36.86,
+      "end": 36.96
+    },
+    {
+      "word": "forgotten",
+      "start": 36.96,
+      "end": 37.26
+    },
+    {
+      "word": "how",
+      "start": 37.26,
+      "end": 37.54
+    },
+    {
+      "word": "to",
+      "start": 37.54,
+      "end": 37.68
+    },
+    {
+      "word": "talk",
+      "start": 37.68,
+      "end": 38.08
+    },
+    {
+      "word": "and",
+      "start": 38.08,
+      "end": 38.58
+    },
+    {
+      "word": "will",
+      "start": 38.58,
+      "end": 38.74
+    },
+    {
+      "word": "only",
+      "start": 38.74,
+      "end": 39.06
+    },
+    {
+      "word": "communicate",
+      "start": 39.06,
+      "end": 39.68
+    },
+    {
+      "word": "electronically.",
+      "start": 39.68,
+      "end": 40.38
+    },
+    {
+      "word": "There",
+      "start": 41.46,
+      "end": 41.64
+    },
+    {
+      "word": "won't",
+      "start": 41.64,
+      "end": 41.9
+    },
+    {
+      "word": "be",
+      "start": 41.9,
+      "end": 42.04
+    },
+    {
+      "word": "any",
+      "start": 42.04,
+      "end": 42.34
+    },
+    {
+      "word": "disease",
+      "start": 42.34,
+      "end": 42.8
+    },
+    {
+      "word": "and",
+      "start": 42.8,
+      "end": 43.48
+    },
+    {
+      "word": "people",
+      "start": 43.48,
+      "end": 44
+    },
+    {
+      "word": "will",
+      "start": 44,
+      "end": 44.26
+    },
+    {
+      "word": "live",
+      "start": 44.26,
+      "end": 44.56
+    },
+    {
+      "word": "to",
+      "start": 44.56,
+      "end": 44.78
+    },
+    {
+      "word": "be",
+      "start": 44.78,
+      "end": 44.94
+    },
+    {
+      "word": "150",
+      "start": 44.94,
+      "end": 45.48
+    },
+    {
+      "word": "years",
+      "start": 45.48,
+      "end": 46.64
+    },
+    {
+      "word": "old.",
+      "start": 46.64,
+      "end": 47.12
+    },
+    {
+      "word": "That",
+      "start": 47.52,
+      "end": 47.84
+    },
+    {
+      "word": "will",
+      "start": 47.84,
+      "end": 47.98
+    },
+    {
+      "word": "be",
+      "start": 47.98,
+      "end": 48.12
+    },
+    {
+      "word": "horrible.",
+      "start": 48.12,
+      "end": 48.68
+    },
+    {
+      "word": "It",
+      "start": 48.68,
+      "end": 49.28
+    },
+    {
+      "word": "will",
+      "start": 49.28,
+      "end": 49.4
+    },
+    {
+      "word": "be",
+      "start": 49.4,
+      "end": 49.52
+    },
+    {
+      "word": "so",
+      "start": 49.52,
+      "end": 49.84
+    },
+    {
+      "word": "crowded.",
+      "start": 49.84,
+      "end": 50.44
+    },
+    {
+      "word": "That's",
+      "start": 51.2,
+      "end": 51.66
+    },
+    {
+      "word": "why",
+      "start": 51.66,
+      "end": 51.82
+    },
+    {
+      "word": "people",
+      "start": 51.82,
+      "end": 52.22
+    },
+    {
+      "word": "will",
+      "start": 52.22,
+      "end": 52.5
+    },
+    {
+      "word": "be",
+      "start": 52.5,
+      "end": 52.64
+    },
+    {
+      "word": "living",
+      "start": 52.64,
+      "end": 53
+    },
+    {
+      "word": "on",
+      "start": 53,
+      "end": 53.54
+    },
+    {
+      "word": "Mars.",
+      "start": 53.54,
+      "end": 53.92
+    }
+  ]
+}

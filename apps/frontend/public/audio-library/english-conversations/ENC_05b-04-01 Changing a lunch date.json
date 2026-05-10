@@ -1,0 +1,565 @@
+{
+  "text": " Conversation 5B, Changing a Lunch Date Hi, Maria. It's Lisa. Listen, I'm not going to be able to have lunch with you next Thursday. I have to have a physical for my new job, and it's on Thursday at 1 o'clock, and it's in Alexandria. I'm really sorry. Can we make it another day? No problem. How about Friday at 12.30? Oh, dear. I can't do that either. Could you do Wednesday? Look, we're going to have to make it the following week. We've both got too much on our plates right now. Let's say Thursday the 24th at 1 o'clock, okay? Perfect. We'll have a lot to talk about by then.",
+  "wordTimestamps": [
+    {
+      "word": "Conversation",
+      "start": 0.52,
+      "end": 1.22
+    },
+    {
+      "word": "5B,",
+      "start": 1.22,
+      "end": 2.34
+    },
+    {
+      "word": "Changing",
+      "start": 2.34,
+      "end": 2.88
+    },
+    {
+      "word": "a",
+      "start": 2.88,
+      "end": 3.22
+    },
+    {
+      "word": "Lunch",
+      "start": 3.22,
+      "end": 3.4
+    },
+    {
+      "word": "Date",
+      "start": 3.4,
+      "end": 3.7
+    },
+    {
+      "word": "Hi,",
+      "start": 5.48,
+      "end": 5.8
+    },
+    {
+      "word": "Maria.",
+      "start": 5.8,
+      "end": 6.06
+    },
+    {
+      "word": "It's",
+      "start": 6.06,
+      "end": 6.92
+    },
+    {
+      "word": "Lisa.",
+      "start": 6.92,
+      "end": 7.84
+    },
+    {
+      "word": "Listen,",
+      "start": 8.08,
+      "end": 8.34
+    },
+    {
+      "word": "I'm",
+      "start": 8.34,
+      "end": 9.26
+    },
+    {
+      "word": "not",
+      "start": 9.26,
+      "end": 9.5
+    },
+    {
+      "word": "going",
+      "start": 9.5,
+      "end": 9.74
+    },
+    {
+      "word": "to",
+      "start": 9.74,
+      "end": 9.98
+    },
+    {
+      "word": "be",
+      "start": 9.98,
+      "end": 10.1
+    },
+    {
+      "word": "able",
+      "start": 10.1,
+      "end": 10.4
+    },
+    {
+      "word": "to",
+      "start": 10.4,
+      "end": 10.62
+    },
+    {
+      "word": "have",
+      "start": 10.62,
+      "end": 10.84
+    },
+    {
+      "word": "lunch",
+      "start": 10.84,
+      "end": 11.12
+    },
+    {
+      "word": "with",
+      "start": 11.12,
+      "end": 11.4
+    },
+    {
+      "word": "you",
+      "start": 11.4,
+      "end": 11.58
+    },
+    {
+      "word": "next",
+      "start": 11.58,
+      "end": 11.94
+    },
+    {
+      "word": "Thursday.",
+      "start": 11.94,
+      "end": 12.48
+    },
+    {
+      "word": "I",
+      "start": 13.24,
+      "end": 13.36
+    },
+    {
+      "word": "have",
+      "start": 13.36,
+      "end": 13.64
+    },
+    {
+      "word": "to",
+      "start": 13.64,
+      "end": 13.78
+    },
+    {
+      "word": "have",
+      "start": 13.78,
+      "end": 13.98
+    },
+    {
+      "word": "a",
+      "start": 13.98,
+      "end": 14.14
+    },
+    {
+      "word": "physical",
+      "start": 14.14,
+      "end": 14.5
+    },
+    {
+      "word": "for",
+      "start": 14.5,
+      "end": 14.92
+    },
+    {
+      "word": "my",
+      "start": 14.92,
+      "end": 15.1
+    },
+    {
+      "word": "new",
+      "start": 15.1,
+      "end": 15.3
+    },
+    {
+      "word": "job,",
+      "start": 15.3,
+      "end": 16
+    },
+    {
+      "word": "and",
+      "start": 16.3,
+      "end": 16.46
+    },
+    {
+      "word": "it's",
+      "start": 16.46,
+      "end": 16.66
+    },
+    {
+      "word": "on",
+      "start": 16.66,
+      "end": 16.82
+    },
+    {
+      "word": "Thursday",
+      "start": 16.82,
+      "end": 17.3
+    },
+    {
+      "word": "at",
+      "start": 17.3,
+      "end": 17.66
+    },
+    {
+      "word": "1",
+      "start": 17.66,
+      "end": 17.86
+    },
+    {
+      "word": "o'clock,",
+      "start": 17.86,
+      "end": 18.2
+    },
+    {
+      "word": "and",
+      "start": 18.2,
+      "end": 19.1
+    },
+    {
+      "word": "it's",
+      "start": 19.1,
+      "end": 19.42
+    },
+    {
+      "word": "in",
+      "start": 19.42,
+      "end": 19.56
+    },
+    {
+      "word": "Alexandria.",
+      "start": 19.56,
+      "end": 20.1
+    },
+    {
+      "word": "I'm",
+      "start": 21.2,
+      "end": 21.44
+    },
+    {
+      "word": "really",
+      "start": 21.44,
+      "end": 21.78
+    },
+    {
+      "word": "sorry.",
+      "start": 21.78,
+      "end": 22.16
+    },
+    {
+      "word": "Can",
+      "start": 22.16,
+      "end": 22.96
+    },
+    {
+      "word": "we",
+      "start": 22.96,
+      "end": 23.12
+    },
+    {
+      "word": "make",
+      "start": 23.12,
+      "end": 23.4
+    },
+    {
+      "word": "it",
+      "start": 23.4,
+      "end": 23.5
+    },
+    {
+      "word": "another",
+      "start": 23.5,
+      "end": 23.78
+    },
+    {
+      "word": "day?",
+      "start": 23.78,
+      "end": 24.22
+    },
+    {
+      "word": "No",
+      "start": 25.02,
+      "end": 25.16
+    },
+    {
+      "word": "problem.",
+      "start": 25.16,
+      "end": 25.54
+    },
+    {
+      "word": "How",
+      "start": 25.54,
+      "end": 26.48
+    },
+    {
+      "word": "about",
+      "start": 26.48,
+      "end": 26.72
+    },
+    {
+      "word": "Friday",
+      "start": 26.72,
+      "end": 27.22
+    },
+    {
+      "word": "at",
+      "start": 27.22,
+      "end": 27.6
+    },
+    {
+      "word": "12.30?",
+      "start": 27.6,
+      "end": 28.32
+    },
+    {
+      "word": "Oh,",
+      "start": 29.16,
+      "end": 29.52
+    },
+    {
+      "word": "dear.",
+      "start": 29.52,
+      "end": 30.12
+    },
+    {
+      "word": "I",
+      "start": 30.12,
+      "end": 30.36
+    },
+    {
+      "word": "can't",
+      "start": 30.36,
+      "end": 30.68
+    },
+    {
+      "word": "do",
+      "start": 30.68,
+      "end": 30.82
+    },
+    {
+      "word": "that",
+      "start": 30.82,
+      "end": 31.04
+    },
+    {
+      "word": "either.",
+      "start": 31.04,
+      "end": 31.4
+    },
+    {
+      "word": "Could",
+      "start": 31.4,
+      "end": 32.38
+    },
+    {
+      "word": "you",
+      "start": 32.38,
+      "end": 32.58
+    },
+    {
+      "word": "do",
+      "start": 32.58,
+      "end": 32.78
+    },
+    {
+      "word": "Wednesday?",
+      "start": 32.78,
+      "end": 33.22
+    },
+    {
+      "word": "Look,",
+      "start": 34.22,
+      "end": 34.64
+    },
+    {
+      "word": "we're",
+      "start": 34.64,
+      "end": 34.78
+    },
+    {
+      "word": "going",
+      "start": 34.78,
+      "end": 34.98
+    },
+    {
+      "word": "to",
+      "start": 34.98,
+      "end": 35.14
+    },
+    {
+      "word": "have",
+      "start": 35.14,
+      "end": 35.28
+    },
+    {
+      "word": "to",
+      "start": 35.28,
+      "end": 35.44
+    },
+    {
+      "word": "make",
+      "start": 35.44,
+      "end": 35.72
+    },
+    {
+      "word": "it",
+      "start": 35.72,
+      "end": 35.86
+    },
+    {
+      "word": "the",
+      "start": 35.86,
+      "end": 36
+    },
+    {
+      "word": "following",
+      "start": 36,
+      "end": 36.3
+    },
+    {
+      "word": "week.",
+      "start": 36.3,
+      "end": 36.84
+    },
+    {
+      "word": "We've",
+      "start": 36.84,
+      "end": 37.38
+    },
+    {
+      "word": "both",
+      "start": 37.38,
+      "end": 37.6
+    },
+    {
+      "word": "got",
+      "start": 37.6,
+      "end": 37.82
+    },
+    {
+      "word": "too",
+      "start": 37.82,
+      "end": 38.08
+    },
+    {
+      "word": "much",
+      "start": 38.08,
+      "end": 38.22
+    },
+    {
+      "word": "on",
+      "start": 38.22,
+      "end": 38.44
+    },
+    {
+      "word": "our",
+      "start": 38.44,
+      "end": 38.56
+    },
+    {
+      "word": "plates",
+      "start": 38.56,
+      "end": 38.84
+    },
+    {
+      "word": "right",
+      "start": 38.84,
+      "end": 39.12
+    },
+    {
+      "word": "now.",
+      "start": 39.12,
+      "end": 39.42
+    },
+    {
+      "word": "Let's",
+      "start": 40.08,
+      "end": 40.34
+    },
+    {
+      "word": "say",
+      "start": 40.34,
+      "end": 40.52
+    },
+    {
+      "word": "Thursday",
+      "start": 40.52,
+      "end": 40.94
+    },
+    {
+      "word": "the",
+      "start": 40.94,
+      "end": 41.28
+    },
+    {
+      "word": "24th",
+      "start": 41.28,
+      "end": 42.02
+    },
+    {
+      "word": "at",
+      "start": 42.02,
+      "end": 42.34
+    },
+    {
+      "word": "1",
+      "start": 42.34,
+      "end": 42.52
+    },
+    {
+      "word": "o'clock,",
+      "start": 42.52,
+      "end": 43.4
+    },
+    {
+      "word": "okay?",
+      "start": 43.4,
+      "end": 43.58
+    },
+    {
+      "word": "Perfect.",
+      "start": 44.32,
+      "end": 44.66
+    },
+    {
+      "word": "We'll",
+      "start": 44.66,
+      "end": 45.42
+    },
+    {
+      "word": "have",
+      "start": 45.42,
+      "end": 45.64
+    },
+    {
+      "word": "a",
+      "start": 45.64,
+      "end": 45.82
+    },
+    {
+      "word": "lot",
+      "start": 45.82,
+      "end": 46
+    },
+    {
+      "word": "to",
+      "start": 46,
+      "end": 46.22
+    },
+    {
+      "word": "talk",
+      "start": 46.22,
+      "end": 46.46
+    },
+    {
+      "word": "about",
+      "start": 46.46,
+      "end": 46.66
+    },
+    {
+      "word": "by",
+      "start": 46.66,
+      "end": 46.94
+    },
+    {
+      "word": "then.",
+      "start": 46.94,
+      "end": 47.32
+    }
+  ]
+}

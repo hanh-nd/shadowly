@@ -1,0 +1,925 @@
+{
+  "text": " Conversation 7. Helping a Classmate Hey buddy, can I ask you a favor? Sure, what can I do for you? I wonder if you'd be willing to lend me your biology notes. I missed a couple of classes when I was sick and now I'm totally lost. Okay, why don't we go to the library and copy my notebook and then go to your place and go over the lessons. I'm acing biology this semester, so I'm sure I can get you back on track. Later. Look, I already agreed to go to the movies with Ben. But how about if I invite her to go to the movies with us instead? Of course, afterward, we'd grab a bite to eat, but it won't be anything fancy. That sounds great to me. Let me see what Jessica thinks about it, and I'll get back to you ASAP. Good. And by the way, thanks again for the help with biology. I think I'm on top of it now. No problem. Don't hesitate to call me if you have any questions. Thanks, buddy. See you later.",
+  "wordTimestamps": [
+    {
+      "word": "Conversation",
+      "start": 0.72,
+      "end": 1.18
+    },
+    {
+      "word": "7.",
+      "start": 1.18,
+      "end": 1.8
+    },
+    {
+      "word": "Helping",
+      "start": 1.8,
+      "end": 2.46
+    },
+    {
+      "word": "a",
+      "start": 2.46,
+      "end": 2.64
+    },
+    {
+      "word": "Classmate",
+      "start": 2.64,
+      "end": 3.26
+    },
+    {
+      "word": "Hey",
+      "start": 5,
+      "end": 5.2
+    },
+    {
+      "word": "buddy,",
+      "start": 5.2,
+      "end": 5.48
+    },
+    {
+      "word": "can",
+      "start": 5.48,
+      "end": 6.04
+    },
+    {
+      "word": "I",
+      "start": 6.04,
+      "end": 6.14
+    },
+    {
+      "word": "ask",
+      "start": 6.14,
+      "end": 6.34
+    },
+    {
+      "word": "you",
+      "start": 6.34,
+      "end": 6.42
+    },
+    {
+      "word": "a",
+      "start": 6.42,
+      "end": 6.58
+    },
+    {
+      "word": "favor?",
+      "start": 6.58,
+      "end": 7
+    },
+    {
+      "word": "Sure,",
+      "start": 7.58,
+      "end": 8.04
+    },
+    {
+      "word": "what",
+      "start": 8.04,
+      "end": 8.38
+    },
+    {
+      "word": "can",
+      "start": 8.38,
+      "end": 8.52
+    },
+    {
+      "word": "I",
+      "start": 8.52,
+      "end": 8.6
+    },
+    {
+      "word": "do",
+      "start": 8.6,
+      "end": 8.76
+    },
+    {
+      "word": "for",
+      "start": 8.76,
+      "end": 8.94
+    },
+    {
+      "word": "you?",
+      "start": 8.94,
+      "end": 9.18
+    },
+    {
+      "word": "I",
+      "start": 9.82,
+      "end": 9.96
+    },
+    {
+      "word": "wonder",
+      "start": 9.96,
+      "end": 10.32
+    },
+    {
+      "word": "if",
+      "start": 10.32,
+      "end": 10.66
+    },
+    {
+      "word": "you'd",
+      "start": 10.66,
+      "end": 11
+    },
+    {
+      "word": "be",
+      "start": 11,
+      "end": 11.12
+    },
+    {
+      "word": "willing",
+      "start": 11.12,
+      "end": 11.46
+    },
+    {
+      "word": "to",
+      "start": 11.46,
+      "end": 11.72
+    },
+    {
+      "word": "lend",
+      "start": 11.72,
+      "end": 11.98
+    },
+    {
+      "word": "me",
+      "start": 11.98,
+      "end": 12.16
+    },
+    {
+      "word": "your",
+      "start": 12.16,
+      "end": 12.36
+    },
+    {
+      "word": "biology",
+      "start": 12.36,
+      "end": 12.78
+    },
+    {
+      "word": "notes.",
+      "start": 12.78,
+      "end": 13.14
+    },
+    {
+      "word": "I",
+      "start": 13.8,
+      "end": 13.9
+    },
+    {
+      "word": "missed",
+      "start": 13.9,
+      "end": 14.2
+    },
+    {
+      "word": "a",
+      "start": 14.2,
+      "end": 14.38
+    },
+    {
+      "word": "couple",
+      "start": 14.38,
+      "end": 14.52
+    },
+    {
+      "word": "of",
+      "start": 14.52,
+      "end": 14.68
+    },
+    {
+      "word": "classes",
+      "start": 14.68,
+      "end": 15.04
+    },
+    {
+      "word": "when",
+      "start": 15.04,
+      "end": 15.26
+    },
+    {
+      "word": "I",
+      "start": 15.26,
+      "end": 15.34
+    },
+    {
+      "word": "was",
+      "start": 15.34,
+      "end": 15.46
+    },
+    {
+      "word": "sick",
+      "start": 15.46,
+      "end": 15.8
+    },
+    {
+      "word": "and",
+      "start": 15.8,
+      "end": 16.02
+    },
+    {
+      "word": "now",
+      "start": 16.02,
+      "end": 16.22
+    },
+    {
+      "word": "I'm",
+      "start": 16.22,
+      "end": 16.42
+    },
+    {
+      "word": "totally",
+      "start": 16.42,
+      "end": 16.9
+    },
+    {
+      "word": "lost.",
+      "start": 16.9,
+      "end": 17.68
+    },
+    {
+      "word": "Okay,",
+      "start": 18.06,
+      "end": 19.1
+    },
+    {
+      "word": "why",
+      "start": 19.1,
+      "end": 19.24
+    },
+    {
+      "word": "don't",
+      "start": 19.24,
+      "end": 19.36
+    },
+    {
+      "word": "we",
+      "start": 19.36,
+      "end": 19.48
+    },
+    {
+      "word": "go",
+      "start": 19.48,
+      "end": 19.64
+    },
+    {
+      "word": "to",
+      "start": 19.64,
+      "end": 19.72
+    },
+    {
+      "word": "the",
+      "start": 19.72,
+      "end": 19.86
+    },
+    {
+      "word": "library",
+      "start": 19.86,
+      "end": 20.2
+    },
+    {
+      "word": "and",
+      "start": 20.2,
+      "end": 20.64
+    },
+    {
+      "word": "copy",
+      "start": 20.64,
+      "end": 20.94
+    },
+    {
+      "word": "my",
+      "start": 20.94,
+      "end": 21.14
+    },
+    {
+      "word": "notebook",
+      "start": 21.14,
+      "end": 21.48
+    },
+    {
+      "word": "and",
+      "start": 21.48,
+      "end": 21.92
+    },
+    {
+      "word": "then",
+      "start": 21.92,
+      "end": 22.08
+    },
+    {
+      "word": "go",
+      "start": 22.08,
+      "end": 22.24
+    },
+    {
+      "word": "to",
+      "start": 22.24,
+      "end": 22.36
+    },
+    {
+      "word": "your",
+      "start": 22.36,
+      "end": 22.56
+    },
+    {
+      "word": "place",
+      "start": 22.56,
+      "end": 22.84
+    },
+    {
+      "word": "and",
+      "start": 22.84,
+      "end": 23.1
+    },
+    {
+      "word": "go",
+      "start": 23.1,
+      "end": 23.24
+    },
+    {
+      "word": "over",
+      "start": 23.24,
+      "end": 23.42
+    },
+    {
+      "word": "the",
+      "start": 23.42,
+      "end": 23.58
+    },
+    {
+      "word": "lessons.",
+      "start": 23.58,
+      "end": 23.86
+    },
+    {
+      "word": "I'm",
+      "start": 24.6,
+      "end": 24.94
+    },
+    {
+      "word": "acing",
+      "start": 24.94,
+      "end": 25.26
+    },
+    {
+      "word": "biology",
+      "start": 25.26,
+      "end": 25.7
+    },
+    {
+      "word": "this",
+      "start": 25.7,
+      "end": 26.02
+    },
+    {
+      "word": "semester,",
+      "start": 26.02,
+      "end": 26.74
+    },
+    {
+      "word": "so",
+      "start": 26.74,
+      "end": 26.84
+    },
+    {
+      "word": "I'm",
+      "start": 26.84,
+      "end": 27.02
+    },
+    {
+      "word": "sure",
+      "start": 27.02,
+      "end": 27.2
+    },
+    {
+      "word": "I",
+      "start": 27.2,
+      "end": 27.36
+    },
+    {
+      "word": "can",
+      "start": 27.36,
+      "end": 27.5
+    },
+    {
+      "word": "get",
+      "start": 27.5,
+      "end": 27.68
+    },
+    {
+      "word": "you",
+      "start": 27.68,
+      "end": 27.82
+    },
+    {
+      "word": "back",
+      "start": 27.82,
+      "end": 28.02
+    },
+    {
+      "word": "on",
+      "start": 28.02,
+      "end": 28.22
+    },
+    {
+      "word": "track.",
+      "start": 28.22,
+      "end": 28.44
+    },
+    {
+      "word": "Later.",
+      "start": 29.8,
+      "end": 30.46
+    },
+    {
+      "word": "Look,",
+      "start": 58.78,
+      "end": 59.18
+    },
+    {
+      "word": "I",
+      "start": 59.18,
+      "end": 59.76
+    },
+    {
+      "word": "already",
+      "start": 59.76,
+      "end": 60.2
+    },
+    {
+      "word": "agreed",
+      "start": 60.2,
+      "end": 60.64
+    },
+    {
+      "word": "to",
+      "start": 60.64,
+      "end": 60.9
+    },
+    {
+      "word": "go",
+      "start": 60.9,
+      "end": 61.04
+    },
+    {
+      "word": "to",
+      "start": 61.04,
+      "end": 61.14
+    },
+    {
+      "word": "the",
+      "start": 61.14,
+      "end": 61.26
+    },
+    {
+      "word": "movies",
+      "start": 61.26,
+      "end": 61.48
+    },
+    {
+      "word": "with",
+      "start": 61.48,
+      "end": 61.74
+    },
+    {
+      "word": "Ben.",
+      "start": 61.74,
+      "end": 62.28
+    },
+    {
+      "word": "But",
+      "start": 62.66,
+      "end": 62.84
+    },
+    {
+      "word": "how",
+      "start": 62.84,
+      "end": 63.44
+    },
+    {
+      "word": "about",
+      "start": 63.44,
+      "end": 63.68
+    },
+    {
+      "word": "if",
+      "start": 63.68,
+      "end": 63.9
+    },
+    {
+      "word": "I",
+      "start": 63.9,
+      "end": 64.08
+    },
+    {
+      "word": "invite",
+      "start": 64.08,
+      "end": 64.42
+    },
+    {
+      "word": "her",
+      "start": 64.42,
+      "end": 64.72
+    },
+    {
+      "word": "to",
+      "start": 64.72,
+      "end": 64.96
+    },
+    {
+      "word": "go",
+      "start": 64.96,
+      "end": 65.1
+    },
+    {
+      "word": "to",
+      "start": 65.1,
+      "end": 65.2
+    },
+    {
+      "word": "the",
+      "start": 65.2,
+      "end": 65.3
+    },
+    {
+      "word": "movies",
+      "start": 65.3,
+      "end": 65.54
+    },
+    {
+      "word": "with",
+      "start": 65.54,
+      "end": 65.8
+    },
+    {
+      "word": "us",
+      "start": 65.8,
+      "end": 66.1
+    },
+    {
+      "word": "instead?",
+      "start": 66.1,
+      "end": 66.5
+    },
+    {
+      "word": "Of",
+      "start": 67.46,
+      "end": 67.64
+    },
+    {
+      "word": "course,",
+      "start": 67.64,
+      "end": 67.82
+    },
+    {
+      "word": "afterward,",
+      "start": 67.82,
+      "end": 68.48
+    },
+    {
+      "word": "we'd",
+      "start": 68.48,
+      "end": 69
+    },
+    {
+      "word": "grab",
+      "start": 69,
+      "end": 69.26
+    },
+    {
+      "word": "a",
+      "start": 69.26,
+      "end": 69.42
+    },
+    {
+      "word": "bite",
+      "start": 69.42,
+      "end": 69.58
+    },
+    {
+      "word": "to",
+      "start": 69.58,
+      "end": 69.74
+    },
+    {
+      "word": "eat,",
+      "start": 69.74,
+      "end": 70.22
+    },
+    {
+      "word": "but",
+      "start": 70.22,
+      "end": 70.56
+    },
+    {
+      "word": "it",
+      "start": 70.56,
+      "end": 70.7
+    },
+    {
+      "word": "won't",
+      "start": 70.7,
+      "end": 70.84
+    },
+    {
+      "word": "be",
+      "start": 70.84,
+      "end": 71
+    },
+    {
+      "word": "anything",
+      "start": 71,
+      "end": 71.24
+    },
+    {
+      "word": "fancy.",
+      "start": 71.24,
+      "end": 71.84
+    },
+    {
+      "word": "That",
+      "start": 72.52,
+      "end": 72.72
+    },
+    {
+      "word": "sounds",
+      "start": 72.72,
+      "end": 72.96
+    },
+    {
+      "word": "great",
+      "start": 72.96,
+      "end": 73.2
+    },
+    {
+      "word": "to",
+      "start": 73.2,
+      "end": 73.4
+    },
+    {
+      "word": "me.",
+      "start": 73.4,
+      "end": 73.6
+    },
+    {
+      "word": "Let",
+      "start": 74.24,
+      "end": 74.4
+    },
+    {
+      "word": "me",
+      "start": 74.4,
+      "end": 74.48
+    },
+    {
+      "word": "see",
+      "start": 74.48,
+      "end": 74.66
+    },
+    {
+      "word": "what",
+      "start": 74.66,
+      "end": 74.82
+    },
+    {
+      "word": "Jessica",
+      "start": 74.82,
+      "end": 75.12
+    },
+    {
+      "word": "thinks",
+      "start": 75.12,
+      "end": 75.5
+    },
+    {
+      "word": "about",
+      "start": 75.5,
+      "end": 75.8
+    },
+    {
+      "word": "it,",
+      "start": 75.8,
+      "end": 76.16
+    },
+    {
+      "word": "and",
+      "start": 76.16,
+      "end": 76.3
+    },
+    {
+      "word": "I'll",
+      "start": 76.3,
+      "end": 76.52
+    },
+    {
+      "word": "get",
+      "start": 76.52,
+      "end": 76.68
+    },
+    {
+      "word": "back",
+      "start": 76.68,
+      "end": 76.92
+    },
+    {
+      "word": "to",
+      "start": 76.92,
+      "end": 77.08
+    },
+    {
+      "word": "you",
+      "start": 77.08,
+      "end": 77.22
+    },
+    {
+      "word": "ASAP.",
+      "start": 77.22,
+      "end": 77.96
+    },
+    {
+      "word": "Good.",
+      "start": 78.74,
+      "end": 78.9
+    },
+    {
+      "word": "And",
+      "start": 79.66,
+      "end": 79.86
+    },
+    {
+      "word": "by",
+      "start": 79.86,
+      "end": 80.04
+    },
+    {
+      "word": "the",
+      "start": 80.04,
+      "end": 80.22
+    },
+    {
+      "word": "way,",
+      "start": 80.22,
+      "end": 80.64
+    },
+    {
+      "word": "thanks",
+      "start": 80.64,
+      "end": 80.96
+    },
+    {
+      "word": "again",
+      "start": 80.96,
+      "end": 81.4
+    },
+    {
+      "word": "for",
+      "start": 81.4,
+      "end": 81.64
+    },
+    {
+      "word": "the",
+      "start": 81.64,
+      "end": 81.8
+    },
+    {
+      "word": "help",
+      "start": 81.8,
+      "end": 82.04
+    },
+    {
+      "word": "with",
+      "start": 82.04,
+      "end": 82.24
+    },
+    {
+      "word": "biology.",
+      "start": 82.24,
+      "end": 82.62
+    },
+    {
+      "word": "I",
+      "start": 83.56,
+      "end": 83.76
+    },
+    {
+      "word": "think",
+      "start": 83.76,
+      "end": 83.98
+    },
+    {
+      "word": "I'm",
+      "start": 83.98,
+      "end": 84.2
+    },
+    {
+      "word": "on",
+      "start": 84.2,
+      "end": 84.38
+    },
+    {
+      "word": "top",
+      "start": 84.38,
+      "end": 84.54
+    },
+    {
+      "word": "of",
+      "start": 84.54,
+      "end": 84.74
+    },
+    {
+      "word": "it",
+      "start": 84.74,
+      "end": 84.82
+    },
+    {
+      "word": "now.",
+      "start": 84.82,
+      "end": 85.1
+    },
+    {
+      "word": "No",
+      "start": 85.44,
+      "end": 85.66
+    },
+    {
+      "word": "problem.",
+      "start": 85.66,
+      "end": 86.08
+    },
+    {
+      "word": "Don't",
+      "start": 86.62,
+      "end": 86.84
+    },
+    {
+      "word": "hesitate",
+      "start": 86.84,
+      "end": 87.06
+    },
+    {
+      "word": "to",
+      "start": 87.06,
+      "end": 87.38
+    },
+    {
+      "word": "call",
+      "start": 87.38,
+      "end": 87.56
+    },
+    {
+      "word": "me",
+      "start": 87.56,
+      "end": 87.7
+    },
+    {
+      "word": "if",
+      "start": 87.7,
+      "end": 87.88
+    },
+    {
+      "word": "you",
+      "start": 87.88,
+      "end": 88
+    },
+    {
+      "word": "have",
+      "start": 88,
+      "end": 88.16
+    },
+    {
+      "word": "any",
+      "start": 88.16,
+      "end": 88.3
+    },
+    {
+      "word": "questions.",
+      "start": 88.3,
+      "end": 88.68
+    },
+    {
+      "word": "Thanks,",
+      "start": 89.2,
+      "end": 89.6
+    },
+    {
+      "word": "buddy.",
+      "start": 89.6,
+      "end": 89.8
+    },
+    {
+      "word": "See",
+      "start": 90.34,
+      "end": 90.48
+    },
+    {
+      "word": "you",
+      "start": 90.48,
+      "end": 90.52
+    },
+    {
+      "word": "later.",
+      "start": 90.52,
+      "end": 90.8
+    }
+  ]
+}

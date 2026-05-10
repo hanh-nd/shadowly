@@ -1,0 +1,540 @@
+{
+  "text": " Exercise 4-2. Betty bought a bit of better butter. In the sentence, Betty bought a bit of better butter, all of the T's are in weak positions, so they all sound like soft D's. Repeat the sentence slowly, word by word. Betty bought a bit of better butter. Feel the tip of your tongue flick across that area behind your top teeth. Think of the music of a cello again when you say Betty bought a bit of better butter. Repeat. Betty bought a bit of better butter. But, said she, this butter is bitter. If I put it in my batter, it'll make my batter bitter.",
+  "wordTimestamps": [
+    {
+      "word": "Exercise",
+      "start": 0.42,
+      "end": 0.84
+    },
+    {
+      "word": "4-2.",
+      "start": 0.84,
+      "end": 1.86
+    },
+    {
+      "word": "Betty",
+      "start": 1.86,
+      "end": 2.46
+    },
+    {
+      "word": "bought",
+      "start": 2.46,
+      "end": 2.74
+    },
+    {
+      "word": "a",
+      "start": 2.74,
+      "end": 2.9
+    },
+    {
+      "word": "bit",
+      "start": 2.9,
+      "end": 3.02
+    },
+    {
+      "word": "of",
+      "start": 3.02,
+      "end": 3.14
+    },
+    {
+      "word": "better",
+      "start": 3.14,
+      "end": 3.36
+    },
+    {
+      "word": "butter.",
+      "start": 3.36,
+      "end": 3.84
+    },
+    {
+      "word": "In",
+      "start": 3.84,
+      "end": 4.92
+    },
+    {
+      "word": "the",
+      "start": 4.92,
+      "end": 5.1
+    },
+    {
+      "word": "sentence,",
+      "start": 5.1,
+      "end": 5.72
+    },
+    {
+      "word": "Betty",
+      "start": 5.72,
+      "end": 5.88
+    },
+    {
+      "word": "bought",
+      "start": 5.88,
+      "end": 6.12
+    },
+    {
+      "word": "a",
+      "start": 6.12,
+      "end": 6.22
+    },
+    {
+      "word": "bit",
+      "start": 6.22,
+      "end": 6.36
+    },
+    {
+      "word": "of",
+      "start": 6.36,
+      "end": 6.44
+    },
+    {
+      "word": "better",
+      "start": 6.44,
+      "end": 6.62
+    },
+    {
+      "word": "butter,",
+      "start": 6.62,
+      "end": 7.18
+    },
+    {
+      "word": "all",
+      "start": 7.18,
+      "end": 7.82
+    },
+    {
+      "word": "of",
+      "start": 7.82,
+      "end": 8
+    },
+    {
+      "word": "the",
+      "start": 8,
+      "end": 8.12
+    },
+    {
+      "word": "T's",
+      "start": 8.12,
+      "end": 8.4
+    },
+    {
+      "word": "are",
+      "start": 8.4,
+      "end": 8.62
+    },
+    {
+      "word": "in",
+      "start": 8.62,
+      "end": 8.72
+    },
+    {
+      "word": "weak",
+      "start": 8.72,
+      "end": 8.94
+    },
+    {
+      "word": "positions,",
+      "start": 8.94,
+      "end": 9.46
+    },
+    {
+      "word": "so",
+      "start": 9.46,
+      "end": 9.98
+    },
+    {
+      "word": "they",
+      "start": 9.98,
+      "end": 10.12
+    },
+    {
+      "word": "all",
+      "start": 10.12,
+      "end": 10.3
+    },
+    {
+      "word": "sound",
+      "start": 10.3,
+      "end": 10.62
+    },
+    {
+      "word": "like",
+      "start": 10.62,
+      "end": 10.82
+    },
+    {
+      "word": "soft",
+      "start": 10.82,
+      "end": 11.22
+    },
+    {
+      "word": "D's.",
+      "start": 11.22,
+      "end": 11.88
+    },
+    {
+      "word": "Repeat",
+      "start": 11.88,
+      "end": 12.76
+    },
+    {
+      "word": "the",
+      "start": 12.76,
+      "end": 13.04
+    },
+    {
+      "word": "sentence",
+      "start": 13.04,
+      "end": 13.28
+    },
+    {
+      "word": "slowly,",
+      "start": 13.28,
+      "end": 14.1
+    },
+    {
+      "word": "word",
+      "start": 14.1,
+      "end": 14.18
+    },
+    {
+      "word": "by",
+      "start": 14.18,
+      "end": 14.38
+    },
+    {
+      "word": "word.",
+      "start": 14.38,
+      "end": 15.02
+    },
+    {
+      "word": "Betty",
+      "start": 15.02,
+      "end": 15.6
+    },
+    {
+      "word": "bought",
+      "start": 15.6,
+      "end": 16.96
+    },
+    {
+      "word": "a",
+      "start": 16.96,
+      "end": 17.14
+    },
+    {
+      "word": "bit",
+      "start": 17.14,
+      "end": 18.2
+    },
+    {
+      "word": "of",
+      "start": 18.2,
+      "end": 18.44
+    },
+    {
+      "word": "better",
+      "start": 18.44,
+      "end": 19.56
+    },
+    {
+      "word": "butter.",
+      "start": 19.56,
+      "end": 20.88
+    },
+    {
+      "word": "Feel",
+      "start": 21.92,
+      "end": 22.14
+    },
+    {
+      "word": "the",
+      "start": 22.14,
+      "end": 22.36
+    },
+    {
+      "word": "tip",
+      "start": 22.36,
+      "end": 22.56
+    },
+    {
+      "word": "of",
+      "start": 22.56,
+      "end": 22.7
+    },
+    {
+      "word": "your",
+      "start": 22.7,
+      "end": 22.84
+    },
+    {
+      "word": "tongue",
+      "start": 22.84,
+      "end": 23.2
+    },
+    {
+      "word": "flick",
+      "start": 23.2,
+      "end": 23.66
+    },
+    {
+      "word": "across",
+      "start": 23.66,
+      "end": 24.06
+    },
+    {
+      "word": "that",
+      "start": 24.06,
+      "end": 24.38
+    },
+    {
+      "word": "area",
+      "start": 24.38,
+      "end": 24.7
+    },
+    {
+      "word": "behind",
+      "start": 24.7,
+      "end": 25.06
+    },
+    {
+      "word": "your",
+      "start": 25.06,
+      "end": 25.32
+    },
+    {
+      "word": "top",
+      "start": 25.32,
+      "end": 25.54
+    },
+    {
+      "word": "teeth.",
+      "start": 25.54,
+      "end": 26.3
+    },
+    {
+      "word": "Think",
+      "start": 26.72,
+      "end": 27
+    },
+    {
+      "word": "of",
+      "start": 27,
+      "end": 27.12
+    },
+    {
+      "word": "the",
+      "start": 27.12,
+      "end": 27.24
+    },
+    {
+      "word": "music",
+      "start": 27.24,
+      "end": 27.56
+    },
+    {
+      "word": "of",
+      "start": 27.56,
+      "end": 27.72
+    },
+    {
+      "word": "a",
+      "start": 27.72,
+      "end": 27.86
+    },
+    {
+      "word": "cello",
+      "start": 27.86,
+      "end": 28.18
+    },
+    {
+      "word": "again",
+      "start": 28.18,
+      "end": 28.5
+    },
+    {
+      "word": "when",
+      "start": 28.5,
+      "end": 28.74
+    },
+    {
+      "word": "you",
+      "start": 28.74,
+      "end": 28.86
+    },
+    {
+      "word": "say",
+      "start": 28.86,
+      "end": 29.18
+    },
+    {
+      "word": "Betty",
+      "start": 28.86,
+      "end": 29.6
+    },
+    {
+      "word": "bought",
+      "start": 29.6,
+      "end": 29.9
+    },
+    {
+      "word": "a",
+      "start": 29.9,
+      "end": 30.04
+    },
+    {
+      "word": "bit",
+      "start": 30.04,
+      "end": 30.16
+    },
+    {
+      "word": "of",
+      "start": 30.16,
+      "end": 30.26
+    },
+    {
+      "word": "better",
+      "start": 30.26,
+      "end": 30.5
+    },
+    {
+      "word": "butter.",
+      "start": 30.5,
+      "end": 31.02
+    },
+    {
+      "word": "Repeat.",
+      "start": 31.02,
+      "end": 33.82
+    },
+    {
+      "word": "Betty",
+      "start": 33.24,
+      "end": 34.42
+    },
+    {
+      "word": "bought",
+      "start": 34.42,
+      "end": 34.7
+    },
+    {
+      "word": "a",
+      "start": 34.7,
+      "end": 34.86
+    },
+    {
+      "word": "bit",
+      "start": 34.86,
+      "end": 35.02
+    },
+    {
+      "word": "of",
+      "start": 35.02,
+      "end": 35.14
+    },
+    {
+      "word": "better",
+      "start": 35.14,
+      "end": 35.36
+    },
+    {
+      "word": "butter.",
+      "start": 35.36,
+      "end": 35.96
+    },
+    {
+      "word": "But,",
+      "start": 35.96,
+      "end": 37.7
+    },
+    {
+      "word": "said",
+      "start": 37.7,
+      "end": 37.86
+    },
+    {
+      "word": "she,",
+      "start": 37.86,
+      "end": 38.92
+    },
+    {
+      "word": "this",
+      "start": 37.96,
+      "end": 39.48
+    },
+    {
+      "word": "butter",
+      "start": 39.48,
+      "end": 39.8
+    },
+    {
+      "word": "is",
+      "start": 39.8,
+      "end": 39.92
+    },
+    {
+      "word": "bitter.",
+      "start": 39.92,
+      "end": 40.54
+    },
+    {
+      "word": "If",
+      "start": 40.54,
+      "end": 41.74
+    },
+    {
+      "word": "I",
+      "start": 41.74,
+      "end": 41.84
+    },
+    {
+      "word": "put",
+      "start": 41.84,
+      "end": 42.08
+    },
+    {
+      "word": "it",
+      "start": 42.08,
+      "end": 42.22
+    },
+    {
+      "word": "in",
+      "start": 42.22,
+      "end": 42.34
+    },
+    {
+      "word": "my",
+      "start": 42.34,
+      "end": 42.48
+    },
+    {
+      "word": "batter,",
+      "start": 42.48,
+      "end": 43.2
+    },
+    {
+      "word": "it'll",
+      "start": 42.66,
+      "end": 44.42
+    },
+    {
+      "word": "make",
+      "start": 44.42,
+      "end": 44.64
+    },
+    {
+      "word": "my",
+      "start": 44.64,
+      "end": 44.8
+    },
+    {
+      "word": "batter",
+      "start": 44.8,
+      "end": 45.12
+    },
+    {
+      "word": "bitter.",
+      "start": 45.12,
+      "end": 45.62
+    }
+  ]
+}

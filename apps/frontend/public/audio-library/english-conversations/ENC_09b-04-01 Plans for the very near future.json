@@ -1,0 +1,890 @@
+{
+  "text": " Conversation 9B. Plans for the Very Near Future. What are you doing tomorrow? I'm going to the beach with my family for a week. We're leaving early, at 6 a.m. Oh, nice. So I guess you're planning to go to bed early tonight. Yeah, I'm gonna pack my bag and try to hit the sack by 9 o'clock. Good luck with that. What are you taking? I always pack light for the beach. A bathing suit, a couple of pairs of shorts, some T-shirts, a hat, and lots of sunscreen. How about you? What are you doing next week? I'm going to stay home and catch up on some unfinished projects. Like what? Oh, I have a long list. First, I'm going to clean up my office, pay bills, write letters, and take care of a bunch of paperwork. Then I'm going to redecorate my bedroom, paint the walls, and get new curtains. Wow. What color are you going to paint it? It's a very light blue. I've already picked it out and bought the paint. Cool.",
+  "wordTimestamps": [
+    {
+      "word": "Conversation",
+      "start": 0.46,
+      "end": 1.22
+    },
+    {
+      "word": "9B.",
+      "start": 1.22,
+      "end": 1.88
+    },
+    {
+      "word": "Plans",
+      "start": 1.88,
+      "end": 3.06
+    },
+    {
+      "word": "for",
+      "start": 3.06,
+      "end": 3.26
+    },
+    {
+      "word": "the",
+      "start": 3.26,
+      "end": 3.36
+    },
+    {
+      "word": "Very",
+      "start": 3.36,
+      "end": 3.64
+    },
+    {
+      "word": "Near",
+      "start": 3.64,
+      "end": 3.96
+    },
+    {
+      "word": "Future.",
+      "start": 3.96,
+      "end": 4.52
+    },
+    {
+      "word": "What",
+      "start": 6.26,
+      "end": 6.38
+    },
+    {
+      "word": "are",
+      "start": 6.38,
+      "end": 6.54
+    },
+    {
+      "word": "you",
+      "start": 6.54,
+      "end": 6.64
+    },
+    {
+      "word": "doing",
+      "start": 6.64,
+      "end": 6.96
+    },
+    {
+      "word": "tomorrow?",
+      "start": 6.96,
+      "end": 7.38
+    },
+    {
+      "word": "I'm",
+      "start": 8.24,
+      "end": 8.44
+    },
+    {
+      "word": "going",
+      "start": 8.44,
+      "end": 8.74
+    },
+    {
+      "word": "to",
+      "start": 8.74,
+      "end": 9
+    },
+    {
+      "word": "the",
+      "start": 9,
+      "end": 9.12
+    },
+    {
+      "word": "beach",
+      "start": 9.12,
+      "end": 9.38
+    },
+    {
+      "word": "with",
+      "start": 9.38,
+      "end": 9.64
+    },
+    {
+      "word": "my",
+      "start": 9.64,
+      "end": 9.82
+    },
+    {
+      "word": "family",
+      "start": 9.82,
+      "end": 10.3
+    },
+    {
+      "word": "for",
+      "start": 10.3,
+      "end": 10.62
+    },
+    {
+      "word": "a",
+      "start": 10.62,
+      "end": 10.78
+    },
+    {
+      "word": "week.",
+      "start": 10.78,
+      "end": 11.22
+    },
+    {
+      "word": "We're",
+      "start": 11.66,
+      "end": 11.86
+    },
+    {
+      "word": "leaving",
+      "start": 11.86,
+      "end": 12.12
+    },
+    {
+      "word": "early,",
+      "start": 12.12,
+      "end": 12.56
+    },
+    {
+      "word": "at",
+      "start": 12.56,
+      "end": 13.26
+    },
+    {
+      "word": "6",
+      "start": 13.26,
+      "end": 13.6
+    },
+    {
+      "word": "a.m.",
+      "start": 13.6,
+      "end": 14.1
+    },
+    {
+      "word": "Oh,",
+      "start": 14.72,
+      "end": 15
+    },
+    {
+      "word": "nice.",
+      "start": 15,
+      "end": 15.6
+    },
+    {
+      "word": "So",
+      "start": 15.6,
+      "end": 16.16
+    },
+    {
+      "word": "I",
+      "start": 16.16,
+      "end": 16.32
+    },
+    {
+      "word": "guess",
+      "start": 16.32,
+      "end": 16.5
+    },
+    {
+      "word": "you're",
+      "start": 16.5,
+      "end": 16.7
+    },
+    {
+      "word": "planning",
+      "start": 16.7,
+      "end": 16.98
+    },
+    {
+      "word": "to",
+      "start": 16.98,
+      "end": 17.2
+    },
+    {
+      "word": "go",
+      "start": 17.2,
+      "end": 17.32
+    },
+    {
+      "word": "to",
+      "start": 17.32,
+      "end": 17.46
+    },
+    {
+      "word": "bed",
+      "start": 17.46,
+      "end": 17.58
+    },
+    {
+      "word": "early",
+      "start": 17.58,
+      "end": 17.96
+    },
+    {
+      "word": "tonight.",
+      "start": 17.96,
+      "end": 18.32
+    },
+    {
+      "word": "Yeah,",
+      "start": 19.06,
+      "end": 19.4
+    },
+    {
+      "word": "I'm",
+      "start": 19.4,
+      "end": 20.2
+    },
+    {
+      "word": "gonna",
+      "start": 20.2,
+      "end": 20.34
+    },
+    {
+      "word": "pack",
+      "start": 20.34,
+      "end": 20.68
+    },
+    {
+      "word": "my",
+      "start": 20.68,
+      "end": 20.92
+    },
+    {
+      "word": "bag",
+      "start": 20.92,
+      "end": 21.24
+    },
+    {
+      "word": "and",
+      "start": 21.24,
+      "end": 21.68
+    },
+    {
+      "word": "try",
+      "start": 21.68,
+      "end": 21.92
+    },
+    {
+      "word": "to",
+      "start": 21.92,
+      "end": 22.06
+    },
+    {
+      "word": "hit",
+      "start": 22.06,
+      "end": 22.24
+    },
+    {
+      "word": "the",
+      "start": 22.24,
+      "end": 22.42
+    },
+    {
+      "word": "sack",
+      "start": 22.42,
+      "end": 22.68
+    },
+    {
+      "word": "by",
+      "start": 22.68,
+      "end": 22.96
+    },
+    {
+      "word": "9",
+      "start": 22.96,
+      "end": 23.24
+    },
+    {
+      "word": "o'clock.",
+      "start": 23.24,
+      "end": 23.52
+    },
+    {
+      "word": "Good",
+      "start": 24.38,
+      "end": 24.58
+    },
+    {
+      "word": "luck",
+      "start": 24.58,
+      "end": 24.8
+    },
+    {
+      "word": "with",
+      "start": 24.8,
+      "end": 25.02
+    },
+    {
+      "word": "that.",
+      "start": 25.02,
+      "end": 25.28
+    },
+    {
+      "word": "What",
+      "start": 25.28,
+      "end": 26.16
+    },
+    {
+      "word": "are",
+      "start": 26.16,
+      "end": 26.3
+    },
+    {
+      "word": "you",
+      "start": 26.3,
+      "end": 26.42
+    },
+    {
+      "word": "taking?",
+      "start": 26.42,
+      "end": 26.78
+    },
+    {
+      "word": "I",
+      "start": 27.6,
+      "end": 27.76
+    },
+    {
+      "word": "always",
+      "start": 27.76,
+      "end": 28.26
+    },
+    {
+      "word": "pack",
+      "start": 28.26,
+      "end": 28.62
+    },
+    {
+      "word": "light",
+      "start": 28.62,
+      "end": 28.92
+    },
+    {
+      "word": "for",
+      "start": 28.92,
+      "end": 29.1
+    },
+    {
+      "word": "the",
+      "start": 29.1,
+      "end": 29.24
+    },
+    {
+      "word": "beach.",
+      "start": 29.24,
+      "end": 29.78
+    },
+    {
+      "word": "A",
+      "start": 30.1,
+      "end": 30.24
+    },
+    {
+      "word": "bathing",
+      "start": 30.24,
+      "end": 30.54
+    },
+    {
+      "word": "suit,",
+      "start": 30.54,
+      "end": 31.32
+    },
+    {
+      "word": "a",
+      "start": 31.32,
+      "end": 31.42
+    },
+    {
+      "word": "couple",
+      "start": 31.42,
+      "end": 31.74
+    },
+    {
+      "word": "of",
+      "start": 31.74,
+      "end": 31.92
+    },
+    {
+      "word": "pairs",
+      "start": 31.92,
+      "end": 32.22
+    },
+    {
+      "word": "of",
+      "start": 32.22,
+      "end": 32.46
+    },
+    {
+      "word": "shorts,",
+      "start": 32.46,
+      "end": 33.34
+    },
+    {
+      "word": "some",
+      "start": 33.34,
+      "end": 33.56
+    },
+    {
+      "word": "T-shirts,",
+      "start": 33.56,
+      "end": 34.66
+    },
+    {
+      "word": "a",
+      "start": 34.66,
+      "end": 34.78
+    },
+    {
+      "word": "hat,",
+      "start": 34.78,
+      "end": 35.3
+    },
+    {
+      "word": "and",
+      "start": 35.3,
+      "end": 35.76
+    },
+    {
+      "word": "lots",
+      "start": 35.76,
+      "end": 36.2
+    },
+    {
+      "word": "of",
+      "start": 36.2,
+      "end": 36.46
+    },
+    {
+      "word": "sunscreen.",
+      "start": 36.46,
+      "end": 36.9
+    },
+    {
+      "word": "How",
+      "start": 37.68,
+      "end": 37.84
+    },
+    {
+      "word": "about",
+      "start": 37.84,
+      "end": 38.1
+    },
+    {
+      "word": "you?",
+      "start": 38.1,
+      "end": 38.5
+    },
+    {
+      "word": "What",
+      "start": 38.5,
+      "end": 39.1
+    },
+    {
+      "word": "are",
+      "start": 39.1,
+      "end": 39.22
+    },
+    {
+      "word": "you",
+      "start": 39.22,
+      "end": 39.42
+    },
+    {
+      "word": "doing",
+      "start": 39.42,
+      "end": 39.68
+    },
+    {
+      "word": "next",
+      "start": 39.68,
+      "end": 39.98
+    },
+    {
+      "word": "week?",
+      "start": 39.98,
+      "end": 40.28
+    },
+    {
+      "word": "I'm",
+      "start": 40.98,
+      "end": 41.2
+    },
+    {
+      "word": "going",
+      "start": 41.2,
+      "end": 41.32
+    },
+    {
+      "word": "to",
+      "start": 41.32,
+      "end": 41.46
+    },
+    {
+      "word": "stay",
+      "start": 41.46,
+      "end": 41.68
+    },
+    {
+      "word": "home",
+      "start": 41.68,
+      "end": 41.94
+    },
+    {
+      "word": "and",
+      "start": 41.94,
+      "end": 42.16
+    },
+    {
+      "word": "catch",
+      "start": 42.16,
+      "end": 42.44
+    },
+    {
+      "word": "up",
+      "start": 42.44,
+      "end": 42.6
+    },
+    {
+      "word": "on",
+      "start": 42.6,
+      "end": 42.76
+    },
+    {
+      "word": "some",
+      "start": 42.76,
+      "end": 42.94
+    },
+    {
+      "word": "unfinished",
+      "start": 42.94,
+      "end": 43.48
+    },
+    {
+      "word": "projects.",
+      "start": 43.48,
+      "end": 44.2
+    },
+    {
+      "word": "Like",
+      "start": 44.88,
+      "end": 45.12
+    },
+    {
+      "word": "what?",
+      "start": 45.12,
+      "end": 45.38
+    },
+    {
+      "word": "Oh,",
+      "start": 46.32,
+      "end": 46.6
+    },
+    {
+      "word": "I",
+      "start": 46.6,
+      "end": 46.84
+    },
+    {
+      "word": "have",
+      "start": 46.84,
+      "end": 47.1
+    },
+    {
+      "word": "a",
+      "start": 47.1,
+      "end": 47.24
+    },
+    {
+      "word": "long",
+      "start": 47.24,
+      "end": 47.58
+    },
+    {
+      "word": "list.",
+      "start": 47.58,
+      "end": 48.08
+    },
+    {
+      "word": "First,",
+      "start": 48.9,
+      "end": 49.26
+    },
+    {
+      "word": "I'm",
+      "start": 49.26,
+      "end": 49.34
+    },
+    {
+      "word": "going",
+      "start": 49.34,
+      "end": 49.46
+    },
+    {
+      "word": "to",
+      "start": 49.46,
+      "end": 49.58
+    },
+    {
+      "word": "clean",
+      "start": 49.58,
+      "end": 49.76
+    },
+    {
+      "word": "up",
+      "start": 49.76,
+      "end": 49.86
+    },
+    {
+      "word": "my",
+      "start": 49.86,
+      "end": 50.06
+    },
+    {
+      "word": "office,",
+      "start": 50.06,
+      "end": 51.1
+    },
+    {
+      "word": "pay",
+      "start": 51.1,
+      "end": 51.32
+    },
+    {
+      "word": "bills,",
+      "start": 51.32,
+      "end": 52.16
+    },
+    {
+      "word": "write",
+      "start": 52.16,
+      "end": 52.38
+    },
+    {
+      "word": "letters,",
+      "start": 52.38,
+      "end": 52.78
+    },
+    {
+      "word": "and",
+      "start": 52.78,
+      "end": 53.34
+    },
+    {
+      "word": "take",
+      "start": 53.34,
+      "end": 53.62
+    },
+    {
+      "word": "care",
+      "start": 53.62,
+      "end": 53.82
+    },
+    {
+      "word": "of",
+      "start": 53.82,
+      "end": 54
+    },
+    {
+      "word": "a",
+      "start": 54,
+      "end": 54.12
+    },
+    {
+      "word": "bunch",
+      "start": 54.12,
+      "end": 54.28
+    },
+    {
+      "word": "of",
+      "start": 54.28,
+      "end": 54.46
+    },
+    {
+      "word": "paperwork.",
+      "start": 54.46,
+      "end": 54.86
+    },
+    {
+      "word": "Then",
+      "start": 55.92,
+      "end": 56
+    },
+    {
+      "word": "I'm",
+      "start": 56,
+      "end": 56.22
+    },
+    {
+      "word": "going",
+      "start": 56.22,
+      "end": 56.36
+    },
+    {
+      "word": "to",
+      "start": 56.36,
+      "end": 56.52
+    },
+    {
+      "word": "redecorate",
+      "start": 56.52,
+      "end": 57.12
+    },
+    {
+      "word": "my",
+      "start": 57.12,
+      "end": 57.3
+    },
+    {
+      "word": "bedroom,",
+      "start": 57.3,
+      "end": 58.14
+    },
+    {
+      "word": "paint",
+      "start": 58.14,
+      "end": 58.24
+    },
+    {
+      "word": "the",
+      "start": 58.24,
+      "end": 58.4
+    },
+    {
+      "word": "walls,",
+      "start": 58.4,
+      "end": 59.1
+    },
+    {
+      "word": "and",
+      "start": 59.1,
+      "end": 59.2
+    },
+    {
+      "word": "get",
+      "start": 59.2,
+      "end": 59.44
+    },
+    {
+      "word": "new",
+      "start": 59.44,
+      "end": 59.68
+    },
+    {
+      "word": "curtains.",
+      "start": 59.68,
+      "end": 60.48
+    },
+    {
+      "word": "Wow.",
+      "start": 60.96,
+      "end": 61.2
+    },
+    {
+      "word": "What",
+      "start": 61.2,
+      "end": 62.32
+    },
+    {
+      "word": "color",
+      "start": 62.32,
+      "end": 62.7
+    },
+    {
+      "word": "are",
+      "start": 62.7,
+      "end": 62.94
+    },
+    {
+      "word": "you",
+      "start": 62.94,
+      "end": 63.04
+    },
+    {
+      "word": "going",
+      "start": 63.04,
+      "end": 63.22
+    },
+    {
+      "word": "to",
+      "start": 63.22,
+      "end": 63.42
+    },
+    {
+      "word": "paint",
+      "start": 63.42,
+      "end": 63.7
+    },
+    {
+      "word": "it?",
+      "start": 63.7,
+      "end": 63.98
+    },
+    {
+      "word": "It's",
+      "start": 64.6,
+      "end": 64.82
+    },
+    {
+      "word": "a",
+      "start": 64.82,
+      "end": 64.92
+    },
+    {
+      "word": "very",
+      "start": 64.92,
+      "end": 65.22
+    },
+    {
+      "word": "light",
+      "start": 65.22,
+      "end": 65.6
+    },
+    {
+      "word": "blue.",
+      "start": 65.6,
+      "end": 65.96
+    },
+    {
+      "word": "I've",
+      "start": 65.96,
+      "end": 66.96
+    },
+    {
+      "word": "already",
+      "start": 66.96,
+      "end": 67.22
+    },
+    {
+      "word": "picked",
+      "start": 67.22,
+      "end": 67.48
+    },
+    {
+      "word": "it",
+      "start": 67.48,
+      "end": 67.68
+    },
+    {
+      "word": "out",
+      "start": 67.68,
+      "end": 67.88
+    },
+    {
+      "word": "and",
+      "start": 67.88,
+      "end": 68.12
+    },
+    {
+      "word": "bought",
+      "start": 68.12,
+      "end": 68.32
+    },
+    {
+      "word": "the",
+      "start": 68.32,
+      "end": 68.5
+    },
+    {
+      "word": "paint.",
+      "start": 68.5,
+      "end": 69.1
+    },
+    {
+      "word": "Cool.",
+      "start": 69.46,
+      "end": 69.78
+    }
+  ]
+}

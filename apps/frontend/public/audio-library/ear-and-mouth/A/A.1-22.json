@@ -1,0 +1,1200 @@
+{
+  "text": " Exercise 122, Syllable Patterns. In order to practice accurate pitch change, repeat the following column. Each syllable will count as one musical note. Remember that words that end in a vowel or voiced consonant will be longer than ones ending in an unvoiced consonant. La, cat, jump, box, la, dog. See. Plan. La la. A dog. A cat. Destroy. A pen. Pretend. Your job. Pea soup. La la. Icy. Suitcase. Project. Do it. boss. We cleaned up. In the bag. For a while. I went home. We don't care. It's in March. La la la A hot dog I don know Jim killed it Tomorrow A fruitcake The engine A wine glass Potato Whatever La la la Hot dog stand I don know Analyze Article Dinner time Digital Analog Cell structure La la la la Spots a hot dog Jim killed a snake Joe doesn't know Nate bought a book Al brought some ice La la la la It's a hot dog He killed a snake He doesn't know We came back in He bought a book La la la la Bob likes hot dogs Ann eats pancakes Cats eat fish bones Bears are fuzzy Planets rotate La la la la. It's my hot dog. Imitation. Analytic. We like science. My to-do list. La la la la. A hot dog stand. Jim killed a man. Analysis. Invisible. A platypus. La la la la. Permanently. Demonstrated. Category. Office supplies. Educator.",
+  "wordTimestamps": [
+    {
+      "word": "Exercise",
+      "start": 0.44,
+      "end": 0.92
+    },
+    {
+      "word": "122,",
+      "start": 0.92,
+      "end": 2.7
+    },
+    {
+      "word": "Syllable",
+      "start": 2.7,
+      "end": 2.9
+    },
+    {
+      "word": "Patterns.",
+      "start": 2.9,
+      "end": 3.64
+    },
+    {
+      "word": "In",
+      "start": 4.76,
+      "end": 4.88
+    },
+    {
+      "word": "order",
+      "start": 4.88,
+      "end": 5.02
+    },
+    {
+      "word": "to",
+      "start": 5.02,
+      "end": 5.2
+    },
+    {
+      "word": "practice",
+      "start": 5.2,
+      "end": 5.58
+    },
+    {
+      "word": "accurate",
+      "start": 5.58,
+      "end": 6.04
+    },
+    {
+      "word": "pitch",
+      "start": 6.04,
+      "end": 6.34
+    },
+    {
+      "word": "change,",
+      "start": 6.34,
+      "end": 7.02
+    },
+    {
+      "word": "repeat",
+      "start": 7.02,
+      "end": 7.64
+    },
+    {
+      "word": "the",
+      "start": 7.64,
+      "end": 7.92
+    },
+    {
+      "word": "following",
+      "start": 7.92,
+      "end": 8.24
+    },
+    {
+      "word": "column.",
+      "start": 8.24,
+      "end": 8.72
+    },
+    {
+      "word": "Each",
+      "start": 9.56,
+      "end": 9.78
+    },
+    {
+      "word": "syllable",
+      "start": 9.78,
+      "end": 10.1
+    },
+    {
+      "word": "will",
+      "start": 10.1,
+      "end": 10.4
+    },
+    {
+      "word": "count",
+      "start": 10.4,
+      "end": 10.6
+    },
+    {
+      "word": "as",
+      "start": 10.6,
+      "end": 10.86
+    },
+    {
+      "word": "one",
+      "start": 10.86,
+      "end": 11.14
+    },
+    {
+      "word": "musical",
+      "start": 11.14,
+      "end": 11.56
+    },
+    {
+      "word": "note.",
+      "start": 11.56,
+      "end": 11.98
+    },
+    {
+      "word": "Remember",
+      "start": 12.56,
+      "end": 12.8
+    },
+    {
+      "word": "that",
+      "start": 12.8,
+      "end": 13.06
+    },
+    {
+      "word": "words",
+      "start": 13.06,
+      "end": 13.38
+    },
+    {
+      "word": "that",
+      "start": 13.38,
+      "end": 13.6
+    },
+    {
+      "word": "end",
+      "start": 13.6,
+      "end": 13.7
+    },
+    {
+      "word": "in",
+      "start": 13.7,
+      "end": 13.86
+    },
+    {
+      "word": "a",
+      "start": 13.86,
+      "end": 14
+    },
+    {
+      "word": "vowel",
+      "start": 14,
+      "end": 14.28
+    },
+    {
+      "word": "or",
+      "start": 14.28,
+      "end": 14.64
+    },
+    {
+      "word": "voiced",
+      "start": 14.64,
+      "end": 14.96
+    },
+    {
+      "word": "consonant",
+      "start": 14.96,
+      "end": 15.48
+    },
+    {
+      "word": "will",
+      "start": 15.48,
+      "end": 15.84
+    },
+    {
+      "word": "be",
+      "start": 15.84,
+      "end": 15.96
+    },
+    {
+      "word": "longer",
+      "start": 15.96,
+      "end": 16.48
+    },
+    {
+      "word": "than",
+      "start": 16.48,
+      "end": 16.98
+    },
+    {
+      "word": "ones",
+      "start": 16.98,
+      "end": 17.32
+    },
+    {
+      "word": "ending",
+      "start": 17.32,
+      "end": 17.7
+    },
+    {
+      "word": "in",
+      "start": 17.7,
+      "end": 17.9
+    },
+    {
+      "word": "an",
+      "start": 17.9,
+      "end": 18
+    },
+    {
+      "word": "unvoiced",
+      "start": 18,
+      "end": 18.5
+    },
+    {
+      "word": "consonant.",
+      "start": 18.5,
+      "end": 18.94
+    },
+    {
+      "word": "La,",
+      "start": 21.24,
+      "end": 21.74
+    },
+    {
+      "word": "cat,",
+      "start": 21.74,
+      "end": 24.1
+    },
+    {
+      "word": "jump,",
+      "start": 24.1,
+      "end": 25.52
+    },
+    {
+      "word": "box,",
+      "start": 25.52,
+      "end": 27.74
+    },
+    {
+      "word": "la,",
+      "start": 27.74,
+      "end": 29
+    },
+    {
+      "word": "dog.",
+      "start": 29,
+      "end": 29.94
+    },
+    {
+      "word": "See.",
+      "start": 31.32,
+      "end": 32.26
+    },
+    {
+      "word": "Plan.",
+      "start": 33.08,
+      "end": 33.88
+    },
+    {
+      "word": "La",
+      "start": 35.32,
+      "end": 35.48
+    },
+    {
+      "word": "la.",
+      "start": 35.48,
+      "end": 36.14
+    },
+    {
+      "word": "A",
+      "start": 36.78,
+      "end": 36.96
+    },
+    {
+      "word": "dog.",
+      "start": 36.96,
+      "end": 37.76
+    },
+    {
+      "word": "A",
+      "start": 38.34,
+      "end": 38.52
+    },
+    {
+      "word": "cat.",
+      "start": 38.52,
+      "end": 39.32
+    },
+    {
+      "word": "Destroy.",
+      "start": 39.9,
+      "end": 40.92
+    },
+    {
+      "word": "A",
+      "start": 41.6,
+      "end": 41.82
+    },
+    {
+      "word": "pen.",
+      "start": 41.82,
+      "end": 42.72
+    },
+    {
+      "word": "Pretend.",
+      "start": 43.5,
+      "end": 44.22
+    },
+    {
+      "word": "Your",
+      "start": 45.5,
+      "end": 45.52
+    },
+    {
+      "word": "job.",
+      "start": 45.52,
+      "end": 45.94
+    },
+    {
+      "word": "Pea",
+      "start": 47.5,
+      "end": 47.52
+    },
+    {
+      "word": "soup.",
+      "start": 47.52,
+      "end": 47.8
+    },
+    {
+      "word": "La",
+      "start": 49.5,
+      "end": 49.52
+    },
+    {
+      "word": "la.",
+      "start": 49.52,
+      "end": 49.54
+    },
+    {
+      "word": "Icy.",
+      "start": 51.5,
+      "end": 51.86
+    },
+    {
+      "word": "Suitcase.",
+      "start": 53.5,
+      "end": 53.74
+    },
+    {
+      "word": "Project.",
+      "start": 55.5,
+      "end": 55.52
+    },
+    {
+      "word": "Do",
+      "start": 58.88,
+      "end": 59.02
+    },
+    {
+      "word": "it.",
+      "start": 59.02,
+      "end": 59.42
+    },
+    {
+      "word": "boss.",
+      "start": 88,
+      "end": 89.12
+    },
+    {
+      "word": "We",
+      "start": 89.12,
+      "end": 89.86
+    },
+    {
+      "word": "cleaned",
+      "start": 89.86,
+      "end": 90.2
+    },
+    {
+      "word": "up.",
+      "start": 90.2,
+      "end": 91.08
+    },
+    {
+      "word": "In",
+      "start": 91.08,
+      "end": 91.96
+    },
+    {
+      "word": "the",
+      "start": 91.96,
+      "end": 92.08
+    },
+    {
+      "word": "bag.",
+      "start": 92.08,
+      "end": 93.02
+    },
+    {
+      "word": "For",
+      "start": 93.02,
+      "end": 93.88
+    },
+    {
+      "word": "a",
+      "start": 93.88,
+      "end": 94.06
+    },
+    {
+      "word": "while.",
+      "start": 94.06,
+      "end": 95.02
+    },
+    {
+      "word": "I",
+      "start": 95.02,
+      "end": 95.8
+    },
+    {
+      "word": "went",
+      "start": 95.8,
+      "end": 96
+    },
+    {
+      "word": "home.",
+      "start": 96,
+      "end": 97.1
+    },
+    {
+      "word": "We",
+      "start": 97.1,
+      "end": 97.8
+    },
+    {
+      "word": "don't",
+      "start": 97.8,
+      "end": 97.96
+    },
+    {
+      "word": "care.",
+      "start": 97.96,
+      "end": 98.78
+    },
+    {
+      "word": "It's",
+      "start": 98.78,
+      "end": 99.54
+    },
+    {
+      "word": "in",
+      "start": 99.54,
+      "end": 99.68
+    },
+    {
+      "word": "March.",
+      "start": 99.68,
+      "end": 100.82
+    },
+    {
+      "word": "La",
+      "start": 101.08,
+      "end": 101.46
+    },
+    {
+      "word": "la",
+      "start": 101.46,
+      "end": 101.64
+    },
+    {
+      "word": "la.",
+      "start": 101.64,
+      "end": 102.26
+    },
+    {
+      "word": "A",
+      "start": 102.26,
+      "end": 103.06
+    },
+    {
+      "word": "hot",
+      "start": 103.06,
+      "end": 103.26
+    },
+    {
+      "word": "dog.",
+      "start": 103.26,
+      "end": 103.96
+    },
+    {
+      "word": "I",
+      "start": 103.96,
+      "end": 104.74
+    },
+    {
+      "word": "don't",
+      "start": 104.74,
+      "end": 105.1
+    },
+    {
+      "word": "know.",
+      "start": 105.1,
+      "end": 105.94
+    },
+    {
+      "word": "Jim",
+      "start": 105.94,
+      "end": 106.66
+    },
+    {
+      "word": "killed",
+      "start": 106.66,
+      "end": 107.08
+    },
+    {
+      "word": "it.",
+      "start": 107.08,
+      "end": 108
+    },
+    {
+      "word": "Tomorrow.",
+      "start": 108,
+      "end": 109.9
+    },
+    {
+      "word": "A",
+      "start": 109.9,
+      "end": 110.54
+    },
+    {
+      "word": "fruitcake.",
+      "start": 110.50425,
+      "end": 111.40425
+    },
+    {
+      "word": "The",
+      "start": 111.40425,
+      "end": 112.60425
+    },
+    {
+      "word": "engine.",
+      "start": 112.60425,
+      "end": 113.88425
+    },
+    {
+      "word": "A",
+      "start": 113.88425,
+      "end": 114.58425
+    },
+    {
+      "word": "wine",
+      "start": 114.58425,
+      "end": 114.84425
+    },
+    {
+      "word": "glass.",
+      "start": 114.84425,
+      "end": 116.26425
+    },
+    {
+      "word": "Potato.",
+      "start": 116.26425,
+      "end": 118.204254
+    },
+    {
+      "word": "Whatever.",
+      "start": 118.204254,
+      "end": 120.30425
+    },
+    {
+      "word": "La",
+      "start": 120.30425,
+      "end": 120.98425
+    },
+    {
+      "word": "la",
+      "start": 120.98425,
+      "end": 121.22425
+    },
+    {
+      "word": "la.",
+      "start": 121.22425,
+      "end": 121.66425
+    },
+    {
+      "word": "Hot",
+      "start": 121.66425,
+      "end": 122.84425
+    },
+    {
+      "word": "dog",
+      "start": 122.84425,
+      "end": 123.064255
+    },
+    {
+      "word": "stand.",
+      "start": 123.064255,
+      "end": 123.84425
+    },
+    {
+      "word": "I",
+      "start": 123.84425,
+      "end": 124.84425
+    },
+    {
+      "word": "don't",
+      "start": 124.84425,
+      "end": 125.02425
+    },
+    {
+      "word": "know.",
+      "start": 125.02425,
+      "end": 125.52425
+    },
+    {
+      "word": "Analyze",
+      "start": 126.98425,
+      "end": 127.62425
+    },
+    {
+      "word": "Article",
+      "start": 128.92426,
+      "end": 129.32425
+    },
+    {
+      "word": "Dinner",
+      "start": 130.90425,
+      "end": 131.14426
+    },
+    {
+      "word": "time",
+      "start": 131.14426,
+      "end": 131.50424
+    },
+    {
+      "word": "Digital",
+      "start": 133.12425,
+      "end": 133.46425
+    },
+    {
+      "word": "Analog",
+      "start": 135.02425,
+      "end": 135.76425
+    },
+    {
+      "word": "Cell",
+      "start": 137.04425,
+      "end": 137.28426
+    },
+    {
+      "word": "structure",
+      "start": 137.28426,
+      "end": 137.74425
+    },
+    {
+      "word": "La",
+      "start": 139.58426,
+      "end": 139.78424
+    },
+    {
+      "word": "la",
+      "start": 139.78424,
+      "end": 140.06425
+    },
+    {
+      "word": "la",
+      "start": 140.06425,
+      "end": 140.20425
+    },
+    {
+      "word": "la",
+      "start": 140.20425,
+      "end": 140.48425
+    },
+    {
+      "word": "Spots",
+      "start": 141.56425,
+      "end": 141.94424
+    },
+    {
+      "word": "a",
+      "start": 141.94424,
+      "end": 142.08426
+    },
+    {
+      "word": "hot",
+      "start": 142.08426,
+      "end": 142.26425
+    },
+    {
+      "word": "dog",
+      "start": 142.26425,
+      "end": 142.70425
+    },
+    {
+      "word": "Jim",
+      "start": 144.26425,
+      "end": 144.54425
+    },
+    {
+      "word": "killed",
+      "start": 144.54425,
+      "end": 144.92426
+    },
+    {
+      "word": "a",
+      "start": 144.92426,
+      "end": 145.10425
+    },
+    {
+      "word": "snake",
+      "start": 145.10425,
+      "end": 145.38425
+    },
+    {
+      "word": "Joe",
+      "start": 147.08426,
+      "end": 147.34425
+    },
+    {
+      "word": "doesn't",
+      "start": 147.34425,
+      "end": 147.74425
+    },
+    {
+      "word": "know",
+      "start": 147.74425,
+      "end": 148.18425
+    },
+    {
+      "word": "Nate",
+      "start": 149.44424,
+      "end": 149.70425
+    },
+    {
+      "word": "bought",
+      "start": 149.70425,
+      "end": 149.98425
+    },
+    {
+      "word": "a",
+      "start": 149.98425,
+      "end": 150.12425
+    },
+    {
+      "word": "book",
+      "start": 150.12425,
+      "end": 150.42426
+    },
+    {
+      "word": "Al",
+      "start": 151.86426,
+      "end": 152.16425
+    },
+    {
+      "word": "brought",
+      "start": 152.16425,
+      "end": 152.44424
+    },
+    {
+      "word": "some",
+      "start": 152.44424,
+      "end": 152.66425
+    },
+    {
+      "word": "ice",
+      "start": 152.66425,
+      "end": 153.12425
+    },
+    {
+      "word": "La",
+      "start": 154.82425,
+      "end": 154.96425
+    },
+    {
+      "word": "la",
+      "start": 154.96425,
+      "end": 155.14426
+    },
+    {
+      "word": "la",
+      "start": 155.14426,
+      "end": 155.34425
+    },
+    {
+      "word": "la",
+      "start": 155.34425,
+      "end": 155.58426
+    },
+    {
+      "word": "It's",
+      "start": 156.78424,
+      "end": 157.02425
+    },
+    {
+      "word": "a",
+      "start": 157.02425,
+      "end": 157.12425
+    },
+    {
+      "word": "hot",
+      "start": 157.12425,
+      "end": 157.30424
+    },
+    {
+      "word": "dog",
+      "start": 157.30424,
+      "end": 157.70425
+    },
+    {
+      "word": "He",
+      "start": 157.46425,
+      "end": 159.30424
+    },
+    {
+      "word": "killed",
+      "start": 159.30424,
+      "end": 159.54425
+    },
+    {
+      "word": "a",
+      "start": 159.54425,
+      "end": 159.70425
+    },
+    {
+      "word": "snake",
+      "start": 159.70425,
+      "end": 159.94424
+    },
+    {
+      "word": "He",
+      "start": 161.30424,
+      "end": 161.62425
+    },
+    {
+      "word": "doesn't",
+      "start": 161.62425,
+      "end": 161.94424
+    },
+    {
+      "word": "know",
+      "start": 161.94424,
+      "end": 162.26425
+    },
+    {
+      "word": "We",
+      "start": 161.88425,
+      "end": 163.74425
+    },
+    {
+      "word": "came",
+      "start": 163.74425,
+      "end": 163.98425
+    },
+    {
+      "word": "back",
+      "start": 163.98425,
+      "end": 164.20425
+    },
+    {
+      "word": "in",
+      "start": 164.20425,
+      "end": 164.62425
+    },
+    {
+      "word": "He",
+      "start": 165.98425,
+      "end": 166.24425
+    },
+    {
+      "word": "bought",
+      "start": 166.24425,
+      "end": 166.40425
+    },
+    {
+      "word": "a",
+      "start": 166.40425,
+      "end": 166.54425
+    },
+    {
+      "word": "book",
+      "start": 166.54425,
+      "end": 166.82425
+    },
+    {
+      "word": "La",
+      "start": 168.50424,
+      "end": 168.78424
+    },
+    {
+      "word": "la",
+      "start": 168.78424,
+      "end": 169.00424
+    },
+    {
+      "word": "la",
+      "start": 169.00424,
+      "end": 169.24425
+    },
+    {
+      "word": "la",
+      "start": 169.24425,
+      "end": 169.54425
+    },
+    {
+      "word": "Bob",
+      "start": 171.30426,
+      "end": 171.54425
+    },
+    {
+      "word": "likes",
+      "start": 171.54425,
+      "end": 171.90425
+    },
+    {
+      "word": "hot",
+      "start": 171.90425,
+      "end": 172.18425
+    },
+    {
+      "word": "dogs",
+      "start": 172.18425,
+      "end": 172.60425
+    },
+    {
+      "word": "Ann",
+      "start": 173.96425,
+      "end": 174.24425
+    },
+    {
+      "word": "eats",
+      "start": 174.24425,
+      "end": 174.52426
+    },
+    {
+      "word": "pancakes",
+      "start": 174.52426,
+      "end": 175.06424
+    },
+    {
+      "word": "Cats",
+      "start": 176.76425,
+      "end": 177.14426
+    },
+    {
+      "word": "eat",
+      "start": 177.14426,
+      "end": 177.36426
+    },
+    {
+      "word": "fish",
+      "start": 177.36426,
+      "end": 177.66425
+    },
+    {
+      "word": "bones",
+      "start": 177.66425,
+      "end": 178.04425
+    },
+    {
+      "word": "Bears",
+      "start": 179.42426,
+      "end": 179.82425
+    },
+    {
+      "word": "are",
+      "start": 179.82425,
+      "end": 180.02426
+    },
+    {
+      "word": "fuzzy",
+      "start": 180.02426,
+      "end": 180.44424
+    },
+    {
+      "word": "Planets",
+      "start": 180.06424,
+      "end": 182.36426
+    },
+    {
+      "word": "rotate",
+      "start": 182.36426,
+      "end": 182.72424
+    },
+    {
+      "word": "La",
+      "start": 185.28424,
+      "end": 185.40425
+    },
+    {
+      "word": "la",
+      "start": 185.40425,
+      "end": 185.56424
+    },
+    {
+      "word": "la",
+      "start": 185.56424,
+      "end": 185.76425
+    },
+    {
+      "word": "la.",
+      "start": 185.76425,
+      "end": 186.34425
+    },
+    {
+      "word": "It's",
+      "start": 186.34425,
+      "end": 187.66425
+    },
+    {
+      "word": "my",
+      "start": 187.66425,
+      "end": 187.78424
+    },
+    {
+      "word": "hot",
+      "start": 187.78424,
+      "end": 188.08426
+    },
+    {
+      "word": "dog.",
+      "start": 188.08426,
+      "end": 189.24425
+    },
+    {
+      "word": "Imitation.",
+      "start": 189.24425,
+      "end": 191.48425
+    },
+    {
+      "word": "Analytic.",
+      "start": 191.48425,
+      "end": 193.40425
+    },
+    {
+      "word": "We",
+      "start": 193.40425,
+      "end": 193.76425
+    },
+    {
+      "word": "like",
+      "start": 193.76425,
+      "end": 193.94424
+    },
+    {
+      "word": "science.",
+      "start": 193.94424,
+      "end": 195.28424
+    },
+    {
+      "word": "My",
+      "start": 195.28424,
+      "end": 196.06424
+    },
+    {
+      "word": "to-do",
+      "start": 196.06424,
+      "end": 196.40425
+    },
+    {
+      "word": "list.",
+      "start": 196.40425,
+      "end": 197.76425
+    },
+    {
+      "word": "La",
+      "start": 197.76425,
+      "end": 198.56424
+    },
+    {
+      "word": "la",
+      "start": 198.56424,
+      "end": 198.76425
+    },
+    {
+      "word": "la",
+      "start": 198.76425,
+      "end": 199.02426
+    },
+    {
+      "word": "la.",
+      "start": 199.02426,
+      "end": 199.40425
+    },
+    {
+      "word": "A",
+      "start": 199.40425,
+      "end": 200.44424
+    },
+    {
+      "word": "hot",
+      "start": 200.44424,
+      "end": 200.68425
+    },
+    {
+      "word": "dog",
+      "start": 200.68425,
+      "end": 200.88425
+    },
+    {
+      "word": "stand.",
+      "start": 200.88425,
+      "end": 202.20425
+    },
+    {
+      "word": "Jim",
+      "start": 202.20425,
+      "end": 202.94424
+    },
+    {
+      "word": "killed",
+      "start": 202.94424,
+      "end": 203.34425
+    },
+    {
+      "word": "a",
+      "start": 203.34425,
+      "end": 203.58426
+    },
+    {
+      "word": "man.",
+      "start": 203.58426,
+      "end": 204.04425
+    },
+    {
+      "word": "Analysis.",
+      "start": 204.04425,
+      "end": 206.06424
+    },
+    {
+      "word": "Invisible.",
+      "start": 206.06424,
+      "end": 208.78424
+    },
+    {
+      "word": "A",
+      "start": 208.78424,
+      "end": 209.06424
+    },
+    {
+      "word": "platypus.",
+      "start": 209.06424,
+      "end": 210.12425
+    },
+    {
+      "word": "La",
+      "start": 211.68425,
+      "end": 211.80426
+    },
+    {
+      "word": "la",
+      "start": 211.80426,
+      "end": 212.06424
+    },
+    {
+      "word": "la",
+      "start": 212.06424,
+      "end": 212.22424
+    },
+    {
+      "word": "la.",
+      "start": 212.22424,
+      "end": 212.66425
+    },
+    {
+      "word": "Permanently.",
+      "start": 213.38425,
+      "end": 213.94424
+    },
+    {
+      "word": "Demonstrated.",
+      "start": 215.20425,
+      "end": 216.00424
+    },
+    {
+      "word": "Category.",
+      "start": 217.34425,
+      "end": 217.86426
+    },
+    {
+      "word": "Office",
+      "start": 219.46425,
+      "end": 219.74425
+    },
+    {
+      "word": "supplies.",
+      "start": 219.74425,
+      "end": 220.82425
+    },
+    {
+      "word": "Educator.",
+      "start": 221.76425,
+      "end": 222.90425
+    }
+  ]
+}

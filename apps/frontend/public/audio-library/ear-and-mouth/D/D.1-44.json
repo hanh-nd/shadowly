@@ -1,0 +1,1500 @@
+{
+  "text": " Exercise 144, Building an Intonation Sentence. Repeat after me the sentences listed in the following groups. 1. I bought a sandwich. 2. I said I bought a sandwich. 3. I said I think I bought a sandwich. 4. I said I really think I bought a sandwich. 5. I said I really think I bought a chicken sandwich. e Sai iv i said I really think i bought a chicken salad sandwich e manifests i said i really think i bought a half a chicken salad sandwich e laptops i said i really think i bought a half a chicken salad sandwich this afternoon ton developer I actually said i really think i bought a half a chicken salad sandwich this afternoon withineld I actually said I really think I bought another half a chicken salad sandwich this afternoon. 11 Can you believe I actually said I really think I bought another half a chicken salad sandwich this afternoon 1 I did it 2 I did it again 3. I already did it again. 4. I think I already did it again. 5. I said I think I already did it again. 6. I said I think I already did it again yesterday. 7. I said I think I already did it again the day before yesterday. 1. I want a ball. 2. I want a large ball. 3. I want a large red ball. 4. I want a large red bouncy ball. 5. I want a large red bouncy rubber ball. 6. I want a large red bouncy rubber basketball. 1. I want a raise. 2. I want a big raise. 3. I want a big impressive raise. 4. I want a big impressive annual raise. 5. I want a big impressive annual cost of living raise.",
+  "wordTimestamps": [
+    {
+      "word": "Exercise",
+      "start": 0.66,
+      "end": 1.14
+    },
+    {
+      "word": "144,",
+      "start": 1.14,
+      "end": 2.22
+    },
+    {
+      "word": "Building",
+      "start": 2.22,
+      "end": 2.66
+    },
+    {
+      "word": "an",
+      "start": 2.66,
+      "end": 2.84
+    },
+    {
+      "word": "Intonation",
+      "start": 2.84,
+      "end": 3.32
+    },
+    {
+      "word": "Sentence.",
+      "start": 3.32,
+      "end": 4.02
+    },
+    {
+      "word": "Repeat",
+      "start": 4.46,
+      "end": 4.86
+    },
+    {
+      "word": "after",
+      "start": 4.86,
+      "end": 5.1
+    },
+    {
+      "word": "me",
+      "start": 5.1,
+      "end": 5.34
+    },
+    {
+      "word": "the",
+      "start": 5.34,
+      "end": 5.54
+    },
+    {
+      "word": "sentences",
+      "start": 5.54,
+      "end": 5.92
+    },
+    {
+      "word": "listed",
+      "start": 5.92,
+      "end": 6.32
+    },
+    {
+      "word": "in",
+      "start": 6.32,
+      "end": 6.5
+    },
+    {
+      "word": "the",
+      "start": 6.5,
+      "end": 6.58
+    },
+    {
+      "word": "following",
+      "start": 6.58,
+      "end": 6.88
+    },
+    {
+      "word": "groups.",
+      "start": 6.88,
+      "end": 7.62
+    },
+    {
+      "word": "1.",
+      "start": 8,
+      "end": 8.74
+    },
+    {
+      "word": "I",
+      "start": 8.54,
+      "end": 9.14
+    },
+    {
+      "word": "bought",
+      "start": 9.14,
+      "end": 9.26
+    },
+    {
+      "word": "a",
+      "start": 9.26,
+      "end": 9.4
+    },
+    {
+      "word": "sandwich.",
+      "start": 9.4,
+      "end": 10.1
+    },
+    {
+      "word": "2.",
+      "start": 10.92,
+      "end": 11.94
+    },
+    {
+      "word": "I",
+      "start": 11.46,
+      "end": 12.28
+    },
+    {
+      "word": "said",
+      "start": 12.28,
+      "end": 12.4
+    },
+    {
+      "word": "I",
+      "start": 12.4,
+      "end": 12.58
+    },
+    {
+      "word": "bought",
+      "start": 12.58,
+      "end": 12.72
+    },
+    {
+      "word": "a",
+      "start": 12.72,
+      "end": 12.86
+    },
+    {
+      "word": "sandwich.",
+      "start": 12.86,
+      "end": 13.62
+    },
+    {
+      "word": "3.",
+      "start": 13.94,
+      "end": 15.7
+    },
+    {
+      "word": "I",
+      "start": 15.04,
+      "end": 16.02
+    },
+    {
+      "word": "said",
+      "start": 16.02,
+      "end": 16.18
+    },
+    {
+      "word": "I",
+      "start": 16.18,
+      "end": 16.32
+    },
+    {
+      "word": "think",
+      "start": 16.32,
+      "end": 16.4
+    },
+    {
+      "word": "I",
+      "start": 16.4,
+      "end": 16.6
+    },
+    {
+      "word": "bought",
+      "start": 16.6,
+      "end": 16.74
+    },
+    {
+      "word": "a",
+      "start": 16.74,
+      "end": 16.88
+    },
+    {
+      "word": "sandwich.",
+      "start": 16.88,
+      "end": 18.48
+    },
+    {
+      "word": "4.",
+      "start": 18.06,
+      "end": 19.64
+    },
+    {
+      "word": "I",
+      "start": 19.02,
+      "end": 19.88
+    },
+    {
+      "word": "said",
+      "start": 19.88,
+      "end": 20.02
+    },
+    {
+      "word": "I",
+      "start": 20.02,
+      "end": 20.14
+    },
+    {
+      "word": "really",
+      "start": 20.14,
+      "end": 20.3
+    },
+    {
+      "word": "think",
+      "start": 20.3,
+      "end": 20.54
+    },
+    {
+      "word": "I",
+      "start": 20.54,
+      "end": 20.7
+    },
+    {
+      "word": "bought",
+      "start": 20.7,
+      "end": 20.84
+    },
+    {
+      "word": "a",
+      "start": 20.84,
+      "end": 21
+    },
+    {
+      "word": "sandwich.",
+      "start": 21,
+      "end": 21.78
+    },
+    {
+      "word": "5.",
+      "start": 22.38,
+      "end": 24.7
+    },
+    {
+      "word": "I",
+      "start": 24.42,
+      "end": 25.06
+    },
+    {
+      "word": "said",
+      "start": 25.06,
+      "end": 25.2
+    },
+    {
+      "word": "I",
+      "start": 25.2,
+      "end": 25.3
+    },
+    {
+      "word": "really",
+      "start": 25.3,
+      "end": 25.48
+    },
+    {
+      "word": "think",
+      "start": 25.48,
+      "end": 25.7
+    },
+    {
+      "word": "I",
+      "start": 25.7,
+      "end": 25.88
+    },
+    {
+      "word": "bought",
+      "start": 25.88,
+      "end": 26.02
+    },
+    {
+      "word": "a",
+      "start": 26.02,
+      "end": 26.16
+    },
+    {
+      "word": "chicken",
+      "start": 26.16,
+      "end": 26.36
+    },
+    {
+      "word": "sandwich.",
+      "start": 26.36,
+      "end": 27.24
+    },
+    {
+      "word": "e",
+      "start": 29.26,
+      "end": 29.28
+    },
+    {
+      "word": "Sai",
+      "start": 29.28,
+      "end": 29.3
+    },
+    {
+      "word": "iv",
+      "start": 28.28,
+      "end": 29.54
+    },
+    {
+      "word": "i",
+      "start": 29.2,
+      "end": 30.14
+    },
+    {
+      "word": "said",
+      "start": 30.14,
+      "end": 30.28
+    },
+    {
+      "word": "I",
+      "start": 30.28,
+      "end": 30.42
+    },
+    {
+      "word": "really",
+      "start": 30.42,
+      "end": 30.6
+    },
+    {
+      "word": "think",
+      "start": 30.6,
+      "end": 30.82
+    },
+    {
+      "word": "i",
+      "start": 30.82,
+      "end": 30.96
+    },
+    {
+      "word": "bought",
+      "start": 30.96,
+      "end": 31.08
+    },
+    {
+      "word": "a",
+      "start": 31.08,
+      "end": 31.22
+    },
+    {
+      "word": "chicken",
+      "start": 31.22,
+      "end": 31.42
+    },
+    {
+      "word": "salad",
+      "start": 31.42,
+      "end": 31.76
+    },
+    {
+      "word": "sandwich",
+      "start": 31.76,
+      "end": 32.32
+    },
+    {
+      "word": "e",
+      "start": 32.2,
+      "end": 35.72
+    },
+    {
+      "word": "manifests",
+      "start": 34.94,
+      "end": 35.94
+    },
+    {
+      "word": "i",
+      "start": 35.7,
+      "end": 36.38
+    },
+    {
+      "word": "said",
+      "start": 36.38,
+      "end": 36.54
+    },
+    {
+      "word": "i",
+      "start": 36.54,
+      "end": 36.72
+    },
+    {
+      "word": "really",
+      "start": 36.72,
+      "end": 36.88
+    },
+    {
+      "word": "think",
+      "start": 36.88,
+      "end": 37.08
+    },
+    {
+      "word": "i",
+      "start": 37.08,
+      "end": 37.24
+    },
+    {
+      "word": "bought",
+      "start": 37.24,
+      "end": 37.4
+    },
+    {
+      "word": "a",
+      "start": 37.4,
+      "end": 37.58
+    },
+    {
+      "word": "half",
+      "start": 37.58,
+      "end": 37.66
+    },
+    {
+      "word": "a",
+      "start": 37.66,
+      "end": 37.8
+    },
+    {
+      "word": "chicken",
+      "start": 37.8,
+      "end": 37.98
+    },
+    {
+      "word": "salad",
+      "start": 37.98,
+      "end": 38.32
+    },
+    {
+      "word": "sandwich",
+      "start": 38.32,
+      "end": 38.94
+    },
+    {
+      "word": "e",
+      "start": 38.64,
+      "end": 40.56
+    },
+    {
+      "word": "laptops",
+      "start": 39.62,
+      "end": 42.28
+    },
+    {
+      "word": "i",
+      "start": 42.12,
+      "end": 42.66
+    },
+    {
+      "word": "said",
+      "start": 42.66,
+      "end": 42.8
+    },
+    {
+      "word": "i",
+      "start": 42.8,
+      "end": 42.94
+    },
+    {
+      "word": "really",
+      "start": 42.94,
+      "end": 43.1
+    },
+    {
+      "word": "think",
+      "start": 43.1,
+      "end": 43.38
+    },
+    {
+      "word": "i",
+      "start": 43.38,
+      "end": 43.52
+    },
+    {
+      "word": "bought",
+      "start": 43.52,
+      "end": 43.64
+    },
+    {
+      "word": "a",
+      "start": 43.64,
+      "end": 43.84
+    },
+    {
+      "word": "half",
+      "start": 43.84,
+      "end": 43.92
+    },
+    {
+      "word": "a",
+      "start": 43.92,
+      "end": 44.06
+    },
+    {
+      "word": "chicken",
+      "start": 44.06,
+      "end": 44.24
+    },
+    {
+      "word": "salad",
+      "start": 44.24,
+      "end": 44.52
+    },
+    {
+      "word": "sandwich",
+      "start": 44.52,
+      "end": 44.94
+    },
+    {
+      "word": "this",
+      "start": 44.94,
+      "end": 45.16
+    },
+    {
+      "word": "afternoon",
+      "start": 45.16,
+      "end": 45.58
+    },
+    {
+      "word": "ton",
+      "start": 44.96,
+      "end": 47.94
+    },
+    {
+      "word": "developer",
+      "start": 47.6,
+      "end": 49.68
+    },
+    {
+      "word": "I",
+      "start": 49.52,
+      "end": 50.08
+    },
+    {
+      "word": "actually",
+      "start": 50.08,
+      "end": 50.4
+    },
+    {
+      "word": "said",
+      "start": 50.4,
+      "end": 50.64
+    },
+    {
+      "word": "i",
+      "start": 50.64,
+      "end": 50.8
+    },
+    {
+      "word": "really",
+      "start": 50.8,
+      "end": 50.96
+    },
+    {
+      "word": "think",
+      "start": 50.96,
+      "end": 51.2
+    },
+    {
+      "word": "i",
+      "start": 51.2,
+      "end": 51.36
+    },
+    {
+      "word": "bought",
+      "start": 51.36,
+      "end": 51.5
+    },
+    {
+      "word": "a",
+      "start": 51.5,
+      "end": 51.64
+    },
+    {
+      "word": "half",
+      "start": 51.64,
+      "end": 51.76
+    },
+    {
+      "word": "a",
+      "start": 51.76,
+      "end": 51.92
+    },
+    {
+      "word": "chicken",
+      "start": 51.92,
+      "end": 52.12
+    },
+    {
+      "word": "salad",
+      "start": 52.12,
+      "end": 52.4
+    },
+    {
+      "word": "sandwich",
+      "start": 52.4,
+      "end": 52.8
+    },
+    {
+      "word": "this",
+      "start": 52.58,
+      "end": 52.98
+    },
+    {
+      "word": "afternoon",
+      "start": 52.98,
+      "end": 53.4
+    },
+    {
+      "word": "within",
+      "start": 54.08,
+      "end": 56.06
+    },
+    {
+      "word": "eld",
+      "start": 55.08,
+      "end": 57.86
+    },
+    {
+      "word": "I",
+      "start": 57.38,
+      "end": 57.7
+    },
+    {
+      "word": "actually",
+      "start": 57.7,
+      "end": 57.98
+    },
+    {
+      "word": "said",
+      "start": 57.98,
+      "end": 58.26
+    },
+    {
+      "word": "I",
+      "start": 58.26,
+      "end": 58.42
+    },
+    {
+      "word": "really",
+      "start": 58.42,
+      "end": 58.58
+    },
+    {
+      "word": "think",
+      "start": 58.58,
+      "end": 58.82
+    },
+    {
+      "word": "I",
+      "start": 58.82,
+      "end": 58.98
+    },
+    {
+      "word": "bought",
+      "start": 58.98,
+      "end": 59.14
+    },
+    {
+      "word": "another",
+      "start": 59.14,
+      "end": 59.44
+    },
+    {
+      "word": "half",
+      "start": 59.44,
+      "end": 59.7
+    },
+    {
+      "word": "a",
+      "start": 59.7,
+      "end": 59.84
+    },
+    {
+      "word": "chicken",
+      "start": 59.84,
+      "end": 60
+    },
+    {
+      "word": "salad",
+      "start": 60,
+      "end": 60.36
+    },
+    {
+      "word": "sandwich",
+      "start": 60.36,
+      "end": 60.74
+    },
+    {
+      "word": "this",
+      "start": 60.74,
+      "end": 60.96
+    },
+    {
+      "word": "afternoon.",
+      "start": 60.96,
+      "end": 61.74
+    },
+    {
+      "word": "11.",
+      "start": 65.42,
+      "end": 66.18
+    },
+    {
+      "word": "Can",
+      "start": 66.18,
+      "end": 66.46
+    },
+    {
+      "word": "you",
+      "start": 66.46,
+      "end": 66.58
+    },
+    {
+      "word": "believe",
+      "start": 66.58,
+      "end": 66.86
+    },
+    {
+      "word": "I",
+      "start": 66.86,
+      "end": 67.16
+    },
+    {
+      "word": "actually",
+      "start": 67.16,
+      "end": 67.46
+    },
+    {
+      "word": "said",
+      "start": 67.46,
+      "end": 67.76
+    },
+    {
+      "word": "I",
+      "start": 67.76,
+      "end": 67.94
+    },
+    {
+      "word": "really",
+      "start": 67.94,
+      "end": 68.1
+    },
+    {
+      "word": "think",
+      "start": 68.1,
+      "end": 68.36
+    },
+    {
+      "word": "I",
+      "start": 68.36,
+      "end": 68.5
+    },
+    {
+      "word": "bought",
+      "start": 68.5,
+      "end": 68.66
+    },
+    {
+      "word": "another",
+      "start": 68.66,
+      "end": 68.94
+    },
+    {
+      "word": "half",
+      "start": 68.94,
+      "end": 69.16
+    },
+    {
+      "word": "a",
+      "start": 69.16,
+      "end": 69.34
+    },
+    {
+      "word": "chicken",
+      "start": 69.34,
+      "end": 69.5
+    },
+    {
+      "word": "salad",
+      "start": 69.5,
+      "end": 69.84
+    },
+    {
+      "word": "sandwich",
+      "start": 69.84,
+      "end": 70.26
+    },
+    {
+      "word": "this",
+      "start": 70.26,
+      "end": 70.46
+    },
+    {
+      "word": "afternoon?",
+      "start": 70.46,
+      "end": 71.1
+    },
+    {
+      "word": "1.",
+      "start": 73.86513,
+      "end": 74.36513
+    },
+    {
+      "word": "I",
+      "start": 74.36513,
+      "end": 74.745125
+    },
+    {
+      "word": "did",
+      "start": 74.745125,
+      "end": 74.885124
+    },
+    {
+      "word": "it.",
+      "start": 74.885124,
+      "end": 75.245125
+    },
+    {
+      "word": "2.",
+      "start": 75.84513,
+      "end": 76.72513
+    },
+    {
+      "word": "I",
+      "start": 76.72513,
+      "end": 77.08513
+    },
+    {
+      "word": "did",
+      "start": 77.08513,
+      "end": 77.22513
+    },
+    {
+      "word": "it",
+      "start": 77.22513,
+      "end": 77.425125
+    },
+    {
+      "word": "again.",
+      "start": 77.425125,
+      "end": 78.00513
+    },
+    {
+      "word": "3.",
+      "start": 78.36513,
+      "end": 80.50513
+    },
+    {
+      "word": "I",
+      "start": 80.50513,
+      "end": 80.82513
+    },
+    {
+      "word": "already",
+      "start": 80.82513,
+      "end": 80.925125
+    },
+    {
+      "word": "did",
+      "start": 80.925125,
+      "end": 81.14513
+    },
+    {
+      "word": "it",
+      "start": 81.14513,
+      "end": 81.34512
+    },
+    {
+      "word": "again.",
+      "start": 81.34512,
+      "end": 81.82513
+    },
+    {
+      "word": "4.",
+      "start": 82.36513,
+      "end": 83.785126
+    },
+    {
+      "word": "I",
+      "start": 83.785126,
+      "end": 84.14513
+    },
+    {
+      "word": "think",
+      "start": 84.14513,
+      "end": 84.26513
+    },
+    {
+      "word": "I",
+      "start": 84.26513,
+      "end": 84.40513
+    },
+    {
+      "word": "already",
+      "start": 84.40513,
+      "end": 84.565125
+    },
+    {
+      "word": "did",
+      "start": 84.565125,
+      "end": 84.705124
+    },
+    {
+      "word": "it",
+      "start": 84.705124,
+      "end": 84.86513
+    },
+    {
+      "word": "again.",
+      "start": 84.86513,
+      "end": 85.36513
+    },
+    {
+      "word": "5.",
+      "start": 86.425125,
+      "end": 87.44513
+    },
+    {
+      "word": "I",
+      "start": 87.44513,
+      "end": 87.565125
+    },
+    {
+      "word": "said",
+      "start": 87.565125,
+      "end": 87.705124
+    },
+    {
+      "word": "I",
+      "start": 87.705124,
+      "end": 87.86513
+    },
+    {
+      "word": "think",
+      "start": 87.86513,
+      "end": 87.98513
+    },
+    {
+      "word": "I",
+      "start": 87.98513,
+      "end": 88.12513
+    },
+    {
+      "word": "already",
+      "start": 88.12513,
+      "end": 88.285126
+    },
+    {
+      "word": "did",
+      "start": 88.285126,
+      "end": 88.48513
+    },
+    {
+      "word": "it",
+      "start": 88.48513,
+      "end": 88.66513
+    },
+    {
+      "word": "again.",
+      "start": 88.66513,
+      "end": 89.18513
+    },
+    {
+      "word": "6.",
+      "start": 89.76513,
+      "end": 91.26513
+    },
+    {
+      "word": "I",
+      "start": 91.26513,
+      "end": 91.605125
+    },
+    {
+      "word": "said",
+      "start": 91.605125,
+      "end": 91.76513
+    },
+    {
+      "word": "I",
+      "start": 91.76513,
+      "end": 91.90513
+    },
+    {
+      "word": "think",
+      "start": 91.90513,
+      "end": 92.00513
+    },
+    {
+      "word": "I",
+      "start": 92.00513,
+      "end": 92.18513
+    },
+    {
+      "word": "already",
+      "start": 92.18513,
+      "end": 92.26513
+    },
+    {
+      "word": "did",
+      "start": 92.26513,
+      "end": 92.465126
+    },
+    {
+      "word": "it",
+      "start": 92.465126,
+      "end": 92.605125
+    },
+    {
+      "word": "again",
+      "start": 92.605125,
+      "end": 92.785126
+    },
+    {
+      "word": "yesterday.",
+      "start": 92.785126,
+      "end": 94.44513
+    },
+    {
+      "word": "7.",
+      "start": 95.94513,
+      "end": 96.40513
+    },
+    {
+      "word": "I",
+      "start": 96.40513,
+      "end": 96.745125
+    },
+    {
+      "word": "said",
+      "start": 96.745125,
+      "end": 96.88513
+    },
+    {
+      "word": "I",
+      "start": 96.88513,
+      "end": 97.02513
+    },
+    {
+      "word": "think",
+      "start": 97.02513,
+      "end": 97.12513
+    },
+    {
+      "word": "I",
+      "start": 97.12513,
+      "end": 97.285126
+    },
+    {
+      "word": "already",
+      "start": 97.285126,
+      "end": 97.38513
+    },
+    {
+      "word": "did",
+      "start": 97.38513,
+      "end": 97.565125
+    },
+    {
+      "word": "it",
+      "start": 97.565125,
+      "end": 97.72513
+    },
+    {
+      "word": "again",
+      "start": 97.72513,
+      "end": 97.88513
+    },
+    {
+      "word": "the",
+      "start": 97.88513,
+      "end": 98.08513
+    },
+    {
+      "word": "day",
+      "start": 98.08513,
+      "end": 98.205124
+    },
+    {
+      "word": "before",
+      "start": 98.205124,
+      "end": 98.44513
+    },
+    {
+      "word": "yesterday.",
+      "start": 98.44513,
+      "end": 99.30513
+    },
+    {
+      "word": "1.",
+      "start": 102.40513,
+      "end": 102.82513
+    },
+    {
+      "word": "I",
+      "start": 102.82513,
+      "end": 103.34512
+    },
+    {
+      "word": "want",
+      "start": 103.34512,
+      "end": 103.48512
+    },
+    {
+      "word": "a",
+      "start": 103.48512,
+      "end": 103.58513
+    },
+    {
+      "word": "ball.",
+      "start": 103.58513,
+      "end": 104.04513
+    },
+    {
+      "word": "2.",
+      "start": 105.36513,
+      "end": 105.74513
+    },
+    {
+      "word": "I",
+      "start": 105.74513,
+      "end": 106.26513
+    },
+    {
+      "word": "want",
+      "start": 106.26513,
+      "end": 106.40513
+    },
+    {
+      "word": "a",
+      "start": 106.40513,
+      "end": 106.54513
+    },
+    {
+      "word": "large",
+      "start": 106.54513,
+      "end": 106.72513
+    },
+    {
+      "word": "ball.",
+      "start": 106.72513,
+      "end": 107.38513
+    },
+    {
+      "word": "3.",
+      "start": 109.065125,
+      "end": 109.565125
+    },
+    {
+      "word": "I",
+      "start": 109.565125,
+      "end": 110.02513
+    },
+    {
+      "word": "want",
+      "start": 110.02513,
+      "end": 110.16513
+    },
+    {
+      "word": "a",
+      "start": 110.16513,
+      "end": 110.30513
+    },
+    {
+      "word": "large",
+      "start": 110.30513,
+      "end": 110.54513
+    },
+    {
+      "word": "red",
+      "start": 110.54513,
+      "end": 110.785126
+    },
+    {
+      "word": "ball.",
+      "start": 110.785126,
+      "end": 111.34512
+    },
+    {
+      "word": "4.",
+      "start": 113.26513,
+      "end": 113.76513
+    },
+    {
+      "word": "I",
+      "start": 113.76513,
+      "end": 114.32513
+    },
+    {
+      "word": "want",
+      "start": 114.32513,
+      "end": 114.50513
+    },
+    {
+      "word": "a",
+      "start": 114.50513,
+      "end": 114.62512
+    },
+    {
+      "word": "large",
+      "start": 114.62512,
+      "end": 114.88513
+    },
+    {
+      "word": "red",
+      "start": 114.88513,
+      "end": 115.18513
+    },
+    {
+      "word": "bouncy",
+      "start": 115.18513,
+      "end": 115.52513
+    },
+    {
+      "word": "ball.",
+      "start": 115.52513,
+      "end": 116.14513
+    },
+    {
+      "word": "5.",
+      "start": 118.16513,
+      "end": 118.60513
+    },
+    {
+      "word": "I",
+      "start": 118.60513,
+      "end": 119.04513
+    },
+    {
+      "word": "want",
+      "start": 119.04513,
+      "end": 119.205124
+    },
+    {
+      "word": "a",
+      "start": 119.205124,
+      "end": 119.34512
+    },
+    {
+      "word": "large",
+      "start": 119.34512,
+      "end": 119.565125
+    },
+    {
+      "word": "red",
+      "start": 119.565125,
+      "end": 119.84512
+    },
+    {
+      "word": "bouncy",
+      "start": 119.84512,
+      "end": 120.18513
+    },
+    {
+      "word": "rubber",
+      "start": 120.18513,
+      "end": 120.465126
+    },
+    {
+      "word": "ball.",
+      "start": 120.465126,
+      "end": 120.98512
+    },
+    {
+      "word": "6.",
+      "start": 123.205124,
+      "end": 123.66513
+    },
+    {
+      "word": "I",
+      "start": 123.66513,
+      "end": 124.065125
+    },
+    {
+      "word": "want",
+      "start": 124.065125,
+      "end": 124.18513
+    },
+    {
+      "word": "a",
+      "start": 124.18513,
+      "end": 124.30513
+    },
+    {
+      "word": "large",
+      "start": 124.30513,
+      "end": 124.565125
+    },
+    {
+      "word": "red",
+      "start": 124.565125,
+      "end": 124.785126
+    },
+    {
+      "word": "bouncy",
+      "start": 124.785126,
+      "end": 125.12512
+    },
+    {
+      "word": "rubber",
+      "start": 125.12512,
+      "end": 125.38513
+    },
+    {
+      "word": "basketball.",
+      "start": 125.38513,
+      "end": 126.08513
+    },
+    {
+      "word": "1.",
+      "start": 128.94513,
+      "end": 129.42513
+    },
+    {
+      "word": "I",
+      "start": 129.42513,
+      "end": 129.90512
+    },
+    {
+      "word": "want",
+      "start": 129.90512,
+      "end": 130.02513
+    },
+    {
+      "word": "a",
+      "start": 130.02513,
+      "end": 130.16513
+    },
+    {
+      "word": "raise.",
+      "start": 130.16513,
+      "end": 130.72513
+    },
+    {
+      "word": "2.",
+      "start": 131.84512,
+      "end": 132.30513
+    },
+    {
+      "word": "I",
+      "start": 132.30513,
+      "end": 132.58513
+    },
+    {
+      "word": "want",
+      "start": 132.58513,
+      "end": 132.72513
+    },
+    {
+      "word": "a",
+      "start": 132.72513,
+      "end": 132.86513
+    },
+    {
+      "word": "big",
+      "start": 132.86513,
+      "end": 132.96512
+    },
+    {
+      "word": "raise.",
+      "start": 132.96512,
+      "end": 133.68512
+    },
+    {
+      "word": "3.",
+      "start": 133.12512,
+      "end": 135.32513
+    },
+    {
+      "word": "I",
+      "start": 135.32513,
+      "end": 135.48514
+    },
+    {
+      "word": "want",
+      "start": 135.48514,
+      "end": 135.64513
+    },
+    {
+      "word": "a",
+      "start": 135.64513,
+      "end": 135.76514
+    },
+    {
+      "word": "big",
+      "start": 135.76514,
+      "end": 135.88513
+    },
+    {
+      "word": "impressive",
+      "start": 135.88513,
+      "end": 136.30513
+    },
+    {
+      "word": "raise.",
+      "start": 136.30513,
+      "end": 137.02513
+    },
+    {
+      "word": "4.",
+      "start": 138.60513,
+      "end": 139.12512
+    },
+    {
+      "word": "I",
+      "start": 139.12512,
+      "end": 139.22513
+    },
+    {
+      "word": "want",
+      "start": 139.22513,
+      "end": 139.38513
+    },
+    {
+      "word": "a",
+      "start": 139.38513,
+      "end": 139.48514
+    },
+    {
+      "word": "big",
+      "start": 139.48514,
+      "end": 139.62512
+    },
+    {
+      "word": "impressive",
+      "start": 139.62512,
+      "end": 140.02513
+    },
+    {
+      "word": "annual",
+      "start": 140.02513,
+      "end": 140.36513
+    },
+    {
+      "word": "raise.",
+      "start": 140.36513,
+      "end": 141.18512
+    },
+    {
+      "word": "5.",
+      "start": 140.58513,
+      "end": 143.16513
+    },
+    {
+      "word": "I",
+      "start": 143.16513,
+      "end": 143.24512
+    },
+    {
+      "word": "want",
+      "start": 143.24512,
+      "end": 143.40512
+    },
+    {
+      "word": "a",
+      "start": 143.40512,
+      "end": 143.50513
+    },
+    {
+      "word": "big",
+      "start": 143.50513,
+      "end": 143.60513
+    },
+    {
+      "word": "impressive",
+      "start": 143.60513,
+      "end": 144.04514
+    },
+    {
+      "word": "annual",
+      "start": 144.04514,
+      "end": 144.38513
+    },
+    {
+      "word": "cost",
+      "start": 144.38513,
+      "end": 144.64513
+    },
+    {
+      "word": "of",
+      "start": 144.64513,
+      "end": 144.84512
+    },
+    {
+      "word": "living",
+      "start": 144.84512,
+      "end": 145.06512
+    },
+    {
+      "word": "raise.",
+      "start": 145.06512,
+      "end": 145.66513
+    }
+  ]
+}

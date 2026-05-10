@@ -1,0 +1,675 @@
+{
+  "text": " Exercise 128, Sentence Dress with Set Phrases. Repeat the following sentences. 1. It's a finger. It's a nail. It's a fingernail. 2. It's a pan. It's a cake. It's a pancake. 3. It's a tub. It's hot. It's a hot tub. 4. It's a drive. It's hard. It's a hard drive. 5. It's a bone. It's in back. It's the backbone. 6. It's a card. It's a trick. It's a card trick. 7. It's a spot. It's a light. It's a spotlight. 8. It's a book. It's a phone. It's a phone book. Pause the CD and write your own noun and set phrase sentences, carrying over the same nouns you used in Exercise 125. Remember, when you use a noun, include the article. When you use an adjective, you don't need an article.",
+  "wordTimestamps": [
+    {
+      "word": "Exercise",
+      "start": 0.44,
+      "end": 0.84
+    },
+    {
+      "word": "128,",
+      "start": 0.84,
+      "end": 1.94
+    },
+    {
+      "word": "Sentence",
+      "start": 1.94,
+      "end": 2.6
+    },
+    {
+      "word": "Dress",
+      "start": 2.6,
+      "end": 2.9
+    },
+    {
+      "word": "with",
+      "start": 2.9,
+      "end": 3.16
+    },
+    {
+      "word": "Set",
+      "start": 3.16,
+      "end": 3.38
+    },
+    {
+      "word": "Phrases.",
+      "start": 3.38,
+      "end": 3.92
+    },
+    {
+      "word": "Repeat",
+      "start": 4.88,
+      "end": 5.12
+    },
+    {
+      "word": "the",
+      "start": 5.12,
+      "end": 5.32
+    },
+    {
+      "word": "following",
+      "start": 5.32,
+      "end": 5.64
+    },
+    {
+      "word": "sentences.",
+      "start": 5.64,
+      "end": 6.24
+    },
+    {
+      "word": "1.",
+      "start": 7.6,
+      "end": 7.8
+    },
+    {
+      "word": "It's",
+      "start": 7.8,
+      "end": 8.68
+    },
+    {
+      "word": "a",
+      "start": 8.68,
+      "end": 8.76
+    },
+    {
+      "word": "finger.",
+      "start": 8.76,
+      "end": 9.02
+    },
+    {
+      "word": "It's",
+      "start": 10.52,
+      "end": 10.82
+    },
+    {
+      "word": "a",
+      "start": 10.82,
+      "end": 10.9
+    },
+    {
+      "word": "nail.",
+      "start": 10.9,
+      "end": 11.16
+    },
+    {
+      "word": "It's",
+      "start": 12.8,
+      "end": 13
+    },
+    {
+      "word": "a",
+      "start": 13,
+      "end": 13.1
+    },
+    {
+      "word": "fingernail.",
+      "start": 13.1,
+      "end": 13.68
+    },
+    {
+      "word": "2.",
+      "start": 15.14,
+      "end": 15.38
+    },
+    {
+      "word": "It's",
+      "start": 15.38,
+      "end": 16.32
+    },
+    {
+      "word": "a",
+      "start": 16.32,
+      "end": 16.38
+    },
+    {
+      "word": "pan.",
+      "start": 16.38,
+      "end": 16.8
+    },
+    {
+      "word": "It's",
+      "start": 17.88,
+      "end": 18.14
+    },
+    {
+      "word": "a",
+      "start": 18.14,
+      "end": 18.24
+    },
+    {
+      "word": "cake.",
+      "start": 18.24,
+      "end": 19.04
+    },
+    {
+      "word": "It's",
+      "start": 19.52,
+      "end": 19.7
+    },
+    {
+      "word": "a",
+      "start": 19.7,
+      "end": 19.78
+    },
+    {
+      "word": "pancake.",
+      "start": 19.78,
+      "end": 20.54
+    },
+    {
+      "word": "3.",
+      "start": 22.06,
+      "end": 22.2
+    },
+    {
+      "word": "It's",
+      "start": 22.2,
+      "end": 23.56
+    },
+    {
+      "word": "a",
+      "start": 23.56,
+      "end": 23.66
+    },
+    {
+      "word": "tub.",
+      "start": 23.66,
+      "end": 24.26
+    },
+    {
+      "word": "It's",
+      "start": 24.98,
+      "end": 25.24
+    },
+    {
+      "word": "hot.",
+      "start": 25.24,
+      "end": 25.58
+    },
+    {
+      "word": "It's",
+      "start": 26.52,
+      "end": 26.76
+    },
+    {
+      "word": "a",
+      "start": 26.76,
+      "end": 26.84
+    },
+    {
+      "word": "hot",
+      "start": 26.84,
+      "end": 27
+    },
+    {
+      "word": "tub.",
+      "start": 27,
+      "end": 27.9
+    },
+    {
+      "word": "4.",
+      "start": 28.86,
+      "end": 29.9
+    },
+    {
+      "word": "It's",
+      "start": 29.9,
+      "end": 29.98
+    },
+    {
+      "word": "a",
+      "start": 29.98,
+      "end": 30.12
+    },
+    {
+      "word": "drive.",
+      "start": 30.12,
+      "end": 30.76
+    },
+    {
+      "word": "It's",
+      "start": 30.76,
+      "end": 31.88
+    },
+    {
+      "word": "hard.",
+      "start": 31.88,
+      "end": 32.54
+    },
+    {
+      "word": "It's",
+      "start": 32.54,
+      "end": 33.58
+    },
+    {
+      "word": "a",
+      "start": 33.58,
+      "end": 33.68
+    },
+    {
+      "word": "hard",
+      "start": 33.68,
+      "end": 33.82
+    },
+    {
+      "word": "drive.",
+      "start": 33.82,
+      "end": 34.54
+    },
+    {
+      "word": "5.",
+      "start": 36.18,
+      "end": 36.86
+    },
+    {
+      "word": "It's",
+      "start": 36.86,
+      "end": 37.3
+    },
+    {
+      "word": "a",
+      "start": 37.3,
+      "end": 37.38
+    },
+    {
+      "word": "bone.",
+      "start": 37.38,
+      "end": 37.68
+    },
+    {
+      "word": "It's",
+      "start": 37.68,
+      "end": 38.98
+    },
+    {
+      "word": "in",
+      "start": 38.98,
+      "end": 39.14
+    },
+    {
+      "word": "back.",
+      "start": 39.14,
+      "end": 39.74
+    },
+    {
+      "word": "It's",
+      "start": 39.74,
+      "end": 40.64
+    },
+    {
+      "word": "the",
+      "start": 40.64,
+      "end": 40.78
+    },
+    {
+      "word": "backbone.",
+      "start": 40.78,
+      "end": 41.22
+    },
+    {
+      "word": "6.",
+      "start": 42.8,
+      "end": 43.36
+    },
+    {
+      "word": "It's",
+      "start": 43.36,
+      "end": 43.96
+    },
+    {
+      "word": "a",
+      "start": 43.96,
+      "end": 44.06
+    },
+    {
+      "word": "card.",
+      "start": 44.06,
+      "end": 44.74
+    },
+    {
+      "word": "It's",
+      "start": 44.74,
+      "end": 45.76
+    },
+    {
+      "word": "a",
+      "start": 45.76,
+      "end": 45.86
+    },
+    {
+      "word": "trick.",
+      "start": 45.86,
+      "end": 46.36
+    },
+    {
+      "word": "It's",
+      "start": 46.36,
+      "end": 47.36
+    },
+    {
+      "word": "a",
+      "start": 47.36,
+      "end": 47.44
+    },
+    {
+      "word": "card",
+      "start": 47.44,
+      "end": 47.7
+    },
+    {
+      "word": "trick.",
+      "start": 47.7,
+      "end": 48.04
+    },
+    {
+      "word": "7.",
+      "start": 49.46,
+      "end": 50.14
+    },
+    {
+      "word": "It's",
+      "start": 50.14,
+      "end": 50.68
+    },
+    {
+      "word": "a",
+      "start": 50.68,
+      "end": 50.78
+    },
+    {
+      "word": "spot.",
+      "start": 50.78,
+      "end": 51.3
+    },
+    {
+      "word": "It's",
+      "start": 51.3,
+      "end": 52.32
+    },
+    {
+      "word": "a",
+      "start": 52.32,
+      "end": 52.42
+    },
+    {
+      "word": "light.",
+      "start": 52.42,
+      "end": 52.68
+    },
+    {
+      "word": "It's",
+      "start": 52.68,
+      "end": 53.82
+    },
+    {
+      "word": "a",
+      "start": 53.82,
+      "end": 53.9
+    },
+    {
+      "word": "spotlight.",
+      "start": 53.9,
+      "end": 54.78
+    },
+    {
+      "word": "8.",
+      "start": 55.88,
+      "end": 56.84
+    },
+    {
+      "word": "It's",
+      "start": 56.84,
+      "end": 56.96
+    },
+    {
+      "word": "a",
+      "start": 56.96,
+      "end": 57.06
+    },
+    {
+      "word": "book.",
+      "start": 57.06,
+      "end": 57.56
+    },
+    {
+      "word": "It's",
+      "start": 57.56,
+      "end": 58.46
+    },
+    {
+      "word": "a",
+      "start": 58.46,
+      "end": 58.58
+    },
+    {
+      "word": "phone.",
+      "start": 58.58,
+      "end": 59.16
+    },
+    {
+      "word": "It's",
+      "start": 59.16,
+      "end": 59.92
+    },
+    {
+      "word": "a",
+      "start": 59.92,
+      "end": 60.04
+    },
+    {
+      "word": "phone",
+      "start": 60.04,
+      "end": 60.22
+    },
+    {
+      "word": "book.",
+      "start": 60.22,
+      "end": 60.82
+    },
+    {
+      "word": "Pause",
+      "start": 61.7,
+      "end": 62.04
+    },
+    {
+      "word": "the",
+      "start": 62.04,
+      "end": 62.26
+    },
+    {
+      "word": "CD",
+      "start": 62.26,
+      "end": 62.52
+    },
+    {
+      "word": "and",
+      "start": 62.52,
+      "end": 62.78
+    },
+    {
+      "word": "write",
+      "start": 62.78,
+      "end": 62.96
+    },
+    {
+      "word": "your",
+      "start": 62.96,
+      "end": 63.1
+    },
+    {
+      "word": "own",
+      "start": 63.1,
+      "end": 63.3
+    },
+    {
+      "word": "noun",
+      "start": 63.3,
+      "end": 63.56
+    },
+    {
+      "word": "and",
+      "start": 63.56,
+      "end": 63.76
+    },
+    {
+      "word": "set",
+      "start": 63.76,
+      "end": 63.98
+    },
+    {
+      "word": "phrase",
+      "start": 63.98,
+      "end": 64.26
+    },
+    {
+      "word": "sentences,",
+      "start": 64.26,
+      "end": 65.06
+    },
+    {
+      "word": "carrying",
+      "start": 65.34,
+      "end": 65.64
+    },
+    {
+      "word": "over",
+      "start": 65.64,
+      "end": 65.86
+    },
+    {
+      "word": "the",
+      "start": 65.86,
+      "end": 66.06
+    },
+    {
+      "word": "same",
+      "start": 66.06,
+      "end": 66.28
+    },
+    {
+      "word": "nouns",
+      "start": 66.28,
+      "end": 66.56
+    },
+    {
+      "word": "you",
+      "start": 66.56,
+      "end": 66.8
+    },
+    {
+      "word": "used",
+      "start": 66.8,
+      "end": 66.94
+    },
+    {
+      "word": "in",
+      "start": 66.94,
+      "end": 67.14
+    },
+    {
+      "word": "Exercise",
+      "start": 67.14,
+      "end": 67.44
+    },
+    {
+      "word": "125.",
+      "start": 67.44,
+      "end": 67.9
+    },
+    {
+      "word": "Remember,",
+      "start": 69.1,
+      "end": 69.36
+    },
+    {
+      "word": "when",
+      "start": 69.36,
+      "end": 69.66
+    },
+    {
+      "word": "you",
+      "start": 69.66,
+      "end": 69.82
+    },
+    {
+      "word": "use",
+      "start": 69.82,
+      "end": 69.98
+    },
+    {
+      "word": "a",
+      "start": 69.98,
+      "end": 70.12
+    },
+    {
+      "word": "noun,",
+      "start": 70.12,
+      "end": 70.4
+    },
+    {
+      "word": "include",
+      "start": 70.4,
+      "end": 70.98
+    },
+    {
+      "word": "the",
+      "start": 70.98,
+      "end": 71.2
+    },
+    {
+      "word": "article.",
+      "start": 71.2,
+      "end": 71.48
+    },
+    {
+      "word": "When",
+      "start": 72.3,
+      "end": 72.48
+    },
+    {
+      "word": "you",
+      "start": 72.48,
+      "end": 72.6
+    },
+    {
+      "word": "use",
+      "start": 72.6,
+      "end": 72.74
+    },
+    {
+      "word": "an",
+      "start": 72.74,
+      "end": 72.84
+    },
+    {
+      "word": "adjective,",
+      "start": 72.84,
+      "end": 73.16
+    },
+    {
+      "word": "you",
+      "start": 73.16,
+      "end": 73.8
+    },
+    {
+      "word": "don't",
+      "start": 73.8,
+      "end": 73.94
+    },
+    {
+      "word": "need",
+      "start": 73.94,
+      "end": 74.1
+    },
+    {
+      "word": "an",
+      "start": 74.1,
+      "end": 74.26
+    },
+    {
+      "word": "article.",
+      "start": 74.26,
+      "end": 74.46
+    }
+  ]
+}

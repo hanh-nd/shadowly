@@ -1,0 +1,700 @@
+{
+  "text": " Exercise 410. Combinations in context. Repeat the following sentences. 1. I don't know what it means. 2. But it looks like what I need. 3. But you said that you wouldn't. 4. I know what you think. 5. But I don't think that he will. 6. He said that if we can do it, he'll help. 7. But isn't it easier this way? 8. We want something that isn't here. 9. You'll like it, but you'll regret it later. 10. But he's not right for what I want. 11. It's amazing what you've accomplished. 12. What if he forgets? 13. Okay, but aren't you missing something? 14. I think that he's okay now. 15. She wanted to, but her car broke down. 16. We think that you're taking a chance. 17. They don't know what it's about. Thank you.",
+  "wordTimestamps": [
+    {
+      "word": "Exercise",
+      "start": 0.48,
+      "end": 0.92
+    },
+    {
+      "word": "410.",
+      "start": 0.92,
+      "end": 2.38
+    },
+    {
+      "word": "Combinations",
+      "start": 2.38,
+      "end": 2.7
+    },
+    {
+      "word": "in",
+      "start": 2.7,
+      "end": 2.96
+    },
+    {
+      "word": "context.",
+      "start": 2.96,
+      "end": 3.9
+    },
+    {
+      "word": "Repeat",
+      "start": 3.9,
+      "end": 4.5
+    },
+    {
+      "word": "the",
+      "start": 4.5,
+      "end": 4.72
+    },
+    {
+      "word": "following",
+      "start": 4.72,
+      "end": 5.04
+    },
+    {
+      "word": "sentences.",
+      "start": 5.04,
+      "end": 5.68
+    },
+    {
+      "word": "1.",
+      "start": 6.82,
+      "end": 7.3
+    },
+    {
+      "word": "I",
+      "start": 7.3,
+      "end": 8.06
+    },
+    {
+      "word": "don't",
+      "start": 8.06,
+      "end": 8.18
+    },
+    {
+      "word": "know",
+      "start": 8.18,
+      "end": 8.3
+    },
+    {
+      "word": "what",
+      "start": 8.3,
+      "end": 8.46
+    },
+    {
+      "word": "it",
+      "start": 8.46,
+      "end": 8.58
+    },
+    {
+      "word": "means.",
+      "start": 8.58,
+      "end": 9.02
+    },
+    {
+      "word": "2.",
+      "start": 11.12,
+      "end": 11.7
+    },
+    {
+      "word": "But",
+      "start": 11.7,
+      "end": 12.08
+    },
+    {
+      "word": "it",
+      "start": 12.08,
+      "end": 12.2
+    },
+    {
+      "word": "looks",
+      "start": 12.2,
+      "end": 12.38
+    },
+    {
+      "word": "like",
+      "start": 12.38,
+      "end": 12.68
+    },
+    {
+      "word": "what",
+      "start": 12.68,
+      "end": 12.84
+    },
+    {
+      "word": "I",
+      "start": 12.84,
+      "end": 12.98
+    },
+    {
+      "word": "need.",
+      "start": 12.98,
+      "end": 13.28
+    },
+    {
+      "word": "3.",
+      "start": 15.2,
+      "end": 15.76
+    },
+    {
+      "word": "But",
+      "start": 15.76,
+      "end": 16.14
+    },
+    {
+      "word": "you",
+      "start": 16.14,
+      "end": 16.3
+    },
+    {
+      "word": "said",
+      "start": 16.3,
+      "end": 16.5
+    },
+    {
+      "word": "that",
+      "start": 16.5,
+      "end": 16.7
+    },
+    {
+      "word": "you",
+      "start": 16.7,
+      "end": 16.9
+    },
+    {
+      "word": "wouldn't.",
+      "start": 16.9,
+      "end": 17.52
+    },
+    {
+      "word": "4.",
+      "start": 19.2,
+      "end": 19.88
+    },
+    {
+      "word": "I",
+      "start": 19.88,
+      "end": 20.44
+    },
+    {
+      "word": "know",
+      "start": 20.44,
+      "end": 20.6
+    },
+    {
+      "word": "what",
+      "start": 20.6,
+      "end": 20.78
+    },
+    {
+      "word": "you",
+      "start": 20.78,
+      "end": 20.9
+    },
+    {
+      "word": "think.",
+      "start": 20.9,
+      "end": 21.32
+    },
+    {
+      "word": "5.",
+      "start": 23.36,
+      "end": 24.02
+    },
+    {
+      "word": "But",
+      "start": 24.02,
+      "end": 24.5
+    },
+    {
+      "word": "I",
+      "start": 24.5,
+      "end": 24.58
+    },
+    {
+      "word": "don't",
+      "start": 24.58,
+      "end": 24.74
+    },
+    {
+      "word": "think",
+      "start": 24.74,
+      "end": 24.94
+    },
+    {
+      "word": "that",
+      "start": 24.94,
+      "end": 25.14
+    },
+    {
+      "word": "he",
+      "start": 25.14,
+      "end": 25.24
+    },
+    {
+      "word": "will.",
+      "start": 25.24,
+      "end": 25.58
+    },
+    {
+      "word": "6.",
+      "start": 28.16,
+      "end": 28.64
+    },
+    {
+      "word": "He",
+      "start": 28.64,
+      "end": 29.06
+    },
+    {
+      "word": "said",
+      "start": 29.06,
+      "end": 29.28
+    },
+    {
+      "word": "that",
+      "start": 29.28,
+      "end": 29.46
+    },
+    {
+      "word": "if",
+      "start": 29.46,
+      "end": 29.56
+    },
+    {
+      "word": "we",
+      "start": 29.56,
+      "end": 29.68
+    },
+    {
+      "word": "can",
+      "start": 29.68,
+      "end": 29.82
+    },
+    {
+      "word": "do",
+      "start": 29.82,
+      "end": 30
+    },
+    {
+      "word": "it,",
+      "start": 30,
+      "end": 30.4
+    },
+    {
+      "word": "he'll",
+      "start": 30.4,
+      "end": 30.54
+    },
+    {
+      "word": "help.",
+      "start": 30.54,
+      "end": 31.24
+    },
+    {
+      "word": "7.",
+      "start": 33.38,
+      "end": 34.1
+    },
+    {
+      "word": "But",
+      "start": 34.1,
+      "end": 34.34
+    },
+    {
+      "word": "isn't",
+      "start": 34.34,
+      "end": 34.58
+    },
+    {
+      "word": "it",
+      "start": 34.58,
+      "end": 34.78
+    },
+    {
+      "word": "easier",
+      "start": 34.78,
+      "end": 35.06
+    },
+    {
+      "word": "this",
+      "start": 35.06,
+      "end": 35.36
+    },
+    {
+      "word": "way?",
+      "start": 35.36,
+      "end": 35.68
+    },
+    {
+      "word": "8.",
+      "start": 37.88,
+      "end": 38.36
+    },
+    {
+      "word": "We",
+      "start": 38.36,
+      "end": 38.66
+    },
+    {
+      "word": "want",
+      "start": 38.66,
+      "end": 38.9
+    },
+    {
+      "word": "something",
+      "start": 38.9,
+      "end": 39.28
+    },
+    {
+      "word": "that",
+      "start": 39.28,
+      "end": 39.56
+    },
+    {
+      "word": "isn't",
+      "start": 39.56,
+      "end": 39.8
+    },
+    {
+      "word": "here.",
+      "start": 39.8,
+      "end": 40.14
+    },
+    {
+      "word": "9.",
+      "start": 42.66,
+      "end": 43.28
+    },
+    {
+      "word": "You'll",
+      "start": 43.28,
+      "end": 43.74
+    },
+    {
+      "word": "like",
+      "start": 43.74,
+      "end": 44.02
+    },
+    {
+      "word": "it,",
+      "start": 44.02,
+      "end": 44.34
+    },
+    {
+      "word": "but",
+      "start": 44.34,
+      "end": 44.42
+    },
+    {
+      "word": "you'll",
+      "start": 44.42,
+      "end": 44.58
+    },
+    {
+      "word": "regret",
+      "start": 44.58,
+      "end": 44.9
+    },
+    {
+      "word": "it",
+      "start": 44.9,
+      "end": 45.12
+    },
+    {
+      "word": "later.",
+      "start": 45.12,
+      "end": 45.42
+    },
+    {
+      "word": "10.",
+      "start": 48.1,
+      "end": 48.74
+    },
+    {
+      "word": "But",
+      "start": 48.74,
+      "end": 49.1
+    },
+    {
+      "word": "he's",
+      "start": 49.1,
+      "end": 49.26
+    },
+    {
+      "word": "not",
+      "start": 49.26,
+      "end": 49.44
+    },
+    {
+      "word": "right",
+      "start": 49.44,
+      "end": 49.7
+    },
+    {
+      "word": "for",
+      "start": 49.7,
+      "end": 49.92
+    },
+    {
+      "word": "what",
+      "start": 49.92,
+      "end": 50.08
+    },
+    {
+      "word": "I",
+      "start": 50.08,
+      "end": 50.22
+    },
+    {
+      "word": "want.",
+      "start": 50.22,
+      "end": 50.64
+    },
+    {
+      "word": "11.",
+      "start": 52.88,
+      "end": 53.54
+    },
+    {
+      "word": "It's",
+      "start": 53.54,
+      "end": 54.06
+    },
+    {
+      "word": "amazing",
+      "start": 54.06,
+      "end": 54.44
+    },
+    {
+      "word": "what",
+      "start": 54.44,
+      "end": 54.76
+    },
+    {
+      "word": "you've",
+      "start": 54.76,
+      "end": 55
+    },
+    {
+      "word": "accomplished.",
+      "start": 55,
+      "end": 55.54
+    },
+    {
+      "word": "12.",
+      "start": 58,
+      "end": 58.64
+    },
+    {
+      "word": "What",
+      "start": 58.64,
+      "end": 59.08
+    },
+    {
+      "word": "if",
+      "start": 59.08,
+      "end": 59.2
+    },
+    {
+      "word": "he",
+      "start": 59.2,
+      "end": 59.36
+    },
+    {
+      "word": "forgets?",
+      "start": 59.36,
+      "end": 60.14
+    },
+    {
+      "word": "13.",
+      "start": 62.36,
+      "end": 63.18
+    },
+    {
+      "word": "Okay,",
+      "start": 63.18,
+      "end": 63.82
+    },
+    {
+      "word": "but",
+      "start": 63.82,
+      "end": 63.92
+    },
+    {
+      "word": "aren't",
+      "start": 63.92,
+      "end": 64.08
+    },
+    {
+      "word": "you",
+      "start": 64.08,
+      "end": 64.22
+    },
+    {
+      "word": "missing",
+      "start": 64.22,
+      "end": 64.52
+    },
+    {
+      "word": "something?",
+      "start": 64.52,
+      "end": 65.16
+    },
+    {
+      "word": "14.",
+      "start": 67.58,
+      "end": 68.72
+    },
+    {
+      "word": "I",
+      "start": 68.72,
+      "end": 68.88
+    },
+    {
+      "word": "think",
+      "start": 68.88,
+      "end": 69.06
+    },
+    {
+      "word": "that",
+      "start": 69.06,
+      "end": 69.26
+    },
+    {
+      "word": "he's",
+      "start": 69.26,
+      "end": 69.4
+    },
+    {
+      "word": "okay",
+      "start": 69.4,
+      "end": 69.68
+    },
+    {
+      "word": "now.",
+      "start": 69.68,
+      "end": 70.18
+    },
+    {
+      "word": "15.",
+      "start": 72.44,
+      "end": 73.22
+    },
+    {
+      "word": "She",
+      "start": 73.22,
+      "end": 73.64
+    },
+    {
+      "word": "wanted",
+      "start": 73.64,
+      "end": 74.04
+    },
+    {
+      "word": "to,",
+      "start": 74.04,
+      "end": 74.56
+    },
+    {
+      "word": "but",
+      "start": 74.56,
+      "end": 74.66
+    },
+    {
+      "word": "her",
+      "start": 74.66,
+      "end": 74.78
+    },
+    {
+      "word": "car",
+      "start": 74.78,
+      "end": 74.98
+    },
+    {
+      "word": "broke",
+      "start": 74.98,
+      "end": 75.22
+    },
+    {
+      "word": "down.",
+      "start": 75.22,
+      "end": 75.72
+    },
+    {
+      "word": "16.",
+      "start": 77.52,
+      "end": 78.24
+    },
+    {
+      "word": "We",
+      "start": 78.24,
+      "end": 78.58
+    },
+    {
+      "word": "think",
+      "start": 78.58,
+      "end": 78.74
+    },
+    {
+      "word": "that",
+      "start": 78.74,
+      "end": 78.94
+    },
+    {
+      "word": "you're",
+      "start": 78.94,
+      "end": 79.1
+    },
+    {
+      "word": "taking",
+      "start": 79.1,
+      "end": 79.34
+    },
+    {
+      "word": "a",
+      "start": 79.34,
+      "end": 79.52
+    },
+    {
+      "word": "chance.",
+      "start": 79.52,
+      "end": 80.26
+    },
+    {
+      "word": "17.",
+      "start": 81.88,
+      "end": 82.92
+    },
+    {
+      "word": "They",
+      "start": 82.92,
+      "end": 83.14
+    },
+    {
+      "word": "don't",
+      "start": 83.14,
+      "end": 83.28
+    },
+    {
+      "word": "know",
+      "start": 83.28,
+      "end": 83.42
+    },
+    {
+      "word": "what",
+      "start": 83.42,
+      "end": 83.6
+    },
+    {
+      "word": "it's",
+      "start": 83.6,
+      "end": 83.82
+    },
+    {
+      "word": "about.",
+      "start": 83.82,
+      "end": 84.76
+    },
+    {
+      "word": "Thank",
+      "start": 85.6,
+      "end": 85.96
+    },
+    {
+      "word": "you.",
+      "start": 85.96,
+      "end": 86.28
+    }
+  ]
+}

@@ -15,7 +15,8 @@
     "lint": "npm run lint -w apps/frontend && npm run lint -w apps/gateway",
     "lint:frontend": "npm run lint -w apps/frontend",
     "lint:gateway": "npm run lint -w apps/gateway",
-    "typecheck": "npm run typecheck -w apps/frontend"
+    "typecheck": "npm run typecheck -w apps/frontend",
+    "library:manifest": "npx tsx scripts/precompute-library.ts"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

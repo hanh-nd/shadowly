@@ -1,0 +1,615 @@
+{
+  "text": " Conversation 12b. In the Present Perfect Tense. Have you eaten yet? No, but I've already bought my lunch. Want to join me in the park? Thanks, but I've made a reservation for two at Kincaid's restaurant. Have you ever eaten there? Yes, I've been there several times. It's great. I asked Emily if she had eaten yet, and she told me that she had already bought her lunch. She asked me if I wanted to join her in the park, but I told her that I had made a reservation for two at Kincaid's restaurant. Then I asked her if she had ever eaten there, and she told me yes, that she had been there several times. She said it was great.",
+  "wordTimestamps": [
+    {
+      "word": "Conversation",
+      "start": 0.48,
+      "end": 1.16
+    },
+    {
+      "word": "12b.",
+      "start": 1.16,
+      "end": 1.86
+    },
+    {
+      "word": "In",
+      "start": 1.86,
+      "end": 2.7
+    },
+    {
+      "word": "the",
+      "start": 2.7,
+      "end": 2.8
+    },
+    {
+      "word": "Present",
+      "start": 2.8,
+      "end": 3.16
+    },
+    {
+      "word": "Perfect",
+      "start": 3.16,
+      "end": 3.56
+    },
+    {
+      "word": "Tense.",
+      "start": 3.56,
+      "end": 4.2
+    },
+    {
+      "word": "Have",
+      "start": 5.96,
+      "end": 6.14
+    },
+    {
+      "word": "you",
+      "start": 6.14,
+      "end": 6.34
+    },
+    {
+      "word": "eaten",
+      "start": 6.34,
+      "end": 6.74
+    },
+    {
+      "word": "yet?",
+      "start": 6.74,
+      "end": 7.1
+    },
+    {
+      "word": "No,",
+      "start": 7.84,
+      "end": 8.06
+    },
+    {
+      "word": "but",
+      "start": 8.06,
+      "end": 8.6
+    },
+    {
+      "word": "I've",
+      "start": 8.6,
+      "end": 8.78
+    },
+    {
+      "word": "already",
+      "start": 8.78,
+      "end": 9.12
+    },
+    {
+      "word": "bought",
+      "start": 9.12,
+      "end": 9.44
+    },
+    {
+      "word": "my",
+      "start": 9.44,
+      "end": 9.64
+    },
+    {
+      "word": "lunch.",
+      "start": 9.64,
+      "end": 10.6
+    },
+    {
+      "word": "Want",
+      "start": 10.6,
+      "end": 10.82
+    },
+    {
+      "word": "to",
+      "start": 10.82,
+      "end": 10.96
+    },
+    {
+      "word": "join",
+      "start": 10.96,
+      "end": 11.18
+    },
+    {
+      "word": "me",
+      "start": 11.18,
+      "end": 11.34
+    },
+    {
+      "word": "in",
+      "start": 11.34,
+      "end": 11.52
+    },
+    {
+      "word": "the",
+      "start": 11.52,
+      "end": 11.58
+    },
+    {
+      "word": "park?",
+      "start": 11.58,
+      "end": 11.9
+    },
+    {
+      "word": "Thanks,",
+      "start": 12.68,
+      "end": 13.12
+    },
+    {
+      "word": "but",
+      "start": 13.12,
+      "end": 13.48
+    },
+    {
+      "word": "I've",
+      "start": 13.48,
+      "end": 13.68
+    },
+    {
+      "word": "made",
+      "start": 13.68,
+      "end": 13.86
+    },
+    {
+      "word": "a",
+      "start": 13.86,
+      "end": 14
+    },
+    {
+      "word": "reservation",
+      "start": 14,
+      "end": 14.3
+    },
+    {
+      "word": "for",
+      "start": 14.3,
+      "end": 14.72
+    },
+    {
+      "word": "two",
+      "start": 14.72,
+      "end": 15.04
+    },
+    {
+      "word": "at",
+      "start": 15.04,
+      "end": 15.34
+    },
+    {
+      "word": "Kincaid's",
+      "start": 15.34,
+      "end": 15.94
+    },
+    {
+      "word": "restaurant.",
+      "start": 15.94,
+      "end": 16.76
+    },
+    {
+      "word": "Have",
+      "start": 16.76,
+      "end": 17.32
+    },
+    {
+      "word": "you",
+      "start": 17.32,
+      "end": 17.48
+    },
+    {
+      "word": "ever",
+      "start": 17.48,
+      "end": 17.72
+    },
+    {
+      "word": "eaten",
+      "start": 17.72,
+      "end": 17.96
+    },
+    {
+      "word": "there?",
+      "start": 17.96,
+      "end": 18.54
+    },
+    {
+      "word": "Yes,",
+      "start": 18.86,
+      "end": 19.3
+    },
+    {
+      "word": "I've",
+      "start": 19.3,
+      "end": 19.52
+    },
+    {
+      "word": "been",
+      "start": 19.52,
+      "end": 19.62
+    },
+    {
+      "word": "there",
+      "start": 19.62,
+      "end": 19.8
+    },
+    {
+      "word": "several",
+      "start": 19.8,
+      "end": 20.22
+    },
+    {
+      "word": "times.",
+      "start": 20.22,
+      "end": 20.76
+    },
+    {
+      "word": "It's",
+      "start": 20.76,
+      "end": 21.36
+    },
+    {
+      "word": "great.",
+      "start": 21.36,
+      "end": 21.82
+    },
+    {
+      "word": "I",
+      "start": 23.58,
+      "end": 23.72
+    },
+    {
+      "word": "asked",
+      "start": 23.72,
+      "end": 24.06
+    },
+    {
+      "word": "Emily",
+      "start": 24.06,
+      "end": 24.42
+    },
+    {
+      "word": "if",
+      "start": 24.42,
+      "end": 24.76
+    },
+    {
+      "word": "she",
+      "start": 24.76,
+      "end": 24.92
+    },
+    {
+      "word": "had",
+      "start": 24.92,
+      "end": 25.08
+    },
+    {
+      "word": "eaten",
+      "start": 25.08,
+      "end": 25.32
+    },
+    {
+      "word": "yet,",
+      "start": 25.32,
+      "end": 25.74
+    },
+    {
+      "word": "and",
+      "start": 25.74,
+      "end": 26.1
+    },
+    {
+      "word": "she",
+      "start": 26.1,
+      "end": 26.3
+    },
+    {
+      "word": "told",
+      "start": 26.3,
+      "end": 26.66
+    },
+    {
+      "word": "me",
+      "start": 26.66,
+      "end": 26.96
+    },
+    {
+      "word": "that",
+      "start": 26.96,
+      "end": 27.26
+    },
+    {
+      "word": "she",
+      "start": 27.26,
+      "end": 27.44
+    },
+    {
+      "word": "had",
+      "start": 27.44,
+      "end": 27.6
+    },
+    {
+      "word": "already",
+      "start": 27.6,
+      "end": 27.96
+    },
+    {
+      "word": "bought",
+      "start": 27.96,
+      "end": 28.28
+    },
+    {
+      "word": "her",
+      "start": 28.28,
+      "end": 28.54
+    },
+    {
+      "word": "lunch.",
+      "start": 28.54,
+      "end": 29.16
+    },
+    {
+      "word": "She",
+      "start": 29.48,
+      "end": 29.56
+    },
+    {
+      "word": "asked",
+      "start": 29.56,
+      "end": 29.94
+    },
+    {
+      "word": "me",
+      "start": 29.94,
+      "end": 30.2
+    },
+    {
+      "word": "if",
+      "start": 30.2,
+      "end": 30.58
+    },
+    {
+      "word": "I",
+      "start": 30.58,
+      "end": 30.7
+    },
+    {
+      "word": "wanted",
+      "start": 30.7,
+      "end": 30.98
+    },
+    {
+      "word": "to",
+      "start": 30.98,
+      "end": 31.2
+    },
+    {
+      "word": "join",
+      "start": 31.2,
+      "end": 31.54
+    },
+    {
+      "word": "her",
+      "start": 31.54,
+      "end": 31.78
+    },
+    {
+      "word": "in",
+      "start": 31.78,
+      "end": 32
+    },
+    {
+      "word": "the",
+      "start": 32,
+      "end": 32.12
+    },
+    {
+      "word": "park,",
+      "start": 32.12,
+      "end": 32.74
+    },
+    {
+      "word": "but",
+      "start": 32.74,
+      "end": 33.22
+    },
+    {
+      "word": "I",
+      "start": 33.22,
+      "end": 33.36
+    },
+    {
+      "word": "told",
+      "start": 33.36,
+      "end": 33.68
+    },
+    {
+      "word": "her",
+      "start": 33.68,
+      "end": 33.88
+    },
+    {
+      "word": "that",
+      "start": 33.88,
+      "end": 34.12
+    },
+    {
+      "word": "I",
+      "start": 34.12,
+      "end": 34.26
+    },
+    {
+      "word": "had",
+      "start": 34.26,
+      "end": 34.38
+    },
+    {
+      "word": "made",
+      "start": 34.38,
+      "end": 34.6
+    },
+    {
+      "word": "a",
+      "start": 34.6,
+      "end": 34.76
+    },
+    {
+      "word": "reservation",
+      "start": 34.76,
+      "end": 35.08
+    },
+    {
+      "word": "for",
+      "start": 35.08,
+      "end": 35.6
+    },
+    {
+      "word": "two",
+      "start": 35.6,
+      "end": 35.98
+    },
+    {
+      "word": "at",
+      "start": 35.98,
+      "end": 36.36
+    },
+    {
+      "word": "Kincaid's",
+      "start": 36.36,
+      "end": 36.98
+    },
+    {
+      "word": "restaurant.",
+      "start": 36.98,
+      "end": 37.46
+    },
+    {
+      "word": "Then",
+      "start": 38.46,
+      "end": 38.64
+    },
+    {
+      "word": "I",
+      "start": 38.64,
+      "end": 38.76
+    },
+    {
+      "word": "asked",
+      "start": 38.76,
+      "end": 39.08
+    },
+    {
+      "word": "her",
+      "start": 39.08,
+      "end": 39.22
+    },
+    {
+      "word": "if",
+      "start": 39.22,
+      "end": 39.48
+    },
+    {
+      "word": "she",
+      "start": 39.48,
+      "end": 39.64
+    },
+    {
+      "word": "had",
+      "start": 39.64,
+      "end": 39.76
+    },
+    {
+      "word": "ever",
+      "start": 39.76,
+      "end": 40.1
+    },
+    {
+      "word": "eaten",
+      "start": 40.1,
+      "end": 40.46
+    },
+    {
+      "word": "there,",
+      "start": 40.46,
+      "end": 41.06
+    },
+    {
+      "word": "and",
+      "start": 41.06,
+      "end": 41.38
+    },
+    {
+      "word": "she",
+      "start": 41.38,
+      "end": 41.56
+    },
+    {
+      "word": "told",
+      "start": 41.56,
+      "end": 41.9
+    },
+    {
+      "word": "me",
+      "start": 41.9,
+      "end": 42.12
+    },
+    {
+      "word": "yes,",
+      "start": 42.12,
+      "end": 42.82
+    },
+    {
+      "word": "that",
+      "start": 42.82,
+      "end": 43.14
+    },
+    {
+      "word": "she",
+      "start": 43.14,
+      "end": 43.32
+    },
+    {
+      "word": "had",
+      "start": 43.32,
+      "end": 43.56
+    },
+    {
+      "word": "been",
+      "start": 43.56,
+      "end": 43.72
+    },
+    {
+      "word": "there",
+      "start": 43.72,
+      "end": 44.06
+    },
+    {
+      "word": "several",
+      "start": 44.06,
+      "end": 44.48
+    },
+    {
+      "word": "times.",
+      "start": 44.48,
+      "end": 45.02
+    },
+    {
+      "word": "She",
+      "start": 45.58,
+      "end": 45.74
+    },
+    {
+      "word": "said",
+      "start": 45.74,
+      "end": 45.98
+    },
+    {
+      "word": "it",
+      "start": 45.98,
+      "end": 46.1
+    },
+    {
+      "word": "was",
+      "start": 46.1,
+      "end": 46.26
+    },
+    {
+      "word": "great.",
+      "start": 46.26,
+      "end": 46.62
+    }
+  ]
+}

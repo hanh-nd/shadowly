@@ -1,0 +1,465 @@
+{
+  "text": " Conversation 9C, Long-Term Plans Well, maybe you could find a job in a big city closer to home. Yeah, that would be a good happy medium. On the other hand, since you like to travel, you could possibly get a job in another country, do something exotic. You're right. I might get really bored just doing the same old thing. I'd learn a lot overseas, even pick up another language. It's definitely something to think about. Well, I guess we don't have to decide now, since we're still in our freshman year.",
+  "wordTimestamps": [
+    {
+      "word": "Conversation",
+      "start": 0.64,
+      "end": 1.22
+    },
+    {
+      "word": "9C,",
+      "start": 1.22,
+      "end": 2.88
+    },
+    {
+      "word": "Long-Term",
+      "start": 2.88,
+      "end": 3.38
+    },
+    {
+      "word": "Plans",
+      "start": 3.38,
+      "end": 3.94
+    },
+    {
+      "word": "Well,",
+      "start": 30.64,
+      "end": 30.66
+    },
+    {
+      "word": "maybe",
+      "start": 30.66,
+      "end": 30.88
+    },
+    {
+      "word": "you",
+      "start": 30.88,
+      "end": 31.1
+    },
+    {
+      "word": "could",
+      "start": 31.1,
+      "end": 31.24
+    },
+    {
+      "word": "find",
+      "start": 31.24,
+      "end": 31.5
+    },
+    {
+      "word": "a",
+      "start": 31.5,
+      "end": 31.68
+    },
+    {
+      "word": "job",
+      "start": 31.68,
+      "end": 31.96
+    },
+    {
+      "word": "in",
+      "start": 31.96,
+      "end": 32.22
+    },
+    {
+      "word": "a",
+      "start": 32.22,
+      "end": 32.32
+    },
+    {
+      "word": "big",
+      "start": 32.32,
+      "end": 32.58
+    },
+    {
+      "word": "city",
+      "start": 32.58,
+      "end": 32.92
+    },
+    {
+      "word": "closer",
+      "start": 32.92,
+      "end": 33.4
+    },
+    {
+      "word": "to",
+      "start": 33.4,
+      "end": 33.64
+    },
+    {
+      "word": "home.",
+      "start": 33.64,
+      "end": 34.34
+    },
+    {
+      "word": "Yeah,",
+      "start": 34.86,
+      "end": 35.34
+    },
+    {
+      "word": "that",
+      "start": 35.34,
+      "end": 35.7
+    },
+    {
+      "word": "would",
+      "start": 35.7,
+      "end": 35.9
+    },
+    {
+      "word": "be",
+      "start": 35.9,
+      "end": 36.04
+    },
+    {
+      "word": "a",
+      "start": 36.04,
+      "end": 36.16
+    },
+    {
+      "word": "good",
+      "start": 36.16,
+      "end": 36.32
+    },
+    {
+      "word": "happy",
+      "start": 36.32,
+      "end": 36.64
+    },
+    {
+      "word": "medium.",
+      "start": 36.64,
+      "end": 37.06
+    },
+    {
+      "word": "On",
+      "start": 37.9,
+      "end": 38.08
+    },
+    {
+      "word": "the",
+      "start": 38.08,
+      "end": 38.2
+    },
+    {
+      "word": "other",
+      "start": 38.2,
+      "end": 38.4
+    },
+    {
+      "word": "hand,",
+      "start": 38.4,
+      "end": 39.12
+    },
+    {
+      "word": "since",
+      "start": 39.12,
+      "end": 39.58
+    },
+    {
+      "word": "you",
+      "start": 39.58,
+      "end": 39.8
+    },
+    {
+      "word": "like",
+      "start": 39.8,
+      "end": 40.12
+    },
+    {
+      "word": "to",
+      "start": 40.12,
+      "end": 40.34
+    },
+    {
+      "word": "travel,",
+      "start": 40.34,
+      "end": 41.02
+    },
+    {
+      "word": "you",
+      "start": 41.02,
+      "end": 41.36
+    },
+    {
+      "word": "could",
+      "start": 41.36,
+      "end": 41.54
+    },
+    {
+      "word": "possibly",
+      "start": 41.54,
+      "end": 42
+    },
+    {
+      "word": "get",
+      "start": 42,
+      "end": 42.3
+    },
+    {
+      "word": "a",
+      "start": 42.3,
+      "end": 42.42
+    },
+    {
+      "word": "job",
+      "start": 42.42,
+      "end": 42.66
+    },
+    {
+      "word": "in",
+      "start": 42.66,
+      "end": 42.88
+    },
+    {
+      "word": "another",
+      "start": 42.88,
+      "end": 43.14
+    },
+    {
+      "word": "country,",
+      "start": 43.14,
+      "end": 44.16
+    },
+    {
+      "word": "do",
+      "start": 44.16,
+      "end": 44.42
+    },
+    {
+      "word": "something",
+      "start": 44.42,
+      "end": 44.78
+    },
+    {
+      "word": "exotic.",
+      "start": 44.78,
+      "end": 45.78
+    },
+    {
+      "word": "You're",
+      "start": 46.44,
+      "end": 46.76
+    },
+    {
+      "word": "right.",
+      "start": 46.76,
+      "end": 47.1
+    },
+    {
+      "word": "I",
+      "start": 47.1,
+      "end": 47.66
+    },
+    {
+      "word": "might",
+      "start": 47.66,
+      "end": 47.92
+    },
+    {
+      "word": "get",
+      "start": 47.92,
+      "end": 48.06
+    },
+    {
+      "word": "really",
+      "start": 48.06,
+      "end": 48.4
+    },
+    {
+      "word": "bored",
+      "start": 48.4,
+      "end": 48.78
+    },
+    {
+      "word": "just",
+      "start": 48.78,
+      "end": 49.06
+    },
+    {
+      "word": "doing",
+      "start": 49.06,
+      "end": 49.32
+    },
+    {
+      "word": "the",
+      "start": 49.32,
+      "end": 49.5
+    },
+    {
+      "word": "same",
+      "start": 49.5,
+      "end": 49.76
+    },
+    {
+      "word": "old",
+      "start": 49.76,
+      "end": 50
+    },
+    {
+      "word": "thing.",
+      "start": 50,
+      "end": 50.36
+    },
+    {
+      "word": "I'd",
+      "start": 51.04,
+      "end": 51.32
+    },
+    {
+      "word": "learn",
+      "start": 51.32,
+      "end": 51.48
+    },
+    {
+      "word": "a",
+      "start": 51.48,
+      "end": 51.68
+    },
+    {
+      "word": "lot",
+      "start": 51.68,
+      "end": 51.88
+    },
+    {
+      "word": "overseas,",
+      "start": 51.88,
+      "end": 52.82
+    },
+    {
+      "word": "even",
+      "start": 52.82,
+      "end": 53.3
+    },
+    {
+      "word": "pick",
+      "start": 53.3,
+      "end": 53.58
+    },
+    {
+      "word": "up",
+      "start": 53.58,
+      "end": 53.76
+    },
+    {
+      "word": "another",
+      "start": 53.76,
+      "end": 54.04
+    },
+    {
+      "word": "language.",
+      "start": 54.04,
+      "end": 54.54
+    },
+    {
+      "word": "It's",
+      "start": 55.24,
+      "end": 55.56
+    },
+    {
+      "word": "definitely",
+      "start": 55.56,
+      "end": 56.16
+    },
+    {
+      "word": "something",
+      "start": 56.16,
+      "end": 56.64
+    },
+    {
+      "word": "to",
+      "start": 56.64,
+      "end": 56.94
+    },
+    {
+      "word": "think",
+      "start": 56.94,
+      "end": 57.22
+    },
+    {
+      "word": "about.",
+      "start": 57.22,
+      "end": 57.52
+    },
+    {
+      "word": "Well,",
+      "start": 58.36,
+      "end": 58.78
+    },
+    {
+      "word": "I",
+      "start": 58.78,
+      "end": 58.84
+    },
+    {
+      "word": "guess",
+      "start": 58.84,
+      "end": 59.04
+    },
+    {
+      "word": "we",
+      "start": 59.04,
+      "end": 59.24
+    },
+    {
+      "word": "don't",
+      "start": 59.24,
+      "end": 59.46
+    },
+    {
+      "word": "have",
+      "start": 59.46,
+      "end": 59.72
+    },
+    {
+      "word": "to",
+      "start": 59.72,
+      "end": 59.9
+    },
+    {
+      "word": "decide",
+      "start": 59.9,
+      "end": 60.28
+    },
+    {
+      "word": "now,",
+      "start": 60.28,
+      "end": 61.1
+    },
+    {
+      "word": "since",
+      "start": 61.1,
+      "end": 61.56
+    },
+    {
+      "word": "we're",
+      "start": 61.56,
+      "end": 61.8
+    },
+    {
+      "word": "still",
+      "start": 61.8,
+      "end": 62.14
+    },
+    {
+      "word": "in",
+      "start": 62.14,
+      "end": 62.42
+    },
+    {
+      "word": "our",
+      "start": 62.42,
+      "end": 62.58
+    },
+    {
+      "word": "freshman",
+      "start": 62.58,
+      "end": 63.1
+    },
+    {
+      "word": "year.",
+      "start": 63.1,
+      "end": 63.78
+    }
+  ]
+}

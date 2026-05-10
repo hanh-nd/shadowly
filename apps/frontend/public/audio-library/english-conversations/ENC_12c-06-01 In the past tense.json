@@ -1,0 +1,1070 @@
+{
+  "text": " Conversation 12C, in the past tense. Where were you last night? We missed you at the party. Oh, I had to go to my sister's house. They called her from the hospital at the last minute and asked her to work the night shift. So I went over to babysit for her kids. I ended up spending the night at her place. I asked Gina where she had been the night before and told her that we had missed her at the party. She said that she had had to go to her sister's house That they had called her sister from the hospital at the last minute And had asked her to work the night shift So she had gone over to babysit for her kids She said she had ended up spending the night at her sister's place Less formal I asked Gina where she was the night before And told her that we missed her at the party She said that she had to go to her sister's house that they called her sister from the hospital at the last minute and asked her to work the night shift. So she went over to babysit for her kids. She said she ended up spending the night at her sister's place.",
+  "wordTimestamps": [
+    {
+      "word": "Conversation",
+      "start": 0.52,
+      "end": 1.08
+    },
+    {
+      "word": "12C,",
+      "start": 1.08,
+      "end": 2.18
+    },
+    {
+      "word": "in",
+      "start": 2.18,
+      "end": 2.68
+    },
+    {
+      "word": "the",
+      "start": 2.68,
+      "end": 2.78
+    },
+    {
+      "word": "past",
+      "start": 2.78,
+      "end": 3.12
+    },
+    {
+      "word": "tense.",
+      "start": 3.12,
+      "end": 3.58
+    },
+    {
+      "word": "Where",
+      "start": 5.36,
+      "end": 5.52
+    },
+    {
+      "word": "were",
+      "start": 5.52,
+      "end": 5.7
+    },
+    {
+      "word": "you",
+      "start": 5.7,
+      "end": 5.86
+    },
+    {
+      "word": "last",
+      "start": 5.86,
+      "end": 6.16
+    },
+    {
+      "word": "night?",
+      "start": 6.16,
+      "end": 6.62
+    },
+    {
+      "word": "We",
+      "start": 6.62,
+      "end": 7.1
+    },
+    {
+      "word": "missed",
+      "start": 7.1,
+      "end": 7.36
+    },
+    {
+      "word": "you",
+      "start": 7.36,
+      "end": 7.52
+    },
+    {
+      "word": "at",
+      "start": 7.52,
+      "end": 7.68
+    },
+    {
+      "word": "the",
+      "start": 7.68,
+      "end": 7.8
+    },
+    {
+      "word": "party.",
+      "start": 7.8,
+      "end": 8.28
+    },
+    {
+      "word": "Oh,",
+      "start": 8.72,
+      "end": 9.16
+    },
+    {
+      "word": "I",
+      "start": 9.16,
+      "end": 9.34
+    },
+    {
+      "word": "had",
+      "start": 9.34,
+      "end": 9.64
+    },
+    {
+      "word": "to",
+      "start": 9.64,
+      "end": 9.78
+    },
+    {
+      "word": "go",
+      "start": 9.78,
+      "end": 9.9
+    },
+    {
+      "word": "to",
+      "start": 9.9,
+      "end": 10
+    },
+    {
+      "word": "my",
+      "start": 10,
+      "end": 10.2
+    },
+    {
+      "word": "sister's",
+      "start": 10.2,
+      "end": 10.78
+    },
+    {
+      "word": "house.",
+      "start": 10.78,
+      "end": 11.1
+    },
+    {
+      "word": "They",
+      "start": 11.54,
+      "end": 11.68
+    },
+    {
+      "word": "called",
+      "start": 11.68,
+      "end": 12.06
+    },
+    {
+      "word": "her",
+      "start": 12.06,
+      "end": 12.2
+    },
+    {
+      "word": "from",
+      "start": 12.2,
+      "end": 12.38
+    },
+    {
+      "word": "the",
+      "start": 12.38,
+      "end": 12.52
+    },
+    {
+      "word": "hospital",
+      "start": 12.52,
+      "end": 12.98
+    },
+    {
+      "word": "at",
+      "start": 12.98,
+      "end": 13.26
+    },
+    {
+      "word": "the",
+      "start": 13.26,
+      "end": 13.4
+    },
+    {
+      "word": "last",
+      "start": 13.4,
+      "end": 13.68
+    },
+    {
+      "word": "minute",
+      "start": 13.68,
+      "end": 13.92
+    },
+    {
+      "word": "and",
+      "start": 13.92,
+      "end": 14.48
+    },
+    {
+      "word": "asked",
+      "start": 14.48,
+      "end": 14.86
+    },
+    {
+      "word": "her",
+      "start": 14.86,
+      "end": 15
+    },
+    {
+      "word": "to",
+      "start": 15,
+      "end": 15.14
+    },
+    {
+      "word": "work",
+      "start": 15.14,
+      "end": 15.42
+    },
+    {
+      "word": "the",
+      "start": 15.42,
+      "end": 15.6
+    },
+    {
+      "word": "night",
+      "start": 15.6,
+      "end": 15.82
+    },
+    {
+      "word": "shift.",
+      "start": 15.82,
+      "end": 16.18
+    },
+    {
+      "word": "So",
+      "start": 16.74,
+      "end": 16.94
+    },
+    {
+      "word": "I",
+      "start": 16.94,
+      "end": 17.04
+    },
+    {
+      "word": "went",
+      "start": 17.04,
+      "end": 17.22
+    },
+    {
+      "word": "over",
+      "start": 17.22,
+      "end": 17.38
+    },
+    {
+      "word": "to",
+      "start": 17.38,
+      "end": 17.54
+    },
+    {
+      "word": "babysit",
+      "start": 17.54,
+      "end": 18
+    },
+    {
+      "word": "for",
+      "start": 18,
+      "end": 18.22
+    },
+    {
+      "word": "her",
+      "start": 18.22,
+      "end": 18.34
+    },
+    {
+      "word": "kids.",
+      "start": 18.34,
+      "end": 18.72
+    },
+    {
+      "word": "I",
+      "start": 19.48,
+      "end": 19.66
+    },
+    {
+      "word": "ended",
+      "start": 19.66,
+      "end": 19.98
+    },
+    {
+      "word": "up",
+      "start": 19.98,
+      "end": 20.12
+    },
+    {
+      "word": "spending",
+      "start": 20.12,
+      "end": 20.42
+    },
+    {
+      "word": "the",
+      "start": 20.42,
+      "end": 20.68
+    },
+    {
+      "word": "night",
+      "start": 20.68,
+      "end": 20.94
+    },
+    {
+      "word": "at",
+      "start": 20.94,
+      "end": 21.12
+    },
+    {
+      "word": "her",
+      "start": 21.12,
+      "end": 21.2
+    },
+    {
+      "word": "place.",
+      "start": 21.2,
+      "end": 21.66
+    },
+    {
+      "word": "I",
+      "start": 23.42,
+      "end": 23.56
+    },
+    {
+      "word": "asked",
+      "start": 23.56,
+      "end": 23.9
+    },
+    {
+      "word": "Gina",
+      "start": 23.9,
+      "end": 24.2
+    },
+    {
+      "word": "where",
+      "start": 24.2,
+      "end": 24.54
+    },
+    {
+      "word": "she",
+      "start": 24.54,
+      "end": 24.74
+    },
+    {
+      "word": "had",
+      "start": 24.74,
+      "end": 24.9
+    },
+    {
+      "word": "been",
+      "start": 24.9,
+      "end": 25.1
+    },
+    {
+      "word": "the",
+      "start": 25.1,
+      "end": 25.26
+    },
+    {
+      "word": "night",
+      "start": 25.26,
+      "end": 25.38
+    },
+    {
+      "word": "before",
+      "start": 25.38,
+      "end": 25.78
+    },
+    {
+      "word": "and",
+      "start": 25.78,
+      "end": 26.24
+    },
+    {
+      "word": "told",
+      "start": 26.24,
+      "end": 26.54
+    },
+    {
+      "word": "her",
+      "start": 26.54,
+      "end": 26.68
+    },
+    {
+      "word": "that",
+      "start": 26.68,
+      "end": 26.92
+    },
+    {
+      "word": "we",
+      "start": 26.92,
+      "end": 27.04
+    },
+    {
+      "word": "had",
+      "start": 27.04,
+      "end": 27.2
+    },
+    {
+      "word": "missed",
+      "start": 27.2,
+      "end": 27.44
+    },
+    {
+      "word": "her",
+      "start": 27.44,
+      "end": 27.64
+    },
+    {
+      "word": "at",
+      "start": 27.64,
+      "end": 27.82
+    },
+    {
+      "word": "the",
+      "start": 27.82,
+      "end": 27.94
+    },
+    {
+      "word": "party.",
+      "start": 27.94,
+      "end": 28.58
+    },
+    {
+      "word": "She",
+      "start": 29.2,
+      "end": 29.28
+    },
+    {
+      "word": "said",
+      "start": 29.28,
+      "end": 29.58
+    },
+    {
+      "word": "that",
+      "start": 29.58,
+      "end": 29.74
+    },
+    {
+      "word": "she",
+      "start": 29.74,
+      "end": 29.9
+    },
+    {
+      "word": "had",
+      "start": 29.9,
+      "end": 30.14
+    },
+    {
+      "word": "had",
+      "start": 30.14,
+      "end": 30.32
+    },
+    {
+      "word": "to",
+      "start": 30.32,
+      "end": 30.52
+    },
+    {
+      "word": "go",
+      "start": 30.52,
+      "end": 30.68
+    },
+    {
+      "word": "to",
+      "start": 30.68,
+      "end": 30.86
+    },
+    {
+      "word": "her",
+      "start": 30.86,
+      "end": 31.04
+    },
+    {
+      "word": "sister's",
+      "start": 31.04,
+      "end": 31.62
+    },
+    {
+      "word": "house",
+      "start": 31.62,
+      "end": 31.86
+    },
+    {
+      "word": "That",
+      "start": 32.36,
+      "end": 32.54
+    },
+    {
+      "word": "they",
+      "start": 32.54,
+      "end": 32.68
+    },
+    {
+      "word": "had",
+      "start": 32.68,
+      "end": 32.84
+    },
+    {
+      "word": "called",
+      "start": 32.84,
+      "end": 33.16
+    },
+    {
+      "word": "her",
+      "start": 33.16,
+      "end": 33.36
+    },
+    {
+      "word": "sister",
+      "start": 33.36,
+      "end": 33.72
+    },
+    {
+      "word": "from",
+      "start": 33.72,
+      "end": 34.1
+    },
+    {
+      "word": "the",
+      "start": 34.1,
+      "end": 34.24
+    },
+    {
+      "word": "hospital",
+      "start": 34.24,
+      "end": 34.68
+    },
+    {
+      "word": "at",
+      "start": 34.68,
+      "end": 35.04
+    },
+    {
+      "word": "the",
+      "start": 35.04,
+      "end": 35.2
+    },
+    {
+      "word": "last",
+      "start": 35.2,
+      "end": 35.46
+    },
+    {
+      "word": "minute",
+      "start": 35.46,
+      "end": 35.7
+    },
+    {
+      "word": "And",
+      "start": 35.72,
+      "end": 36.42
+    },
+    {
+      "word": "had",
+      "start": 36.42,
+      "end": 36.6
+    },
+    {
+      "word": "asked",
+      "start": 36.6,
+      "end": 36.88
+    },
+    {
+      "word": "her",
+      "start": 36.88,
+      "end": 37.08
+    },
+    {
+      "word": "to",
+      "start": 37.08,
+      "end": 37.3
+    },
+    {
+      "word": "work",
+      "start": 37.3,
+      "end": 37.48
+    },
+    {
+      "word": "the",
+      "start": 37.48,
+      "end": 37.66
+    },
+    {
+      "word": "night",
+      "start": 37.66,
+      "end": 37.88
+    },
+    {
+      "word": "shift",
+      "start": 37.88,
+      "end": 38.12
+    },
+    {
+      "word": "So",
+      "start": 38.2,
+      "end": 38.88
+    },
+    {
+      "word": "she",
+      "start": 38.88,
+      "end": 39.1
+    },
+    {
+      "word": "had",
+      "start": 39.1,
+      "end": 39.24
+    },
+    {
+      "word": "gone",
+      "start": 39.24,
+      "end": 39.42
+    },
+    {
+      "word": "over",
+      "start": 39.42,
+      "end": 39.64
+    },
+    {
+      "word": "to",
+      "start": 39.64,
+      "end": 39.76
+    },
+    {
+      "word": "babysit",
+      "start": 39.76,
+      "end": 40.3
+    },
+    {
+      "word": "for",
+      "start": 40.3,
+      "end": 40.52
+    },
+    {
+      "word": "her",
+      "start": 40.52,
+      "end": 40.68
+    },
+    {
+      "word": "kids",
+      "start": 40.68,
+      "end": 41.06
+    },
+    {
+      "word": "She",
+      "start": 41.92,
+      "end": 42.14
+    },
+    {
+      "word": "said",
+      "start": 42.14,
+      "end": 42.4
+    },
+    {
+      "word": "she",
+      "start": 42.4,
+      "end": 42.56
+    },
+    {
+      "word": "had",
+      "start": 42.56,
+      "end": 42.7
+    },
+    {
+      "word": "ended",
+      "start": 42.7,
+      "end": 42.9
+    },
+    {
+      "word": "up",
+      "start": 42.9,
+      "end": 43.08
+    },
+    {
+      "word": "spending",
+      "start": 43.08,
+      "end": 43.38
+    },
+    {
+      "word": "the",
+      "start": 43.38,
+      "end": 43.62
+    },
+    {
+      "word": "night",
+      "start": 43.62,
+      "end": 43.82
+    },
+    {
+      "word": "at",
+      "start": 43.82,
+      "end": 44.02
+    },
+    {
+      "word": "her",
+      "start": 44.02,
+      "end": 44.14
+    },
+    {
+      "word": "sister's",
+      "start": 44.14,
+      "end": 44.6
+    },
+    {
+      "word": "place",
+      "start": 44.6,
+      "end": 44.94
+    },
+    {
+      "word": "Less",
+      "start": 46.74,
+      "end": 47.02
+    },
+    {
+      "word": "formal",
+      "start": 47.02,
+      "end": 47.46
+    },
+    {
+      "word": "I",
+      "start": 48.7,
+      "end": 48.86
+    },
+    {
+      "word": "asked",
+      "start": 48.86,
+      "end": 49.14
+    },
+    {
+      "word": "Gina",
+      "start": 49.14,
+      "end": 49.38
+    },
+    {
+      "word": "where",
+      "start": 49.38,
+      "end": 49.7
+    },
+    {
+      "word": "she",
+      "start": 49.7,
+      "end": 49.88
+    },
+    {
+      "word": "was",
+      "start": 49.88,
+      "end": 50.18
+    },
+    {
+      "word": "the",
+      "start": 50.18,
+      "end": 50.32
+    },
+    {
+      "word": "night",
+      "start": 50.32,
+      "end": 50.46
+    },
+    {
+      "word": "before",
+      "start": 50.46,
+      "end": 50.82
+    },
+    {
+      "word": "And",
+      "start": 50.44,
+      "end": 51.18
+    },
+    {
+      "word": "told",
+      "start": 51.18,
+      "end": 51.54
+    },
+    {
+      "word": "her",
+      "start": 51.54,
+      "end": 51.66
+    },
+    {
+      "word": "that",
+      "start": 51.66,
+      "end": 51.88
+    },
+    {
+      "word": "we",
+      "start": 51.88,
+      "end": 52.02
+    },
+    {
+      "word": "missed",
+      "start": 52.02,
+      "end": 52.34
+    },
+    {
+      "word": "her",
+      "start": 52.34,
+      "end": 52.5
+    },
+    {
+      "word": "at",
+      "start": 52.5,
+      "end": 52.7
+    },
+    {
+      "word": "the",
+      "start": 52.7,
+      "end": 52.8
+    },
+    {
+      "word": "party",
+      "start": 52.8,
+      "end": 53.06
+    },
+    {
+      "word": "She",
+      "start": 52.66,
+      "end": 54.08
+    },
+    {
+      "word": "said",
+      "start": 54.08,
+      "end": 54.32
+    },
+    {
+      "word": "that",
+      "start": 54.32,
+      "end": 54.48
+    },
+    {
+      "word": "she",
+      "start": 54.48,
+      "end": 54.64
+    },
+    {
+      "word": "had",
+      "start": 54.64,
+      "end": 54.82
+    },
+    {
+      "word": "to",
+      "start": 54.82,
+      "end": 54.96
+    },
+    {
+      "word": "go",
+      "start": 54.96,
+      "end": 55.1
+    },
+    {
+      "word": "to",
+      "start": 55.1,
+      "end": 55.26
+    },
+    {
+      "word": "her",
+      "start": 55.26,
+      "end": 55.42
+    },
+    {
+      "word": "sister's",
+      "start": 55.42,
+      "end": 55.96
+    },
+    {
+      "word": "house",
+      "start": 55.96,
+      "end": 56.18
+    },
+    {
+      "word": "that",
+      "start": 56.66,
+      "end": 56.8
+    },
+    {
+      "word": "they",
+      "start": 56.8,
+      "end": 56.92
+    },
+    {
+      "word": "called",
+      "start": 56.92,
+      "end": 57.16
+    },
+    {
+      "word": "her",
+      "start": 57.16,
+      "end": 57.34
+    },
+    {
+      "word": "sister",
+      "start": 57.34,
+      "end": 57.66
+    },
+    {
+      "word": "from",
+      "start": 57.66,
+      "end": 58
+    },
+    {
+      "word": "the",
+      "start": 58,
+      "end": 58.14
+    },
+    {
+      "word": "hospital",
+      "start": 58.14,
+      "end": 58.56
+    },
+    {
+      "word": "at",
+      "start": 58.56,
+      "end": 58.86
+    },
+    {
+      "word": "the",
+      "start": 58.86,
+      "end": 59
+    },
+    {
+      "word": "last",
+      "start": 59,
+      "end": 59.22
+    },
+    {
+      "word": "minute",
+      "start": 59.22,
+      "end": 59.5
+    },
+    {
+      "word": "and",
+      "start": 59.52,
+      "end": 60.1
+    },
+    {
+      "word": "asked",
+      "start": 60.1,
+      "end": 60.36
+    },
+    {
+      "word": "her",
+      "start": 60.36,
+      "end": 60.46
+    },
+    {
+      "word": "to",
+      "start": 60.46,
+      "end": 60.6
+    },
+    {
+      "word": "work",
+      "start": 60.6,
+      "end": 60.76
+    },
+    {
+      "word": "the",
+      "start": 60.76,
+      "end": 60.94
+    },
+    {
+      "word": "night",
+      "start": 60.94,
+      "end": 61.12
+    },
+    {
+      "word": "shift.",
+      "start": 61.12,
+      "end": 61.48
+    },
+    {
+      "word": "So",
+      "start": 61.82,
+      "end": 62
+    },
+    {
+      "word": "she",
+      "start": 62,
+      "end": 62.16
+    },
+    {
+      "word": "went",
+      "start": 62.16,
+      "end": 62.34
+    },
+    {
+      "word": "over",
+      "start": 62.34,
+      "end": 62.5
+    },
+    {
+      "word": "to",
+      "start": 62.5,
+      "end": 62.62
+    },
+    {
+      "word": "babysit",
+      "start": 62.62,
+      "end": 63.08
+    },
+    {
+      "word": "for",
+      "start": 63.08,
+      "end": 63.28
+    },
+    {
+      "word": "her",
+      "start": 63.28,
+      "end": 63.44
+    },
+    {
+      "word": "kids.",
+      "start": 63.44,
+      "end": 64.1
+    },
+    {
+      "word": "She",
+      "start": 64.82,
+      "end": 64.96
+    },
+    {
+      "word": "said",
+      "start": 64.96,
+      "end": 65.16
+    },
+    {
+      "word": "she",
+      "start": 65.16,
+      "end": 65.32
+    },
+    {
+      "word": "ended",
+      "start": 65.32,
+      "end": 65.52
+    },
+    {
+      "word": "up",
+      "start": 65.52,
+      "end": 65.66
+    },
+    {
+      "word": "spending",
+      "start": 65.66,
+      "end": 65.96
+    },
+    {
+      "word": "the",
+      "start": 65.96,
+      "end": 66.18
+    },
+    {
+      "word": "night",
+      "start": 66.18,
+      "end": 66.38
+    },
+    {
+      "word": "at",
+      "start": 66.38,
+      "end": 66.54
+    },
+    {
+      "word": "her",
+      "start": 66.54,
+      "end": 66.66
+    },
+    {
+      "word": "sister's",
+      "start": 66.66,
+      "end": 67.14
+    },
+    {
+      "word": "place.",
+      "start": 67.14,
+      "end": 67.5
+    }
+  ]
+}

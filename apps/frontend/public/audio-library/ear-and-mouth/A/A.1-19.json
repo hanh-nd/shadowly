@@ -1,0 +1,790 @@
+{
+  "text": " Exercise 119, Spelling and Numbers. Just as there is stress in words or phrases, there is intonation in spelling and numbers. Americans seem to spell things out much more than other people. In any bureaucratic situation, you'll be asked to spell names and give all kinds of numbers, your phone number, your birth date, and so on. There's a distinct stress and rhythm pattern to both spelling and numbers, usually in groups of three or four letters or numbers, with the stress falling on the last member of the group. Acronyms, phrases that are represented by the first letter of each word, and initials are usually stressed on the last letter. Just listen to the words as I say them, then repeat the spelling after me. IBM, MIT, Ph.D., MBA, L.A., IQ, RSVP, TV, USA, ASAP, CIA, FBI, USMC COD SOS XYZ BOX COOK Wilson WILSON Area code 213 ZIP code 94708 Date 9662 Phone number 555-9132",
+  "wordTimestamps": [
+    {
+      "word": "Exercise",
+      "start": 0.86,
+      "end": 0.88
+    },
+    {
+      "word": "119,",
+      "start": 0.88,
+      "end": 2.24
+    },
+    {
+      "word": "Spelling",
+      "start": 2.24,
+      "end": 2.48
+    },
+    {
+      "word": "and",
+      "start": 2.48,
+      "end": 2.72
+    },
+    {
+      "word": "Numbers.",
+      "start": 2.72,
+      "end": 3.32
+    },
+    {
+      "word": "Just",
+      "start": 3.52,
+      "end": 3.66
+    },
+    {
+      "word": "as",
+      "start": 3.66,
+      "end": 3.9
+    },
+    {
+      "word": "there",
+      "start": 3.9,
+      "end": 4.08
+    },
+    {
+      "word": "is",
+      "start": 4.08,
+      "end": 4.22
+    },
+    {
+      "word": "stress",
+      "start": 4.22,
+      "end": 4.5
+    },
+    {
+      "word": "in",
+      "start": 4.5,
+      "end": 4.74
+    },
+    {
+      "word": "words",
+      "start": 4.74,
+      "end": 4.98
+    },
+    {
+      "word": "or",
+      "start": 4.98,
+      "end": 5.18
+    },
+    {
+      "word": "phrases,",
+      "start": 5.18,
+      "end": 5.98
+    },
+    {
+      "word": "there",
+      "start": 5.98,
+      "end": 6.4
+    },
+    {
+      "word": "is",
+      "start": 6.4,
+      "end": 6.54
+    },
+    {
+      "word": "intonation",
+      "start": 6.54,
+      "end": 7.06
+    },
+    {
+      "word": "in",
+      "start": 7.06,
+      "end": 7.3
+    },
+    {
+      "word": "spelling",
+      "start": 7.3,
+      "end": 7.6
+    },
+    {
+      "word": "and",
+      "start": 7.6,
+      "end": 7.86
+    },
+    {
+      "word": "numbers.",
+      "start": 7.86,
+      "end": 8.16
+    },
+    {
+      "word": "Americans",
+      "start": 9.32,
+      "end": 9.72
+    },
+    {
+      "word": "seem",
+      "start": 9.72,
+      "end": 10
+    },
+    {
+      "word": "to",
+      "start": 10,
+      "end": 10.16
+    },
+    {
+      "word": "spell",
+      "start": 10.16,
+      "end": 10.42
+    },
+    {
+      "word": "things",
+      "start": 10.42,
+      "end": 10.76
+    },
+    {
+      "word": "out",
+      "start": 10.76,
+      "end": 11
+    },
+    {
+      "word": "much",
+      "start": 11,
+      "end": 11.22
+    },
+    {
+      "word": "more",
+      "start": 11.22,
+      "end": 11.48
+    },
+    {
+      "word": "than",
+      "start": 11.48,
+      "end": 11.62
+    },
+    {
+      "word": "other",
+      "start": 11.62,
+      "end": 11.8
+    },
+    {
+      "word": "people.",
+      "start": 11.8,
+      "end": 12.2
+    },
+    {
+      "word": "In",
+      "start": 13.1,
+      "end": 13.22
+    },
+    {
+      "word": "any",
+      "start": 13.22,
+      "end": 13.42
+    },
+    {
+      "word": "bureaucratic",
+      "start": 13.42,
+      "end": 13.98
+    },
+    {
+      "word": "situation,",
+      "start": 13.98,
+      "end": 14.42
+    },
+    {
+      "word": "you'll",
+      "start": 14.42,
+      "end": 14.82
+    },
+    {
+      "word": "be",
+      "start": 14.82,
+      "end": 14.94
+    },
+    {
+      "word": "asked",
+      "start": 14.94,
+      "end": 15.14
+    },
+    {
+      "word": "to",
+      "start": 15.14,
+      "end": 15.3
+    },
+    {
+      "word": "spell",
+      "start": 15.3,
+      "end": 15.48
+    },
+    {
+      "word": "names",
+      "start": 15.48,
+      "end": 15.86
+    },
+    {
+      "word": "and",
+      "start": 15.86,
+      "end": 16.12
+    },
+    {
+      "word": "give",
+      "start": 16.12,
+      "end": 16.3
+    },
+    {
+      "word": "all",
+      "start": 16.3,
+      "end": 16.46
+    },
+    {
+      "word": "kinds",
+      "start": 16.46,
+      "end": 16.7
+    },
+    {
+      "word": "of",
+      "start": 16.7,
+      "end": 16.84
+    },
+    {
+      "word": "numbers,",
+      "start": 16.84,
+      "end": 17.14
+    },
+    {
+      "word": "your",
+      "start": 17.42,
+      "end": 17.62
+    },
+    {
+      "word": "phone",
+      "start": 17.62,
+      "end": 17.82
+    },
+    {
+      "word": "number,",
+      "start": 17.82,
+      "end": 18.26
+    },
+    {
+      "word": "your",
+      "start": 18.26,
+      "end": 18.36
+    },
+    {
+      "word": "birth",
+      "start": 18.36,
+      "end": 18.62
+    },
+    {
+      "word": "date,",
+      "start": 18.62,
+      "end": 18.86
+    },
+    {
+      "word": "and",
+      "start": 18.86,
+      "end": 18.98
+    },
+    {
+      "word": "so",
+      "start": 18.98,
+      "end": 19.16
+    },
+    {
+      "word": "on.",
+      "start": 19.16,
+      "end": 19.48
+    },
+    {
+      "word": "There's",
+      "start": 20.24,
+      "end": 20.48
+    },
+    {
+      "word": "a",
+      "start": 20.48,
+      "end": 20.56
+    },
+    {
+      "word": "distinct",
+      "start": 20.56,
+      "end": 20.98
+    },
+    {
+      "word": "stress",
+      "start": 20.98,
+      "end": 21.32
+    },
+    {
+      "word": "and",
+      "start": 21.32,
+      "end": 21.66
+    },
+    {
+      "word": "rhythm",
+      "start": 21.66,
+      "end": 21.88
+    },
+    {
+      "word": "pattern",
+      "start": 21.88,
+      "end": 22.28
+    },
+    {
+      "word": "to",
+      "start": 22.28,
+      "end": 22.48
+    },
+    {
+      "word": "both",
+      "start": 22.48,
+      "end": 22.68
+    },
+    {
+      "word": "spelling",
+      "start": 22.68,
+      "end": 23.02
+    },
+    {
+      "word": "and",
+      "start": 23.02,
+      "end": 23.42
+    },
+    {
+      "word": "numbers,",
+      "start": 23.42,
+      "end": 23.8
+    },
+    {
+      "word": "usually",
+      "start": 24.52,
+      "end": 24.8
+    },
+    {
+      "word": "in",
+      "start": 24.8,
+      "end": 25.08
+    },
+    {
+      "word": "groups",
+      "start": 25.08,
+      "end": 25.28
+    },
+    {
+      "word": "of",
+      "start": 25.28,
+      "end": 25.52
+    },
+    {
+      "word": "three",
+      "start": 25.52,
+      "end": 25.7
+    },
+    {
+      "word": "or",
+      "start": 25.7,
+      "end": 25.82
+    },
+    {
+      "word": "four",
+      "start": 25.82,
+      "end": 26.06
+    },
+    {
+      "word": "letters",
+      "start": 26.06,
+      "end": 26.36
+    },
+    {
+      "word": "or",
+      "start": 26.36,
+      "end": 26.6
+    },
+    {
+      "word": "numbers,",
+      "start": 26.6,
+      "end": 26.96
+    },
+    {
+      "word": "with",
+      "start": 27.4,
+      "end": 27.56
+    },
+    {
+      "word": "the",
+      "start": 27.56,
+      "end": 27.7
+    },
+    {
+      "word": "stress",
+      "start": 27.7,
+      "end": 27.96
+    },
+    {
+      "word": "falling",
+      "start": 27.96,
+      "end": 28.28
+    },
+    {
+      "word": "on",
+      "start": 28.28,
+      "end": 28.48
+    },
+    {
+      "word": "the",
+      "start": 28.48,
+      "end": 28.6
+    },
+    {
+      "word": "last",
+      "start": 28.6,
+      "end": 28.82
+    },
+    {
+      "word": "member",
+      "start": 28.82,
+      "end": 29.12
+    },
+    {
+      "word": "of",
+      "start": 29.12,
+      "end": 29.28
+    },
+    {
+      "word": "the",
+      "start": 29.28,
+      "end": 29.42
+    },
+    {
+      "word": "group.",
+      "start": 29.42,
+      "end": 29.94
+    },
+    {
+      "word": "Acronyms,",
+      "start": 30.74,
+      "end": 31.32
+    },
+    {
+      "word": "phrases",
+      "start": 31.32,
+      "end": 31.96
+    },
+    {
+      "word": "that",
+      "start": 31.96,
+      "end": 32.18
+    },
+    {
+      "word": "are",
+      "start": 32.18,
+      "end": 32.26
+    },
+    {
+      "word": "represented",
+      "start": 32.26,
+      "end": 32.7
+    },
+    {
+      "word": "by",
+      "start": 32.7,
+      "end": 32.92
+    },
+    {
+      "word": "the",
+      "start": 32.92,
+      "end": 33.08
+    },
+    {
+      "word": "first",
+      "start": 33.08,
+      "end": 33.26
+    },
+    {
+      "word": "letter",
+      "start": 33.26,
+      "end": 33.54
+    },
+    {
+      "word": "of",
+      "start": 33.54,
+      "end": 33.72
+    },
+    {
+      "word": "each",
+      "start": 33.72,
+      "end": 33.86
+    },
+    {
+      "word": "word,",
+      "start": 33.86,
+      "end": 34.48
+    },
+    {
+      "word": "and",
+      "start": 34.48,
+      "end": 34.84
+    },
+    {
+      "word": "initials",
+      "start": 34.84,
+      "end": 35.36
+    },
+    {
+      "word": "are",
+      "start": 34.82,
+      "end": 35.46
+    },
+    {
+      "word": "usually",
+      "start": 35.46,
+      "end": 35.72
+    },
+    {
+      "word": "stressed",
+      "start": 35.72,
+      "end": 36.14
+    },
+    {
+      "word": "on",
+      "start": 36.14,
+      "end": 36.32
+    },
+    {
+      "word": "the",
+      "start": 36.32,
+      "end": 36.44
+    },
+    {
+      "word": "last",
+      "start": 36.44,
+      "end": 36.7
+    },
+    {
+      "word": "letter.",
+      "start": 36.7,
+      "end": 37.32
+    },
+    {
+      "word": "Just",
+      "start": 37.7,
+      "end": 38
+    },
+    {
+      "word": "listen",
+      "start": 38,
+      "end": 38.18
+    },
+    {
+      "word": "to",
+      "start": 38.18,
+      "end": 38.34
+    },
+    {
+      "word": "the",
+      "start": 38.34,
+      "end": 38.46
+    },
+    {
+      "word": "words",
+      "start": 38.46,
+      "end": 38.66
+    },
+    {
+      "word": "as",
+      "start": 38.66,
+      "end": 38.86
+    },
+    {
+      "word": "I",
+      "start": 38.86,
+      "end": 39
+    },
+    {
+      "word": "say",
+      "start": 39,
+      "end": 39.22
+    },
+    {
+      "word": "them,",
+      "start": 39.22,
+      "end": 39.78
+    },
+    {
+      "word": "then",
+      "start": 39.78,
+      "end": 39.92
+    },
+    {
+      "word": "repeat",
+      "start": 39.92,
+      "end": 40.2
+    },
+    {
+      "word": "the",
+      "start": 40.2,
+      "end": 40.42
+    },
+    {
+      "word": "spelling",
+      "start": 40.42,
+      "end": 40.68
+    },
+    {
+      "word": "after",
+      "start": 40.68,
+      "end": 41.04
+    },
+    {
+      "word": "me.",
+      "start": 41.04,
+      "end": 41.5
+    },
+    {
+      "word": "IBM,",
+      "start": 43.28,
+      "end": 45.06
+    },
+    {
+      "word": "MIT,",
+      "start": 45.06,
+      "end": 47.48
+    },
+    {
+      "word": "Ph.D.,",
+      "start": 47.48,
+      "end": 48.82
+    },
+    {
+      "word": "MBA,",
+      "start": 48.82,
+      "end": 51.8
+    },
+    {
+      "word": "L.A.,",
+      "start": 51.8,
+      "end": 53.44
+    },
+    {
+      "word": "IQ,",
+      "start": 53.44,
+      "end": 55.66
+    },
+    {
+      "word": "RSVP,",
+      "start": 55.66,
+      "end": 57.56
+    },
+    {
+      "word": "TV,",
+      "start": 57.56,
+      "end": 59.44
+    },
+    {
+      "word": "USA,",
+      "start": 59.44,
+      "end": 62.08
+    },
+    {
+      "word": "ASAP,",
+      "start": 62.08,
+      "end": 63.8
+    },
+    {
+      "word": "CIA,",
+      "start": 63.8,
+      "end": 66.02
+    },
+    {
+      "word": "FBI,",
+      "start": 66.02,
+      "end": 67.14
+    },
+    {
+      "word": "USMC",
+      "start": 68.18,
+      "end": 68.92
+    },
+    {
+      "word": "COD",
+      "start": 70.32,
+      "end": 70.98
+    },
+    {
+      "word": "SOS",
+      "start": 72.38,
+      "end": 72.92
+    },
+    {
+      "word": "XYZ",
+      "start": 74.36,
+      "end": 75.24
+    },
+    {
+      "word": "BOX",
+      "start": 76.62,
+      "end": 77.2
+    },
+    {
+      "word": "COOK",
+      "start": 80.1,
+      "end": 80.72
+    },
+    {
+      "word": "Wilson",
+      "start": 80.4,
+      "end": 84.56
+    },
+    {
+      "word": "WILSON",
+      "start": 84.32,
+      "end": 86.94
+    },
+    {
+      "word": "Area",
+      "start": 90.42,
+      "end": 90.66
+    },
+    {
+      "word": "code",
+      "start": 90.66,
+      "end": 91.06
+    },
+    {
+      "word": "213",
+      "start": 90.74,
+      "end": 92.36
+    },
+    {
+      "word": "ZIP",
+      "start": 93.32,
+      "end": 93.58
+    },
+    {
+      "word": "code",
+      "start": 93.58,
+      "end": 93.9
+    },
+    {
+      "word": "94708",
+      "start": 93.5,
+      "end": 95.64
+    },
+    {
+      "word": "Date",
+      "start": 96.58,
+      "end": 96.8
+    },
+    {
+      "word": "9662",
+      "start": 96.8,
+      "end": 98.78
+    },
+    {
+      "word": "Phone",
+      "start": 99.84,
+      "end": 100.08
+    },
+    {
+      "word": "number",
+      "start": 100.08,
+      "end": 100.42
+    },
+    {
+      "word": "555-9132",
+      "start": 100.42,
+      "end": 103.12
+    }
+  ]
+}
