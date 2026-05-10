@@ -1,6 +1,10 @@
 import { split } from 'sentence-splitter';
 
-import { SILENCE_THRESHOLD } from '../constants';
+import {
+  SEGMENT_PADDING_END,
+  SEGMENT_PADDING_START,
+  SILENCE_THRESHOLD,
+} from '../constants';
 import type { Segment, WordTimestamp } from '../types';
 
 /**
@@ -85,8 +89,8 @@ export function groupWordsIntoSegments(words: WordTimestamp[]): Segment[] {
 }
 
 function finalizeSegment(id: number, words: WordTimestamp[]): Segment {
-  const start = words[0].start;
-  const end = words[words.length - 1].end;
+  const start = Math.max(0, words[0].start - SEGMENT_PADDING_START);
+  const end = words[words.length - 1].end + SEGMENT_PADDING_END;
   const text = words
     .map((w) => w.word)
     .join(' ')
