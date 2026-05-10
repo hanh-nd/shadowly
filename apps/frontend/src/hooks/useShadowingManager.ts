@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 
 import { TRANSCRIBING_TEXT } from '../constants';
-import type { Segment, WordTimestamp } from '../types';
+import type { LibraryItem, Segment } from '../types';
 import { NavigationDirection, ShadowingPhase } from '../types';
 import { useAudioPlayer } from './useAudioPlayer';
 import { useAutoCruise } from './useAutoCruise';
@@ -162,12 +162,12 @@ export function useShadowingManager() {
   }, [pipelineReset, clearLoadError]);
 
   const startSession = useCallback(
-    (input: File | string, wordTimestamps?: WordTimestamp[]) => {
+    (input: File | LibraryItem) => {
       setPhase(ShadowingPhase.Idle);
       originalPlayer.stop();
       minePlayer.stop();
       setActiveIndex(0);
-      pipeline.process(input, wordTimestamps);
+      pipeline.process(input);
     },
     [originalPlayer, minePlayer, pipeline],
   );
@@ -178,8 +178,7 @@ export function useShadowingManager() {
   );
 
   const loadUrl = useCallback(
-    (url: string, wordTimestamps?: WordTimestamp[]) =>
-      startSession(url, wordTimestamps),
+    (item: LibraryItem) => startSession(item),
     [startSession],
   );
 

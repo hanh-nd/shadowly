@@ -2,6 +2,7 @@ import { useCallback, useRef, useState } from 'react';
 
 import { transcriptionClient } from '../lib/TranscriptionClient';
 import type {
+  LibraryItem,
   ModelLoadTask,
   Segment,
   TranscribingProgress,
@@ -12,10 +13,7 @@ import { resampleAudioBufferTo16kHz } from '../utils';
 import { groupWordsIntoSegments } from '../utils/transcription-mapping';
 
 export interface PipelineHook {
-  process: (
-    input: File | string,
-    cachedData?: WordTimestamp[],
-  ) => Promise<void>;
+  process: (input: File | LibraryItem) => Promise<void>;
   reset: () => void;
   segments: Segment[];
   patchSegment: (
@@ -67,10 +65,7 @@ export function usePipeline(): PipelineHook {
     setFilename(null);
   }, []);
 
-  const process = async (
-    input: File | string,
-    cachedData?: WordTimestamp[],
-  ) => {
+  const process = async (input: File | LibraryItem) => {
     // Cancel any ongoing run
     abortControllerRef.current?.abort();
     const controller = new AbortController();
@@ -83,19 +78,16 @@ export function usePipeline(): PipelineHook {
     setAudioBuffer(null);
     setTotalDuration(0);
 
-    const targetName =
-      typeof input === 'string'
-        ? input.split('/').pop() || 'Remote Audio'
-        : input.name;
+    const targetName = input instanceof File ? input.name : input.name;
     setFilename(targetName);
     setModelLoadTask(null);
 
     try {
       let arrayBuffer: ArrayBuffer;
 
-      if (typeof input === 'string') {
+      if (!(input instanceof File)) {
         setStatus(ProcessingState.Fetching);
-        const response = await fetch(input, { signal });
+        const response = await fetch(input.fileUrl, { signal });
         if (!response.ok)
           throw new Error(`Failed to fetch audio: ${response.statusText}`);
         arrayBuffer = await response.arrayBuffer();
@@ -117,23 +109,25 @@ export function usePipeline(): PipelineHook {
       setAudioBuffer(decoded);
       setTotalDuration(decoded.duration);
 
-      let wordTimestamps: WordTimestamp[] = cachedData || [];
+      let wordTimestamps: WordTimestamp[] = [];
 
-      if (wordTimestamps.length === 0 && typeof input === 'string') {
-        try {
-          const jsonUrl = input.substring(0, input.lastIndexOf('.')) + '.json';
-          const jsonRes = await fetch(jsonUrl, { signal });
-          if (jsonRes.ok) {
-            const data = await jsonRes.json();
-            if (data && Array.isArray(data.wordTimestamps)) {
-              wordTimestamps = data.wordTimestamps;
+      if (!(input instanceof File)) {
+        wordTimestamps = input.wordTimestamps || [];
+        if (wordTimestamps.length === 0 && input.manifestUrl) {
+          try {
+            const jsonRes = await fetch(input.manifestUrl, { signal });
+            if (jsonRes.ok) {
+              const data = await jsonRes.json();
+              if (data && Array.isArray(data.wordTimestamps)) {
+                wordTimestamps = data.wordTimestamps;
+              }
             }
+          } catch (e) {
+            console.warn(
+              'Failed to load sidecar transcription from manifest, falling back to engine',
+              e,
+            );
           }
-        } catch (e) {
-          console.warn(
-            'Failed to load sidecar transcription, falling back to engine',
-            e,
-          );
         }
       }
 

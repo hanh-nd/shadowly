@@ -78,7 +78,7 @@ export function App() {
           <div className="pt-32 pb-24 px-4 lg:px-8 w-full max-w-4xl mx-auto min-h-screen">
             <AudioLibrary
               onFileSelect={(item) => {
-                manager.loadUrl(item.url, item.wordTimestamps);
+                manager.loadUrl(item);
                 setMode(AppView.Idle); // Return to auto-follow mode
               }}
               onBack={() => setMode(AppView.Idle)}

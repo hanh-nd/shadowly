@@ -12,7 +12,8 @@ interface WordTimestamp {
 interface LibraryItem {
   id: string;
   name: string;
-  url: string;
+  fileUrl: string;
+  manifestUrl: string;
   tags: string[];
   duration: string;
   text?: string;
@@ -66,7 +67,8 @@ function getLibraryItems(dir: string, base: string = ''): LibraryItem[] {
       result.push({
         id,
         name,
-        url: `/audio-library/${relativeUrl}`,
+        fileUrl: `/audio-library/${relativeUrl}`,
+        manifestUrl: `/audio-library/${relativeUrl.replace(/\.mp3$/, '.json')}`,
         tags,
         duration,
         text,

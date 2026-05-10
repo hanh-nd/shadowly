@@ -33,7 +33,8 @@ export interface WordTimestamp {
 export interface LibraryItem {
   id: string;
   name: string;
-  url: string;
+  fileUrl: string;
+  manifestUrl: string;
   tags: string[];
   duration: string; // formatted string like "04:15"
   text?: string;
