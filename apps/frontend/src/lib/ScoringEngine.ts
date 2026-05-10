@@ -7,8 +7,6 @@ class ScoringEngine {
   private vocabSet: Set<string> = new Set(Object.keys(vocabJson));
   private loadingPromise: Promise<void> | null = null;
   private isReady = false;
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  private espeakInstance: any = null;
 
   /**
    * Idempotently ensures all models are loaded.
@@ -26,11 +24,6 @@ class ScoringEngine {
 
     this.loadingPromise = (async () => {
       try {
-        if (onProgress) onProgress(30, 'Initializing ESpeak NG…');
-        this.espeakInstance = await ESpeakNg({
-          noInitialRun: true,
-        });
-
         if (onProgress) onProgress(100, 'Scoring engine ready');
         this.isReady = true;
       } catch (err: unknown) {
@@ -68,16 +61,12 @@ class ScoringEngine {
       return [];
     }
 
-    if (!this.isReady) {
-      await this.ensureModels();
-    }
-
     try {
       const inputText = words.join('\n\n');
-      this.espeakInstance.FS.writeFile('input.txt', inputText);
 
-      try {
-        this.espeakInstance.callMain([
+      const instance = await ESpeakNg({
+        noInitialRun: false,
+        arguments: [
           '-q',
           '-v',
           'en-us',
@@ -86,27 +75,24 @@ class ScoringEngine {
           'out',
           '-f',
           'input.txt',
-        ]);
-      } catch (err) {
-        // If callMain fails (e.g. runtime exited), we might need to re-initialize
-        console.warn(
-          'ESpeak callMain failed, attempting to re-initialize:',
-          err,
-        );
-        this.isReady = false;
-        throw err;
-      }
+        ],
+        preRun: [
+          // eslint-disable-next-line @typescript-eslint/no-explicit-any
+          (module: any) => {
+            module.FS.writeFile('input.txt', inputText);
+          },
+        ],
+      });
 
-      let ipaOut = this.espeakInstance.FS.readFile('out', {
+      let ipaOut = instance.FS.readFile('out', {
         encoding: 'utf8',
       }).trim();
 
       // Cleanup to prevent memory buildup in the virtual FS
-      this.espeakInstance.FS.unlink('input.txt');
-      this.espeakInstance.FS.unlink('out');
+      instance.FS.unlink('input.txt');
+      instance.FS.unlink('out');
 
       // Clean up IPA: strip stress marks, syllable breaks, and ZWJ
-      // These are not typically present in acoustic model vocabs
       ipaOut = ipaOut.replace(/[ˈˌ.]/g, '').replace(/\u200d/g, '');
 
       const ipas = ipaOut.split('\n').map((s: string) => s.trim());
