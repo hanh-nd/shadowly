@@ -65,7 +65,7 @@ export class LocalIpaInferenceBackend implements IpaInferenceBackend {
         const progressCallback = (progressInfo: ProgressInfo) => {
           const progress = calculateProgress(progressInfo);
           if (progress !== null) {
-            onProgress?.(progress, 'Downloading model...');
+            onProgress?.(progress, 'Downloading scoring model...');
           }
         };
 

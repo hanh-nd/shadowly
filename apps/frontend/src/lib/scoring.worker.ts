@@ -191,7 +191,7 @@ self.onmessage = async (e: MessageEvent) => {
       );
       self.postMessage({ type: ScoringWorkerMessageType.ModelsReady });
     } else if (type === ScoringWorkerMessageType.Precompute) {
-      const { refText } = e.data;
+      const { refText, refAudio } = e.data;
 
       await scoringEngine.ensureModels();
 
@@ -205,7 +205,8 @@ self.onmessage = async (e: MessageEvent) => {
       }
 
       const originalWords = refText.split(/\s+/);
-      const nativeTokens = tokenize(ipas.join(''), vocab);
+      const nativeIpaStr = await scoringEngine.inferIpa(refAudio);
+      const nativeTokens = tokenize(nativeIpaStr, vocab);
 
       const { chunks, nativeTokenToChunkIdx } = buildChunkMap(
         dictTokensPerWord,
@@ -216,7 +217,7 @@ self.onmessage = async (e: MessageEvent) => {
 
       console.debug(
         `Worker | Native IPA (Segment ${segmentId}):`,
-        ipas.join(''),
+        nativeIpaStr,
       );
 
       precomputeCache.set(segmentId, {
