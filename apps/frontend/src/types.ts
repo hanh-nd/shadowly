@@ -8,6 +8,11 @@ export enum InferenceEndpoint {
   Score = 'score',
 }
 
+export enum ScoringBackend {
+  Local = 'local',
+  Remote = 'remote',
+}
+
 export enum StorageKey {
   Settings = 'shadowly:practice-settings',
 }

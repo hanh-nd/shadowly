@@ -1,52 +1,46 @@
 import ESpeakNg from 'espeak-ng';
 
-import vocabJson from '../assets/vocab.json';
-import { InferenceClient } from './InferenceClient';
+import vocabJson from '../../assets/vocab.json';
+import { ScoringBackend } from '../../types';
+import { type IpaInferenceBackend } from './IpaInferenceBackend';
+import { LocalIpaInferenceBackend } from './LocalIpaInferenceBackend';
+import { RemoteIpaInferenceBackend } from './RemoteIpaInferenceBackend';
+
+const SCORING_BACKEND =
+  (import.meta.env.VITE_SCORING_BACKEND as ScoringBackend) ??
+  ScoringBackend.Local;
+
+const vocabSet = new Set<string>(Object.keys(vocabJson));
+const idToToken = new Map<number, string>(
+  Object.entries(vocabJson).map(([token, id]) => [id, token]),
+);
+
+function createIpaInferenceBackend(): IpaInferenceBackend {
+  if (SCORING_BACKEND === ScoringBackend.Remote) {
+    return new RemoteIpaInferenceBackend();
+  }
+
+  return new LocalIpaInferenceBackend(idToToken);
+}
 
 class ScoringEngine {
-  private vocabSet: Set<string> = new Set(Object.keys(vocabJson));
-  private loadingPromise: Promise<void> | null = null;
-  private isReady = false;
+  private backend: IpaInferenceBackend = createIpaInferenceBackend();
 
   /**
    * Idempotently ensures all models are loaded.
    */
-  async ensureModels(
+  ensureModels(
     onProgress?: (p: number, label?: string) => void,
   ): Promise<void> {
-    if (this.isReady) {
-      return;
-    }
-
-    if (this.loadingPromise) {
-      return this.loadingPromise;
-    }
-
-    this.loadingPromise = (async () => {
-      try {
-        if (onProgress) onProgress(100, 'Scoring engine ready');
-        this.isReady = true;
-      } catch (err: unknown) {
-        this.loadingPromise = null;
-        console.error('ScoringEngine initialization failed:', err);
-        throw err;
-      }
-    })();
-
-    return this.loadingPromise;
+    return this.backend.ensureModels(onProgress);
   }
 
   /**
    * Runs acoustic CTC inference. Returns eSpeak NG IPA string.
    */
   async inferIpa(audio: Float32Array): Promise<string> {
-    if (!this.isReady) {
-      await this.ensureModels();
-    }
-
     try {
-      const output = await InferenceClient.score(audio);
-      return output.text || '';
+      return await this.backend.inferIpa(audio);
     } catch (err) {
       console.error('Inference failed:', err);
       return '';
@@ -114,7 +108,7 @@ class ScoringEngine {
    * Returns Set of all IPA token strings from vocab.json.
    */
   getVocab(): Set<string> {
-    return this.vocabSet;
+    return vocabSet;
   }
 }
 

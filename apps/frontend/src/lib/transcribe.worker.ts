@@ -1,7 +1,7 @@
-import './worker-polyfills';
+import '../utils/worker-polyfills';
 
 import { WorkerMessageType } from '../types';
-import { TranscriptionEngine } from './TranscriptionEngine';
+import { TranscriptionEngine } from './transcription/TranscriptionEngine';
 
 const transcriptionEngine = new TranscriptionEngine();
 const controllers = new Map<string, AbortController>();

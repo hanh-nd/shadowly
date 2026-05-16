@@ -1,4 +1,8 @@
-import { type IpaChunk, ScoringWorkerMessageType, WordScore } from '../types';
+import {
+  type IpaChunk,
+  ScoringWorkerMessageType,
+  WordScore,
+} from '../../types';
 
 export class ScoringClient {
   private worker: Worker | null = null;
@@ -14,7 +18,7 @@ export class ScoringClient {
 
     if (!this.worker) {
       this.worker = new Worker(
-        new URL('./scoring.worker.ts', import.meta.url),
+        new URL('../scoring.worker.ts', import.meta.url),
         {
           type: 'module',
         },

@@ -1,10 +1,10 @@
-import './worker-polyfills';
+import '../utils/worker-polyfills';
 
 import { type IpaChunk, ScoringWorkerMessageType, WordScore } from '../types';
-import { tokenize } from './ipa-tokenizer';
-import { alignPhonemes } from './needleman-wunsch';
-import { scoringEngine } from './ScoringEngine';
-import { normalize } from './text-normalizer';
+import { tokenize } from '../utils/ipa-tokenizer';
+import { alignPhonemes } from '../utils/needleman-wunsch';
+import { normalize } from '../utils/text-normalizer';
+import { scoringEngine } from './scoring/ScoringEngine';
 
 interface PrecomputeCache {
   chunks: IpaChunk[];

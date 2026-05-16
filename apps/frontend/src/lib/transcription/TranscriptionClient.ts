@@ -1,4 +1,4 @@
-import { type WordTimestamp, WorkerMessageType } from '../types';
+import { type WordTimestamp, WorkerMessageType } from '../../types';
 
 export interface AudioSegment {
   id: string;
@@ -17,7 +17,7 @@ export class TranscriptionClient {
 
     if (!this.pipeWorker) {
       this.pipeWorker = new Worker(
-        new URL('./transcribe.worker.ts', import.meta.url),
+        new URL('../transcribe.worker.ts', import.meta.url),
         {
           type: 'module',
         },

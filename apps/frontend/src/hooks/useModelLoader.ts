@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
 
-import { scoringClient } from '../lib/ScoringClient';
-import { transcriptionClient } from '../lib/TranscriptionClient';
+import { scoringClient } from '../lib/scoring/ScoringClient';
+import { transcriptionClient } from '../lib/transcription/TranscriptionClient';
 import type { ModelLoadTask } from '../types';
 import { ModelId } from '../types';
 

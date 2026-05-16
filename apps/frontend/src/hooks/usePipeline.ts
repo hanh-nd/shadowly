@@ -1,6 +1,6 @@
 import { useCallback, useRef, useState } from 'react';
 
-import { transcriptionClient } from '../lib/TranscriptionClient';
+import { transcriptionClient } from '../lib/transcription/TranscriptionClient';
 import type {
   LibraryItem,
   ModelLoadTask,

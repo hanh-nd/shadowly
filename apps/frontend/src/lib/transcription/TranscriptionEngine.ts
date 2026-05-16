@@ -1,5 +1,5 @@
-import { type WordTimestamp } from '../types';
-import { InferenceClient } from './InferenceClient';
+import { type WordTimestamp } from '../../types';
+import { InferenceClient } from '../InferenceClient';
 
 export class TranscriptionEngine {
   private isReady = false;

@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
-import type { SettingsStorage } from '../lib/settings-storage';
-import { localStorageSettingsStorage } from '../lib/settings-storage';
+import type { SettingsStorage } from '../utils/settings-storage';
+import { localStorageSettingsStorage } from '../utils/settings-storage';
 
 export function usePracticeSettings(
   storage: SettingsStorage = localStorageSettingsStorage,

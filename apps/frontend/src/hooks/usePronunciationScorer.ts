@@ -1,6 +1,6 @@
 import { useCallback, useRef } from 'react';
 
-import { scoringClient } from '../lib/ScoringClient';
+import { scoringClient } from '../lib/scoring/ScoringClient';
 import {
   decodeAndResampleTo16kHz,
   resampleFloat32ArrayTo16kHz,
