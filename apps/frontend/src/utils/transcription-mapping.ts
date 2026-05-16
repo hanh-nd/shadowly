@@ -20,6 +20,16 @@ export function groupWordsIntoSegments(words: WordTimestamp[]): Segment[] {
     word: w.word.trim(),
   }));
 
+  // Clamp any word whose start overlaps the previous word's end (Whisper misalignment).
+  for (let i = 1; i < normalizedWords.length; i++) {
+    if (normalizedWords[i].start < normalizedWords[i - 1].end) {
+      normalizedWords[i] = {
+        ...normalizedWords[i],
+        start: normalizedWords[i - 1].end,
+      };
+    }
+  }
+
   let currentPos = 0;
   const wordsWithOffsets = normalizedWords.map((w) => {
     const start = currentPos;

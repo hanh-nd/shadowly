@@ -16,14 +16,19 @@ interface LibraryItem {
   manifestUrl: string;
   tags: string[];
   duration: string;
-  text?: string;
-  wordTimestamps?: WordTimestamp[];
 }
 
 function formatDuration(seconds: number): string {
   const mins = Math.floor(seconds / 60);
   const secs = Math.floor(seconds % 60);
   return `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
+}
+
+function sanitizeTimestamps(words: WordTimestamp[]): WordTimestamp[] {
+  return words.map((w, i, arr) => {
+    if (i === 0 || w.start >= arr[i - 1].end) return w;
+    return { ...w, start: arr[i - 1].end };
+  });
 }
 
 function getLibraryItems(dir: string, base: string = ''): LibraryItem[] {
@@ -44,20 +49,18 @@ function getLibraryItems(dir: string, base: string = ''): LibraryItem[] {
       const name = item.replace('.mp3', '');
       const tags = base.split('/').filter(Boolean);
       
-      let text: string | undefined;
-      let wordTimestamps: WordTimestamp[] | undefined;
       let duration = '00:00';
 
       const jsonPath = fullPath.replace('.mp3', '.json');
       if (fs.existsSync(jsonPath)) {
         try {
           const data = JSON.parse(fs.readFileSync(jsonPath, 'utf-8'));
-          text = data.text;
-          wordTimestamps = data.wordTimestamps;
-          
+          const wordTimestamps: WordTimestamp[] | undefined = data.wordTimestamps
+            ? sanitizeTimestamps(data.wordTimestamps)
+            : undefined;
+
           if (wordTimestamps && wordTimestamps.length > 0) {
-            const lastWord = wordTimestamps[wordTimestamps.length - 1];
-            duration = formatDuration(lastWord.end);
+            duration = formatDuration(wordTimestamps[wordTimestamps.length - 1].end);
           }
         } catch (e) {
           console.warn(`Failed to read transcription for ${item}`, e);
@@ -71,8 +74,6 @@ function getLibraryItems(dir: string, base: string = ''): LibraryItem[] {
         manifestUrl: `/audio-library/${relativeUrl.replace(/\.mp3$/, '.json')}`,
         tags,
         duration,
-        text,
-        wordTimestamps,
       });
     }
   }

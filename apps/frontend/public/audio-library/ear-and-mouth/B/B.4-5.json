@@ -289,11 +289,11 @@
     {
       "word": "fat,",
       "start": 35.48,
-      "end": 37.1
+      "end": 37.08
     },
     {
       "word": "goat,",
-      "start": 37.1,
+      "start": 37.08,
       "end": 38.64
     },
     {
@@ -334,16 +334,16 @@
     {
       "word": "wait,",
       "start": 48.36,
-      "end": 49.4
+      "end": 49.44
     },
     {
       "word": "sit,",
-      "start": 49.4,
-      "end": 50.82
+      "start": 49.44,
+      "end": 50.76
     },
     {
       "word": "dirt,",
-      "start": 50.82,
+      "start": 50.76,
       "end": 52.44
     },
     {
@@ -354,21 +354,21 @@
     {
       "word": "fit,",
       "start": 52.9,
-      "end": 55.1
+      "end": 54.96
     },
     {
       "word": "lot,",
-      "start": 55.1,
+      "start": 54.96,
       "end": 56.52
     },
     {
       "word": "light,",
       "start": 56.52,
-      "end": 57.94
+      "end": 57.96
     },
     {
       "word": "suit,",
-      "start": 57.94,
+      "start": 57.96,
       "end": 58.7
     },
     {
@@ -384,7 +384,7 @@
     {
       "word": "tight.",
       "start": 62.88,
-      "end": 63.74
+      "end": 63.72
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "text": " Exercise 1-1, Rubberband Practice with Nonsense Syllables. Take a rubber band and hold it with your two thumbs. Every time you want to stress a word by changing pitch, pull on the rubber band. Stretch it out gently, don't jerk it sharply. Make a looping figure with it and do the same with your voice. Use the rubber band and stretch it out every time you change pitch. Read first across, then down. One, da da da, la la la, me, me, me, ho, ho, ho. Two, da da da, la la la, me mi, me, ho-ho-ho. Three, da da da, la la la, me me me, ho ho, ho. Four, da da da, La la la Me me me Ho ho ho Now down Column A Da da da Da da da Da da da Da da da B La la la La la la C Me me me Me me me D Ho ho ho Ho ho ho Ho ho ho Ho, ho, ho. Read each column down, keeping the same intonation pattern. A. Da, da, da. A, B, C. One, two, three. Dogs eat bones. Next column B. Da, da, da. Imprecise. A hot dog. They eat bones. C. Da-da-da. Condition. A hot dog. They eat them. D. Da-da-da. Alphabet. Hot dog stand. Give me one.",
+  "text": " Exercise 1-1, Rubberband Practice with Nonsense Syllables. Take a rubber band and hold it with your two thumbs. Every time you want to stress a word by changing pitch, pull on the rubber band. Stretch it out gently, don't jerk it sharply. Make a looping figure with it and do the same with your voice. Use the rubber band and stretch it out every time you change pitch. Read first across, then down. One. la la la me me me ho ho ho now down column A da da da da da da da da da da da da da B la la la la la D B C. D... Ho ho ho. Ho ho ho. Read each column down, keeping the same intonation pattern. A. Da da da. A, B, C. One, two, three. Dogs eat bones. Next, column B. Da da da. Imprecise. A hot dog. They eat bones. C. Da-da-da. Condition. A hot dog. They eat them. D. Da-da-da. Alphabet. Hot dog stand. Give me one.",
   "wordTimestamps": [
     {
       "word": "Exercise",
@@ -367,243 +367,43 @@
       "end": 27.78
     },
     {
-      "word": "One,",
+      "word": "One.",
       "start": 29.2,
-      "end": 29.92
-    },
-    {
-      "word": "da",
-      "start": 29.92,
-      "end": 30.34
-    },
-    {
-      "word": "da",
-      "start": 30.34,
-      "end": 30.54
-    },
-    {
-      "word": "da,",
-      "start": 30.54,
-      "end": 31.2
+      "end": 29.34
     },
     {
       "word": "la",
-      "start": 32.7,
-      "end": 32.98
+      "start": 57.92,
+      "end": 57.94
     },
     {
       "word": "la",
-      "start": 32.98,
-      "end": 33.22
-    },
-    {
-      "word": "la,",
-      "start": 33.22,
-      "end": 33.86
-    },
-    {
-      "word": "me,",
-      "start": 34.8,
-      "end": 35.18
-    },
-    {
-      "word": "me,",
-      "start": 35.18,
-      "end": 35.36
-    },
-    {
-      "word": "me,",
-      "start": 35.36,
-      "end": 35.84
-    },
-    {
-      "word": "ho,",
-      "start": 36.74,
-      "end": 37.06
-    },
-    {
-      "word": "ho,",
-      "start": 37.06,
-      "end": 37.36
-    },
-    {
-      "word": "ho.",
-      "start": 37.36,
-      "end": 37.8
-    },
-    {
-      "word": "Two,",
-      "start": 38.74,
-      "end": 39.28
-    },
-    {
-      "word": "da",
-      "start": 39.9,
-      "end": 40.12
-    },
-    {
-      "word": "da",
-      "start": 40.12,
-      "end": 40.2
-    },
-    {
-      "word": "da,",
-      "start": 40.2,
-      "end": 40.76
+      "start": 57.94,
+      "end": 58.14
     },
     {
       "word": "la",
-      "start": 41.68,
-      "end": 41.9
-    },
-    {
-      "word": "la",
-      "start": 41.9,
-      "end": 42.06
-    },
-    {
-      "word": "la,",
-      "start": 42.06,
-      "end": 42.7
-    },
-    {
-      "word": "me",
-      "start": 43.48,
-      "end": 43.68
-    },
-    {
-      "word": "mi,",
-      "start": 43.68,
-      "end": 44
-    },
-    {
-      "word": "me,",
-      "start": 44,
-      "end": 44.46
-    },
-    {
-      "word": "ho-ho-ho.",
-      "start": 45.22,
-      "end": 46.08
-    },
-    {
-      "word": "Three,",
-      "start": 46.86,
-      "end": 47.76
-    },
-    {
-      "word": "da",
-      "start": 47.76,
-      "end": 48.26
-    },
-    {
-      "word": "da",
-      "start": 48.26,
-      "end": 48.42
-    },
-    {
-      "word": "da,",
-      "start": 48.42,
-      "end": 48.98
-    },
-    {
-      "word": "la",
-      "start": 49.82,
-      "end": 50.04
-    },
-    {
-      "word": "la",
-      "start": 50.04,
-      "end": 50.26
-    },
-    {
-      "word": "la,",
-      "start": 50.26,
-      "end": 50.78
-    },
-    {
-      "word": "me",
-      "start": 51.52,
-      "end": 51.7
-    },
-    {
-      "word": "me",
-      "start": 51.7,
-      "end": 51.92
-    },
-    {
-      "word": "me,",
-      "start": 51.92,
-      "end": 52.56
-    },
-    {
-      "word": "ho",
-      "start": 53.08,
-      "end": 53.4
-    },
-    {
-      "word": "ho,",
-      "start": 53.4,
-      "end": 53.82
-    },
-    {
-      "word": "ho.",
-      "start": 53.82,
-      "end": 54
-    },
-    {
-      "word": "Four,",
-      "start": 54.72,
-      "end": 55.58
-    },
-    {
-      "word": "da",
-      "start": 55.58,
-      "end": 56.14
-    },
-    {
-      "word": "da",
-      "start": 56.14,
-      "end": 56.24
-    },
-    {
-      "word": "da,",
-      "start": 56.24,
-      "end": 56.64
-    },
-    {
-      "word": "La",
-      "start": 57.64,
-      "end": 57.8
-    },
-    {
-      "word": "la",
-      "start": 57.8,
-      "end": 58
-    },
-    {
-      "word": "la.",
-      "start": 58,
+      "start": 58.14,
       "end": 58.42
     },
     {
-      "word": "Me",
+      "word": "me",
       "start": 58.42,
       "end": 59.44
     },
     {
       "word": "me",
       "start": 59.44,
-      "end": 59.56
+      "end": 59.58
     },
     {
-      "word": "me.",
-      "start": 59.56,
-      "end": 59.92
+      "word": "me",
+      "start": 59.58,
+      "end": 59.78
     },
     {
-      "word": "Ho",
-      "start": 59.92,
+      "word": "ho",
+      "start": 59.78,
       "end": 61.06
     },
     {
@@ -612,233 +412,183 @@
       "end": 61.22
     },
     {
-      "word": "ho.",
+      "word": "ho",
       "start": 61.22,
-      "end": 61.6
+      "end": 61.46
     },
     {
-      "word": "Now",
-      "start": 61.6,
-      "end": 62.66
+      "word": "now",
+      "start": 61.46,
+      "end": 62.7
     },
     {
-      "word": "down.",
-      "start": 62.66,
-      "end": 63.24
+      "word": "down",
+      "start": 62.7,
+      "end": 63.06
     },
     {
-      "word": "Column",
-      "start": 63.24,
+      "word": "column",
+      "start": 63.06,
       "end": 64.16
     },
     {
-      "word": "A.",
+      "word": "A",
       "start": 64.16,
-      "end": 64.64
+      "end": 64.44
     },
     {
-      "word": "Da",
-      "start": 64.64,
+      "word": "da",
+      "start": 64.44,
       "end": 65.3
     },
     {
       "word": "da",
       "start": 65.3,
-      "end": 65.54
-    },
-    {
-      "word": "da.",
-      "start": 65.54,
-      "end": 66.26
-    },
-    {
-      "word": "Da",
-      "start": 66.26,
-      "end": 67.4
+      "end": 65.56
     },
     {
       "word": "da",
-      "start": 67.4,
-      "end": 67.52
-    },
-    {
-      "word": "da.",
-      "start": 67.52,
-      "end": 68.12
-    },
-    {
-      "word": "Da",
-      "start": 68.12,
-      "end": 68.92
+      "start": 65.56,
+      "end": 65.9
     },
     {
       "word": "da",
-      "start": 68.92,
-      "end": 69.08
-    },
-    {
-      "word": "da.",
-      "start": 69.08,
-      "end": 69.68
-    },
-    {
-      "word": "Da",
-      "start": 69.68,
-      "end": 70.56
+      "start": 65.9,
+      "end": 67.34
     },
     {
       "word": "da",
-      "start": 70.56,
+      "start": 67.34,
+      "end": 67.5
+    },
+    {
+      "word": "da",
+      "start": 67.5,
+      "end": 68.82
+    },
+    {
+      "word": "da",
+      "start": 68.82,
+      "end": 69.04
+    },
+    {
+      "word": "da",
+      "start": 69.04,
+      "end": 69.38
+    },
+    {
+      "word": "da",
+      "start": 69.38,
+      "end": 70.52
+    },
+    {
+      "word": "da",
+      "start": 70.52,
       "end": 70.68
     },
     {
-      "word": "da.",
+      "word": "da",
       "start": 70.68,
-      "end": 71.1
+      "end": 70.76
     },
     {
-      "word": "B.",
-      "start": 71.1,
-      "end": 73
+      "word": "da",
+      "start": 70.76,
+      "end": 72.14
     },
     {
-      "word": "La",
-      "start": 73,
-      "end": 73.74
+      "word": "da",
+      "start": 72.14,
+      "end": 72.16
     },
     {
-      "word": "la",
-      "start": 73.74,
-      "end": 74.02
-    },
-    {
-      "word": "la.",
-      "start": 73.99915,
-      "end": 75.899155
-    },
-    {
-      "word": "La",
-      "start": 75.899155,
-      "end": 75.91915
+      "word": "B",
+      "start": 72.16,
+      "end": 72.28
     },
     {
       "word": "la",
-      "start": 75.91915,
-      "end": 76.05915
+      "start": 72.28,
+      "end": 73.8
     },
     {
-      "word": "la.",
-      "start": 76.05915,
-      "end": 79.87915
+      "word": "la",
+      "start": 73.8,
+      "end": 74.06
     },
     {
-      "word": "C.",
-      "start": 79.87915,
-      "end": 81.31915
+      "word": "la",
+      "start": 74.06,
+      "end": 74.52
     },
     {
-      "word": "Me",
-      "start": 81.31915,
-      "end": 82.43915
+      "word": "la",
+      "start": 74.52,
+      "end": 75.9
     },
     {
-      "word": "me",
-      "start": 82.43915,
-      "end": 82.63915
-    },
-    {
-      "word": "me.",
-      "start": 82.63915,
-      "end": 83.29915
-    },
-    {
-      "word": "Me",
-      "start": 83.29915,
-      "end": 84.73915
-    },
-    {
-      "word": "me",
-      "start": 84.73915,
-      "end": 84.87915
-    },
-    {
-      "word": "me.",
-      "start": 84.87915,
-      "end": 87.039154
+      "word": "la",
+      "start": 75.9,
+      "end": 76
     },
     {
       "word": "D.",
-      "start": 87.039154,
-      "end": 90.23915
+      "start": 76,
+      "end": 72.19915
+    },
+    {
+      "word": "B.",
+      "start": 73.49915,
+      "end": 73.51915
+    },
+    {
+      "word": "C.",
+      "start": 81.039154,
+      "end": 81.23915
+    },
+    {
+      "word": "D...",
+      "start": 82.73915,
+      "end": 91.29915
     },
     {
       "word": "Ho",
-      "start": 90.23915,
-      "end": 91.079155
-    },
-    {
-      "word": "ho",
-      "start": 91.079155,
-      "end": 91.35915
-    },
-    {
-      "word": "ho.",
-      "start": 91.35915,
-      "end": 92.95915
-    },
-    {
-      "word": "Ho",
-      "start": 92.95915,
-      "end": 93.37915
-    },
-    {
-      "word": "ho",
-      "start": 93.37915,
-      "end": 93.55915
-    },
-    {
-      "word": "ho.",
-      "start": 93.55915,
-      "end": 94.09915
-    },
-    {
-      "word": "Ho",
-      "start": 94.09915,
+      "start": 95.19915,
       "end": 95.31915
     },
     {
       "word": "ho",
       "start": 95.31915,
-      "end": 95.59915
+      "end": 95.49915
     },
     {
       "word": "ho.",
-      "start": 95.59915,
-      "end": 95.899155
+      "start": 95.49915,
+      "end": 96.81915
     },
     {
-      "word": "Ho,",
-      "start": 97.23915,
-      "end": 97.55915
+      "word": "Ho",
+      "start": 96.81915,
+      "end": 97.35915
     },
     {
-      "word": "ho,",
-      "start": 97.55915,
-      "end": 97.59915
+      "word": "ho",
+      "start": 97.35915,
+      "end": 97.539154
     },
     {
       "word": "ho.",
-      "start": 97.59915,
-      "end": 98.33916
+      "start": 97.539154,
+      "end": 97.95915
     },
     {
       "word": "Read",
-      "start": 99.63915,
-      "end": 99.81915
+      "start": 99.619156,
+      "end": 99.79915
     },
     {
       "word": "each",
-      "start": 99.81915,
+      "start": 99.79915,
       "end": 100.05915
     },
     {
@@ -864,61 +614,61 @@
     {
       "word": "same",
       "start": 101.619156,
-      "end": 101.83916
+      "end": 101.85915
     },
     {
       "word": "intonation",
-      "start": 101.83916,
+      "start": 101.85915,
       "end": 102.43915
     },
     {
       "word": "pattern.",
       "start": 102.43915,
-      "end": 102.899155
+      "end": 102.87915
     },
     {
       "word": "A.",
-      "start": 104.37915,
+      "start": 104.41915,
       "end": 105.039154
     },
     {
-      "word": "Da,",
-      "start": 105.59915,
-      "end": 105.93915
+      "word": "Da",
+      "start": 105.039154,
+      "end": 105.759155
     },
     {
-      "word": "da,",
-      "start": 105.93915,
-      "end": 106.21915
+      "word": "da",
+      "start": 105.759155,
+      "end": 106.05915
     },
     {
       "word": "da.",
-      "start": 106.21915,
+      "start": 106.05915,
       "end": 106.73915
     },
     {
       "word": "A,",
-      "start": 108.37915,
+      "start": 108.399155,
       "end": 108.77915
     },
     {
       "word": "B,",
       "start": 108.77915,
-      "end": 109.05915
+      "end": 109.119156
     },
     {
       "word": "C.",
-      "start": 109.05915,
-      "end": 109.21915
+      "start": 109.119156,
+      "end": 109.83916
     },
     {
       "word": "One,",
-      "start": 110.539154,
-      "end": 110.899155
+      "start": 110.55915,
+      "end": 110.97916
     },
     {
       "word": "two,",
-      "start": 110.899155,
+      "start": 110.97916,
       "end": 111.21915
     },
     {
@@ -929,71 +679,71 @@
     {
       "word": "Dogs",
       "start": 112.87915,
-      "end": 113.17915
+      "end": 113.19916
     },
     {
       "word": "eat",
-      "start": 113.17915,
+      "start": 113.19916,
       "end": 113.45915
     },
     {
       "word": "bones.",
       "start": 113.45915,
-      "end": 113.87915
+      "end": 113.85915
     },
     {
-      "word": "Next",
+      "word": "Next,",
       "start": 115.29915,
-      "end": 115.59915
+      "end": 115.67915
     },
     {
       "word": "column",
-      "start": 115.59915,
-      "end": 115.899155
+      "start": 115.67915,
+      "end": 115.91915
     },
     {
       "word": "B.",
-      "start": 115.899155,
+      "start": 115.91915,
       "end": 116.15915
     },
     {
-      "word": "Da,",
-      "start": 116.899155,
-      "end": 117.13915
+      "word": "Da",
+      "start": 116.15915,
+      "end": 117.05915
     },
     {
-      "word": "da,",
-      "start": 117.13915,
-      "end": 117.31915
+      "word": "da",
+      "start": 117.05915,
+      "end": 117.21915
     },
     {
       "word": "da.",
-      "start": 117.31915,
-      "end": 117.43915
+      "start": 117.21915,
+      "end": 117.83916
     },
     {
       "word": "Imprecise.",
       "start": 118.87915,
-      "end": 120.23915
+      "end": 119.71915
     },
     {
       "word": "A",
-      "start": 120.69916,
+      "start": 120.619156,
       "end": 120.85915
     },
     {
       "word": "hot",
       "start": 120.85915,
-      "end": 121.09915
+      "end": 121.07915
     },
     {
       "word": "dog.",
-      "start": 121.09915,
-      "end": 121.83916
+      "start": 121.07915,
+      "end": 121.399155
     },
     {
       "word": "They",
-      "start": 122.759155,
+      "start": 122.77915,
       "end": 122.93915
     },
     {
@@ -1004,31 +754,31 @@
     {
       "word": "bones.",
       "start": 123.13915,
-      "end": 123.65915
+      "end": 123.67915
     },
     {
       "word": "C.",
-      "start": 125.19916,
-      "end": 125.41915
+      "start": 125.23915,
+      "end": 126.399155
     },
     {
       "word": "Da-da-da.",
-      "start": 126.29915,
+      "start": 126.399155,
       "end": 127.19916
     },
     {
       "word": "Condition.",
-      "start": 128.27914,
-      "end": 129.39915
+      "start": 127.19916,
+      "end": 129.35916
     },
     {
       "word": "A",
-      "start": 129.95915,
-      "end": 130.11916
+      "start": 129.35916,
+      "end": 130.07916
     },
     {
       "word": "hot",
-      "start": 130.11916,
+      "start": 130.07916,
       "end": 130.39915
     },
     {
@@ -1038,63 +788,63 @@
     },
     {
       "word": "They",
-      "start": 131.61916,
-      "end": 131.75916
+      "start": 131.03915,
+      "end": 131.73915
     },
     {
       "word": "eat",
-      "start": 131.75916,
+      "start": 131.73915,
       "end": 131.97916
     },
     {
       "word": "them.",
       "start": 131.97916,
-      "end": 132.29915
+      "end": 132.41916
     },
     {
       "word": "D.",
-      "start": 133.47916,
-      "end": 133.85916
+      "start": 132.41916,
+      "end": 133.81915
     },
     {
       "word": "Da-da-da.",
-      "start": 133.85916,
-      "end": 135.13916
+      "start": 133.81915,
+      "end": 135.15915
     },
     {
       "word": "Alphabet.",
-      "start": 136.19916,
-      "end": 137.11916
+      "start": 135.15915,
+      "end": 137.47916
     },
     {
       "word": "Hot",
-      "start": 137.81915,
-      "end": 138.05914
+      "start": 137.47916,
+      "end": 138.01915
     },
     {
       "word": "dog",
-      "start": 138.05914,
+      "start": 138.01915,
       "end": 138.25916
     },
     {
       "word": "stand.",
       "start": 138.25916,
-      "end": 138.89915
+      "end": 139.31915
     },
     {
       "word": "Give",
-      "start": 139.81915,
-      "end": 140.01915
+      "start": 139.31915,
+      "end": 139.99915
     },
     {
       "word": "me",
-      "start": 140.01915,
+      "start": 139.99915,
       "end": 140.17915
     },
     {
       "word": "one.",
       "start": 140.17915,
-      "end": 140.55914
+      "end": 140.57916
     }
   ]
 }

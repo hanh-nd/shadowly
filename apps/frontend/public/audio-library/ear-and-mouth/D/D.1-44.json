@@ -1,5 +1,5 @@
 {
-  "text": " Exercise 144, Building an Intonation Sentence. Repeat after me the sentences listed in the following groups. 1. I bought a sandwich. 2. I said I bought a sandwich. 3. I said I think I bought a sandwich. 4. I said I really think I bought a sandwich. 5. I said I really think I bought a chicken sandwich. e Sai iv i said I really think i bought a chicken salad sandwich e manifests i said i really think i bought a half a chicken salad sandwich e laptops i said i really think i bought a half a chicken salad sandwich this afternoon ton developer I actually said i really think i bought a half a chicken salad sandwich this afternoon withineld I actually said I really think I bought another half a chicken salad sandwich this afternoon. 11 Can you believe I actually said I really think I bought another half a chicken salad sandwich this afternoon 1 I did it 2 I did it again 3. I already did it again. 4. I think I already did it again. 5. I said I think I already did it again. 6. I said I think I already did it again yesterday. 7. I said I think I already did it again the day before yesterday. 1. I want a ball. 2. I want a large ball. 3. I want a large red ball. 4. I want a large red bouncy ball. 5. I want a large red bouncy rubber ball. 6. I want a large red bouncy rubber basketball. 1. I want a raise. 2. I want a big raise. 3. I want a big impressive raise. 4. I want a big impressive annual raise. 5. I want a big impressive annual cost of living raise.",
+  "text": " Exercise 144, Building an Intonation Sentence. Repeat after me the sentences listed in the following groups. 1. I bought a sandwich. 2. I said I bought a sandwich. 3. I said I think I bought a sandwich. 4. I said I really think I bought a sandwich. 5. I said I really think I bought a chicken sandwich. I said I really think I bought a chicken salad sandwich. I said I really think I bought a half a chicken salad sandwich. 8. I said I really think I bought a half a chicken salad sandwich this afternoon. I actually said I really think I bought a half a chicken salad sandwich this afternoon. 10. I actually said I really think I bought another half a chicken salad sandwich this afternoon. 11 Can you believe I actually said I really think I bought another half a chicken salad sandwich this afternoon 1 I did it 2 I did it again 3. I already did it again. 4. I think I already did it again. 5. I said I think I already did it again. 6. I said I think I already did it again yesterday. 7. I said I think I already did it again the day before yesterday. 1. I want a ball. 2. I want a large ball. 3. I want a large red ball. 4. I want a large red bouncy ball. 5. I want a large red bouncy rubber ball. 6. I want a large red bouncy rubber basketball. 1. I want a raise. 2. I want a big raise. 3. I want a big impressive raise. 4. I want a big impressive annual raise. 5. I want a big impressive annual cost of living raise.",
   "wordTimestamps": [
     {
       "word": "Exercise",
@@ -88,7 +88,7 @@
     },
     {
       "word": "I",
-      "start": 8.54,
+      "start": 8.74,
       "end": 9.14
     },
     {
@@ -113,7 +113,7 @@
     },
     {
       "word": "I",
-      "start": 11.46,
+      "start": 11.94,
       "end": 12.28
     },
     {
@@ -148,7 +148,7 @@
     },
     {
       "word": "I",
-      "start": 15.04,
+      "start": 15.7,
       "end": 16.02
     },
     {
@@ -188,12 +188,12 @@
     },
     {
       "word": "4.",
-      "start": 18.06,
+      "start": 18.48,
       "end": 19.64
     },
     {
       "word": "I",
-      "start": 19.02,
+      "start": 19.64,
       "end": 19.88
     },
     {
@@ -243,7 +243,7 @@
     },
     {
       "word": "I",
-      "start": 24.42,
+      "start": 24.7,
       "end": 25.06
     },
     {
@@ -292,338 +292,293 @@
       "end": 27.24
     },
     {
-      "word": "e",
-      "start": 29.26,
-      "end": 29.28
-    },
-    {
-      "word": "Sai",
-      "start": 29.28,
-      "end": 29.3
-    },
-    {
-      "word": "iv",
-      "start": 28.28,
-      "end": 29.54
-    },
-    {
-      "word": "i",
-      "start": 29.2,
-      "end": 30.14
+      "word": "I",
+      "start": 29.22,
+      "end": 29.74
     },
     {
       "word": "said",
-      "start": 30.14,
-      "end": 30.28
+      "start": 29.74,
+      "end": 30.26
     },
     {
       "word": "I",
-      "start": 30.28,
-      "end": 30.42
+      "start": 30.26,
+      "end": 30.4
     },
     {
       "word": "really",
-      "start": 30.42,
-      "end": 30.6
+      "start": 30.4,
+      "end": 30.56
     },
     {
       "word": "think",
-      "start": 30.6,
-      "end": 30.82
+      "start": 30.56,
+      "end": 30.8
     },
     {
-      "word": "i",
-      "start": 30.82,
-      "end": 30.96
+      "word": "I",
+      "start": 30.8,
+      "end": 30.94
     },
     {
       "word": "bought",
-      "start": 30.96,
+      "start": 30.94,
       "end": 31.08
     },
     {
       "word": "a",
       "start": 31.08,
-      "end": 31.22
+      "end": 31.18
     },
     {
       "word": "chicken",
-      "start": 31.22,
-      "end": 31.42
+      "start": 31.18,
+      "end": 31.38
     },
     {
       "word": "salad",
-      "start": 31.42,
+      "start": 31.38,
       "end": 31.76
     },
     {
-      "word": "sandwich",
+      "word": "sandwich.",
       "start": 31.76,
-      "end": 32.32
+      "end": 32.22
     },
     {
-      "word": "e",
-      "start": 32.2,
-      "end": 35.72
-    },
-    {
-      "word": "manifests",
-      "start": 34.94,
-      "end": 35.94
-    },
-    {
-      "word": "i",
-      "start": 35.7,
-      "end": 36.38
+      "word": "I",
+      "start": 35.56,
+      "end": 36.34
     },
     {
       "word": "said",
-      "start": 36.38,
+      "start": 36.34,
       "end": 36.54
     },
     {
-      "word": "i",
+      "word": "I",
       "start": 36.54,
-      "end": 36.72
+      "end": 36.66
     },
     {
       "word": "really",
-      "start": 36.72,
-      "end": 36.88
+      "start": 36.66,
+      "end": 36.84
     },
     {
       "word": "think",
-      "start": 36.88,
-      "end": 37.08
+      "start": 36.84,
+      "end": 37.06
     },
     {
-      "word": "i",
-      "start": 37.08,
+      "word": "I",
+      "start": 37.06,
       "end": 37.24
     },
     {
       "word": "bought",
       "start": 37.24,
-      "end": 37.4
+      "end": 37.36
     },
     {
       "word": "a",
-      "start": 37.4,
-      "end": 37.58
+      "start": 37.36,
+      "end": 37.52
     },
     {
       "word": "half",
-      "start": 37.58,
-      "end": 37.66
+      "start": 37.52,
+      "end": 37.62
     },
     {
       "word": "a",
-      "start": 37.66,
-      "end": 37.8
+      "start": 37.62,
+      "end": 37.78
     },
     {
       "word": "chicken",
-      "start": 37.8,
-      "end": 37.98
+      "start": 37.78,
+      "end": 37.94
     },
     {
       "word": "salad",
-      "start": 37.98,
-      "end": 38.32
+      "start": 37.94,
+      "end": 38.3
     },
     {
-      "word": "sandwich",
-      "start": 38.32,
-      "end": 38.94
+      "word": "sandwich.",
+      "start": 38.3,
+      "end": 38.78
     },
     {
-      "word": "e",
-      "start": 38.64,
-      "end": 40.56
+      "word": "8.",
+      "start": 41.96,
+      "end": 42.4
     },
     {
-      "word": "laptops",
-      "start": 39.62,
-      "end": 42.28
-    },
-    {
-      "word": "i",
-      "start": 42.12,
+      "word": "I",
+      "start": 42.4,
       "end": 42.66
     },
     {
       "word": "said",
       "start": 42.66,
-      "end": 42.8
+      "end": 42.82
     },
     {
-      "word": "i",
-      "start": 42.8,
-      "end": 42.94
+      "word": "I",
+      "start": 42.82,
+      "end": 42.9
     },
     {
       "word": "really",
-      "start": 42.94,
+      "start": 42.9,
       "end": 43.1
     },
     {
       "word": "think",
       "start": 43.1,
-      "end": 43.38
+      "end": 43.34
     },
     {
-      "word": "i",
-      "start": 43.38,
+      "word": "I",
+      "start": 43.34,
       "end": 43.52
     },
     {
       "word": "bought",
       "start": 43.52,
-      "end": 43.64
+      "end": 43.62
     },
     {
       "word": "a",
-      "start": 43.64,
-      "end": 43.84
+      "start": 43.62,
+      "end": 43.78
     },
     {
       "word": "half",
-      "start": 43.84,
-      "end": 43.92
+      "start": 43.78,
+      "end": 43.9
     },
     {
       "word": "a",
-      "start": 43.92,
-      "end": 44.06
+      "start": 43.9,
+      "end": 44.02
     },
     {
       "word": "chicken",
-      "start": 44.06,
-      "end": 44.24
+      "start": 44.02,
+      "end": 44.18
     },
     {
       "word": "salad",
-      "start": 44.24,
-      "end": 44.52
+      "start": 44.18,
+      "end": 44.5
     },
     {
       "word": "sandwich",
-      "start": 44.52,
-      "end": 44.94
+      "start": 44.5,
+      "end": 44.9
     },
     {
       "word": "this",
-      "start": 44.94,
-      "end": 45.16
+      "start": 44.9,
+      "end": 45.14
     },
     {
-      "word": "afternoon",
-      "start": 45.16,
-      "end": 45.58
-    },
-    {
-      "word": "ton",
-      "start": 44.96,
-      "end": 47.94
-    },
-    {
-      "word": "developer",
-      "start": 47.6,
-      "end": 49.68
+      "word": "afternoon.",
+      "start": 45.14,
+      "end": 45.6
     },
     {
       "word": "I",
-      "start": 49.52,
+      "start": 49.42,
       "end": 50.08
     },
     {
       "word": "actually",
       "start": 50.08,
-      "end": 50.4
+      "end": 50.38
     },
     {
       "word": "said",
-      "start": 50.4,
-      "end": 50.64
+      "start": 50.38,
+      "end": 50.68
     },
     {
-      "word": "i",
-      "start": 50.64,
+      "word": "I",
+      "start": 50.68,
       "end": 50.8
     },
     {
       "word": "really",
       "start": 50.8,
-      "end": 50.96
+      "end": 50.98
     },
     {
       "word": "think",
-      "start": 50.96,
+      "start": 50.98,
       "end": 51.2
     },
     {
-      "word": "i",
+      "word": "I",
       "start": 51.2,
       "end": 51.36
     },
     {
       "word": "bought",
       "start": 51.36,
-      "end": 51.5
+      "end": 51.48
     },
     {
       "word": "a",
-      "start": 51.5,
+      "start": 51.48,
       "end": 51.64
     },
     {
       "word": "half",
       "start": 51.64,
-      "end": 51.76
+      "end": 51.74
     },
     {
       "word": "a",
-      "start": 51.76,
-      "end": 51.92
+      "start": 51.74,
+      "end": 51.9
     },
     {
       "word": "chicken",
-      "start": 51.92,
-      "end": 52.12
+      "start": 51.9,
+      "end": 52.06
     },
     {
       "word": "salad",
-      "start": 52.12,
-      "end": 52.4
+      "start": 52.06,
+      "end": 52.38
     },
     {
       "word": "sandwich",
-      "start": 52.4,
-      "end": 52.8
+      "start": 52.38,
+      "end": 52.78
     },
     {
       "word": "this",
-      "start": 52.58,
-      "end": 52.98
+      "start": 52.78,
+      "end": 52.94
     },
     {
-      "word": "afternoon",
-      "start": 52.98,
-      "end": 53.4
+      "word": "afternoon.",
+      "start": 52.94,
+      "end": 53.44
     },
     {
-      "word": "within",
-      "start": 54.08,
-      "end": 56.06
-    },
-    {
-      "word": "eld",
-      "start": 55.08,
-      "end": 57.86
+      "word": "10.",
+      "start": 56.76,
+      "end": 57.24
     },
     {
       "word": "I",
-      "start": 57.38,
+      "start": 57.24,
       "end": 57.7
     },
     {
@@ -644,11 +599,11 @@
     {
       "word": "really",
       "start": 58.42,
-      "end": 58.58
+      "end": 58.56
     },
     {
       "word": "think",
-      "start": 58.58,
+      "start": 58.56,
       "end": 58.82
     },
     {
@@ -669,21 +624,21 @@
     {
       "word": "half",
       "start": 59.44,
-      "end": 59.7
+      "end": 59.68
     },
     {
       "word": "a",
-      "start": 59.7,
+      "start": 59.68,
       "end": 59.84
     },
     {
       "word": "chicken",
       "start": 59.84,
-      "end": 60
+      "end": 60.04
     },
     {
       "word": "salad",
-      "start": 60,
+      "start": 60.04,
       "end": 60.36
     },
     {
@@ -699,16 +654,16 @@
     {
       "word": "afternoon.",
       "start": 60.96,
-      "end": 61.74
+      "end": 61.68
     },
     {
       "word": "11.",
-      "start": 65.42,
-      "end": 66.18
+      "start": 63.9,
+      "end": 66.36
     },
     {
       "word": "Can",
-      "start": 66.18,
+      "start": 66.36,
       "end": 66.46
     },
     {
@@ -729,41 +684,41 @@
     {
       "word": "actually",
       "start": 67.16,
-      "end": 67.46
+      "end": 67.44
     },
     {
       "word": "said",
-      "start": 67.46,
-      "end": 67.76
+      "start": 67.44,
+      "end": 67.74
     },
     {
       "word": "I",
-      "start": 67.76,
-      "end": 67.94
+      "start": 67.74,
+      "end": 67.92
     },
     {
       "word": "really",
-      "start": 67.94,
+      "start": 67.92,
       "end": 68.1
     },
     {
       "word": "think",
       "start": 68.1,
-      "end": 68.36
+      "end": 68.32
     },
     {
       "word": "I",
-      "start": 68.36,
-      "end": 68.5
+      "start": 68.32,
+      "end": 68.48
     },
     {
       "word": "bought",
-      "start": 68.5,
-      "end": 68.66
+      "start": 68.48,
+      "end": 68.64
     },
     {
       "word": "another",
-      "start": 68.66,
+      "start": 68.64,
       "end": 68.94
     },
     {
@@ -799,16 +754,16 @@
     {
       "word": "afternoon?",
       "start": 70.46,
-      "end": 71.1
+      "end": 71.18
     },
     {
       "word": "1.",
       "start": 73.86513,
-      "end": 74.36513
+      "end": 74.40513
     },
     {
       "word": "I",
-      "start": 74.36513,
+      "start": 74.40513,
       "end": 74.745125
     },
     {
@@ -879,11 +834,11 @@
     {
       "word": "4.",
       "start": 82.36513,
-      "end": 83.785126
+      "end": 83.80513
     },
     {
       "word": "I",
-      "start": 83.785126,
+      "start": 83.80513,
       "end": 84.14513
     },
     {
@@ -1019,7 +974,7 @@
     {
       "word": "yesterday.",
       "start": 92.785126,
-      "end": 94.44513
+      "end": 94.50513
     },
     {
       "word": "7.",
@@ -1049,11 +1004,11 @@
     {
       "word": "I",
       "start": 97.12513,
-      "end": 97.285126
+      "end": 97.30513
     },
     {
       "word": "already",
-      "start": 97.285126,
+      "start": 97.30513,
       "end": 97.38513
     },
     {
@@ -1368,7 +1323,7 @@
     },
     {
       "word": "3.",
-      "start": 133.12512,
+      "start": 133.68512,
       "end": 135.32513
     },
     {
@@ -1439,11 +1394,11 @@
     {
       "word": "raise.",
       "start": 140.36513,
-      "end": 141.18512
+      "end": 141.20512
     },
     {
       "word": "5.",
-      "start": 140.58513,
+      "start": 141.20512,
       "end": 143.16513
     },
     {

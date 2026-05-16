@@ -1,5 +1,5 @@
 {
-  "text": " Exercise 138, Consistent Noun Stress and Changing Verb Tenses. This is a condensed exercise for you to practice simple intonation with a wide range of verb tenses. When you do the exercise the first time, go through stressing only the nouns, dogs eat bones. Practice this until you're quite comfortable with the intonation. The pronunciation and word connections are on the right and the full verb tenses are on the far left. 1.The dogs eat the bones 2., the dogs ate the bones 3.The dogs are eating the bones 4.The dogs will eat the bones 5.The dogs will eat the bones 6.The dogs would have eaten the bones 7. The dogs that have eaten the bones. 8 The dogs have eaten the bones 9 The dogs that have eaten the bones 10 The dogs that will have eaten the bones 9 The dogs had eaten the bones 10 The dogs will have eaten the bones 11 The dogs ought to eat the bones 12 The dogs should eat the bones 13 The dogs shouldn eat the bones F Immune – DVB-5 14. The dogs should have eaten the bones 15. The dogs shouldn't have eaten the bones 16. The dogs could eat the bones 17. The dogs couldn't eat the bones 18. The dogs could have eaten the bones 19. The dogs couldn't eat the bones 20. The dogs might eat the bones 21. The dogs might have eaten the bones. 22. The dogs must eat the bones. 23. The dogs must have eaten the bones. 24. The dogs can eat the bones. 25. The dogs can't eat the bones.",
+  "text": " Exercise 138, Consistent Noun Stress and Changing Verb Tenses. This is a condensed exercise for you to practice simple intonation with a wide range of verb tenses. When you do the exercise the first time, go through stressing only the nouns, dogs eat bones. Practice this until you're quite comfortable with the intonation. The pronunciation and word connections are on the right and the full verb tenses are on the far left. 1 The dogs eat the bones. 2 The dogs ate the bones. 3 The dogs are eating the bones. 4 The dogs will eat the bones. 5 The dogs that eat the bones. 6 The dogs that have eaten the bones. 7 The dogs that have eaten Bones. 8 The dogs have eaten the bones 9 The dogs have eaten the bones 10 The dogs had eaten the bones 10 The dogs will have eaten the bones 11 The dogs ought to eat the bones 12 The dogs should eat the bones 13 The dogs shouldn eat the bones This kinda also roots a little bit beginning with a$17 million. the bones. 22. The dogs must eat the bones. 23. The dogs must have eaten the bones. 24. The dogs can eat the bones. 25. The dogs can't eat the bones.",
   "wordTimestamps": [
     {
       "word": "Exercise",
@@ -133,7 +133,7 @@
     },
     {
       "word": "tenses.",
-      "start": 10.46,
+      "start": 10.94,
       "end": 11.68
     },
     {
@@ -218,7 +218,7 @@
     },
     {
       "word": "bones.",
-      "start": 17.22,
+      "start": 17.62,
       "end": 18.42
     },
     {
@@ -268,7 +268,7 @@
     },
     {
       "word": "The",
-      "start": 22.02,
+      "start": 22.28,
       "end": 22.6
     },
     {
@@ -348,7 +348,7 @@
     },
     {
       "word": "the",
-      "start": 25.82,
+      "start": 26.36,
       "end": 26.46
     },
     {
@@ -362,8 +362,13 @@
       "end": 27.3
     },
     {
-      "word": "1.The",
+      "word": "1",
       "start": 28.36,
+      "end": 28.68
+    },
+    {
+      "word": "The",
+      "start": 28.68,
       "end": 30.1
     },
     {
@@ -382,23 +387,23 @@
       "end": 30.74
     },
     {
-      "word": "bones",
+      "word": "bones.",
       "start": 30.74,
-      "end": 31.24
+      "end": 31.44
     },
     {
-      "word": "2.,",
-      "start": 31.24,
+      "word": "2",
+      "start": 32.6,
+      "end": 33.28
+    },
+    {
+      "word": "The",
+      "start": 33.28,
       "end": 34.02
     },
     {
-      "word": "the",
-      "start": 34.02,
-      "end": 34.04
-    },
-    {
       "word": "dogs",
-      "start": 34.04,
+      "start": 34.02,
       "end": 34.32
     },
     {
@@ -412,18 +417,23 @@
       "end": 34.68
     },
     {
-      "word": "bones",
+      "word": "bones.",
       "start": 34.68,
-      "end": 35.08
+      "end": 35.48
     },
     {
-      "word": "3.The",
-      "start": 34.8,
-      "end": 37.8
+      "word": "3",
+      "start": 36.48,
+      "end": 37.28
+    },
+    {
+      "word": "The",
+      "start": 37.28,
+      "end": 37.82
     },
     {
       "word": "dogs",
-      "start": 37.8,
+      "start": 37.82,
       "end": 38.12
     },
     {
@@ -442,23 +452,28 @@
       "end": 38.6
     },
     {
-      "word": "bones",
+      "word": "bones.",
       "start": 38.6,
-      "end": 38.94
+      "end": 39.36
     },
     {
-      "word": "4.The",
-      "start": 38.94,
-      "end": 41.66
+      "word": "4",
+      "start": 39.98,
+      "end": 41.1
+    },
+    {
+      "word": "The",
+      "start": 41.1,
+      "end": 41.68
     },
     {
       "word": "dogs",
-      "start": 41.66,
-      "end": 41.94
+      "start": 41.68,
+      "end": 41.98
     },
     {
       "word": "will",
-      "start": 41.94,
+      "start": 41.98,
       "end": 42.04
     },
     {
@@ -472,23 +487,28 @@
       "end": 42.36
     },
     {
-      "word": "bones",
+      "word": "bones.",
       "start": 42.36,
-      "end": 42.62
+      "end": 43.08
     },
     {
-      "word": "5.The",
-      "start": 42.68,
-      "end": 45.48
+      "word": "5",
+      "start": 44.2,
+      "end": 45.08
+    },
+    {
+      "word": "The",
+      "start": 45.08,
+      "end": 45.52
     },
     {
       "word": "dogs",
-      "start": 45.48,
-      "end": 45.78
+      "start": 45.52,
+      "end": 45.8
     },
     {
-      "word": "will",
-      "start": 45.78,
+      "word": "that",
+      "start": 45.8,
       "end": 45.88
     },
     {
@@ -502,13 +522,18 @@
       "end": 46.18
     },
     {
-      "word": "bones",
+      "word": "bones.",
       "start": 46.18,
-      "end": 46.54
+      "end": 47.6
     },
     {
-      "word": "6.The",
-      "start": 46.54,
+      "word": "6",
+      "start": 47.84,
+      "end": 48.78
+    },
+    {
+      "word": "The",
+      "start": 48.78,
       "end": 49.26
     },
     {
@@ -517,18 +542,18 @@
       "end": 49.5
     },
     {
-      "word": "would",
+      "word": "that",
       "start": 49.5,
-      "end": 49.62
+      "end": 49.64
     },
     {
       "word": "have",
-      "start": 49.62,
-      "end": 49.72
+      "start": 49.64,
+      "end": 49.66
     },
     {
       "word": "eaten",
-      "start": 49.72,
+      "start": 49.66,
       "end": 49.86
     },
     {
@@ -537,28 +562,28 @@
       "end": 50.04
     },
     {
-      "word": "bones",
+      "word": "bones.",
       "start": 50.04,
-      "end": 50.4
+      "end": 50.82
     },
     {
-      "word": "7.",
-      "start": 52.4,
-      "end": 52.88
+      "word": "7",
+      "start": 52,
+      "end": 52.74
     },
     {
       "word": "The",
-      "start": 52.88,
-      "end": 53.28
+      "start": 52.74,
+      "end": 53.26
     },
     {
       "word": "dogs",
-      "start": 53.28,
-      "end": 53.48
+      "start": 53.26,
+      "end": 53.5
     },
     {
       "word": "that",
-      "start": 53.48,
+      "start": 53.5,
       "end": 53.64
     },
     {
@@ -572,14 +597,9 @@
       "end": 53.84
     },
     {
-      "word": "the",
+      "word": "Bones.",
       "start": 53.84,
-      "end": 54.02
-    },
-    {
-      "word": "bones.",
-      "start": 54.02,
-      "end": 54.48
+      "end": 55.8
     },
     {
       "word": "8.",
@@ -589,21 +609,21 @@
     {
       "word": "The",
       "start": 56.94,
-      "end": 57.3
+      "end": 57.28
     },
     {
       "word": "dogs",
-      "start": 57.3,
-      "end": 57.56
+      "start": 57.28,
+      "end": 57.54
     },
     {
       "word": "have",
-      "start": 57.56,
-      "end": 57.7
+      "start": 57.54,
+      "end": 57.72
     },
     {
       "word": "eaten",
-      "start": 57.7,
+      "start": 57.72,
       "end": 57.86
     },
     {
@@ -614,51 +634,46 @@
     {
       "word": "bones.",
       "start": 58.02,
-      "end": 58.7
+      "end": 58.68
     },
     {
       "word": "9.",
-      "start": 60.22,
+      "start": 60.2,
       "end": 60.74
     },
     {
       "word": "The",
       "start": 60.74,
-      "end": 61
+      "end": 60.98
     },
     {
       "word": "dogs",
-      "start": 61,
-      "end": 61.24
-    },
-    {
-      "word": "that",
-      "start": 61.24,
-      "end": 61.36
+      "start": 60.98,
+      "end": 61.22
     },
     {
       "word": "have",
+      "start": 61.22,
+      "end": 61.36
+    },
+    {
+      "word": "eaten",
       "start": 61.36,
       "end": 61.5
     },
     {
-      "word": "eaten",
-      "start": 61.5,
-      "end": 61.52
-    },
-    {
       "word": "the",
-      "start": 61.52,
-      "end": 61.7
+      "start": 61.5,
+      "end": 61.68
     },
     {
       "word": "bones.",
-      "start": 61.7,
-      "end": 62.18
+      "start": 61.68,
+      "end": 62.4
     },
     {
       "word": "10.",
-      "start": 63.8,
+      "start": 63.82,
       "end": 64.28
     },
     {
@@ -672,53 +687,8 @@
       "end": 64.78
     },
     {
-      "word": "that",
-      "start": 64.78,
-      "end": 64.88
-    },
-    {
-      "word": "will",
-      "start": 64.88,
-      "end": 64.96
-    },
-    {
-      "word": "have",
-      "start": 64.96,
-      "end": 65.06
-    },
-    {
-      "word": "eaten",
-      "start": 65.06,
-      "end": 65.14
-    },
-    {
-      "word": "the",
-      "start": 65.14,
-      "end": 65.3
-    },
-    {
-      "word": "bones.",
-      "start": 57.897346,
-      "end": 58.377346
-    },
-    {
-      "word": "9.",
-      "start": 58.377346,
-      "end": 60.977345
-    },
-    {
-      "word": "The",
-      "start": 60.977345,
-      "end": 60.997345
-    },
-    {
-      "word": "dogs",
-      "start": 60.997345,
-      "end": 61.237347
-    },
-    {
       "word": "had",
-      "start": 61.237347,
+      "start": 64.78,
       "end": 61.357346
     },
     {
@@ -887,418 +857,163 @@
       "end": 77.19734
     },
     {
-      "word": "F",
+      "word": "This",
       "start": 78.637344,
-      "end": 78.71735
+      "end": 89.01735
     },
     {
-      "word": "Immune",
-      "start": 78.71735,
-      "end": 79.05734
+      "word": "kinda",
+      "start": 89.01735,
+      "end": 89.23735
     },
     {
-      "word": "–",
-      "start": 79.05734,
-      "end": 79.27734
+      "word": "also",
+      "start": 89.23735,
+      "end": 92.73735
     },
     {
-      "word": "DVB-5",
-      "start": 79.27734,
-      "end": 79.41734
+      "word": "roots",
+      "start": 92.73735,
+      "end": 92.75735
     },
     {
-      "word": "14.",
-      "start": 78.61735,
-      "end": 79.317345
+      "word": "a",
+      "start": 92.75735,
+      "end": 104.25735
     },
     {
-      "word": "The",
-      "start": 79.317345,
-      "end": 79.57735
+      "word": "little",
+      "start": 104.25735,
+      "end": 104.27734
     },
     {
-      "word": "dogs",
-      "start": 79.57735,
-      "end": 79.79735
+      "word": "bit",
+      "start": 104.27734,
+      "end": 104.29735
     },
     {
-      "word": "should",
-      "start": 79.79735,
-      "end": 79.93735
+      "word": "beginning",
+      "start": 104.29735,
+      "end": 104.317345
     },
     {
-      "word": "have",
-      "start": 79.93735,
-      "end": 80.05734
+      "word": "with",
+      "start": 104.317345,
+      "end": 104.33734
     },
     {
-      "word": "eaten",
-      "start": 80.05734,
-      "end": 80.19734
+      "word": "a$17",
+      "start": 104.33734,
+      "end": 104.37735
     },
     {
-      "word": "the",
-      "start": 80.19734,
-      "end": 80.37735
-    },
-    {
-      "word": "bones",
-      "start": 80.37735,
-      "end": 80.73735
-    },
-    {
-      "word": "15.",
-      "start": 82.43735,
-      "end": 83.07735
-    },
-    {
-      "word": "The",
-      "start": 83.07735,
-      "end": 83.317345
-    },
-    {
-      "word": "dogs",
-      "start": 83.317345,
-      "end": 83.55734
-    },
-    {
-      "word": "shouldn't",
-      "start": 83.55734,
-      "end": 83.75735
-    },
-    {
-      "word": "have",
-      "start": 83.75735,
-      "end": 83.857346
-    },
-    {
-      "word": "eaten",
-      "start": 83.857346,
-      "end": 83.997345
+      "word": "million.",
+      "start": 104.37735,
+      "end": 104.457344
     },
     {
       "word": "the",
-      "start": 83.997345,
-      "end": 84.177345
-    },
-    {
-      "word": "bones",
-      "start": 84.177345,
-      "end": 84.537346
-    },
-    {
-      "word": "16.",
-      "start": 86.29735,
-      "end": 86.93735
-    },
-    {
-      "word": "The",
-      "start": 86.93735,
-      "end": 87.19734
-    },
-    {
-      "word": "dogs",
-      "start": 87.19734,
-      "end": 87.457344
-    },
-    {
-      "word": "could",
-      "start": 87.457344,
-      "end": 87.61735
-    },
-    {
-      "word": "eat",
-      "start": 87.61735,
-      "end": 87.73735
-    },
-    {
-      "word": "the",
-      "start": 87.73735,
-      "end": 87.89735
-    },
-    {
-      "word": "bones",
-      "start": 87.89735,
-      "end": 88.27734
-    },
-    {
-      "word": "17.",
-      "start": 89.997345,
-      "end": 90.75735
-    },
-    {
-      "word": "The",
-      "start": 90.75735,
-      "end": 90.997345
-    },
-    {
-      "word": "dogs",
-      "start": 90.997345,
-      "end": 91.25735
-    },
-    {
-      "word": "couldn't",
-      "start": 91.25735,
-      "end": 91.497345
-    },
-    {
-      "word": "eat",
-      "start": 91.497345,
-      "end": 91.61734
-    },
-    {
-      "word": "the",
-      "start": 91.61734,
-      "end": 91.77734
-    },
-    {
-      "word": "bones",
-      "start": 91.77734,
-      "end": 92.11734
-    },
-    {
-      "word": "18.",
-      "start": 93.77734,
-      "end": 94.537346
-    },
-    {
-      "word": "The",
-      "start": 94.537346,
-      "end": 94.79735
-    },
-    {
-      "word": "dogs",
-      "start": 94.79735,
-      "end": 95.05734
-    },
-    {
-      "word": "could",
-      "start": 95.05734,
-      "end": 95.19734
-    },
-    {
-      "word": "have",
-      "start": 95.19734,
-      "end": 95.29735
-    },
-    {
-      "word": "eaten",
-      "start": 95.29735,
-      "end": 95.43735
-    },
-    {
-      "word": "the",
-      "start": 95.43735,
-      "end": 95.637344
-    },
-    {
-      "word": "bones",
-      "start": 95.637344,
-      "end": 96.07735
-    },
-    {
-      "word": "19.",
-      "start": 95.497345,
-      "end": 98.41734
-    },
-    {
-      "word": "The",
-      "start": 98.41734,
-      "end": 98.637344
-    },
-    {
-      "word": "dogs",
-      "start": 98.637344,
-      "end": 98.87735
-    },
-    {
-      "word": "couldn't",
-      "start": 98.87735,
-      "end": 99.11734
-    },
-    {
-      "word": "eat",
-      "start": 99.11734,
-      "end": 99.27734
-    },
-    {
-      "word": "the",
-      "start": 99.27734,
-      "end": 99.51735
-    },
-    {
-      "word": "bones",
-      "start": 99.51735,
-      "end": 99.83734
-    },
-    {
-      "word": "20.",
-      "start": 99.69734,
-      "end": 102.07735
-    },
-    {
-      "word": "The",
-      "start": 102.07735,
-      "end": 102.41734
-    },
-    {
-      "word": "dogs",
-      "start": 102.41734,
-      "end": 102.65735
-    },
-    {
-      "word": "might",
-      "start": 102.65735,
-      "end": 102.817345
-    },
-    {
-      "word": "eat",
-      "start": 102.817345,
-      "end": 102.97734
-    },
-    {
-      "word": "the",
-      "start": 102.97734,
-      "end": 103.11734
-    },
-    {
-      "word": "bones",
-      "start": 103.11734,
-      "end": 103.497345
-    },
-    {
-      "word": "21.",
-      "start": 105.11734,
-      "end": 105.817345
-    },
-    {
-      "word": "The",
-      "start": 105.817345,
-      "end": 106.19734
-    },
-    {
-      "word": "dogs",
-      "start": 106.19734,
-      "end": 106.41734
-    },
-    {
-      "word": "might",
-      "start": 106.41734,
-      "end": 106.57735
-    },
-    {
-      "word": "have",
-      "start": 106.57735,
-      "end": 106.77734
-    },
-    {
-      "word": "eaten",
-      "start": 106.77734,
-      "end": 106.87735
-    },
-    {
-      "word": "the",
-      "start": 106.87735,
+      "start": 106.957344,
       "end": 107.05734
     },
     {
       "word": "bones.",
       "start": 107.05734,
-      "end": 107.65735
+      "end": 107.73735
     },
     {
       "word": "22.",
-      "start": 108.957344,
-      "end": 109.857346
-    },
-    {
-      "word": "The",
-      "start": 109.857346,
+      "start": 107.73735,
       "end": 110.09735
     },
     {
-      "word": "dogs",
+      "word": "The",
       "start": 110.09735,
-      "end": 110.37735
+      "end": 110.11734
+    },
+    {
+      "word": "dogs",
+      "start": 110.11734,
+      "end": 110.317345
     },
     {
       "word": "must",
-      "start": 110.37735,
-      "end": 110.537346
+      "start": 110.317345,
+      "end": 110.55734
     },
     {
       "word": "eat",
-      "start": 110.537346,
-      "end": 110.71735
+      "start": 110.55734,
+      "end": 110.69734
     },
     {
       "word": "the",
-      "start": 110.71735,
-      "end": 110.857346
+      "start": 110.69734,
+      "end": 110.83734
     },
     {
       "word": "bones.",
-      "start": 110.857346,
+      "start": 110.83734,
       "end": 111.47734
     },
     {
       "word": "23.",
-      "start": 111.79735,
-      "end": 113.75735
+      "start": 111.47734,
+      "end": 113.91734
     },
     {
       "word": "The",
-      "start": 113.75735,
-      "end": 114.037346
+      "start": 113.91734,
+      "end": 114.01735
     },
     {
       "word": "dogs",
-      "start": 114.037346,
-      "end": 114.27734
+      "start": 114.01735,
+      "end": 114.21735
     },
     {
       "word": "must",
-      "start": 114.27734,
-      "end": 114.457344
+      "start": 114.21735,
+      "end": 114.43735
     },
     {
       "word": "have",
-      "start": 114.457344,
-      "end": 114.59735
+      "start": 114.43735,
+      "end": 114.57735
     },
     {
       "word": "eaten",
-      "start": 114.59735,
+      "start": 114.57735,
       "end": 114.69734
     },
     {
       "word": "the",
       "start": 114.69734,
-      "end": 114.91734
+      "end": 114.87735
     },
     {
       "word": "bones.",
-      "start": 114.91734,
-      "end": 115.457344
+      "start": 114.87735,
+      "end": 115.57735
     },
     {
       "word": "24.",
-      "start": 115.83734,
-      "end": 117.637344
+      "start": 115.57735,
+      "end": 117.79735
     },
     {
       "word": "The",
-      "start": 117.637344,
-      "end": 118.01735
+      "start": 117.79735,
+      "end": 118.037346
     },
     {
       "word": "dogs",
-      "start": 118.01735,
-      "end": 118.27734
+      "start": 118.037346,
+      "end": 118.25735
     },
     {
       "word": "can",
-      "start": 118.27734,
+      "start": 118.25735,
       "end": 118.43735
     },
     {
@@ -1314,42 +1029,42 @@
     {
       "word": "bones.",
       "start": 118.71735,
-      "end": 119.33734
+      "end": 119.357346
     },
     {
       "word": "25.",
-      "start": 119.65735,
-      "end": 121.537346
+      "start": 119.357346,
+      "end": 121.79735
     },
     {
       "word": "The",
-      "start": 121.537346,
+      "start": 121.79735,
       "end": 121.91734
     },
     {
       "word": "dogs",
       "start": 121.91734,
-      "end": 122.17735
+      "end": 122.15735
     },
     {
       "word": "can't",
-      "start": 122.17735,
-      "end": 122.45735
+      "start": 122.15735,
+      "end": 122.47734
     },
     {
       "word": "eat",
-      "start": 122.45735,
-      "end": 122.59735
+      "start": 122.47734,
+      "end": 122.57735
     },
     {
       "word": "the",
-      "start": 122.59735,
+      "start": 122.57735,
       "end": 122.73735
     },
     {
       "word": "bones.",
       "start": 122.73735,
-      "end": 123.33734
+      "end": 123.53734
     }
   ]
 }

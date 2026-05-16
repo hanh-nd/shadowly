@@ -1,5 +1,5 @@
 {
-  "text": " Exercise 139, Consistent Pronoun Stress in Changing Verb Tenses. This is the same as the previous exercise, except you now stress the verbs. They eat them. Practice this until you're quite comfortable with the intonation. Notice that in fluent speech, the th of them is frequently dropped, as is the h in other object pronouns, him, her. The pronunciation and word connections are on the right, and the tense name is on the far left. 1. They eat them. 2. They ate them. 3. They're eating them. 4. They'll eat them. 5. They'd eat them. 6. They'd have eaten them. 7. The ones that have eaten them. 8. They've eaten them. 9. They'd eaten them. 10. They'll have eaten them. 11. They oughta eat them. 12. They should eat them. 13. They shouldn't need them. 14. They should have eaten them. 15. They shouldn't have eaten them. 16. They could eat them. 17. They couldn't eat them. 18. They could have eaten them. 19. They couldn't have eaten them. 20. They might eat them 21. They might have eaten them 22. They must eat them 23. They must have eaten them 24. They can eat them 25. They can't eat them",
+  "text": " Exercise 139, Consistent Pronoun Stress in Changing Verb Tenses. This is the same as the previous exercise, except you now stress the verbs. They eat them. Practice this until you're quite comfortable with the intonation. Notice that in fluent speech, the th of them is frequently dropped, as is the h in other object pronouns, him, her. The pronunciation and word connections are on the right, and the tense name is on the far left. 1. They eat them. 2. They ate them. 3. They're eating them. 4. They'll eat them. 5. They'd eat them. 6. They'd have eaten them. 7. The ones that have eaten them. 8. They've eaten them. 9. They'd eaten them. 10. They'll have eaten them. 11. They ought to eat them. 12. They should eat them. 13. They shouldn't eat them. 14. They should of eaten them. 15. They shouldn't have eaten them. 16. They could eat them. 17. They couldn't eat them. 18. They could of eaten them. 19. They couldn't have eaten them. 20. They might eat them 21. They might have eaten them 22. They must eat them 23. They must have eaten them 24. They can eat them 25. They can't eat them",
   "wordTimestamps": [
     {
       "word": "Exercise",
@@ -333,7 +333,7 @@
     },
     {
       "word": "and",
-      "start": 26.58,
+      "start": 27.06,
       "end": 27.38
     },
     {
@@ -612,8 +612,13 @@
       "end": 60.28
     },
     {
-      "word": "oughta",
+      "word": "ought",
       "start": 60.28,
+      "end": 60.46
+    },
+    {
+      "word": "to",
+      "start": 60.46,
       "end": 60.52
     },
     {
@@ -628,7 +633,7 @@
     },
     {
       "word": "12.",
-      "start": 62.52,
+      "start": 62.44,
       "end": 63.2
     },
     {
@@ -667,14 +672,14 @@
       "end": 66.88
     },
     {
-      "word": "need",
+      "word": "eat",
       "start": 66.88,
-      "end": 67.08
+      "end": 67.1
     },
     {
       "word": "them.",
-      "start": 67.08,
-      "end": 67.32
+      "start": 67.1,
+      "end": 67.28
     },
     {
       "word": "14.",
@@ -684,26 +689,26 @@
     {
       "word": "They",
       "start": 69.58,
-      "end": 69.9
+      "end": 69.88
     },
     {
       "word": "should",
-      "start": 69.9,
+      "start": 69.88,
       "end": 70.08
     },
     {
-      "word": "have",
+      "word": "of",
       "start": 70.08,
-      "end": 70.16
+      "end": 70.14
     },
     {
       "word": "eaten",
-      "start": 70.16,
-      "end": 70.38
+      "start": 70.14,
+      "end": 70.4
     },
     {
       "word": "them.",
-      "start": 70.38,
+      "start": 70.4,
       "end": 70.64
     },
     {
@@ -719,21 +724,21 @@
     {
       "word": "shouldn't",
       "start": 73.2,
-      "end": 73.5
+      "end": 73.48
     },
     {
       "word": "have",
-      "start": 73.5,
+      "start": 73.48,
       "end": 73.6
     },
     {
       "word": "eaten",
       "start": 73.6,
-      "end": 73.8
+      "end": 73.82
     },
     {
       "word": "them.",
-      "start": 73.8,
+      "start": 73.82,
       "end": 74.06
     },
     {
@@ -759,11 +764,11 @@
     {
       "word": "them.",
       "start": 76.86,
-      "end": 77.12
+      "end": 77.2
     },
     {
       "word": "17.",
-      "start": 78.36,
+      "start": 78.32,
       "end": 79.06
     },
     {
@@ -784,7 +789,7 @@
     {
       "word": "them.",
       "start": 79.8,
-      "end": 80
+      "end": 80.02
     },
     {
       "word": "18.",
@@ -802,7 +807,7 @@
       "end": 82.48
     },
     {
-      "word": "have",
+      "word": "of",
       "start": 82.48,
       "end": 82.58
     },
@@ -814,7 +819,7 @@
     {
       "word": "them.",
       "start": 82.82,
-      "end": 83.1
+      "end": 83.06
     },
     {
       "word": "19.",
@@ -829,26 +834,26 @@
     {
       "word": "couldn't",
       "start": 85.56,
-      "end": 85.82
+      "end": 85.8
     },
     {
       "word": "have",
-      "start": 85.82,
+      "start": 85.8,
       "end": 85.92
     },
     {
       "word": "eaten",
       "start": 85.92,
-      "end": 86.12
+      "end": 86.14
     },
     {
       "word": "them.",
-      "start": 86.12,
-      "end": 86.4
+      "start": 86.14,
+      "end": 86.44
     },
     {
       "word": "20.",
-      "start": 87.94,
+      "start": 87.92,
       "end": 88.56
     },
     {
@@ -874,11 +879,11 @@
     {
       "word": "21.",
       "start": 90.54,
-      "end": 91.3
+      "end": 91.28
     },
     {
       "word": "They",
-      "start": 91.3,
+      "start": 91.28,
       "end": 91.62
     },
     {
@@ -889,11 +894,11 @@
     {
       "word": "have",
       "start": 91.78,
-      "end": 91.9
+      "end": 91.88
     },
     {
       "word": "eaten",
-      "start": 91.9,
+      "start": 91.88,
       "end": 92.1
     },
     {
@@ -903,7 +908,7 @@
     },
     {
       "word": "22.",
-      "start": 93.72,
+      "start": 93.74,
       "end": 94.6
     },
     {
@@ -924,7 +929,7 @@
     {
       "word": "them",
       "start": 95.36,
-      "end": 95.58
+      "end": 95.56
     },
     {
       "word": "23.",
@@ -959,11 +964,11 @@
     {
       "word": "24.",
       "start": 100.2,
-      "end": 101.06
+      "end": 101.08
     },
     {
       "word": "They",
-      "start": 101.06,
+      "start": 101.08,
       "end": 101.36
     },
     {
@@ -983,12 +988,12 @@
     },
     {
       "word": "25.",
-      "start": 103.18,
-      "end": 104
+      "start": 103.2,
+      "end": 104.02
     },
     {
       "word": "They",
-      "start": 104,
+      "start": 104.02,
       "end": 104.32
     },
     {
