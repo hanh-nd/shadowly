@@ -182,11 +182,13 @@ self.onmessage = async (e: MessageEvent) => {
 
   try {
     if (type === ScoringWorkerMessageType.LoadModels) {
-      await scoringEngine.ensureModels((p, label) =>
+      await scoringEngine.ensureModels((p, label, loaded, total) =>
         self.postMessage({
           type: ScoringWorkerMessageType.ModelProgress,
           progress: p,
           label,
+          loaded,
+          total,
         }),
       );
       self.postMessage({ type: ScoringWorkerMessageType.ModelsReady });

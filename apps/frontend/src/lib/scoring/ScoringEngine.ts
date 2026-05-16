@@ -1,7 +1,7 @@
 import ESpeakNg from 'espeak-ng';
 
 import vocabJson from '../../assets/vocab.json';
-import { ScoringBackend } from '../../types';
+import { type ModelLoadProgressCallback, ScoringBackend } from '../../types';
 import { type IpaInferenceBackend } from './IpaInferenceBackend';
 import { LocalIpaInferenceBackend } from './LocalIpaInferenceBackend';
 import { RemoteIpaInferenceBackend } from './RemoteIpaInferenceBackend';
@@ -29,9 +29,7 @@ class ScoringEngine {
   /**
    * Idempotently ensures all models are loaded.
    */
-  ensureModels(
-    onProgress?: (p: number, label?: string) => void,
-  ): Promise<void> {
+  ensureModels(onProgress?: ModelLoadProgressCallback): Promise<void> {
     return this.backend.ensureModels(onProgress);
   }
 

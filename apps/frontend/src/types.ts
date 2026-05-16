@@ -126,10 +126,19 @@ export enum ShadowingPhase {
   PlayingMine = 'playing_mine',
 }
 
+export type ModelLoadProgressCallback = (
+  progress: number,
+  label?: string,
+  loaded?: number,
+  total?: number,
+) => void;
+
 export interface ModelLoadTask {
   id: string;
   label: string;
   progress: number;
+  loaded?: number;
+  total?: number;
 }
 
 export enum WorkerMessageType {

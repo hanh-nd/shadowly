@@ -7,6 +7,7 @@ import {
   type ProgressInfo,
 } from '@huggingface/transformers';
 
+import type { ModelLoadProgressCallback } from '../../types';
 import { ctcGreedyDecode } from '../../utils/ctc-decoder';
 import { type IpaInferenceBackend } from './IpaInferenceBackend';
 
@@ -27,13 +28,23 @@ interface ModelOutput {
   };
 }
 
-function calculateProgress(progressInfo: ProgressInfo): number | null {
+function calculateProgress(
+  progressInfo: ProgressInfo,
+): { progress: number; loaded?: number; total?: number } | null {
   if (progressInfo.status === 'progress') {
-    return Math.max(0, Math.min(90, progressInfo.progress * 0.9));
+    return {
+      progress: Math.max(0, Math.min(90, progressInfo.progress * 0.9)),
+      loaded: (progressInfo as { loaded?: number }).loaded,
+      total: (progressInfo as { total?: number }).total,
+    };
   }
 
   if (progressInfo.status === 'progress_total') {
-    return Math.max(0, Math.min(90, progressInfo.progress * 0.9));
+    return {
+      progress: Math.max(0, Math.min(90, progressInfo.progress * 0.9)),
+      loaded: (progressInfo as { loaded?: number }).loaded,
+      total: (progressInfo as { total?: number }).total,
+    };
   }
 
   return null;
@@ -47,9 +58,7 @@ export class LocalIpaInferenceBackend implements IpaInferenceBackend {
 
   constructor(private readonly idToToken: Map<number, string>) {}
 
-  ensureModels(
-    onProgress?: (p: number, label?: string) => void,
-  ): Promise<void> {
+  ensureModels(onProgress?: ModelLoadProgressCallback): Promise<void> {
     if (this.isReady) {
       return Promise.resolve();
     }
@@ -63,9 +72,14 @@ export class LocalIpaInferenceBackend implements IpaInferenceBackend {
         onProgress?.(0, 'Preparing scoring engine');
 
         const progressCallback = (progressInfo: ProgressInfo) => {
-          const progress = calculateProgress(progressInfo);
-          if (progress !== null) {
-            onProgress?.(progress, 'Downloading scoring model...');
+          const result = calculateProgress(progressInfo);
+          if (result !== null) {
+            onProgress?.(
+              result.progress,
+              'Downloading scoring model...',
+              result.loaded,
+              result.total,
+            );
           }
         };
 

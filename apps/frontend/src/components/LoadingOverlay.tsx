@@ -42,6 +42,12 @@ export function LoadingOverlay({
                   style={{ width: `${task.progress}%` }}
                 />
               </div>
+              {task.total != null && (
+                <span className="text-on-surface-variant text-label-sm self-end">
+                  {(task.loaded! / 1_048_576).toFixed(1)} /{' '}
+                  {(task.total / 1_048_576).toFixed(1)} MB
+                </span>
+              )}
             </div>
           ))}
         </div>

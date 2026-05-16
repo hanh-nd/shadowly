@@ -1,5 +1,6 @@
 import {
   type IpaChunk,
+  type ModelLoadProgressCallback,
   ScoringWorkerMessageType,
   WordScore,
 } from '../../types';
@@ -7,11 +8,9 @@ import {
 export class ScoringClient {
   private worker: Worker | null = null;
   private workerReady: Promise<void> | null = null;
-  private onProgress?: (p: number, label?: string) => void;
+  private onProgress?: ModelLoadProgressCallback;
 
-  async ensureModels(
-    onProgress?: (p: number, label?: string) => void,
-  ): Promise<void> {
+  async ensureModels(onProgress?: ModelLoadProgressCallback): Promise<void> {
     if (onProgress) {
       this.onProgress = onProgress;
     }
@@ -33,7 +32,7 @@ export class ScoringClient {
               resolve();
               break;
             case ScoringWorkerMessageType.ModelProgress:
-              this.onProgress?.(progress, label);
+              this.onProgress?.(progress, label, e.data.loaded, e.data.total);
               break;
             case ScoringWorkerMessageType.ModelsLoadError:
               this.worker!.removeEventListener('message', initHandler);

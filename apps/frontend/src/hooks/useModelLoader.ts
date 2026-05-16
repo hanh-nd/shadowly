@@ -67,7 +67,7 @@ export function useModelLoader(options: { scoringEnabled: boolean }) {
       }));
 
       scoringClient
-        .ensureModels((progress, label) => {
+        .ensureModels((progress, label, loaded, total) => {
           if (isMounted) {
             setTasks((prev) =>
               prev[ModelId.Scoring]
@@ -76,7 +76,9 @@ export function useModelLoader(options: { scoringEnabled: boolean }) {
                     [ModelId.Scoring]: {
                       ...prev[ModelId.Scoring],
                       progress,
-                      label: label || prev[ModelId.Scoring].label,
+                      label: label ?? prev[ModelId.Scoring].label,
+                      loaded,
+                      total,
                     },
                   }
                 : prev,
