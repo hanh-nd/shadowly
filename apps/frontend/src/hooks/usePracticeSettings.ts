@@ -2,12 +2,15 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 
 import type { SettingsStorage } from '../utils/settings-storage';
 import { localStorageSettingsStorage } from '../utils/settings-storage';
+import { isWebGPUAvailable } from '../utils/webgpu';
 
 export function usePracticeSettings(
   storage: SettingsStorage = localStorageSettingsStorage,
 ) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const saved = useMemo(() => storage.load(), []);
+
+  const webGPUAvailable = isWebGPUAvailable();
 
   const [maskMode, setMaskMode] = useState(saved.maskMode ?? true);
   const [playbackSpeed, setPlaybackSpeed] = useState(
@@ -20,7 +23,7 @@ export function usePracticeSettings(
     saved.autoCruiseEnabled ?? true,
   );
   const [scoringEnabled, setScoringEnabled] = useState(
-    saved.scoringEnabled ?? false,
+    webGPUAvailable ? (saved.scoringEnabled ?? false) : false,
   );
   const [bufferTime, setBufferTime] = useState(saved.bufferTime ?? 2);
   const [loopCount, setLoopCount] = useState(saved.loopCount ?? 3);
@@ -60,8 +63,9 @@ export function usePracticeSettings(
   }, []);
 
   const toggleScoring = useCallback(() => {
+    if (!webGPUAvailable) return;
     setScoringEnabled((prev) => !prev);
-  }, []);
+  }, [webGPUAvailable]);
 
   return {
     maskMode,
@@ -69,6 +73,7 @@ export function usePracticeSettings(
     autoStopEnabled,
     autoCruiseEnabled,
     scoringEnabled,
+    scoringUnavailable: !webGPUAvailable,
     bufferTime,
     loopCount,
     toggleMaskMode,

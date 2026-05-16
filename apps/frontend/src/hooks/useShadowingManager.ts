@@ -303,6 +303,7 @@ export function useShadowingManager() {
       autoStopEnabled: settings.autoStopEnabled,
       autoCruiseEnabled: settings.autoCruiseEnabled,
       scoringEnabled: settings.scoringEnabled,
+      scoringUnavailable: settings.scoringUnavailable,
       bufferTime: settings.bufferTime,
       loopCount: settings.loopCount,
       toggleMaskMode: settings.toggleMaskMode,

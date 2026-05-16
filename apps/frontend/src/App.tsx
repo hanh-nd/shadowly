@@ -48,6 +48,7 @@ export function App() {
         autoStopEnabled={manager.settings.autoStopEnabled}
         autoCruiseEnabled={manager.settings.autoCruiseEnabled}
         scoringEnabled={manager.settings.scoringEnabled}
+        scoringUnavailable={manager.settings.scoringUnavailable}
         maskModeEnabled={manager.settings.maskMode}
         bufferTime={manager.settings.bufferTime}
         loopCount={manager.settings.loopCount}

@@ -14,6 +14,7 @@ interface Props {
   autoStopEnabled: boolean;
   autoCruiseEnabled: boolean;
   scoringEnabled: boolean;
+  scoringUnavailable?: boolean;
   maskModeEnabled: boolean;
   bufferTime: number;
   loopCount: number;
@@ -44,6 +45,7 @@ export function Sidebar({
   autoStopEnabled,
   autoCruiseEnabled,
   scoringEnabled,
+  scoringUnavailable = false,
   maskModeEnabled,
   bufferTime,
   loopCount,
@@ -173,6 +175,12 @@ export function Sidebar({
               label="Scoring"
               checked={scoringEnabled}
               onChange={onToggleScoring}
+              disabled={scoringUnavailable}
+              tooltip={
+                scoringUnavailable
+                  ? "Scoring requires WebGPU, which isn't supported by your browser"
+                  : undefined
+              }
             />
 
             <SettingToggle
