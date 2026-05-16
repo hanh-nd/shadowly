@@ -1,3 +1,4 @@
+import { usePracticeShortcuts } from '../hooks/usePracticeShortcuts';
 import type { Segment } from '../types';
 import { NavigationDirection, SentenceCardMode } from '../types';
 import { SentenceCard } from './SentenceCard';
@@ -36,6 +37,16 @@ export function SentenceView({
   const prev = segments[activeIndex - 1];
   const active = segments[activeIndex];
   const next = segments[activeIndex + 1];
+
+  usePracticeShortcuts({
+    activeSegment: active,
+    isRecording,
+    onPlayOriginal,
+    onStartRecord,
+    onStopRecord,
+    onPlayMine: (url) => onPlayMine(url),
+    onNavigate,
+  });
 
   return (
     <div className="pt-24 sm:pt-32 px-4 sm:px-gutter max-w-container-max-width mx-auto flex flex-col gap-stack-lg pb-16">
