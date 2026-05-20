@@ -127,6 +127,26 @@ export function App() {
                 onFileSelect={manager.upload}
                 className="w-full max-w-xs"
               />
+              <div className="flex w-full max-w-xs items-center gap-3 text-outline">
+                <div className="h-px flex-1 bg-outline-variant" />
+                <span className="font-label-sm text-[10px] uppercase tracking-wider">
+                  or
+                </span>
+                <div className="h-px flex-1 bg-outline-variant" />
+              </div>
+              <button
+                type="button"
+                onClick={() => {
+                  manager.reset();
+                  setMode(AppView.Library);
+                }}
+                className="inline-flex items-center gap-2 rounded-full border border-outline-variant px-4 py-2 font-label-sm text-label-sm text-primary transition-colors hover:bg-primary-container/20 focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background"
+              >
+                <span className="material-symbols-outlined text-[18px]">
+                  library_music
+                </span>
+                <span>Browse in library</span>
+              </button>
             </div>
           </div>
         )}
