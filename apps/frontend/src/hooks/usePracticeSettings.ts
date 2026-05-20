@@ -1,8 +1,12 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
+import {
+  isMobileDevice,
+  isSafariBrowser,
+  isWebGPUAvailable,
+} from '../utils/browser';
 import type { SettingsStorage } from '../utils/settings-storage';
 import { localStorageSettingsStorage } from '../utils/settings-storage';
-import { isWebGPUAvailable } from '../utils/webgpu';
 
 export function usePracticeSettings(
   storage: SettingsStorage = localStorageSettingsStorage,
@@ -11,6 +15,8 @@ export function usePracticeSettings(
   const saved = useMemo(() => storage.load(), []);
 
   const webGPUAvailable = isWebGPUAvailable();
+  const safari = isSafariBrowser();
+  const mobile = isMobileDevice();
 
   const [maskMode, setMaskMode] = useState(saved.maskMode ?? true);
   const [playbackSpeed, setPlaybackSpeed] = useState(
@@ -73,7 +79,7 @@ export function usePracticeSettings(
     autoStopEnabled,
     autoCruiseEnabled,
     scoringEnabled,
-    scoringUnavailable: !webGPUAvailable,
+    scoringUnavailable: !webGPUAvailable || safari || mobile,
     bufferTime,
     loopCount,
     toggleMaskMode,

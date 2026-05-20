@@ -172,13 +172,13 @@ export function Sidebar({
             </SettingToggle>
 
             <SettingToggle
-              label="Scoring"
+              label="Scoring (Experimental)"
               checked={scoringEnabled}
               onChange={onToggleScoring}
               disabled={scoringUnavailable}
               tooltip={
                 scoringUnavailable
-                  ? "Scoring requires WebGPU, which isn't supported by your browser"
+                  ? 'Scoring is currently unavailable on this device'
                   : undefined
               }
             />
