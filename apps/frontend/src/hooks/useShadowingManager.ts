@@ -78,6 +78,7 @@ export function useShadowingManager() {
   );
 
   const performStartRecord = useCallback(() => {
+    minePlayer.warmup();
     minePlayer.stop();
     originalPlayer.stop();
 

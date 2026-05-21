@@ -207,10 +207,15 @@ export function useAudioPlayer(
     [status, audioBuffer, duration, startPlayback],
   );
 
+  const warmup = useCallback(async () => {
+    await getRunningContext();
+  }, [getRunningContext]);
+
   return {
     play,
     playFrom,
     playUrl,
+    warmup,
     stop,
     seek,
     status,
