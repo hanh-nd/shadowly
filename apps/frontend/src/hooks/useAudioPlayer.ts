@@ -80,14 +80,16 @@ export function useAudioPlayer(
         };
 
         currentSourceRef.current = source;
-        startTimeRef.current = ctx.currentTime;
+        const scheduledAt =
+          ctx.currentTime + ctx.baseLatency + (ctx.outputLatency ?? 0);
+        startTimeRef.current = scheduledAt;
         startOffsetRef.current = offset;
         setCurrentTime(offset);
 
         if (playbackDuration !== undefined) {
-          source.start(0, offset, playbackDuration);
+          source.start(scheduledAt, offset, playbackDuration);
         } else {
-          source.start(0, offset);
+          source.start(scheduledAt, offset);
         }
 
         setStatus(PlaybackStatus.Playing);
@@ -106,7 +108,10 @@ export function useAudioPlayer(
       if (status !== PlaybackStatus.Playing || !audioContextRef.current) return;
 
       const ctx = audioContextRef.current;
-      const elapsed = (ctx.currentTime - startTimeRef.current) * speed;
+      const elapsed = Math.max(
+        0,
+        (ctx.currentTime - startTimeRef.current) * speed,
+      );
       const current = startOffsetRef.current + elapsed;
       setCurrentTime(Math.min(current, duration));
       frameId = requestAnimationFrame(update);
