@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
 
-import { TARGET_SAMPLE_RATE } from '../constants';
 import { MediaRecorderState } from '../types';
 
 const SUPPORTED_MIME_TYPES = [
@@ -52,7 +51,6 @@ export function useRecorder() {
           noiseSuppression: false,
           autoGainControl: false,
           channelCount: 1,
-          sampleRate: TARGET_SAMPLE_RATE, // Request native 16k from hardware if supported
         },
       });
       mediaStreamRef.current = stream;
