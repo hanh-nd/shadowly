@@ -1,8 +1,9 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 import { TRANSCRIBING_TEXT } from '../constants';
 import type { LibraryItem, Segment } from '../types';
 import { NavigationDirection, ShadowingPhase } from '../types';
+import { getSegmentIndexAtTime } from '../utils/segment-time';
 import { useAudioPlayer } from './useAudioPlayer';
 import { useAutoCruise } from './useAutoCruise';
 import { useModelLoader } from './useModelLoader';
@@ -14,6 +15,7 @@ import { useRecorder } from './useRecorder';
 export function useShadowingManager() {
   const [activeIndex, setActiveIndex] = useState(0);
   const [phase, setPhase] = useState<ShadowingPhase>(ShadowingPhase.Idle);
+  const isFullTrackSyncEnabledRef = useRef(false);
   const pipeline = usePipeline();
   const settings = usePracticeSettings();
   const modelLoader = useModelLoader({
@@ -30,6 +32,50 @@ export function useShadowingManager() {
   });
 
   const currentSegment = pipeline.segments[activeIndex];
+
+  const syncActiveIndexForTime = useCallback(
+    (time: number) => {
+      const nextIndex = getSegmentIndexAtTime(pipeline.segments, time);
+
+      if (nextIndex === null || nextIndex === activeIndex) {
+        return;
+      }
+
+      setActiveIndex(nextIndex);
+    },
+    [activeIndex, pipeline.segments],
+  );
+
+  const disableFullTrackSync = useCallback(() => {
+    isFullTrackSyncEnabledRef.current = false;
+  }, []);
+
+  const stopOriginalPlayback = useCallback(() => {
+    disableFullTrackSync();
+    originalPlayer.stop();
+  }, [disableFullTrackSync, originalPlayer]);
+
+  const playPracticeOriginal = useCallback(
+    (segment: Segment) => {
+      disableFullTrackSync();
+      originalPlayer.play(segment);
+    },
+    [disableFullTrackSync, originalPlayer],
+  );
+
+  const playFullTrackFromCurrentTime = useCallback(() => {
+    isFullTrackSyncEnabledRef.current = true;
+    originalPlayer.playFrom(originalPlayer.currentTime);
+  }, [originalPlayer]);
+
+  const seekFullTrack = useCallback(
+    (time: number) => {
+      isFullTrackSyncEnabledRef.current = true;
+      syncActiveIndexForTime(time);
+      originalPlayer.seek(time);
+    },
+    [originalPlayer, syncActiveIndexForTime],
+  );
 
   const handleStopRecord = useCallback(async () => {
     const blob = await recorder.stopRecording();
@@ -67,20 +113,20 @@ export function useShadowingManager() {
 
   const handleNavigate = useCallback(
     (dir: NavigationDirection) => {
-      originalPlayer.stop();
+      stopOriginalPlayback();
       minePlayer.stop();
       setActiveIndex((i) => {
         const delta = dir === NavigationDirection.Prev ? -1 : 1;
         return Math.max(0, Math.min(pipeline.segments.length - 1, i + delta));
       });
     },
-    [originalPlayer, minePlayer, pipeline.segments.length],
+    [stopOriginalPlayback, minePlayer, pipeline.segments.length],
   );
 
   const performStartRecord = useCallback(() => {
     minePlayer.warmup();
     minePlayer.stop();
-    originalPlayer.stop();
+    stopOriginalPlayback();
 
     const segment = pipeline.segments[activeIndex];
     if (segment?.recordingUrl) {
@@ -94,7 +140,14 @@ export function useShadowingManager() {
       recordingUrl: null,
     });
     recorder.startRecording();
-  }, [minePlayer, originalPlayer, pipeline, activeIndex, scorer, recorder]);
+  }, [
+    minePlayer,
+    stopOriginalPlayback,
+    pipeline,
+    activeIndex,
+    scorer,
+    recorder,
+  ]);
 
   const cruise = useAutoCruise({
     autoStopEnabled: settings.autoStopEnabled,
@@ -113,18 +166,18 @@ export function useShadowingManager() {
     onPlayOriginal: useCallback(
       (seg: Segment) => {
         minePlayer.stop();
-        originalPlayer.play(seg);
+        playPracticeOriginal(seg);
       },
-      [originalPlayer, minePlayer],
+      [playPracticeOriginal, minePlayer],
     ),
     onStartRecord: performStartRecord,
     onStopRecord: handleStopRecord,
     onPlayMine: useCallback(
       (url: string, onEnded: () => void) => {
-        originalPlayer.stop();
+        stopOriginalPlayback();
         minePlayer.playUrl(url, onEnded);
       },
-      [originalPlayer, minePlayer],
+      [stopOriginalPlayback, minePlayer],
     ),
     onNavigateNext: useCallback(
       () => handleNavigate(NavigationDirection.Next),
@@ -132,6 +185,16 @@ export function useShadowingManager() {
     ),
     onPhaseChange: setPhase,
   });
+
+  useEffect(() => {
+    if (!isFullTrackSyncEnabledRef.current) return;
+
+    const frameId = requestAnimationFrame(() => {
+      syncActiveIndexForTime(originalPlayer.currentTime);
+    });
+
+    return () => cancelAnimationFrame(frameId);
+  }, [originalPlayer.currentTime, syncActiveIndexForTime]);
 
   useEffect(() => {
     if (!settings.scoringEnabled) return;
@@ -158,19 +221,20 @@ export function useShadowingManager() {
   const pipelineReset = pipeline.reset;
   const { clearLoadError } = modelLoader;
   const reset = useCallback(() => {
+    disableFullTrackSync();
     pipelineReset();
     clearLoadError();
-  }, [pipelineReset, clearLoadError]);
+  }, [disableFullTrackSync, pipelineReset, clearLoadError]);
 
   const startSession = useCallback(
     (input: File | LibraryItem) => {
       setPhase(ShadowingPhase.Idle);
-      originalPlayer.stop();
+      stopOriginalPlayback();
       minePlayer.stop();
       setActiveIndex(0);
       pipeline.process(input);
     },
-    [originalPlayer, minePlayer, pipeline],
+    [stopOriginalPlayback, minePlayer, pipeline],
   );
 
   const upload = useCallback(
@@ -186,7 +250,7 @@ export function useShadowingManager() {
   const playOriginal = useCallback(
     (segment: Segment) => {
       if (originalPlayer.isPlaying) {
-        originalPlayer.stop();
+        stopOriginalPlayback();
         setPhase(ShadowingPhase.Idle);
         return;
       }
@@ -196,7 +260,7 @@ export function useShadowingManager() {
       }
 
       minePlayer.stop();
-      originalPlayer.play(segment);
+      playPracticeOriginal(segment);
 
       if (settings.autoCruiseEnabled && phase === ShadowingPhase.Idle) {
         setPhase(ShadowingPhase.PlayingOriginal);
@@ -204,11 +268,13 @@ export function useShadowingManager() {
     },
     [
       originalPlayer,
+      stopOriginalPlayback,
       recorder,
       handleStopRecord,
       settings.autoCruiseEnabled,
       phase,
       minePlayer,
+      playPracticeOriginal,
     ],
   );
 
@@ -233,10 +299,10 @@ export function useShadowingManager() {
       }
 
       setPhase(ShadowingPhase.Idle);
-      originalPlayer.stop();
+      stopOriginalPlayback();
       minePlayer.playUrl(url);
     },
-    [minePlayer, originalPlayer],
+    [minePlayer, stopOriginalPlayback],
   );
 
   const navigate = useCallback(
@@ -249,12 +315,40 @@ export function useShadowingManager() {
 
   const jump = useCallback(
     (index: number) => {
+      const segment = pipeline.segments[index];
+      if (!segment) return;
+
       setPhase(ShadowingPhase.Idle);
-      originalPlayer.stop();
-      minePlayer.stop();
       setActiveIndex(index);
+
+      if (isFullTrackSyncEnabledRef.current) {
+        originalPlayer.seek(segment.start);
+        return;
+      }
+
+      stopOriginalPlayback();
+      minePlayer.stop();
     },
-    [originalPlayer, minePlayer],
+    [originalPlayer, stopOriginalPlayback, minePlayer, pipeline.segments],
+  );
+
+  const playFullAudio = useCallback(() => {
+    if (originalPlayer.isPlaying) {
+      stopOriginalPlayback();
+    } else {
+      playFullTrackFromCurrentTime();
+    }
+  }, [
+    originalPlayer.isPlaying,
+    playFullTrackFromCurrentTime,
+    stopOriginalPlayback,
+  ]);
+
+  const seekTo = useCallback(
+    (time: number) => {
+      seekFullTrack(time);
+    },
+    [seekFullTrack],
   );
 
   return {
@@ -283,14 +377,8 @@ export function useShadowingManager() {
     loadUrl,
     reset,
     playOriginal,
-    playFullAudio: useCallback(() => {
-      if (originalPlayer.isPlaying) {
-        originalPlayer.stop();
-      } else {
-        originalPlayer.playFrom(originalPlayer.currentTime);
-      }
-    }, [originalPlayer]),
-    seekTo: originalPlayer.seek,
+    playFullAudio,
+    seekTo,
     startRecord,
     stopRecord,
     playMine,
