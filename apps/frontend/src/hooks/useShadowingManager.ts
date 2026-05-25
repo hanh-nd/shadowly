@@ -192,7 +192,8 @@ export function useShadowingManager() {
     if (pipeline.audioBuffer) {
       originalPlayer.warmup();
     }
-  }, [pipeline.audioBuffer, originalPlayer]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pipeline.audioBuffer, originalPlayer.warmup]);
 
   useEffect(() => {
     if (!isFullTrackSyncEnabledRef.current) return;

@@ -43,8 +43,13 @@ export function useRecorder() {
 
   async function startRecording() {
     setMicError(null);
+    // Release any held stream before acquiring a new one so the mic indicator
+    // reflects reality, and so Chrome can re-enter WebRTC mode cleanly.
+    if (mediaStreamRef.current) {
+      mediaStreamRef.current.getTracks().forEach((t) => t.stop());
+      mediaStreamRef.current = null;
+    }
     try {
-      // Always get a fresh stream to ensure mic indicator turns off when stopped
       const stream = await navigator.mediaDevices.getUserMedia({
         audio: {
           echoCancellation: false,
@@ -90,8 +95,11 @@ export function useRecorder() {
         const mimeType = recorder.mimeType || getSupportedMimeType();
         const blob = new Blob(chunksRef.current, { type: mimeType });
 
-        cleanup();
+        recorderRef.current = null;
         setIsRecording(false);
+        // Stream kept alive intentionally — Chrome's WebRTC pipeline takes ~2s
+        // to release after track.stop(), causing crackling during mine playback.
+        // The stream is released when the next startRecording() is called or on unmount.
         resolve(blob);
       };
 

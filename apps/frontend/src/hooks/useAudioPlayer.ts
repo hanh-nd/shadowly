@@ -231,8 +231,9 @@ export function useAudioPlayer(
   );
 
   const warmup = useCallback(async () => {
-    await getRunningContext();
-  }, [getRunningContext]);
+    const ctx = await getRunningContext();
+    primeHardware(ctx);
+  }, [getRunningContext, primeHardware]);
 
   return {
     play,
