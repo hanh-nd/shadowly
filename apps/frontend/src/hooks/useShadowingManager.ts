@@ -124,7 +124,6 @@ export function useShadowingManager() {
   );
 
   const performStartRecord = useCallback(() => {
-    minePlayer.warmup();
     minePlayer.stop();
     stopOriginalPlayback();
 
@@ -185,6 +184,15 @@ export function useShadowingManager() {
     ),
     onPhaseChange: setPhase,
   });
+
+  // Prime the original player's audio hardware as soon as the audio buffer is
+  // ready. This ensures the earphone codec is initialized before the user
+  // clicks play for the first time (avoids the outputLatency=0 cold-start).
+  useEffect(() => {
+    if (pipeline.audioBuffer) {
+      originalPlayer.warmup();
+    }
+  }, [pipeline.audioBuffer, originalPlayer]);
 
   useEffect(() => {
     if (!isFullTrackSyncEnabledRef.current) return;

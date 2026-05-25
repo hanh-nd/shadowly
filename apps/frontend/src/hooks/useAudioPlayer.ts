@@ -41,6 +41,18 @@ export function useAudioPlayer(
     return ctx;
   }, []);
 
+  // Play a silent 1-sample buffer through the context's destination.
+  // This wakes the earphone codec from its power-save state so that real
+  // audio scheduled shortly after (baseLatency + outputLatency ahead) arrives
+  // at a fully-initialized hardware output path.
+  const primeHardware = useCallback((ctx: AudioContext) => {
+    const silentBuf = ctx.createBuffer(1, 1, ctx.sampleRate);
+    const waker = ctx.createBufferSource();
+    waker.buffer = silentBuf;
+    waker.connect(ctx.destination);
+    waker.start(ctx.currentTime);
+  }, []);
+
   const stop = useCallback(() => {
     if (currentSourceRef.current) {
       try {
@@ -66,6 +78,12 @@ export function useAudioPlayer(
 
       try {
         const ctx = await getRunningContext();
+
+        // Wake the earphone codec before scheduling real audio. The real audio
+        // is delayed by baseLatency + outputLatency, giving the codec enough
+        // time to fully initialize before audible content arrives.
+        primeHardware(ctx);
+
         const source = ctx.createBufferSource();
         source.buffer = buffer;
         source.playbackRate.value = speed;
@@ -98,7 +116,7 @@ export function useAudioPlayer(
         stop();
       }
     },
-    [speed, stop, getRunningContext],
+    [speed, stop, getRunningContext, primeHardware],
   );
 
   useEffect(() => {
