@@ -11,8 +11,8 @@ import type { ModelLoadProgressCallback } from '../../types';
 import { ctcGreedyDecode } from '../../utils/ctc-decoder';
 import { type IpaInferenceBackend } from './IpaInferenceBackend';
 
-const WAV2VEC2_MODEL = 'onnx-community/wav2vec2-lv-60-espeak-cv-ft-ONNX';
-const PROCESSOR_MODEL = 'facebook/wav2vec2-lv-60-espeak-cv-ft';
+const WAV2VEC2_MODEL = 'hanhnd156/wav2vec2-ljspeech-gruut-ONNX';
+const PROCESSOR_MODEL = 'bookbot/wav2vec2-ljspeech-gruut';
 
 env.useBrowserCache = true;
 env.allowLocalModels = false;
@@ -88,7 +88,7 @@ export class LocalIpaInferenceBackend implements IpaInferenceBackend {
             progress_callback: progressCallback,
           }),
           AutoModelForCTC.from_pretrained(WAV2VEC2_MODEL, {
-            dtype: { webgpu: 'q4f16', wasm: 'q4' },
+            dtype: { webgpu: 'q4f16', wasm: 'q4f16' },
             device: 'auto',
             progress_callback: progressCallback,
           }),
@@ -131,12 +131,13 @@ export class LocalIpaInferenceBackend implements IpaInferenceBackend {
       blank_token_id?: number;
     };
     const blankTokenId = modelConfig.blank_token_id ?? 0;
-    return ctcGreedyDecode(
+    const decoded = ctcGreedyDecode(
       output.logits.data,
       seqLen,
       vocabSize,
       this.idToToken,
       blankTokenId,
     );
+    return decoded.replace(/d͡ʒ/g, 'dʒ').replace(/t͡ʃ/g, 'tʃ');
   }
 }
