@@ -88,7 +88,7 @@ export class LocalIpaInferenceBackend implements IpaInferenceBackend {
             progress_callback: progressCallback,
           }),
           AutoModelForCTC.from_pretrained(WAV2VEC2_MODEL, {
-            dtype: 'q4f16',
+            dtype: 'fp16',
             device: 'webgpu',
             progress_callback: progressCallback,
           }),
