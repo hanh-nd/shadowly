@@ -1,5 +1,10 @@
 import { useCallback, useEffect, useMemo, useState } from 'react';
 
+import {
+  isMobileDevice,
+  isSafariBrowser,
+  isWebGPUAvailable,
+} from '../utils/browser';
 import type { SettingsStorage } from '../utils/settings-storage';
 import { localStorageSettingsStorage } from '../utils/settings-storage';
 
@@ -8,6 +13,11 @@ export function usePracticeSettings(
 ) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const saved = useMemo(() => storage.load(), []);
+
+  // Scoring requires WebGPU; disable on mobile/Safari where GPU memory is too
+  // constrained to load the 180 MB fp16 model without jetsam killing the tab.
+  const scoringSupported =
+    isWebGPUAvailable() && !isMobileDevice() && !isSafariBrowser();
 
   const [maskMode, setMaskMode] = useState(saved.maskMode ?? true);
   const [playbackSpeed, setPlaybackSpeed] = useState(
@@ -20,7 +30,7 @@ export function usePracticeSettings(
     saved.autoCruiseEnabled ?? true,
   );
   const [scoringEnabled, setScoringEnabled] = useState(
-    saved.scoringEnabled ?? false,
+    scoringSupported ? (saved.scoringEnabled ?? false) : false,
   );
   const [bufferTime, setBufferTime] = useState(saved.bufferTime ?? 2);
   const [loopCount, setLoopCount] = useState(saved.loopCount ?? 3);
@@ -60,8 +70,9 @@ export function usePracticeSettings(
   }, []);
 
   const toggleScoring = useCallback(() => {
+    if (!scoringSupported) return;
     setScoringEnabled((prev) => !prev);
-  }, []);
+  }, [scoringSupported]);
 
   return {
     maskMode,
@@ -69,7 +80,7 @@ export function usePracticeSettings(
     autoStopEnabled,
     autoCruiseEnabled,
     scoringEnabled,
-    scoringUnavailable: false,
+    scoringUnavailable: !scoringSupported,
     bufferTime,
     loopCount,
     toggleMaskMode,
