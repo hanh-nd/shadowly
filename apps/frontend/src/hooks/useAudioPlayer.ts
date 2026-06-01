@@ -1,4 +1,10 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
+import {
+  type RefObject,
+  useCallback,
+  useEffect,
+  useRef,
+  useState,
+} from 'react';
 
 import type { Segment } from '../types';
 import { AudioContextStateEnum, PlaybackStatus } from '../types';
@@ -12,11 +18,16 @@ const MIN_SEGMENT_DURATION = 0.1;
 export function useAudioPlayer(
   audioBuffer: AudioBuffer | null,
   speed: number = 1.0,
+  sharedCtxRef?: RefObject<AudioContext | null>,
 ) {
   const audioContextRef = useRef<AudioContext | null>(null);
   const currentSourceRef = useRef<AudioBufferSourceNode | null>(null);
   const startTimeRef = useRef<number>(0);
   const startOffsetRef = useRef<number>(0);
+  const playbackEndRef = useRef<number | undefined>(undefined);
+  const decodedUrlRef = useRef<{ url: string; buffer: AudioBuffer } | null>(
+    null,
+  );
 
   const [status, setStatus] = useState<PlaybackStatus>(PlaybackStatus.Idle);
   const [currentTime, setCurrentTime] = useState(0);
@@ -30,15 +41,25 @@ export function useAudioPlayer(
   const duration = audioBuffer?.duration ?? 0;
 
   const getRunningContext = useCallback(async (): Promise<AudioContext> => {
+    // Adopt context created by another hook instance sharing the same ref
+    if (
+      sharedCtxRef?.current &&
+      sharedCtxRef.current !== audioContextRef.current
+    ) {
+      audioContextRef.current = sharedCtxRef.current;
+    }
     let ctx = audioContextRef.current;
     if (!ctx || ctx.state === AudioContextStateEnum.Closed) {
       ctx = new AudioContext();
       audioContextRef.current = ctx;
+      if (sharedCtxRef) sharedCtxRef.current = ctx;
     }
     if (ctx.state !== AudioContextStateEnum.Running) {
       await ctx.resume();
     }
     return ctx;
+    // sharedCtxRef is a stable ref object — safe to omit from deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // Play a silent 1-sample buffer through the context's destination.
@@ -79,9 +100,6 @@ export function useAudioPlayer(
       try {
         const ctx = await getRunningContext();
 
-        // Wake the earphone codec before scheduling real audio. The real audio
-        // is delayed by baseLatency + outputLatency, giving the codec enough
-        // time to fully initialize before audible content arrives.
         primeHardware(ctx);
 
         const source = ctx.createBufferSource();
@@ -93,6 +111,7 @@ export function useAudioPlayer(
           if (currentSourceRef.current === source) {
             setStatus(PlaybackStatus.Idle);
             currentSourceRef.current = null;
+            playbackEndRef.current = undefined;
             onEnded?.();
           }
         };
@@ -103,6 +122,11 @@ export function useAudioPlayer(
         startTimeRef.current = scheduledAt;
         startOffsetRef.current = offset;
         setCurrentTime(offset);
+
+        playbackEndRef.current =
+          playbackDuration !== undefined
+            ? offset + playbackDuration
+            : undefined;
 
         if (playbackDuration !== undefined) {
           source.start(scheduledAt, offset, playbackDuration);
@@ -148,9 +172,6 @@ export function useAudioPlayer(
     }
   }, [speed]);
 
-  /**
-   * Play a segment from the provided AudioBuffer.
-   */
   const play = useCallback(
     async (segment: Segment) => {
       if (!audioBuffer) {
@@ -170,9 +191,6 @@ export function useAudioPlayer(
     [audioBuffer, startPlayback],
   );
 
-  /**
-   * Play the whole buffer from a given offset.
-   */
   const playFrom = useCallback(
     async (offset: number) => {
       if (!audioBuffer) return;
@@ -181,16 +199,20 @@ export function useAudioPlayer(
     [audioBuffer, startPlayback],
   );
 
-  /**
-   * Play audio from a URL.
-   */
   const playUrl = useCallback(
     async (url: string, onEnded?: () => void) => {
       try {
         const ctx = await getRunningContext();
-        const response = await fetch(url);
-        const arrayBuffer = await response.arrayBuffer();
-        const decodedBuffer = await ctx.decodeAudioData(arrayBuffer);
+        let decodedBuffer: AudioBuffer;
+
+        if (decodedUrlRef.current?.url === url) {
+          decodedBuffer = decodedUrlRef.current.buffer;
+        } else {
+          const response = await fetch(url);
+          const arrayBuffer = await response.arrayBuffer();
+          decodedBuffer = await ctx.decodeAudioData(arrayBuffer);
+          decodedUrlRef.current = { url, buffer: decodedBuffer };
+        }
 
         await startPlayback(decodedBuffer, 0, undefined, onEnded);
       } catch (err) {
@@ -209,20 +231,22 @@ export function useAudioPlayer(
       if (audioContextRef.current) {
         audioContextRef.current.close().catch(() => {});
         audioContextRef.current = null;
+        if (sharedCtxRef) sharedCtxRef.current = null;
       }
     };
+    // sharedCtxRef is a stable ref object — safe to omit from deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [stop]);
 
-  /**
-   * Seek to a specific time.
-   * If playing, restarts playback from the new offset.
-   * If stopped, just updates the current time.
-   */
   const seek = useCallback(
     async (time: number) => {
       const clamped = Math.max(0, Math.min(duration, time));
       if (status === PlaybackStatus.Playing && audioBuffer) {
-        await startPlayback(audioBuffer, clamped);
+        const remainingDuration =
+          playbackEndRef.current !== undefined
+            ? Math.max(0, playbackEndRef.current - clamped)
+            : undefined;
+        await startPlayback(audioBuffer, clamped, remainingDuration);
       } else {
         setCurrentTime(clamped);
       }

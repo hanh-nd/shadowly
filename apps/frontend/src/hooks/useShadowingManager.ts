@@ -21,11 +21,13 @@ export function useShadowingManager() {
   const modelLoader = useModelLoader({
     scoringEnabled: settings.scoringEnabled,
   });
+  const sharedAudioCtxRef = useRef<AudioContext | null>(null);
   const originalPlayer = useAudioPlayer(
     pipeline.audioBuffer,
     settings.playbackSpeed,
+    sharedAudioCtxRef,
   );
-  const minePlayer = useAudioPlayer(null, 1.0);
+  const minePlayer = useAudioPlayer(null, 1.0, sharedAudioCtxRef);
   const recorder = useRecorder();
   const scorer = usePronunciationScorer({
     patchSegment: pipeline.patchSegment,
@@ -79,31 +81,25 @@ export function useShadowingManager() {
 
   const handleStopRecord = useCallback(async () => {
     const blob = await recorder.stopRecording();
+    // Prime the shared AudioContext during the WebRTC cooldown window so it's
+    // warm by the time the user triggers "play mine".
+    void minePlayer.warmup();
     const newUrl = URL.createObjectURL(blob);
 
     if (currentSegment?.recordingUrl) {
       URL.revokeObjectURL(currentSegment.recordingUrl);
     }
 
-    if (settings.scoringEnabled) {
-      pipeline.patchSegment(activeIndex, {
-        recordingUrl: newUrl,
-        isScoring: true,
-      });
-
-      if (pipeline.audioBuffer && currentSegment) {
-        scorer.score(activeIndex, blob);
-      } else {
-        pipeline.patchSegment(activeIndex, { isScoring: false });
-      }
-    } else {
-      pipeline.patchSegment(activeIndex, {
-        recordingUrl: newUrl,
-        isScoring: false,
-      });
-    }
+    const canScore =
+      settings.scoringEnabled && !!pipeline.audioBuffer && !!currentSegment;
+    pipeline.patchSegment(activeIndex, {
+      recordingUrl: newUrl,
+      isScoring: canScore,
+    });
+    if (canScore) scorer.score(activeIndex, blob);
   }, [
     recorder,
+    minePlayer,
     pipeline,
     activeIndex,
     scorer,
@@ -257,7 +253,7 @@ export function useShadowingManager() {
   );
 
   const playOriginal = useCallback(
-    (segment: Segment) => {
+    async (segment: Segment) => {
       if (originalPlayer.isPlaying) {
         stopOriginalPlayback();
         setPhase(ShadowingPhase.Idle);
@@ -265,7 +261,7 @@ export function useShadowingManager() {
       }
 
       if (recorder.isRecording) {
-        handleStopRecord();
+        await handleStopRecord();
       }
 
       minePlayer.stop();

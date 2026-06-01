@@ -24,7 +24,7 @@ export function useRecorder() {
   const [isRecording, setIsRecording] = useState(false);
   const [micError, setMicError] = useState<string | null>(null);
 
-  const cleanup = () => {
+  const teardown = () => {
     if (
       recorderRef.current &&
       recorderRef.current.state !== MediaRecorderState.Inactive
@@ -38,7 +38,7 @@ export function useRecorder() {
   };
 
   useEffect(() => {
-    return cleanup;
+    return teardown;
   }, []);
 
   async function startRecording() {
@@ -85,7 +85,7 @@ export function useRecorder() {
     return new Promise((resolve) => {
       const recorder = recorderRef.current;
       if (!recorder || recorder.state === MediaRecorderState.Inactive) {
-        cleanup();
+        teardown();
         setIsRecording(false);
         resolve(new Blob());
         return;
@@ -97,9 +97,10 @@ export function useRecorder() {
 
         recorderRef.current = null;
         setIsRecording(false);
-        // Stream kept alive intentionally — Chrome's WebRTC pipeline takes ~2s
-        // to release after track.stop(), causing crackling during mine playback.
-        // The stream is released when the next startRecording() is called or on unmount.
+        if (mediaStreamRef.current) {
+          mediaStreamRef.current.getTracks().forEach((t) => t.stop());
+          mediaStreamRef.current = null;
+        }
         resolve(blob);
       };
 
