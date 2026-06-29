@@ -102,8 +102,8 @@ export function usePipeline(): PipelineHook {
       await ctx.close();
       if (signal.aborted) return;
 
-      if (decoded.duration > 300) {
-        throw new Error('Audio exceeds 5-minute limit.');
+      if (decoded.duration > 600) {
+        throw new Error('Audio exceeds 10-minute limit.');
       }
 
       setAudioBuffer(decoded);
